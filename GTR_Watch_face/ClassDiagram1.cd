@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AmazFit_Watchface_2.WATCH_FACE_JSON">
+    <Position X="13.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAIAEIAAAAAAAAAAAAAAAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\WATCH_FACE_JSON.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Device_Id">
+    <Position X="17.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\Elements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Background">
+    <Position X="20" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAgAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\Elements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ScreenNormal">
+    <Position X="22.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAIAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\Elements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.CircleProgress">
+    <Position X="29" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAEAAAAABAAABBAAAgAAAQgA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.FontRotate">
+    <Position X="24.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ImageAmazfit">
+    <Position X="31.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQEAEAgAAAAAAAAAEAAAAAAEAAAAYAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ImageAngle">
+    <Position X="40.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAIAAYAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ImageCoord">
+    <Position X="44.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ImageProgress">
+    <Position X="42.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIIAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ImageSetGTR2">
+    <Position X="33.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.MultilangImage" Collapsed="true">
+    <Position X="15.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.MultilangImageCoord">
+    <Position X="47" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.SystemFont">
+    <Position X="26.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAgAAAAAAAABAAIAAAAAAAAEAAgAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Text">
+    <Position X="35.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAQAAAAAAQAAAAACAAAAAAAAAABBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Coordinates">
+    <Position X="38" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\basicElements\basicElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ClassMotiomAnimation">
+    <Position X="49.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAgAAAAAAIAAAAAAAYARAAAAADAAAAEBAA=</HashCode>
+      <FileName>Classes\Animation\ClassMotiomAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ClassStaticAnimation">
+    <Position X="51.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAQiAAAAAAQAAAAAAAYAIAAAAAABAAAABAA=</HashCode>
+      <FileName>Classes\Animation\ClassStaticAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.PREWIEV_STATES_Json">
+    <Position X="53.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQABAAAAAAAAAAAEAABAAAAAAAAAAAJAEABAAAAACQA=</HashCode>
+      <FileName>Classes\PREWIEV_STATES_Json.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.TimePreview">
+    <Position X="56" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAAAAAAAAAIAAAAAACIEAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\PREWIEV_STATES_Json.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.PROGRAM_SETTINGS">
+    <Position X="58.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgCwEgAgAQICSwCEIJEAEgAAoQgAgAhVACAAAEGEBA=</HashCode>
+      <FileName>Classes\PROGRAM_SETTINGS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.WATCH_FACE_PREWIEV_SET">
+    <Position X="60.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAgAAAAABAAAAAEAAAQA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_SET.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.DateS">
+    <Position X="62.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAJAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_SET.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.TimeS">
+    <Position X="65" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_SET.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ActivityS">
+    <Position X="67.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABAAAAAAEAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_SET.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.StatusS">
+    <Position X="69.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAAAAACAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_SET.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.WATCH_FACE_PREWIEV_TwoDigits">
+    <Position X="71.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAEAAAAAAAABAAAAAAAAAQA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_TwoDigits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.DateP">
+    <Position X="74" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_TwoDigits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.TimeP">
+    <Position X="76.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_TwoDigits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.TimePmP">
+    <Position X="78.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAQAAAAQAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_TwoDigits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.TwoDigitsP">
+    <Position X="80.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_TwoDigits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.YearP">
+    <Position X="83" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAQAAQAAA=</HashCode>
+      <FileName>Classes\WATCH_FACE_PREWIEV_TwoDigits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ScreenIdle" Collapsed="true">
+    <Position X="85.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAEAAAAAAAAAAAAAAAABAAAAAEAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\screenIdleElements\screenIdleElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.SystemAmazfit" Collapsed="true">
+    <Position X="87.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Status" Collapsed="true">
+    <Position X="89.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAAAAACAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Date" Collapsed="true">
+    <Position X="92" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Activity" Collapsed="true">
+    <Position X="94.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAIQAAAAEAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.DigitalDateDigit" Collapsed="true">
+    <Position X="96.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAABAgAAAAQAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.DigitalCommonDigit" Collapsed="true">
+    <Position X="98.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAABAAAQAAQAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Progress" Collapsed="true">
+    <Position X="101" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAEAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.DOWProgress" Collapsed="true">
+    <Position X="103.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\systemElements\systemElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.DigitalDialFace" Collapsed="true">
+    <Position X="105.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAIAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\timeElements\timeElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.AnalogDialFace" Collapsed="true">
+    <Position X="107.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\timeElements\timeElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ProgressgDialFace" Collapsed="true">
+    <Position X="110" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\timeElements\timeElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.DigitalTimeDigit" Collapsed="true">
+    <Position X="112.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAEAAAAAABAAAAAAQAAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\timeElements\timeElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.ClockHand" Collapsed="true">
+    <Position X="114.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAIAAAAAAAAAAAAAAAAIAqAAYAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\timeElements\timeElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Widgets" Collapsed="true">
+    <Position X="116.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\widgetElements\widgetElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Widget" Collapsed="true">
+    <Position X="119" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAAAAAAAAEAAAIAAAAgEAACAAAAAYAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\widgetElements\widgetElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.WidgetElement" Collapsed="true">
+    <Position X="121.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQAAEAAAAA=</HashCode>
+      <FileName>Classes\WatchFaceParser\widgetElements\widgetElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazFit_Watchface_2.Properties.FormStrings" Collapsed="true">
+    <Position X="123.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BC2hAAQMAwQQiIABSAIDEANIJQF0JowgAAjEZhwBTMA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

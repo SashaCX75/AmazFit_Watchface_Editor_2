@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Message_bigFile_Caption" xml:space="preserve">
+    <value>Большой размер файла</value>
+  </data>
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
+    <value>Размер несжатого файла превышает 1,95МБ.</value>
+  </data>
+  <data name="Message_bigFile_Text2" xml:space="preserve">
+    <value>Циферблат может не работать.</value>
+  </data>
+  <data name="Message_Error_Caption" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Message_error_Image_Text1" xml:space="preserve">
+    <value>Невозможно открыть изображение: </value>
+  </data>
+  <data name="Message_error_Image_Text2" xml:space="preserve">
+    <value>. У Вас нет прав на чтение файла, или изображение повреждено.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
+    <value>Файл не найден</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
+    <value>Путь [</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
+    <value>] к утилите распаковки/запаковки указан неверно.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
+    <value>Укажите верный путь к утилите распаковки/запаковки.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text1" xml:space="preserve">
+    <value>Отсутствуют необходимые компоненты программы.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text2" xml:space="preserve">
+    <value>Не найдена утилита сжатия bin файлов по пути [</value>
+  </data>
+  <data name="Message_error_respackerPath_Text3" xml:space="preserve">
+    <value>Проверьте наличие утилиты сжатия bin файлов.</value>
+  </data>
+  <data name="Message_GoToFile_Caption" xml:space="preserve">
+    <value>Перейти к файлу</value>
+  </data>
+  <data name="Message_GoToFile_Text" xml:space="preserve">
+    <value>Перейти к файлу?</value>
+  </data>
+  <data name="Message_JsonError_Text" xml:space="preserve">
+    <value>Неверный JSON файл.</value>
+  </data>
+  <data name="Message_JsonReadError_Text" xml:space="preserve">
+    <value>Ошибка чтения JSON файла.</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
+    <value>Загрузка настроек предпросмотра</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
+    <value>Загрузить имеющийся файл с набором параметров предпросмотра PreviewStates.json?</value>
+  </data>
+  <data name="Message_openProject_Caption" xml:space="preserve">
+    <value>Открытие проекта</value>
+  </data>
+  <data name="Message_openProject_Text" xml:space="preserve">
+    <value>Открыть распакованный проект?</value>
+  </data>
+  <data name="Message_PNGmissing_Text1" xml:space="preserve">
+    <value>PNG файлы идут не по порядку или часть файлов отсутствует.</value>
+  </data>
+  <data name="Message_PNGmissing_Text2" xml:space="preserve">
+    <value>Присвойте имена PNG файлам в порядке возрастания.</value>
+  </data>
+  <data name="Message_Restart_Caption" xml:space="preserve">
+    <value>Перезагрузка</value>
+  </data>
+  <data name="Message_Restart_Text1" xml:space="preserve">
+    <value>Для применения настроек необходимо перезагрузить программу.</value>
+  </data>
+  <data name="Message_Restart_Text2" xml:space="preserve">
+    <value>Перезапустить программу?</value>
+  </data>
+  <data name="Message_SaveOnly1234_Text" xml:space="preserve">
+    <value>Для сохранения предустановленных параметром установите хотябы в одном поле "Калории" значение отличное от "1234".</value>
+  </data>
+  <data name="Message_Warning3clockHand_Text" xml:space="preserve">
+    <value>Если использовать не все три стрелки в аналоговых часах, то могут возникнуть проблемы.</value>
+  </data>
+  <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
+    <value>Не рекомендуется использовать минуты без использования часов для числового отображения времени.</value>
+  </data>
+  <data name="Message_WarningOnlySec_Text" xml:space="preserve">
+    <value>Не рекомендуется использовать секунды без использования часов и минут для числового отображения времени.</value>
+  </data>
+  <data name="Message_WarningTensOnes_Text" xml:space="preserve">
+    <value>Разные значения ImageIndex для десятков и единиц не поддерживаются.</value>
+  </data>
+  <data name="Message_Warning_Caption" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+    <value>Размер несжатого файла превышает 1,5МБ.</value>
+  </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value>\Manual\readme.chm</value>
+  </data>
+  <data name="Form_Preview" xml:space="preserve">
+    <value>Предпросмотр</value>
+  </data>
+  <data name="Form_PreviewX" xml:space="preserve">
+    <value>Предпросмотр [X=</value>
+  </data>
+  <data name="Message_CopyCoord" xml:space="preserve">
+    <value>Координаты скопированны</value>
+  </data>
+  <data name="Dialog_Title_Image" xml:space="preserve">
+    <value>Выбор файлов изображений</value>
+  </data>
+  <data name="Dialog_Title_Pack" xml:space="preserve">
+    <value>Выбор файла настроек циферблата</value>
+  </data>
+  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
+    <value>Путь к файлу упаковщика</value>
+  </data>
+  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
+    <value>Выбор файла настроек предпросмотра</value>
+  </data>
+  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
+    <value>Сохранить анимированный предпросмотр</value>
+  </data>
+  <data name="Dialog_Title_SavePNG" xml:space="preserve">
+    <value>Сохранить предпросмотр</value>
+  </data>
+  <data name="Dialog_Title_Unpack" xml:space="preserve">
+    <value>Выбор файла циферблата</value>
+  </data>
+  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
+    <value>Не рекомендуется использовать отображение расстояния без суффикса.</value>
+  </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Некоторые изображения могут вызывать ошибки (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Попробовать их исправить?</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>Сохранение проекта</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>Вы хотите сохранить изменения в проекте </value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>Текущий проект еще не сохранен. Вы хотите сохранить его?</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>Не рекомендуется отображение в виде стрелочного индикатора совместно с отображением сегментами для одного элемента.</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>Имя файла и путь к нему не должны содержать пробелов.</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>Отображение текущей температуры может не работать без отображения дневной и ночной температуры.</value>
+  </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>Количество элементов для анимации не может быть больше 4.</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>Не рекомендуется использовать больше 10 картинок для отображения заряда батареи.</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>Путь к программе не должен содержать пробелы. Желательно поместить программу в корень диска.</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Каталог </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> уже существует. Заменить?</value>
+  </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Новый циферблат создан.</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>quick_guide.htm</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>Изображение для анимации не должно быть последним в списке изображений.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>Отображение номера месяца не работает вместе с отображением названия месяца.</value>
+  </data>
+  <data name="FilterGif" xml:space="preserve">
+    <value>GIF файлы (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Бинарные файлы (*.bin)|*.bin</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Json файлы (*.json) | *.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>PNG файлы (*.png)|*.png</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>Размер несжатого файла превышает 5,5МБ.</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>Рекомендуется для отображения пульса использовать 6 сегментов.</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>Размеры изображения для Preview отличаются от стандартных.</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>Использовать существующие размеры?</value>
+  </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>Желательно указано изображение для символа ошибки при отсутствии данных активностей.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>Возможно неверно указано изображение для символа ошибки при отсутствии данных текущей температуры.</value>
+  </data>
+  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
+    <value>Отображение даты отдельными блоками не работает вместе с отображением даты в одну линию</value>
+  </data>
+</root>

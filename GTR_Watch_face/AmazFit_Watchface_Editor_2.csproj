@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60CD7E95-9507-42E3-869F-5A677ECCE917}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AmazFit_Watchface_2</RootNamespace>
+    <AssemblyName>AmazFit_Watchface_Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Puthon</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;Puthon</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>watch.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release %28without python%29|AnyCPU' ">
+    <OutputPath>bin\Release_%28without_python%29\</OutputPath>
+    <DefineConstants>TRACE;WithoutPuthon</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug %28without python%29|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_%28without_python%29\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WithoutPuthon</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Magick.NET-Q16-AnyCPU, Version=7.17.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magick.NET-Q16-AnyCPU.7.17.0.1\lib\net40\Magick.NET-Q16-AnyCPU.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Animation\ClassMotiomAnimation.cs" />
+    <Compile Include="Classes\Animation\ClassStaticAnimation.cs" />
+    <Compile Include="Classes\WatchFaceParser\systemElements\systemElements.cs" />
+    <Compile Include="Classes\WatchFaceParser\basicElements\basicElements.cs" />
+    <Compile Include="Classes\WatchFaceParser\Elements.cs" />
+    <Compile Include="Classes\WatchFaceParser\screenIdleElements\screenIdleElements.cs" />
+    <Compile Include="Classes\WatchFaceParser\widgetElements\widgetElements.cs" />
+    <Compile Include="Classes\WatchFaceParser\timeElements\timeElements.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAnimation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnimation.Designer.cs">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFileExists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFileExists.Designer.cs">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreview.Designer.cs">
+      <DependentUpon>FormPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Buttons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JSON_ReadWrite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreviewToBitmap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\PREWIEV_STATES_Json.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Classes\PROGRAM_SETTINGS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\FormStrings.it.Designer.cs">
+      <DependentUpon>FormStrings.it.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.zh.Designer.cs">
+      <DependentUpon>FormStrings.zh.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.fr.Designer.cs">
+      <DependentUpon>FormStrings.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.sk.Designer.cs">
+      <DependentUpon>FormStrings.sk.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.hu.Designer.cs">
+      <DependentUpon>FormStrings.hu.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.cs.Designer.cs">
+      <DependentUpon>FormStrings.cs.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.pt.Designer.cs">
+      <DependentUpon>FormStrings.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.en.Designer.cs">
+      <DependentUpon>FormStrings.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.es.Designer.cs">
+      <DependentUpon>FormStrings.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\WatchFaceParser\WATCH_FACE_JSON.cs" />
+    <Compile Include="Classes\WATCH_FACE_PREWIEV_SET.cs" />
+    <Compile Include="Classes\WATCH_FACE_PREWIEV_TwoDigits.cs" />
+    <EmbeddedResource Include="Form1.cs.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.en.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.es.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.fr.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.hu.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.it.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.pt.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.sk.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.sl.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.zh.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.cs.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.en.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.es.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.fr.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.hu.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.it.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.sk.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.zh.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.cs.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.en.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.es.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.fr.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.hu.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.it.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.pt.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.sk.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.zh.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreview.resx">
+      <DependentUpon>FormPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.it.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.zh.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.zh.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.sk.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.sk.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.hu.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.hu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.cs.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.cs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.pt.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.pt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watch_icon.png" />
+    <None Include="Resources\Files-Clipboard-icon.png" />
+    <None Include="Resources\Actions_insert_text_icon.png" />
+    <None Include="Resources\Files_Copy_File_icon.png" />
+    <None Include="Resources\Files_Clipboard_icon.png" />
+    <None Include="Resources\Amazfit_GTR_47mm.png" />
+    <Content Include="Mask\mask_gtr47.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mask\mask_gts.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\GTR2_Packer.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\main.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="watch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Language\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

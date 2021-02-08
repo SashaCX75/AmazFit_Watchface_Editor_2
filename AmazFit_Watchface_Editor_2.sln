@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazFit_Watchface_Editor_2", "GTR_Watch_face\AmazFit_Watchface_Editor_2.csproj", "{60CD7E95-9507-42E3-869F-5A677ECCE917}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug (python)|Any CPU = Debug (python)|Any CPU
+		Debug (without python)|Any CPU = Debug (without python)|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release (python)|Any CPU = Release (python)|Any CPU
+		Release (without python)|Any CPU = Release (without python)|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug (python)|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug (python)|Any CPU.Build.0 = Debug|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug (without python)|Any CPU.ActiveCfg = Debug (without python)|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug (without python)|Any CPU.Build.0 = Debug (without python)|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release (python)|Any CPU.ActiveCfg = Release|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release (python)|Any CPU.Build.0 = Release|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release (without python)|Any CPU.ActiveCfg = Release (without python)|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release (without python)|Any CPU.Build.0 = Release (without python)|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84052B5C-E147-4BD8-94AC-0D548B4D4F26}
+	EndGlobalSection
+EndGlobal

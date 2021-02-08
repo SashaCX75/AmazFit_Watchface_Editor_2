@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Dialog_Title_Image" xml:space="preserve">
+    <value>Select image files</value>
+  </data>
+  <data name="Dialog_Title_Pack" xml:space="preserve">
+    <value>Select a dial settings file</value>
+  </data>
+  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
+    <value>Path to the packer file</value>
+  </data>
+  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
+    <value>Select a preview settings file</value>
+  </data>
+  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
+    <value>Save the animated preview</value>
+  </data>
+  <data name="Dialog_Title_SavePNG" xml:space="preserve">
+    <value>Save preview</value>
+  </data>
+  <data name="Dialog_Title_Unpack" xml:space="preserve">
+    <value>Select a watch file</value>
+  </data>
+  <data name="Form_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Form_PreviewX" xml:space="preserve">
+    <value>Preview [X =</value>
+  </data>
+  <data name="Message_bigFile_Caption" xml:space="preserve">
+    <value>Large file size</value>
+  </data>
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
+    <value>Uncompressed file size exceeds 1.95MB.</value>
+  </data>
+  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+    <value>Uncompressed file size exceeds 1.5MB.</value>
+  </data>
+  <data name="Message_bigFile_Text2" xml:space="preserve">
+    <value>The dial may not work.</value>
+  </data>
+  <data name="Message_CopyCoord" xml:space="preserve">
+    <value>Coordinates copied</value>
+  </data>
+  <data name="Message_Error_Caption" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Message_error_Image_Text1" xml:space="preserve">
+    <value>Unable to open image:</value>
+  </data>
+  <data name="Message_error_Image_Text2" xml:space="preserve">
+    <value>. You do not have permission to read the file, or the image is damaged.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
+    <value>Way [</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
+    <value>] to the unpacking / packing utility is indicated incorrectly.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
+    <value>Specify the correct path to the unpack / pack utility.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text1" xml:space="preserve">
+    <value>The required program components are missing.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text2" xml:space="preserve">
+    <value>No bin file compression utility found on path [</value>
+  </data>
+  <data name="Message_error_respackerPath_Text3" xml:space="preserve">
+    <value>Check for bin file compression utility.</value>
+  </data>
+  <data name="Message_GoToFile_Caption" xml:space="preserve">
+    <value>Go to file</value>
+  </data>
+  <data name="Message_GoToFile_Text" xml:space="preserve">
+    <value>Go to file?</value>
+  </data>
+  <data name="Message_JsonError_Text" xml:space="preserve">
+    <value>Invalid JSON file.</value>
+  </data>
+  <data name="Message_JsonReadError_Text" xml:space="preserve">
+    <value>Error reading JSON file.</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
+    <value>Download preview settings</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
+    <value>Download an existing file with a set of preview settings PreviewStates.json?</value>
+  </data>
+  <data name="Message_openProject_Caption" xml:space="preserve">
+    <value>Project Opening</value>
+  </data>
+  <data name="Message_openProject_Text" xml:space="preserve">
+    <value>Open an unpacked project?</value>
+  </data>
+  <data name="Message_PNGmissing_Text1" xml:space="preserve">
+    <value>PNG files go out of order or some of the files are missing.</value>
+  </data>
+  <data name="Message_PNGmissing_Text2" xml:space="preserve">
+    <value>Name the PNG files in ascending order.</value>
+  </data>
+  <data name="Message_Restart_Caption" xml:space="preserve">
+    <value>Reboot</value>
+  </data>
+  <data name="Message_Restart_Text1" xml:space="preserve">
+    <value>To apply the settings, you must restart the program.</value>
+  </data>
+  <data name="Message_Restart_Text2" xml:space="preserve">
+    <value>Restart the program?</value>
+  </data>
+  <data name="Message_SaveOnly1234_Text" xml:space="preserve">
+    <value>To save pre-set parameters, set at least one field "Calories" to a value other than "1234".</value>
+  </data>
+  <data name="Message_Warning3clockHand_Text" xml:space="preserve">
+    <value>If you do not use all three hands in an analog watch, problems may arise.</value>
+  </data>
+  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
+    <value>Using distance display without a suffix is ​​not recommended.</value>
+  </data>
+  <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
+    <value>It is not recommended to use minutes without using hours for numerical display of time.</value>
+  </data>
+  <data name="Message_WarningOnlySec_Text" xml:space="preserve">
+    <value>It is not recommended to use seconds without using hours and minutes for numerical display of time.</value>
+  </data>
+  <data name="Message_WarningTensOnes_Text" xml:space="preserve">
+    <value>Different ImageIndex values ​​for tens and units are not supported.</value>
+  </data>
+  <data name="Message_Warning_Caption" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Some images may cause errors (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Try fixing them?</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>Save the project</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>Do You want save changes of project </value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>The current project has not yet been saved. Do you want to save it?</value>
+  </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>The number of elements for animation cannot be more than 4.</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>It is not recommended to use segments and a indicator at the same time for the same type of values. This may cause glitches !</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>File name and path cannot contain spaces!</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>The current temperature display may not work without displaying the day and night temperatures.</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>It is not recommended using more than 10 images to display battery power.</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>The program path should not contain spaces. It is recommended to place the program in the root directory of the disk.</value>
+  </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>A new watch face has been created.</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Directory </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> already exists. Replace?</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value>\Manual\readme_en.chm</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>The image for animation should not be the last in the list of images.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>The month number display does not work together with the month name display.</value>
+  </data>
+  <data name="FilterGif" xml:space="preserve">
+    <value>GIF Files (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Binary File (*.bin)|*.bin</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Json files (*.json) | *.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>PNG Files (*.png)|*.png</value>
+  </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>quick_guide.htm</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>Uncompressed file size exceeds 5.5MB.</value>
+  </data>
+</root>
