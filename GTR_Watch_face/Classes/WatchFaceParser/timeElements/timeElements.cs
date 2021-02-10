@@ -68,7 +68,7 @@ namespace AmazFit_Watchface_2
         /// <summary>Конечный угол</summary>
         public float EndAngle { get; set; }
 
-        public long Unknown16 { get; set; }
+        public long? Unknown16 { get; set; }
     }
 
 }

@@ -310,7 +310,7 @@ namespace AmazFit_Watchface_2
 
         private void checkBox_Year_Use_CheckedChanged(object sender, EventArgs e)
         {
-            bool b = checkBox_Year_Use.Checked;
+            bool b = checkBox__Year_text_Use.Checked;
             comboBox_Year_image.Enabled = b;
             comboBox_Year_unit.Enabled = b;
             comboBox_Year_separator.Enabled = b;
@@ -334,6 +334,125 @@ namespace AmazFit_Watchface_2
             label607.Enabled = b;
             label608.Enabled = b;
         }
+
+        private void checkBox_Day_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Day_hand_Use.Checked;
+            comboBox_Day_hand_image.Enabled = b;
+            comboBox_Day_hand_imageCentr.Enabled = b;
+            numericUpDown_Day_handX.Enabled = b;
+            numericUpDown_Day_handY.Enabled = b;
+            numericUpDown_Day_handX_centr.Enabled = b;
+            numericUpDown_Day_handY_centr.Enabled = b;
+            numericUpDown_Day_handX_offset.Enabled = b;
+            numericUpDown_Day_handY_offset.Enabled = b;
+            numericUpDown_Day_hand_startAngle.Enabled = b;
+            numericUpDown_Day_hand_endAngle.Enabled = b;
+
+            label609.Enabled = b;
+            label610.Enabled = b;
+            label611.Enabled = b;
+            label612.Enabled = b;
+            label613.Enabled = b;
+            label614.Enabled = b;
+            label615.Enabled = b;
+            label616.Enabled = b;
+            label617.Enabled = b;
+            label618.Enabled = b;
+            label619.Enabled = b;
+            label620.Enabled = b;
+            label621.Enabled = b;
+            label622.Enabled = b;
+            label623.Enabled = b;
+            label624.Enabled = b;
+            label625.Enabled = b;
+        }
+
+        private void checkBox_Month_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Month_hand_Use.Checked;
+            comboBox_Month_hand_image.Enabled = b;
+            comboBox_Month_hand_imageCentr.Enabled = b;
+            numericUpDown_Month_handX.Enabled = b;
+            numericUpDown_Month_handY.Enabled = b;
+            numericUpDown_Month_handX_centr.Enabled = b;
+            numericUpDown_Month_handY_centr.Enabled = b;
+            numericUpDown_Month_handX_offset.Enabled = b;
+            numericUpDown_Month_handY_offset.Enabled = b;
+            numericUpDown_Month_hand_startAngle.Enabled = b;
+            numericUpDown_Month_hand_endAngle.Enabled = b;
+
+            label626.Enabled = b;
+            label627.Enabled = b;
+            label628.Enabled = b;
+            label629.Enabled = b;
+            label630.Enabled = b;
+            label631.Enabled = b;
+            label632.Enabled = b;
+            label633.Enabled = b;
+            label634.Enabled = b;
+            label635.Enabled = b;
+            label636.Enabled = b;
+            label637.Enabled = b;
+            label638.Enabled = b;
+        }
+
+        private void checkBox_DOW_pictures_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_DOW_pictures_Use.Checked;
+            comboBox_DOW_pictures_image.Enabled = b;
+            numericUpDown_DOW_picturesX.Enabled = b;
+            numericUpDown_DOW_picturesY.Enabled = b;
+
+            label639.Enabled = b;
+            label640.Enabled = b;
+            label641.Enabled = b;
+            label642.Enabled = b;
+        }
+
+        private void checkBox_DOW_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_DOW_hand_Use.Checked;
+            comboBox_DOW_hand_image.Enabled = b;
+            comboBox_DOW_hand_imageCentr.Enabled = b;
+            numericUpDown_DOW_handX.Enabled = b;
+            numericUpDown_DOW_handY.Enabled = b;
+            numericUpDown_DOW_handX_centr.Enabled = b;
+            numericUpDown_DOW_handY_centr.Enabled = b;
+            numericUpDown_DOW_handX_offset.Enabled = b;
+            numericUpDown_DOW_handY_offset.Enabled = b;
+            numericUpDown_DOW_hand_startAngle.Enabled = b;
+            numericUpDown_DOW_hand_endAngle.Enabled = b;
+
+            label643.Enabled = b;
+            label644.Enabled = b;
+            label645.Enabled = b;
+            label646.Enabled = b;
+            label647.Enabled = b;
+            label648.Enabled = b;
+            label649.Enabled = b;
+            label650.Enabled = b;
+            label651.Enabled = b;
+            label652.Enabled = b;
+            label653.Enabled = b;
+            label654.Enabled = b;
+            label655.Enabled = b;
+        }
+
+        private void checkBox_Status_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+
 
 
     }

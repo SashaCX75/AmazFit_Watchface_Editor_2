@@ -51,7 +51,8 @@ namespace AmazFit_Watchface_2
     {
         /// <summary>Battery = 1; Steps = 2; Calories = 3; HeartRate = 4; PAI = 5; 
         /// Distance = 6; StandUp = 7; Weather = 8; UVindex = 9; AirQuality = 10; 
-        /// Humidity = 11; Sunrise = 12 # Two Images possible</summary>
+        /// Humidity = 11; Sunrise = 12 # Two Images possible; ActivityGoal = 17# Two Images possible; 
+        /// FatBurning = 18</summary>
         public string Type { get; set; }
 
         /// <summary>Отображение данных стрелками</summary>

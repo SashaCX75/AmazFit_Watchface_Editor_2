@@ -88,6 +88,12 @@ namespace AmazFit_Watchface_2
         /// <summary>Номер изображения</summary>
         public long ImageIndex { get; set; }
 
+        /// <summary>Номер второго изображения (для преключаемых параметров</summary>
+        public long? ImageIndex2 { get; set; }
+
+        /// <summary>Номер третего изображения (для преключаемых параметров</summary>
+        public long? ImageIndex3 { get; set; }
+
         /*
         /// <summary>Начальный уго</summary>
         public float? StartAngle { get; set; }
@@ -176,7 +182,7 @@ namespace AmazFit_Watchface_2
 
         /// <summary>Показывать ведущие нули</summary>
         //TODO наверно тип bool
-        public bool PaddingZero { get; set; }
+        public bool? PaddingZero { get; set; }
 
         public bool? DisplayFormAnalog { get; set; }
     }

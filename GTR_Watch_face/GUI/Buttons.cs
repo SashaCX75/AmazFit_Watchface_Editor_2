@@ -74,5 +74,70 @@ namespace AmazFit_Watchface_2
             }
             else panel_Second_hand.Height = 1;
         }
+
+        private void button_Day_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Day_text.Height == 1)
+            {
+                panel_Day_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Day_text.Height = 1;
+        }
+
+        private void button_Day_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Day_hand.Height == 1)
+            {
+                panel_Day_hand.Height = (int)(155 * currentDPI);
+            }
+            else panel_Day_hand.Height = 1;
+        }
+
+        private void button_Month_image_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_image.Height == 1)
+            {
+                panel_Month_image.Height = (int)(85 * currentDPI);
+            }
+            else panel_Month_image.Height = 1;
+        }
+
+        private void button_Month_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_text.Height == 1)
+            {
+                panel_Month_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Month_text.Height = 1;
+        }
+
+        private void button_Month_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_hand.Height == 1)
+            {
+                panel_Month_hand.Height = (int)(155 * currentDPI);
+            }
+            else panel_Month_hand.Height = 1;
+        }
+        private void button_DOW_image_Click(object sender, EventArgs e)
+        {
+            if (panel_DOW_image.Height == 1)
+            {
+                panel_DOW_image.Height = (int)(85 * currentDPI);
+            }
+            else panel_DOW_image.Height = 1;
+        }
+
+        private void button_DOW_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_DOW_hand.Height == 1)
+            {
+                panel_DOW_hand.Height = (int)(155 * currentDPI);
+            }
+            else panel_DOW_hand.Height = 1;
+        }
+
+
+
     }
 }

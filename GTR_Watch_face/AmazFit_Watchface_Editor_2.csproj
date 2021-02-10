@@ -94,8 +94,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Animation\ClassMotiomAnimation.cs" />
-    <Compile Include="Classes\Animation\ClassStaticAnimation.cs" />
     <Compile Include="Classes\WatchFaceParser\systemElements\systemElements.cs" />
     <Compile Include="Classes\WatchFaceParser\basicElements\basicElements.cs" />
     <Compile Include="Classes\WatchFaceParser\Elements.cs" />

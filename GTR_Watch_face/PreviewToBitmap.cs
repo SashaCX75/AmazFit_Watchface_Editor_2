@@ -22,11 +22,12 @@ namespace AmazFit_Watchface_2
         /// <param name="showShortcutsBorder">Подсвечивать область ярлыков заливкой</param>
         /// <param name="showAnimation">Показывать анимацию при предпросмотре</param>
         /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        /// <param name="showCentrHend">Подсвечивать центр стрелки</param>
         /// <param name="link">1 - если отрисовка только до анимации, 
         /// 2 - если отрисовка только после анимации, в остальных случаях полная отрисовка</param>
         public void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, 
             bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showCircleScaleArea, 
-            int link)
+            bool showCentrHend, int link)
         {
             Logger.WriteLine("* PreviewToBitmap");
             var src = new Bitmap(1, 1);
@@ -218,7 +219,7 @@ namespace AmazFit_Watchface_2
                 //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
                 if (hour >= 12) hour = hour - 12;
                 float angle = 360 * hour / 12 + 360 * min / (60 * 12);
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, checkBox_center_marker.Checked);
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Hour_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -238,7 +239,7 @@ namespace AmazFit_Watchface_2
                 int image_index = comboBox_Minute_hand_image.SelectedIndex;
                 int min = Watch_Face_Preview_Set.Time.Minutes;
                 float angle = 360 * min / 60;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, checkBox_center_marker.Checked);
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Minute_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -261,7 +262,7 @@ namespace AmazFit_Watchface_2
                 //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
                 if (hour >= 12) hour = hour - 12;
                 float angle = 360 * hour / 12 + 360 * min / (60 * 12);
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, checkBox_center_marker.Checked);
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Second_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -276,7 +277,7 @@ namespace AmazFit_Watchface_2
             int date_offsetX = -1;
             int date_offsetY = -1;
             // год
-            if (checkBox_Year_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
+            if (checkBox__Year_text_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
             {
                 int imageIndex = comboBox_Year_image.SelectedIndex;
                 int x = (int)numericUpDown_YearX.Value;
@@ -363,7 +364,7 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            // месяц картинко
+            // месяц картинкой
             if (checkBox_Month_pictures_Use.Checked && comboBox_Month_pictures_image.SelectedIndex >= 0)
             {
                 int imageIndex = comboBox_Month_pictures_image.SelectedIndex;
@@ -377,8 +378,112 @@ namespace AmazFit_Watchface_2
                     gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                 }
             }
+
+            // месяц стрелкой
+            if (checkBox_Month_hand_Use.Checked && comboBox_Month_hand_image.SelectedIndex >= 0)
+            {
+                int x = (int)numericUpDown_Month_handX.Value;
+                int y = (int)numericUpDown_Month_handY.Value;
+                int offsetX = (int)numericUpDown_Month_handX_offset.Value;
+                int offsetY = (int)numericUpDown_Month_handY_offset.Value;
+                int image_index = comboBox_Month_hand_image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_Month_hand_startAngle.Value);
+                float endAngle = (float)(numericUpDown_Month_hand_endAngle.Value);
+                int Month = Watch_Face_Preview_Set.Date.Month;
+                Month--;
+                float angle = startAngle + Month * (endAngle - startAngle) / 11;
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_Month_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Month_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_handX_centr.Value,
+                        (int)numericUpDown_Month_handY_centr.Value, src.Width, src.Height));
+                }
+            }
+
+            // день недели картинкой
+            if (checkBox_DOW_pictures_Use.Checked && comboBox_DOW_pictures_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_DOW_pictures_image.SelectedIndex;
+                int x = (int)numericUpDown_DOW_picturesX.Value;
+                int y = (int)numericUpDown_DOW_picturesY.Value;
+                imageIndex = imageIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
+
+                if (imageIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[imageIndex]);
+                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+            }
+
+            // день недели стрелкой
+            if (checkBox_DOW_hand_Use.Checked && comboBox_DOW_hand_image.SelectedIndex >= 0)
+            {
+                int x = (int)numericUpDown_DOW_handX.Value;
+                int y = (int)numericUpDown_DOW_handY.Value;
+                int offsetX = (int)numericUpDown_DOW_handX_offset.Value;
+                int offsetY = (int)numericUpDown_DOW_handY_offset.Value;
+                int image_index = comboBox_DOW_hand_image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_DOW_hand_startAngle.Value);
+                float endAngle = (float)(numericUpDown_DOW_hand_endAngle.Value);
+                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
+                WeekDay--;
+                if (WeekDay < 0) WeekDay = 6;
+                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_DOW_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_centr.Value,
+                        (int)numericUpDown_DOW_handY_centr.Value, src.Width, src.Height));
+                }
+
+            }
             #endregion
 
+            #region статусы
+            if (checkBox_Bluetooth_Use.Checked && comboBox_Bluetooth_image.SelectedIndex >= 0)
+            {
+                if (!Watch_Face_Preview_Set.Status.Bluetooth)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Bluetooth_image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_BluetoothX.Value,
+                        (int)numericUpDown_BluetoothY.Value, src.Width, src.Height)); 
+                }
+            }
+
+            if (checkBox_Alarm_Use.Checked && comboBox_Alarm_image.SelectedIndex >= 0)
+            {
+                if (Watch_Face_Preview_Set.Status.Alarm)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Alarm_image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AlarmX.Value,
+                        (int)numericUpDown_AlarmY.Value, src.Width, src.Height)); 
+                }
+            }
+
+            if (checkBox_DND_Use.Checked && comboBox_DND_image.SelectedIndex >= 0)
+            {
+                if (Watch_Face_Preview_Set.Status.DoNotDisturb)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_DND_image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DNDX.Value,
+                        (int)numericUpDown_DNDY.Value, src.Width, src.Height)); 
+                }
+            }
+
+            if (checkBox_Lock_Use.Checked && comboBox_Lock_image.SelectedIndex >= 0)
+            {
+                if (Watch_Face_Preview_Set.Status.Lock)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Lock_image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_LockX.Value,
+                        (int)numericUpDown_LockY.Value, src.Width, src.Height)); 
+                }
+            }
+            #endregion
 
 
 
@@ -3169,7 +3274,7 @@ namespace AmazFit_Watchface_2
         /// <param name="image_index">Номер изображения</param>
         /// <param name="angle">Угол поворота стрелки в градусах</param>
         /// <param name="center_marker">Отображать маркер на точке вращения</param>
-        public void DrawAnalogClock2(Graphics graphics, int x, int y, int offsetX, int offsetY, int image_index, float angle, bool center_marker)
+        public void DrawAnalogClock2(Graphics graphics, int x, int y, int offsetX, int offsetY, int image_index, float angle, bool showCentrHend)
         {
             Logger.WriteLine("* DrawAnalogClock2");
             Bitmap src = OpenFileStream(ListImagesFullName[image_index]);
@@ -3180,9 +3285,9 @@ namespace AmazFit_Watchface_2
             graphics.TranslateTransform(-x, -y);
             src.Dispose();
 
-            if (center_marker)
+            if (showCentrHend)
             {
-                Logger.WriteLine("Draw center_marker");
+                Logger.WriteLine("Draw showCentrHend");
                 using (Pen pen1 = new Pen(Color.White, 1))
                 {
                     graphics.DrawLine(pen1, new Point(x - 5, y), new Point(x + 5, y));

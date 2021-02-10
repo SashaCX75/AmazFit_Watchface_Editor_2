@@ -1646,9 +1646,14 @@ namespace AmazFit_Watchface_2
                         {
                             Value = loadedImage,
                             ImageLayout = ZoomType,
-                        //    dataGridView_ImagesList.DefaultCellStyle.BackColor = Color.Black;
-                        //dataGridView_ImagesList.DefaultCellStyle.ForeColor = Color.White;
-                    });
+
+                        }); 
+                        RowNew.Cells.Add(new DataGridViewImageCell()
+                        {
+                            Value = loadedImage,
+                            ImageLayout = ZoomType,
+
+                        });
                         //loadedImage.Dispose();
                         RowNew.Height = 45;
                         dataGridView_ImagesList.Rows.Add(RowNew);
@@ -1722,18 +1727,19 @@ namespace AmazFit_Watchface_2
                 Logger.WriteLine("Load PreviewStates.json");
                 if (Program_Settings.Settings_Open_Download)
                 {
-                    JsonPreview_Read(newFullName); 
+                    JsonPreview_Read(newFullName);
                 }
                 else if (Program_Settings.Settings_Open_Dialog)
                 {
                     if (MessageBox.Show(Properties.FormStrings.Message_LoadPreviewStates_Text,
-                        Properties.FormStrings.Message_openProject_Caption, 
+                        Properties.FormStrings.Message_openProject_Caption,
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         JsonPreview_Read(newFullName);
                     }
                 }
             }
+            else button_JsonPreview_Random.PerformClick();
             PreviewView = true;
             PreviewImage();
             JSON_Modified = false;
@@ -1807,7 +1813,8 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("PreviewToBitmap");
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 
+                checkBox_center_marker.Checked, 0);
             pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -2251,7 +2258,7 @@ namespace AmazFit_Watchface_2
                 Rectangle rect = new Rectangle(box.ClientRectangle.X,
                                                box.ClientRectangle.Y + (int)(strSize.Height / 2),
                                                box.ClientRectangle.Width - 1,
-                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 1);
+                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 5);
 
                 // Clear text and border
                 g.Clear(this.BackColor);
@@ -4607,7 +4614,7 @@ namespace AmazFit_Watchface_2
                     PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
                         checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true,
-                        checkBox_CircleScaleImage.Checked, 0);
+                        checkBox_CircleScaleImage.Checked, checkBox_center_marker.Checked, 0);
                     formPreview.pictureBox_Preview.BackgroundImage = bitmapPreviewResize;
                     gPanelPreviewResize.Dispose();
                 };
@@ -4688,7 +4695,8 @@ namespace AmazFit_Watchface_2
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked,
+                checkBox_center_marker.Checked, 0);
             formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -5966,7 +5974,7 @@ namespace AmazFit_Watchface_2
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -6135,7 +6143,7 @@ namespace AmazFit_Watchface_2
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -7662,131 +7670,10 @@ namespace AmazFit_Watchface_2
                 mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, 1);
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, false, 1);
             if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
             Image loadedImage = null;
 
-            List<ClassMotiomAnimation> MotiomAnimation = new List<ClassMotiomAnimation>();
-            if (checkBox_MotiomAnimation.Checked)
-            {
-                foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
-                {
-                    if (MotiomAnimation.Count >= 4) break;
-                    int StartCoordinates_X = 0;
-                    int StartCoordinates_Y = 0;
-                    int EndCoordinates_X = 0;
-                    int EndCoordinates_Y = 0;
-                    int ImageIndex = 0;
-                    int SpeedAnimation = 0;
-                    int TimeAnimation = 0;
-                    bool Bounce_b = false;
-                    if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
-                        row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null)
-                    {
-                        if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
-                            Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
-                            Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
-                            Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
-                            Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex) &&
-                            Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation))
-                        {
-                            if (row.Cells[7].Value != null) Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation);
-                            if (row.Cells[11].Value != null) Boolean.TryParse(row.Cells[11].Value.ToString(), out Bounce_b);
-                            using (FileStream stream = new FileStream(ListImagesFullName[ImageIndex], FileMode.Open, 
-                                FileAccess.Read, FileShare.ReadWrite))
-                            {
-                                loadedImage = Image.FromStream(stream);
-                            }
-
-                            ClassMotiomAnimation motiomAnimation = new ClassMotiomAnimation(new Bitmap(loadedImage),
-                                StartCoordinates_X, StartCoordinates_Y, EndCoordinates_X, EndCoordinates_Y,
-                                SpeedAnimation, TimeAnimation, Bounce_b);
-                            //ClassMotiomAnimation motiomAnimation = new ClassMotiomAnimation(new Bitmap(ListImagesFullName[ImageIndex]),
-                            //     StartCoordinates_X, StartCoordinates_Y, EndCoordinates_X, EndCoordinates_Y,
-                            //     SpeedAnimation, TimeAnimation, Bounce_b);
-
-                            MotiomAnimation.Add(motiomAnimation);
-                        }
-                    }
-                } 
-            }
-
-            ClassStaticAnimation StaticAnimation = null;
-            List<Bitmap> Images = new List<Bitmap>();
-            if (checkBox_StaticAnimation.Checked && comboBox_StaticAnimation_Image.SelectedIndex >= 0)
-            {
-                for (int i = comboBox_StaticAnimation_Image.SelectedIndex;
-                    i < (comboBox_StaticAnimation_Image.SelectedIndex + (int)numericUpDown_StaticAnimation_Count.Value); i++)
-                {
-                    //using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, 
-                    //    FileAccess.Read, FileShare.ReadWrite))
-                    //{
-                    //    loadedImage = Image.FromStream(stream);
-                    //}
-                    //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(loadedImage));
-                    if (i < ListImagesFullName.Count)
-                    {
-                        using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open,
-                        FileAccess.Read, FileShare.ReadWrite))
-                        {
-                            loadedImage = Image.FromStream(stream);
-                        }
-                        Images.Add(new Bitmap(loadedImage));
-                    }
-                }
-            }
-            if (loadedImage !=null) loadedImage.Dispose();
-            if (Images.Count > 0)
-            {
-                StaticAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
-                    (int)numericUpDown_StaticAnimation_Y.Value, (int)numericUpDown_StaticAnimation_SpeedAnimation.Value,
-                    (int)numericUpDown_StaticAnimation_TimeAnimation.Value, (int)numericUpDown_StaticAnimation_Pause.Value);
-
-            }
-
-            if (MotiomAnimation.Count > 0 || StaticAnimation != null)
-            {
-                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation, currentDPI);
-                formAnimation.Owner = this;
-                if (FormAnimation.Model_Wath.model_gtr47 != radioButton_GTR2.Checked)
-                    FormAnimation.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-                if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
-                    FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
-                if (FormAnimation.Model_Wath.model_gts != radioButton_GTS2.Checked)
-                    FormAnimation.Model_Wath.model_gts = radioButton_GTS2.Checked;
-                if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
-                    FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
-                if (FormAnimation.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
-                    FormAnimation.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
-                if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
-                    FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
-
-                switch (comboBox_Animation_Preview_Speed.SelectedIndex)
-                {
-                    case 0:
-                        formAnimation.timer1.Interval = 20;
-                        break;
-                    case 1:
-                        formAnimation.timer1.Interval = 25;
-                        break;
-                    case 2:
-                        formAnimation.timer1.Interval = 33;
-                        break;
-                    case 3:
-                        formAnimation.timer1.Interval = 50;
-                        break;
-                    case 4:
-                        formAnimation.timer1.Interval = 100;
-                        break;
-                }
-                formAnimation.ShowDialog(); 
-            }
-
-            //formAnimation.FormClosed += (object senderClosed, FormClosedEventArgs eClosed) =>
-            //{
-            //    MotiomAnimation.Clear();
-            //    StaticAnimation = null;
-            //};
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -8949,7 +8836,7 @@ namespace AmazFit_Watchface_2
                     PreviewHeight = 210;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
                 if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
 
 
@@ -9264,6 +9151,8 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+
+
 
 
 
