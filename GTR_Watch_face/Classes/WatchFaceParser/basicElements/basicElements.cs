@@ -11,7 +11,7 @@ namespace AmazFit_Watchface_2
         public LinearSettings LinearSettings { get; set; }
 
         /// <summary>Изображение шкалы прогресса?</summary>
-        public long ForegroundImageIndex { get; set; }
+        public long? ForegroundImageIndex { get; set; }
 
         /// <summary>Цвет</summary>
         public string Color { get; set; }

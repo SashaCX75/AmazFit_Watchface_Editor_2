@@ -133,8 +133,8 @@ namespace AmazFit_Watchface_2
             tabControl1.TabPages[2].Parent = null;
             tabControl1.TabPages[2].Parent = null;
             tabControl1.TabPages[4].Parent = null;
-            //tabControl1.SelectTab(1);
-            //tabControl_EditParameters.SelectTab(5);
+            tabControl1.SelectTab(1);
+            tabControl_EditParameters.SelectTab(5);
 
             //Logger.WriteLine("Создали переменные");
 
@@ -216,24 +216,11 @@ namespace AmazFit_Watchface_2
         private void Form1_Load(object sender, EventArgs e)
         {
             Logger.WriteLine("* Form1_Load ");
-#if Puthon
-            // пробелы в имени
-            if (Application.StartupPath.IndexOf(" ") != -1)
-            {
-                Logger.WriteLine("пробелы в имени");
-                MessageBox.Show(Properties.FormStrings.Message_Error_SpaceInProgrammName_Text,
-                    Properties.FormStrings.Message_Error_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
-#endif
 
             //Logger.WriteLine("Form1_Load");
             helpProvider1.HelpNamespace = Application.StartupPath + Properties.FormStrings.File_ReadMy;
-#if Puthon
-            string subPath = Application.StartupPath + @"\Tools\py_amazfit_tools-GTR2\main.py";
-#else
+            
             string subPath = Application.StartupPath + @"\Tools\main.exe";
-#endif
             Logger.WriteLine("Set textBox.Text");
             if (Program_Settings.pack_unpack_dir == null)
             {
@@ -5586,12 +5573,12 @@ namespace AmazFit_Watchface_2
             if (Watch_Face == null) return;
 
             // 3 стрелки для аналоговых часов
-            if (Watch_Face.AnalogDialFace != null)
+            if (Watch_Face.MonthClockHand != null)
             {
                 int i = 0;
-                if ((Watch_Face.AnalogDialFace.Hours != null) && (Watch_Face.AnalogDialFace.Hours.Image != null)) i++;
-                if ((Watch_Face.AnalogDialFace.Minutes != null) && (Watch_Face.AnalogDialFace.Minutes.Image != null)) i++;
-                if ((Watch_Face.AnalogDialFace.Seconds != null) && (Watch_Face.AnalogDialFace.Seconds.Image != null)) i++;
+                if ((Watch_Face.MonthClockHand.Hours != null) && (Watch_Face.MonthClockHand.Hours.Image != null)) i++;
+                if ((Watch_Face.MonthClockHand.Minutes != null) && (Watch_Face.MonthClockHand.Minutes.Image != null)) i++;
+                if ((Watch_Face.MonthClockHand.Seconds != null) && (Watch_Face.MonthClockHand.Seconds.Image != null)) i++;
                 if (i < 3 && i > 0) MessageBox.Show(Properties.FormStrings.Message_Warning3clockHand_Text, 
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -5673,7 +5660,7 @@ namespace AmazFit_Watchface_2
             // индикатор и сегменты для прогресса шагов
             if (Watch_Face.StepsProgress != null)
             {
-                if ((Watch_Face.StepsProgress.ClockHand != null && Watch_Face.StepsProgress.ClockHand.Image != null) 
+                if ((Watch_Face.StepsProgress.WeekDayClockHand != null && Watch_Face.StepsProgress.WeekDayClockHand.Image != null) 
                     && (Watch_Face.StepsProgress.Sliced != null))
                 {
                     MessageBox.Show(Properties.FormStrings.Message_WarningBatterySegment_Text,
@@ -5697,7 +5684,7 @@ namespace AmazFit_Watchface_2
             {
                 if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
                 {
-                    //if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
+                    //if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.WeekDayClockHand != null)
                     {
                         MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
                             Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning); 
@@ -7971,36 +7958,36 @@ namespace AmazFit_Watchface_2
             //#region StepsProgress
             //if (Watch_Face.StepsProgress != null)
             //{
-            //    if (Watch_Face.StepsProgress.Circle != null)
+            //    if (Watch_Face.StepsProgress.WeekDayProgressBar != null)
             //    {
-            //        Watch_Face.StepsProgress.Circle.CenterX = (int)Math.Round(Watch_Face.StepsProgress.Circle.CenterX * scale);
-            //        Watch_Face.StepsProgress.Circle.CenterY = (int)Math.Round(Watch_Face.StepsProgress.Circle.CenterY * scale);
-            //        Watch_Face.StepsProgress.Circle.RadiusX = (int)Math.Round(Watch_Face.StepsProgress.Circle.RadiusX * scale);
-            //        Watch_Face.StepsProgress.Circle.RadiusY = (int)Math.Round(Watch_Face.StepsProgress.Circle.RadiusY * scale);
-            //        Watch_Face.StepsProgress.Circle.Width = (int)Math.Round(Watch_Face.StepsProgress.Circle.Width * scale);
-            //        if (Watch_Face.StepsProgress.Circle.ImageIndex != null)
+            //        Watch_Face.StepsProgress.WeekDayProgressBar.CenterX = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.CenterX * scale);
+            //        Watch_Face.StepsProgress.WeekDayProgressBar.CenterY = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.CenterY * scale);
+            //        Watch_Face.StepsProgress.WeekDayProgressBar.RadiusX = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.RadiusX * scale);
+            //        Watch_Face.StepsProgress.WeekDayProgressBar.RadiusY = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.RadiusY * scale);
+            //        Watch_Face.StepsProgress.WeekDayProgressBar.Width = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.Width * scale);
+            //        if (Watch_Face.StepsProgress.WeekDayProgressBar.ImageIndex != null)
             //        {
             //            int x = 0;
             //            int y = 0;
-            //            Color new_color = ColorRead(Watch_Face.StepsProgress.Circle.Color);
+            //            Color new_color = ColorRead(Watch_Face.StepsProgress.WeekDayProgressBar.Color);
             //            ColorToCoodinates(new_color, out x, out y);
             //            x = (int)Math.Round(x * scale);
             //            y = (int)Math.Round(y * scale);
             //            string colorStr = CoodinatesToColor(x, y);
-            //            Watch_Face.StepsProgress.Circle.Color = colorStr;
+            //            Watch_Face.StepsProgress.WeekDayProgressBar.Color = colorStr;
             //        }
             //    }
 
-            //    if ((Watch_Face.StepsProgress.ClockHand != null) && (Watch_Face.StepsProgress.ClockHand.Image != null))
+            //    if ((Watch_Face.StepsProgress.WeekDayClockHand != null) && (Watch_Face.StepsProgress.WeekDayClockHand.Image != null))
             //    {
-            //        Watch_Face.StepsProgress.ClockHand.Image.X = (int)Math.Round(Watch_Face.StepsProgress.ClockHand.Image.X * scale);
-            //        Watch_Face.StepsProgress.ClockHand.Image.Y = (int)Math.Round(Watch_Face.StepsProgress.ClockHand.Image.Y * scale);
-            //        if (Watch_Face.StepsProgress.ClockHand.CenterOffset != null)
+            //        Watch_Face.StepsProgress.WeekDayClockHand.Image.X = (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.Image.X * scale);
+            //        Watch_Face.StepsProgress.WeekDayClockHand.Image.Y = (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.Image.Y * scale);
+            //        if (Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset != null)
             //        {
-            //            Watch_Face.StepsProgress.ClockHand.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.StepsProgress.ClockHand.CenterOffset.X * scale);
-            //            Watch_Face.StepsProgress.ClockHand.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.StepsProgress.ClockHand.CenterOffset.Y * scale);
+            //            Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.X =
+            //                (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.X * scale);
+            //            Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.Y =
+            //                (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.Y * scale);
             //        }
             //    }
 
@@ -8075,17 +8062,17 @@ namespace AmazFit_Watchface_2
             //    }
 
             //    if ((Watch_Face.Activity.PulseGraph != null) &&
-            //        (Watch_Face.Activity.PulseGraph.ClockHand != null) &&
-            //        (Watch_Face.Activity.PulseGraph.ClockHand.Image != null))
+            //        (Watch_Face.Activity.PulseGraph.WeekDayClockHand != null) &&
+            //        (Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image != null))
             //    {
-            //        Watch_Face.Activity.PulseGraph.ClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.Image.X * scale);
-            //        Watch_Face.Activity.PulseGraph.ClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.Image.Y * scale);
-            //        if (Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset != null)
+            //        Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.X * scale);
+            //        Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.Y * scale);
+            //        if (Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset != null)
             //        {
-            //            Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X * scale);
-            //            Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y * scale);
+            //            Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.X =
+            //                (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.X * scale);
+            //            Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.Y =
+            //                (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.Y * scale);
             //        }
             //    }
 
@@ -8108,38 +8095,38 @@ namespace AmazFit_Watchface_2
             //        Watch_Face.Activity.Calories.Spacing = (int)Math.Round(Watch_Face.Activity.Calories.Spacing * scale);
             //    }
                 
-            //    if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.Circle != null)
+            //    if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar != null)
             //    {
-            //        Watch_Face.Activity.CaloriesGraph.Circle.CenterX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.CenterX * scale);
-            //        Watch_Face.Activity.CaloriesGraph.Circle.CenterY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.CenterY * scale);
-            //        Watch_Face.Activity.CaloriesGraph.Circle.RadiusX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.RadiusX * scale);
-            //        Watch_Face.Activity.CaloriesGraph.Circle.RadiusY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.RadiusY * scale);
-            //        Watch_Face.Activity.CaloriesGraph.Circle.Width = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.Width * scale);
-            //        if (Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex != null)
+            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterX * scale);
+            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterY * scale);
+            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusX * scale);
+            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusY * scale);
+            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Width = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Width * scale);
+            //        if (Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.ImageIndex != null)
             //        {
             //            int x = 0;
             //            int y = 0;
-            //            Color new_color = ColorRead(Watch_Face.Activity.CaloriesGraph.Circle.Color);
+            //            Color new_color = ColorRead(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Color);
             //            ColorToCoodinates(new_color, out x, out y);
             //            x = (int)Math.Round(x * scale);
             //            y = (int)Math.Round(y * scale);
             //            string colorStr = CoodinatesToColor(x, y);
-            //            Watch_Face.Activity.CaloriesGraph.Circle.Color = colorStr;
+            //            Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Color = colorStr;
             //        }
             //    }
 
             //    if ((Watch_Face.Activity.CaloriesGraph != null) &&
-            //        (Watch_Face.Activity.CaloriesGraph.ClockHand != null) &&
-            //        (Watch_Face.Activity.CaloriesGraph.ClockHand.Image != null))
+            //        (Watch_Face.Activity.CaloriesGraph.WeekDayClockHand != null) &&
+            //        (Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image != null))
             //    {
-            //        Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X * scale);
-            //        Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y * scale);
-            //        if (Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset != null)
+            //        Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.X * scale);
+            //        Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.Y * scale);
+            //        if (Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset != null)
             //        {
-            //            Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X * scale);
-            //            Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y * scale);
+            //            Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.X =
+            //                (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.X * scale);
+            //            Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.Y =
+            //                (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.Y * scale);
             //        }
             //    }
 
@@ -8260,67 +8247,67 @@ namespace AmazFit_Watchface_2
             //}
             //#endregion
 
-            //#region AnalogDialFace
-            //if (Watch_Face.AnalogDialFace != null)
+            //#region MonthClockHand
+            //if (Watch_Face.MonthClockHand != null)
             //{
-            //    if ((Watch_Face.AnalogDialFace.Hours != null) && (Watch_Face.AnalogDialFace.Hours.Image != null))
+            //    if ((Watch_Face.MonthClockHand.Hours != null) && (Watch_Face.MonthClockHand.Hours.Image != null))
             //    {
-            //        Watch_Face.AnalogDialFace.Hours.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Hours.Image.X * scale);
-            //        Watch_Face.AnalogDialFace.Hours.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Hours.Image.Y * scale);
+            //        Watch_Face.MonthClockHand.Hours.Image.X = (int)Math.Round(Watch_Face.MonthClockHand.Hours.Image.X * scale);
+            //        Watch_Face.MonthClockHand.Hours.Image.Y = (int)Math.Round(Watch_Face.MonthClockHand.Hours.Image.Y * scale);
 
-            //        if (Watch_Face.AnalogDialFace.Hours.CenterOffset != null)
+            //        if (Watch_Face.MonthClockHand.Hours.CenterOffset != null)
             //        {
-            //            Watch_Face.AnalogDialFace.Hours.CenterOffset.X = 
-            //                (int)Math.Round(Watch_Face.AnalogDialFace.Hours.CenterOffset.X * scale);
-            //            Watch_Face.AnalogDialFace.Hours.CenterOffset.Y = 
-            //                (int)Math.Round(Watch_Face.AnalogDialFace.Hours.CenterOffset.Y * scale);
+            //            Watch_Face.MonthClockHand.Hours.CenterOffset.X = 
+            //                (int)Math.Round(Watch_Face.MonthClockHand.Hours.CenterOffset.X * scale);
+            //            Watch_Face.MonthClockHand.Hours.CenterOffset.Y = 
+            //                (int)Math.Round(Watch_Face.MonthClockHand.Hours.CenterOffset.Y * scale);
             //        }
             //    }
 
-            //    if ((Watch_Face.AnalogDialFace.Minutes != null) && (Watch_Face.AnalogDialFace.Minutes.Image != null))
+            //    if ((Watch_Face.MonthClockHand.Minutes != null) && (Watch_Face.MonthClockHand.Minutes.Image != null))
             //    {
-            //        Watch_Face.AnalogDialFace.Minutes.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.Image.X * scale);
-            //        Watch_Face.AnalogDialFace.Minutes.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.Image.Y * scale);
+            //        Watch_Face.MonthClockHand.Minutes.Image.X = (int)Math.Round(Watch_Face.MonthClockHand.Minutes.Image.X * scale);
+            //        Watch_Face.MonthClockHand.Minutes.Image.Y = (int)Math.Round(Watch_Face.MonthClockHand.Minutes.Image.Y * scale);
 
-            //        if (Watch_Face.AnalogDialFace.Minutes.CenterOffset != null)
+            //        if (Watch_Face.MonthClockHand.Minutes.CenterOffset != null)
             //        {
-            //            Watch_Face.AnalogDialFace.Minutes.CenterOffset.X =
-            //                 (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.CenterOffset.X * scale);
-            //            Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y =
-            //                 (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y * scale);
+            //            Watch_Face.MonthClockHand.Minutes.CenterOffset.X =
+            //                 (int)Math.Round(Watch_Face.MonthClockHand.Minutes.CenterOffset.X * scale);
+            //            Watch_Face.MonthClockHand.Minutes.CenterOffset.Y =
+            //                 (int)Math.Round(Watch_Face.MonthClockHand.Minutes.CenterOffset.Y * scale);
             //        }
             //    }
 
-            //    if ((Watch_Face.AnalogDialFace.Seconds != null) && (Watch_Face.AnalogDialFace.Seconds.Image != null))
+            //    if ((Watch_Face.MonthClockHand.Seconds != null) && (Watch_Face.MonthClockHand.Seconds.Image != null))
             //    {
-            //        Watch_Face.AnalogDialFace.Seconds.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.Image.X * scale);
-            //        Watch_Face.AnalogDialFace.Seconds.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.Image.Y * scale);
+            //        Watch_Face.MonthClockHand.Seconds.Image.X = (int)Math.Round(Watch_Face.MonthClockHand.Seconds.Image.X * scale);
+            //        Watch_Face.MonthClockHand.Seconds.Image.Y = (int)Math.Round(Watch_Face.MonthClockHand.Seconds.Image.Y * scale);
 
-            //        if (Watch_Face.AnalogDialFace.Seconds.CenterOffset != null)
+            //        if (Watch_Face.MonthClockHand.Seconds.CenterOffset != null)
             //        {
-            //            Watch_Face.AnalogDialFace.Seconds.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.CenterOffset.X * scale);
-            //            Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y * scale);
+            //            Watch_Face.MonthClockHand.Seconds.CenterOffset.X =
+            //                (int)Math.Round(Watch_Face.MonthClockHand.Seconds.CenterOffset.X * scale);
+            //            Watch_Face.MonthClockHand.Seconds.CenterOffset.Y =
+            //                (int)Math.Round(Watch_Face.MonthClockHand.Seconds.CenterOffset.Y * scale);
             //        }
             //    }
 
-            //    if (Watch_Face.AnalogDialFace.HourCenterImage != null)
+            //    if (Watch_Face.MonthClockHand.HourCenterImage != null)
             //    {
-            //        Watch_Face.AnalogDialFace.HourCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.HourCenterImage.X * scale);
-            //        Watch_Face.AnalogDialFace.HourCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.HourCenterImage.Y * scale);
+            //        Watch_Face.MonthClockHand.HourCenterImage.X = (int)Math.Round(Watch_Face.MonthClockHand.HourCenterImage.X * scale);
+            //        Watch_Face.MonthClockHand.HourCenterImage.Y = (int)Math.Round(Watch_Face.MonthClockHand.HourCenterImage.Y * scale);
             //    }
 
-            //    if (Watch_Face.AnalogDialFace.MinCenterImage != null)
+            //    if (Watch_Face.MonthClockHand.MinCenterImage != null)
             //    {
-            //        Watch_Face.AnalogDialFace.MinCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.MinCenterImage.X * scale);
-            //        Watch_Face.AnalogDialFace.MinCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.MinCenterImage.Y * scale);
+            //        Watch_Face.MonthClockHand.MinCenterImage.X = (int)Math.Round(Watch_Face.MonthClockHand.MinCenterImage.X * scale);
+            //        Watch_Face.MonthClockHand.MinCenterImage.Y = (int)Math.Round(Watch_Face.MonthClockHand.MinCenterImage.Y * scale);
             //    }
 
-            //    if (Watch_Face.AnalogDialFace.SecCenterImage != null)
+            //    if (Watch_Face.MonthClockHand.SecCenterImage != null)
             //    {
-            //        Watch_Face.AnalogDialFace.SecCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.SecCenterImage.X * scale);
-            //        Watch_Face.AnalogDialFace.SecCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.SecCenterImage.Y * scale);
+            //        Watch_Face.MonthClockHand.SecCenterImage.X = (int)Math.Round(Watch_Face.MonthClockHand.SecCenterImage.X * scale);
+            //        Watch_Face.MonthClockHand.SecCenterImage.Y = (int)Math.Round(Watch_Face.MonthClockHand.SecCenterImage.Y * scale);
             //    }
             //}
             //#endregion
@@ -8822,6 +8809,19 @@ namespace AmazFit_Watchface_2
                 return;
             // установка цвета формы
             comboBox_Background_color.BackColor = colorDialog.Color;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void comboBox_Battery_scaleLinear_color_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            colorDialog.Color = comboBox_Battery_scaleLinear_color.BackColor;
+            colorDialog.FullOpen = true;
+            if (colorDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            comboBox_Battery_scaleLinear_color.BackColor = colorDialog.Color;
             JSON_write();
             PreviewImage();
         }

@@ -11,11 +11,20 @@ namespace AmazFit_Watchface_2
     {
         private void radioButton_Background_image_CheckedChanged(object sender, EventArgs e)
         {
-            JSON_write();
-            PreviewImage();
             bool b = radioButton_Background_image.Checked;
             comboBox_Background_image.Enabled = b;
             comboBox_Background_color.Enabled = !b;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void radioButton_Battery_scaleLinear_image_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = radioButton_Battery_scaleLinear_image.Checked;
+            comboBox_Battery_scaleLinear_image.Enabled = b;
+            comboBox_Battery_scaleLinear_color.Enabled = !b;
+            JSON_write();
+            PreviewImage();
         }
 
         private void checkBox_Hour_Use_CheckedChanged(object sender, EventArgs e)
@@ -512,6 +521,26 @@ namespace AmazFit_Watchface_2
             for (int i = 1; i < controlCollection.Count; i++)
             {
                 controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_scaleLinear_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
             }
         }
 

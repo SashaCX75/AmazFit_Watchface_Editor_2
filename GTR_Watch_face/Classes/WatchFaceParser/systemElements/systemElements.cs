@@ -41,10 +41,10 @@ namespace AmazFit_Watchface_2
         public DigitalCommonDigit WeeksDigits { get; set; }
 
         /// <summary>Прогресс даты</summary>
-        public Progress DateProgress { get; set; }
+        public DateClockHand DateClockHand { get; set; }
 
         /// <summary>День недели</summary>
-        public DOWProgress DOWProgress { get; set; }
+        public DateProgressBar DateProgressBar { get; set; }
     }
 
     public class Activity
@@ -105,20 +105,27 @@ namespace AmazFit_Watchface_2
         public ImageCoord Separator { get; set; }
     }
 
-    public class Progress
+    public class DateClockHand
     {
-        /// <summary>Отображение стрелками</summary>
-        public ClockHand AnalogDialFace { get; set; }
+        /// <summary>Отображение месяца стрелками</summary>
+        public ClockHand MonthClockHand { get; set; }
 
-        public long? Unknown2 { get; set; }
+        /// <summary>Отображение даты стрелками</summary>
+        public ClockHand DayClockHand { get; set; }
 
-        /// <summary>Отображение стрелками</summary>
-        public ClockHand ClockHand { get; set; }
+        /// <summary>Отображение дня недели стрелками</summary>
+        public ClockHand WeekDayClockHand { get; set; }
     }
 
-    public class DOWProgress
+    public class DateProgressBar
     {
-        /// <summary>Круговой прогрес</summary>
-        public ProgressBar Circle { get; set; }
+        /// <summary>Месяц круговой шкалой</summary>
+        public ProgressBar MonthProgressBar { get; set; }
+
+        /// <summary>Датакруговой шкалой</summary>
+        public ProgressBar DayProgressBar { get; set; }
+
+        /// <summary>День недели круговой шкалой</summary>
+        public ProgressBar WeekDayProgressBar { get; set; }
     }
 }

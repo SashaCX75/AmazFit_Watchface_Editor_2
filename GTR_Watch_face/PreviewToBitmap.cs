@@ -112,6 +112,8 @@ namespace AmazFit_Watchface_2
             Panel panel_pictures = panel_Battery_pictures;
             Panel panel_text = panel_Battery_text;
             Panel panel_hand = panel_Battery_hand;
+            Panel panel_scaleCircle = panel_Battery_scaleCircle;
+            Panel panel_scaleLinear = panel_Battery_scaleLinear;
 
             // зараяд картинками
             CheckBox checkBox_Use = (CheckBox)panel_pictures.Controls[0];
@@ -229,10 +231,48 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            // зараяд линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int pointerIndex = comboBox_pointer.SelectedIndex;
+                int backgroundIndex = comboBox_background.SelectedIndex;
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = comboBox_color.BackColor;
+                float position = Watch_Face_Preview_Set.Battery / 100f;
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea); 
+                    }
+                }
+                else
+                {
+                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                }
+            }
+
             #endregion
 
             #region дата 
-            int date_offsetX = -1;
+                int date_offsetX = -1;
             int date_offsetY = -1;
             // год
             if (checkBox__Year_text_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
@@ -622,11 +662,9 @@ namespace AmazFit_Watchface_2
                 int offsetX = (int)numericUpDown_Second_handX_offset.Value;
                 int offsetY = (int)numericUpDown_Second_handY_offset.Value;
                 int image_index = comboBox_Second_hand_image.SelectedIndex;
-                int hour = Watch_Face_Preview_Set.Time.Hours;
-                int min = Watch_Face_Preview_Set.Time.Minutes;
-                //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
-                if (hour >= 12) hour = hour - 12;
-                float angle = 360 * hour / 12 + 360 * min / (60 * 12);
+                int sec = Watch_Face_Preview_Set.Time.Seconds;
+                //if (hour >= 12) hour = hour - 12;
+                float angle = 360 * sec / 60;
                 DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Second_hand_imageCentr.SelectedIndex >= 0)
@@ -2009,7 +2047,7 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region AnalogDialFace
-            Logger.WriteLine("PreviewToBitmap (AnalogDialFace)");
+            Logger.WriteLine("PreviewToBitmap (MonthClockHand)");
             if (checkBox_AnalogClock.Checked)
             {
                 bool AnalogClockOffSet = false;
@@ -2322,6 +2360,218 @@ namespace AmazFit_Watchface_2
 
             if (link !=1 && link !=2) FormText();
             Logger.WriteLine("* PreviewToBitmap (end)");
+        }
+
+        /// <summary>Рисует линейную шкалу</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата y</param>
+        /// <param name="length">Длина шкалы</param>
+        /// <param name="width">Толщина шкалы</param>
+        /// <param name="position">Позиция шкалы от 0 до 1</param>
+        /// <param name="color">Свет шкалы</param>
+        /// <param name="pointerIndex">Номер изображения маркера</param>
+        /// <param name="backgroundIndex">Номер фонового изображения</param>
+        private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, Color color, 
+            int pointerIndex, int backgroundIndex)
+        {
+            Bitmap src = new Bitmap(1, 1);
+
+            if (length > 0)
+            {
+                int x1 = x + width / 2;
+                int length1 = length - width;
+                int position1 = (int)Math.Round(length1 * position);
+                if (position1 < 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = y + width / 2;
+
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+
+                Pen pen = new Pen(color, width);
+                pen.EndCap = LineCap.Round;
+                pen.StartCap = LineCap.Round;
+                graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+                if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[pointerIndex]);
+                    int x3 = x2 - src.Width / 2;
+                    graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
+                } 
+            }
+            else
+            {
+                int x1 = x - width / 2;
+                int length1 = length + width;
+                int position1 = (int)Math.Round(length1 * position);
+                if (position1 > 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = y + width / 2;
+
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x + length, y, src.Width, src.Height));
+                }
+
+                Pen pen = new Pen(color, width);
+                pen.EndCap = LineCap.Round;
+                pen.StartCap = LineCap.Round;
+                graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+                if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[pointerIndex]);
+                    int x3 = x2 - src.Width / 2;
+                    graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
+                }
+            }
+
+            src.Dispose();
+        }
+
+        /// <summary>Рисует линейную шкалу с фоновым изображением</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата y</param>
+        /// <param name="length">Длина шкалы</param>
+        /// <param name="width">Толщина шкалы</param>
+        /// <param name="position">Позиция шкалы от 0 до 1</param>
+        /// <param name="imageIndex">Изображение шкалы</param>
+        /// <param name="pointerIndex">Номер изображения маркера</param>
+        /// <param name="backgroundIndex">Номер фонового изображения</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, int imageIndex,
+            int pointerIndex, int backgroundIndex, bool showCircleScaleArea)
+        {
+            Bitmap src = new Bitmap(1, 1);
+
+            if (length > 0)
+            {
+                int x1 = x + width / 2;
+                int length1 = length - width;
+                int position1 = (int)Math.Round(length1 * position);
+                if (position1 < 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = y + width / 2;
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+
+                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                Pen pen = new Pen(Color.Black, width);
+                pen.EndCap = LineCap.Round;
+                pen.StartCap = LineCap.Round;
+
+                //graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+                Bitmap mask = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                Graphics gPanel = Graphics.FromImage(mask);
+                gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                try
+                {
+                    gPanel.DrawLine(pen, new Point(x1 - x, y1 - y), new Point(x2 - x, y1 - y));
+                    //src = ApplyAlfaMask(src, mask);
+                    src = ApplyMask(src, mask);
+
+                    graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    //src.Dispose();
+                    mask.Dispose();
+
+                    if (showCircleScaleArea)
+                    {
+                        // подсвечивание шкалы заливкой
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+
+                    }
+
+                    if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[pointerIndex]);
+                        int x3 = x2 - src.Width / 2;
+                        graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
+                    }
+                }
+                catch (Exception)
+                {
+
+                } 
+            }
+            else
+            {
+                int x1 = x - width / 2;
+                int length1 = length + width;
+                int position1 = (int)Math.Round(length1 * position);
+                if (position1 > 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = y + width / 2;
+
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x + length, y, src.Width, src.Height));
+                }
+
+                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                Pen pen = new Pen(Color.Black, width);
+                pen.EndCap = LineCap.Round;
+                pen.StartCap = LineCap.Round;
+
+                //graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+                Bitmap mask = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                Graphics gPanel = Graphics.FromImage(mask);
+                gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                try
+                {
+                    gPanel.DrawLine(pen, new Point(x - x1, y1 - y), new Point(x - x2, y1 - y));
+                    //src = ApplyAlfaMask(src, mask);
+                    src = ApplyMask(src, mask);
+
+                    graphics.DrawImage(src, new Rectangle(x2 - width / 2, y, src.Width, src.Height));
+                    //src.Dispose();
+                    mask.Dispose();
+
+                    if (showCircleScaleArea)
+                    {
+                        // подсвечивание шкалы заливкой
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+
+                    }
+
+                    if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[pointerIndex]);
+                        int x3 = x2 - src.Width / 2;
+                        graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+
+            src.Dispose();
         }
 
         /// <summary>Рисует число</summary>

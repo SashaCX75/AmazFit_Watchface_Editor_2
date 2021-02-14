@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.treeView_Json = new System.Windows.Forms.TreeView();
@@ -777,6 +777,24 @@
             this.tabPage_Battery = new System.Windows.Forms.TabPage();
             this.panel_Battery_icon = new System.Windows.Forms.Panel();
             this.panel_Battery_scaleLinear = new System.Windows.Forms.Panel();
+            this.checkBox_Battery_scaleLinear_Use = new System.Windows.Forms.CheckBox();
+            this.radioButton_Battery_scaleLinear_image = new System.Windows.Forms.RadioButton();
+            this.radioButton_Battery_scaleLinear_color = new System.Windows.Forms.RadioButton();
+            this.comboBox_Battery_scaleLinear_image = new System.Windows.Forms.ComboBox();
+            this.comboBox_Battery_scaleLinear_color = new System.Windows.Forms.ComboBox();
+            this.comboBox_Battery_scaleLinear_image_pointer = new System.Windows.Forms.ComboBox();
+            this.comboBox_Battery_scaleLinear_image_background = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Battery_scaleLinearX = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Battery_scaleLinearY = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Battery_scaleLinear_length = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Battery_scaleLinear_width = new System.Windows.Forms.NumericUpDown();
+            this.label718 = new System.Windows.Forms.Label();
+            this.label719 = new System.Windows.Forms.Label();
+            this.label720 = new System.Windows.Forms.Label();
+            this.label721 = new System.Windows.Forms.Label();
+            this.label722 = new System.Windows.Forms.Label();
+            this.label723 = new System.Windows.Forms.Label();
+            this.label724 = new System.Windows.Forms.Label();
             this.button_Battery_scaleLinear = new System.Windows.Forms.Button();
             this.panel_Battery_scaleCircle = new System.Windows.Forms.Panel();
             this.button_Battery_scaleCircle = new System.Windows.Forms.Button();
@@ -2133,6 +2151,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BluetoothX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BluetoothY)).BeginInit();
             this.tabPage_Battery.SuspendLayout();
+            this.panel_Battery_scaleLinear.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinearX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinearY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinear_length)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinear_width)).BeginInit();
             this.panel_Battery_hand.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_handX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_handY)).BeginInit();
@@ -5966,8 +5989,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -5989,11 +6012,11 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle7;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -10801,9 +10824,231 @@
             // panel_Battery_scaleLinear
             // 
             this.panel_Battery_scaleLinear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Battery_scaleLinear.Controls.Add(this.checkBox_Battery_scaleLinear_Use);
+            this.panel_Battery_scaleLinear.Controls.Add(this.radioButton_Battery_scaleLinear_image);
+            this.panel_Battery_scaleLinear.Controls.Add(this.radioButton_Battery_scaleLinear_color);
+            this.panel_Battery_scaleLinear.Controls.Add(this.comboBox_Battery_scaleLinear_image);
+            this.panel_Battery_scaleLinear.Controls.Add(this.comboBox_Battery_scaleLinear_color);
+            this.panel_Battery_scaleLinear.Controls.Add(this.comboBox_Battery_scaleLinear_image_pointer);
+            this.panel_Battery_scaleLinear.Controls.Add(this.comboBox_Battery_scaleLinear_image_background);
+            this.panel_Battery_scaleLinear.Controls.Add(this.numericUpDown_Battery_scaleLinearX);
+            this.panel_Battery_scaleLinear.Controls.Add(this.numericUpDown_Battery_scaleLinearY);
+            this.panel_Battery_scaleLinear.Controls.Add(this.numericUpDown_Battery_scaleLinear_length);
+            this.panel_Battery_scaleLinear.Controls.Add(this.numericUpDown_Battery_scaleLinear_width);
+            this.panel_Battery_scaleLinear.Controls.Add(this.label718);
+            this.panel_Battery_scaleLinear.Controls.Add(this.label719);
+            this.panel_Battery_scaleLinear.Controls.Add(this.label720);
+            this.panel_Battery_scaleLinear.Controls.Add(this.label721);
+            this.panel_Battery_scaleLinear.Controls.Add(this.label722);
+            this.panel_Battery_scaleLinear.Controls.Add(this.label723);
+            this.panel_Battery_scaleLinear.Controls.Add(this.label724);
             resources.ApplyResources(this.panel_Battery_scaleLinear, "panel_Battery_scaleLinear");
             this.panel_Battery_scaleLinear.Name = "panel_Battery_scaleLinear";
             this.helpProvider1.SetShowHelp(this.panel_Battery_scaleLinear, ((bool)(resources.GetObject("panel_Battery_scaleLinear.ShowHelp"))));
+            // 
+            // checkBox_Battery_scaleLinear_Use
+            // 
+            resources.ApplyResources(this.checkBox_Battery_scaleLinear_Use, "checkBox_Battery_scaleLinear_Use");
+            this.checkBox_Battery_scaleLinear_Use.Name = "checkBox_Battery_scaleLinear_Use";
+            this.helpProvider1.SetShowHelp(this.checkBox_Battery_scaleLinear_Use, ((bool)(resources.GetObject("checkBox_Battery_scaleLinear_Use.ShowHelp"))));
+            this.checkBox_Battery_scaleLinear_Use.UseVisualStyleBackColor = true;
+            this.checkBox_Battery_scaleLinear_Use.CheckedChanged += new System.EventHandler(this.checkBox_scaleLinear_Use_CheckedChanged);
+            this.checkBox_Battery_scaleLinear_Use.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // radioButton_Battery_scaleLinear_image
+            // 
+            resources.ApplyResources(this.radioButton_Battery_scaleLinear_image, "radioButton_Battery_scaleLinear_image");
+            this.radioButton_Battery_scaleLinear_image.Checked = true;
+            this.radioButton_Battery_scaleLinear_image.Name = "radioButton_Battery_scaleLinear_image";
+            this.helpProvider1.SetShowHelp(this.radioButton_Battery_scaleLinear_image, ((bool)(resources.GetObject("radioButton_Battery_scaleLinear_image.ShowHelp"))));
+            this.radioButton_Battery_scaleLinear_image.TabStop = true;
+            this.radioButton_Battery_scaleLinear_image.UseVisualStyleBackColor = true;
+            this.radioButton_Battery_scaleLinear_image.CheckedChanged += new System.EventHandler(this.radioButton_Battery_scaleLinear_image_CheckedChanged);
+            // 
+            // radioButton_Battery_scaleLinear_color
+            // 
+            resources.ApplyResources(this.radioButton_Battery_scaleLinear_color, "radioButton_Battery_scaleLinear_color");
+            this.radioButton_Battery_scaleLinear_color.Name = "radioButton_Battery_scaleLinear_color";
+            this.helpProvider1.SetShowHelp(this.radioButton_Battery_scaleLinear_color, ((bool)(resources.GetObject("radioButton_Battery_scaleLinear_color.ShowHelp"))));
+            this.radioButton_Battery_scaleLinear_color.TabStop = true;
+            this.radioButton_Battery_scaleLinear_color.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_Battery_scaleLinear_image
+            // 
+            this.comboBox_Battery_scaleLinear_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Battery_scaleLinear_image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Battery_scaleLinear_image, "comboBox_Battery_scaleLinear_image");
+            this.comboBox_Battery_scaleLinear_image.FormattingEnabled = true;
+            this.comboBox_Battery_scaleLinear_image.Name = "comboBox_Battery_scaleLinear_image";
+            this.helpProvider1.SetShowHelp(this.comboBox_Battery_scaleLinear_image, ((bool)(resources.GetObject("comboBox_Battery_scaleLinear_image.ShowHelp"))));
+            this.comboBox_Battery_scaleLinear_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Battery_scaleLinear_image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Battery_scaleLinear_image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Battery_scaleLinear_image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Battery_scaleLinear_image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // comboBox_Battery_scaleLinear_color
+            // 
+            this.comboBox_Battery_scaleLinear_color.BackColor = System.Drawing.Color.DarkOrange;
+            this.comboBox_Battery_scaleLinear_color.DropDownHeight = 1;
+            resources.ApplyResources(this.comboBox_Battery_scaleLinear_color, "comboBox_Battery_scaleLinear_color");
+            this.comboBox_Battery_scaleLinear_color.FormattingEnabled = true;
+            this.comboBox_Battery_scaleLinear_color.Name = "comboBox_Battery_scaleLinear_color";
+            this.helpProvider1.SetShowHelp(this.comboBox_Battery_scaleLinear_color, ((bool)(resources.GetObject("comboBox_Battery_scaleLinear_color.ShowHelp"))));
+            this.comboBox_Battery_scaleLinear_color.Click += new System.EventHandler(this.comboBox_Battery_scaleLinear_color_Click);
+            this.comboBox_Battery_scaleLinear_color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // comboBox_Battery_scaleLinear_image_pointer
+            // 
+            this.comboBox_Battery_scaleLinear_image_pointer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Battery_scaleLinear_image_pointer.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Battery_scaleLinear_image_pointer, "comboBox_Battery_scaleLinear_image_pointer");
+            this.comboBox_Battery_scaleLinear_image_pointer.FormattingEnabled = true;
+            this.comboBox_Battery_scaleLinear_image_pointer.Name = "comboBox_Battery_scaleLinear_image_pointer";
+            this.helpProvider1.SetShowHelp(this.comboBox_Battery_scaleLinear_image_pointer, ((bool)(resources.GetObject("comboBox_Battery_scaleLinear_image_pointer.ShowHelp"))));
+            this.comboBox_Battery_scaleLinear_image_pointer.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Battery_scaleLinear_image_pointer.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Battery_scaleLinear_image_pointer.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Battery_scaleLinear_image_pointer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Battery_scaleLinear_image_pointer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // comboBox_Battery_scaleLinear_image_background
+            // 
+            this.comboBox_Battery_scaleLinear_image_background.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Battery_scaleLinear_image_background.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Battery_scaleLinear_image_background, "comboBox_Battery_scaleLinear_image_background");
+            this.comboBox_Battery_scaleLinear_image_background.FormattingEnabled = true;
+            this.comboBox_Battery_scaleLinear_image_background.Name = "comboBox_Battery_scaleLinear_image_background";
+            this.helpProvider1.SetShowHelp(this.comboBox_Battery_scaleLinear_image_background, ((bool)(resources.GetObject("comboBox_Battery_scaleLinear_image_background.ShowHelp"))));
+            this.comboBox_Battery_scaleLinear_image_background.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Battery_scaleLinear_image_background.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Battery_scaleLinear_image_background.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Battery_scaleLinear_image_background.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Battery_scaleLinear_image_background.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_Battery_scaleLinearX
+            // 
+            this.numericUpDown_Battery_scaleLinearX.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Battery_scaleLinearX, "numericUpDown_Battery_scaleLinearX");
+            this.numericUpDown_Battery_scaleLinearX.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_scaleLinearX.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_scaleLinearX.Name = "numericUpDown_Battery_scaleLinearX";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_scaleLinearX, ((bool)(resources.GetObject("numericUpDown_Battery_scaleLinearX.ShowHelp"))));
+            this.numericUpDown_Battery_scaleLinearX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_scaleLinearX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_Battery_scaleLinearY
+            // 
+            this.numericUpDown_Battery_scaleLinearY.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Battery_scaleLinearY, "numericUpDown_Battery_scaleLinearY");
+            this.numericUpDown_Battery_scaleLinearY.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_scaleLinearY.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_scaleLinearY.Name = "numericUpDown_Battery_scaleLinearY";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_scaleLinearY, ((bool)(resources.GetObject("numericUpDown_Battery_scaleLinearY.ShowHelp"))));
+            this.numericUpDown_Battery_scaleLinearY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_scaleLinearY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_Battery_scaleLinear_length
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_scaleLinear_length, "numericUpDown_Battery_scaleLinear_length");
+            this.numericUpDown_Battery_scaleLinear_length.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_scaleLinear_length.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_scaleLinear_length.Name = "numericUpDown_Battery_scaleLinear_length";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_scaleLinear_length, ((bool)(resources.GetObject("numericUpDown_Battery_scaleLinear_length.ShowHelp"))));
+            this.numericUpDown_Battery_scaleLinear_length.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_scaleLinear_length.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Battery_scaleLinear_width
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_scaleLinear_width, "numericUpDown_Battery_scaleLinear_width");
+            this.numericUpDown_Battery_scaleLinear_width.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_scaleLinear_width.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_scaleLinear_width.Name = "numericUpDown_Battery_scaleLinear_width";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_scaleLinear_width, ((bool)(resources.GetObject("numericUpDown_Battery_scaleLinear_width.ShowHelp"))));
+            this.numericUpDown_Battery_scaleLinear_width.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_scaleLinear_width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label718
+            // 
+            resources.ApplyResources(this.label718, "label718");
+            this.label718.Name = "label718";
+            this.helpProvider1.SetShowHelp(this.label718, ((bool)(resources.GetObject("label718.ShowHelp"))));
+            // 
+            // label719
+            // 
+            resources.ApplyResources(this.label719, "label719");
+            this.label719.Name = "label719";
+            this.helpProvider1.SetShowHelp(this.label719, ((bool)(resources.GetObject("label719.ShowHelp"))));
+            // 
+            // label720
+            // 
+            resources.ApplyResources(this.label720, "label720");
+            this.label720.Name = "label720";
+            this.helpProvider1.SetShowHelp(this.label720, ((bool)(resources.GetObject("label720.ShowHelp"))));
+            // 
+            // label721
+            // 
+            resources.ApplyResources(this.label721, "label721");
+            this.label721.Name = "label721";
+            this.helpProvider1.SetShowHelp(this.label721, ((bool)(resources.GetObject("label721.ShowHelp"))));
+            // 
+            // label722
+            // 
+            resources.ApplyResources(this.label722, "label722");
+            this.label722.Name = "label722";
+            this.helpProvider1.SetShowHelp(this.label722, ((bool)(resources.GetObject("label722.ShowHelp"))));
+            // 
+            // label723
+            // 
+            resources.ApplyResources(this.label723, "label723");
+            this.label723.Name = "label723";
+            this.helpProvider1.SetShowHelp(this.label723, ((bool)(resources.GetObject("label723.ShowHelp"))));
+            // 
+            // label724
+            // 
+            resources.ApplyResources(this.label724, "label724");
+            this.label724.Name = "label724";
+            this.helpProvider1.SetShowHelp(this.label724, ((bool)(resources.GetObject("label724.ShowHelp"))));
             // 
             // button_Battery_scaleLinear
             // 
@@ -10967,10 +11212,6 @@
             this.comboBox_Battery_hand_imageCentr.DropDownWidth = 75;
             resources.ApplyResources(this.comboBox_Battery_hand_imageCentr, "comboBox_Battery_hand_imageCentr");
             this.comboBox_Battery_hand_imageCentr.FormattingEnabled = true;
-            this.comboBox_Battery_hand_imageCentr.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Battery_hand_imageCentr.Items"),
-            resources.GetString("comboBox_Battery_hand_imageCentr.Items1"),
-            resources.GetString("comboBox_Battery_hand_imageCentr.Items2")});
             this.comboBox_Battery_hand_imageCentr.Name = "comboBox_Battery_hand_imageCentr";
             this.helpProvider1.SetShowHelp(this.comboBox_Battery_hand_imageCentr, ((bool)(resources.GetObject("comboBox_Battery_hand_imageCentr.ShowHelp"))));
             this.comboBox_Battery_hand_imageCentr.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11062,10 +11303,6 @@
             this.comboBox_Battery_hand_imageBackground.DropDownWidth = 75;
             resources.ApplyResources(this.comboBox_Battery_hand_imageBackground, "comboBox_Battery_hand_imageBackground");
             this.comboBox_Battery_hand_imageBackground.FormattingEnabled = true;
-            this.comboBox_Battery_hand_imageBackground.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Battery_hand_imageBackground.Items"),
-            resources.GetString("comboBox_Battery_hand_imageBackground.Items1"),
-            resources.GetString("comboBox_Battery_hand_imageBackground.Items2")});
             this.comboBox_Battery_hand_imageBackground.Name = "comboBox_Battery_hand_imageBackground";
             this.helpProvider1.SetShowHelp(this.comboBox_Battery_hand_imageBackground, ((bool)(resources.GetObject("comboBox_Battery_hand_imageBackground.ShowHelp"))));
             this.comboBox_Battery_hand_imageBackground.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -12143,14 +12380,14 @@
             // 
             // dataGridView_MotiomAnimation
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AnimationColumn1,
@@ -23631,6 +23868,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BluetoothX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BluetoothY)).EndInit();
             this.tabPage_Battery.ResumeLayout(false);
+            this.panel_Battery_scaleLinear.ResumeLayout(false);
+            this.panel_Battery_scaleLinear.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinearX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinearY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinear_length)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_scaleLinear_width)).EndInit();
             this.panel_Battery_hand.ResumeLayout(false);
             this.panel_Battery_hand.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_handX)).EndInit();
@@ -25971,6 +26214,24 @@
         private System.Windows.Forms.Label label715;
         private System.Windows.Forms.Label label716;
         private System.Windows.Forms.Label label717;
+        private System.Windows.Forms.RadioButton radioButton_Battery_scaleLinear_color;
+        private System.Windows.Forms.RadioButton radioButton_Battery_scaleLinear_image;
+        private System.Windows.Forms.ComboBox comboBox_Battery_scaleLinear_color;
+        private System.Windows.Forms.ComboBox comboBox_Battery_scaleLinear_image;
+        private System.Windows.Forms.CheckBox checkBox_Battery_scaleLinear_Use;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_scaleLinearX;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_scaleLinearY;
+        private System.Windows.Forms.Label label718;
+        private System.Windows.Forms.Label label719;
+        private System.Windows.Forms.Label label720;
+        private System.Windows.Forms.ComboBox comboBox_Battery_scaleLinear_image_background;
+        private System.Windows.Forms.Label label724;
+        private System.Windows.Forms.ComboBox comboBox_Battery_scaleLinear_image_pointer;
+        private System.Windows.Forms.Label label723;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_scaleLinear_length;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_scaleLinear_width;
+        private System.Windows.Forms.Label label721;
+        private System.Windows.Forms.Label label722;
     }
 }
 
