@@ -3,14 +3,14 @@ using System.Drawing;
 
 namespace AmazFit_Watchface_2
 {
-    public class CircleProgress
+    public class ProgressBar
     {
         /// <summary>Угол наклона</summary>
-        public ImageAngle AngleSettings { get; set; }
+        public AngleSettings AngleSettings { get; set; }
 
-        public long? Unknown2 { get; set; }
+        public LinearSettings LinearSettings { get; set; }
 
-        /// <summary>Фоновое изображение?</summary>
+        /// <summary>Изображение шкалы прогресса?</summary>
         public long ForegroundImageIndex { get; set; }
 
         /// <summary>Цвет</summary>
@@ -21,10 +21,12 @@ namespace AmazFit_Watchface_2
 
         /// <summary>Тип окончания линии 0 - flat, 90, triangle, 180 - arc </summary>
         public long Flatness { get; set; }
-        public long? Unknown7 { get; set; }
 
-        /// <summary>Номер изображения</summary>
-        public long ImageIndex { get; set; }
+        /// <summary>Точка на шкале?</summary>
+        public long? PointerImageIndex { get; set; }
+
+        /// <summary>Подложка?</summary>
+        public long? BackgroundImageIndex { get; set; }
     }
 
     public class FontRotate
@@ -61,10 +63,11 @@ namespace AmazFit_Watchface_2
         /// <summary>Разделитель (символ после надписи)</summary>
         public long? DelimiterImageIndex { get; set; }
 
+        /// <summary>Единици измерения мили</summary>
         public List<MultilangImage> MultilangImageUnitMile { get; set; }
     }
 
-    public class ImageAngle
+    public class AngleSettings
     {
         public long X { get; set; }
 
@@ -181,10 +184,10 @@ namespace AmazFit_Watchface_2
         public long? Spacing { get; set; }
 
         /// <summary>Показывать ведущие нули</summary>
-        //TODO наверно тип bool
-        public bool? PaddingZero { get; set; }
+        public bool PaddingZero { get; set; }
 
-        public bool? DisplayFormAnalog { get; set; }
+        /// <summary>Для месяца усли true то картинкой иначе номером</summary>
+        public bool DisplayFormAnalog { get; set; }
     }
 
     public class Coordinates
@@ -192,6 +195,17 @@ namespace AmazFit_Watchface_2
         public long X { get; set; }
 
         public long Y { get; set; }
+    }
+
+    public class LinearSettings
+    {
+        public long StartX { get; set; }
+
+        public long StartY { get; set; }
+
+        public long EndX { get; set; }
+
+        public long EndY { get; set; }
     }
 
 

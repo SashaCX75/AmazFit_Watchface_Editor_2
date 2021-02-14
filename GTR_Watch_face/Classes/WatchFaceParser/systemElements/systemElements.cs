@@ -51,17 +51,18 @@ namespace AmazFit_Watchface_2
     {
         /// <summary>Battery = 1; Steps = 2; Calories = 3; HeartRate = 4; PAI = 5; 
         /// Distance = 6; StandUp = 7; Weather = 8; UVindex = 9; AirQuality = 10; 
-        /// Humidity = 11; Sunrise = 12 # Two Images possible; ActivityGoal = 17# Two Images possible; 
-        /// FatBurning = 18</summary>
+        /// Humidity = 11; Sunrise = 12 # Two Images possible; WindForce = 13; 
+        /// ActivityUnknown14 = 14; AirPressure = 15; ActivityUnknown16 = 16;
+        /// ActivityGoal = 17# Two Images possible; FatBurning = 18</summary>
         public string Type { get; set; }
 
         /// <summary>Отображение данных стрелками</summary>
         public ClockHand PointerProgress { get; set; }
 
         /// <summary>Отображение данных шкалой</summary>
-        public CircleProgress CircleProgress { get; set; }
+        public ProgressBar ProgressBar { get; set; }
 
-        /// <summary>Отображение данных текстом</summary>
+        /// <summary>Отображение данных набором картинок?</summary>
         public ImageProgress ImageProgress { get; set; }
 
         /// <summary>Отображение данных текстом</summary>
@@ -118,6 +119,6 @@ namespace AmazFit_Watchface_2
     public class DOWProgress
     {
         /// <summary>Круговой прогрес</summary>
-        public CircleProgress Circle { get; set; }
+        public ProgressBar Circle { get; set; }
     }
 }

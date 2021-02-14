@@ -170,7 +170,7 @@ namespace AmazFit_Watchface_2
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
                 if (Model_Wath.model_gtr42)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
@@ -179,7 +179,7 @@ namespace AmazFit_Watchface_2
                 if (Model_Wath.model_gts)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
                 if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {

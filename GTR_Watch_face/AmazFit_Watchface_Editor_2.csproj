@@ -366,10 +366,10 @@
     <None Include="Resources\Files_Copy_File_icon.png" />
     <None Include="Resources\Files_Clipboard_icon.png" />
     <None Include="Resources\Amazfit_GTR_47mm.png" />
-    <Content Include="Mask\mask_gtr47.png">
+    <Content Include="Mask\mask_gtr_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Mask\mask_gts.png">
+    <Content Include="Mask\mask_gts_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Tools\GTR2_Packer.exe">

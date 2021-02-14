@@ -340,10 +340,13 @@ namespace AmazFit_Watchface_2
             bool b = checkBox_Day_hand_Use.Checked;
             comboBox_Day_hand_image.Enabled = b;
             comboBox_Day_hand_imageCentr.Enabled = b;
+            comboBox_Day_hand_imageBackground.Enabled = b;
             numericUpDown_Day_handX.Enabled = b;
             numericUpDown_Day_handY.Enabled = b;
             numericUpDown_Day_handX_centr.Enabled = b;
             numericUpDown_Day_handY_centr.Enabled = b;
+            numericUpDown_Day_handX_background.Enabled = b;
+            numericUpDown_Day_handY_background.Enabled = b;
             numericUpDown_Day_handX_offset.Enabled = b;
             numericUpDown_Day_handY_offset.Enabled = b;
             numericUpDown_Day_hand_startAngle.Enabled = b;
@@ -366,6 +369,11 @@ namespace AmazFit_Watchface_2
             label623.Enabled = b;
             label624.Enabled = b;
             label625.Enabled = b;
+
+            label714.Enabled = b;
+            label715.Enabled = b;
+            label716.Enabled = b;
+            label717.Enabled = b;
         }
 
         private void checkBox_Month_hand_Use_CheckedChanged(object sender, EventArgs e)
@@ -373,10 +381,13 @@ namespace AmazFit_Watchface_2
             bool b = checkBox_Month_hand_Use.Checked;
             comboBox_Month_hand_image.Enabled = b;
             comboBox_Month_hand_imageCentr.Enabled = b;
+            comboBox_Month_hand_imageBackground.Enabled = b;
             numericUpDown_Month_handX.Enabled = b;
             numericUpDown_Month_handY.Enabled = b;
             numericUpDown_Month_handX_centr.Enabled = b;
             numericUpDown_Month_handY_centr.Enabled = b;
+            numericUpDown_Month_handX_background.Enabled = b;
+            numericUpDown_Month_handY_background.Enabled = b;
             numericUpDown_Month_handX_offset.Enabled = b;
             numericUpDown_Month_handY_offset.Enabled = b;
             numericUpDown_Month_hand_startAngle.Enabled = b;
@@ -395,6 +406,11 @@ namespace AmazFit_Watchface_2
             label636.Enabled = b;
             label637.Enabled = b;
             label638.Enabled = b;
+
+            label706.Enabled = b;
+            label707.Enabled = b;
+            label708.Enabled = b;
+            label709.Enabled = b;
         }
 
         private void checkBox_DOW_pictures_Use_CheckedChanged(object sender, EventArgs e)
@@ -415,10 +431,13 @@ namespace AmazFit_Watchface_2
             bool b = checkBox_DOW_hand_Use.Checked;
             comboBox_DOW_hand_image.Enabled = b;
             comboBox_DOW_hand_imageCentr.Enabled = b;
+            comboBox_DOW_hand_imageBackground.Enabled = b;
             numericUpDown_DOW_handX.Enabled = b;
             numericUpDown_DOW_handY.Enabled = b;
             numericUpDown_DOW_handX_centr.Enabled = b;
             numericUpDown_DOW_handY_centr.Enabled = b;
+            numericUpDown_DOW_handX_background.Enabled = b;
+            numericUpDown_DOW_handY_background.Enabled = b;
             numericUpDown_DOW_handX_offset.Enabled = b;
             numericUpDown_DOW_handY_offset.Enabled = b;
             numericUpDown_DOW_hand_startAngle.Enabled = b;
@@ -437,9 +456,53 @@ namespace AmazFit_Watchface_2
             label653.Enabled = b;
             label654.Enabled = b;
             label655.Enabled = b;
+
+            label710.Enabled = b;
+            label711.Enabled = b;
+            label712.Enabled = b;
+            label713.Enabled = b;
         }
 
         private void checkBox_Status_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_pictures_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_text_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_hand_Use_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = sender as CheckBox;
             Control control = checkBox.Parent;

@@ -19,11 +19,7 @@
         public bool Settings_Open_DoNotning = false;
 
         public bool Model_GTR47 = true;
-        public bool Model_GTR42 = false;
         public bool Model_GTS = false;
-        public bool Model_TRex = false;
-        public bool Model_AmazfitX = false;
-        public bool Model_Verge = false;
 
         public bool ShowBorder = false;
         public bool Crop = true;
@@ -42,12 +38,8 @@
         public bool DoNotShowMaxMinTemp = false;
 
         public string pack_unpack_dir { get; set; }
-        public string unpack_command_GTR47 = "--gtr2 47 --file";
-        public string unpack_command_GTR42 = "--gtr 42 --file";
-        public string unpack_command_GTS = "--gts2 --file";
-        public string unpack_command_TRex = "--trex --file";
-        public string unpack_command_AmazfitX = "--amazfitx --file";
-        public string unpack_command_Verge = "--vergelite --file";
+        public string unpack_command_GTR_2 = "--gtr2 47 --file";
+        public string unpack_command_GTS_2 = "--gts2 --file";
 
         public string language { get; set; }
 

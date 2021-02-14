@@ -29,7 +29,7 @@ namespace AmazFit_Watchface_2
     public class ProgressgDialFace
     {
         /// <summary>Шкала отображения времени</summary>
-        public CircleProgress Circle { get; set; }
+        public ProgressBar Circle { get; set; }
     }
 
 
@@ -55,11 +55,13 @@ namespace AmazFit_Watchface_2
 
         public long Y { get; set; }
 
+        /// <summary>Фоновое изображение</summary>
         public MultilangImageCoord Scale { get; set; }
 
-        /// <summary>Центр стрелки</summary>
+        /// <summary>Стрелка</summary>
         public ImageCoord Pointer { get; set; }
 
+        /// <summary>Центр стрелки</summary>
         public ImageCoord Cover { get; set; }
 
         /// <summary>Начальный уго</summary>

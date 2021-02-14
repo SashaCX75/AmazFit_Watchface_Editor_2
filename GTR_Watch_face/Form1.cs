@@ -40,9 +40,10 @@ namespace AmazFit_Watchface_2
         float currentDPI; // масштаб экрана
         Form_Preview formPreview;
         PROGRAM_SETTINGS Program_Settings;
-        
-        int offSet_X = 227; // координаты центра циферблата
+
+        int offSet_X = 227;
         int offSet_Y = 227;
+
 
 
         public Form1(string[] args)
@@ -81,38 +82,6 @@ namespace AmazFit_Watchface_2
                     if (language == "en")
                     {
                         Program_Settings.language = "English";
-                    }
-                    if (language == "es")
-                    {
-                        Program_Settings.language = "Español";
-                    }
-                    if (language == "pt")
-                    {
-                        Program_Settings.language = "Português";
-                    }
-                    if (language == "cs")
-                    {
-                        Program_Settings.language = "Čeština";
-                    }
-                    if (language == "hu")
-                    {
-                        Program_Settings.language = "Magyar";
-                    }
-                    if (language == "sk")
-                    {
-                        Program_Settings.language = "Slovenčina";
-                    }
-                    if (language == "fr")
-                    {
-                        Program_Settings.language = "French";
-                    }
-                    if (language == "zh")
-                    {
-                        Program_Settings.language = "Chinese/简体中文";
-                    }
-                    if (language == "it")
-                    {
-                        Program_Settings.language = "Italian";
                     }
                 }
                 //Logger.WriteLine("Определили язык");
@@ -164,8 +133,8 @@ namespace AmazFit_Watchface_2
             tabControl1.TabPages[2].Parent = null;
             tabControl1.TabPages[2].Parent = null;
             tabControl1.TabPages[4].Parent = null;
-            tabControl1.SelectTab(1);
-            tabControl_EditParameters.SelectTab(2);
+            //tabControl1.SelectTab(1);
+            //tabControl_EditParameters.SelectTab(5);
 
             //Logger.WriteLine("Создали переменные");
 
@@ -282,32 +251,12 @@ namespace AmazFit_Watchface_2
             if (Program_Settings.Model_GTS)
             {
                 radioButton_GTS2.Checked = Program_Settings.Model_GTS;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS;
-            }
-            else if (Program_Settings.Model_TRex)
-            {
-                radioButton_TRex.Checked = Program_Settings.Model_TRex;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
-            }
-            else if (Program_Settings.Model_AmazfitX)
-            {
-                radioButton_AmazfitX.Checked = Program_Settings.Model_AmazfitX;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_AmazfitX;
-            }
-            else if (Program_Settings.Model_Verge)
-            {
-                radioButton_Verge.Checked = Program_Settings.Model_Verge;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_Verge;
-            }
-            else if (Program_Settings.Model_GTR42)
-            {
-                radioButton_42.Checked = Program_Settings.Model_GTR42;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR42;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS_2;
             }
             else
             {
                 radioButton_GTR2.Checked = true;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR_2;
             }
             
             Logger.WriteLine("Set checkBox");
@@ -340,6 +289,8 @@ namespace AmazFit_Watchface_2
             comboBox_Weather_Text_Alignment.SelectedIndex = 0;
             comboBox_Weather_Day_Alignment.SelectedIndex = 0;
             comboBox_Weather_Night_Alignment.SelectedIndex = 0;
+
+            comboBox_Battery_alignment.SelectedIndex = 0;
 
             comboBox_Battery_Flatness.SelectedIndex = 0;
             comboBox_StepsProgress_Flatness.SelectedIndex = 0;
@@ -1745,25 +1696,20 @@ namespace AmazFit_Watchface_2
             JSON_Modified = false;
             FormText();
             ShowAllFileSize(AllFileSize);
-            if (comboBox_Preview.SelectedIndex >= 0)
+            if (comboBox_Preview_image.SelectedIndex >= 0)
             {
-                //button_RefreshPreview.Enabled = true;
-                //button_CreatePreview.Enabled = false;
                 button_RefreshPreview.Visible = true;
                 button_CreatePreview.Visible = false;
             }
             else
             {
-                //button_RefreshPreview.Enabled = false;
                 button_RefreshPreview.Visible = false;
                 if (FileName != null && FullFileDir != null)
                 {
-                    //button_CreatePreview.Enabled = true;
                     button_CreatePreview.Visible = true;
                 }
                 else
                 {
-                    //button_CreatePreview.Enabled = false;
                     button_CreatePreview.Visible = false;
                 }
             }
@@ -1791,21 +1737,9 @@ namespace AmazFit_Watchface_2
             #region BackgroundImage
             Logger.WriteLine("BackgroundImage");
             Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-            if (radioButton_42.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-            }
             if (radioButton_GTS2.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-            }
-            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-            }
-            if (radioButton_AmazfitX.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
             #endregion
@@ -3929,29 +3863,24 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
 
-            if (comboBox.Name == "comboBox_Preview")
+            if (comboBox.Name == "comboBox_Preview_image")
             {
 
                 if (comboBox.SelectedIndex >= 0)
                 {
                     if (FileName == null || FullFileDir == null) return;
-                    //button_RefreshPreview.Enabled = true;
-                    //button_CreatePreview.Enabled = false;
                     button_RefreshPreview.Visible = true;
                     button_CreatePreview.Visible = false;
                 }
                 else
                 {
-                    //button_RefreshPreview.Enabled = false;
                     button_RefreshPreview.Visible = false;
                     if (FileName != null && FullFileDir != null)
                     {
-                        //button_CreatePreview.Enabled = true;
                         button_CreatePreview.Visible = true;
                     }
                     else
                     {
-                        //button_CreatePreview.Enabled = false;
                         button_CreatePreview.Visible = false;
                     }
                 }
@@ -4563,16 +4492,8 @@ namespace AmazFit_Watchface_2
                 {
                     if (Form_Preview.Model_Wath.model_gtr47 != radioButton_GTR2.Checked)
                         Form_Preview.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-                    if (Form_Preview.Model_Wath.model_gtr42 != radioButton_42.Checked)
-                        Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
                     if (Form_Preview.Model_Wath.model_gts != radioButton_GTS2.Checked)
                         Form_Preview.Model_Wath.model_gts = radioButton_GTS2.Checked;
-                    if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
-                        Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
-                    if (Form_Preview.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
-                        Form_Preview.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
-                    if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
-                        Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                     //Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
                     //gPanelPreviewResize.Clear(panel_Preview.BackColor);
                     //formPreview.radioButton_CheckedChanged(sender, e);
@@ -4592,21 +4513,9 @@ namespace AmazFit_Watchface_2
                     
                     #region BackgroundImage 
                     Bitmap bitmapPreviewResize = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                    if (radioButton_42.Checked)
-                    {
-                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    }
                     if (radioButton_GTS2.Checked)
                     {
                         bitmapPreviewResize = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    }
-                    if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-                    {
-                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    }
-                    if (radioButton_AmazfitX.Checked)
-                    {
-                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
                     }
                     Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
                     #endregion
@@ -4649,46 +4558,16 @@ namespace AmazFit_Watchface_2
 
             if (Form_Preview.Model_Wath.model_gtr47 != radioButton_GTR2.Checked)
                 Form_Preview.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-            if (Form_Preview.Model_Wath.model_gtr42 != radioButton_42.Checked)
-                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
             if (Form_Preview.Model_Wath.model_gts != radioButton_GTS2.Checked)
                 Form_Preview.Model_Wath.model_gts = radioButton_GTS2.Checked;
-            if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
-                Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
-            if (Form_Preview.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
-                Form_Preview.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
-            if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
-                Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
-            //Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
-            //gPanel.Clear(panel_Preview.BackColor);
-            //Pen pen = new Pen(Color.Blue, 1);
-            //Random rnd = new Random();
-            //gPanel.DrawLine(pen, new Point(0, 0), new Point(rnd.Next(0, 450), rnd.Next(0, 450)));
-            //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
-            //if (formPreview.radioButton_small.Checked) scale = 0.5f;
-            //if (formPreview.radioButton_large.Checked) scale = 1.5f;
-            //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
-            //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
 
             #region BackgroundImage 
             Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-            if (radioButton_42.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-            }
             if (radioButton_GTS2.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-            }
-            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-            }
-            if (radioButton_AmazfitX.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
             #endregion
@@ -5952,26 +5831,11 @@ namespace AmazFit_Watchface_2
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
-                if (radioButton_42.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
-                }
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
                 if (radioButton_GTS2.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
-                }
-                if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
-                }
-                if (radioButton_AmazfitX.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
@@ -5994,26 +5858,11 @@ namespace AmazFit_Watchface_2
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
-                if (radioButton_42.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
-                }
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
                 if (radioButton_GTS2.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
-                }
-                if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
-                }
-                if (radioButton_AmazfitX.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
@@ -6205,29 +6054,9 @@ namespace AmazFit_Watchface_2
             if (radioButton != null && !radioButton.Checked) return;
             if (radioButton_GTR2.Checked)
             {
-                //this.Text = "GTR watch face editor";
-                //pictureBox_Preview.Height = 230;
-                //pictureBox_Preview.Width = 230;
                 pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
-                offSet_X = 227;
-                offSet_Y = 227;
                 
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
-
-                button_unpack.Enabled = true;
-                button_pack.Enabled = true;
-                button_zip.Enabled = true;
-            }
-            else if (radioButton_42.Checked)
-            {
-                //this.Text = "GTR watch face editor";
-                //pictureBox_Preview.Height = 198;
-                //pictureBox_Preview.Width = 198;
-                pictureBox_Preview.Size = new Size((int)(198 * currentDPI), (int)(198 * currentDPI));
-                offSet_X = 195;
-                offSet_Y = 195;
-                
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR42;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR_2;
 
                 button_unpack.Enabled = true;
                 button_pack.Enabled = true;
@@ -6235,65 +6064,16 @@ namespace AmazFit_Watchface_2
             }
             else if (radioButton_GTS2.Checked)
             {
-                //this.Text = "GTS watch face editor";
-                //pictureBox_Preview.Height = 224;
-                //pictureBox_Preview.Width = 177;
                 pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
-                offSet_X = 174;
-                offSet_Y = 221;
                 
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS_2;
 
                 button_unpack.Enabled = false;
                 button_pack.Enabled = false;
                 button_zip.Enabled = false;
             }
-            else if (radioButton_TRex.Checked)
-            {
-                //this.Text = "T-Rex watch face editor";
-                //pictureBox_Preview.Height = 183;
-                //pictureBox_Preview.Width = 183;
-                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
-                offSet_X = 180;
-                offSet_Y = 180;
 
-                textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
-
-                button_unpack.Enabled = true;
-                button_pack.Enabled = true;
-                button_zip.Enabled = true;
-            }
-            else if (radioButton_AmazfitX.Checked)
-            {
-                //this.Text = "T-Rex watch face editor";
-                //pictureBox_Preview.Height = 183;
-                //pictureBox_Preview.Width = 183;
-                pictureBox_Preview.Size = new Size((int)(106 * currentDPI), (int)(323 * currentDPI));
-                offSet_X = 103;
-                offSet_Y = 320;
-
-                textBox_unpack_command.Text = Program_Settings.unpack_command_AmazfitX;
-
-                button_unpack.Enabled = true;
-                button_pack.Enabled = true;
-                button_zip.Enabled = true;
-            }
-            else if (radioButton_Verge.Checked)
-            {
-                //this.Text = "Verge Lite watch face editor";
-                //pictureBox_Preview.Height = 183;
-                //pictureBox_Preview.Width = 183;
-                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
-                offSet_X = 180;
-                offSet_Y = 180;
-
-                textBox_unpack_command.Text = Program_Settings.unpack_command_Verge;
-
-                button_unpack.Enabled = true;
-                button_pack.Enabled = true;
-                button_zip.Enabled = true;
-            }
-            // изменяем размер фопанели для предпросмотра если она не влазит
+            // изменяем размер панели для предпросмотра если она не влазит
             if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_GTR2.Top)
             {
                 float newHeight = radioButton_GTR2.Top - pictureBox_Preview.Top;
@@ -6301,37 +6081,19 @@ namespace AmazFit_Watchface_2
                 pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
             }
 
-            //if (pictureBox_Preview.Top + pictureBox_Preview.Height > 200)
-            //{
-            //    float newHeight = 200 - pictureBox_Preview.Top;
-            //    float scale = newHeight / pictureBox_Preview.Height;
-            //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
-            //}
             FormText();
 
             if ((formPreview != null) && (formPreview.Visible))
             {
                 if (Form_Preview.Model_Wath.model_gtr47 != radioButton_GTR2.Checked)
                     Form_Preview.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-                if (Form_Preview.Model_Wath.model_gtr42 != radioButton_42.Checked)
-                    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
                 if (Form_Preview.Model_Wath.model_gts != radioButton_GTS2.Checked)
                     Form_Preview.Model_Wath.model_gts = radioButton_GTS2.Checked;
-                if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
-                    Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
-                if (Form_Preview.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
-                    Form_Preview.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
-                if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
-                    Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                 formPreview.radioButton_CheckedChanged(sender, e);
             }
 
             Program_Settings.Model_GTR47 = radioButton_GTR2.Checked;
-            Program_Settings.Model_GTR42 = radioButton_42.Checked;
             Program_Settings.Model_GTS = radioButton_GTS2.Checked;
-            Program_Settings.Model_TRex = radioButton_TRex.Checked;
-            Program_Settings.Model_AmazfitX = radioButton_AmazfitX.Checked;
-            Program_Settings.Model_Verge = radioButton_Verge.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -6356,27 +6118,11 @@ namespace AmazFit_Watchface_2
             }
             if (radioButton_GTR2.Checked)
             {
-                FormName = "GTR watch face editor";
-            }
-            else if (radioButton_42.Checked)
-            {
-                FormName = "GTR watch face editor";
+                FormName = "GTR 2 watch face editor";
             }
             else if (radioButton_GTS2.Checked)
             {
-                FormName = "GTS watch face editor";
-            }
-            else if (radioButton_TRex.Checked)
-            {
-                FormName = "T-Rex watch face editor";
-            }
-            else if (radioButton_AmazfitX.Checked)
-            {
-                FormName = "AmazfitX watch face editor";
-            }
-            else if (radioButton_Verge.Checked)
-            {
-                FormName = "Verge Lite watch face editor";
+                FormName = "GTS 2 watch face editor";
             }
 
             if (FormNameSufix.Length == 0)
@@ -6654,7 +6400,7 @@ namespace AmazFit_Watchface_2
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
                 // Click is in text area
-                numericUpDown.Value = MouseСoordinates.X - offSet_X;
+                //numericUpDown.Value = MouseСoordinates.X - offSet_X;
             }
             else
             {
@@ -6676,7 +6422,7 @@ namespace AmazFit_Watchface_2
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
                 // Click is in text area
-                numericUpDown.Value = MouseСoordinates.Y - offSet_Y;
+                //numericUpDown.Value = MouseСoordinates.Y - offSet_Y;
             }
             else
             {
@@ -6782,27 +6528,11 @@ namespace AmazFit_Watchface_2
         {
             if (radioButton_GTR2.Checked)
             {
-                Program_Settings.unpack_command_GTR47 = textBox_unpack_command.Text;
-            }
-            else if(radioButton_42.Checked)
-            {
-                Program_Settings.unpack_command_GTR42 = textBox_unpack_command.Text;
+                Program_Settings.unpack_command_GTR_2 = textBox_unpack_command.Text;
             }
             else if (radioButton_GTS2.Checked)
             {
-                Program_Settings.unpack_command_GTS = textBox_unpack_command.Text;
-            }
-            else if (radioButton_TRex.Checked)
-            {
-                Program_Settings.unpack_command_TRex = textBox_unpack_command.Text;
-            }
-            else if (radioButton_AmazfitX.Checked)
-            {
-                Program_Settings.unpack_command_AmazfitX = textBox_unpack_command.Text;
-            }
-            else if (radioButton_Verge.Checked)
-            {
-                Program_Settings.unpack_command_Verge = textBox_unpack_command.Text;
+                Program_Settings.unpack_command_GTS_2 = textBox_unpack_command.Text;
             }
 
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
@@ -7648,31 +7378,14 @@ namespace AmazFit_Watchface_2
         private void button_ShowAnimation_Click(object sender, EventArgs e)
         {
             Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-            Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
-            if (radioButton_42.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
-            }
+            Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
             if (radioButton_GTS2.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
-            }
-            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
-            }
-            if (radioButton_AmazfitX.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
             PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, false, 1);
-            if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
-            Image loadedImage = null;
 
         }
 
@@ -7756,21 +7469,6 @@ namespace AmazFit_Watchface_2
                 {
                     radioButton_ConvertingInput_GTR47.Checked = true;
                     numericUpDown_ConvertingInput_Custom.Value = 454;
-                }
-                if (radioButton_42.Checked)
-                {
-                    radioButton_ConvertingInput_GTR42.Checked = true;
-                    numericUpDown_ConvertingInput_Custom.Value = 390;
-                }
-                if (radioButton_TRex.Checked)
-                {
-                    radioButton_ConvertingInput_TRex.Checked = true;
-                    numericUpDown_ConvertingInput_Custom.Value = 360;
-                }
-                if (radioButton_Verge.Checked)
-                {
-                    radioButton_ConvertingInput_Verge.Checked = true;
-                    numericUpDown_ConvertingInput_Custom.Value = 360;
                 }
                 numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
             }
@@ -8807,40 +8505,23 @@ namespace AmazFit_Watchface_2
         private void button_RefreshPreview_Click(object sender, EventArgs e)
         {
             if (FileName == null || FullFileDir == null) return;
-            if (comboBox_Preview.SelectedIndex >= 0)
+            if (comboBox_Preview_image.SelectedIndex >= 0)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
-                int PreviewHeight = 266;
-                if (radioButton_42.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
-                }
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+                int PreviewHeight = 306;
                 if (radioButton_GTS2.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
-                    PreviewHeight = 304;
-                }
-                if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
-                    PreviewHeight = 210;
-                }
-                if (radioButton_AmazfitX.Checked)
-                {
-                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
-                    PreviewHeight = 210;
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+                    PreviewHeight = 323;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
                 if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
 
 
-                int i = comboBox_Preview.SelectedIndex;
+                int i = comboBox_Preview_image.SelectedIndex;
                 Image loadedImage = null;
                 using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, FileAccess.Read))
                 {
@@ -8875,174 +8556,167 @@ namespace AmazFit_Watchface_2
 
         private void button_CreatePreview_Click(object sender, EventArgs e)
         {
-            if (comboBox_Preview.SelectedIndex >= 0) return;
-            //if (FileName != null && FullFileDir != null) // проект уже сохранен
-            //{
-            //    // формируем картинку для предпросмотра
-            //    Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-            //    Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
-            //    int PreviewHeight = 266;
-            //    if (radioButton_42.Checked)
-            //    {
-            //        bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-            //        mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
-            //    }
-            //    if (radioButton_GTS2.Checked)
-            //    {
-            //        bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-            //        mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
-            //        PreviewHeight = 304;
-            //    }
-            //    if (radioButton_TRex.Checked || radioButton_Verge.Checked)
-            //    {
-            //        bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-            //        mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
-            //        PreviewHeight = 210;
-            //    }
-            //    if (radioButton_AmazfitX.Checked)
-            //    {
-            //        bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
-            //        mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
-            //        PreviewHeight = 210;
-            //    }
-            //    Graphics gPanel = Graphics.FromImage(bitmap);
-            //    PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
-            //    if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
-            //    float scale = (float)PreviewHeight / bitmap.Height;
-            //    bitmap = ResizeImage(bitmap, scale);
-            //    //bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+            if (comboBox_Preview_image.SelectedIndex >= 0) return;
+            if (FileName != null && FullFileDir != null) // проект уже сохранен
+            {
+                // формируем картинку для предпросмотра
+                Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+                int PreviewHeight = 306;
+                if (radioButton_GTS2.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+                    PreviewHeight = 323;
+                }
+                Graphics gPanel = Graphics.FromImage(bitmap);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
+                if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+                float scale = (float)PreviewHeight / bitmap.Height;
+                bitmap = ResizeImage(bitmap, scale);
+                //bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
 
-            //    string s = label_size.Text;
-            //    //s = s.Trim(new char[] { '≈', 'M' });
-            //    s = s.Replace("≈", "");
-            //    s = s.Replace("MB", "");
-            //    float pixels = float.Parse(s) * 1024 * 1024;
-            //    int pixelsNew = bitmap.Width * bitmap.Height;
-            //    pixelsNew = pixelsNew * 4 + 20;
-            //    pixels = pixels + pixelsNew;
-            //    ShowAllFileSize(pixels);
-            //    //bitmap.Dispose();
+                string s = label_size.Text;
+                //s = s.Trim(new char[] { '≈', 'M' });
+                s = s.Replace("≈", "");
+                s = s.Replace("MB", "");
+                float pixels = float.Parse(s) * 1024 * 1024;
+                int pixelsNew = bitmap.Width * bitmap.Height;
+                pixelsNew = pixelsNew * 4 + 20;
+                pixels = pixels + pixelsNew;
+                ShowAllFileSize(pixels);
+                //bitmap.Dispose();
 
-            //    // определяем имя файла для сохранения и сохраняем файл
-            //    if (ListImages[1] == "1"|| ListImages[0] == "1") // файл 0001.png есть
-            //    {
-            //        int i = Int32.Parse(ListImages[ListImages.Count - 1]) + 1;
-            //        string NamePreview = i.ToString() + ".png";
-            //        string PathPreview = Path.Combine(FullFileDir, NamePreview);
-            //        while (PathPreview.Length < ListImagesFullName[0].Length)
-            //        {
-            //            NamePreview = "0" + NamePreview;
-            //            PathPreview = Path.Combine(FullFileDir, NamePreview);
-            //        }
-            //        bitmap.Save(PathPreview, ImageFormat.Png);
-            //        string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
-            //        i = Int32.Parse(fileNameOnly);
+                // определяем имя файла для сохранения и сохраняем файл
+                if (ListImages[1] == "1" || ListImages[0] == "1") // файл 0001.png есть
+                {
+                    int i = Int32.Parse(ListImages[ListImages.Count - 1]) + 1;
+                    string NamePreview = i.ToString() + ".png";
+                    string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    while (PathPreview.Length < ListImagesFullName[0].Length)
+                    {
+                        NamePreview = "0" + NamePreview;
+                        PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    }
+                    bitmap.Save(PathPreview, ImageFormat.Png);
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                    i = Int32.Parse(fileNameOnly);
 
-            //        PreviewView = false;
-            //        ListImages.Add(i.ToString());
-            //        ListImagesFullName.Add(PathPreview);
+                    PreviewView = false;
+                    ListImages.Add(i.ToString());
+                    ListImagesFullName.Add(PathPreview);
 
-            //        // добавляем строки в таблицу
-            //        //Image PreviewImage = Image.FromHbitmap(bitmap.GetHbitmap());
-            //        Image PreviewImage = null;
-            //        using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
-            //        {
-            //            PreviewImage = Image.FromStream(stream);
-            //        }
-            //        var RowNew = new DataGridViewRow();
-            //        DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
-            //        if ((bitmap.Height < 45) && (bitmap.Width < 110))
-            //            ZoomType = DataGridViewImageCellLayout.Normal;
-            //        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
-            //        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
-            //        RowNew.Cells.Add(new DataGridViewImageCell()
-            //        {
-            //            Value = PreviewImage,
-            //            ImageLayout = ZoomType
-            //        });
-            //        RowNew.Height = 45;
-            //        dataGridView_ImagesList.Rows.Add(RowNew);
+                    // добавляем строки в таблицу
+                    //Image PreviewImage = Image.FromHbitmap(bitmap.GetHbitmap());
+                    Image PreviewImage = null;
+                    using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                    {
+                        PreviewImage = Image.FromStream(stream);
+                    }
+                    var RowNew = new DataGridViewRow();
+                    DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                    if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                        ZoomType = DataGridViewImageCellLayout.Normal;
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                    RowNew.Cells.Add(new DataGridViewImageCell()
+                    {
+                        Value = PreviewImage,
+                        ImageLayout = ZoomType
+                    });
+                    RowNew.Height = 45;
+                    dataGridView_ImagesList.Rows.Add(RowNew);
 
-            //        if (Watch_Face.Background == null) Watch_Face.Background = new Background();
-            //        Watch_Face.Background.Preview = new ImageW();
-            //        Watch_Face.Background.Preview.ImageIndex = i;
-            //        JSON_read();
-            //        richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
-            //        {
-            //            //DefaultValueHandling = DefaultValueHandling.Ignore,
-            //            NullValueHandling = NullValueHandling.Ignore
-            //        });
-            //        JsonToTree(richTextBox_JsonText.Text);
-            //        PreviewView = true;
-            //        JSON_Modified = true;
-            //        FormText();
-            //    }
-            //    else // файла 0001.png нет
-            //    {
-            //        string NamePreview = "1.png";
-            //        string PathPreview = Path.Combine(FullFileDir, NamePreview);
-            //        while (PathPreview.Length < ListImagesFullName[0].Length)
-            //        {
-            //            NamePreview = "0" + NamePreview;
-            //            PathPreview = Path.Combine(FullFileDir, NamePreview);
-            //        }
-            //        bitmap.Save(PathPreview, ImageFormat.Png);
+                    if (Watch_Face.Background == null) Watch_Face.Background = new Background();
+                    Watch_Face.Background.Preview = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImageIndex = i;
+                    multilangImage.ImageSet.ImagesCount = 1;
+                    Watch_Face.Background.Preview.Add(multilangImage);
+                    JSON_read();
+                    richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    JsonToTree(richTextBox_JsonText.Text);
+                    PreviewView = true;
+                    JSON_Modified = true;
+                    FormText();
+                }
+                else // файла 0001.png нет
+                {
+                    string NamePreview = "1.png";
+                    string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    while (PathPreview.Length < ListImagesFullName[0].Length)
+                    {
+                        NamePreview = "0" + NamePreview;
+                        PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    }
+                    bitmap.Save(PathPreview, ImageFormat.Png);
 
-            //        PreviewView = false;
-            //        int index = 0;
-            //        if (ListImages[0] == "0") // файл 0000.png есть
-            //        {
-            //            index = 1;
-            //        }
+                    PreviewView = false;
+                    int index = 0;
+                    if (ListImages[0] == "0") // файл 0000.png есть
+                    {
+                        index = 1;
+                    }
 
-            //        ListImages.Insert(index, "1");
-            //        ListImagesFullName.Insert(index, PathPreview);
+                    ListImages.Insert(index, "1");
+                    ListImagesFullName.Insert(index, PathPreview);
 
-            //        // добавляем строки в таблицу
-            //        string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
-            //        Image PreviewImage = null;
-            //        using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
-            //        {
-            //            PreviewImage = Image.FromStream(stream);
-            //        }
-            //        var RowNew = new DataGridViewRow();
-            //        DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
-            //        if ((bitmap.Height < 45) && (bitmap.Width < 110))
-            //            ZoomType = DataGridViewImageCellLayout.Normal;
-            //        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() });
-            //        //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() + "*" });
-            //        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
-            //        RowNew.Cells.Add(new DataGridViewImageCell()
-            //        {
-            //            Value = PreviewImage,
-            //            ImageLayout = ZoomType
-            //        });
-            //        RowNew.Height = 45;
-            //        dataGridView_ImagesList.Rows.Insert(index, RowNew);
-            //        for (int i = index+1; i < dataGridView_ImagesList.Rows.Count; i++)
-            //        {
-            //            string OldValue = dataGridView_ImagesList[0, i].Value.ToString();
-            //            dataGridView_ImagesList[0, i].Value = Int32.Parse(OldValue)+1;
-            //        }
+                    // добавляем строки в таблицу
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                    Image PreviewImage = null;
+                    using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                    {
+                        PreviewImage = Image.FromStream(stream);
+                    }
+                    var RowNew = new DataGridViewRow();
+                    DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                    if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                        ZoomType = DataGridViewImageCellLayout.Normal;
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() });
+                    //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() + "*" });
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                    RowNew.Cells.Add(new DataGridViewImageCell()
+                    {
+                        Value = PreviewImage,
+                        ImageLayout = ZoomType
+                    });
+                    RowNew.Height = 45;
+                    dataGridView_ImagesList.Rows.Insert(index, RowNew);
+                    for (int i = index + 1; i < dataGridView_ImagesList.Rows.Count; i++)
+                    {
+                        string OldValue = dataGridView_ImagesList[0, i].Value.ToString();
+                        dataGridView_ImagesList[0, i].Value = Int32.Parse(OldValue) + 1;
+                    }
 
-            //        if (Watch_Face.Background == null) Watch_Face.Background = new Background();
-            //        Watch_Face.Background.Preview = new ImageW();
-            //        Watch_Face.Background.Preview.ImageIndex = 1;
-            //        JSON_read(); 
-            //        richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
-            //        {
-            //            //DefaultValueHandling = DefaultValueHandling.Ignore,
-            //            NullValueHandling = NullValueHandling.Ignore
-            //        });
-            //        JsonToTree(richTextBox_JsonText.Text);
-            //        PreviewView = true;
-            //        JSON_Modified = true;
-            //        FormText();
-            //    }
+                    if (Watch_Face.Background == null) Watch_Face.Background = new Background();
+                    Watch_Face.Background.Preview = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImageIndex = 1;
+                    multilangImage.ImageSet.ImagesCount = 1;
+                    Watch_Face.Background.Preview.Add(multilangImage);
+                    JSON_read();
+                    richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    JsonToTree(richTextBox_JsonText.Text);
+                    PreviewView = true;
+                    JSON_Modified = true;
+                    FormText();
+                }
 
-            //    bitmap.Dispose();
+                bitmap.Dispose();
 
-            //}
+            }
 
         }
 

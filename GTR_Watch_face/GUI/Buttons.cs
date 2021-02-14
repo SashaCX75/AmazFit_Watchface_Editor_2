@@ -88,18 +88,18 @@ namespace AmazFit_Watchface_2
         {
             if (panel_Day_hand.Height == 1)
             {
-                panel_Day_hand.Height = (int)(155 * currentDPI);
+                panel_Day_hand.Height = (int)(225 * currentDPI);
             }
             else panel_Day_hand.Height = 1;
         }
 
         private void button_Month_image_Click(object sender, EventArgs e)
         {
-            if (panel_Month_image.Height == 1)
+            if (panel_Month_pictures.Height == 1)
             {
-                panel_Month_image.Height = (int)(85 * currentDPI);
+                panel_Month_pictures.Height = (int)(85 * currentDPI);
             }
-            else panel_Month_image.Height = 1;
+            else panel_Month_pictures.Height = 1;
         }
 
         private void button_Month_text_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace AmazFit_Watchface_2
         {
             if (panel_Month_hand.Height == 1)
             {
-                panel_Month_hand.Height = (int)(155 * currentDPI);
+                panel_Month_hand.Height = (int)(225 * currentDPI);
             }
             else panel_Month_hand.Height = 1;
         }
@@ -132,9 +132,55 @@ namespace AmazFit_Watchface_2
         {
             if (panel_DOW_hand.Height == 1)
             {
-                panel_DOW_hand.Height = (int)(155 * currentDPI);
+                panel_DOW_hand.Height = (int)(225 * currentDPI);
             }
             else panel_DOW_hand.Height = 1;
+        }
+
+
+        private void button_Battery_pictures_Click(object sender, EventArgs e)
+        {
+            if (panel_Battery_pictures.Height == 1)
+            {
+                panel_Battery_pictures.Height = (int)(85 * currentDPI);
+            }
+            else panel_Battery_pictures.Height = 1;
+        }
+
+        private void button_Battery_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Battery_text.Height == 1)
+            {
+                panel_Battery_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Battery_text.Height = 1;
+        }
+
+        private void button_Battery_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Battery_hand.Height == 1)
+            {
+                panel_Battery_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_Battery_hand.Height = 1;
+        }
+
+        private void button_Battery_scaleCircle_Click(object sender, EventArgs e)
+        {
+            if (panel_Battery_scaleCircle.Height == 1)
+            {
+                panel_Battery_scaleCircle.Height = (int)(50 * currentDPI);
+            }
+            else panel_Battery_scaleCircle.Height = 1;
+        }
+
+        private void button_Battery_scaleLinear_Click(object sender, EventArgs e)
+        {
+            if (panel_Battery_scaleLinear.Height == 1)
+            {
+                panel_Battery_scaleLinear.Height = (int)(50 * currentDPI);
+            }
+            else panel_Battery_scaleLinear.Height = 1;
         }
 
 
