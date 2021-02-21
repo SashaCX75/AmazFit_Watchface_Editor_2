@@ -11,14 +11,11 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using LineCap = System.Drawing.Drawing2D.LineCap;
 using System.Globalization;
 using System.Threading;
 using System.Text.RegularExpressions;
-using Microsoft.Win32;
 
 namespace AmazFit_Watchface_2
 {
@@ -128,7 +125,7 @@ namespace AmazFit_Watchface_2
             //    currentDPI = AppliedDPI / currentDPI;
             //    MessageBox.Show(currentDPI.ToString());
             //}
-            currentDPI = tabControl1.Height / 700f;
+            currentDPI = tabControl1.Height / 670f;
             tabControl1.TabPages[0].Parent = null;
             tabControl1.TabPages[2].Parent = null;
             tabControl1.TabPages[4].Parent = null;
@@ -2048,87 +2045,6 @@ namespace AmazFit_Watchface_2
 
             SetDigitForPrewiev();
         }
-
-        public void SetPreferences11()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set11.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set11.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set11.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set11.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set11.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set11.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set11.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set11.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set11.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set11.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set11.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set11.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set11.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set11.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set11.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set11.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set11.Checked;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences12()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set12.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set12.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set12.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set12.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set12.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set12.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set12.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set12.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set12.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set12.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set12.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set12.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set12.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set12.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set12.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set12.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set12.Checked;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences13()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set13.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set13.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set13.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set13.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set13.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set13.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set13.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set13.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set13.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set13.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set13.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set13.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set13.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set13.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set13.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set13.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set13.Checked;
-
-            SetDigitForPrewiev();
-        }
 #endregion
 
         // определяем отдельные цифры для даты и времени
@@ -2284,9 +2200,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences1();
             PreviewImage();
         }
@@ -2303,10 +2216,6 @@ namespace AmazFit_Watchface_2
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences2();
             PreviewImage();
         }
@@ -2322,10 +2231,6 @@ namespace AmazFit_Watchface_2
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences3();
             PreviewImage();
         }
@@ -2342,9 +2247,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences4();
             PreviewImage();
         }
@@ -2361,9 +2263,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences5();
             PreviewImage();
         }
@@ -2380,9 +2279,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences6();
             PreviewImage();
         }
@@ -2399,9 +2295,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences7();
             PreviewImage();
         }
@@ -2418,9 +2311,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = (int)(125 * currentDPI);
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences8();
             PreviewImage();
         }
@@ -2437,9 +2327,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = (int)(125 * currentDPI);
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences9();
             PreviewImage();
         }
@@ -2456,67 +2343,7 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = (int)(125 * currentDPI);
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
             SetPreferences10();
-            PreviewImage();
-        }
-        private void button_Set11_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            panel_Set11.Height = (int)(125 * currentDPI);
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
-            SetPreferences11();
-            PreviewImage();
-        }
-        private void button_Set12_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = (int)(125 * currentDPI);
-            panel_Set13.Height = 1;
-            SetPreferences12();
-            PreviewImage();
-        }
-        private void button_Set13_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = (int)(125 * currentDPI);
-            SetPreferences13();
             PreviewImage();
         }
 
@@ -2533,9 +2360,6 @@ namespace AmazFit_Watchface_2
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 1;
-            panel_Set12.Height = 1;
-            panel_Set13.Height = 1;
         }
 #endregion
 
@@ -2590,21 +2414,6 @@ namespace AmazFit_Watchface_2
             SetPreferences10();
             PreviewImage();
         }
-        private void dateTimePicker_Time_Set11_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences11();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set12_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences12();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set13_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences13();
-            PreviewImage();
-        }
         //////////////////////////////
         private void numericUpDown_Battery_Set1_ValueChanged(object sender, EventArgs e)
         {
@@ -2656,21 +2465,6 @@ namespace AmazFit_Watchface_2
             SetPreferences10();
             PreviewImage();
         }
-        private void numericUpDown_Battery_Set11_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences11();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set12_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences12();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set13_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences13();
-            PreviewImage();
-        }
         //////////////////////////////
         private void check_BoxBluetooth_Set1_CheckedChanged(object sender, EventArgs e)
         {
@@ -2720,21 +2514,6 @@ namespace AmazFit_Watchface_2
         private void check_BoxBluetooth_Set10_CheckedChanged(object sender, EventArgs e)
         {
             SetPreferences10();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set11_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences11();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set12_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences12();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set13_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences13();
             PreviewImage();
         }
 #endregion
@@ -3095,51 +2874,6 @@ namespace AmazFit_Watchface_2
                             checkBox_DoNotDisturb_Set10.Checked = dnd;
                             button_Set10.PerformClick();
                             break;
-                        case 10:
-                            dateTimePicker_Date_Set11.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set11.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set11.Value = battery;
-                            numericUpDown_Calories_Set11.Value = calories;
-                            numericUpDown_Pulse_Set11.Value = pulse;
-                            numericUpDown_Distance_Set11.Value = distance;
-                            numericUpDown_Steps_Set11.Value = steps;
-                            numericUpDown_Goal_Set11.Value = goal;
-                            check_BoxBluetooth_Set11.Checked = bluetooth;
-                            checkBox_Alarm_Set11.Checked = alarm;
-                            checkBox_Lock_Set11.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set11.Checked = dnd;
-                            button_Set11.PerformClick();
-                            break;
-                        case 11:
-                            dateTimePicker_Date_Set12.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set12.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set12.Value = battery;
-                            numericUpDown_Calories_Set12.Value = calories;
-                            numericUpDown_Pulse_Set12.Value = pulse;
-                            numericUpDown_Distance_Set12.Value = distance;
-                            numericUpDown_Steps_Set12.Value = steps;
-                            numericUpDown_Goal_Set12.Value = goal;
-                            check_BoxBluetooth_Set12.Checked = bluetooth;
-                            checkBox_Alarm_Set12.Checked = alarm;
-                            checkBox_Lock_Set12.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set12.Checked = dnd;
-                            button_Set12.PerformClick();
-                            break;
-                        case 12:
-                            dateTimePicker_Date_Set13.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set13.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set13.Value = battery;
-                            numericUpDown_Calories_Set13.Value = calories;
-                            numericUpDown_Pulse_Set13.Value = pulse;
-                            numericUpDown_Distance_Set13.Value = distance;
-                            numericUpDown_Steps_Set13.Value = steps;
-                            numericUpDown_Goal_Set13.Value = goal;
-                            check_BoxBluetooth_Set13.Checked = bluetooth;
-                            checkBox_Alarm_Set13.Checked = alarm;
-                            checkBox_Lock_Set13.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set13.Checked = dnd;
-                            button_Set13.PerformClick();
-                            break;
                     }
                 }
 
@@ -3422,81 +3156,6 @@ namespace AmazFit_Watchface_2
                             count++;
                         }
                         break;
-                    case 10:
-                        ps.Time.Year = dateTimePicker_Date_Set11.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set11.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set11.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set11.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set11.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set11.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set11.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set11.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set11.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set11.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set11.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set11.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set11.Checked;
-                        ps.Alarm = checkBox_Alarm_Set10.Checked;
-                        ps.Unlocked = checkBox_Lock_Set11.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set11.Checked;
-
-                        if (numericUpDown_Calories_Set11.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 11:
-                        ps.Time.Year = dateTimePicker_Date_Set12.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set12.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set12.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set12.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set12.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set12.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set12.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set12.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set12.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set12.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set12.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set12.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set12.Checked;
-                        ps.Alarm = checkBox_Alarm_Set12.Checked;
-                        ps.Unlocked = checkBox_Lock_Set12.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set12.Checked;
-
-                        if (numericUpDown_Calories_Set12.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 12:
-                        ps.Time.Year = dateTimePicker_Date_Set13.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set13.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set13.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set13.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set13.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set13.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set13.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set13.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set13.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set13.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set13.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set13.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set13.Checked;
-                        ps.Alarm = checkBox_Alarm_Set13.Checked;
-                        ps.Unlocked = checkBox_Lock_Set13.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set13.Checked;
-
-                        if (numericUpDown_Calories_Set13.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
                 }
             }
 
@@ -3718,51 +3377,6 @@ namespace AmazFit_Watchface_2
                         checkBox_DoNotDisturb_Set10.Checked = dnd;
                         //button_Set10.PerformClick();
                         break;
-                    case 10:
-                        dateTimePicker_Date_Set11.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set11.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set11.Value = battery;
-                        numericUpDown_Calories_Set11.Value = calories;
-                        numericUpDown_Pulse_Set11.Value = pulse;
-                        numericUpDown_Distance_Set11.Value = distance;
-                        numericUpDown_Steps_Set11.Value = steps;
-                        numericUpDown_Goal_Set11.Value = goal;
-                        check_BoxBluetooth_Set11.Checked = bluetooth;
-                        checkBox_Alarm_Set11.Checked = alarm;
-                        checkBox_Lock_Set11.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set11.Checked = dnd;
-                        //button_Set11.PerformClick();
-                        break;
-                    case 11:
-                        dateTimePicker_Date_Set12.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set12.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set12.Value = battery;
-                        numericUpDown_Calories_Set12.Value = calories;
-                        numericUpDown_Pulse_Set12.Value = pulse;
-                        numericUpDown_Distance_Set12.Value = distance;
-                        numericUpDown_Steps_Set12.Value = steps;
-                        numericUpDown_Goal_Set12.Value = goal;
-                        check_BoxBluetooth_Set12.Checked = bluetooth;
-                        checkBox_Alarm_Set12.Checked = alarm;
-                        checkBox_Lock_Set12.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set12.Checked = dnd;
-                        //button_Set12.PerformClick();
-                        break;
-                    case 12:
-                        dateTimePicker_Date_Set13.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set13.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set13.Value = battery;
-                        numericUpDown_Calories_Set13.Value = calories;
-                        numericUpDown_Pulse_Set13.Value = pulse;
-                        numericUpDown_Distance_Set13.Value = distance;
-                        numericUpDown_Steps_Set13.Value = steps;
-                        numericUpDown_Goal_Set13.Value = goal;
-                        check_BoxBluetooth_Set13.Checked = bluetooth;
-                        checkBox_Alarm_Set13.Checked = alarm;
-                        checkBox_Lock_Set13.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set13.Checked = dnd;
-                        //button_Set13.PerformClick();
-                        break;
                 }
             }
 
@@ -3773,7 +3387,7 @@ namespace AmazFit_Watchface_2
 
             PreviewView = true;
             //PreviewImage();
-            button_Set13.PerformClick();
+            button_Set10.PerformClick();
         }
 
         private void checkBox_WebW_CheckedChanged(object sender, EventArgs e)
@@ -4229,30 +3843,6 @@ namespace AmazFit_Watchface_2
                                     save = true;
                                 }
                                 break;
-                            case 10:
-                                if (numericUpDown_Calories_Set11.Value != 1234)
-                                {
-                                    //button_Set11.PerformClick();
-                                    SetPreferences11();
-                                    save = true;
-                                }
-                                break;
-                            case 11:
-                                if (numericUpDown_Calories_Set12.Value != 1234)
-                                {
-                                    //button_Set12.PerformClick();
-                                    SetPreferences12();
-                                    save = true;
-                                }
-                                break;
-                            case 12:
-                                if (numericUpDown_Calories_Set13.Value != 1234)
-                                {
-                                    //button_Set13.PerformClick();
-                                    SetPreferences13();
-                                    save = true;
-                                }
-                                break;
                         }
 
                         if (save)
@@ -4404,11 +3994,13 @@ namespace AmazFit_Watchface_2
             if (FormNameSufix.Length == 0)
             {
                 this.Text = FormName;
+                button_OpenDir.Enabled = false;
             }
             else
             {
                 if (JSON_Modified) FormNameSufix = FormNameSufix + "*";
                 this.Text = FormName + " (" + FormNameSufix + ")";
+                button_OpenDir.Enabled = true;
             }
         }
 
@@ -6751,6 +6343,15 @@ namespace AmazFit_Watchface_2
             splitContainer_EditParameters.Panel2Collapsed = b;
 
 
+        }
+
+        private void button_OpenDir_Click(object sender, EventArgs e)
+        {
+            if (FullFileDir != null)
+            {
+                Process.Start(new ProcessStartInfo(FullFileDir));
+                //Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + FullFileDir));
+            }
         }
 
 

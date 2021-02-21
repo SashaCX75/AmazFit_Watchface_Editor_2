@@ -321,6 +321,52 @@ namespace AmazFit_Watchface_2
             else panel_HeartRate_scaleLinear.Height = 1;
         }
 
+        private void button_RandomPreview_Click(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            Random rnd = new Random();
+            int year = now.Year;
+            int month = rnd.Next(0, 12) + 1;
+            int day = rnd.Next(0, 28) + 1;
+            int weekDay = rnd.Next(0, 7) + 1;
+            int hour = rnd.Next(0, 24);
+            int min = rnd.Next(0, 60);
+            int sec = rnd.Next(0, 60);
+            int battery = rnd.Next(0, 101);
+            int calories = rnd.Next(0, 2500);
+            int pulse = rnd.Next(45, 150);
+            int distance = rnd.Next(0, 15000);
+            int steps = rnd.Next(0, 15000);
+            int goal = rnd.Next(0, 15000);
+            bool bluetooth = rnd.Next(2) == 0 ? false : true;
+            bool alarm = rnd.Next(2) == 0 ? false : true;
+            bool unlocked = rnd.Next(2) == 0 ? false : true;
+            bool dnd = rnd.Next(2) == 0 ? false : true;
+
+            Watch_Face_Preview_Set.Date.Year = year;
+            Watch_Face_Preview_Set.Date.Month = month;
+            Watch_Face_Preview_Set.Date.Day = day;
+            Watch_Face_Preview_Set.Date.WeekDay = weekDay;
+
+            Watch_Face_Preview_Set.Time.Hours = hour;
+            Watch_Face_Preview_Set.Time.Minutes = min;
+            Watch_Face_Preview_Set.Time.Seconds = sec;
+
+            Watch_Face_Preview_Set.Battery = battery;
+            Watch_Face_Preview_Set.Activity.Calories = calories;
+            Watch_Face_Preview_Set.Activity.Pulse = pulse;
+            Watch_Face_Preview_Set.Activity.Distance = distance;
+            Watch_Face_Preview_Set.Activity.Steps = steps;
+            Watch_Face_Preview_Set.Activity.StepsGoal = goal;
+
+            Watch_Face_Preview_Set.Status.Bluetooth = bluetooth;
+            Watch_Face_Preview_Set.Status.Alarm = alarm;
+            Watch_Face_Preview_Set.Status.Lock = unlocked;
+            Watch_Face_Preview_Set.Status.DoNotDisturb = dnd;
+
+            PreviewImage();
+        }
+
 
 
     }
