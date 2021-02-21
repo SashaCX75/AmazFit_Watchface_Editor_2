@@ -131,10 +131,12 @@ namespace AmazFit_Watchface_2
             currentDPI = tabControl1.Height / 700f;
             tabControl1.TabPages[0].Parent = null;
             tabControl1.TabPages[2].Parent = null;
-            tabControl1.TabPages[2].Parent = null;
             tabControl1.TabPages[4].Parent = null;
             tabControl1.SelectTab(1);
-            tabControl_EditParameters.SelectTab(5);
+            tabControl_EditParameters.SelectTab(3);
+
+            splitContainer_EditParameters.Panel1Collapsed = false;
+            splitContainer_EditParameters.Panel2Collapsed = true;
 
             //Logger.WriteLine("Создали переменные");
 
@@ -261,28 +263,42 @@ namespace AmazFit_Watchface_2
             comboBox_Month_alignment.SelectedIndex = 0;
             comboBox_Year_alignment.SelectedIndex = 0;
 
-            comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
-            comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
-            comboBox_OneLine_Alignment.SelectedIndex = 0;
-            comboBox_Year_Alignment2.SelectedIndex = 0;
-            
-            comboBox_ActivitySteps_Alignment.SelectedIndex = 0;
-            comboBox_ActivityStepsGoal_Alignment.SelectedIndex = 0;
-            comboBox_ActivityDistance_Alignment.SelectedIndex = 0;
-            comboBox_ActivityPuls_Alignment.SelectedIndex = 0;
-            comboBox_ActivityCalories_Alignment.SelectedIndex = 0;
-            comboBox_Battery_Text_Alignment.SelectedIndex = 0;
-
-            comboBox_Weather_Text_Alignment.SelectedIndex = 0;
-            comboBox_Weather_Day_Alignment.SelectedIndex = 0;
-            comboBox_Weather_Night_Alignment.SelectedIndex = 0;
-
             comboBox_Battery_alignment.SelectedIndex = 0;
+            comboBox_Battery_scaleCircle_flatness.SelectedIndex = 0;
 
-            comboBox_Battery_Flatness.SelectedIndex = 0;
-            comboBox_StepsProgress_Flatness.SelectedIndex = 0;
-            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
-            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
+            comboBox_Steps_alignment.SelectedIndex = 0;
+            comboBox_Steps_scaleCircle_flatness.SelectedIndex = 0;
+
+            comboBox_Calories_alignment.SelectedIndex = 0;
+            comboBox_Calories_scaleCircle_flatness.SelectedIndex = 0;
+
+            comboBox_HeartRate_alignment.SelectedIndex = 0;
+            comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
+
+            comboBox_Distance_alignment.SelectedIndex = 0;
+            comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
+
+            //comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
+            //comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
+            //comboBox_OneLine_Alignment.SelectedIndex = 0;
+            //comboBox_Year_Alignment2.SelectedIndex = 0;
+
+            //comboBox_ActivitySteps_Alignment.SelectedIndex = 0;
+            //comboBox_ActivityStepsGoal_Alignment.SelectedIndex = 0;
+            //comboBox_ActivityDistance_Alignment.SelectedIndex = 0;
+            //comboBox_ActivityPuls_Alignment.SelectedIndex = 0;
+            //comboBox_ActivityCalories_Alignment.SelectedIndex = 0;
+            //comboBox_Battery_Text_Alignment.SelectedIndex = 0;
+
+            //comboBox_Weather_Text_Alignment.SelectedIndex = 0;
+            //comboBox_Weather_Day_Alignment.SelectedIndex = 0;
+            //comboBox_Weather_Night_Alignment.SelectedIndex = 0;
+
+
+            //comboBox_Battery_Flatness.SelectedIndex = 0;
+            //comboBox_StepsProgress_Flatness.SelectedIndex = 0;
+            //comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
+            //comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -319,7 +335,6 @@ namespace AmazFit_Watchface_2
             checkBox_DoNotShowMaxMinTemp.Checked = Program_Settings.DoNotShowMaxMinTemp;
 
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
-            dataGridView_MotiomAnimation.RowTemplate.Height = (int)(18 * currentDPI);
 
             if (Program_Settings.Splitter_Pos > 0 ) 
                 splitContainer1.SplitterDistance = Program_Settings.Splitter_Pos;
@@ -1286,7 +1301,8 @@ namespace AmazFit_Watchface_2
                         path = Path.GetDirectoryName(newFullName);
                         //path = Path.Combine(path, fileNameOnly);
                         string newFullName_cmp = Path.Combine(path, fileNameOnly + ".bin.cmp");
-                        string newFullName_bin = Path.Combine(path, fileNameOnly + "_packed.bin");
+                        string newFullName_bin = Path.Combine(path, fileNameOnly + ".bin");
+                        //string newFullName_bin = Path.Combine(path, fileNameOnly + "_packed.bin");
                         if (File.Exists(newFullName_cmp)) File.Copy(newFullName_cmp, newFullName_bin, true);
                         if (File.Exists(newFullName_bin))
                         {
@@ -1376,6 +1392,11 @@ namespace AmazFit_Watchface_2
                             //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                             RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
                             //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
+                            RowNew.Cells.Add(new DataGridViewImageCell()
+                            {
+                                Value = loadedImage,
+                                ImageLayout = ZoomType
+                            });
                             RowNew.Cells.Add(new DataGridViewImageCell()
                             {
                                 Value = loadedImage,
@@ -1542,8 +1563,6 @@ namespace AmazFit_Watchface_2
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView_ImagesList.Rows.Clear();
-            dataGridView_Battery_IconSet.Rows.Clear();
-            dataGridView_SPSliced.Rows.Clear();
             Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
@@ -2202,1651 +2221,10 @@ namespace AmazFit_Watchface_2
         }
         
 
-        private void checkBox_Time_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_Time.Checked)
-            {
-                tabControl_Time.Enabled = true;
-                groupBox_AmPm.Enabled = true;
-                groupBox_Delimiter.Enabled = true;
-            }
-            else
-            {
-                tabControl_Time.Enabled = false;
-                groupBox_AmPm.Enabled = false;
-                groupBox_Delimiter.Enabled = false;
-            }
-
-        }
-
-        private void checkBox_AmPm_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_AmPm.Checked)
-            {
-                numericUpDown_AmPm_X.Enabled = true;
-                numericUpDown_AmPm_Y.Enabled = true;
-                comboBox_Image_Am.Enabled = true;
-                comboBox_Image_Pm.Enabled = true;
-
-                label32.Enabled = true;
-                label33.Enabled = true;
-                label34.Enabled = true;
-                label35.Enabled = true;
-            }
-            else
-            {
-                numericUpDown_AmPm_X.Enabled = false;
-                numericUpDown_AmPm_Y.Enabled = false;
-                comboBox_Image_Am.Enabled = false;
-                comboBox_Image_Pm.Enabled = false;
-
-                label32.Enabled = false;
-                label33.Enabled = false;
-                label34.Enabled = false;
-                label35.Enabled = false;
-            }
-        }
-
-        private void checkBox_Hours_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_Hours.Checked)
-            {
-                groupBox_Hours_Tens.Enabled = true;
-                groupBox_Hours_Ones.Enabled = true;
-            }
-            else
-            {
-                groupBox_Hours_Tens.Enabled = false;
-                groupBox_Hours_Ones.Enabled = false;
-            }
-        }
-
-        #region сворачиваем и разварачиваем панели с настройками
-
-        private void button_Background_Click(object sender, EventArgs e)
-        {
-            if (panel_Background.Height == 1)
-            {
-                panel_Background.Height = (int)(30 * currentDPI);
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_Background.Height = 1;
-        }
-
-        private void button_Time_Click(object sender, EventArgs e)
-        {
-            if (panel_Time.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = (int)(330 * currentDPI);
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_Time.Height = 1;
-        }
-
-        private void button_Date_Click(object sender, EventArgs e)
-        {
-            if (panel_Date.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = (int)(240 * currentDPI);
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_Date.Height = 1;
-        }
-
-        private void button_AnalogDate_Click(object sender, EventArgs e)
-        {
-            if (panel_AnalogDate.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = (int)(145 * currentDPI);
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_AnalogDate.Height = 1;
-        }
-
-        private void button_StepsProgress_Click(object sender, EventArgs e)
-        {
-            if (panel_StepsProgress.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = (int)(165 * currentDPI);
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_StepsProgress.Height = 1;
-        }
-
-        private void button_Activity_Click(object sender, EventArgs e)
-        {
-            if (panel_Activity.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = (int)(240 * currentDPI);
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_Activity.Height = 1;
-        }
-
-        private void button_Status_Click(object sender, EventArgs e)
-        {
-            if (panel_Status.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = (int)(82 * currentDPI);
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_Status.Height = 1;
-        }
-
-        private void button_Battery_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = (int)(185 * currentDPI);
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_Battery.Height = 1;
-        }
-
-        private void button_AnalogClock_Click(object sender, EventArgs e)
-        {
-            if (panel_AnalogClock.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = (int)(193 * currentDPI);
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_AnalogClock.Height = 1;
-        }
-
-        private void button_Weather_Click(object sender, EventArgs e)
-        {
-            if (panel_Weather.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = (int)(260 * currentDPI);
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = 1;
-            }
-            else panel_Weather.Height = 1;
-        }
-
-        private void button_Shortcuts_Click(object sender, EventArgs e)
-        {
-            if (panel_Shortcuts.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = (int)(145 * currentDPI);
-                panel_Animation.Height = 1;
-            }
-            else panel_Shortcuts.Height = 1;
-        }
-
-        private void button_Animation_Click(object sender, EventArgs e)
-        {
-            if (panel_Animation.Height == 1)
-            {
-                panel_Background.Height = 1;
-                panel_Time.Height = 1;
-                panel_Date.Height = 1;
-                panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 1;
-                panel_Status.Height = 1;
-                panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1;
-                panel_Shortcuts.Height = 1;
-                panel_Animation.Height = (int)(275 * currentDPI);
-            }
-            else panel_Animation.Height = 1;
-        }
-        #endregion
-
-        #region активируем и деактивируем настройки
-        private void checkBox_Minutes_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Minutes.Checked;
-            groupBox_Minutes_Tens.Enabled = b;
-            groupBox_Minutes_Ones.Enabled = b;
-        }
-
-        private void checkBox_Seconds_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Seconds.Checked;
-            groupBox_Seconds_Tens.Enabled = b;
-            groupBox_Seconds_Ones.Enabled = b;
-        }
-
-        private void checkBox_WeekDay_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_WeekDay.Checked;
-            numericUpDown_WeekDay_X.Enabled = b;
-            numericUpDown_WeekDay_Y.Enabled = b;
-            comboBox_WeekDay_Image.Enabled = b;
-            numericUpDown_WeekDay_Count.Enabled = b;
-
-            label55.Enabled = b;
-            label56.Enabled = b;
-            label57.Enabled = b;
-            label58.Enabled = b;
-        }
-
-        private void checkBox_DOW_IconSet_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_DOW_IconSet.Checked;
-            comboBox_DOW_IconSet_Image.Enabled = b;
-            dataGridView_DOW_IconSet.Enabled = b;
-            label460.Enabled = b;
-        }
-
-        private void checkBox_MonthName_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_MonthName.Checked;
-            numericUpDown_MonthName_X.Enabled = b;
-            numericUpDown_MonthName_Y.Enabled = b;
-            comboBox_MonthName_Image.Enabled = b;
-            numericUpDown_MonthName_Count.Enabled = b;
-
-            label59.Enabled = b;
-            label60.Enabled = b;
-            label61.Enabled = b;
-            label62.Enabled = b;
-        }
-
-        private void checkBox_Date_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Date.Checked;
-            tabControl_Date.Enabled = b;
-            groupBox__WeekDay.Enabled = b;
-            groupBox_WeekDayProgress.Enabled = b;
-            checkBox_TwoDigitsMonth.Enabled = b;
-            checkBox_TwoDigitsDay.Enabled = b;
-        }
-
-        private void checkBox_MonthAndDayD_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_MonthAndDayD.Checked;
-            numericUpDown_MonthAndDayD_StartCorner_X.Enabled = b;
-            numericUpDown_MonthAndDayD_StartCorner_Y.Enabled = b;
-            numericUpDown_MonthAndDayD_EndCorner_X.Enabled = b;
-            numericUpDown_MonthAndDayD_EndCorner_Y.Enabled = b;
-            comboBox_MonthAndDayD_Alignment.Enabled = b;
-            numericUpDown_MonthAndDayD_Spacing.Enabled = b;
-            comboBox_MonthAndDayD_Image.Enabled = b;
-            numericUpDown_MonthAndDayD_Count.Enabled = b;
-
-            label63.Enabled = b;
-            label64.Enabled = b;
-            label65.Enabled = b;
-            label66.Enabled = b;
-            label67.Enabled = b;
-            label68.Enabled = b;
-            label69.Enabled = b;
-            label70.Enabled = b;
-            label71.Enabled = b;
-            label72.Enabled = b;
-        }
-
-        private void checkBox_MonthAndDayM_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_MonthAndDayM.Checked;
-            numericUpDown_MonthAndDayM_StartCorner_X.Enabled = b;
-            numericUpDown_MonthAndDayM_StartCorner_Y.Enabled = b;
-            numericUpDown_MonthAndDayM_EndCorner_X.Enabled = b;
-            numericUpDown_MonthAndDayM_EndCorner_Y.Enabled = b;
-            comboBox_MonthAndDayM_Alignment.Enabled = b;
-            numericUpDown_MonthAndDayM_Spacing.Enabled = b;
-            comboBox_MonthAndDayM_Image.Enabled = b;
-            numericUpDown_MonthAndDayM_Count.Enabled = b;
-
-            label73.Enabled = b;
-            label74.Enabled = b;
-            label75.Enabled = b;
-            label76.Enabled = b;
-            label77.Enabled = b;
-            label78.Enabled = b;
-            label79.Enabled = b;
-            label80.Enabled = b;
-            label81.Enabled = b;
-            label82.Enabled = b;
-        }
-
-        private void checkBox_OneLine_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_OneLine.Checked;
-            numericUpDown_OneLine_StartCorner_X.Enabled = b;
-            numericUpDown_OneLine_StartCorner_Y.Enabled = b;
-            numericUpDown_OneLine_EndCorner_X.Enabled = b;
-            numericUpDown_OneLine_EndCorner_Y.Enabled = b;
-            comboBox_OneLine_Alignment.Enabled = b;
-            numericUpDown_OneLine_Spacing.Enabled = b;
-            comboBox_OneLine_Image.Enabled = b;
-            numericUpDown_OneLine_Count.Enabled = b;
-            comboBox_OneLine_Delimiter.Enabled = b;
-
-            label93.Enabled = b;
-            label94.Enabled = b;
-            label95.Enabled = b;
-            label96.Enabled = b;
-            label97.Enabled = b;
-            label98.Enabled = b;
-            label99.Enabled = b;
-            label100.Enabled = b;
-            label101.Enabled = b;
-            label102.Enabled = b;
-            label103.Enabled = b;
-        }
-
-        private void checkBox_Year_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Year.Checked;
-            numericUpDown_Year_StartCorner_X.Enabled = b;
-            numericUpDown_Year_StartCorner_Y.Enabled = b;
-            numericUpDown_Year_EndCorner_X.Enabled = b;
-            numericUpDown_Year_EndCorner_Y.Enabled = b;
-            comboBox_Year_Alignment2.Enabled = b;
-            numericUpDown_Year_Spacing2.Enabled = b;
-            comboBox_Year_Image1.Enabled = b;
-            numericUpDown_Year_Count.Enabled = b;
-            comboBox_Year_Delimiter.Enabled = b;
-
-            label357.Enabled = b;
-            label358.Enabled = b;
-            label359.Enabled = b;
-            label360.Enabled = b;
-            label361.Enabled = b;
-            label362.Enabled = b;
-            label363.Enabled = b;
-            label364.Enabled = b;
-            label365.Enabled = b;
-            label366.Enabled = b;
-            label367.Enabled = b;
-        }
-
-        private void checkBox_ADDay_ClockHand_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ADDay_ClockHand.Checked;
-            numericUpDown_ADDay_ClockHand_X.Enabled = b;
-            numericUpDown_ADDay_ClockHand_Y.Enabled = b;
-            numericUpDown_ADDay_ClockHand_Offset_X.Enabled = b;
-            numericUpDown_ADDay_ClockHand_Offset_Y.Enabled = b;
-            comboBox_ADDay_ClockHand_Image.Enabled = b;
-            numericUpDown_ADDay_ClockHand_StartAngle.Enabled = b;
-            numericUpDown_ADDay_ClockHand_EndAngle.Enabled = b;
-            label396.Enabled = b;
-            label397.Enabled = b;
-            label398.Enabled = b;
-            label399.Enabled = b;
-            label400.Enabled = b;
-            label401.Enabled = b;
-            label402.Enabled = b;
-        }
-
-        private void checkBox_ADWeekDay_ClockHand_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ADWeekDay_ClockHand.Checked;
-            numericUpDown_ADWeekDay_ClockHand_X.Enabled = b;
-            numericUpDown_ADWeekDay_ClockHand_Y.Enabled = b;
-            numericUpDown_ADWeekDay_ClockHand_Offset_X.Enabled = b;
-            numericUpDown_ADWeekDay_ClockHand_Offset_Y.Enabled = b;
-            comboBox_ADWeekDay_ClockHand_Image.Enabled = b;
-            numericUpDown_ADWeekDay_ClockHand_StartAngle.Enabled = b;
-            numericUpDown_ADWeekDay_ClockHand_EndAngle.Enabled = b;
-            label389.Enabled = b;
-            label390.Enabled = b;
-            label391.Enabled = b;
-            label392.Enabled = b;
-            label393.Enabled = b;
-            label394.Enabled = b;
-            label395.Enabled = b;
-        }
-
-        private void checkBox_ADMonth_ClockHand_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ADMonth_ClockHand.Checked;
-            numericUpDown_ADMonth_ClockHand_X.Enabled = b;
-            numericUpDown_ADMonth_ClockHand_Y.Enabled = b;
-            numericUpDown_ADMonth_ClockHand_Offset_X.Enabled = b;
-            numericUpDown_ADMonth_ClockHand_Offset_Y.Enabled = b;
-            comboBox_ADMonth_ClockHand_Image.Enabled = b;
-            numericUpDown_ADMonth_ClockHand_StartAngle.Enabled = b;
-            numericUpDown_ADMonth_ClockHand_EndAngle.Enabled = b;
-            label382.Enabled = b;
-            label383.Enabled = b;
-            label384.Enabled = b;
-            label385.Enabled = b;
-            label386.Enabled = b;
-            label387.Enabled = b;
-            label388.Enabled = b;
-        }
-
-        private void checkBox_Activity_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Activity.Checked;
-            tabControl_Activity.Enabled = b;
-            comboBox_Activity_NDImage.Enabled = b;
-            label403.Enabled = b;
-        }
-
-        private void checkBox_CircleScale_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_StepsProgress.Checked;
-            numericUpDown_StepsProgress_Center_X.Enabled = b;
-            numericUpDown_StepsProgress_Center_Y.Enabled = b;
-            numericUpDown_StepsProgress_Radius_X.Enabled = b;
-            checkBox_StepsProgress_Image.Enabled = b;
-            comboBox_StepsProgress_Image.Enabled = b;
-            numericUpDown_StepsProgress_ImageX.Enabled = b;
-            numericUpDown_StepsProgress_ImageY.Enabled = b;
-
-            numericUpDown_StepsProgress_Width.Enabled = b;
-            comboBox_StepsProgress_Color.Enabled = b;
-            numericUpDown_StepsProgress_StartAngle.Enabled = b;
-            numericUpDown_StepsProgress_EndAngle.Enabled = b;
-            comboBox_StepsProgress_Flatness.Enabled = b;
-
-            label104.Enabled = b;
-            label105.Enabled = b;
-            label106.Enabled = b;
-            label107.Enabled = b;
-            label108.Enabled = b;
-            label109.Enabled = b;
-            label110.Enabled = b;
-            label111.Enabled = b;
-            label348.Enabled = b;
-            label432.Enabled = b;
-            label433.Enabled = b;
-
-            if (b)
-            {
-                if (checkBox_StepsProgress_Image.Checked)
-                {
-                    comboBox_StepsProgress_Image.Enabled = true;
-                    numericUpDown_StepsProgress_ImageX.Enabled = true;
-                    numericUpDown_StepsProgress_ImageY.Enabled = true;
-                    label432.Enabled = true;
-                    label433.Enabled = true;
-                    comboBox_StepsProgress_Color.Enabled = false;
-                    numericUpDown_StepsProgress_Center_X.Enabled = false;
-                    numericUpDown_StepsProgress_Center_Y.Enabled = false;
-                    label104.Enabled = false;
-                    label105.Enabled = false;
-                    label109.Enabled = false;
-                }
-                else
-                {
-                    comboBox_StepsProgress_Image.Enabled = false;
-                    numericUpDown_StepsProgress_ImageX.Enabled = false;
-                    numericUpDown_StepsProgress_ImageY.Enabled = false;
-                    label432.Enabled = false;
-                    label433.Enabled = false;
-                    comboBox_StepsProgress_Color.Enabled = true;
-                    numericUpDown_StepsProgress_Center_X.Enabled = true;
-                    numericUpDown_StepsProgress_Center_Y.Enabled = true;
-                    label104.Enabled = true;
-                    label105.Enabled = true;
-                    label109.Enabled = true;
-                }
-            }
-        }
-
-        private void checkBox_StepsProgress_Image_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_StepsProgress_Image.Checked)
-            {
-                comboBox_StepsProgress_Image.Enabled = true;
-                numericUpDown_StepsProgress_ImageX.Enabled = true;
-                numericUpDown_StepsProgress_ImageY.Enabled = true;
-                label432.Enabled = true;
-                label433.Enabled = true;
-                comboBox_StepsProgress_Color.Enabled = false;
-                numericUpDown_StepsProgress_Center_X.Enabled = false;
-                numericUpDown_StepsProgress_Center_Y.Enabled = false;
-                label104.Enabled = false;
-                label105.Enabled = false;
-                label109.Enabled = false;
-            }
-            else
-            {
-                comboBox_StepsProgress_Image.Enabled = false;
-                numericUpDown_StepsProgress_ImageX.Enabled = false;
-                numericUpDown_StepsProgress_ImageY.Enabled = false;
-                label432.Enabled = false;
-                label433.Enabled = false;
-                comboBox_StepsProgress_Color.Enabled = true;
-                numericUpDown_StepsProgress_Center_X.Enabled = true;
-                numericUpDown_StepsProgress_Center_Y.Enabled = true;
-                label104.Enabled = true;
-                label105.Enabled = true;
-                label109.Enabled = true;
-            }
-        }
-
-        private void checkBox_StProg_ClockHand_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_StProg_ClockHand.Checked;
-            numericUpDown_StProg_ClockHand_X.Enabled = b;
-            numericUpDown_StProg_ClockHand_Y.Enabled = b;
-            numericUpDown_StProg_ClockHand_Offset_X.Enabled = b;
-            numericUpDown_StProg_ClockHand_Offset_Y.Enabled = b;
-            comboBox_StProg_ClockHand_Image.Enabled = b;
-            numericUpDown_StProg_ClockHand_StartAngle.Enabled = b;
-            numericUpDown_StProg_ClockHand_EndAngle.Enabled = b;
-
-            label375.Enabled = b;
-            label376.Enabled = b;
-            label377.Enabled = b;
-            label378.Enabled = b;
-            label379.Enabled = b;
-            label380.Enabled = b;
-            label381.Enabled = b;
-        }
-
-        private void checkBox_SPSliced_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_SPSliced.Checked;
-            comboBox_SPSliced_Image.Enabled = b;
-            dataGridView_SPSliced.Enabled = b;
-            label404.Enabled = b;
-        }
-
-        private void checkBox_ActivityStar_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityStar.Checked;
-            numericUpDown_ActivityStar_X.Enabled = b;
-            numericUpDown_ActivityStar_Y.Enabled = b;
-            comboBox_ActivityStar_Image.Enabled = b;
-
-            label163.Enabled = b;
-            label164.Enabled = b;
-            label166.Enabled = b;
-            label171.Enabled = b;
-        }
-
-        private void checkBox_ActivitySteps_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivitySteps.Checked;
-            numericUpDown_ActivitySteps_StartCorner_X.Enabled = b;
-            numericUpDown_ActivitySteps_StartCorner_Y.Enabled = b;
-            numericUpDown_ActivitySteps_EndCorner_X.Enabled = b;
-            numericUpDown_ActivitySteps_EndCorner_Y.Enabled = b;
-
-            comboBox_ActivitySteps_Image.Enabled = b;
-            numericUpDown_ActivitySteps_Count.Enabled = b;
-            numericUpDown_ActivitySteps_Spacing.Enabled = b;
-            comboBox_ActivitySteps_Alignment.Enabled = b;
-
-            label122.Enabled = b;
-            label123.Enabled = b;
-            label124.Enabled = b;
-            label125.Enabled = b;
-            label126.Enabled = b;
-            label127.Enabled = b;
-            label128.Enabled = b;
-            label129.Enabled = b;
-            label130.Enabled = b;
-            label131.Enabled = b;
-        }
-
-        private void checkBox_ActivityDistance_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityDistance.Checked;
-            numericUpDown_ActivityDistance_StartCorner_X.Enabled = b;
-            numericUpDown_ActivityDistance_StartCorner_Y.Enabled = b;
-            numericUpDown_ActivityDistance_EndCorner_X.Enabled = b;
-            numericUpDown_ActivityDistance_EndCorner_Y.Enabled = b;
-
-            comboBox_ActivityDistance_Image.Enabled = b;
-            numericUpDown_ActivityDistance_Count.Enabled = b;
-            numericUpDown_ActivityDistance_Spacing.Enabled = b;
-            comboBox_ActivityDistance_Alignment.Enabled = b;
-            comboBox_ActivityDistance_Suffix_km.Enabled = b;
-            comboBox_ActivityDistance_Suffix_ml.Enabled = b;
-            comboBox_ActivityDistance_Decimal.Enabled = b;
-
-            label132.Enabled = b;
-            label133.Enabled = b;
-            label134.Enabled = b;
-            label135.Enabled = b;
-            label136.Enabled = b;
-            label137.Enabled = b;
-            label138.Enabled = b;
-            label139.Enabled = b;
-            label140.Enabled = b;
-            label141.Enabled = b;
-            label172.Enabled = b;
-            label173.Enabled = b;
-            label501.Enabled = b;
-        }
-
-        private void checkBox_ActivityPuls_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityPuls.Checked;
-            numericUpDown_ActivityPuls_StartCorner_X.Enabled = b;
-            numericUpDown_ActivityPuls_StartCorner_Y.Enabled = b;
-            numericUpDown_ActivityPuls_EndCorner_X.Enabled = b;
-            numericUpDown_ActivityPuls_EndCorner_Y.Enabled = b;
-
-            comboBox_ActivityPuls_Image.Enabled = b;
-            numericUpDown_ActivityPuls_Count.Enabled = b;
-            numericUpDown_ActivityPuls_Spacing.Enabled = b;
-            comboBox_ActivityPuls_Alignment.Enabled = b;
-
-            label142.Enabled = b;
-            label143.Enabled = b;
-            label144.Enabled = b;
-            label145.Enabled = b;
-            label146.Enabled = b;
-            label147.Enabled = b;
-            label148.Enabled = b;
-            label149.Enabled = b;
-            label150.Enabled = b;
-            label151.Enabled = b;
-        }
-
-        private void checkBox_ActivityPulse_IconSet_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityPuls_IconSet.Checked;
-            comboBox_ActivityPuls_IconSet_Image.Enabled = b;
-            dataGridView_ActivityPuls_IconSet.Enabled = b;
-            label121.Enabled = b;
-        }
-
-        private void checkBox_ActivityPulsScale_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityPulsScale.Checked;
-            numericUpDown_ActivityPulsScale_Center_X.Enabled = b;
-            numericUpDown_ActivityPulsScale_Center_Y.Enabled = b;
-            numericUpDown_ActivityPulsScale_Radius_X.Enabled = b;
-            checkBox_ActivityPulsScale_Image.Enabled = b;
-            comboBox_ActivityPulsScale_Image.Enabled = b;
-            numericUpDown_ActivityPulsScale_ImageX.Enabled = b;
-            numericUpDown_ActivityPulsScale_ImageY.Enabled = b;
-
-            numericUpDown_ActivityPulsScale_Width.Enabled = b;
-            comboBox_ActivityPulsScale_Color.Enabled = b;
-            numericUpDown_ActivityPulsScale_EndAngle.Enabled = b;
-            numericUpDown_ActivityPulsScale_StartAngle.Enabled = b;
-            comboBox_ActivityPulsScale_Flatness.Enabled = b;
-
-            label417.Enabled = b;
-            label418.Enabled = b;
-            label419.Enabled = b;
-            label420.Enabled = b;
-            label421.Enabled = b;
-            label422.Enabled = b;
-            label423.Enabled = b;
-            label424.Enabled = b;
-            label425.Enabled = b;
-            label430.Enabled = b;
-            label431.Enabled = b;
-
-            if (b)
-            {
-                if (checkBox_ActivityPulsScale_Image.Checked)
-                {
-                    comboBox_ActivityPulsScale_Image.Enabled = true;
-                    numericUpDown_ActivityPulsScale_ImageX.Enabled = true;
-                    numericUpDown_ActivityPulsScale_ImageY.Enabled = true;
-                    label430.Enabled = true;
-                    label431.Enabled = true;
-                    comboBox_ActivityPulsScale_Color.Enabled = false;
-                    numericUpDown_ActivityPulsScale_Center_X.Enabled = false;
-                    numericUpDown_ActivityPulsScale_Center_Y.Enabled = false;
-                    label420.Enabled = false;
-                    label424.Enabled = false;
-                    label425.Enabled = false;
-                }
-                else
-                {
-                    comboBox_ActivityPulsScale_Image.Enabled = false;
-                    numericUpDown_ActivityPulsScale_ImageX.Enabled = false;
-                    numericUpDown_ActivityPulsScale_ImageY.Enabled = false;
-                    label430.Enabled = false;
-                    label431.Enabled = false;
-                    comboBox_ActivityPulsScale_Color.Enabled = true;
-                    numericUpDown_ActivityPulsScale_Center_X.Enabled = true;
-                    numericUpDown_ActivityPulsScale_Center_Y.Enabled = true;
-                    label420.Enabled = true;
-                    label424.Enabled = true;
-                    label425.Enabled = true;
-                }
-            }
-        }
-
-        private void checkBox_Pulse_ClockHand_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Pulse_ClockHand.Checked;
-            numericUpDown_Pulse_ClockHand_X.Enabled = b;
-            numericUpDown_Pulse_ClockHand_Y.Enabled = b;
-            numericUpDown_Pulse_ClockHand_Offset_X.Enabled = b;
-            numericUpDown_Pulse_ClockHand_Offset_Y.Enabled = b;
-            comboBox_Pulse_ClockHand_Image.Enabled = b;
-            numericUpDown_Pulse_ClockHand_StartAngle.Enabled = b;
-            numericUpDown_Pulse_ClockHand_EndAngle.Enabled = b;
-            label466.Enabled = b;
-            label467.Enabled = b;
-            label468.Enabled = b;
-            label469.Enabled = b;
-            label470.Enabled = b;
-            label471.Enabled = b;
-            label472.Enabled = b;
-        }
-
-        private void checkBox_ActivityPulsScale_Image_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_ActivityPulsScale_Image.Checked)
-            {
-                comboBox_ActivityPulsScale_Image.Enabled = true;
-                numericUpDown_ActivityPulsScale_ImageX.Enabled = true;
-                numericUpDown_ActivityPulsScale_ImageY.Enabled = true;
-                label430.Enabled = true;
-                label431.Enabled = true;
-                comboBox_ActivityPulsScale_Color.Enabled = false;
-                numericUpDown_ActivityPulsScale_Center_X.Enabled = false;
-                numericUpDown_ActivityPulsScale_Center_Y.Enabled = false;
-                label420.Enabled = false;
-                label424.Enabled = false;
-                label425.Enabled = false;
-            }
-            else
-            {
-                comboBox_ActivityPulsScale_Image.Enabled = false;
-                numericUpDown_ActivityPulsScale_ImageX.Enabled = false;
-                numericUpDown_ActivityPulsScale_ImageY.Enabled = false;
-                label430.Enabled = false;
-                label431.Enabled = false;
-                comboBox_ActivityPulsScale_Color.Enabled = true;
-                numericUpDown_ActivityPulsScale_Center_X.Enabled = true;
-                numericUpDown_ActivityPulsScale_Center_Y.Enabled = true;
-                label420.Enabled = true;
-                label424.Enabled = true;
-                label425.Enabled = true;
-            }
-        }
-
-        private void checkBox_ActivityCalories_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityCalories.Checked;
-            numericUpDown_ActivityCalories_StartCorner_X.Enabled = b;
-            numericUpDown_ActivityCalories_StartCorner_Y.Enabled = b;
-            numericUpDown_ActivityCalories_EndCorner_X.Enabled = b;
-            numericUpDown_ActivityCalories_EndCorner_Y.Enabled = b;
-
-            comboBox_ActivityCalories_Image.Enabled = b;
-            numericUpDown_ActivityCalories_Count.Enabled = b;
-            numericUpDown_ActivityCalories_Spacing.Enabled = b;
-            comboBox_ActivityCalories_Alignment.Enabled = b;
-
-            label152.Enabled = b;
-            label153.Enabled = b;
-            label154.Enabled = b;
-            label155.Enabled = b;
-            label156.Enabled = b;
-            label157.Enabled = b;
-            label158.Enabled = b;
-            label159.Enabled = b;
-            label160.Enabled = b;
-            label161.Enabled = b;
-        }
-
-        private void checkBox_ActivityCaloriesScale_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityCaloriesScale.Checked;
-            numericUpDown_ActivityCaloriesScale_Center_X.Enabled = b;
-            numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = b;
-            numericUpDown_ActivityCaloriesScale_Radius_X.Enabled = b;
-            checkBox_ActivityCaloriesScale_Image.Enabled = b;
-            comboBox_ActivityCaloriesScale_Image.Enabled = b;
-            numericUpDown_ActivityCaloriesScale_ImageX.Enabled = b;
-            numericUpDown_ActivityCaloriesScale_ImageY.Enabled = b;
-
-            numericUpDown_ActivityCaloriesScale_Width.Enabled = b;
-            comboBox_ActivityCaloriesScale_Color.Enabled = b;
-            numericUpDown_ActivityCaloriesScale_EndAngle.Enabled = b;
-            numericUpDown_ActivityCaloriesScale_StartAngle.Enabled = b;
-            comboBox_ActivityCaloriesScale_Flatness.Enabled = b;
-
-            label112.Enabled = b;
-            label113.Enabled = b;
-            label114.Enabled = b;
-            label115.Enabled = b;
-            label116.Enabled = b;
-            label117.Enabled = b;
-            label118.Enabled = b;
-            label119.Enabled = b;
-            label120.Enabled = b;
-            label426.Enabled = b;
-            label427.Enabled = b;
-
-            if (b)
-            {
-                if (checkBox_ActivityCaloriesScale_Image.Checked)
-                {
-                    comboBox_ActivityCaloriesScale_Image.Enabled = true;
-                    numericUpDown_ActivityCaloriesScale_ImageX.Enabled = true;
-                    numericUpDown_ActivityCaloriesScale_ImageY.Enabled = true;
-                    label426.Enabled = true;
-                    label427.Enabled = true;
-                    comboBox_ActivityCaloriesScale_Color.Enabled = false;
-                    numericUpDown_ActivityCaloriesScale_Center_X.Enabled = false;
-                    numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = false;
-                    label115.Enabled = false;
-                    label119.Enabled = false;
-                    label120.Enabled = false;
-                }
-                else
-                {
-                    comboBox_ActivityCaloriesScale_Image.Enabled = false;
-                    numericUpDown_ActivityCaloriesScale_ImageX.Enabled = false;
-                    numericUpDown_ActivityCaloriesScale_ImageY.Enabled = false;
-                    label426.Enabled = false;
-                    label427.Enabled = false;
-                    comboBox_ActivityCaloriesScale_Color.Enabled = true;
-                    numericUpDown_ActivityCaloriesScale_Center_X.Enabled = true;
-                    numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = true;
-                    label115.Enabled = true;
-                    label119.Enabled = true;
-                    label120.Enabled = true;
-                }
-            }
-        }
-
-        private void checkBox_Calories_ClockHand_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Calories_ClockHand.Checked;
-            numericUpDown_Calories_ClockHand_X.Enabled = b;
-            numericUpDown_Calories_ClockHand_Y.Enabled = b;
-            numericUpDown_Calories_ClockHand_Offset_X.Enabled = b;
-            numericUpDown_Calories_ClockHand_Offset_Y.Enabled = b;
-            comboBox_Calories_ClockHand_Image.Enabled = b;
-            numericUpDown_Calories_ClockHand_StartAngle.Enabled = b;
-            numericUpDown_Calories_ClockHand_EndAngle.Enabled = b;
-            label458.Enabled = b;
-            label459.Enabled = b;
-            label461.Enabled = b;
-            label462.Enabled = b;
-            label463.Enabled = b;
-            label464.Enabled = b;
-            label465.Enabled = b;
-        }
-
-        private void checkBox_ActivityCaloriesScale_Image_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_ActivityCaloriesScale_Image.Checked)
-            {
-                comboBox_ActivityCaloriesScale_Image.Enabled = true;
-                numericUpDown_ActivityCaloriesScale_ImageX.Enabled = true;
-                numericUpDown_ActivityCaloriesScale_ImageY.Enabled = true;
-                label426.Enabled = true;
-                label427.Enabled = true;
-                comboBox_ActivityCaloriesScale_Color.Enabled = false;
-                numericUpDown_ActivityCaloriesScale_Center_X.Enabled = false;
-                numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = false;
-                label115.Enabled = false;
-                label119.Enabled = false;
-                label120.Enabled = false;
-            }
-            else
-            {
-                comboBox_ActivityCaloriesScale_Image.Enabled = false;
-                numericUpDown_ActivityCaloriesScale_ImageX.Enabled = false;
-                numericUpDown_ActivityCaloriesScale_ImageY.Enabled = false;
-                label426.Enabled = false;
-                label427.Enabled = false;
-                comboBox_ActivityCaloriesScale_Color.Enabled = true;
-                numericUpDown_ActivityCaloriesScale_Center_X.Enabled = true;
-                numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = true;
-                label115.Enabled = true;
-                label119.Enabled = true;
-                label120.Enabled = true;
-            }
-        }
-
-        private void checkBox_ActivityStepsGoal_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityStepsGoal.Checked;
-            numericUpDown_ActivityStepsGoal_StartCorner_X.Enabled = b;
-            numericUpDown_ActivityStepsGoal_StartCorner_Y.Enabled = b;
-            numericUpDown_ActivityStepsGoal_EndCorner_X.Enabled = b;
-            numericUpDown_ActivityStepsGoal_EndCorner_Y.Enabled = b;
-
-            comboBox_ActivityStepsGoal_Image.Enabled = b;
-            numericUpDown_ActivityStepsGoal_Count.Enabled = b;
-            numericUpDown_ActivityStepsGoal_Spacing.Enabled = b;
-            comboBox_ActivityStepsGoal_Alignment.Enabled = b;
-
-            label491.Enabled = b;
-            label492.Enabled = b;
-            label493.Enabled = b;
-            label494.Enabled = b;
-            label495.Enabled = b;
-            label496.Enabled = b;
-            label497.Enabled = b;
-            label498.Enabled = b;
-            label499.Enabled = b;
-            label500.Enabled = b;
-        }
-
-        private void checkBox_DND_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_DND.Checked;
-            numericUpDown_DND_X.Enabled = b;
-            numericUpDown_DND_Y.Enabled = b;
-            comboBox_DND_On.Enabled = b;
-            comboBox_DND_Off.Enabled = b;
-
-            label180.Enabled = b;
-            label181.Enabled = b;
-            label182.Enabled = b;
-            label183.Enabled = b;
-        }
-
-        private void checkBox_Lock_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Lock.Checked;
-            numericUpDown_Lock_X.Enabled = b;
-            numericUpDown_Lock_Y.Enabled = b;
-            comboBox_Lock_On.Enabled = b;
-            comboBox_Lock_Off.Enabled = b;
-
-            label176.Enabled = b;
-            label177.Enabled = b;
-            label178.Enabled = b;
-            label179.Enabled = b;
-        }
-
-        private void checkBox_Alarm_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Alarm.Checked;
-            numericUpDown_Alarm_X.Enabled = b;
-            numericUpDown_Alarm_Y.Enabled = b;
-            comboBox_Alarm_On.Enabled = b;
-            comboBox_Alarm_Off.Enabled = b;
-
-            label170.Enabled = b;
-            label175.Enabled = b;
-            label174.Enabled = b;
-            label169.Enabled = b;
-        }
-
-        private void checkBox_Bluetooth_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Bluetooth.Checked;
-            numericUpDown_Bluetooth_X.Enabled = b;
-            numericUpDown_Bluetooth_Y.Enabled = b;
-            comboBox_Bluetooth_On.Enabled = b;
-            comboBox_Bluetooth_Off.Enabled = b;
-
-            label162.Enabled = b;
-            label165.Enabled = b;
-            label167.Enabled = b;
-            label168.Enabled = b;
-        }
-
-        private void checkBox_Battery_CheckedChanged(object sender, EventArgs e)
-        {
-            tabControl4.Enabled = checkBox_Battery.Checked;
-        }
-
-        private void checkBox_Battery_Text_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Battery_Text.Checked;
-            numericUpDown_Battery_Text_StartCorner_X.Enabled = b;
-            numericUpDown_Battery_Text_StartCorner_Y.Enabled = b;
-            numericUpDown_Battery_Text_EndCorner_X.Enabled = b;
-            numericUpDown_Battery_Text_EndCorner_Y.Enabled = b;
-            comboBox_Battery_Text_Image.Enabled = b;
-            numericUpDown_Battery_Text_Count.Enabled = b;
-            numericUpDown_Battery_Text_Spacing.Enabled = b;
-            comboBox_Battery_Text_Alignment.Enabled = b;
-
-            label184.Enabled = b;
-            label185.Enabled = b;
-            label186.Enabled = b;
-            label187.Enabled = b;
-            label188.Enabled = b;
-            label189.Enabled = b;
-            label190.Enabled = b;
-            label191.Enabled = b;
-            label192.Enabled = b;
-            label193.Enabled = b;
-        }
-
-        private void checkBox_Battery_Percent_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Battery_Percent.Checked;
-            comboBox_Battery_Percent_Image.Enabled = b;
-            numericUpDown_Battery_Percent_X.Enabled = b;
-            numericUpDown_Battery_Percent_Y.Enabled = b;
-
-            label300.Enabled = b;
-            label301.Enabled = b;
-            label302.Enabled = b;
-            label303.Enabled = b;
-        }
-
-        private void checkBox_Battery_Img_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Battery_Img.Checked;
-            numericUpDown_Battery_Img_Count.Enabled = b;
-            comboBox_Battery_Img_Image.Enabled = b;
-            numericUpDown_Battery_Img_X.Enabled = b;
-            numericUpDown_Battery_Img_Y.Enabled = b;
-
-            label194.Enabled = b;
-            label195.Enabled = b;
-            label196.Enabled = b;
-            label197.Enabled = b;
-            label198.Enabled = b;
-        }
-
-        private void checkBox_Battery_Scale_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Battery_Scale.Checked;
-            numericUpDown_Battery_Scale_Center_X.Enabled = b;
-            numericUpDown_Battery_Scale_Center_Y.Enabled = b;
-            numericUpDown_Battery_Scale_Radius_X.Enabled = b;
-            checkBox_Battery_Scale_Image.Enabled = b;
-            comboBox_Battery_Scale_Image.Enabled = b;
-            numericUpDown_Battery_Scale_ImageX.Enabled = b;
-            numericUpDown_Battery_Scale_ImageY.Enabled = b;
-
-            numericUpDown_Battery_Scale_Width.Enabled = b;
-            comboBox_Battery_Scale_Color.Enabled = b;
-            numericUpDown_Battery_Scale_EndAngle.Enabled = b;
-            numericUpDown_Battery_Scale_StartAngle.Enabled = b;
-            comboBox_Battery_Flatness.Enabled = b;
-
-            label199.Enabled = b;
-            label200.Enabled = b;
-            label201.Enabled = b;
-            label202.Enabled = b;
-            label203.Enabled = b;
-            label204.Enabled = b;
-            label205.Enabled = b;
-            label206.Enabled = b;
-            label347.Enabled = b;
-            label428.Enabled = b;
-            label429.Enabled = b;
-
-            if (b)
-            {
-                if (checkBox_Battery_Scale_Image.Checked)
-                {
-                    comboBox_Battery_Scale_Image.Enabled = true;
-                    numericUpDown_Battery_Scale_ImageX.Enabled = true;
-                    numericUpDown_Battery_Scale_ImageY.Enabled = true;
-                    label428.Enabled = true;
-                    label429.Enabled = true;
-                    comboBox_Battery_Scale_Color.Enabled = false;
-                    numericUpDown_Battery_Scale_Center_X.Enabled = false;
-                    numericUpDown_Battery_Scale_Center_Y.Enabled = false;
-                    label201.Enabled = false;
-                    label205.Enabled = false;
-                    label206.Enabled = false;
-                }
-                else
-                {
-                    comboBox_Battery_Scale_Image.Enabled = false;
-                    numericUpDown_Battery_Scale_ImageX.Enabled = false;
-                    numericUpDown_Battery_Scale_ImageY.Enabled = false;
-                    label428.Enabled = false;
-                    label429.Enabled = false;
-                    comboBox_ActivityCaloriesScale_Color.Enabled = true;
-                    numericUpDown_Battery_Scale_Center_X.Enabled = true;
-                    numericUpDown_Battery_Scale_Center_Y.Enabled = true;
-                    label115.Enabled = true;
-                    label205.Enabled = true;
-                    label206.Enabled = true;
-                }
-            }
-        }
-
-        private void checkBox_Battery_Scale_Image_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_Battery_Scale_Image.Checked)
-            {
-                comboBox_Battery_Scale_Image.Enabled = true;
-                numericUpDown_Battery_Scale_ImageX.Enabled = true;
-                numericUpDown_Battery_Scale_ImageY.Enabled = true;
-                label428.Enabled = true;
-                label429.Enabled = true;
-                comboBox_Battery_Scale_Color.Enabled = false;
-                numericUpDown_Battery_Scale_Center_X.Enabled = false;
-                numericUpDown_Battery_Scale_Center_Y.Enabled = false;
-                label201.Enabled = false;
-                label205.Enabled = false;
-                label206.Enabled = false;
-            }
-            else
-            {
-                comboBox_Battery_Scale_Image.Enabled = false;
-                numericUpDown_Battery_Scale_ImageX.Enabled = false;
-                numericUpDown_Battery_Scale_ImageY.Enabled = false;
-                label428.Enabled = false;
-                label429.Enabled = false;
-                comboBox_Battery_Scale_Color.Enabled = true;
-                numericUpDown_Battery_Scale_Center_X.Enabled = true;
-                numericUpDown_Battery_Scale_Center_Y.Enabled = true;
-                label201.Enabled = true;
-                label205.Enabled = true;
-                label206.Enabled = true;
-            }
-        }
-
-        private void checkBox_Battery_ClockHand_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Battery_ClockHand.Checked;
-            numericUpDown_Battery_ClockHand_X.Enabled = b;
-            numericUpDown_Battery_ClockHand_Y.Enabled = b;
-            numericUpDown_Battery_ClockHand_Offset_X.Enabled = b;
-            numericUpDown_Battery_ClockHand_Offset_Y.Enabled = b;
-            comboBox_Battery_ClockHand_Image.Enabled = b;
-            numericUpDown_Battery_ClockHand_StartAngle.Enabled = b;
-            numericUpDown_Battery_ClockHand_EndAngle.Enabled = b;
-            label368.Enabled = b;
-            label369.Enabled = b;
-            label370.Enabled = b;
-            label371.Enabled = b;
-            label372.Enabled = b;
-            label373.Enabled = b;
-            label374.Enabled = b;
-        }
-
-        private void checkBox_Battery_IconSet_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Battery_IconSet.Checked;
-            comboBox_Battery_IconSet_Image.Enabled = b;
-            dataGridView_Battery_IconSet.Enabled = b;
-            label405.Enabled = b;
-        }
-
-        private void checkBox_AnalogClock_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_AnalogClock.Checked;
-            //groupBox_AnalogClock_Hour.Enabled = b;
-            //groupBox_AnalogClock_Min.Enabled = b;
-            //groupBox_AnalogClock_Sec.Enabled = b;
-            tabControl_AnalogClock.Enabled = b;
-        }
-
-        private void checkBox_HourCenterImage_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_HourCenterImage.Checked;
-            numericUpDown_HourCenterImage_X.Enabled = b;
-            numericUpDown_HourCenterImage_Y.Enabled = b;
-            comboBox_HourCenterImage_Image.Enabled = b;
-
-            label310.Enabled = b;
-            label311.Enabled = b;
-            label312.Enabled = b;
-        }
-
-        private void checkBox_MinCenterImage_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_MinCenterImage.Checked;
-            numericUpDown_MinCenterImage_X.Enabled = b;
-            numericUpDown_MinCenterImage_Y.Enabled = b;
-            comboBox_MinCenterImage_Image.Enabled = b;
-
-            label307.Enabled = b;
-            label308.Enabled = b;
-            label309.Enabled = b;
-        }
-
-        private void checkBox_SecCenterImage_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_SecCenterImage.Checked;
-            numericUpDown_SecCenterImage_X.Enabled = b;
-            numericUpDown_SecCenterImage_Y.Enabled = b;
-            comboBox_SecCenterImage_Image.Enabled = b;
-
-            label304.Enabled = b;
-            label305.Enabled = b;
-            label306.Enabled = b;
-        }
-
-        private void checkBox_AnalogClock_Sec_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_AnalogClock_Sec.Checked;
-            comboBox_AnalogClock_Sec_Image.Enabled = b;
-            numericUpDown_AnalogClock_Sec_X.Enabled = b;
-            numericUpDown_AnalogClock_Sec_Y.Enabled = b;
-            numericUpDown_AnalogClock_Sec_Offset_X.Enabled = b;
-            numericUpDown_AnalogClock_Sec_Offset_Y.Enabled = b;
-
-            label210.Enabled = b;
-            label211.Enabled = b;
-            label212.Enabled = b;
-            label353.Enabled = b;
-            label354.Enabled = b;
-        }
-
-        private void checkBox_AnalogClock_Min_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_AnalogClock_Min.Checked;
-            comboBox_AnalogClock_Min_Image.Enabled = b;
-            numericUpDown_AnalogClock_Min_X.Enabled = b;
-            numericUpDown_AnalogClock_Min_Y.Enabled = b;
-            numericUpDown_AnalogClock_Min_Offset_X.Enabled = b;
-            numericUpDown_AnalogClock_Min_Offset_Y.Enabled = b;
-
-            label207.Enabled = b;
-            label208.Enabled = b;
-            label209.Enabled = b;
-            label351.Enabled = b;
-            label352.Enabled = b;
-        }
-
-        private void checkBox_AnalogClock_Hour_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_AnalogClock_Hour.Checked;
-            comboBox_AnalogClock_Hour_Image.Enabled = b;
-            numericUpDown_AnalogClock_Hour_X.Enabled = b;
-            numericUpDown_AnalogClock_Hour_Y.Enabled = b;
-            numericUpDown_AnalogClock_Hour_Offset_X.Enabled = b;
-            numericUpDown_AnalogClock_Hour_Offset_Y.Enabled = b;
-
-            label215.Enabled = b;
-            label216.Enabled = b;
-            label217.Enabled = b;
-            label349.Enabled = b;
-            label350.Enabled = b;
-        }
-
-        private void checkBox_Weather_Text_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Weather_Text.Checked;
-            numericUpDown_Weather_Text_StartCorner_X.Enabled = b;
-            numericUpDown_Weather_Text_StartCorner_Y.Enabled = b;
-            numericUpDown_Weather_Text_EndCorner_X.Enabled = b;
-            numericUpDown_Weather_Text_EndCorner_Y.Enabled = b;
-            //comboBox_Weather_Text_MinusImage.Enabled = b;
-            //comboBox_Weather_Text_DegImage.Enabled = b;
-            //comboBox_Weather_Text_NDImage.Enabled = b;
-            comboBox_Weather_Text_Image.Enabled = b;
-            comboBox_Weather_Text_Alignment.Enabled = b;
-            numericUpDown_Weather_Text_Spacing.Enabled = b;
-            numericUpDown_Weather_Text_Count.Enabled = b;
-
-            label270.Enabled = b;
-            label271.Enabled = b;
-            label272.Enabled = b;
-            label273.Enabled = b;
-            label274.Enabled = b;
-            label275.Enabled = b;
-            label276.Enabled = b;
-            label277.Enabled = b;
-            label278.Enabled = b;
-            label279.Enabled = b;
-            //label284.Enabled = b;
-            //label285.Enabled = b;
-            //label286.Enabled = b;
-
-            if ((checkBox_Weather_Text.Checked) || (checkBox_Weather_Day.Checked) || (checkBox_Weather_Night.Checked))
-            {
-                groupBox_Symbols.Enabled = true;
-            }
-            else
-            {
-                groupBox_Symbols.Enabled = false;
-            }
-        }
-
-        private void checkBox_Weather_Icon_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Weather_Icon.Checked;
-            numericUpDown_Weather_Icon_X.Enabled = b;
-            numericUpDown_Weather_Icon_Y.Enabled = b;
-            numericUpDown_Weather_Icon_Count.Enabled = b;
-            comboBox_Weather_Icon_NDImage.Enabled = b;
-            comboBox_Weather_Icon_Image.Enabled = b;
-
-            label280.Enabled = b;
-            label281.Enabled = b;
-            label282.Enabled = b;
-            label283.Enabled = b;
-            label287.Enabled = b;
-        }
-
-        private void checkBox_Weather_Day_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Weather_Day.Checked;
-            numericUpDown_Weather_Day_StartCorner_X.Enabled = b;
-            numericUpDown_Weather_Day_StartCorner_Y.Enabled = b;
-            numericUpDown_Weather_Day_EndCorner_X.Enabled = b;
-            numericUpDown_Weather_Day_EndCorner_Y.Enabled = b;
-            //comboBox_Weather_Text_MinusImage.Enabled = b;
-            //comboBox_Weather_Text_DegImage.Enabled = b;
-            //comboBox_Weather_Text_NDImage.Enabled = b;
-            comboBox_Weather_Day_Image.Enabled = b;
-            comboBox_Weather_Day_Alignment.Enabled = b;
-            numericUpDown_Weather_Day_Spacing.Enabled = b;
-            numericUpDown_Weather_Day_Count.Enabled = b;
-
-            label289.Enabled = b;
-            label290.Enabled = b;
-            label291.Enabled = b;
-            label292.Enabled = b;
-            label293.Enabled = b;
-            label294.Enabled = b;
-            label295.Enabled = b;
-            label296.Enabled = b;
-            label297.Enabled = b;
-            label298.Enabled = b;
-
-            checkBox_Weather_Night.Checked = b;
-
-            if ((checkBox_Weather_Text.Checked) || (checkBox_Weather_Day.Checked) || (checkBox_Weather_Night.Checked))
-            {
-                groupBox_Symbols.Enabled = true;
-            }
-            else
-            {
-                groupBox_Symbols.Enabled = false;
-            }
-        }
-
-        private void checkBox_Weather_Night_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Weather_Night.Checked;
-            numericUpDown_Weather_Night_StartCorner_X.Enabled = b;
-            numericUpDown_Weather_Night_StartCorner_Y.Enabled = b;
-            numericUpDown_Weather_Night_EndCorner_X.Enabled = b;
-            numericUpDown_Weather_Night_EndCorner_Y.Enabled = b;
-            //comboBox_Weather_Text_MinusImage.Enabled = b;
-            //comboBox_Weather_Text_DegImage.Enabled = b;
-            //comboBox_Weather_Text_NDImage.Enabled = b;
-            comboBox_Weather_Night_Image.Enabled = b;
-            comboBox_Weather_Night_Alignment.Enabled = b;
-            numericUpDown_Weather_Night_Spacing.Enabled = b;
-            numericUpDown_Weather_Night_Count.Enabled = b;
-
-            label313.Enabled = b;
-            label314.Enabled = b;
-            label315.Enabled = b;
-            label316.Enabled = b;
-            label317.Enabled = b;
-            label318.Enabled = b;
-            label319.Enabled = b;
-            label320.Enabled = b;
-            label321.Enabled = b;
-            label322.Enabled = b;
-
-            checkBox_Weather_Day.Checked = b;
-
-            if ((checkBox_Weather_Text.Checked) || (checkBox_Weather_Day.Checked) || (checkBox_Weather_Night.Checked))
-            {
-                groupBox_Symbols.Enabled = true;
-            }
-            else
-            {
-                groupBox_Symbols.Enabled = false;
-            }
-        }
-
-        private void checkBox_Shortcuts_CheckedChanged(object sender, EventArgs e)
-        {
-            tabControl_Shortcuts.Enabled = checkBox_Shortcuts.Checked;
-        }
-
-        private void checkBox_Shortcuts_Steps_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Shortcuts_Steps.Checked;
-            numericUpDown_Shortcuts_Steps_X.Enabled = b;
-            numericUpDown_Shortcuts_Steps_Y.Enabled = b;
-            numericUpDown_Shortcuts_Steps_Width.Enabled = b;
-            numericUpDown_Shortcuts_Steps_Height.Enabled = b;
-
-            label435.Enabled = b;
-            label438.Enabled = b;
-            label439.Enabled = b;
-            label440.Enabled = b;
-            label442.Enabled = b;
-            label443.Enabled = b;
-
-        }
-
-        private void checkBox_Shortcuts_Puls_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Shortcuts_Puls.Checked;
-            numericUpDown_Shortcuts_Puls_X.Enabled = b;
-            numericUpDown_Shortcuts_Puls_Y.Enabled = b;
-            numericUpDown_Shortcuts_Puls_Width.Enabled = b;
-            numericUpDown_Shortcuts_Puls_Height.Enabled = b;
-
-            label434.Enabled = b;
-            label436.Enabled = b;
-            label437.Enabled = b;
-            label441.Enabled = b;
-            label444.Enabled = b;
-            label445.Enabled = b;
-        }
-
-        private void checkBox_Shortcuts_Weather_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Shortcuts_Weather.Checked;
-            numericUpDown_Shortcuts_Weather_X.Enabled = b;
-            numericUpDown_Shortcuts_Weather_Y.Enabled = b;
-            numericUpDown_Shortcuts_Weather_Width.Enabled = b;
-            numericUpDown_Shortcuts_Weather_Height.Enabled = b;
-
-            label446.Enabled = b;
-            label447.Enabled = b;
-            label448.Enabled = b;
-            label449.Enabled = b;
-            label450.Enabled = b;
-            label451.Enabled = b;
-        }
-
-        private void checkBox_Shortcuts_Energy_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Shortcuts_Energy.Checked;
-            numericUpDown_Shortcuts_Energy_X.Enabled = b;
-            numericUpDown_Shortcuts_Energy_Y.Enabled = b;
-            numericUpDown_Shortcuts_Energy_Width.Enabled = b;
-            numericUpDown_Shortcuts_Energy_Height.Enabled = b;
-
-            label452.Enabled = b;
-            label453.Enabled = b;
-            label454.Enabled = b;
-            label455.Enabled = b;
-            label456.Enabled = b;
-            label457.Enabled = b;
-        }
-
-        private void checkBox_Animation_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_Animation.Checked;
-            tabControl_Animation.Enabled = b;
-            if (checkBox_Animation.Checked)
-            {
-                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
-                else button_ShowAnimation.Enabled = false;
-            }
-            else button_ShowAnimation.Enabled = false;
-        }
-
-        private void checkBox_StaticAnimation_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_StaticAnimation.Checked;
-            numericUpDown_StaticAnimation_X.Enabled = b;
-            numericUpDown_StaticAnimation_Y.Enabled = b;
-            comboBox_StaticAnimation_Image.Enabled = b;
-            numericUpDown_StaticAnimation_Count.Enabled = b;
-
-            numericUpDown_StaticAnimation_CyclesCount.Enabled = b;
-            numericUpDown_StaticAnimation_SpeedAnimation.Enabled = b;
-            numericUpDown_StaticAnimation_TimeAnimation.Enabled = b;
-            numericUpDown_StaticAnimation_Pause.Enabled = b;
-
-            label411.Enabled = b;
-            label416.Enabled = b;
-            label473.Enabled = b;
-            label474.Enabled = b;
-            label475.Enabled = b;
-            label476.Enabled = b;
-            label477.Enabled = b;
-            label478.Enabled = b;
-            label479.Enabled = b;
-
-            if (checkBox_Animation.Checked)
-            {
-                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
-                else button_ShowAnimation.Enabled = false;
-            }
-            else button_ShowAnimation.Enabled = false;
-        }
-
-        private void checkBox_MotiomAnimation_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_MotiomAnimation.Checked;
-            comboBox_MotiomAnimation_Image.Enabled = b;
-            dataGridView_MotiomAnimation.Enabled = b;
-            radioButton_MotiomAnimation_StartCoordinates.Enabled = b;
-            radioButton_MotiomAnimation_EndCoordinates.Enabled = b;
-            numericUpDown_MotiomAnimation_StartCoordinates_X.Enabled = b;
-            numericUpDown_MotiomAnimation_StartCoordinates_Y.Enabled = b;
-            numericUpDown_MotiomAnimation_EndCoordinates_X.Enabled = b;
-            numericUpDown_MotiomAnimation_EndCoordinates_Y.Enabled = b;
-
-            groupBox_MotiomAnimation.Enabled = b;
-
-            label480.Enabled = b;
-            label481.Enabled = b;
-            label482.Enabled = b;
-            label484.Enabled = b;
-            label485.Enabled = b;
-
-            if (checkBox_Animation.Checked)
-            {
-                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
-                else button_ShowAnimation.Enabled = false;
-            }
-            else button_ShowAnimation.Enabled = false;
-        }
-        #endregion
-
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)(sender);
-            //int i = 0;
-            //if(Int32.TryParse(comboBox.Text, out i))
-            //{
-                //try
-                //{
-                //    using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
-                //    {
-                //        pictureBox1.Image = Image.FromStream(stream);
-                //        timer1.Enabled = true;
-                //    }
-                //}
-                //catch { }
-            //}
-            //pictureBox1.Image = null;
+            
             JSON_write();
             PreviewImage();
 
@@ -3871,30 +2249,6 @@ namespace AmazFit_Watchface_2
                         button_CreatePreview.Visible = false;
                     }
                 }
-            }
-        }
-
-        private void checkBox_Delimiter_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_Delimiter.Checked)
-            {
-                numericUpDown_Delimiter_X.Enabled = true;
-                numericUpDown_Delimiter_Y.Enabled = true;
-                comboBox_Delimiter_Image.Enabled = true;
-
-                label37.Enabled = true;
-                label39.Enabled = true;
-                label38.Enabled = true;
-            }
-            else
-            {
-                numericUpDown_Delimiter_X.Enabled = false;
-                numericUpDown_Delimiter_Y.Enabled = false;
-                comboBox_Delimiter_Image.Enabled = false;
-
-                label37.Enabled = false;
-                label39.Enabled = false;
-                label38.Enabled = false;
             }
         }
 
@@ -4399,53 +2753,6 @@ namespace AmazFit_Watchface_2
                 dataGridView_ImagesList.DefaultCellStyle.ForeColor = Color.Black;
             }
         }
-
-        private void comboBox_StepsProgress_Color_Click(object sender, EventArgs e)
-        {
-            if (colorDialog_StepsProgress.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка цвета формы
-            comboBox_StepsProgress_Color.BackColor = colorDialog_StepsProgress.Color; PreviewImage();
-            JSON_write();
-            PreviewImage();
-        }
-        
-        private void numericUpDown_StepsProgress_Radius_X_ValueChanged(object sender, EventArgs e)
-        {
-            numericUpDown_StepsProgress_Radius_Y.Value = numericUpDown_StepsProgress_Radius_X.Value;
-            PreviewImage();
-        }
-        
-        private void comboBox_Battery_Scale_Color_Click(object sender, EventArgs e)
-        {
-            if (colorDialog_Battery.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка цвета формы
-            comboBox_Battery_Scale_Color.BackColor = colorDialog_Battery.Color;
-            JSON_write();
-            PreviewImage();
-        }
-
-        private void comboBox_ActivityPulsScale_Color_Click(object sender, EventArgs e)
-        {
-            if (colorDialog_Pulse.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка цвета формы
-            comboBox_ActivityPulsScale_Color.BackColor = colorDialog_Pulse.Color;
-            JSON_write();
-            PreviewImage();
-        }
-
-        private void comboBox_ActivityCaloriesScale_Color_Click(object sender, EventArgs e)
-        {
-            if (colorDialog_Calories.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка цвета формы
-            comboBox_ActivityCaloriesScale_Color.BackColor = colorDialog_Calories.Color;
-            JSON_write();
-            PreviewImage();
-        }
-
 
         private void pictureBox_Preview_DoubleClick(object sender, EventArgs e)
         {
@@ -5481,12 +3788,6 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
-        private void numericUpDown_Battery_Scale_Radius_X_ValueChanged(object sender, EventArgs e)
-        {
-            numericUpDown_Battery_Scale_Radius_Y.Value = numericUpDown_Battery_Scale_Radius_X.Value;
-            PreviewImage();
-        }
-
         private void button_TextToJson_Click(object sender, EventArgs e)
         {
             string text = richTextBox_JsonText.Text;
@@ -5753,18 +4054,6 @@ namespace AmazFit_Watchface_2
             */
         }
 
-        private void checkBox_Weather_CheckedChanged(object sender, EventArgs e)
-        {
-            tabControl_Weather.Enabled = checkBox_Weather.Checked;
-            if ((checkBox_Weather_Text.Checked) || (checkBox_Weather_Day.Checked) || (checkBox_Weather_Night.Checked))
-            {
-                groupBox_Symbols.Enabled = true;
-            }
-            else
-            {
-                groupBox_Symbols.Enabled = false;
-            }
-        }
 
         private void comboBox_WeatherSet_Icon_KeyDown(object sender, KeyEventArgs e)
         {
@@ -6691,44 +4980,6 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
-        private void dataGridView_MotiomAnimation_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null && e.ColumnIndex < 11)
-            {
-                Regex my_reg = new Regex(@"[^-\d]");
-                string oldValue = dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                string newValue = my_reg.Replace(oldValue, "");
-                int v = 0;
-                Int32.TryParse(newValue, out v);
-                if (e.ColumnIndex == 6)
-                {
-                    if (v < 100) v = 100;
-                }
-                dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = v;
-                //dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = newValue;
-                if (newValue.Length == 0) dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = null;
-            }
-
-            try
-            {
-                if ((dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[1].Value == null) &&
-                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[2].Value == null) &&
-                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[3].Value == null) &&
-                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[4].Value == null) &&
-                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[5].Value == null) &&
-                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[6].Value == null) &&
-                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[7].Value == null) && 
-                        (e.RowIndex < dataGridView_MotiomAnimation.Rows.Count - 1))
-                    dataGridView_MotiomAnimation.Rows.RemoveAt(e.RowIndex);
-            }
-            catch (Exception)
-            {
-            }
-        
-            JSON_write();
-            PreviewImage();
-        }
-
         private void dataGridView_IconSet_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             JSON_write();
@@ -6796,28 +5047,6 @@ namespace AmazFit_Watchface_2
             {
             }
 
-        }
-
-        private void dataGridView_MotiomAnimation_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 11)
-            {
-                DataGridViewCheckBoxCell chBounce = new DataGridViewCheckBoxCell();
-                chBounce = (DataGridViewCheckBoxCell)dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[11];
-
-                if (chBounce.Value == null)
-                    chBounce.Value = false;
-                switch (chBounce.Value.ToString())
-                {
-                    case "True":
-                        chBounce.Value = false;
-                        break;
-                    case "False":
-                        chBounce.Value = true;
-                        break;
-                }
-                JSON_write();
-            }
         }
 
         private void dataGridView_IconSet_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -7038,18 +5267,6 @@ namespace AmazFit_Watchface_2
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
 
-        private void numericUpDown_ActivityPulsScale_Radius_X_ValueChanged(object sender, EventArgs e)
-        {
-            numericUpDown_ActivityPulsScale_Radius_Y.Value = numericUpDown_ActivityPulsScale_Radius_X.Value;
-            PreviewImage();
-        }
-
-        private void numericUpDown_ActivityCaloriesScale_Radius_X_ValueChanged(object sender, EventArgs e)
-        {
-            numericUpDown_ActivityCaloriesScale_Radius_Y.Value = numericUpDown_ActivityCaloriesScale_Radius_X.Value;
-            PreviewImage();
-        }
-
         private void checkBox_WeatherSet_Temp_Click(object sender, EventArgs e)
         {
             PreviewImage();
@@ -7063,54 +5280,6 @@ namespace AmazFit_Watchface_2
         private void comboBox_WeatherSet_Icon_SelectedIndexChanged(object sender, EventArgs e)
         {
             PreviewImage();
-        }
-
-        private void numericUpDown_StaticAnimation_CyclesCount_ValueChanged(object sender, EventArgs e)
-        {
-            int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
-            int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
-            //int Animation_TimeAnimation = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
-            int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
-            int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
-            if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
-            if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount >= 0)
-                numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
-        }
-
-        private void numericUpDown_StaticAnimation_TimeAnimation_ValueChanged(object sender, EventArgs e)
-        {
-            int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
-            //int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
-            int Animation_TimeAnimation = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
-            int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
-            int Animation_CyclesCount = (Animation_TimeAnimation + Animation_SpeedAnimation) /
-                (Animation_SpeedAnimation * Animation_Count);
-            if (Animation_CyclesCount != (Animation_TimeAnimation + Animation_SpeedAnimation) / 
-                (float)(Animation_SpeedAnimation * Animation_Count)) Animation_CyclesCount = -1;
-            if (Animation_TimeAnimation == 0) Animation_CyclesCount = 0;
-            if (Animation_CyclesCount != (int)numericUpDown_StaticAnimation_CyclesCount.Value)
-                numericUpDown_StaticAnimation_CyclesCount.Value = Animation_CyclesCount;
-
-            JSON_write();
-            JSON_Modified = true;
-            FormText();
-        }
-
-        private void numericUpDown_StaticAnimation_Count_ValueChanged(object sender, EventArgs e)
-        {
-            int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
-            if (Animation_CyclesCount >= 0)
-            {
-                int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
-                int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
-                int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
-                if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
-                if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
-                    numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
-            }
-            JSON_write();
-            JSON_Modified = true;
-            FormText();
         }
 
         private void radioButton_MotiomAnimation_StartCoordinates_CheckedChanged(object sender, EventArgs e)
@@ -7200,30 +5369,31 @@ namespace AmazFit_Watchface_2
                     int EndCoordinates_X = 0;
                     int EndCoordinates_Y = 0;
                     int ImageIndex = 0;
-                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
-                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
-                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
-                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
-                    comboBox_MotiomAnimation_Image.Text = "";
+                    //numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    //numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    //comboBox_MotiomAnimation_Image.Text = "";
 
                     if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
                     if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
                     if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
                     if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
 
-                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
-                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
-                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
-                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    //numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    //numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
 
-                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
-                    {
-                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
-                    }
-                    else
-                    {
-                        comboBox_MotiomAnimation_Image.Text = "";
-                    }
+                    //if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    //{
+                    //    comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    //}
+                    //else
+                    //{
+                    //    comboBox_MotiomAnimation_Image.Text = "";
+                    //}
+
                     MotiomAnimation_Update = false;
 
                     JSON_write();
@@ -7256,30 +5426,31 @@ namespace AmazFit_Watchface_2
                     int EndCoordinates_X = 0;
                     int EndCoordinates_Y = 0;
                     int ImageIndex = 0;
-                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
-                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
-                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
-                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
-                    comboBox_MotiomAnimation_Image.Text = "";
+                    //numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    //numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    //comboBox_MotiomAnimation_Image.Text = "";
 
                     if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
                     if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
                     if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
                     if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
 
-                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
-                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
-                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
-                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    //numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    //numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    //numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
 
-                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
-                    {
-                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
-                    }
-                    else
-                    {
-                        comboBox_MotiomAnimation_Image.Text = "";
-                    }
+                    //if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    //{
+                    //    comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    //}
+                    //else
+                    //{
+                    //    comboBox_MotiomAnimation_Image.Text = "";
+                    //}
+
                     MotiomAnimation_Update = false;
 
                     JSON_write();
@@ -7287,81 +5458,6 @@ namespace AmazFit_Watchface_2
                 }
             }
         }
-
-        // копируем данные из полей для редактирования
-        private void comboBox_MotiomAnimation_Image_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (MotiomAnimation_Update) return;
-            DataGridViewRow row = dataGridView_MotiomAnimation.CurrentRow;
-            if (row != null)
-            {
-                row.Cells[5].Value = comboBox_MotiomAnimation_Image.Text;
-
-                JSON_write();
-                PreviewImage(); 
-            }
-        }
-
-        // копируем данные из полей для редактирования
-        private void numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged(object sender, EventArgs e)
-        {
-            if (MotiomAnimation_Update) return;
-            DataGridViewRow row = dataGridView_MotiomAnimation.CurrentRow;
-            if (row != null)
-            {
-                row.Cells[1].Value = numericUpDown_MotiomAnimation_StartCoordinates_X.Value;
-                row.Cells[2].Value = numericUpDown_MotiomAnimation_StartCoordinates_Y.Value;
-                row.Cells[3].Value = numericUpDown_MotiomAnimation_EndCoordinates_X.Value;
-                row.Cells[4].Value = numericUpDown_MotiomAnimation_EndCoordinates_Y.Value;
-
-                JSON_write();
-                PreviewImage(); 
-            }
-        }
-
-        private void dataGridView_MotiomAnimation_SelectionChanged(object sender, EventArgs e)
-        {
-            MotiomAnimation_Update = true;
-            int StartCoordinates_X = 0;
-            int StartCoordinates_Y = 0;
-            int EndCoordinates_X = 0;
-            int EndCoordinates_Y = 0;
-            int ImageIndex = 0;
-            numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
-            numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
-            numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
-            numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
-            comboBox_MotiomAnimation_Image.Text = "";
-
-            if (dataGridView_MotiomAnimation.SelectedCells.Count > 0)
-            {
-                int RowIndex = dataGridView_MotiomAnimation.SelectedCells[0].RowIndex;
-                if (!dataGridView_MotiomAnimation.Rows[RowIndex].IsNewRow)
-                {
-                    DataGridViewRow row = dataGridView_MotiomAnimation.Rows[RowIndex];
-                    if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
-                    if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
-                    if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
-                    if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
-
-                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
-                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
-                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
-                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
-
-                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
-                    {
-                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
-                    }
-                    else
-                    {
-                        comboBox_MotiomAnimation_Image.Text = "";
-                    }
-                }
-            }
-            MotiomAnimation_Update = false;
-        }
-
         private void button_ShowAnimation_Click(object sender, EventArgs e)
         {
             Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
@@ -7439,15 +5535,6 @@ namespace AmazFit_Watchface_2
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
 
-        private void dataGridView_MotiomAnimation_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            if(dataGridView_MotiomAnimation.Rows.Count > 5)
-            {
-                MessageBox.Show(Properties.FormStrings.Message_WarningAnimationCoun_Text,
-                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
         {
             if(e.TabPage.Name == "tabPageConverting")
@@ -7480,104 +5567,6 @@ namespace AmazFit_Watchface_2
         {
             numericUpDown_ConvertingOutput_Custom.Enabled = radioButton_ConvertingOutput_Custom.Checked;
         }
-
-        #region Shortcuts_Width_Height
-        private void numericUpDown_Shortcuts_Steps_Width_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Steps_X.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Shortcuts_Steps_Height_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.Y < 0) return;
-            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Steps_Y.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Shortcuts_Puls_Width_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Puls_X.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Shortcuts_Puls_Height_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.Y < 0) return;
-            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Puls_Y.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Shortcuts_Weather_Width_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Weather_X.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Shortcuts_Weather_Height_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.Y < 0) return;
-            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Weather_Y.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Shortcuts_Energy_Width_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Energy_X.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Shortcuts_Energy_Height_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.Y < 0) return;
-            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Energy_Y.Value;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-        #endregion
 
         private void button_Converting_Click(object sender, EventArgs e)
         {
@@ -8429,65 +6418,6 @@ namespace AmazFit_Watchface_2
             //}
             //#endregion
         }
-
-#region Radius
-        private void numericUpDown_StepsProgress_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int valueX = MouseСoordinates.X - (int)numericUpDown_StepsProgress_Center_X.Value;
-            int valueY = MouseСoordinates.Y - (int)numericUpDown_StepsProgress_Center_Y.Value;
-            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if (e.X <= numericUpDown.Controls[1].Width + 1)
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_ActivityPulsScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityPulsScale_Center_X.Value;
-            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityPulsScale_Center_Y.Value;
-            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if (e.X <= numericUpDown.Controls[1].Width + 1)
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_ActivityCaloriesScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
-            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
-            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if (e.X <= numericUpDown.Controls[1].Width + 1)
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-        private void numericUpDown_Battery_Scale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (MouseСoordinates.X < 0) return;
-            int valueX = MouseСoordinates.X - (int)numericUpDown_Battery_Scale_Center_X.Value;
-            int valueY = MouseСoordinates.Y - (int)numericUpDown_Battery_Scale_Center_Y.Value;
-            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if (e.X <= numericUpDown.Controls[1].Width + 1)
-            {
-                // Click is in text area
-                numericUpDown.Value = value;
-            }
-        }
-
-#endregion
         
         private void button_RefreshPreview_Click(object sender, EventArgs e)
         {
@@ -8800,31 +6730,29 @@ namespace AmazFit_Watchface_2
 
         }
 
-        private void comboBox_Background_color_Click(object sender, EventArgs e)
+        private void comboBox_color_Click(object sender, EventArgs e)
         {
             ColorDialog colorDialog = new ColorDialog();
-            colorDialog.Color = comboBox_Background_color.BackColor;
+            ComboBox comboBox_color = sender as ComboBox;
+            colorDialog.Color = comboBox_color.BackColor;
             colorDialog.FullOpen = true;
             if (colorDialog.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка цвета формы
-            comboBox_Background_color.BackColor = colorDialog.Color;
+            comboBox_color.BackColor = colorDialog.Color;
             JSON_write();
             PreviewImage();
         }
 
-        private void comboBox_Battery_scaleLinear_color_Click(object sender, EventArgs e)
+        private void radioButton_ScreenNormal_CheckedChanged(object sender, EventArgs e)
         {
-            ColorDialog colorDialog = new ColorDialog();
-            colorDialog.Color = comboBox_Battery_scaleLinear_color.BackColor;
-            colorDialog.FullOpen = true;
-            if (colorDialog.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка цвета формы
-            comboBox_Battery_scaleLinear_color.BackColor = colorDialog.Color;
-            JSON_write();
-            PreviewImage();
+            bool b = radioButton_ScreenNormal.Checked;
+            splitContainer_EditParameters.Panel1Collapsed = !b;
+            splitContainer_EditParameters.Panel2Collapsed = b;
+
+
         }
+
 
 
 

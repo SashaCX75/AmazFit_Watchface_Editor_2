@@ -34,7 +34,7 @@ namespace AmazFit_Watchface_2
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
             int i;
             //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
-            if (link == 2) goto AnimationEnd;
+            //if (link == 2) goto AnimationEnd;
 
             #region Black background
             Logger.WriteLine("PreviewToBitmap (Black background)");
@@ -114,9 +114,12 @@ namespace AmazFit_Watchface_2
             Panel panel_hand = panel_Battery_hand;
             Panel panel_scaleCircle = panel_Battery_scaleCircle;
             Panel panel_scaleLinear = panel_Battery_scaleLinear;
+            CheckBox checkBox_Use = null;
 
+            #region зараяд
             // зараяд картинками
-            CheckBox checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            //CheckBox checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
             if (checkBox_Use.Checked)
             {
                 ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
@@ -144,43 +147,85 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            // зараяд надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            // зараяд круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
             if (checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int imageBackground = comboBox_background.SelectedIndex;
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = comboBox_color.BackColor;
+                float positiom = (float)Watch_Face_Preview_Set.Battery / 100f;
+                int lineCap = comboBox_flatness.SelectedIndex;
+                if (radioButton_image.Checked)
                 {
-                    ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                    ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                    ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                    CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
-                    //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
-
-                    int imageIndex = comboBox_image.SelectedIndex;
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
-                    bool addZero = checkBox_add_zero.Checked;
-                    int value = Watch_Face_Preview_Set.Battery;
-                    int separator_index = -1;
-                    if (comboBox_separator.SelectedIndex >= 0) separator_index = comboBox_separator.SelectedIndex;
-                    
-                    Draw_dagital_time(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
-
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (imageIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
-                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                         imageIndex, imageBackground, showCircleScaleArea);
                     }
+                }
+                else
+                {
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        color, imageBackground, showCircleScaleArea);
+                }
+            }
+
+            // зараяд линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int pointerIndex = comboBox_pointer.SelectedIndex;
+                int backgroundIndex = comboBox_background.SelectedIndex;
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = comboBox_color.BackColor;
+                float position = Watch_Face_Preview_Set.Battery / 100f;
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea); 
+                    }
+                }
+                else
+                {
+                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
                 }
             }
 
@@ -231,7 +276,126 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            // зараяд линейной шкалой
+            // зараяд надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Battery;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region шаги
+            panel_pictures = panel_Steps_pictures;
+            panel_text = panel_Steps_text;
+            panel_hand = panel_Steps_hand;
+            panel_scaleCircle = panel_Steps_scaleCircle;
+            panel_scaleLinear = panel_Steps_scaleLinear;
+            // шаги картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
+                    offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // шаги круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int imageBackground = comboBox_background.SelectedIndex;
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = comboBox_color.BackColor;
+                float positiom = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
+                if (positiom > 1) positiom = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                         imageIndex, imageBackground, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        color, imageBackground, showCircleScaleArea);
+                }
+            }
+
+            // шаги линейной шкалой
             checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
             if (checkBox_Use.Checked)
             {
@@ -254,13 +418,14 @@ namespace AmazFit_Watchface_2
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
                 Color color = comboBox_color.BackColor;
-                float position = Watch_Face_Preview_Set.Battery / 100f;
+                float position = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
+                if (position > 1) position = 1;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea); 
+                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
                     }
                 }
                 else
@@ -269,10 +434,721 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            // шаги стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps * (endAngle - startAngle) /
+                    Watch_Face_Preview_Set.Activity.StepsGoal;
+                    if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // шаги надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.Steps;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 5, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region калории
+            panel_pictures = panel_Calories_pictures;
+            panel_text = panel_Calories_text;
+            panel_hand = panel_Calories_hand;
+            panel_scaleCircle = panel_Calories_scaleCircle;
+            panel_scaleLinear = panel_Calories_scaleLinear;
+            // калории картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Calories / 300f);
+                    offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // калории круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int imageBackground = comboBox_background.SelectedIndex;
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = comboBox_color.BackColor;
+                float positiom = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
+                if (positiom > 1) positiom = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                         imageIndex, imageBackground, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        color, imageBackground, showCircleScaleArea);
+                }
+            }
+
+            // калории линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int pointerIndex = comboBox_pointer.SelectedIndex;
+                int backgroundIndex = comboBox_background.SelectedIndex;
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = comboBox_color.BackColor;
+                float position = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
+                if (position > 1) position = 1;
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                }
+            }
+
+            // калории стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Calories * (endAngle - startAngle) / 300f;
+                    if (Watch_Face_Preview_Set.Activity.Calories > 300) angle = endAngle;
+                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // калории надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.Calories;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 4, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region пульс
+            panel_pictures = panel_HeartRate_pictures;
+            panel_text = panel_HeartRate_text;
+            panel_hand = panel_HeartRate_hand;
+            panel_scaleCircle = panel_HeartRate_scaleCircle;
+            panel_scaleLinear = panel_HeartRate_scaleLinear;
+            // пульс картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Pulse / 200f);
+                    offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // пульс круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int imageBackground = comboBox_background.SelectedIndex;
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = comboBox_color.BackColor;
+                float positiom = (float)Watch_Face_Preview_Set.Activity.Pulse / 200f;
+                if (positiom > 1) positiom = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                         imageIndex, imageBackground, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        color, imageBackground, showCircleScaleArea);
+                }
+            }
+
+            // пульс линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int pointerIndex = comboBox_pointer.SelectedIndex;
+                int backgroundIndex = comboBox_background.SelectedIndex;
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = comboBox_color.BackColor;
+                float position = (float)Watch_Face_Preview_Set.Activity.Pulse / 200f;
+                if (position > 1) position = 1;
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                }
+            }
+
+            // пульс стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Pulse * (endAngle - startAngle) / 200f;
+                    if (Watch_Face_Preview_Set.Activity.Pulse > 200) angle = endAngle;
+                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // пульс надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.Pulse;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region путь
+            panel_pictures = panel_Distance_pictures;
+            panel_text = panel_Distance_text;
+            panel_hand = panel_Distance_hand;
+            panel_scaleCircle = panel_Distance_scaleCircle;
+            panel_scaleLinear = panel_Distance_scaleLinear;
+            // путь картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Distance / 10000f);
+                    offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // путь круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int imageBackground = comboBox_background.SelectedIndex;
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = comboBox_color.BackColor;
+                float positiom = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
+                if (positiom > 1) positiom = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                         imageIndex, imageBackground, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        color, imageBackground, showCircleScaleArea);
+                }
+            }
+
+            // путь линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int pointerIndex = comboBox_pointer.SelectedIndex;
+                int backgroundIndex = comboBox_background.SelectedIndex;
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = comboBox_color.BackColor;
+                float position = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
+                if (position > 1) position = 1;
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                }
+            }
+
+            // путь стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Distance * (endAngle - startAngle) / 10000f;
+                    if (Watch_Face_Preview_Set.Activity.Pulse > 200) angle = endAngle;
+                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // путь надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+                ComboBox comboBox_DecimalPoint = (ComboBox)panel_text.Controls[12];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    double value = Watch_Face_Preview_Set.Activity.Distance / 1000d;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    int decimalPoint_index = comboBox_DecimalPoint.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index,
+                        decimalPoint_index, 2, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+
+
             #endregion
 
             #region дата 
-                int date_offsetX = -1;
+            int date_offsetX = -1;
             int date_offsetY = -1;
             // год
             if (checkBox__Year_text_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
@@ -289,7 +1165,7 @@ namespace AmazFit_Watchface_2
                 int separator_index = -1;
                 if (comboBox_Year_separator.SelectedIndex >= 0) separator_index = comboBox_Year_separator.SelectedIndex;
 
-                date_offsetX = Draw_dagital_time(gPanel, imageIndex, x, y,
+                date_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
                     spasing, alignment, value, addZero, 4, separator_index, BBorder);
 
                 if (comboBox_Year_unit.SelectedIndex >= 0)
@@ -320,7 +1196,7 @@ namespace AmazFit_Watchface_2
                     y = date_offsetY;
                 }
                 date_offsetY = y;
-                date_offsetX = Draw_dagital_time(gPanel, imageIndex, x, y,
+                date_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
                     spasing, alignment, value, addZero, 2, separator_index, BBorder);
 
                 if (comboBox_Month_unit.SelectedIndex >= 0)
@@ -351,7 +1227,7 @@ namespace AmazFit_Watchface_2
                     alignment = 0;
                     y = date_offsetY;
                 }
-                Draw_dagital_time(gPanel, imageIndex, x, y,
+                Draw_dagital_text(gPanel, imageIndex, x, y,
                     spasing, alignment, value, addZero, 2, separator_index, BBorder);
 
                 if (comboBox_Day_unit.SelectedIndex >= 0)
@@ -516,7 +1392,7 @@ namespace AmazFit_Watchface_2
                         if (value == 0) value = 12;
                     }
                 }
-                time_offsetX = Draw_dagital_time(gPanel, imageIndex, x, y,
+                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
                     spasing, alignment, value, addZero, 2, separator_index, BBorder);
 
                 if (comboBox_Hour_unit.SelectedIndex >= 0)
@@ -547,7 +1423,7 @@ namespace AmazFit_Watchface_2
                     y = time_offsetY;
                 }
                 time_offsetY = y;
-                time_offsetX = Draw_dagital_time(gPanel, imageIndex, x, y,
+                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
                     spasing, alignment, value, addZero, 2, separator_index, BBorder);
 
                 if (comboBox_Minute_unit.SelectedIndex >= 0)
@@ -578,7 +1454,7 @@ namespace AmazFit_Watchface_2
                     alignment = 0;
                     y = time_offsetY;
                 }
-                Draw_dagital_time(gPanel, imageIndex, x, y,
+                Draw_dagital_text(gPanel, imageIndex, x, y,
                     spasing, alignment, value, addZero, 2, separator_index, BBorder);
 
                 if (comboBox_Second_unit.SelectedIndex >= 0)
@@ -679,7 +1555,7 @@ namespace AmazFit_Watchface_2
 
 
             // ***********************************
-
+            /*
             #region Battery
             Logger.WriteLine("PreviewToBitmap (Battery)");
             if (checkBox_Battery.Checked)
@@ -2294,6 +3170,8 @@ namespace AmazFit_Watchface_2
                 } 
             }
             #endregion
+            
+            */
 
             #region Mesh
             Logger.WriteLine("PreviewToBitmap (Mesh)");
@@ -2362,6 +3240,199 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("* PreviewToBitmap (end)");
         }
 
+        /// <summary>круговая шкала</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата Y</param>
+        /// <param name="radius">Радиус</param>
+        /// <param name="width">Толщина линии</param>
+        /// <param name="lineCap">Тип окончания линии</param>
+        /// <param name="startAngle">Начальный угол</param>
+        /// <param name="endAngle">Общий угол</param>
+        /// <param name="position">Отображаемая величина от 0 до 1</param>
+        /// <param name="color">Свет шкалы</param>
+        /// <param name="backgroundIndex">Номер фонового изображения</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        private void DrawScaleCircler(Graphics graphics, int x, int y, float radius, float width,
+            int lineCap, float startAngle, float endAngle, float position, Color color,
+             int backgroundIndex, bool showCircleScaleArea)
+        {
+            Logger.WriteLine("* DrawScaleCircler");
+            if (position > 1) position = 1;
+            float valueAngle = endAngle * position;
+            if (valueAngle == 0) return;
+            Bitmap src = new Bitmap(1, 1);
+            Pen pen = new Pen(color, width);
+
+            switch (lineCap)
+            {
+                case 1:
+                    pen.EndCap = LineCap.Triangle;
+                    pen.StartCap = LineCap.Triangle;
+                    break;
+                case 2:
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                    break;
+                default:
+                    pen.EndCap = LineCap.Round;
+                    pen.StartCap = LineCap.Round;
+                    break;
+            }
+
+            int srcX = (int)Math.Round(x - radius - width / 2, MidpointRounding.AwayFromZero);
+            int srcY = (int)Math.Round(y - radius - width / 2, MidpointRounding.AwayFromZero);
+            int arcX = (int)Math.Round(x - radius, MidpointRounding.AwayFromZero);
+            int arcY = (int)Math.Round(y - radius, MidpointRounding.AwayFromZero);
+            float CircleWidth = 2 * radius ;
+
+            if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                graphics.DrawImage(src, new Rectangle(srcX, srcX, src.Width, src.Height));
+            }
+
+            graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, valueAngle);
+
+            //if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
+            //{
+            //    src = OpenFileStream(ListImagesFullName[pointerIndex]);
+            //    graphics.DrawImage(src, new Rectangle(srcX, srcX, src.Width, src.Height));
+            //}
+            src.Dispose();
+
+            if (showCircleScaleArea)
+            {
+                // подсвечивание шкалы заливкой
+                HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                pen.Brush = myHatchBrush;
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                pen.Brush = myHatchBrush;
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+
+                // подсвечивание внешней и внутреней дуги на шкале
+                float w2 = width / 2f;
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawArc(pen1, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
+                    graphics.DrawArc(pen1, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    graphics.DrawArc(pen2, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
+                    graphics.DrawArc(pen2, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                }
+            }
+            Logger.WriteLine("* DrawScaleCircler (end)");
+
+        }
+
+        /// <summary>круговая шкала поверх картинки</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата Y</param>
+        /// <param name="radius">Радиус</param>
+        /// <param name="width">Толщина линии</param>
+        /// <param name="lineCap">Тип окончания линии</param>
+        /// <param name="startAngle">Начальный угол</param>
+        /// <param name="endAngle">Общий угол</param>
+        /// <param name="position">Отображаемая величина от 0 до 1</param>
+        /// <param name="color">Свет шкалы</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="backgroundIndex">Номер фонового изображения</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        private void DrawScaleCircler(Graphics graphics, int x, int y, float radius, float width,
+            int lineCap, float startAngle, float endAngle, float position, int imageIndex,
+            int backgroundIndex, bool showCircleScaleArea)
+        {
+            Logger.WriteLine("* DrawScaleCircler");
+            if (position > 1) position = 1;
+            float valueAngle = endAngle * position;
+            if (valueAngle == 0) return;
+
+            Bitmap src = OpenFileStream(ListImagesFullName[imageIndex]);
+            Pen pen = new Pen(Color.Black, width);
+
+            switch (lineCap)
+            {
+                case 1:
+                    pen.EndCap = LineCap.Triangle;
+                    pen.StartCap = LineCap.Triangle;
+                    break;
+                case 2:
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                    break;
+                default:
+                    pen.EndCap = LineCap.Round;
+                    pen.StartCap = LineCap.Round;
+                    break;
+            }
+            int srcX = (int)Math.Round(x - radius - width / 2, MidpointRounding.AwayFromZero);
+            int srcY = (int)Math.Round(y - radius - width / 2, MidpointRounding.AwayFromZero);
+            int arcX = (int)Math.Round(x - radius, MidpointRounding.AwayFromZero);
+            int arcY = (int)Math.Round(y - radius, MidpointRounding.AwayFromZero);
+            float CircleWidth = 2 * radius;
+
+            if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                graphics.DrawImage(src, new Rectangle(srcX, srcX, src.Width, src.Height));
+            }
+
+            Bitmap mask = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            Graphics gPanel = Graphics.FromImage(mask);
+            gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+            try
+            {
+                //gPanel.DrawLine(pen, centrX, centrY, centrX + 1, centrY + 1);
+                //pen = new Pen(Color.Black, width);
+                //pen.Width = width;
+                //pen.Color = Color.Black;
+                gPanel.DrawArc(pen, (int)Math.Round(width / 2, MidpointRounding.AwayFromZero),
+                    (int)Math.Round(width / 2, MidpointRounding.AwayFromZero), CircleWidth, CircleWidth, 
+                    startAngle, valueAngle);
+                //src = ApplyAlfaMask(src, mask);
+                src = ApplyMask(src, mask);
+                //src = mask;
+                graphics.DrawImage(src, new Rectangle(srcX, srcY, src.Width, src.Height));
+                //src.Dispose();
+                mask.Dispose();
+
+                if (showCircleScaleArea)
+                {
+                    // подсвечивание шкалы заливкой
+                    HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                    myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+
+                    // подсвечивание внешней и внутреней дуги на шкале
+                    float w2 = width / 2f;
+                    using (Pen pen1 = new Pen(Color.White, 1))
+                    {
+                        graphics.DrawArc(pen1, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
+                        graphics.DrawArc(pen1, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                    }
+                    using (Pen pen2 = new Pen(Color.Black, 1))
+                    {
+                        graphics.DrawArc(pen2, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
+                        graphics.DrawArc(pen2, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            src.Dispose();
+            Logger.WriteLine("* DrawScaleCircler (end)");
+
+        }
+
         /// <summary>Рисует линейную шкалу</summary>
         /// <param name="graphics">Поверхность для рисования</param>
         /// <param name="image_index">Номер изображения</param>
@@ -2380,12 +3451,12 @@ namespace AmazFit_Watchface_2
 
             if (length > 0)
             {
-                int x1 = x + width / 2;
+                int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
                 int length1 = length - width;
                 int position1 = (int)Math.Round(length1 * position);
                 if (position1 < 0) position1 = 0;
                 int x2 = x1 + position1;
-                int y1 = y + width / 2;
+                int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
 
                 if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
                 {
@@ -2455,12 +3526,12 @@ namespace AmazFit_Watchface_2
 
             if (length > 0)
             {
-                int x1 = x + width / 2;
+                int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
                 int length1 = length - width;
-                int position1 = (int)Math.Round(length1 * position);
+                int position1 = (int)Math.Round(length1 * position, MidpointRounding.AwayFromZero);
                 if (position1 < 0) position1 = 0;
                 int x2 = x1 + position1;
-                int y1 = y + width / 2;
+                int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
                 if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
                 {
                     src = OpenFileStream(ListImagesFullName[backgroundIndex]);
@@ -2584,13 +3655,13 @@ namespace AmazFit_Watchface_2
         /// <param name="value">Отображаемая величина</param>
         /// <param name="addZero">Отображать начальные нули</param>
         /// <param name="value_lenght">Количество отображаемых символов</param>
-        /// <param name="separator_index">Количество отображаемых символов</param>
+        /// <param name="separator_index">Символ разделителя (единиц измерения)</param>
         /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        private int Draw_dagital_time(Graphics graphics, int image_index, int x, int y, int spacing, 
+        private int Draw_dagital_text(Graphics graphics, int image_index, int x, int y, int spacing, 
             int alignment, int value, bool addZero, int value_lenght, int separator_index, bool BBorder)
         {
             int result = 0;
-            Logger.WriteLine("* Draw_dagital_time");
+            Logger.WriteLine("* Draw_dagital_text");
             var src = new Bitmap(1, 1);
             int _number;
             int i;
@@ -2684,8 +3755,150 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            Logger.WriteLine("* Draw_dagital_time (end)");
+            Logger.WriteLine("* Draw_dagital_text (end)");
             return result;
+        }
+
+        /// <summary>Рисует число с десятичным разделителем</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата y</param>
+        /// <param name="spacing">Величина отступа</param>
+        /// <param name="alignment">Выравнивание</param>
+        /// <param name="value">Отображаемая величина</param>
+        /// <param name="addZero">Отображать начальные нули</param>
+        /// <param name="value_lenght">Количество отображаемых символов</param>
+        /// <param name="separator_index">Символ разделителя (единиц измерения)</param>
+        /// <param name="decimalPoint_index">Символ десятичного разделителя</param>
+        /// <param name="decCount">Число знаков после запятой</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        private void Draw_dagital_text(Graphics graphics, int image_index, int x, int y, int spacing,
+            int alignment, double value, bool addZero, int value_lenght, int separator_index, 
+            int decimalPoint_index, int decCount, bool BBorder)
+        {
+            Logger.WriteLine("* Draw_dagital_text");
+            value = Math.Round(value, 2, MidpointRounding.AwayFromZero);
+            var Digit = new Bitmap(ListImagesFullName[image_index]);
+            //var Delimit = new Bitmap(1, 1);
+            //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
+            string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+            string data_numberS = value.ToString();
+            if (decCount > 0)
+            {
+                if (data_numberS.IndexOf(decimalSeparator) < 0) data_numberS = data_numberS + decimalSeparator;
+                while (data_numberS.IndexOf(decimalSeparator) > data_numberS.Length - decCount - 1)
+                {
+                    data_numberS = data_numberS + "0";
+                }
+            }
+            int DateLenghtReal = 0;
+            int _number;
+            int i;
+            var src = new Bitmap(1, 1);
+            char[] CH = data_numberS.ToCharArray();
+
+            Logger.WriteLine("DateLenght");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        DateLenghtReal = DateLenghtReal + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (decimalPoint_index >= 0 && decimalPoint_index < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[dec]);
+                        src = OpenFileStream(ListImagesFullName[decimalPoint_index]);
+                        DateLenghtReal = DateLenghtReal + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+
+            }
+            DateLenghtReal = DateLenghtReal - spacing;
+
+            src = OpenFileStream(ListImagesFullName[image_index]);
+            int width = src.Width;
+            int height = src.Height;
+            int DateLenght = width * value_lenght + spacing * (value_lenght - 1);
+
+            int PointX = 0;
+            int PointY = y;
+            switch (alignment)
+            {
+                case 0:
+                    PointX = x;
+                    break;
+                case 1:
+                    PointX = x + DateLenght - DateLenghtReal;
+                    break;
+                case 2:
+                    PointX = x + DateLenght / 2 - DateLenghtReal / 2;
+                    break;
+            }
+
+            Logger.WriteLine("Draw value");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (decimalPoint_index >= 0 && decimalPoint_index < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[dec]);
+                        src = OpenFileStream(ListImagesFullName[decimalPoint_index]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+
+            }
+            if (separator_index > -1)
+            {
+                src = OpenFileStream(ListImagesFullName[separator_index]);
+                graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+            }
+            src.Dispose();
+
+            if (BBorder)
+            {
+                Logger.WriteLine("DrawBorder");
+                Rectangle rect = new Rectangle(x, y, DateLenght - 1, height - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
+
+            Logger.WriteLine("* Draw_dagital_text (end)");
         }
 
         /// <summary>Рисует число</summary>
@@ -2814,7 +4027,7 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("* DrawNumber (end)");
         }
 
-        /// <summary>Рисует число</summary>
+        /// <summary>Рисует число с разделителем</summary>
         /// <param name="graphics">Поверхность для рисования</param>
         /// <param name="x1">TopLeftX</param>
         /// <param name="y1">TopLefty</param>

@@ -169,7 +169,7 @@ namespace AmazFit_Watchface_2
         {
             if (panel_Battery_scaleCircle.Height == 1)
             {
-                panel_Battery_scaleCircle.Height = (int)(50 * currentDPI);
+                panel_Battery_scaleCircle.Height = (int)(215 * currentDPI);
             }
             else panel_Battery_scaleCircle.Height = 1;
         }
@@ -178,9 +178,147 @@ namespace AmazFit_Watchface_2
         {
             if (panel_Battery_scaleLinear.Height == 1)
             {
-                panel_Battery_scaleLinear.Height = (int)(50 * currentDPI);
+                panel_Battery_scaleLinear.Height = (int)(155 * currentDPI);
             }
             else panel_Battery_scaleLinear.Height = 1;
+        }
+
+
+        private void button_Steps_pictures_Click(object sender, EventArgs e)
+        {
+            if (panel_Steps_pictures.Height == 1)
+            {
+                panel_Steps_pictures.Height = (int)(85 * currentDPI);
+            }
+            else panel_Steps_pictures.Height = 1;
+        }
+
+        private void button_Steps_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Steps_text.Height == 1)
+            {
+                panel_Steps_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Steps_text.Height = 1;
+        }
+
+        private void button_Steps_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Steps_hand.Height == 1)
+            {
+                panel_Steps_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_Steps_hand.Height = 1;
+        }
+
+        private void button_Steps_scaleCircle_Click(object sender, EventArgs e)
+        {
+            if (panel_Steps_scaleCircle.Height == 1)
+            {
+                panel_Steps_scaleCircle.Height = (int)(215 * currentDPI);
+            }
+            else panel_Steps_scaleCircle.Height = 1;
+        }
+
+        private void button_Steps_scaleLinear_Click(object sender, EventArgs e)
+        {
+            if (panel_Steps_scaleLinear.Height == 1)
+            {
+                panel_Steps_scaleLinear.Height = (int)(155 * currentDPI);
+            }
+            else panel_Steps_scaleLinear.Height = 1;
+        }
+
+
+        private void button_Calories_pictures_Click(object sender, EventArgs e)
+        {
+            if (panel_Calories_pictures.Height == 1)
+            {
+                panel_Calories_pictures.Height = (int)(85 * currentDPI);
+            }
+            else panel_Calories_pictures.Height = 1;
+        }
+
+        private void button_Calories_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Calories_text.Height == 1)
+            {
+                panel_Calories_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Calories_text.Height = 1;
+        }
+
+        private void button_Calories_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Calories_hand.Height == 1)
+            {
+                panel_Calories_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_Calories_hand.Height = 1;
+        }
+
+        private void button_Calories_scaleCircle_Click(object sender, EventArgs e)
+        {
+            if (panel_Calories_scaleCircle.Height == 1)
+            {
+                panel_Calories_scaleCircle.Height = (int)(215 * currentDPI);
+            }
+            else panel_Calories_scaleCircle.Height = 1;
+        }
+
+        private void button_Calories_scaleLinear_Click(object sender, EventArgs e)
+        {
+            if (panel_Calories_scaleLinear.Height == 1)
+            {
+                panel_Calories_scaleLinear.Height = (int)(155 * currentDPI);
+            }
+            else panel_Calories_scaleLinear.Height = 1;
+        }
+
+
+        private void button_HeartRate_pictures_Click(object sender, EventArgs e)
+        {
+            if (panel_HeartRate_pictures.Height == 1)
+            {
+                panel_HeartRate_pictures.Height = (int)(85 * currentDPI);
+            }
+            else panel_HeartRate_pictures.Height = 1;
+        }
+
+        private void button_HeartRate_text_Click(object sender, EventArgs e)
+        {
+            if (panel_HeartRate_text.Height == 1)
+            {
+                panel_HeartRate_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_HeartRate_text.Height = 1;
+        }
+
+        private void button_HeartRate_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_HeartRate_hand.Height == 1)
+            {
+                panel_HeartRate_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_HeartRate_hand.Height = 1;
+        }
+
+        private void button_HeartRate_scaleCircle_Click(object sender, EventArgs e)
+        {
+            if (panel_HeartRate_scaleCircle.Height == 1)
+            {
+                panel_HeartRate_scaleCircle.Height = (int)(215 * currentDPI);
+            }
+            else panel_HeartRate_scaleCircle.Height = 1;
+        }
+
+        private void button_HeartRate_scaleLinear_Click(object sender, EventArgs e)
+        {
+            if (panel_HeartRate_scaleLinear.Height == 1)
+            {
+                panel_HeartRate_scaleLinear.Height = (int)(155 * currentDPI);
+            }
+            else panel_HeartRate_scaleLinear.Height = 1;
         }
 
 

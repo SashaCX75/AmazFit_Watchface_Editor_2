@@ -18,11 +18,30 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        private void radioButton_image_color_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            Control control = radioButton.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = radioButton.Checked;
+            controlCollection[3].Enabled = b;
+            controlCollection[4].Enabled = !b;
+
+            JSON_write();
+            PreviewImage();
+        }
+
         private void radioButton_Battery_scaleLinear_image_CheckedChanged(object sender, EventArgs e)
         {
-            bool b = radioButton_Battery_scaleLinear_image.Checked;
-            comboBox_Battery_scaleLinear_image.Enabled = b;
-            comboBox_Battery_scaleLinear_color.Enabled = !b;
+            RadioButton radioButton = sender as RadioButton;
+            Control control = radioButton.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = radioButton.Checked;
+            controlCollection[3].Enabled = b;
+            controlCollection[4].Enabled = !b;
+
             JSON_write();
             PreviewImage();
         }
@@ -525,6 +544,29 @@ namespace AmazFit_Watchface_2
         }
 
         private void checkBox_scaleLinear_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+
+
+
+
+        private void checkBox_scaleCircle_Use_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = sender as CheckBox;
             Control control = checkBox.Parent;

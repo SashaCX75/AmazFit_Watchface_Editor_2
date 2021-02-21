@@ -19,7 +19,7 @@ namespace AmazFit_Watchface_2
         /// <summary>Ширена линии</summary>
         public long Width { get; set; }
 
-        /// <summary>Тип окончания линии 0 - flat, 90, triangle, 180 - arc </summary>
+        /// <summary>Тип окончания линии 0 - arc, 90, triangle, 180 - flat </summary>
         public long Flatness { get; set; }
 
         /// <summary>Точка на шкале?</summary>
