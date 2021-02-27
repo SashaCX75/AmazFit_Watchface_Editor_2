@@ -448,6 +448,15 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Нумерация PNG файлов должна начинаться с 1..
+        /// </summary>
+        public static string Message_PNGFromOne_Text {
+            get {
+                return ResourceManager.GetString("Message_PNGFromOne_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на PNG файлы идут не по порядку или часть файлов отсутствует..
         /// </summary>
         public static string Message_PNGmissing_Text1 {

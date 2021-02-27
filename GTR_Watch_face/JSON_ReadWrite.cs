@@ -12,6 +12,7 @@ namespace AmazFit_Watchface_2
         private void JSON_read()
         {
             SettingsClear();
+            checkBoxUseClear();
             ComboBoxAddItems();
 
             #region Background
@@ -42,10 +43,6 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region цифровое время
-            checkBox_Hour_Use.Checked = false;
-            checkBox_Minute_Use.Checked = false;
-            checkBox_Second_Use.Checked = false;
-            checkBox_12h_Use.Checked = false;
             if (Watch_Face.DialFace != null && Watch_Face.DialFace.DigitalDialFace != null)
             {
                 if (Watch_Face.DialFace.DigitalDialFace.Digits != null && 
@@ -215,9 +212,6 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region аналоговое время
-            checkBox_Hour_hand_Use.Checked = false;
-            checkBox_Minute_hand_Use.Checked = false;
-            checkBox_Second_hand_Use.Checked = false;
             if (Watch_Face.DialFace != null && Watch_Face.DialFace.AnalogDialFace != null)
             {
                 // часы
@@ -304,13 +298,6 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region дата
-            checkBox__Year_text_Use.Checked = false;
-            checkBox_Month_Use.Checked = false;
-            checkBox_Day_Use.Checked = false;
-            checkBox_Month_pictures_Use.Checked = false;
-            checkBox_Month_hand_Use.Checked = false;
-            checkBox_DOW_hand_Use.Checked = false;
-            checkBox_DOW_pictures_Use.Checked = false;
             if (Watch_Face.System != null && Watch_Face.System.Date != null)
             {
 
@@ -665,10 +652,6 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region статусы
-            checkBox_Bluetooth_Use.Checked = false;
-            checkBox_Lock_Use.Checked = false;
-            checkBox_Alarm_Use.Checked = false;
-            checkBox_DND_Use.Checked = false;
             if (Watch_Face.System != null && Watch_Face.System.Status != null)
             {
                 if(Watch_Face.System.Status.Alarm != null)
@@ -755,14 +738,30 @@ namespace AmazFit_Watchface_2
                             panel_scaleCircle = panel_HeartRate_scaleCircle;
                             panel_scaleLinear = panel_HeartRate_scaleLinear;
                             break;
-
-
+                        case "PAI":
+                            panel_pictures = panel_PAI_pictures;
+                            panel_text = panel_PAI_text;
+                            panel_hand = panel_PAI_hand;
+                            panel_scaleCircle = panel_PAI_scaleCircle;
+                            panel_scaleLinear = panel_PAI_scaleLinear;
+                            break;
                         case "Distance":
                             panel_pictures = panel_Distance_pictures;
                             panel_text = panel_Distance_text;
                             panel_hand = panel_Distance_hand;
                             panel_scaleCircle = panel_Distance_scaleCircle;
                             panel_scaleLinear = panel_Distance_scaleLinear;
+                            break;
+
+
+
+
+                        case "Weather":
+                            panel_pictures = panel_Weather_pictures;
+                            panel_text = panel_Weather_text;
+                            panel_hand = panel_Weather_hand;
+                            panel_scaleCircle = panel_Weather_scaleCircle;
+                            panel_scaleLinear = panel_Weather_scaleLinear;
                             break;
 
                     }
@@ -772,7 +771,9 @@ namespace AmazFit_Watchface_2
                     {
                         checkBox_Use = (CheckBox)panel_pictures.Controls[0];
                         if (activity.ImageProgress != null && activity.ImageProgress.ImageSet != null &&
-                            activity.ImageProgress.Coordinates != null && activity.ImageProgress.Coordinates.Count == 1)
+                            activity.ImageProgress.Coordinates != null && OneCoordinates(activity.ImageProgress.Coordinates))
+
+                            //activity.ImageProgress.Coordinates != null && activity.ImageProgress.Coordinates.Count == 1)
                         {
                             checkBox_Use.Checked = true;
                             ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
@@ -785,11 +786,10 @@ namespace AmazFit_Watchface_2
                             numericUpDownX.Value = activity.ImageProgress.Coordinates[0].X;
                             numericUpDownY.Value = activity.ImageProgress.Coordinates[0].Y;
                         }
-                        else checkBox_Use.Checked = false; 
                     }
 
                     // надпись
-                    if (panel_text != null)
+                    if (panel_text != null && activity.Type != "Weather")
                     {
                         checkBox_Use = (CheckBox)panel_text.Controls[0];
                         if (activity.Digits != null && activity.Digits.Count > 0)
@@ -811,12 +811,15 @@ namespace AmazFit_Watchface_2
 
                                 numericUpDownX.Value = activity.Digits[0].Digit.Image.X;
                                 numericUpDownY.Value = activity.Digits[0].Digit.Image.Y;
+
+                                // десятичный разделитель
                                 if (activity.Type == "Distance")
                                 {
                                     ComboBox comboBox_DecimalPoint = (ComboBox)panel_text.Controls[12];
                                     if(activity.Digits[0].Digit.Image.DecimalPointImageIndex != null)
                                         comboBoxSetText(comboBox_DecimalPoint, (long)activity.Digits[0].Digit.Image.DecimalPointImageIndex);
                                 }
+
                                 if (activity.Digits[0].Digit.Image.NoDataImageIndex != null)
                                     comboBoxSetText(comboBox_imageError, (long)activity.Digits[0].Digit.Image.NoDataImageIndex);
                                 foreach (MultilangImage multilangImage in activity.Digits[0].Digit.Image.MultilangImage)
@@ -844,7 +847,87 @@ namespace AmazFit_Watchface_2
                                 }
                             }
                         }
-                        else checkBox_Use.Checked = false; 
+                    }
+                    else if (panel_text != null && activity.Type == "Weather")
+                    {
+                        if (activity.Digits != null && activity.Digits.Count > 0)
+                        {
+                            foreach(DigitalCommonDigit digitalCommonDigit in activity.Digits)
+                            {
+                                if(digitalCommonDigit.Type != null && digitalCommonDigit.Type == "Min")
+                                    panel_text = panel_Weather_textMin;
+                                if (digitalCommonDigit.Type != null && digitalCommonDigit.Type == "Max")
+                                    panel_text = panel_Weather_textMax;
+                                if (digitalCommonDigit.Type == null)
+                                    panel_text = panel_Weather_text;
+
+                                checkBox_Use = (CheckBox)panel_text.Controls[0];
+                                checkBox_Use.Checked = true;
+                                if (digitalCommonDigit.Digit != null && digitalCommonDigit.Digit.Image != null)
+                                {
+                                    ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                                    ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                                    ComboBox comboBox_separatorF = (ComboBox)panel_text.Controls[3];
+                                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                                    ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                                    //CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                                    ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                                    ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                                    if (digitalCommonDigit.Type != null && digitalCommonDigit.Type == "Max")
+                                    {
+                                        CheckBox checkBox_follow = (CheckBox)panel_text.Controls[12];
+                                        if (digitalCommonDigit.CombingMode == "Single")
+                                        {
+                                            checkBox_follow.Checked = false;
+                                        }
+                                        else
+                                        {
+                                            checkBox_follow.Checked = true;
+                                        }
+                                    }
+
+                                    numericUpDownX.Value = digitalCommonDigit.Digit.Image.X;
+                                    numericUpDownY.Value = digitalCommonDigit.Digit.Image.Y;
+
+                                    if (digitalCommonDigit.Digit.Image.NoDataImageIndex != null)
+                                        comboBoxSetText(comboBox_imageError, (long)digitalCommonDigit.Digit.Image.NoDataImageIndex);
+
+                                    if (digitalCommonDigit.Digit.Image.DelimiterImageIndex != null)
+                                        comboBoxSetText(comboBox_imageMinus, (long)digitalCommonDigit.Digit.Image.DelimiterImageIndex);
+
+                                    foreach (MultilangImage multilangImage in digitalCommonDigit.Digit.Image.MultilangImage)
+                                    {
+                                        if (multilangImage.LangCode == "All")
+                                            comboBoxSetText(comboBox_image, multilangImage.ImageSet.ImageIndex);
+                                    }
+                                    if (digitalCommonDigit.Digit.Image.MultilangImageUnit != null)
+                                    {
+                                        foreach (MultilangImage multilangImage in digitalCommonDigit.Digit.Image.MultilangImageUnit)
+                                        {
+                                            if (multilangImage.LangCode == null && comboBox_separatorF.SelectedIndex < 0)
+                                                comboBoxSetText(comboBox_separatorF, multilangImage.ImageSet.ImageIndex);
+                                            if (multilangImage.LangCode == "All")
+                                                comboBoxSetText(comboBox_separatorF, multilangImage.ImageSet.ImageIndex);
+                                        }
+                                    }
+                                    Alignment2ToString(comboBox_alignment, digitalCommonDigit.Digit.Alignment);
+                                    if (digitalCommonDigit.Digit.Spacing != null)
+                                        numericUpDown_spacing.Value = (decimal)digitalCommonDigit.Digit.Spacing;
+                                    if (digitalCommonDigit.Separator != null)
+                                    {
+                                        comboBoxSetText(comboBox_unit, digitalCommonDigit.Separator.ImageIndex);
+                                        numericUpDown_unitX.Value = digitalCommonDigit.Separator.Coordinates.X;
+                                        numericUpDown_unitY.Value = digitalCommonDigit.Separator.Coordinates.Y;
+                                    }
+                                }
+                            }
+                            
+                        }
                     }
 
                     // стрелочный индикатор
@@ -896,10 +979,7 @@ namespace AmazFit_Watchface_2
                                 numericUpDownY_background.Value = activity.PointerProgress.Scale.Coordinates.Y;
                             }
 
-
-
                         }
-                        else checkBox_Use.Checked = false;
                     }
 
                     // круговая шкала
@@ -961,7 +1041,6 @@ namespace AmazFit_Watchface_2
                                     break;
                             }
                         }
-                        else checkBox_Use.Checked = false;
                     }
                
                     // линейная шкала
@@ -1009,7 +1088,6 @@ namespace AmazFit_Watchface_2
 
 
                             }
-                            else checkBox_Use.Checked = false;
                         }
                     }
             }
@@ -1515,19 +1593,19 @@ namespace AmazFit_Watchface_2
                 //    }
                 //    else checkBox_ActivityDistance.Checked = false;
 
-                //    if (Watch_Face.Activity.Pulse != null)
+                //    if (Watch_Face.Activity.HeartRate != null)
                 //    {
                 //        checkBox_ActivityPuls.Checked = true;
-                //        numericUpDown_ActivityPuls_StartCorner_X.Value = Watch_Face.Activity.Pulse.TopLeftX;
-                //        numericUpDown_ActivityPuls_StartCorner_Y.Value = Watch_Face.Activity.Pulse.TopLeftY;
-                //        numericUpDown_ActivityPuls_EndCorner_X.Value = Watch_Face.Activity.Pulse.BottomRightX;
-                //        numericUpDown_ActivityPuls_EndCorner_Y.Value = Watch_Face.Activity.Pulse.BottomRightY;
+                //        numericUpDown_ActivityPuls_StartCorner_X.Value = Watch_Face.Activity.HeartRate.TopLeftX;
+                //        numericUpDown_ActivityPuls_StartCorner_Y.Value = Watch_Face.Activity.HeartRate.TopLeftY;
+                //        numericUpDown_ActivityPuls_EndCorner_X.Value = Watch_Face.Activity.HeartRate.BottomRightX;
+                //        numericUpDown_ActivityPuls_EndCorner_Y.Value = Watch_Face.Activity.HeartRate.BottomRightY;
 
-                //        //comboBox_ActivityPuls_Image.Text = Watch_Face.Activity.Pulse.ImageIndex.ToString();
-                //        comboBoxSetText(comboBox_ActivityPuls_Image, Watch_Face.Activity.Pulse.ImageIndex);
-                //        numericUpDown_ActivityPuls_Count.Value = Watch_Face.Activity.Pulse.ImagesCount;
-                //        numericUpDown_ActivityPuls_Spacing.Value = Watch_Face.Activity.Pulse.Spacing;
-                //        AlignmentToString(comboBox_ActivityPuls_Alignment, Watch_Face.Activity.Pulse.Alignment);
+                //        //comboBox_ActivityPuls_Image.Text = Watch_Face.Activity.HeartRate.ImageIndex.ToString();
+                //        comboBoxSetText(comboBox_ActivityPuls_Image, Watch_Face.Activity.HeartRate.ImageIndex);
+                //        numericUpDown_ActivityPuls_Count.Value = Watch_Face.Activity.HeartRate.ImagesCount;
+                //        numericUpDown_ActivityPuls_Spacing.Value = Watch_Face.Activity.HeartRate.Spacing;
+                //        AlignmentToString(comboBox_ActivityPuls_Alignment, Watch_Face.Activity.HeartRate.Alignment);
                 //        //comboBox_ActivityPuls_Alignment.Text = Alignment;
                 //    }
                 //    else checkBox_ActivityPuls.Checked = false;
@@ -2188,13 +2266,13 @@ namespace AmazFit_Watchface_2
                 //    }
                 //    else checkBox_Shortcuts_Steps.Checked = false;
 
-                //    if (Watch_Face.Shortcuts.Pulse != null && Watch_Face.Shortcuts.Pulse.Element != null)
+                //    if (Watch_Face.Shortcuts.HeartRate != null && Watch_Face.Shortcuts.HeartRate.Element != null)
                 //    {
                 //        checkBox_Shortcuts_Puls.Checked = true;
-                //        numericUpDown_Shortcuts_Puls_X.Value = Watch_Face.Shortcuts.Pulse.Element.TopLeftX;
-                //        numericUpDown_Shortcuts_Puls_Y.Value = Watch_Face.Shortcuts.Pulse.Element.TopLeftY;
-                //        numericUpDown_Shortcuts_Puls_Width.Value = Watch_Face.Shortcuts.Pulse.Element.Width;
-                //        numericUpDown_Shortcuts_Puls_Height.Value = Watch_Face.Shortcuts.Pulse.Element.Height;
+                //        numericUpDown_Shortcuts_Puls_X.Value = Watch_Face.Shortcuts.HeartRate.Element.TopLeftX;
+                //        numericUpDown_Shortcuts_Puls_Y.Value = Watch_Face.Shortcuts.HeartRate.Element.TopLeftY;
+                //        numericUpDown_Shortcuts_Puls_Width.Value = Watch_Face.Shortcuts.HeartRate.Element.Width;
+                //        numericUpDown_Shortcuts_Puls_Height.Value = Watch_Face.Shortcuts.HeartRate.Element.Height;
                 //    }
                 //    else checkBox_Shortcuts_Puls.Checked = false;
 
@@ -2335,6 +2413,19 @@ namespace AmazFit_Watchface_2
                 //    checkBox_MotiomAnimation.Checked = false;
                 //}
                 //#endregion
+        }
+
+        private bool OneCoordinates(List<Coordinates> coordinates)
+        {
+            if (coordinates.Count == 1) return true;
+            bool result = true;
+            long x = coordinates[0].X;
+            long y = coordinates[0].Y;
+            foreach(Coordinates coordinate in coordinates)
+            {
+                if (x != coordinate.X || y != coordinate.Y) result = false;
+            }
+            return result;
         }
 
         // формируем JSON файл из настроек
@@ -3111,7 +3202,7 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region HeartRate
-            
+
             panel_pictures = panel_HeartRate_pictures;
             panel_text = panel_HeartRate_text;
             panel_hand = panel_HeartRate_hand;
@@ -3119,6 +3210,18 @@ namespace AmazFit_Watchface_2
             panel_scaleLinear = panel_HeartRate_scaleLinear;
 
             AddActivity(panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "HeartRate");
+
+            #endregion
+
+            #region PAI
+
+            panel_pictures = panel_PAI_pictures;
+            panel_text = panel_PAI_text;
+            panel_hand = panel_PAI_hand;
+            panel_scaleCircle = panel_PAI_scaleCircle;
+            panel_scaleLinear = panel_PAI_scaleLinear;
+
+            AddActivity(panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "PAI");
 
             #endregion
 
@@ -3131,6 +3234,20 @@ namespace AmazFit_Watchface_2
             panel_scaleLinear = panel_Distance_scaleLinear;
 
             AddActivity(panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "Distance");
+
+            #endregion
+
+            #region Weather
+
+            panel_pictures = panel_Weather_pictures;
+            panel_text = panel_Weather_text;
+            panel_hand = panel_Weather_hand;
+            panel_scaleCircle = panel_Weather_scaleCircle;
+            panel_scaleLinear = panel_Weather_scaleLinear;
+            Panel panel_text_min = panel_Weather_textMin;
+            Panel panel_text_max = panel_Weather_textMax;
+
+            AddActivityWeather(panel_pictures, panel_text, panel_text_min, panel_text_max, panel_hand, panel_scaleCircle, panel_scaleLinear);
 
             #endregion
 
@@ -3309,18 +3426,18 @@ namespace AmazFit_Watchface_2
             //    if ((checkBox_ActivityPuls.Checked) && (comboBox_ActivityPuls_Image.SelectedIndex >= 0))
             //    {
             //        if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
-            //        if (Watch_Face.Activity.Pulse == null) Watch_Face.Activity.Pulse = new Number();
+            //        if (Watch_Face.Activity.HeartRate == null) Watch_Face.Activity.HeartRate = new Number();
 
-            //        Watch_Face.Activity.Pulse.ImageIndex = Int32.Parse(comboBox_ActivityPuls_Image.Text);
-            //        Watch_Face.Activity.Pulse.ImagesCount = (int)numericUpDown_ActivityPuls_Count.Value;
-            //        Watch_Face.Activity.Pulse.TopLeftX = (int)numericUpDown_ActivityPuls_StartCorner_X.Value;
-            //        Watch_Face.Activity.Pulse.TopLeftY = (int)numericUpDown_ActivityPuls_StartCorner_Y.Value;
-            //        Watch_Face.Activity.Pulse.BottomRightX = (int)numericUpDown_ActivityPuls_EndCorner_X.Value;
-            //        Watch_Face.Activity.Pulse.BottomRightY = (int)numericUpDown_ActivityPuls_EndCorner_Y.Value;
+            //        Watch_Face.Activity.HeartRate.ImageIndex = Int32.Parse(comboBox_ActivityPuls_Image.Text);
+            //        Watch_Face.Activity.HeartRate.ImagesCount = (int)numericUpDown_ActivityPuls_Count.Value;
+            //        Watch_Face.Activity.HeartRate.TopLeftX = (int)numericUpDown_ActivityPuls_StartCorner_X.Value;
+            //        Watch_Face.Activity.HeartRate.TopLeftY = (int)numericUpDown_ActivityPuls_StartCorner_Y.Value;
+            //        Watch_Face.Activity.HeartRate.BottomRightX = (int)numericUpDown_ActivityPuls_EndCorner_X.Value;
+            //        Watch_Face.Activity.HeartRate.BottomRightY = (int)numericUpDown_ActivityPuls_EndCorner_Y.Value;
 
-            //        Watch_Face.Activity.Pulse.Spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
+            //        Watch_Face.Activity.HeartRate.Spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
             //        string Alignment = StringToAlignment(comboBox_ActivityPuls_Alignment.SelectedIndex);
-            //        Watch_Face.Activity.Pulse.Alignment = Alignment;
+            //        Watch_Face.Activity.HeartRate.Alignment = Alignment;
             //    }
 
             //    // пульс набором иконок
@@ -4461,12 +4578,12 @@ namespace AmazFit_Watchface_2
             //    if (checkBox_Shortcuts_Puls.Checked)
             //    {
             //        if (Watch_Face.Shortcuts == null) Watch_Face.Shortcuts = new Shortcuts();
-            //        if (Watch_Face.Shortcuts.Pulse == null) Watch_Face.Shortcuts.Pulse = new Shortcut();
-            //        Watch_Face.Shortcuts.Pulse.Element = new Element();
-            //        Watch_Face.Shortcuts.Pulse.Element.TopLeftX = (int)numericUpDown_Shortcuts_Puls_X.Value;
-            //        Watch_Face.Shortcuts.Pulse.Element.TopLeftY = (int)numericUpDown_Shortcuts_Puls_Y.Value;
-            //        Watch_Face.Shortcuts.Pulse.Element.Width = (int)numericUpDown_Shortcuts_Puls_Width.Value;
-            //        Watch_Face.Shortcuts.Pulse.Element.Height = (int)numericUpDown_Shortcuts_Puls_Height.Value;
+            //        if (Watch_Face.Shortcuts.HeartRate == null) Watch_Face.Shortcuts.HeartRate = new Shortcut();
+            //        Watch_Face.Shortcuts.HeartRate.Element = new Element();
+            //        Watch_Face.Shortcuts.HeartRate.Element.TopLeftX = (int)numericUpDown_Shortcuts_Puls_X.Value;
+            //        Watch_Face.Shortcuts.HeartRate.Element.TopLeftY = (int)numericUpDown_Shortcuts_Puls_Y.Value;
+            //        Watch_Face.Shortcuts.HeartRate.Element.Width = (int)numericUpDown_Shortcuts_Puls_Width.Value;
+            //        Watch_Face.Shortcuts.HeartRate.Element.Height = (int)numericUpDown_Shortcuts_Puls_Height.Value;
             //    }
 
             //    if (checkBox_Shortcuts_Weather.Checked)
@@ -4597,6 +4714,467 @@ namespace AmazFit_Watchface_2
             });
             JsonToTree(richTextBox_JsonText.Text);
             JSON_Modified = true;
+
+            //if (checkBox_UseID.Checked)
+            //{
+            //    int ID = 0;
+            //    if (!Int32.TryParse(textBox_WatchfaceID.Text, out ID))
+            //    {
+                    
+            //    }
+
+            //    string fileNameOnly = Path.GetFileNameWithoutExtension(FileName);
+            //    string path = Path.GetDirectoryName(FileName);
+            //    path = Path.Combine(path, fileNameOnly);
+            //    string JSONFileName = Path.Combine(path, "WatchfaceID.json");
+
+            //    using (FileStream fileStream = File.OpenRead(FileName))
+            //    {
+            //        BinaryReader _reader = new BinaryReader(fileStream);
+            //        _reader.ReadBytes(18);
+            //        //fileStream.Position = 18;
+            //        int ID = _reader.ReadInt16();
+
+            //        WatchfaceID watchfaceID = new WatchfaceID();
+            //        watchfaceID.ID = ID;
+            //        watchfaceID.UseID = true;
+
+            //        string JSON_String = JsonConvert.SerializeObject(watchfaceID, Formatting.Indented, new JsonSerializerSettings
+            //        {
+            //            //DefaultValueHandling = DefaultValueHandling.Ignore,
+            //            NullValueHandling = NullValueHandling.Ignore
+            //        });
+            //        File.WriteAllText(JSONFileName, JSON_String, Encoding.UTF8);
+            //    } 
+            //}
+        }
+
+        private void AddActivityWeather(Panel panel_pictures, Panel panel_text, Panel panel_text_min, Panel panel_text_max, Panel panel_hand, Panel panel_scaleCircle, Panel panel_scaleLinear)
+        {
+            Activity activity = null;
+            CheckBox checkBox_Use;
+
+            // данные картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    if (activity == null) activity = new Activity();
+                    activity.ImageProgress = new ImageProgress();
+                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activity.ImageProgress.Coordinates = new List<Coordinates>();
+                    activity.ImageProgress.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    activity.ImageProgress.ImageSet.ImagesCount = 29;
+                    //activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    Coordinates coordinates = new Coordinates();
+                    coordinates.X = (long)numericUpDownX.Value;
+                    coordinates.Y = (long)numericUpDownY.Value;
+                    activity.ImageProgress.Coordinates.Add(coordinates);
+                }
+            }
+
+            // данные надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    ComboBox comboBox_separatorF = (ComboBox)panel_text.Controls[3];
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                    ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                    //CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                    ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                    ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (comboBox_imageError.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = Int32.Parse(comboBox_imageError.Text);
+
+                    if (comboBox_imageMinus.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = Int32.Parse(comboBox_imageMinus.Text);
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+                    
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (comboBox_separatorF.SelectedIndex >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_separatorF.Text);
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = Int32.Parse(comboBox_unit.Text);
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью min temperature
+            checkBox_Use = (CheckBox)panel_text_min.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text_min.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    ComboBox comboBox_unit = (ComboBox)panel_text_min.Controls[2];
+                    ComboBox comboBox_separatorF = (ComboBox)panel_text_min.Controls[3];
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text_min.Controls[4];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text_min.Controls[5];
+                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_min.Controls[6];
+                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_min.Controls[7];
+                    ComboBox comboBox_alignment = (ComboBox)panel_text_min.Controls[8];
+                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_min.Controls[9];
+                    //CheckBox checkBox_add_zero = (CheckBox)panel_text_min.Controls[10];
+                    ComboBox comboBox_imageError = (ComboBox)panel_text_min.Controls[10];
+                    ComboBox comboBox_imageMinus = (ComboBox)panel_text_min.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Min";
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (comboBox_imageError.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = Int32.Parse(comboBox_imageError.Text);
+
+                    if (comboBox_imageMinus.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = Int32.Parse(comboBox_imageMinus.Text);
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (comboBox_separatorF.SelectedIndex >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_separatorF.Text);
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = Int32.Parse(comboBox_unit.Text);
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью max temperature
+            checkBox_Use = (CheckBox)panel_text_max.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text_max.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    ComboBox comboBox_unit = (ComboBox)panel_text_max.Controls[2];
+                    ComboBox comboBox_separatorF = (ComboBox)panel_text_max.Controls[3];
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text_max.Controls[4];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text_max.Controls[5];
+                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_max.Controls[6];
+                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_max.Controls[7];
+                    ComboBox comboBox_alignment = (ComboBox)panel_text_max.Controls[8];
+                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_max.Controls[9];
+                    //CheckBox checkBox_add_zero = (CheckBox)panel_text_max.Controls[10];
+                    ComboBox comboBox_imageError = (ComboBox)panel_text_max.Controls[10];
+                    ComboBox comboBox_imageMinus = (ComboBox)panel_text_max.Controls[11];
+                    CheckBox checkBox_follow = (CheckBox)panel_text_max.Controls[12];
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Max";
+                    if (!checkBox_follow.Checked) digitalCommonDigit.CombingMode = "Single";
+                    //digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (comboBox_imageError.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = Int32.Parse(comboBox_imageError.Text);
+
+                    if (comboBox_imageMinus.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = Int32.Parse(comboBox_imageMinus.Text);
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (comboBox_separatorF.SelectedIndex >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_separatorF.Text);
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = Int32.Parse(comboBox_unit.Text);
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (activity == null) activity = new Activity();
+                    activity.PointerProgress = new ClockHand();
+                    activity.PointerProgress.X = (long)numericUpDownX.Value;
+                    activity.PointerProgress.Y = (long)numericUpDownY.Value;
+                    activity.PointerProgress.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.PointerProgress.EndAngle = (float)numericUpDown_endAngle.Value;
+
+                    activity.PointerProgress.Pointer = new ImageCoord();
+                    activity.PointerProgress.Pointer.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    activity.PointerProgress.Pointer.Coordinates = new Coordinates();
+                    activity.PointerProgress.Pointer.Coordinates.X = (long)numericUpDown_offsetX.Value;
+                    activity.PointerProgress.Pointer.Coordinates.Y = (long)numericUpDown_offsetY.Value;
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        activity.PointerProgress.Cover = new ImageCoord();
+                        activity.PointerProgress.Cover.ImageIndex = Int32.Parse(comboBox_imageCentr.Text);
+                        activity.PointerProgress.Cover.Coordinates = new Coordinates();
+                        activity.PointerProgress.Cover.Coordinates.X = (long)numericUpDownX_centr.Value;
+                        activity.PointerProgress.Cover.Coordinates.Y = (long)numericUpDownY_centr.Value;
+                    }
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        activity.PointerProgress.Scale = new MultilangImageCoord();
+                        activity.PointerProgress.Scale.Coordinates = new Coordinates();
+                        activity.PointerProgress.Scale.Coordinates.X = (long)numericUpDownX_background.Value;
+                        activity.PointerProgress.Scale.Coordinates.Y = (long)numericUpDownY_background.Value;
+                        activity.PointerProgress.Scale.ImageSet = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_imageBackground.Text);
+                        activity.PointerProgress.Scale.ImageSet.Add(multilangImage);
+                    }
+                }
+            }
+
+            // данные круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                if ((radioButton_image.Checked && comboBox_image.SelectedIndex >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.AngleSettings = new AngleSettings();
+                    if (radioButton_image.Checked && comboBox_image.SelectedIndex >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = Int32.Parse(comboBox_image.Text);
+                    }
+                    else
+                    {
+                        Color color = comboBox_color.BackColor;
+                        Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+                        string colorStr = ColorTranslator.ToHtml(new_color);
+                        colorStr = colorStr.Replace("#", "0xFF");
+                        activity.ProgressBar.Color = colorStr;
+                    }
+
+                    if (comboBox_background.SelectedIndex >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = Int32.Parse(comboBox_background.Text);
+
+                    activity.ProgressBar.AngleSettings.X = (long)numericUpDownX.Value;
+                    activity.ProgressBar.AngleSettings.Y = (long)numericUpDownY.Value;
+                    activity.ProgressBar.AngleSettings.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.ProgressBar.AngleSettings.EndAngle = (float)numericUpDown_endAngle.Value;
+                    activity.ProgressBar.AngleSettings.Radius = (float)numericUpDown_radius.Value;
+
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+
+                    switch (comboBox_flatness.SelectedIndex)
+                    {
+                        case 1:
+                            activity.ProgressBar.Flatness = 90;
+                            break;
+                        case 2:
+                            activity.ProgressBar.Flatness = 180;
+                            break;
+                        default:
+                            activity.ProgressBar.Flatness = 0;
+                            break;
+                    }
+                }
+            }
+
+            // данные линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                if ((radioButton_image.Checked && comboBox_image.SelectedIndex >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.LinearSettings = new LinearSettings();
+                    if (radioButton_image.Checked && comboBox_image.SelectedIndex >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = Int32.Parse(comboBox_image.Text);
+                    }
+                    else
+                    {
+                        Color color = comboBox_color.BackColor;
+                        Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+                        string colorStr = ColorTranslator.ToHtml(new_color);
+                        colorStr = colorStr.Replace("#", "0xFF");
+                        activity.ProgressBar.Color = colorStr;
+                    }
+                    if (comboBox_pointer.SelectedIndex >= 0)
+                        activity.ProgressBar.PointerImageIndex = Int32.Parse(comboBox_pointer.Text);
+                    if (comboBox_background.SelectedIndex >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = Int32.Parse(comboBox_background.Text);
+
+                    activity.ProgressBar.LinearSettings.StartX = (long)numericUpDownX.Value;
+                    activity.ProgressBar.LinearSettings.StartY = (long)numericUpDownY.Value;
+                    long endX = (long)(numericUpDownX.Value + numericUpDown_length.Value);
+                    activity.ProgressBar.LinearSettings.EndX = endX;
+                    activity.ProgressBar.LinearSettings.EndY = (long)numericUpDownY.Value;
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                }
+
+            }
+
+            if (activity != null)
+            {
+                activity.Type = "Weather";
+                if (Watch_Face.System == null) Watch_Face.System = new SystemAmazfit();
+                if (Watch_Face.System.Activity == null) Watch_Face.System.Activity = new List<Activity>();
+                Watch_Face.System.Activity.Add(activity);
+            }
         }
 
         private void AddActivity(Panel panel_pictures, Panel panel_text, Panel panel_hand, Panel panel_scaleCircle, Panel panel_scaleLinear, string type)
@@ -5094,6 +5672,80 @@ namespace AmazFit_Watchface_2
         }
 
         // сбрасываем все настройки отображения
+        private void checkBoxUseClear()
+        {
+            checkBox_Hour_Use.Checked = false;
+            checkBox_Minute_Use.Checked = false;
+            checkBox_Second_Use.Checked = false;
+            checkBox_12h_Use.Checked = false;
+
+            checkBox_Hour_hand_Use.Checked = false;
+            checkBox_Minute_hand_Use.Checked = false;
+            checkBox_Second_hand_Use.Checked = false;
+
+            checkBox__Year_text_Use.Checked = false;
+            checkBox_Month_Use.Checked = false;
+            checkBox_Month_pictures_Use.Checked = false;
+            checkBox_Month_hand_Use.Checked = false;
+            checkBox_Day_Use.Checked = false;
+            checkBox_Day_hand_Use.Checked = false;
+            checkBox_DOW_pictures_Use.Checked = false;
+            checkBox_DOW_hand_Use.Checked = false;
+
+            checkBox_Bluetooth_Use.Checked = false;
+            checkBox_Lock_Use.Checked = false;
+            checkBox_Alarm_Use.Checked = false;
+            checkBox_DND_Use.Checked = false;
+
+            checkBox_Battery_pictures_Use.Checked = false;
+            checkBox_Battery_Use.Checked = false;
+            checkBox_Battery_hand_Use.Checked = false;
+            checkBox_Battery_scaleCircle_Use.Checked = false;
+            checkBox_Battery_scaleLinear_Use.Checked = false;
+
+            checkBox_Steps_pictures_Use.Checked = false;
+            checkBox_Steps_Use.Checked = false;
+            checkBox_Steps_hand_Use.Checked = false;
+            checkBox_Steps_scaleCircle_Use.Checked = false;
+            checkBox_Steps_scaleLinear_Use.Checked = false;
+
+            checkBox_Calories_pictures_Use.Checked = false;
+            checkBox_Calories_Use.Checked = false;
+            checkBox_Calories_hand_Use.Checked = false;
+            checkBox_Calories_scaleCircle_Use.Checked = false;
+            checkBox_Calories_scaleLinear_Use.Checked = false;
+
+            checkBox_HeartRate_pictures_Use.Checked = false;
+            checkBox_HeartRate_Use.Checked = false;
+            checkBox_HeartRate_hand_Use.Checked = false;
+            checkBox_HeartRate_scaleCircle_Use.Checked = false;
+            checkBox_HeartRate_scaleLinear_Use.Checked = false;
+
+            checkBox_PAI_pictures_Use.Checked = false;
+            checkBox_PAI_Use.Checked = false;
+            checkBox_PAI_hand_Use.Checked = false;
+            checkBox_PAI_scaleCircle_Use.Checked = false;
+            checkBox_PAI_scaleLinear_Use.Checked = false;
+
+            checkBox_Distance_pictures_Use.Checked = false;
+            checkBox_Distance_Use.Checked = false;
+            checkBox_Distance_hand_Use.Checked = false;
+            checkBox_Distance_scaleCircle_Use.Checked = false;
+            checkBox_Distance_scaleLinear_Use.Checked = false;
+
+
+
+            checkBox_Weather_pictures_Use.Checked = false;
+            checkBox_Weather_Use.Checked = false;
+            checkBox_Weather_UseMin.Checked = false;
+            checkBox_Weather_UseMax.Checked = false;
+            checkBox_Weather_hand_Use.Checked = false;
+            checkBox_Weather_scaleCircle_Use.Checked = false;
+            checkBox_Weather_scaleLinear_Use.Checked = false;
+            //TODO добавить отключение чекбоксов для активностей
+
+
+        }
         private void SettingsClear()
         {
             comboBox_Background_image.Items.Clear();
@@ -5327,6 +5979,37 @@ namespace AmazFit_Watchface_2
             comboBox_HeartRate_scaleLinear_image_background.Items.Clear();
             comboBox_HeartRate_scaleLinear_image_background.Text = "";
 
+            comboBox_PAI_pictures_image.Items.Clear();
+            comboBox_PAI_pictures_image.Text = "";
+
+            comboBox_PAI_image.Items.Clear();
+            comboBox_PAI_image.Text = "";
+            comboBox_PAI_icon.Items.Clear();
+            comboBox_PAI_icon.Text = "";
+            comboBox_PAI_unit.Items.Clear();
+            comboBox_PAI_unit.Text = "";
+            comboBox_PAI_imageError.Items.Clear();
+            comboBox_PAI_imageError.Text = "";
+
+            comboBox_PAI_hand_image.Items.Clear();
+            comboBox_PAI_hand_image.Text = "";
+            comboBox_PAI_hand_imageCentr.Items.Clear();
+            comboBox_PAI_hand_imageCentr.Text = "";
+            comboBox_PAI_hand_imageBackground.Items.Clear();
+            comboBox_PAI_hand_imageBackground.Text = "";
+
+            comboBox_PAI_scaleCircle_image.Items.Clear();
+            comboBox_PAI_scaleCircle_image.Text = "";
+            comboBox_PAI_scaleCircle_image_background.Items.Clear();
+            comboBox_PAI_scaleCircle_image_background.Text = "";
+
+            comboBox_PAI_scaleLinear_image.Items.Clear();
+            comboBox_PAI_scaleLinear_image.Text = "";
+            comboBox_PAI_scaleLinear_image_pointer.Items.Clear();
+            comboBox_PAI_scaleLinear_image_pointer.Text = "";
+            comboBox_PAI_scaleLinear_image_background.Items.Clear();
+            comboBox_PAI_scaleLinear_image_background.Text = "";
+
             comboBox_Distance_pictures_image.Items.Clear();
             comboBox_Distance_pictures_image.Text = "";
 
@@ -5359,6 +6042,61 @@ namespace AmazFit_Watchface_2
             comboBox_Distance_scaleLinear_image_pointer.Text = "";
             comboBox_Distance_scaleLinear_image_background.Items.Clear();
             comboBox_Distance_scaleLinear_image_background.Text = "";
+
+            comboBox_Weather_pictures_image.Items.Clear();
+            comboBox_Weather_pictures_image.Text = "";
+
+            comboBox_Weather_image.Items.Clear();
+            comboBox_Weather_image.Text = "";
+            comboBox_Weather_icon.Items.Clear();
+            comboBox_Weather_icon.Text = "";
+            comboBox_Weather_unitF.Items.Clear();
+            comboBox_Weather_unitF.Text = "";
+            comboBox_Weather_imageError.Items.Clear();
+            comboBox_Weather_imageError.Text = "";
+            comboBox_Weather_imageMinus.Items.Clear();
+            comboBox_Weather_imageMinus.Text = "";
+
+            comboBox_Weather_hand_image.Items.Clear();
+            comboBox_Weather_hand_image.Text = "";
+            comboBox_Weather_hand_imageCentr.Items.Clear();
+            comboBox_Weather_hand_imageCentr.Text = "";
+            comboBox_Weather_hand_imageBackground.Items.Clear();
+            comboBox_Weather_hand_imageBackground.Text = "";
+
+            comboBox_Weather_scaleCircle_image.Items.Clear();
+            comboBox_Weather_scaleCircle_image.Text = "";
+            comboBox_Weather_scaleCircle_image_background.Items.Clear();
+            comboBox_Weather_scaleCircle_image_background.Text = "";
+
+            comboBox_Weather_scaleLinear_image.Items.Clear();
+            comboBox_Weather_scaleLinear_image.Text = "";
+            comboBox_Weather_scaleLinear_image_pointer.Items.Clear();
+            comboBox_Weather_scaleLinear_image_pointer.Text = "";
+            comboBox_Weather_scaleLinear_image_background.Items.Clear();
+            comboBox_Weather_scaleLinear_image_background.Text = "";
+
+            comboBox_Weather_imageMax.Items.Clear();
+            comboBox_Weather_imageMax.Text = "";
+            comboBox_Weather_iconMax.Items.Clear();
+            comboBox_Weather_iconMax.Text = "";
+            comboBox_Weather_unitFMax.Items.Clear();
+            comboBox_Weather_unitFMax.Text = "";
+            comboBox_Weather_imageErrorMax.Items.Clear();
+            comboBox_Weather_imageErrorMax.Text = "";
+            comboBox_Weather_imageMinusMax.Items.Clear();
+            comboBox_Weather_imageMinusMax.Text = "";
+
+            comboBox_Weather_imageMin.Items.Clear();
+            comboBox_Weather_imageMin.Text = "";
+            comboBox_Weather_iconMin.Items.Clear();
+            comboBox_Weather_iconMin.Text = "";
+            comboBox_Weather_unitFMin.Items.Clear();
+            comboBox_Weather_unitFMin.Text = "";
+            comboBox_Weather_imageErrorMin.Items.Clear();
+            comboBox_Weather_imageErrorMin.Text = "";
+            comboBox_Weather_imageMinusMin.Items.Clear();
+            comboBox_Weather_imageMinusMin.Text = "";
 
             // ********************
             //comboBox_Background.Items.Clear();
@@ -5654,6 +6392,22 @@ namespace AmazFit_Watchface_2
             comboBox_HeartRate_scaleLinear_image_pointer.Items.AddRange(ListImages.ToArray());
             comboBox_HeartRate_scaleLinear_image_background.Items.AddRange(ListImages.ToArray());
 
+            comboBox_PAI_pictures_image.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_image.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_icon.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_unit.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_imageError.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_hand_image.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_hand_imageCentr.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_hand_imageBackground.Items.AddRange(ListImages.ToArray());
+
+            comboBox_PAI_scaleCircle_image.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_scaleCircle_image_background.Items.AddRange(ListImages.ToArray());
+
+            comboBox_PAI_scaleLinear_image.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_scaleLinear_image_pointer.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_scaleLinear_image_background.Items.AddRange(ListImages.ToArray());
+
             comboBox_Distance_pictures_image.Items.AddRange(ListImages.ToArray());
             comboBox_Distance_image.Items.AddRange(ListImages.ToArray());
             comboBox_Distance_icon.Items.AddRange(ListImages.ToArray());
@@ -5670,6 +6424,39 @@ namespace AmazFit_Watchface_2
             comboBox_Distance_scaleLinear_image.Items.AddRange(ListImages.ToArray());
             comboBox_Distance_scaleLinear_image_pointer.Items.AddRange(ListImages.ToArray());
             comboBox_Distance_scaleLinear_image_background.Items.AddRange(ListImages.ToArray());
+
+
+
+
+            comboBox_Weather_pictures_image.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_image.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_icon.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_unitF.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_imageError.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_imageMinus.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_hand_image.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_hand_imageCentr.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_hand_imageBackground.Items.AddRange(ListImages.ToArray());
+
+            comboBox_Weather_scaleCircle_image.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_scaleCircle_image_background.Items.AddRange(ListImages.ToArray());
+
+            comboBox_Weather_scaleLinear_image.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_scaleLinear_image_pointer.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_scaleLinear_image_background.Items.AddRange(ListImages.ToArray());
+
+            comboBox_Weather_imageMax.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_iconMax.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_unitFMax.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_imageErrorMax.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_imageMinusMax.Items.AddRange(ListImages.ToArray());
+
+            comboBox_Weather_imageMin.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_iconMin.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_unitFMin.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_imageErrorMin.Items.AddRange(ListImages.ToArray());
+            comboBox_Weather_imageMinusMin.Items.AddRange(ListImages.ToArray());
+
 
             // ******************
 

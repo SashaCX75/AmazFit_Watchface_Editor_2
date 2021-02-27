@@ -7,7 +7,7 @@
     <ProjectGuid>{60CD7E95-9507-42E3-869F-5A677ECCE917}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AmazFit_Watchface_2</RootNamespace>
-    <AssemblyName>AmazFit_Watchface_Editor</AssemblyName>
+    <AssemblyName>AmazFit_Watchface_Editor_2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -225,6 +225,7 @@
     <Content Include="Mask\mask_gts_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\gtr-2-sport-obsidian-black.png" />
     <Content Include="Tools\GTR2_Packer.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

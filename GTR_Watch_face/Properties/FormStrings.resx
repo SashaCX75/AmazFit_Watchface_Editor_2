@@ -342,4 +342,7 @@
   <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
     <value>Отображение даты отдельными блоками не работает вместе с отображением даты в одну линию</value>
   </data>
+  <data name="Message_PNGFromOne_Text" xml:space="preserve">
+    <value>Нумерация PNG файлов должна начинаться с 1.</value>
+  </data>
 </root>

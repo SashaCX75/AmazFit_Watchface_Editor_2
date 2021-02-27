@@ -3,14 +3,15 @@
     /// <summary>набор настроек для предпросмотра</summary>
     public class WATCH_FACE_PREWIEV_SET
     {
-        public DateS Date { get; set; }
-        public TimeS Time { get; set; }
-        public ActivityS Activity { get; set; }
-        public StatusS Status { get; set; }
+        public DateSet Date { get; set; }
+        public TimeSet Time { get; set; }
+        public ActivitySet Activity { get; set; }
+        public WeatherSet Weather { get; set; }
+        public StatusSet Status { get; set; }
         public int Battery { get; set; }
     }
 
-    public class DateS
+    public class DateSet
     {
         public int Day { get; set; }
         public int Month { get; set; }
@@ -18,23 +19,44 @@
         public int Year { get; set; }
     }
 
-    public class TimeS
+    public class TimeSet
     {
         public int Hours { get; set; }
         public int Minutes { get; set; }
         public int Seconds { get; set; }
     }
 
-    public class ActivityS
+    public class ActivitySet
     {
-        public int Calories { get; set; }
-        public int Pulse { get; set; }
-        public int Distance { get; set; }
         public int Steps { get; set; }
         public int StepsGoal { get; set; }
+        public int Calories { get; set; }
+        public int HeartRate { get; set; }
+        public int PAI { get; set; }
+        public int Distance { get; set; }
+        public int StandUp { get; set; }
+        public int Stress { get; set; }
+        public int ActivityGoal { get; set; }
+        public int FatBurning { get; set; }
     }
 
-    public class StatusS
+    public class WeatherSet
+    {
+        public int Temperature { get; set; }
+        public int TemperatureMin { get; set; }
+        public int TemperatureMax { get; set; }
+        public int Icon { get; set; }
+        public bool TemperatureNoData { get; set; }
+        public bool TemperatureMinMaxNoData { get; set; }
+        public int UVindex { get; set; }
+        public int AirQuality { get; set; }
+        public int Humidity { get; set; }
+        public int WindForce { get; set; }
+        public int Altitude { get; set; }
+        public int AirPressure { get; set; }
+    }
+
+    public class StatusSet
     {
         public bool Bluetooth { get; set; }
         public bool Alarm { get; set; }

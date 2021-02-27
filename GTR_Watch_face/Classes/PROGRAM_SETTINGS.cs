@@ -36,6 +36,7 @@
         public bool ShowMiles = true;
         public bool ShowIn12hourFormat = true;
         public bool DoNotShowMaxMinTemp = false;
+        public bool SaveID = true;
 
         public string pack_unpack_dir { get; set; }
         public string unpack_command_GTR_2 = "--gtr2 47 --file";

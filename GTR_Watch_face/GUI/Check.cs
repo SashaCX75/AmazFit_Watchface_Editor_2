@@ -530,6 +530,22 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        private void checkBox_Weather_textMax_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+            CheckBox checkBox_follow = (CheckBox)controlCollection[12];
+
+            bool b = checkBox.Checked;
+            bool b2 = !checkBox_follow.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b && (i == 4 || i == 5 || i == 13 || i == 20 || i == 21)) controlCollection[i].Enabled = b2;
+            }
+        }
+
         private void checkBox_hand_Use_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = sender as CheckBox;

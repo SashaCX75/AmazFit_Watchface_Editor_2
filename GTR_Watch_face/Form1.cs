@@ -92,10 +92,11 @@ namespace AmazFit_Watchface_2
             InitializeComponent();
 
             Watch_Face_Preview_Set = new WATCH_FACE_PREWIEV_SET();
-            Watch_Face_Preview_Set.Activity = new ActivityS();
-            Watch_Face_Preview_Set.Date = new DateS();
-            Watch_Face_Preview_Set.Status = new StatusS();
-            Watch_Face_Preview_Set.Time = new TimeS();
+            Watch_Face_Preview_Set.Activity = new ActivitySet();
+            Watch_Face_Preview_Set.Date = new DateSet();
+            Watch_Face_Preview_Set.Status = new StatusSet();
+            Watch_Face_Preview_Set.Time = new TimeSet();
+            Watch_Face_Preview_Set.Weather = new WeatherSet();
 
             Watch_Face_Preview_TwoDigits = new WATCH_FACE_PREWIEV_TwoDigits();
             Watch_Face_Preview_TwoDigits.Date = new DateP();
@@ -129,8 +130,25 @@ namespace AmazFit_Watchface_2
             tabControl1.TabPages[0].Parent = null;
             tabControl1.TabPages[2].Parent = null;
             tabControl1.TabPages[4].Parent = null;
+#if DEBUG
             tabControl1.SelectTab(1);
             tabControl_EditParameters.SelectTab(3);
+#endif
+
+#if !DEBUG
+            tabControl_SystemActivity.TabPages[5].Parent = null;
+            tabControl_SystemActivity.TabPages[5].Parent = null;
+            tabControl_SystemActivity.TabPages[5].Parent = null;
+            tabControl_SystemActivity.TabPages[5].Parent = null;
+
+            tabControl_SystemWeather.TabPages[1].Parent = null;
+            tabControl_SystemWeather.TabPages[1].Parent = null;
+            tabControl_SystemWeather.TabPages[1].Parent = null;
+            tabControl_SystemWeather.TabPages[1].Parent = null;
+            tabControl_SystemWeather.TabPages[1].Parent = null;
+            tabControl_SystemWeather.TabPages[1].Parent = null;
+            tabControl_SystemWeather.TabPages[1].Parent = null;
+#endif
 
             splitContainer_EditParameters.Panel1Collapsed = false;
             splitContainer_EditParameters.Panel2Collapsed = true;
@@ -272,8 +290,16 @@ namespace AmazFit_Watchface_2
             comboBox_HeartRate_alignment.SelectedIndex = 0;
             comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
 
+            comboBox_PAI_alignment.SelectedIndex = 0;
+            comboBox_PAI_scaleCircle_flatness.SelectedIndex = 0;
+
             comboBox_Distance_alignment.SelectedIndex = 0;
             comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
+
+            comboBox_Weather_alignment.SelectedIndex = 0;
+            comboBox_Weather_alignmentMin.SelectedIndex = 0;
+            comboBox_Weather_alignmentMax.SelectedIndex = 0;
+            comboBox_Weather_scaleCircle_flatness.SelectedIndex = 0;
 
             //comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
             //comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
@@ -330,6 +356,7 @@ namespace AmazFit_Watchface_2
             checkBox_ShowMiles.Checked = Program_Settings.ShowMiles;
             checkBox_ShowIn12hourFormat.Checked = Program_Settings.ShowIn12hourFormat;
             checkBox_DoNotShowMaxMinTemp.Checked = Program_Settings.DoNotShowMaxMinTemp;
+            checkBox_SaveID.Checked = Program_Settings.SaveID;
 
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
 
@@ -337,6 +364,8 @@ namespace AmazFit_Watchface_2
                 splitContainer1.SplitterDistance = Program_Settings.Splitter_Pos;
 
             Settings_Load = false;
+
+            if (Program_Settings.SaveID) checkBox_UseID.Checked = true;
 
             SetPreferences1();
             PreviewView = true;
@@ -704,6 +733,8 @@ namespace AmazFit_Watchface_2
                         path = Path.Combine(path, fileNameOnly);
                         string newFullName = Path.Combine(path, fileNameOnly + ".json");
 
+                        if (Program_Settings.SaveID) SaveID(newFullName_bin);
+
                         if (Program_Settings.Settings_AfterUnpack_Dialog)
                         {
                             if (File.Exists(newFullName))
@@ -728,6 +759,33 @@ namespace AmazFit_Watchface_2
                 // сюда писать команды при ошибке вызова 
             }
             Logger.WriteLine("* _packed_unpack_bin (end)");
+        }
+
+        private void SaveID(string FileName)
+        {
+            string fileNameOnly = Path.GetFileNameWithoutExtension(FileName);
+            string path = Path.GetDirectoryName(FileName);
+            path = Path.Combine(path, fileNameOnly);
+            string JSONFileName = Path.Combine(path, "WatchfaceID.json");
+
+            using (FileStream fileStream = File.OpenRead(FileName))
+            {
+                BinaryReader _reader = new BinaryReader(fileStream);
+                _reader.ReadBytes(18);
+                //fileStream.Position = 18;
+                int ID = _reader.ReadInt32();
+
+                WatchfaceID watchfaceID = new WatchfaceID();
+                watchfaceID.ID = ID;
+                watchfaceID.UseID = true;
+
+                string JSON_String = JsonConvert.SerializeObject(watchfaceID, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                File.WriteAllText(JSONFileName, JSON_String, Encoding.UTF8);
+            }
         }
 
         private void button_unpack_Click(object sender, EventArgs e)
@@ -1304,6 +1362,24 @@ namespace AmazFit_Watchface_2
                         if (File.Exists(newFullName_bin))
                         {
                             Logger.WriteLine("newFullName_bin");
+                            if (checkBox_UseID.Checked)
+                            {
+                                using (FileStream fileStream = File.OpenWrite(newFullName_bin))
+                                {
+                                    int ID = 0;
+                                    Int32.TryParse(textBox_WatchfaceID.Text, out ID);
+                                    if (ID >= 1000)
+                                    {
+                                        byte[] arr = BitConverter.GetBytes(ID);
+                                        fileStream.Position = 18;
+                                        fileStream.WriteByte(arr[0]);
+                                        fileStream.WriteByte(arr[1]);
+                                        fileStream.WriteByte(arr[2]);
+                                        fileStream.WriteByte(arr[3]);
+                                        fileStream.Flush();
+                                    }
+                                }
+                            }
                             File.Delete(newFullName_cmp);
                             this.BringToFront();
                             //if (radioButton_Settings_Pack_Dialog.Checked)
@@ -1601,7 +1677,7 @@ namespace AmazFit_Watchface_2
                             Value = loadedImage,
                             ImageLayout = ZoomType,
 
-                        }); 
+                        });
                         RowNew.Cells.Add(new DataGridViewImageCell()
                         {
                             Value = loadedImage,
@@ -1619,20 +1695,34 @@ namespace AmazFit_Watchface_2
                 catch
                 {
                     // Could not load the image - probably related to Windows file system permissions.
-                    MessageBox.Show(Properties.FormStrings.Message_error_Image_Text1 + 
-                        file.FullName.Substring(file.FullName.LastIndexOf('\\')+1) + Properties.FormStrings.Message_error_Image_Text2);
+                    MessageBox.Show(Properties.FormStrings.Message_error_Image_Text1 +
+                        file.FullName.Substring(file.FullName.LastIndexOf('\\') + 1) + Properties.FormStrings.Message_error_Image_Text2);
                 }
             }
             //Logger.WriteLine("Загрузили все файлы изображений");
 
             //loadedImage.Dispose();
-            int LastImage = 0;
-            Int32.TryParse(ListImages.Last(), out LastImage);
-            LastImage++;
 #if !DEBUG
-            if (count != LastImage) MessageBox.Show(Properties.FormStrings.Message_PNGmissing_Text1 + Environment.NewLine +
-                 Properties.FormStrings.Message_PNGmissing_Text2, Properties.FormStrings.Message_Error_Caption, 
-                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            int LastImage = -1;
+            if (ListImages.Count > 0)
+            {
+                Int32.TryParse(ListImages[0], out LastImage);
+                if (LastImage != 1)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_PNGFromOne_Text, 
+                        Properties.FormStrings.Message_Error_Caption,
+                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Int32.TryParse(ListImages.Last(), out LastImage);
+                    LastImage++;
+
+                    if (count != LastImage) MessageBox.Show(Properties.FormStrings.Message_PNGmissing_Text1 + Environment.NewLine +
+                         Properties.FormStrings.Message_PNGmissing_Text2, Properties.FormStrings.Message_Error_Caption,
+                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
 #endif
             if (ErrorImage.Count > 0)
             {
@@ -1673,9 +1763,27 @@ namespace AmazFit_Watchface_2
 
             JSON_read();
             //Logger.WriteLine("Установили значения в соответствии с json файлом");
-
             string path = Path.GetDirectoryName(fullfilename);
-            string newFullName = Path.Combine(path, "PreviewStates.json");
+            string newFullName = Path.Combine(path, "WatchfaceID.json");
+            if (File.Exists(newFullName))
+            {
+                WatchfaceID watchfaceID = new WatchfaceID();
+                watchfaceID = JsonConvert.DeserializeObject<WatchfaceID>
+                                (File.ReadAllText(newFullName), new JsonSerializerSettings
+                                {
+                                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                                    NullValueHandling = NullValueHandling.Ignore
+                                });
+                checkBox_UseID.Checked = watchfaceID.UseID;
+                textBox_WatchfaceID.Text = watchfaceID.ID.ToString();
+            }
+            else
+            {
+                textBox_WatchfaceID.Text = "";
+                checkBox_UseID.Checked = false;
+            }
+
+            newFullName = Path.Combine(path, "PreviewStates.json");
             if (File.Exists(newFullName))
             {
                 Logger.WriteLine("Load PreviewStates.json");
@@ -1737,7 +1845,7 @@ namespace AmazFit_Watchface_2
             //gPanel.Clear(panel_Preview.BackColor);
             float scale = 1.0f;
             //if (panel_Preview.Height < 300) scale = 0.5f;
-            #region BackgroundImage
+#region BackgroundImage
             Logger.WriteLine("BackgroundImage");
             Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
             if (radioButton_GTS2.Checked)
@@ -1745,7 +1853,7 @@ namespace AmazFit_Watchface_2
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-            #endregion
+#endregion
 
             Logger.WriteLine("PreviewToBitmap");
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
@@ -1790,10 +1898,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set1.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set1.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set1.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set1.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set1.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set1.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set1.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set1.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set1.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set1.Checked;
@@ -1817,10 +1926,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set2.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set2.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set2.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set2.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set2.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set2.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set2.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set2.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set2.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set2.Checked;
@@ -1844,10 +1954,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set3.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set3.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set3.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set3.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set3.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set3.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set3.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set3.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set3.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set3.Checked;
@@ -1871,10 +1982,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set4.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set4.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set4.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set4.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set4.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set4.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set4.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set4.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set4.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set4.Checked;
@@ -1898,10 +2010,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set5.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set5.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set5.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set5.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set5.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set5.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set5.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set5.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set5.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set5.Checked;
@@ -1925,10 +2038,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set6.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set6.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set6.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set6.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set6.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set6.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set6.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set6.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set6.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set6.Checked;
@@ -1952,10 +2066,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set7.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set7.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set7.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set7.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set7.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set7.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set7.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set7.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set7.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set7.Checked;
@@ -1979,10 +2094,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set8.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set8.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set8.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set8.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set8.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set8.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set8.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set8.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set8.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set8.Checked;
@@ -2006,10 +2122,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set9.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set9.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set9.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set9.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set9.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set9.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set9.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set9.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set9.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set9.Checked;
@@ -2033,10 +2150,11 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set10.Value;
             Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set10.Value;
-            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set10.Value;
+            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set10.Value;
             Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set10.Value;
             Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set10.Value;
             Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set10.Value;
+            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set10.Value;
 
             Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set10.Checked;
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set10.Checked;
@@ -2584,14 +2702,14 @@ namespace AmazFit_Watchface_2
                     });
                     File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
                     
-                    #region BackgroundImage 
+#region BackgroundImage 
                     Bitmap bitmapPreviewResize = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
                     if (radioButton_GTS2.Checked)
                     {
                         bitmapPreviewResize = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     }
                     Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
-                    #endregion
+#endregion
 
                     PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
@@ -2636,14 +2754,14 @@ namespace AmazFit_Watchface_2
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
 
-            #region BackgroundImage 
+#region BackgroundImage 
             Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
             if (radioButton_GTS2.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-            #endregion
+#endregion
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
@@ -3381,8 +3499,8 @@ namespace AmazFit_Watchface_2
             }
 
             numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
-            numericUpDown_WeatherSet_DayTemp.Value = numericUpDown_WeatherSet_Temp.Value;
-            numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+            numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
+            numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
             PreviewView = true;
@@ -3687,8 +3805,8 @@ namespace AmazFit_Watchface_2
 
         private void checkBox_WeatherSet_DayTemp_CheckedChanged(object sender, EventArgs e)
         {
-            numericUpDown_WeatherSet_NightTemp.Enabled = checkBox_WeatherSet_DayTemp.Checked;
-            numericUpDown_WeatherSet_DayTemp.Enabled = checkBox_WeatherSet_DayTemp.Checked;
+            numericUpDown_WeatherSet_MinTemp.Enabled = checkBox_WeatherSet_MaxMinTemp.Checked;
+            numericUpDown_WeatherSet_MaxTemp.Enabled = checkBox_WeatherSet_MaxMinTemp.Checked;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -3849,13 +3967,13 @@ namespace AmazFit_Watchface_2
                         {
                             Logger.WriteLine("SaveGIF SetPreferences1(" + i.ToString() + ")");
                             int WeatherSet_Temp = (int)numericUpDown_WeatherSet_Temp.Value;
-                            int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_DayTemp.Value;
-                            int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_NightTemp.Value;
+                            int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+                            int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_MinTemp.Value;
                             int WeatherSet_Icon = comboBox_WeatherSet_Icon.SelectedIndex;
 
                             numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
-                            numericUpDown_WeatherSet_DayTemp.Value = numericUpDown_WeatherSet_Temp.Value;
-                            numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+                            numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
+                            numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
                             PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
@@ -3871,8 +3989,8 @@ namespace AmazFit_Watchface_2
                             collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
 
                             numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
-                            numericUpDown_WeatherSet_DayTemp.Value = WeatherSet_DayTemp;
-                            numericUpDown_WeatherSet_NightTemp.Value = WeatherSet_NightTemp;
+                            numericUpDown_WeatherSet_MaxTemp.Value = WeatherSet_DayTemp;
+                            numericUpDown_WeatherSet_MinTemp.Value = WeatherSet_NightTemp;
                             comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
                         }
                     }
@@ -4809,25 +4927,12 @@ namespace AmazFit_Watchface_2
 
         private void linkLabel_py_amazfit_tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/releases/tag/v0.2-beta");
+            System.Diagnostics.Process.Start("https://github.com/Tnxec2/py_amazfit_tools/tree/GTS2");
         }
 
         private void linkLabel_resunpacker_qzip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/amazfitbip/resunpacker_qzip");
-        }
-
-        private void linkLabel_help_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
-            //helpProvider1.SetHelpKeyword(this, "kratkaya_instruktsiya.htm");
-            //SendKeys.Send("{F1}");
-            //Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
-            string help_file = Application.StartupPath + Properties.FormStrings.File_ReadMy;
-            //string help_start = Properties.FormStrings.File_ReadMy_Start;
-            HelpNavigator navigator = HelpNavigator.Topic;
-            //Help.ShowHelp(this, help_file, navigator, help_start);
-            Help.ShowHelp(this, help_file, navigator, "quick_guide.htm");
+            System.Diagnostics.Process.Start("https://4pda.ru/forum/index.php?showtopic=1015239&st=100#entry103520948");
         }
 
         private void checkBox_Shortcuts_Area_CheckedChanged(object sender, EventArgs e)
@@ -4861,16 +4966,34 @@ namespace AmazFit_Watchface_2
 
         private void checkBox_WeatherSet_Temp_Click(object sender, EventArgs e)
         {
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
             PreviewImage();
         }
 
         private void numericUpDown_WeatherSet_Temp_ValueChanged(object sender, EventArgs e)
         {
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
             PreviewImage();
         }
 
         private void comboBox_WeatherSet_Icon_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
             PreviewImage();
         }
 
@@ -5613,13 +5736,13 @@ namespace AmazFit_Watchface_2
             //        Watch_Face.Activity.Distance.Number.Spacing = (int)Math.Round(Watch_Face.Activity.Distance.Number.Spacing * scale);
             //    }
 
-            //    if (Watch_Face.Activity.Pulse != null)
+            //    if (Watch_Face.Activity.HeartRate != null)
             //    {
-            //        Watch_Face.Activity.Pulse.TopLeftX = (int)Math.Round(Watch_Face.Activity.Pulse.TopLeftX * scale);
-            //        Watch_Face.Activity.Pulse.TopLeftY = (int)Math.Round(Watch_Face.Activity.Pulse.TopLeftY * scale);
-            //        Watch_Face.Activity.Pulse.BottomRightX = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightX * scale);
-            //        Watch_Face.Activity.Pulse.BottomRightY = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightY * scale);
-            //        Watch_Face.Activity.Pulse.Spacing = (int)Math.Round(Watch_Face.Activity.Pulse.Spacing * scale);
+            //        Watch_Face.Activity.HeartRate.TopLeftX = (int)Math.Round(Watch_Face.Activity.HeartRate.TopLeftX * scale);
+            //        Watch_Face.Activity.HeartRate.TopLeftY = (int)Math.Round(Watch_Face.Activity.HeartRate.TopLeftY * scale);
+            //        Watch_Face.Activity.HeartRate.BottomRightX = (int)Math.Round(Watch_Face.Activity.HeartRate.BottomRightX * scale);
+            //        Watch_Face.Activity.HeartRate.BottomRightY = (int)Math.Round(Watch_Face.Activity.HeartRate.BottomRightY * scale);
+            //        Watch_Face.Activity.HeartRate.Spacing = (int)Math.Round(Watch_Face.Activity.HeartRate.Spacing * scale);
             //    }
 
             //    if (Watch_Face.Activity.PulseMeter != null)
@@ -5957,12 +6080,12 @@ namespace AmazFit_Watchface_2
             //        Watch_Face.Shortcuts.State.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.State.Element.Height * scale);
             //    }
 
-            //    if (Watch_Face.Shortcuts.Pulse != null && Watch_Face.Shortcuts.Pulse.Element != null)
+            //    if (Watch_Face.Shortcuts.HeartRate != null && Watch_Face.Shortcuts.HeartRate.Element != null)
             //    {
-            //        Watch_Face.Shortcuts.Pulse.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.TopLeftX * scale);
-            //        Watch_Face.Shortcuts.Pulse.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.TopLeftY * scale);
-            //        Watch_Face.Shortcuts.Pulse.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.Width * scale);
-            //        Watch_Face.Shortcuts.Pulse.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.Height * scale);
+            //        Watch_Face.Shortcuts.HeartRate.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.TopLeftX * scale);
+            //        Watch_Face.Shortcuts.HeartRate.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.TopLeftY * scale);
+            //        Watch_Face.Shortcuts.HeartRate.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.Width * scale);
+            //        Watch_Face.Shortcuts.HeartRate.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.Height * scale);
             //    }
 
             //    if (Watch_Face.Shortcuts.Weather != null && Watch_Face.Shortcuts.Weather.Element != null)
@@ -6245,9 +6368,25 @@ namespace AmazFit_Watchface_2
             saveString = saveString.Replace("\r", "");
             saveString = saveString.Replace("\n", Environment.NewLine);
             File.WriteAllText(fullfilename, saveString, Encoding.UTF8);
+
+            string path = Path.GetDirectoryName(fullfilename);
+            string IDFileName = Path.Combine(path, "WatchfaceID.json");
+            if (File.Exists(IDFileName) || checkBox_UseID.Checked)
+            {
+                WatchfaceID watchfaceID = new WatchfaceID();
+                watchfaceID.ID = Int32.Parse(textBox_WatchfaceID.Text);
+                watchfaceID.UseID = checkBox_UseID.Checked;
+
+                string JSON_String = JsonConvert.SerializeObject(watchfaceID, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                File.WriteAllText(IDFileName, JSON_String, Encoding.UTF8);
+            }
         }
 
-        #region JsonToTree
+#region JsonToTree
         private void JsonToTree(string stringJson)
         {
             var savedExpansionState = treeView_JsonTree.Nodes.GetExpansionState();
@@ -6354,6 +6493,59 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        private void checkBox_Weather_followMax_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = !checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                if (i == 4 || i == 5 || i == 13 || i == 20 || i == 21) controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_SaveID_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Settings_Load) return;
+            Program_Settings.SaveID = checkBox_SaveID.Checked;
+
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+
+        private void button_GenerateID_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            ushort rndID = (ushort)rnd.Next(1000, 65530);
+            textBox_WatchfaceID.Text = rndID.ToString();
+            JSON_Modified = true;
+            FormText();
+        }
+
+        private void checkBox_UseID_CheckedChanged(object sender, EventArgs e)
+        {
+            button_GenerateID.Enabled = checkBox_UseID.Checked;
+            if (checkBox_UseID.Checked)
+            {
+                int ID = 0;
+                if (!Int32.TryParse(textBox_WatchfaceID.Text, out ID))
+                {
+                    Random rnd = new Random();
+                    ushort rndID = (ushort)rnd.Next(1000, 65530);
+                    textBox_WatchfaceID.Text = rndID.ToString();
+                    JSON_Modified = true;
+                    FormText();
+                } 
+            }
+        }
+
+
 
 
 
@@ -6419,6 +6611,12 @@ public static class MouseСoordinates
     //public static int Y { get; set; }
     public static int X = -1;
     public static int Y = -1;
+}
+
+public class WatchfaceID
+{
+    public int ID { get; set; }
+    public bool UseID { get; set; }
 }
 
 static class Logger

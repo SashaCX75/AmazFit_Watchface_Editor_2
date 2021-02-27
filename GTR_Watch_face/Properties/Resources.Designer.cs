@@ -73,16 +73,6 @@ namespace AmazFit_Watchface_2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Amazfit_GTR_47mm {
-            get {
-                object obj = ResourceManager.GetObject("Amazfit_GTR_47mm", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Files_Clipboard_icon {
             get {
                 object obj = ResourceManager.GetObject("Files_Clipboard_icon", resourceCulture);
@@ -96,6 +86,16 @@ namespace AmazFit_Watchface_2.Properties {
         internal static System.Drawing.Bitmap Files_Copy_File_icon {
             get {
                 object obj = ResourceManager.GetObject("Files_Copy_File_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gtr_2_sport_obsidian_black {
+            get {
+                object obj = ResourceManager.GetObject("gtr-2-sport-obsidian-black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

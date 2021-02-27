@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="watch_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\watch_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Actions_insert_text_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions_insert_text_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Files_Clipboard_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Files_Clipboard_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Files_Copy_File_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Files_Copy_File_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="watch_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\watch_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="table_row_delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table_row_delete_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Amazfit_GTR_47mm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Amazfit_GTR_47mm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Files_Clipboard_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Files_Clipboard_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtr-2-sport-obsidian-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtr-2-sport-obsidian-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

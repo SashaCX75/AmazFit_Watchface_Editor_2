@@ -174,19 +174,19 @@ namespace AmazFit_Watchface_2
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
                 Color color = comboBox_color.BackColor;
-                float positiom = (float)Watch_Face_Preview_Set.Battery / 100f;
+                float position = (float)Watch_Face_Preview_Set.Battery / 100f;
                 int lineCap = comboBox_flatness.SelectedIndex;
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                          imageIndex, imageBackground, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                         color, imageBackground, showCircleScaleArea);
                 }
             }
@@ -220,12 +220,12 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea); 
+                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea); 
                     }
                 }
                 else
                 {
-                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
                 }
             }
 
@@ -377,20 +377,20 @@ namespace AmazFit_Watchface_2
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
                 Color color = comboBox_color.BackColor;
-                float positiom = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
-                if (positiom > 1) positiom = 1;
+                float position = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
+                if (position > 1) position = 1;
                 int lineCap = comboBox_flatness.SelectedIndex;
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                          imageIndex, imageBackground, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                         color, imageBackground, showCircleScaleArea);
                 }
             }
@@ -425,12 +425,12 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
                 }
             }
 
@@ -584,20 +584,20 @@ namespace AmazFit_Watchface_2
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
                 Color color = comboBox_color.BackColor;
-                float positiom = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
-                if (positiom > 1) positiom = 1;
+                float position = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
+                if (position > 1) position = 1;
                 int lineCap = comboBox_flatness.SelectedIndex;
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                          imageIndex, imageBackground, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                         color, imageBackground, showCircleScaleArea);
                 }
             }
@@ -632,12 +632,12 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
                 }
             }
 
@@ -748,7 +748,7 @@ namespace AmazFit_Watchface_2
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Pulse / 200f);
+                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
                     offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
@@ -790,20 +790,20 @@ namespace AmazFit_Watchface_2
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
                 Color color = comboBox_color.BackColor;
-                float positiom = (float)Watch_Face_Preview_Set.Activity.Pulse / 200f;
-                if (positiom > 1) positiom = 1;
+                float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 200f;
+                if (position > 1) position = 1;
                 int lineCap = comboBox_flatness.SelectedIndex;
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                          imageIndex, imageBackground, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                         color, imageBackground, showCircleScaleArea);
                 }
             }
@@ -831,19 +831,19 @@ namespace AmazFit_Watchface_2
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
                 Color color = comboBox_color.BackColor;
-                float position = (float)Watch_Face_Preview_Set.Activity.Pulse / 200f;
+                float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 200f;
                 if (position > 1) position = 1;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
                 }
             }
 
@@ -882,8 +882,8 @@ namespace AmazFit_Watchface_2
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Pulse * (endAngle - startAngle) / 200f;
-                    if (Watch_Face_Preview_Set.Activity.Pulse > 200) angle = endAngle;
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.HeartRate * (endAngle - startAngle) / 200f;
+                    if (Watch_Face_Preview_Set.Activity.HeartRate > 200) angle = endAngle;
                     DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
@@ -919,7 +919,213 @@ namespace AmazFit_Watchface_2
                     int spasing = (int)numericUpDown_spacing.Value;
                     int alignment = comboBox_alignment.SelectedIndex;
                     bool addZero = checkBox_add_zero.Checked;
-                    int value = Watch_Face_Preview_Set.Activity.Pulse;
+                    int value = Watch_Face_Preview_Set.Activity.HeartRate;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region PAI
+            panel_pictures = panel_PAI_pictures;
+            panel_text = panel_PAI_text;
+            panel_hand = panel_PAI_hand;
+            panel_scaleCircle = panel_PAI_scaleCircle;
+            panel_scaleLinear = panel_PAI_scaleLinear;
+            // PAI картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // PAI круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int imageBackground = comboBox_background.SelectedIndex;
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = comboBox_color.BackColor;
+                float position = (float)Watch_Face_Preview_Set.Activity.PAI / 100f;
+                if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showCircleScaleArea);
+                }
+            }
+
+            // PAI линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int pointerIndex = comboBox_pointer.SelectedIndex;
+                int backgroundIndex = comboBox_background.SelectedIndex;
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = comboBox_color.BackColor;
+                float position = (float)Watch_Face_Preview_Set.Activity.PAI / 100f;
+                if (position > 1) position = 1;
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                }
+            }
+
+            // PAI стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.PAI * (endAngle - startAngle) / 100f;
+                    if (Watch_Face_Preview_Set.Activity.PAI > 100) angle = endAngle;
+                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // PAI надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.PAI;
                     int separator_index = comboBox_separator.SelectedIndex;
                     Draw_dagital_text(gPanel, imageIndex, x, y,
                         spasing, alignment, value, addZero, 3, separator_index, BBorder);
@@ -996,20 +1202,20 @@ namespace AmazFit_Watchface_2
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
                 Color color = comboBox_color.BackColor;
-                float positiom = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
-                if (positiom > 1) positiom = 1;
+                float position = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
+                if (position > 1) position = 1;
                 int lineCap = comboBox_flatness.SelectedIndex;
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                          imageIndex, imageBackground, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, positiom,
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
                         color, imageBackground, showCircleScaleArea);
                 }
             }
@@ -1044,12 +1250,12 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinear(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinear(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
                 }
             }
 
@@ -1089,7 +1295,7 @@ namespace AmazFit_Watchface_2
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
                     float angle = startAngle + Watch_Face_Preview_Set.Activity.Distance * (endAngle - startAngle) / 10000f;
-                    if (Watch_Face_Preview_Set.Activity.Pulse > 200) angle = endAngle;
+                    if (Watch_Face_Preview_Set.Activity.Distance > 10000) angle = endAngle;
                     DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
@@ -1135,12 +1341,347 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region погода
+            panel_pictures = panel_Weather_pictures;
+            panel_text = panel_Weather_text;
+            panel_hand = panel_Weather_hand;
+            panel_scaleCircle = panel_Weather_scaleCircle;
+            panel_scaleLinear = panel_Weather_scaleLinear;
+
+            Panel panel_text_min = panel_Weather_textMin;
+            Panel panel_text_max = panel_Weather_textMax;
+
+            // погода картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    //NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    //int count = (int)numericUpDown_count.Value;
+                    int offSet = Watch_Face_Preview_Set.Weather.Icon;
+                    if (offSet < 0) offSet = 25;
+                    //if (offSet >= count) offSet = (int)(count - 1);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // погода круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int imageBackground = comboBox_background.SelectedIndex;
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = comboBox_color.BackColor;
+                float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
+                if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showCircleScaleArea);
+                }
+            }
+
+            // пульс линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = comboBox_image.SelectedIndex;
+                int pointerIndex = comboBox_pointer.SelectedIndex;
+                int backgroundIndex = comboBox_background.SelectedIndex;
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = comboBox_color.BackColor;
+                float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
+                if (position > 1) position = 1;
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                }
+            }
+
+            // погода стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
+                    float angle = startAngle + position * (endAngle - startAngle);
+                    if (Watch_Face_Preview_Set.Weather.Temperature > 35) angle = endAngle;
+                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // погода надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                //CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                //ComboBox comboBox_separatorF = (ComboBox)panel_text.Controls[11];
+                ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    //bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.Temperature;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    int imageError_index = comboBox_imageError.SelectedIndex;
+                    int imageMinus_index = comboBox_imageMinus.SelectedIndex;
+                    if (!Watch_Face_Preview_Set.Weather.TemperatureNoData)
+                    {
+                        Draw_weather_text(gPanel, imageIndex, x, y,
+                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder); 
+                    }
+                    else
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageError_index]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
                         src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
             }
+
+            // минимальная температура надписью
+            int Temperature_offsetX = -1;
+            int Temperature_offsetY = -1;
+            checkBox_Use = (CheckBox)panel_text_min.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text_min.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text_min.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text_min.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text_min.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text_min.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_min.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_min.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text_min.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_min.Controls[9];
+                //CheckBox checkBox_add_zero = (CheckBox)panel_text_min.Controls[10];
+                ComboBox comboBox_imageError = (ComboBox)panel_text_min.Controls[10];
+                //ComboBox comboBox_separatorF = (ComboBox)panel_text_min.Controls[11];
+                ComboBox comboBox_imageMinus = (ComboBox)panel_text_min.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    Temperature_offsetY = y;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    //bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.TemperatureMin;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    int imageError_index = comboBox_imageError.SelectedIndex;
+                    int imageMinus_index = comboBox_imageMinus.SelectedIndex;
+                    if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
+                    {
+                        Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
+                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder);
+                    }
+                    else
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageError_index]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // максимальная температура надписью
+            checkBox_Use = (CheckBox)panel_text_max.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text_max.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text_max.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text_max.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text_max.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text_max.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_max.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_max.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text_max.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_max.Controls[9];
+                //CheckBox checkBox_add_zero = (CheckBox)panel_text_max.Controls[10];
+                ComboBox comboBox_imageError = (ComboBox)panel_text_max.Controls[10];
+                //ComboBox comboBox_separatorF = (ComboBox)panel_text_max.Controls[11];
+                ComboBox comboBox_imageMinus = (ComboBox)panel_text_max.Controls[11];
+                CheckBox checkBox_follow = (CheckBox)panel_text_max.Controls[12];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    //bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.TemperatureMax;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    int imageError_index = comboBox_imageError.SelectedIndex;
+                    int imageMinus_index = comboBox_imageMinus.SelectedIndex;
+
+                    if (checkBox_follow.Checked && Temperature_offsetX > -1)
+                    {
+                        x = Temperature_offsetX;
+                        alignment = 0;
+                        y = Temperature_offsetY;
+                    }
+
+                    if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
+                    {
+                        Draw_weather_text(gPanel, imageIndex, x, y,
+                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder);
+                    }
+                    else
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageError_index]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
             #endregion
 
 
@@ -1375,12 +1916,12 @@ namespace AmazFit_Watchface_2
                 int spasing = (int)numericUpDown_Hour_spacing.Value;
                 int alignment = comboBox_Hour_alignment.SelectedIndex;
                 bool addZero = checkBox_Hour_add_zero.Checked;
-                addZero = true;
+                //addZero = true;
                 int value = Watch_Face_Preview_Set.Time.Hours;
                 int separator_index = -1;
                 if (comboBox_Hour_separator.SelectedIndex >= 0) separator_index = comboBox_Hour_separator.SelectedIndex;
 
-                if (checkBox_12h_Use.Checked)
+                if (checkBox_12h_Use.Checked && Program_Settings.ShowIn12hourFormat)
                 {
                     if (comboBox_AM_image.SelectedIndex >= 0 && comboBox_PM_image.SelectedIndex >= 0)
                     {
@@ -1466,7 +2007,7 @@ namespace AmazFit_Watchface_2
             }
 
             // AM/PM
-            if (checkBox_12h_Use.Checked)
+            if (checkBox_12h_Use.Checked && Program_Settings.ShowIn12hourFormat)
             {
                 if (comboBox_AM_image.SelectedIndex >= 0 && comboBox_PM_image.SelectedIndex >= 0)
                 {
@@ -2310,7 +2851,7 @@ namespace AmazFit_Watchface_2
                     int image_index = comboBox_ActivityPuls_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
                     int alignment = comboBox_ActivityPuls_Alignment.SelectedIndex;
-                    int data_number = Watch_Face_Preview_Set.Activity.Pulse;
+                    int data_number = Watch_Face_Preview_Set.Activity.HeartRate;
                     if (numericUpDown_ActivityPuls_Count.Value == 10)
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment,data_number, BBorder);
                 }
@@ -2323,7 +2864,7 @@ namespace AmazFit_Watchface_2
                         int x = 0;
                         int y = 0;
                         int count = dataGridView_ActivityPuls_IconSet.Rows.Count - 1;
-                        int value = (int)((count - 1) * (Watch_Face_Preview_Set.Activity.Pulse - 73) / (90f));
+                        int value = (int)((count - 1) * (Watch_Face_Preview_Set.Activity.HeartRate - 73) / (90f));
                         //value++;
                         if (value > count - 1) value = count - 1;
                         if (value <0) value = 0;
@@ -2360,7 +2901,7 @@ namespace AmazFit_Watchface_2
                         float StartAngle = (float)numericUpDown_ActivityPulsScale_StartAngle.Value - 90;
                         float EndAngle = (float)(numericUpDown_ActivityPulsScale_EndAngle.Value -
                             numericUpDown_ActivityPulsScale_StartAngle.Value);
-                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.Pulse / 180f;
+                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.HeartRate / 180f;
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityPulsScale_Flatness.SelectedIndex;
@@ -2403,7 +2944,7 @@ namespace AmazFit_Watchface_2
                         float StartAngle = (float)numericUpDown_ActivityPulsScale_StartAngle.Value - 90;
                         float EndAngle = (float)(numericUpDown_ActivityPulsScale_EndAngle.Value -
                             numericUpDown_ActivityPulsScale_StartAngle.Value);
-                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.Pulse / 180f;
+                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.HeartRate / 180f;
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         try
@@ -2427,7 +2968,7 @@ namespace AmazFit_Watchface_2
                     int image_index = comboBox_Pulse_ClockHand_Image.SelectedIndex;
                     float startAngle = (float)(numericUpDown_Pulse_ClockHand_StartAngle.Value);
                     float endAngle = (float)(numericUpDown_Pulse_ClockHand_EndAngle.Value);
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Pulse * (endAngle - startAngle) / 180;
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.HeartRate * (endAngle - startAngle) / 180;
                     if (startAngle < endAngle && angle > endAngle) angle = endAngle;
                     if (startAngle > endAngle && angle < endAngle) angle = endAngle;
                     DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
@@ -3442,21 +3983,256 @@ namespace AmazFit_Watchface_2
         /// <param name="width">Толщина шкалы</param>
         /// <param name="position">Позиция шкалы от 0 до 1</param>
         /// <param name="color">Свет шкалы</param>
+        /// <param name="lineCap">Тип окончания линии</param>
+        /// <param name="backgroundIndex">Номер фонового изображения</param>
+        private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, 
+            Color color, int lineCap, int backgroundIndex)
+        {
+            Bitmap src = new Bitmap(1, 1);
+
+            if (length > 0)
+            {
+                int x1 = (int)(x + width / 2f);
+                //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
+                int length1 = length - width;
+                if (lineCap == 0)
+                {
+                    x1 = x;
+                    length1 = length;
+                }
+                int position1 = (int)(length1 * position);
+                if (position1 < 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = (int)(y + width / 2f);
+                //int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
+
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+
+                Pen pen = new Pen(color, width);
+                switch (lineCap)
+                {
+                    case 1:
+                        pen.EndCap = LineCap.Triangle;
+                        pen.StartCap = LineCap.Triangle;
+                        break;
+                    case 2:
+                        pen.EndCap = LineCap.Round;
+                        pen.StartCap = LineCap.Round;
+                        break;
+                    default:
+                        pen.EndCap = LineCap.Flat;
+                        pen.StartCap = LineCap.Flat;
+                        break;
+                }
+                graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+                
+            }
+            else
+            {
+                int x1 = x - width / 2;
+                int length1 = length + width;
+                int position1 = (int)Math.Round(length1 * position);
+                if (position1 > 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = y + width / 2;
+
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x + length, y, src.Width, src.Height));
+                }
+
+                Pen pen = new Pen(color, width);
+                pen.EndCap = LineCap.Round;
+                pen.StartCap = LineCap.Round;
+                graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+            }
+
+            src.Dispose();
+        }
+
+        /// <summary>Рисует линейную шкалу с фоновым изображением</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата y</param>
+        /// <param name="length">Длина шкалы</param>
+        /// <param name="width">Толщина шкалы</param>
+        /// <param name="position">Позиция шкалы от 0 до 1</param>
+        /// <param name="imageIndex">Изображение шкалы</param>
+        /// <param name="lineCap">Тип окончания линии</param>
+        /// <param name="backgroundIndex">Номер фонового изображения</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, 
+            int imageIndex, int lineCap, int backgroundIndex, bool showCircleScaleArea)
+        {
+            Bitmap src = new Bitmap(1, 1);
+
+            if (length > 0)
+            {
+                int x1 = (int)(x + width / 2f);
+                //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
+                int length1 = length - width;
+                if (lineCap == 0)
+                {
+                    x1 = x;
+                    length1 = length;
+                }
+                int position1 = (int)(length1 * position);
+                //int position1 = (int)Math.Round(length1 * position, MidpointRounding.AwayFromZero);
+                if (position1 < 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = (int)(y + width / 2f);
+                //int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+
+                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                Pen pen = new Pen(Color.Black, width);
+                switch (lineCap)
+                {
+                    case 1:
+                        pen.EndCap = LineCap.Triangle;
+                        pen.StartCap = LineCap.Triangle;
+                        break;
+                    case 2:
+                        pen.EndCap = LineCap.Round;
+                        pen.StartCap = LineCap.Round;
+                        break;
+                    default:
+                        pen.EndCap = LineCap.Flat;
+                        pen.StartCap = LineCap.Flat;
+                        break;
+                }
+
+                //graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+                Bitmap mask = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                Graphics gPanel = Graphics.FromImage(mask);
+                gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                try
+                {
+                    gPanel.DrawLine(pen, new Point(x1 - x, y1 - y), new Point(x2 - x, y1 - y));
+                    //src = ApplyAlfaMask(src, mask);
+                    src = ApplyMask(src, mask);
+
+                    graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    //src.Dispose();
+                    mask.Dispose();
+
+                    if (showCircleScaleArea)
+                    {
+                        // подсвечивание шкалы заливкой
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            else
+            {
+                int x1 = x - width / 2;
+                int length1 = length + width;
+                if (lineCap == 0)
+                {
+                    x1 = x;
+                    length1 = length;
+                }
+                int position1 = (int)Math.Round(length1 * position);
+                if (position1 > 0) position1 = 0;
+                int x2 = x1 + position1;
+                int y1 = y + width / 2;
+
+                if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                    graphics.DrawImage(src, new Rectangle(x + length, y, src.Width, src.Height));
+                }
+
+                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                Pen pen = new Pen(Color.Black, width);
+                pen.EndCap = LineCap.Round;
+                pen.StartCap = LineCap.Round;
+
+                //graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+
+                Bitmap mask = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                Graphics gPanel = Graphics.FromImage(mask);
+                gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                try
+                {
+                    gPanel.DrawLine(pen, new Point(x - x1, y1 - y), new Point(x - x2, y1 - y));
+                    //src = ApplyAlfaMask(src, mask);
+                    src = ApplyMask(src, mask);
+
+                    graphics.DrawImage(src, new Rectangle(x2 - width / 2, y, src.Width, src.Height));
+                    //src.Dispose();
+                    mask.Dispose();
+
+                    if (showCircleScaleArea)
+                    {
+                        // подсвечивание шкалы заливкой
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                        pen.Brush = myHatchBrush;
+                        graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+
+            src.Dispose();
+        }
+
+        /// <summary>Рисует линейную шкалу</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата y</param>
+        /// <param name="length">Длина шкалы</param>
+        /// <param name="width">Толщина шкалы</param>
+        /// <param name="position">Позиция шкалы от 0 до 1</param>
+        /// <param name="color">Свет шкалы</param>
         /// <param name="pointerIndex">Номер изображения маркера</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
-        private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, Color color, 
+        private void DrawScaleLinearPointer(Graphics graphics, int x, int y, int length, int width, float position, Color color, 
             int pointerIndex, int backgroundIndex)
         {
             Bitmap src = new Bitmap(1, 1);
 
             if (length > 0)
             {
-                int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
+                int x1 = (int)(x + width / 2f);
+                //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
                 int length1 = length - width;
-                int position1 = (int)Math.Round(length1 * position);
+                int position1 = (int)(length1 * position);
                 if (position1 < 0) position1 = 0;
                 int x2 = x1 + position1;
-                int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
+                int y1 = (int)(y + width / 2f);
+                //int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
 
                 if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
                 {
@@ -3472,8 +4248,8 @@ namespace AmazFit_Watchface_2
                 if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
                 {
                     src = OpenFileStream(ListImagesFullName[pointerIndex]);
-                    int x3 = x2 - src.Width / 2;
-                    graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
+                    int x3 = x2 - width / 2;
+                    graphics.DrawImage(src, new Rectangle(x3, y1 - src.Height/2, src.Width, src.Height));
                 } 
             }
             else
@@ -3519,19 +4295,22 @@ namespace AmazFit_Watchface_2
         /// <param name="pointerIndex">Номер изображения маркера</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
         /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
-        private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, int imageIndex,
+        private void DrawScaleLinearPointer(Graphics graphics, int x, int y, int length, int width, float position, int imageIndex,
             int pointerIndex, int backgroundIndex, bool showCircleScaleArea)
         {
             Bitmap src = new Bitmap(1, 1);
 
             if (length > 0)
             {
-                int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
+                int x1 = (int)(x + width / 2f);
+                //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
                 int length1 = length - width;
-                int position1 = (int)Math.Round(length1 * position, MidpointRounding.AwayFromZero);
+                int position1 = (int)(length1 * position);
+                //int position1 = (int)Math.Round(length1 * position, MidpointRounding.AwayFromZero);
                 if (position1 < 0) position1 = 0;
                 int x2 = x1 + position1;
-                int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
+                int y1 = (int)(y + width / 2f);
+                //int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
                 if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
                 {
                     src = OpenFileStream(ListImagesFullName[backgroundIndex]);
@@ -3573,8 +4352,8 @@ namespace AmazFit_Watchface_2
                     if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
                     {
                         src = OpenFileStream(ListImagesFullName[pointerIndex]);
-                        int x3 = x2 - src.Width / 2;
-                        graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
+                        int x3 = x2 - width / 2;
+                        graphics.DrawImage(src, new Rectangle(x3, y1 - src.Height / 2, src.Width, src.Height));
                     }
                 }
                 catch (Exception)
@@ -3712,6 +4491,9 @@ namespace AmazFit_Watchface_2
                 case 2:
                     PointX = x + DateLenght / 2 - DateLenghtReal / 2;
                     break;
+                default:
+                    PointX = x;
+                    break;
             }
 
             Logger.WriteLine("Draw value");
@@ -3845,6 +4627,9 @@ namespace AmazFit_Watchface_2
                 case 2:
                     PointX = x + DateLenght / 2 - DateLenghtReal / 2;
                     break;
+                default:
+                    PointX = x;
+                    break;
             }
 
             Logger.WriteLine("Draw value");
@@ -3899,6 +4684,134 @@ namespace AmazFit_Watchface_2
             }
 
             Logger.WriteLine("* Draw_dagital_text (end)");
+        }
+
+        /// <summary>Рисует погоду числом</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата y</param>
+        /// <param name="spacing">Величина отступа</param>
+        /// <param name="alignment">Выравнивание</param>
+        /// <param name="value">Отображаемая величина</param>
+        /// <param name="image_minus_index">Символ "-"</param>
+        /// <param name="separator_index">Символ разделителя (единиц измерения)</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        private int Draw_weather_text(Graphics graphics, int image_index, int x, int y, int spacing,
+            int alignment, int value, int image_minus_index, int separator_index, bool BBorder)
+        {
+            int result = 0;
+            Logger.WriteLine("* Draw_weather_text");
+            var src = new Bitmap(1, 1);
+            int _number;
+            int i;
+            string value_S = value.ToString();
+            //if (addZero)
+            //{
+            //    while (value_S.Length < value_lenght)
+            //    {
+            //        value_S = "0" + value_S;
+            //    }
+            //}
+            char[] CH = value_S.ToCharArray();
+            int DateLenghtReal = 0;
+            Logger.WriteLine("DateLenght");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        DateLenghtReal = DateLenghtReal + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+
+            }
+            DateLenghtReal = DateLenghtReal - spacing;
+
+            src = OpenFileStream(ListImagesFullName[image_index]);
+            int width = src.Width;
+            int height = src.Height;
+            int DateLenght = width * 2 + spacing * (1);
+
+            int PointX = 0;
+            int PointY = y;
+            switch (alignment)
+            {
+                case 0:
+                    PointX = x;
+                    break;
+                case 1:
+                    PointX = x + DateLenght - DateLenghtReal;
+                    break;
+                case 2:
+                    PointX = x + DateLenght / 2 - DateLenghtReal / 2;
+                    break;
+                default:
+                    PointX = x;
+                    break;
+            }
+
+            Logger.WriteLine("Draw value");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[dec]);
+                        src = OpenFileStream(ListImagesFullName[image_minus_index]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+
+            }
+            result = PointX - spacing;
+            if (separator_index > -1)
+            {
+                src = OpenFileStream(ListImagesFullName[separator_index]);
+                graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                result = result + src.Width + spacing;
+            }
+            src.Dispose();
+
+            if (BBorder)
+            {
+                Logger.WriteLine("DrawBorder");
+                Rectangle rect = new Rectangle(x, y, DateLenght - 1, height - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
+
+            Logger.WriteLine("* Draw_weather_text (end)");
+            return result;
         }
 
         /// <summary>Рисует число</summary>

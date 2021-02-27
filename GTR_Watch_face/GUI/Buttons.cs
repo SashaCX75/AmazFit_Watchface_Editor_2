@@ -321,6 +321,118 @@ namespace AmazFit_Watchface_2
             else panel_HeartRate_scaleLinear.Height = 1;
         }
 
+        private void button_PAI_pictures_Click(object sender, EventArgs e)
+        {
+            if (panel_PAI_pictures.Height == 1)
+            {
+                panel_PAI_pictures.Height = (int)(85 * currentDPI);
+            }
+            else panel_PAI_pictures.Height = 1;
+        }
+
+        private void button_PAI_text_Click(object sender, EventArgs e)
+        {
+            if (panel_PAI_text.Height == 1)
+            {
+                panel_PAI_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_PAI_text.Height = 1;
+        }
+
+        private void button_PAI_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_PAI_hand.Height == 1)
+            {
+                panel_PAI_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_PAI_hand.Height = 1;
+        }
+
+        private void button_PAI_scaleCircle_Click(object sender, EventArgs e)
+        {
+            if (panel_PAI_scaleCircle.Height == 1)
+            {
+                panel_PAI_scaleCircle.Height = (int)(215 * currentDPI);
+            }
+            else panel_PAI_scaleCircle.Height = 1;
+        }
+
+        private void button_PAI_scaleLinear_Click(object sender, EventArgs e)
+        {
+            if (panel_PAI_scaleLinear.Height == 1)
+            {
+                panel_PAI_scaleLinear.Height = (int)(155 * currentDPI);
+            }
+            else panel_PAI_scaleLinear.Height = 1;
+        }
+
+        private void button_Weather_pictures_Click(object sender, EventArgs e)
+        {
+            if (panel_Weather_pictures.Height == 1)
+            {
+                panel_Weather_pictures.Height = (int)(85 * currentDPI);
+            }
+            else panel_Weather_pictures.Height = 1;
+        }
+
+        private void button_Weather_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Weather_text.Height == 1)
+            {
+                panel_Weather_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Weather_text.Height = 1;
+        }
+
+        private void button_Weather_textMin_Click(object sender, EventArgs e)
+        {
+            if (panel_Weather_textMin.Height == 1)
+            {
+                panel_Weather_textMin.Height = (int)(215 * currentDPI);
+            }
+            else panel_Weather_textMin.Height = 1;
+        }
+
+        private void button_Weather_textMax_Click(object sender, EventArgs e)
+        {
+            if (panel_Weather_textMax.Height == 1)
+            {
+                panel_Weather_textMax.Height = (int)(235 * currentDPI);
+            }
+            else panel_Weather_textMax.Height = 1;
+        }
+
+        private void button_Weather_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Weather_hand.Height == 1)
+            {
+                panel_Weather_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_Weather_hand.Height = 1;
+        }
+
+        private void button_Weather_scaleCircle_Click(object sender, EventArgs e)
+        {
+            if (panel_Weather_scaleCircle.Height == 1)
+            {
+                panel_Weather_scaleCircle.Height = (int)(215 * currentDPI);
+            }
+            else panel_Weather_scaleCircle.Height = 1;
+        }
+
+        private void button_Weather_scaleLinear_Click(object sender, EventArgs e)
+        {
+            if (panel_Weather_scaleLinear.Height == 1)
+            {
+                panel_Weather_scaleLinear.Height = (int)(155 * currentDPI);
+            }
+            else panel_Weather_scaleLinear.Height = 1;
+        }
+
+
+
+
+
         private void button_RandomPreview_Click(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
@@ -343,6 +455,11 @@ namespace AmazFit_Watchface_2
             bool unlocked = rnd.Next(2) == 0 ? false : true;
             bool dnd = rnd.Next(2) == 0 ? false : true;
 
+            int temperature = rnd.Next(-25, 35);
+            int temperatureMin = rnd.Next(-25, 35);
+            int temperatureMax = rnd.Next(-25, 35);
+            int temperatureIcon = rnd.Next(0, 29);
+
             Watch_Face_Preview_Set.Date.Year = year;
             Watch_Face_Preview_Set.Date.Month = month;
             Watch_Face_Preview_Set.Date.Day = day;
@@ -354,7 +471,7 @@ namespace AmazFit_Watchface_2
 
             Watch_Face_Preview_Set.Battery = battery;
             Watch_Face_Preview_Set.Activity.Calories = calories;
-            Watch_Face_Preview_Set.Activity.Pulse = pulse;
+            Watch_Face_Preview_Set.Activity.HeartRate = pulse;
             Watch_Face_Preview_Set.Activity.Distance = distance;
             Watch_Face_Preview_Set.Activity.Steps = steps;
             Watch_Face_Preview_Set.Activity.StepsGoal = goal;
@@ -364,7 +481,16 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Lock = unlocked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = dnd;
 
+            Watch_Face_Preview_Set.Weather.Temperature = temperature;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = temperatureMin;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = temperatureMax;
+            Watch_Face_Preview_Set.Weather.Icon = temperatureIcon;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = false;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = false;
+
+
             PreviewImage();
+
         }
 
 
