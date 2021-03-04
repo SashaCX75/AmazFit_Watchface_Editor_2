@@ -38,6 +38,9 @@ namespace AmazFit_Watchface_2
         Form_Preview formPreview;
         PROGRAM_SETTINGS Program_Settings;
 
+        Widgets WidgetsTemp; // временная переменная для хранения виджетов
+        ScreenIdle ScreenIdleTemp; // временная переменная для хранения AOD
+
         int offSet_X = 227;
         int offSet_Y = 227;
 
@@ -353,9 +356,7 @@ namespace AmazFit_Watchface_2
             checkBox_Shortcuts_Area.Checked = Program_Settings.Shortcuts_Area;
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
 
-            checkBox_ShowMiles.Checked = Program_Settings.ShowMiles;
             checkBox_ShowIn12hourFormat.Checked = Program_Settings.ShowIn12hourFormat;
-            checkBox_DoNotShowMaxMinTemp.Checked = Program_Settings.DoNotShowMaxMinTemp;
             checkBox_SaveID.Checked = Program_Settings.SaveID;
 
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
@@ -766,7 +767,7 @@ namespace AmazFit_Watchface_2
             string fileNameOnly = Path.GetFileNameWithoutExtension(FileName);
             string path = Path.GetDirectoryName(FileName);
             path = Path.Combine(path, fileNameOnly);
-            string JSONFileName = Path.Combine(path, "WatchfaceID.json");
+            string JSONFileName = Path.Combine(path, "Watchface.ID");
 
             using (FileStream fileStream = File.OpenRead(FileName))
             {
@@ -1506,7 +1507,7 @@ namespace AmazFit_Watchface_2
                 JSON_read();
                 PreviewView = true;
                 PreviewImage();
-                ShowAllFileSize(AllFileSize);
+                //ShowAllFileSize(AllFileSize);
             }
             Logger.WriteLine("* images (end)");
         }
@@ -1764,7 +1765,7 @@ namespace AmazFit_Watchface_2
             JSON_read();
             //Logger.WriteLine("Установили значения в соответствии с json файлом");
             string path = Path.GetDirectoryName(fullfilename);
-            string newFullName = Path.Combine(path, "WatchfaceID.json");
+            string newFullName = Path.Combine(path, "Watchface.ID");
             if (File.Exists(newFullName))
             {
                 WatchfaceID watchfaceID = new WatchfaceID();
@@ -1806,7 +1807,7 @@ namespace AmazFit_Watchface_2
             PreviewImage();
             JSON_Modified = false;
             FormText();
-            ShowAllFileSize(AllFileSize);
+            //ShowAllFileSize(AllFileSize);
             if (comboBox_Preview_image.SelectedIndex >= 0)
             {
                 button_RefreshPreview.Visible = true;
@@ -1827,13 +1828,13 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("* LoadJsonAndImage (end)");
         }
 
-        private void ShowAllFileSize(double sizeinbytes)
-        {
-            Logger.WriteLine("* ShowAllFileSize");
-            double AllFileSizeMB = GetFileSizeMB(sizeinbytes);
-            label_size.Text = "≈" + AllFileSizeMB.ToString() + "MB";
-            Logger.WriteLine("* ShowAllFileSize (end)");
-        }
+        //private void ShowAllFileSize(double sizeinbytes)
+        //{
+        //    Logger.WriteLine("* ShowAllFileSize");
+        //    double AllFileSizeMB = GetFileSizeMB(sizeinbytes);
+        //    label_size.Text = "≈" + AllFileSizeMB.ToString() + "MB";
+        //    Logger.WriteLine("* ShowAllFileSize (end)");
+        //}
 
 
         // формируем изображение для предпросмотра
@@ -1909,6 +1910,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set1.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set1.Checked;
 
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+
             SetDigitForPrewiev();
         }
 
@@ -1936,6 +1944,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set2.Checked;
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set2.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set2.Checked;
+
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
 
             SetDigitForPrewiev();
         }
@@ -1965,6 +1980,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set3.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set3.Checked;
 
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+
             SetDigitForPrewiev();
         }
 
@@ -1992,6 +2014,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set4.Checked;
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set4.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set4.Checked;
+
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
 
             SetDigitForPrewiev();
         }
@@ -2021,6 +2050,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set5.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set5.Checked;
 
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+
             SetDigitForPrewiev();
         }
 
@@ -2048,6 +2084,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set6.Checked;
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set6.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set6.Checked;
+
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
 
             SetDigitForPrewiev();
         }
@@ -2077,6 +2120,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set7.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set7.Checked;
 
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+
             SetDigitForPrewiev();
         }
 
@@ -2104,6 +2154,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set8.Checked;
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set8.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set8.Checked;
+
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
 
             SetDigitForPrewiev();
         }
@@ -2133,6 +2190,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set9.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set9.Checked;
 
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+
             SetDigitForPrewiev();
         }
 
@@ -2160,6 +2224,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set10.Checked;
             Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set10.Checked;
             Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set10.Checked;
+
+            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
+            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
 
             SetDigitForPrewiev();
         }
@@ -2635,21 +2706,6 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 #endregion
-
-        // переключаем цвет фона в таблице с картинками
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                dataGridView_ImagesList.DefaultCellStyle.BackColor = Color.Black;
-                dataGridView_ImagesList.DefaultCellStyle.ForeColor = Color.White;
-            }
-            else
-            {
-                dataGridView_ImagesList.DefaultCellStyle.BackColor = Color.White;
-                dataGridView_ImagesList.DefaultCellStyle.ForeColor = Color.Black;
-            }
-        }
 
         private void pictureBox_Preview_DoubleClick(object sender, EventArgs e)
         {
@@ -3503,9 +3559,9 @@ namespace AmazFit_Watchface_2
             numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-            PreviewView = true;
             //PreviewImage();
             button_Set10.PerformClick();
+            PreviewView = true;
         }
 
         private void checkBox_WebW_CheckedChanged(object sender, EventArgs e)
@@ -4949,12 +5005,10 @@ namespace AmazFit_Watchface_2
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
 
-        private void checkBox_ShowMiles_CheckedChanged(object sender, EventArgs e)
+        private void checkBox_ShowIn12hourFormat_CheckedChanged(object sender, EventArgs e)
         {
             if (Settings_Load) return;
-            Program_Settings.ShowMiles = checkBox_ShowMiles.Checked;
             Program_Settings.ShowIn12hourFormat = checkBox_ShowIn12hourFormat.Checked;
-            Program_Settings.DoNotShowMaxMinTemp = checkBox_DoNotShowMaxMinTemp.Checked;
 
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
@@ -6171,15 +6225,15 @@ namespace AmazFit_Watchface_2
                 pixelsOld = pixelsOld * 4 + 20;
                 bitmap = ResizeImage(bitmap, scale);
                 bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
-                string s = label_size.Text;
-                //s = s.Trim(new char[] { '≈', 'M' });
-                s = s.Replace("≈", "");
-                s = s.Replace("MB", "");
-                float pixels = float.Parse(s) * 1024 * 1024;
-                int pixelsNew = bitmap.Width * bitmap.Height;
-                pixelsNew = pixelsNew * 4 + 20;
-                pixels = pixels - pixelsOld + pixelsNew;
-                ShowAllFileSize(pixels);
+                //string s = label_size.Text;
+                ////s = s.Trim(new char[] { '≈', 'M' });
+                //s = s.Replace("≈", "");
+                //s = s.Replace("MB", "");
+                //float pixels = float.Parse(s) * 1024 * 1024;
+                //int pixelsNew = bitmap.Width * bitmap.Height;
+                //pixelsNew = pixelsNew * 4 + 20;
+                //pixels = pixels - pixelsOld + pixelsNew;
+                //ShowAllFileSize(pixels);
                 bitmap.Dispose();
                 loadedImage.Dispose();
 
@@ -6208,15 +6262,15 @@ namespace AmazFit_Watchface_2
                 bitmap = ResizeImage(bitmap, scale);
                 //bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
 
-                string s = label_size.Text;
-                //s = s.Trim(new char[] { '≈', 'M' });
-                s = s.Replace("≈", "");
-                s = s.Replace("MB", "");
-                float pixels = float.Parse(s) * 1024 * 1024;
-                int pixelsNew = bitmap.Width * bitmap.Height;
-                pixelsNew = pixelsNew * 4 + 20;
-                pixels = pixels + pixelsNew;
-                ShowAllFileSize(pixels);
+                //string s = label_size.Text;
+                ////s = s.Trim(new char[] { '≈', 'M' });
+                //s = s.Replace("≈", "");
+                //s = s.Replace("MB", "");
+                //float pixels = float.Parse(s) * 1024 * 1024;
+                //int pixelsNew = bitmap.Width * bitmap.Height;
+                //pixelsNew = pixelsNew * 4 + 20;
+                //pixels = pixels + pixelsNew;
+                //ShowAllFileSize(pixels);
                 //bitmap.Dispose();
 
                 // определяем имя файла для сохранения и сохраняем файл
@@ -6370,7 +6424,7 @@ namespace AmazFit_Watchface_2
             File.WriteAllText(fullfilename, saveString, Encoding.UTF8);
 
             string path = Path.GetDirectoryName(fullfilename);
-            string IDFileName = Path.Combine(path, "WatchfaceID.json");
+            string IDFileName = Path.Combine(path, "Watchface.ID");
             if (File.Exists(IDFileName) || checkBox_UseID.Checked)
             {
                 WatchfaceID watchfaceID = new WatchfaceID();

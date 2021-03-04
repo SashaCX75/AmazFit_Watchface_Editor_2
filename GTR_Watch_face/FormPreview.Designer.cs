@@ -50,19 +50,17 @@
             this.panel1.Controls.Add(this.radioButton_normal);
             this.panel1.Controls.Add(this.radioButton_small);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 567);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 461);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(616, 30);
+            this.panel1.Size = new System.Drawing.Size(462, 24);
             this.panel1.TabIndex = 1;
             // 
             // radioButton_xxlarge
             // 
             this.radioButton_xxlarge.AutoSize = true;
-            this.radioButton_xxlarge.Location = new System.Drawing.Point(304, 4);
-            this.radioButton_xxlarge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_xxlarge.Location = new System.Drawing.Point(228, 3);
             this.radioButton_xxlarge.Name = "radioButton_xxlarge";
-            this.radioButton_xxlarge.Size = new System.Drawing.Size(55, 21);
+            this.radioButton_xxlarge.Size = new System.Drawing.Size(45, 17);
             this.radioButton_xxlarge.TabIndex = 4;
             this.radioButton_xxlarge.Text = "x2,5";
             this.radioButton_xxlarge.UseVisualStyleBackColor = true;
@@ -71,10 +69,9 @@
             // radioButton_xlarge
             // 
             this.radioButton_xlarge.AutoSize = true;
-            this.radioButton_xlarge.Location = new System.Drawing.Point(236, 4);
-            this.radioButton_xlarge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_xlarge.Location = new System.Drawing.Point(177, 3);
             this.radioButton_xlarge.Name = "radioButton_xlarge";
-            this.radioButton_xlarge.Size = new System.Drawing.Size(43, 21);
+            this.radioButton_xlarge.Size = new System.Drawing.Size(36, 17);
             this.radioButton_xlarge.TabIndex = 3;
             this.radioButton_xlarge.Text = "x2";
             this.radioButton_xlarge.UseVisualStyleBackColor = true;
@@ -83,10 +80,9 @@
             // radioButton_large
             // 
             this.radioButton_large.AutoSize = true;
-            this.radioButton_large.Location = new System.Drawing.Point(155, 4);
-            this.radioButton_large.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_large.Location = new System.Drawing.Point(116, 3);
             this.radioButton_large.Name = "radioButton_large";
-            this.radioButton_large.Size = new System.Drawing.Size(55, 21);
+            this.radioButton_large.Size = new System.Drawing.Size(45, 17);
             this.radioButton_large.TabIndex = 2;
             this.radioButton_large.Text = "x1,5";
             this.radioButton_large.UseVisualStyleBackColor = true;
@@ -96,10 +92,9 @@
             // 
             this.radioButton_normal.AutoSize = true;
             this.radioButton_normal.Checked = true;
-            this.radioButton_normal.Location = new System.Drawing.Point(85, 4);
-            this.radioButton_normal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_normal.Location = new System.Drawing.Point(64, 3);
             this.radioButton_normal.Name = "radioButton_normal";
-            this.radioButton_normal.Size = new System.Drawing.Size(43, 21);
+            this.radioButton_normal.Size = new System.Drawing.Size(36, 17);
             this.radioButton_normal.TabIndex = 1;
             this.radioButton_normal.TabStop = true;
             this.radioButton_normal.Text = "x1";
@@ -109,10 +104,9 @@
             // radioButton_small
             // 
             this.radioButton_small.AutoSize = true;
-            this.radioButton_small.Location = new System.Drawing.Point(4, 4);
-            this.radioButton_small.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton_small.Location = new System.Drawing.Point(3, 3);
             this.radioButton_small.Name = "radioButton_small";
-            this.radioButton_small.Size = new System.Drawing.Size(55, 21);
+            this.radioButton_small.Size = new System.Drawing.Size(45, 17);
             this.radioButton_small.TabIndex = 0;
             this.radioButton_small.Text = "x0,5";
             this.radioButton_small.UseVisualStyleBackColor = true;
@@ -130,10 +124,9 @@
             this.pictureBox_Preview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox_Preview.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox_Preview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox_Preview.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_Preview.Name = "pictureBox_Preview";
-            this.pictureBox_Preview.Size = new System.Drawing.Size(607, 561);
+            this.pictureBox_Preview.Size = new System.Drawing.Size(456, 456);
             this.pictureBox_Preview.TabIndex = 2;
             this.pictureBox_Preview.TabStop = false;
             this.pictureBox_Preview.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_Preview_MouseDoubleClick);
@@ -142,22 +135,21 @@
             // 
             // Form_Preview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(616, 597);
+            this.ClientSize = new System.Drawing.Size(462, 485);
             this.Controls.Add(this.pictureBox_Preview);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form_Preview";
             this.ShowInTaskbar = false;
             this.Text = "Предпросмотр";
             this.Load += new System.EventHandler(this.Form_Preview_Load);
+            this.SizeChanged += new System.EventHandler(this.Form_Preview_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).EndInit();

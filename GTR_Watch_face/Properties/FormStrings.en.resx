@@ -321,4 +321,22 @@
   <data name="Message_bigFile_Text1_trex" xml:space="preserve">
     <value>Uncompressed file size exceeds 5.5MB.</value>
   </data>
+  <data name="Message_PNGFromOne_Text" xml:space="preserve">
+    <value>PNG file numbering must start at 1.</value>
+  </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>It is recommended to indicate an image for the error symbol in case the information is not available</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>Preview image sizes are different from the standard</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>Use existing dimensions?</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>It is recommended to use 6 segments to display the pulse.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>The image for the error symbol may be incorrectly specified if there is no current temperature data.</value>
+  </data>
 </root>

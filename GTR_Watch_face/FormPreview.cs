@@ -217,6 +217,15 @@ namespace AmazFit_Watchface_2
         {
             this.Text = Properties.FormStrings.Form_Preview;
         }
+
+        private void Form_Preview_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                radioButton_normal.Checked = true;
+            }
+        }
     }
     
 }

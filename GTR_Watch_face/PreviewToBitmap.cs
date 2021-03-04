@@ -66,14 +66,230 @@ namespace AmazFit_Watchface_2
                 //if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
+            #region дата 
+            int date_offsetX = -1;
+            int date_offsetY = -1;
+            // год
+            if (checkBox__Year_text_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Year_image.SelectedIndex;
+                int x = (int)numericUpDown_YearX.Value;
+                int y = (int)numericUpDown_YearY.Value;
+                date_offsetY = y;
+                int spasing = (int)numericUpDown_Year_spacing.Value;
+                int alignment = comboBox_Year_alignment.SelectedIndex;
+                bool addZero = checkBox_Year_add_zero.Checked;
+                int value = Watch_Face_Preview_Set.Date.Year;
+                if (addZero) value = Watch_Face_Preview_Set.Date.Year % 100;
+                int separator_index = -1;
+                if (comboBox_Year_separator.SelectedIndex >= 0) separator_index = comboBox_Year_separator.SelectedIndex;
+                addZero = false;
+
+                date_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 4, separator_index, BBorder);
+
+                if (comboBox_Year_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Year_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Year_unitX.Value,
+                        (int)numericUpDown_Year_unitY.Value, src.Width, src.Height));
+                }
+            }
+
+            // месяц
+            if (checkBox_Month_Use.Checked && comboBox_Month_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Month_image.SelectedIndex;
+                int x = (int)numericUpDown_MonthX.Value;
+                int y = (int)numericUpDown_MonthY.Value;
+                int spasing = (int)numericUpDown_Month_spacing.Value;
+                int alignment = comboBox_Month_alignment.SelectedIndex;
+                bool addZero = checkBox_Month_add_zero.Checked;
+                //addZero = true;
+                int value = Watch_Face_Preview_Set.Date.Month;
+                int separator_index = -1;
+                if (comboBox_Month_separator.SelectedIndex >= 0) separator_index = comboBox_Month_separator.SelectedIndex;
+                if (checkBox_Month_follow.Checked && date_offsetX > -1)
+                {
+                    x = date_offsetX;
+                    alignment = 0;
+                    y = date_offsetY;
+                }
+                date_offsetY = y;
+                date_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                if (comboBox_Month_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Month_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_unitX.Value,
+                        (int)numericUpDown_Month_unitY.Value, src.Width, src.Height));
+                }
+            }
+            else date_offsetX = -1;
+
+            // число
+            if (checkBox_Day_Use.Checked && comboBox_Day_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Day_image.SelectedIndex;
+                int x = (int)numericUpDown_DayX.Value;
+                int y = (int)numericUpDown_DayY.Value;
+                int spasing = (int)numericUpDown_Day_spacing.Value;
+                int alignment = comboBox_Day_alignment.SelectedIndex;
+                bool addZero = checkBox_Day_add_zero.Checked;
+                //addZero = true;
+                int value = Watch_Face_Preview_Set.Date.Day;
+                int separator_index = -1;
+                if (comboBox_Day_separator.SelectedIndex >= 0) separator_index = comboBox_Day_separator.SelectedIndex;
+                if (checkBox_Day_follow.Checked && date_offsetX > -1)
+                {
+                    x = date_offsetX;
+                    alignment = 0;
+                    y = date_offsetY;
+                }
+                Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                if (comboBox_Day_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Day_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Day_unitX.Value,
+                        (int)numericUpDown_Day_unitY.Value, src.Width, src.Height));
+                }
+            }
+
+            // число стрелкой
+            if (checkBox_Day_hand_Use.Checked && comboBox_Day_hand_image.SelectedIndex >= 0)
+            {
+                if (comboBox_Day_hand_imageBackground.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Day_hand_imageBackground.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Day_handX_background.Value,
+                        (int)numericUpDown_Day_handY_background.Value, src.Width, src.Height));
+                }
+
+                int x = (int)numericUpDown_Day_handX.Value;
+                int y = (int)numericUpDown_Day_handY.Value;
+                int offsetX = (int)numericUpDown_Day_handX_offset.Value;
+                int offsetY = (int)numericUpDown_Day_handY_offset.Value;
+                int image_index = comboBox_Day_hand_image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_Day_hand_startAngle.Value);
+                float endAngle = (float)(numericUpDown_Day_hand_endAngle.Value);
+                int Day = Watch_Face_Preview_Set.Date.Day;
+                Day--;
+                float angle = startAngle + Day * (endAngle - startAngle) / 30;
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_Day_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Day_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Day_handX_centr.Value,
+                        (int)numericUpDown_Day_handY_centr.Value, src.Width, src.Height));
+                }
+            }
+
+            // месяц картинкой
+            if (checkBox_Month_pictures_Use.Checked && comboBox_Month_pictures_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Month_pictures_image.SelectedIndex;
+                int x = (int)numericUpDown_Month_picturesX.Value;
+                int y = (int)numericUpDown_Month_picturesY.Value;
+                imageIndex = imageIndex + Watch_Face_Preview_Set.Date.Month - 1;
+
+                if (imageIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[imageIndex]);
+                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+            }
+
+            // месяц стрелкой
+            if (checkBox_Month_hand_Use.Checked && comboBox_Month_hand_image.SelectedIndex >= 0)
+            {
+                if (comboBox_Month_hand_imageBackground.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Month_hand_imageBackground.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_handX_background.Value,
+                        (int)numericUpDown_Month_handY_background.Value, src.Width, src.Height));
+                }
+
+                int x = (int)numericUpDown_Month_handX.Value;
+                int y = (int)numericUpDown_Month_handY.Value;
+                int offsetX = (int)numericUpDown_Month_handX_offset.Value;
+                int offsetY = (int)numericUpDown_Month_handY_offset.Value;
+                int image_index = comboBox_Month_hand_image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_Month_hand_startAngle.Value);
+                float endAngle = (float)(numericUpDown_Month_hand_endAngle.Value);
+                int Month = Watch_Face_Preview_Set.Date.Month;
+                Month--;
+                float angle = startAngle + Month * (endAngle - startAngle) / 11;
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_Month_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Month_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_handX_centr.Value,
+                        (int)numericUpDown_Month_handY_centr.Value, src.Width, src.Height));
+                }
+            }
+
+            // день недели картинкой
+            if (checkBox_DOW_pictures_Use.Checked && comboBox_DOW_pictures_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_DOW_pictures_image.SelectedIndex;
+                int x = (int)numericUpDown_DOW_picturesX.Value;
+                int y = (int)numericUpDown_DOW_picturesY.Value;
+                imageIndex = imageIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
+
+                if (imageIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[imageIndex]);
+                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+            }
+
+            // день недели стрелкой
+            if (checkBox_DOW_hand_Use.Checked && comboBox_DOW_hand_image.SelectedIndex >= 0)
+            {
+                if (comboBox_DOW_hand_imageBackground.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageBackground.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_background.Value,
+                        (int)numericUpDown_DOW_handY_background.Value, src.Width, src.Height));
+                }
+
+                int x = (int)numericUpDown_DOW_handX.Value;
+                int y = (int)numericUpDown_DOW_handY.Value;
+                int offsetX = (int)numericUpDown_DOW_handX_offset.Value;
+                int offsetY = (int)numericUpDown_DOW_handY_offset.Value;
+                int image_index = comboBox_DOW_hand_image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_DOW_hand_startAngle.Value);
+                float endAngle = (float)(numericUpDown_DOW_hand_endAngle.Value);
+                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
+                WeekDay--;
+                if (WeekDay < 0) WeekDay = 6;
+                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
+                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_DOW_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_centr.Value,
+                        (int)numericUpDown_DOW_handY_centr.Value, src.Width, src.Height));
+                }
+
+            }
+            #endregion
+
             #region статусы
+
             if (checkBox_Bluetooth_Use.Checked && comboBox_Bluetooth_image.SelectedIndex >= 0)
             {
                 if (!Watch_Face_Preview_Set.Status.Bluetooth)
                 {
                     src = OpenFileStream(ListImagesFullName[comboBox_Bluetooth_image.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_BluetoothX.Value,
-                        (int)numericUpDown_BluetoothY.Value, src.Width, src.Height)); 
+                        (int)numericUpDown_BluetoothY.Value, src.Width, src.Height));
                 }
             }
 
@@ -83,17 +299,7 @@ namespace AmazFit_Watchface_2
                 {
                     src = OpenFileStream(ListImagesFullName[comboBox_Alarm_image.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AlarmX.Value,
-                        (int)numericUpDown_AlarmY.Value, src.Width, src.Height)); 
-                }
-            }
-
-            if (checkBox_DND_Use.Checked && comboBox_DND_image.SelectedIndex >= 0)
-            {
-                if (Watch_Face_Preview_Set.Status.DoNotDisturb)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_DND_image.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DNDX.Value,
-                        (int)numericUpDown_DNDY.Value, src.Width, src.Height)); 
+                        (int)numericUpDown_AlarmY.Value, src.Width, src.Height));
                 }
             }
 
@@ -103,7 +309,17 @@ namespace AmazFit_Watchface_2
                 {
                     src = OpenFileStream(ListImagesFullName[comboBox_Lock_image.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_LockX.Value,
-                        (int)numericUpDown_LockY.Value, src.Width, src.Height)); 
+                        (int)numericUpDown_LockY.Value, src.Width, src.Height));
+                }
+            }
+
+            if (checkBox_DND_Use.Checked && comboBox_DND_image.SelectedIndex >= 0)
+            {
+                if (Watch_Face_Preview_Set.Status.DoNotDisturb)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_DND_image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DNDX.Value,
+                        (int)numericUpDown_DNDY.Value, src.Width, src.Height));
                 }
             }
             #endregion
@@ -307,7 +523,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -514,7 +730,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -720,7 +936,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -926,7 +1142,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1132,7 +1348,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1336,7 +1552,7 @@ namespace AmazFit_Watchface_2
                     int separator_index = comboBox_separator.SelectedIndex;
                     int decimalPoint_index = comboBox_DecimalPoint.SelectedIndex;
                     Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 3, separator_index,
+                        spasing, alignment, value, addZero, 4, separator_index,
                         decimalPoint_index, 2, BBorder);
 
                     if (comboBox_unit.SelectedIndex >= 0)
@@ -1563,7 +1779,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1616,7 +1832,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1675,7 +1891,7 @@ namespace AmazFit_Watchface_2
 
                     if (comboBox_unit.SelectedIndex >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1686,220 +1902,6 @@ namespace AmazFit_Watchface_2
 
 
 
-            #endregion
-
-            #region дата 
-            int date_offsetX = -1;
-            int date_offsetY = -1;
-            // год
-            if (checkBox__Year_text_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
-            {
-                int imageIndex = comboBox_Year_image.SelectedIndex;
-                int x = (int)numericUpDown_YearX.Value;
-                int y = (int)numericUpDown_YearY.Value;
-                date_offsetY = y;
-                int spasing = (int)numericUpDown_Year_spacing.Value;
-                int alignment = comboBox_Year_alignment.SelectedIndex;
-                bool addZero = checkBox_Year_add_zero.Checked;
-                addZero = true;
-                int value = Watch_Face_Preview_Set.Date.Year;
-                int separator_index = -1;
-                if (comboBox_Year_separator.SelectedIndex >= 0) separator_index = comboBox_Year_separator.SelectedIndex;
-
-                date_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
-                    spasing, alignment, value, addZero, 4, separator_index, BBorder);
-
-                if (comboBox_Year_unit.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Year_unit.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Year_unitX.Value,
-                        (int)numericUpDown_Year_unitY.Value, src.Width, src.Height));
-                }
-            }
-
-            // месяц
-            if (checkBox_Month_Use.Checked && comboBox_Month_image.SelectedIndex >= 0)
-            {
-                int imageIndex = comboBox_Month_image.SelectedIndex;
-                int x = (int)numericUpDown_MonthX.Value;
-                int y = (int)numericUpDown_MonthY.Value;
-                int spasing = (int)numericUpDown_Month_spacing.Value;
-                int alignment = comboBox_Month_alignment.SelectedIndex;
-                bool addZero = checkBox_Month_add_zero.Checked;
-                //addZero = true;
-                int value = Watch_Face_Preview_Set.Date.Month;
-                int separator_index = -1;
-                if (comboBox_Month_separator.SelectedIndex >= 0) separator_index = comboBox_Month_separator.SelectedIndex;
-                if (checkBox_Month_follow.Checked && date_offsetX > -1)
-                {
-                    x = date_offsetX;
-                    alignment = 0;
-                    y = date_offsetY;
-                }
-                date_offsetY = y;
-                date_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
-                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
-
-                if (comboBox_Month_unit.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Month_unit.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_unitX.Value,
-                        (int)numericUpDown_Month_unitY.Value, src.Width, src.Height));
-                }
-            }
-            else date_offsetX = -1;
-
-            // число
-            if (checkBox_Day_Use.Checked && comboBox_Day_image.SelectedIndex >= 0)
-            {
-                int imageIndex = comboBox_Day_image.SelectedIndex;
-                int x = (int)numericUpDown_DayX.Value;
-                int y = (int)numericUpDown_DayY.Value;
-                int spasing = (int)numericUpDown_Day_spacing.Value;
-                int alignment = comboBox_Day_alignment.SelectedIndex;
-                bool addZero = checkBox_Day_add_zero.Checked;
-                //addZero = true;
-                int value = Watch_Face_Preview_Set.Date.Day;
-                int separator_index = -1;
-                if (comboBox_Day_separator.SelectedIndex >= 0) separator_index = comboBox_Day_separator.SelectedIndex;
-                if (checkBox_Day_follow.Checked && date_offsetX > -1)
-                {
-                    x = date_offsetX;
-                    alignment = 0;
-                    y = date_offsetY;
-                }
-                Draw_dagital_text(gPanel, imageIndex, x, y,
-                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
-
-                if (comboBox_Day_unit.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Day_unit.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Day_unitX.Value,
-                        (int)numericUpDown_Day_unitY.Value, src.Width, src.Height));
-                }
-            }
-
-            // число стрелкой
-            if (checkBox_Day_hand_Use.Checked && comboBox_Day_hand_image.SelectedIndex >= 0)
-            {
-                if (comboBox_Day_hand_imageBackground.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Day_hand_imageBackground.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Day_handX_background.Value,
-                        (int)numericUpDown_Day_handY_background.Value, src.Width, src.Height));
-                }
-
-                int x = (int)numericUpDown_Day_handX.Value;
-                int y = (int)numericUpDown_Day_handY.Value;
-                int offsetX = (int)numericUpDown_Day_handX_offset.Value;
-                int offsetY = (int)numericUpDown_Day_handY_offset.Value;
-                int image_index = comboBox_Day_hand_image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_Day_hand_startAngle.Value);
-                float endAngle = (float)(numericUpDown_Day_hand_endAngle.Value);
-                int Day = Watch_Face_Preview_Set.Date.Day;
-                Day--;
-                float angle = startAngle + Day * (endAngle - startAngle) / 30;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                if (comboBox_Day_hand_imageCentr.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Day_hand_imageCentr.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Day_handX_centr.Value,
-                        (int)numericUpDown_Day_handY_centr.Value, src.Width, src.Height));
-                }
-            }
-
-            // месяц картинкой
-            if (checkBox_Month_pictures_Use.Checked && comboBox_Month_pictures_image.SelectedIndex >= 0)
-            {
-                int imageIndex = comboBox_Month_pictures_image.SelectedIndex;
-                int x = (int)numericUpDown_Month_picturesX.Value;
-                int y = (int)numericUpDown_Month_picturesY.Value;
-                imageIndex = imageIndex + Watch_Face_Preview_Set.Date.Month - 1;
-
-                if (imageIndex < ListImagesFullName.Count)
-                {
-                    src = OpenFileStream(ListImagesFullName[imageIndex]);
-                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                }
-            }
-
-            // месяц стрелкой
-            if (checkBox_Month_hand_Use.Checked && comboBox_Month_hand_image.SelectedIndex >= 0)
-            {
-                if (comboBox_Month_hand_imageBackground.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Month_hand_imageBackground.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_handX_background.Value,
-                        (int)numericUpDown_Month_handY_background.Value, src.Width, src.Height));
-                }
-
-                int x = (int)numericUpDown_Month_handX.Value;
-                int y = (int)numericUpDown_Month_handY.Value;
-                int offsetX = (int)numericUpDown_Month_handX_offset.Value;
-                int offsetY = (int)numericUpDown_Month_handY_offset.Value;
-                int image_index = comboBox_Month_hand_image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_Month_hand_startAngle.Value);
-                float endAngle = (float)(numericUpDown_Month_hand_endAngle.Value);
-                int Month = Watch_Face_Preview_Set.Date.Month;
-                Month--;
-                float angle = startAngle + Month * (endAngle - startAngle) / 11;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                if (comboBox_Month_hand_imageCentr.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Month_hand_imageCentr.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_handX_centr.Value,
-                        (int)numericUpDown_Month_handY_centr.Value, src.Width, src.Height));
-                }
-            }
-
-            // день недели картинкой
-            if (checkBox_DOW_pictures_Use.Checked && comboBox_DOW_pictures_image.SelectedIndex >= 0)
-            {
-                int imageIndex = comboBox_DOW_pictures_image.SelectedIndex;
-                int x = (int)numericUpDown_DOW_picturesX.Value;
-                int y = (int)numericUpDown_DOW_picturesY.Value;
-                imageIndex = imageIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
-
-                if (imageIndex < ListImagesFullName.Count)
-                {
-                    src = OpenFileStream(ListImagesFullName[imageIndex]);
-                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                }
-            }
-
-            // день недели стрелкой
-            if (checkBox_DOW_hand_Use.Checked && comboBox_DOW_hand_image.SelectedIndex >= 0)
-            {
-                if (comboBox_DOW_hand_imageBackground.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageBackground.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_background.Value,
-                        (int)numericUpDown_DOW_handY_background.Value, src.Width, src.Height));
-                }
-
-                int x = (int)numericUpDown_DOW_handX.Value;
-                int y = (int)numericUpDown_DOW_handY.Value;
-                int offsetX = (int)numericUpDown_DOW_handX_offset.Value;
-                int offsetY = (int)numericUpDown_DOW_handY_offset.Value;
-                int image_index = comboBox_DOW_hand_image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_DOW_hand_startAngle.Value);
-                float endAngle = (float)(numericUpDown_DOW_hand_endAngle.Value);
-                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
-                WeekDay--;
-                if (WeekDay < 0) WeekDay = 6;
-                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                if (comboBox_DOW_hand_imageCentr.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageCentr.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_centr.Value,
-                        (int)numericUpDown_DOW_handY_centr.Value, src.Width, src.Height));
-                }
-
-            }
             #endregion
 
             #region цифровое время
@@ -4599,7 +4601,6 @@ namespace AmazFit_Watchface_2
                 {
                     if (decimalPoint_index >= 0 && decimalPoint_index < ListImagesFullName.Count)
                     {
-                        //src = new Bitmap(ListImagesFullName[dec]);
                         src = OpenFileStream(ListImagesFullName[decimalPoint_index]);
                         DateLenghtReal = DateLenghtReal + src.Width + spacing;
                         //src.Dispose();
@@ -4612,7 +4613,13 @@ namespace AmazFit_Watchface_2
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int DateLenght = width * value_lenght + spacing * (value_lenght - 1);
+            int width_separator = 0;
+            if (decimalPoint_index >= 0)
+            {
+                src = OpenFileStream(ListImagesFullName[decimalPoint_index]);
+                width_separator = src.Width + value_lenght; 
+            }
+            int DateLenght = width * value_lenght + spacing * (value_lenght -1) + width_separator;
 
             int PointX = 0;
             int PointY = y;
@@ -4730,14 +4737,28 @@ namespace AmazFit_Watchface_2
                         //src.Dispose();
                     }
                 }
-
+                else
+                {
+                    src = OpenFileStream(ListImagesFullName[image_minus_index]);
+                    DateLenghtReal = DateLenghtReal + src.Width + spacing;
+                    //src.Dispose();
+                }
             }
+
             DateLenghtReal = DateLenghtReal - spacing;
 
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int DateLenght = width * 2 + spacing * (1);
+            int DateLenght = width * 3 + spacing * 2;
+            if (radioButton_GTS2.Checked)
+            {
+                if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[image_minus_index]);
+                    DateLenght = DateLenght + src.Width + spacing;
+                } 
+            }
 
             int PointX = 0;
             int PointY = y;

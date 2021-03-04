@@ -33,9 +33,7 @@
         public float Gif_Speed = 1f;
         public int Animation_Preview_Speed = 4;
 
-        public bool ShowMiles = true;
         public bool ShowIn12hourFormat = true;
-        public bool DoNotShowMaxMinTemp = false;
         public bool SaveID = true;
 
         public string pack_unpack_dir { get; set; }

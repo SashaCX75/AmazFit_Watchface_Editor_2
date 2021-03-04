@@ -334,13 +334,10 @@
     <value>Использовать существующие размеры?</value>
   </data>
   <data name="Message_WarningActivityError" xml:space="preserve">
-    <value>Желательно указано изображение для символа ошибки при отсутствии данных активностей.</value>
+    <value>Желательно указывать изображение для символа ошибки при отсутствии данных активностей.</value>
   </data>
   <data name="Message_WarningWeatherError" xml:space="preserve">
     <value>Возможно неверно указано изображение для символа ошибки при отсутствии данных текущей температуры.</value>
-  </data>
-  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
-    <value>Отображение даты отдельными блоками не работает вместе с отображением даты в одну линию</value>
   </data>
   <data name="Message_PNGFromOne_Text" xml:space="preserve">
     <value>Нумерация PNG файлов должна начинаться с 1.</value>

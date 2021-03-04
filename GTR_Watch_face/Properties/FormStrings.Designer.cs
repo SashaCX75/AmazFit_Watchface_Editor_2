@@ -574,7 +574,7 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Желательно указано изображение для символа ошибки при отсутствии данных активностей..
+        ///   Ищет локализованную строку, похожую на Желательно указывать изображение для символа ошибки при отсутствии данных активностей..
         /// </summary>
         public static string Message_WarningActivityError {
             get {
@@ -633,15 +633,6 @@ namespace AmazFit_Watchface_2.Properties {
         public static string Message_WarningConverting_Text2 {
             get {
                 return ResourceManager.GetString("Message_WarningConverting_Text2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Отображение даты отдельными блоками не работает вместе с отображением даты в одну линию.
-        /// </summary>
-        public static string Message_WarningDateOnelineAndSeparate {
-            get {
-                return ResourceManager.GetString("Message_WarningDateOnelineAndSeparate", resourceCulture);
             }
         }
         

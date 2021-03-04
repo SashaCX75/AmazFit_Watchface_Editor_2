@@ -218,7 +218,6 @@
     <None Include="Resources\Actions_insert_text_icon.png" />
     <None Include="Resources\Files_Copy_File_icon.png" />
     <None Include="Resources\Files_Clipboard_icon.png" />
-    <None Include="Resources\Amazfit_GTR_47mm.png" />
     <Content Include="Mask\mask_gtr_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -244,8 +243,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Language\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
