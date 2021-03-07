@@ -68,6 +68,9 @@ namespace AmazFit_Watchface_2
         /// <summary>Отображение данных текстом</summary>
         public List<DigitalCommonDigit> Digits { get; set; }
 
+        /// <summary>Ярлыки</summary>
+        public Shortcut Shortcut { get; set; }
+
         /// <summary>Отображение иконки активности</summary>
         public ImageCoord Icon { get; set; }
     }
@@ -127,5 +130,27 @@ namespace AmazFit_Watchface_2
 
         /// <summary>День недели круговой шкалой</summary>
         public ProgressBar WeekDayProgressBar { get; set; }
+    }
+
+    public class Shortcut
+    {
+        /// <summary>Прямоугольная область ярлыка</summary>
+        public BoxElement BoxElement { get; set; }
+        public long ImageIndex { get; set; }
+    }
+
+    public class BoxElement
+    {
+        /// <summary>Координата Х левого верхнего угла</summary>
+        public long TopLeftX { get; set; }
+
+        /// <summary>Координата Y левого верхнего угла</summary>
+        public long TopLeftY { get; set; }
+
+        /// <summary>Ширина</summary>
+        public long Width { get; set; }
+
+        /// <summary>Высота</summary>
+        public long Height { get; set; }
     }
 }

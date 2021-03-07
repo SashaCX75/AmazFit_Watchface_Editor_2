@@ -19,7 +19,7 @@
         /// <summary>Виджеты (настраевыемые элементы циферблата)</summary>
         public Widgets Widgets { get; set; }
 
-        /// <summary>AOD?</summary>
+        /// <summary>AOD</summary>
         public ScreenIdle ScreenIdle { get; set; }
     }
 

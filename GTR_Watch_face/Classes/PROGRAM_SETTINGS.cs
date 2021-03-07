@@ -36,6 +36,8 @@
         public bool ShowIn12hourFormat = true;
         public bool SaveID = true;
 
+        public int[] CustomColors = { };
+
         public string pack_unpack_dir { get; set; }
         public string unpack_command_GTR_2 = "--gtr2 47 --file";
         public string unpack_command_GTS_2 = "--gts2 --file";

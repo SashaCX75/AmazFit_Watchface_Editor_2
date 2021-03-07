@@ -21,12 +21,12 @@ namespace AmazFit_Watchface_2
         /// <param name="showShortcutsArea">Подсвечивать область ярлыков рамкой</param>
         /// <param name="showShortcutsBorder">Подсвечивать область ярлыков заливкой</param>
         /// <param name="showAnimation">Показывать анимацию при предпросмотре</param>
-        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        /// <param name="showProgressArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         /// <param name="showCentrHend">Подсвечивать центр стрелки</param>
         /// <param name="link">1 - если отрисовка только до анимации, 
         /// 2 - если отрисовка только после анимации, в остальных случаях полная отрисовка</param>
         public void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, 
-            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showCircleScaleArea, 
+            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showProgressArea, 
             bool showCentrHend, int link)
         {
             Logger.WriteLine("* PreviewToBitmap");
@@ -178,7 +178,7 @@ namespace AmazFit_Watchface_2
                 int Day = Watch_Face_Preview_Set.Date.Day;
                 Day--;
                 float angle = startAngle + Day * (endAngle - startAngle) / 30;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Day_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -223,7 +223,7 @@ namespace AmazFit_Watchface_2
                 int Month = Watch_Face_Preview_Set.Date.Month;
                 Month--;
                 float angle = startAngle + Month * (endAngle - startAngle) / 11;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Month_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -269,7 +269,7 @@ namespace AmazFit_Watchface_2
                 WeekDay--;
                 if (WeekDay < 0) WeekDay = 6;
                 float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_DOW_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -396,14 +396,14 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showCircleScaleArea);
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showCircleScaleArea);
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
                 }
             }
 
@@ -436,12 +436,50 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea); 
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea); 
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // зараяд надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Battery;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
                 }
             }
 
@@ -481,51 +519,13 @@ namespace AmazFit_Watchface_2
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
                     float angle = startAngle + Watch_Face_Preview_Set.Battery * (endAngle - startAngle) / 100;
-                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
-                }
-            }
-
-            // зараяд надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
-                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
-
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    int imageIndex = comboBox_image.SelectedIndex;
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
-                    bool addZero = checkBox_add_zero.Checked;
-                    int value = Watch_Face_Preview_Set.Battery;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
-
-                    if (comboBox_unit.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
-                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
             }
@@ -600,14 +600,14 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showCircleScaleArea);
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showCircleScaleArea);
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
                 }
             }
 
@@ -641,12 +641,50 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // шаги надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.Steps;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 5, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
                 }
             }
 
@@ -688,51 +726,13 @@ namespace AmazFit_Watchface_2
                     float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps * (endAngle - startAngle) /
                     Watch_Face_Preview_Set.Activity.StepsGoal;
                     if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
-                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
-                }
-            }
-
-            // шаги надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
-                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
-
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    int imageIndex = comboBox_image.SelectedIndex;
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
-                    bool addZero = checkBox_add_zero.Checked;
-                    int value = Watch_Face_Preview_Set.Activity.Steps;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 5, separator_index, BBorder);
-
-                    if (comboBox_unit.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
-                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
             }
@@ -807,14 +807,14 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showCircleScaleArea);
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showCircleScaleArea);
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
                 }
             }
 
@@ -848,12 +848,50 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // калории надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.Calories;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 4, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
                 }
             }
 
@@ -894,51 +932,13 @@ namespace AmazFit_Watchface_2
 
                     float angle = startAngle + Watch_Face_Preview_Set.Activity.Calories * (endAngle - startAngle) / 300f;
                     if (Watch_Face_Preview_Set.Activity.Calories > 300) angle = endAngle;
-                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
-                }
-            }
-
-            // калории надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
-                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
-
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    int imageIndex = comboBox_image.SelectedIndex;
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
-                    bool addZero = checkBox_add_zero.Checked;
-                    int value = Watch_Face_Preview_Set.Activity.Calories;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 4, separator_index, BBorder);
-
-                    if (comboBox_unit.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
-                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
             }
@@ -1013,14 +1013,14 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showCircleScaleArea);
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showCircleScaleArea);
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
                 }
             }
 
@@ -1054,12 +1054,50 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // пульс надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.HeartRate;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
                 }
             }
 
@@ -1100,51 +1138,13 @@ namespace AmazFit_Watchface_2
 
                     float angle = startAngle + Watch_Face_Preview_Set.Activity.HeartRate * (endAngle - startAngle) / 200f;
                     if (Watch_Face_Preview_Set.Activity.HeartRate > 200) angle = endAngle;
-                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
-                }
-            }
-
-            // пульс надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
-                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
-
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    int imageIndex = comboBox_image.SelectedIndex;
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
-                    bool addZero = checkBox_add_zero.Checked;
-                    int value = Watch_Face_Preview_Set.Activity.HeartRate;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
-
-                    if (comboBox_unit.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
-                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
             }
@@ -1219,14 +1219,14 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showCircleScaleArea);
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showCircleScaleArea);
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
                 }
             }
 
@@ -1260,12 +1260,50 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // PAI надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
+
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = comboBox_alignment.SelectedIndex;
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.PAI;
+                    int separator_index = comboBox_separator.SelectedIndex;
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
                 }
             }
 
@@ -1306,51 +1344,13 @@ namespace AmazFit_Watchface_2
 
                     float angle = startAngle + Watch_Face_Preview_Set.Activity.PAI * (endAngle - startAngle) / 100f;
                     if (Watch_Face_Preview_Set.Activity.PAI > 100) angle = endAngle;
-                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
-                }
-            }
-
-            // PAI надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
-                //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
-
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    int imageIndex = comboBox_image.SelectedIndex;
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
-                    bool addZero = checkBox_add_zero.Checked;
-                    int value = Watch_Face_Preview_Set.Activity.PAI;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
-
-                    if (comboBox_unit.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
-                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
             }
@@ -1425,14 +1425,14 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showCircleScaleArea);
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showCircleScaleArea);
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
                 }
             }
 
@@ -1466,60 +1466,12 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
-                }
-            }
-
-            // путь стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
-
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
-                            (int)numericUpDownY_background.Value, src.Width, src.Height));
-                    }
-
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int offsetX = (int)numericUpDown_offsetX.Value;
-                    int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
-                    float startAngle = (float)(numericUpDown_startAngle.Value);
-                    float endAngle = (float)(numericUpDown_endAngle.Value);
-
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Distance * (endAngle - startAngle) / 10000f;
-                    if (Watch_Face_Preview_Set.Activity.Distance > 10000) angle = endAngle;
-                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
-                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1560,6 +1512,54 @@ namespace AmazFit_Watchface_2
                         src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // путь стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Distance * (endAngle - startAngle) / 10000f;
+                    if (Watch_Face_Preview_Set.Activity.Distance > 10000) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
                     }
                 }
             }
@@ -1637,14 +1637,14 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showCircleScaleArea);
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleCircler(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showCircleScaleArea);
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
                 }
             }
 
@@ -1678,61 +1678,12 @@ namespace AmazFit_Watchface_2
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showCircleScaleArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex);
-                }
-            }
-
-            // погода стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
-
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
-                            (int)numericUpDownY_background.Value, src.Width, src.Height));
-                    }
-
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int offsetX = (int)numericUpDown_offsetX.Value;
-                    int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
-                    float startAngle = (float)(numericUpDown_startAngle.Value);
-                    float endAngle = (float)(numericUpDown_endAngle.Value);
-
-                    float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
-                    float angle = startAngle + position * (endAngle - startAngle);
-                    if (Watch_Face_Preview_Set.Weather.Temperature > 35) angle = endAngle;
-                    DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
-                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1898,6 +1849,55 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            // погода стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
+                    float angle = startAngle + position * (endAngle - startAngle);
+                    if (Watch_Face_Preview_Set.Weather.Temperature > 35) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
             #endregion
 
 
@@ -2030,6 +2030,59 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region аналоговое время
+
+            bool AnalogClockOffSet = false;
+            int centerX = 227;
+            int centerY = 227;
+            if (radioButton_GTS2.Checked)
+            {
+                centerX = 174;
+                centerY = 221;
+            }
+
+            if ((numericUpDown_Hour_handX.Value != centerX) ||
+                (numericUpDown_Hour_handY.Value != centerY)) AnalogClockOffSet = true;
+            if ((numericUpDown_Minute_handX.Value != centerX) ||
+                (numericUpDown_Minute_handY.Value != centerY)) AnalogClockOffSet = true;
+            if ((numericUpDown_Second_handX.Value != centerX) ||
+                (numericUpDown_Second_handY.Value != centerY)) AnalogClockOffSet = true;
+
+            if (AnalogClockOffSet)
+            {
+                int offsetX_Hour = (int)numericUpDown_Hour_handX.Value;
+                int offsetY_Hour = (int)numericUpDown_Hour_handY.Value;
+                int offsetX_Min = (int)numericUpDown_Minute_handX.Value;
+                int offsetY_Min = (int)numericUpDown_Minute_handY.Value;
+
+
+                if ((offsetX_Hour != centerX || offsetY_Hour != centerY) && 
+                    ((offsetX_Min != centerX || offsetY_Min != centerY))) AnalogClockOffSet = false;
+            }
+
+            // секунды
+            if (AnalogClockOffSet)
+            {
+                if (checkBox_Second_hand_Use.Checked && comboBox_Second_hand_image.SelectedIndex >= 0)
+                {
+                    int x = (int)numericUpDown_Second_handX.Value;
+                    int y = (int)numericUpDown_Second_handY.Value;
+                    int offsetX = (int)numericUpDown_Second_handX_offset.Value;
+                    int offsetY = (int)numericUpDown_Second_handY_offset.Value;
+                    int image_index = comboBox_Second_hand_image.SelectedIndex;
+                    int sec = Watch_Face_Preview_Set.Time.Seconds;
+                    //if (hour >= 12) hour = hour - 12;
+                    float angle = 360 * sec / 60;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_Second_hand_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_hand_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Second_handX_centr.Value,
+                            (int)numericUpDown_Second_handY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
             // часы
             if (checkBox_Hour_hand_Use.Checked && comboBox_Hour_hand_image.SelectedIndex >= 0)
             {
@@ -2043,7 +2096,7 @@ namespace AmazFit_Watchface_2
                 //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
                 if (hour >= 12) hour = hour - 12;
                 float angle = 360 * hour / 12 + 360 * min / (60 * 12);
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Hour_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -2063,7 +2116,7 @@ namespace AmazFit_Watchface_2
                 int image_index = comboBox_Minute_hand_image.SelectedIndex;
                 int min = Watch_Face_Preview_Set.Time.Minutes;
                 float angle = 360 * min / 60;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                 if (comboBox_Minute_hand_imageCentr.SelectedIndex >= 0)
                 {
@@ -2074,24 +2127,27 @@ namespace AmazFit_Watchface_2
             }
 
             // секунды
-            if (checkBox_Second_hand_Use.Checked && comboBox_Second_hand_image.SelectedIndex >= 0)
+            if (!AnalogClockOffSet)
             {
-                int x = (int)numericUpDown_Second_handX.Value;
-                int y = (int)numericUpDown_Second_handY.Value;
-                int offsetX = (int)numericUpDown_Second_handX_offset.Value;
-                int offsetY = (int)numericUpDown_Second_handY_offset.Value;
-                int image_index = comboBox_Second_hand_image.SelectedIndex;
-                int sec = Watch_Face_Preview_Set.Time.Seconds;
-                //if (hour >= 12) hour = hour - 12;
-                float angle = 360 * sec / 60;
-                DrawAnalogClock2(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                if (comboBox_Second_hand_imageCentr.SelectedIndex >= 0)
+                if (checkBox_Second_hand_Use.Checked && comboBox_Second_hand_image.SelectedIndex >= 0)
                 {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Second_hand_imageCentr.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Second_handX_centr.Value,
-                        (int)numericUpDown_Second_handY_centr.Value, src.Width, src.Height));
-                }
+                    int x = (int)numericUpDown_Second_handX.Value;
+                    int y = (int)numericUpDown_Second_handY.Value;
+                    int offsetX = (int)numericUpDown_Second_handX_offset.Value;
+                    int offsetY = (int)numericUpDown_Second_handY_offset.Value;
+                    int image_index = comboBox_Second_hand_image.SelectedIndex;
+                    int sec = Watch_Face_Preview_Set.Time.Seconds;
+                    //if (hour >= 12) hour = hour - 12;
+                    float angle = 360 * sec / 60;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (comboBox_Second_hand_imageCentr.SelectedIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_Second_hand_imageCentr.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Second_handX_centr.Value,
+                            (int)numericUpDown_Second_handY_centr.Value, src.Width, src.Height));
+                    }
+                } 
             }
             #endregion
 
@@ -2178,7 +2234,7 @@ namespace AmazFit_Watchface_2
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_Battery_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showProgressArea);
                     }
                     else
                     {
@@ -2692,7 +2748,7 @@ namespace AmazFit_Watchface_2
                     if (AngleScale > 1) AngleScale = 1;
                     EndAngle = EndAngle * AngleScale;
                     int lineCap = comboBox_StepsProgress_Flatness.SelectedIndex;
-                    CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
+                    CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showProgressArea);
                 }
                 else
                 {
@@ -2907,7 +2963,7 @@ namespace AmazFit_Watchface_2
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityPulsScale_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showProgressArea);
                     }
                     else
                     {
@@ -3012,7 +3068,7 @@ namespace AmazFit_Watchface_2
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityCaloriesScale_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showProgressArea);
                     }
                     else
                     {
@@ -3795,15 +3851,15 @@ namespace AmazFit_Watchface_2
         /// <param name="position">Отображаемая величина от 0 до 1</param>
         /// <param name="color">Свет шкалы</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
-        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
-        private void DrawScaleCircler(Graphics graphics, int x, int y, float radius, float width,
+        /// <param name="showProgressArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        private void DrawScaleCircle(Graphics graphics, int x, int y, float radius, float width,
             int lineCap, float startAngle, float endAngle, float position, Color color,
-             int backgroundIndex, bool showCircleScaleArea)
+             int backgroundIndex, bool showProgressArea)
         {
-            Logger.WriteLine("* DrawScaleCircler");
+            Logger.WriteLine("* DrawScaleCircle_image");
             if (position > 1) position = 1;
             float valueAngle = endAngle * position;
-            if (valueAngle == 0) return;
+            //if (valueAngle == 0) return;
             Bitmap src = new Bitmap(1, 1);
             Pen pen = new Pen(color, width);
 
@@ -3835,7 +3891,13 @@ namespace AmazFit_Watchface_2
                 graphics.DrawImage(src, new Rectangle(srcX, srcX, src.Width, src.Height));
             }
 
-            graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, valueAngle);
+            try
+            {
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, valueAngle);
+            }
+            catch (Exception)
+            {
+            }
 
             //if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
             //{
@@ -3844,7 +3906,7 @@ namespace AmazFit_Watchface_2
             //}
             src.Dispose();
 
-            if (showCircleScaleArea)
+            if (showProgressArea)
             {
                 // подсвечивание шкалы заливкой
                 HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
@@ -3867,7 +3929,7 @@ namespace AmazFit_Watchface_2
                     graphics.DrawArc(pen2, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
                 }
             }
-            Logger.WriteLine("* DrawScaleCircler (end)");
+            Logger.WriteLine("* DrawScaleCircle_image (end)");
 
         }
 
@@ -3884,18 +3946,19 @@ namespace AmazFit_Watchface_2
         /// <param name="color">Свет шкалы</param>
         /// <param name="image_index">Номер изображения</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
-        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
-        private void DrawScaleCircler(Graphics graphics, int x, int y, float radius, float width,
+        /// <param name="showProgressArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        private void DrawScaleCircle_image(Graphics graphics, int x, int y, float radius, float width,
             int lineCap, float startAngle, float endAngle, float position, int imageIndex,
-            int backgroundIndex, bool showCircleScaleArea)
+            int backgroundIndex, bool showProgressArea)
         {
-            Logger.WriteLine("* DrawScaleCircler");
+            Logger.WriteLine("* DrawScaleCircle_image");
             if (position > 1) position = 1;
             float valueAngle = endAngle * position;
-            if (valueAngle == 0) return;
+            //if (valueAngle == 0) return;
 
             Bitmap src = OpenFileStream(ListImagesFullName[imageIndex]);
-            Pen pen = new Pen(Color.Black, width);
+            //Pen pen = new Pen(Color.Black, width);
+            Pen pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
 
             switch (lineCap)
             {
@@ -3929,13 +3992,17 @@ namespace AmazFit_Watchface_2
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
             try
             {
+                //int centrX = (int)(width / 2f + radius);
+                //int centrY = (int)(width / 2f + radius);
                 //gPanel.DrawLine(pen, centrX, centrY, centrX + 1, centrY + 1);
-                //pen = new Pen(Color.Black, width);
+                gPanel.DrawLine(pen, 0, 0, 0 + 1, 0 + 1);
+                pen = new Pen(Color.Black, width);
                 //pen.Width = width;
                 //pen.Color = Color.Black;
-                gPanel.DrawArc(pen, (int)Math.Round(width / 2, MidpointRounding.AwayFromZero),
-                    (int)Math.Round(width / 2, MidpointRounding.AwayFromZero), CircleWidth, CircleWidth, 
+                gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth, 
                     startAngle, valueAngle);
+
+             
                 //src = ApplyAlfaMask(src, mask);
                 src = ApplyMask(src, mask);
                 //src = mask;
@@ -3943,36 +4010,37 @@ namespace AmazFit_Watchface_2
                 //src.Dispose();
                 mask.Dispose();
 
-                if (showCircleScaleArea)
-                {
-                    // подсвечивание шкалы заливкой
-                    HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
-                    pen.Brush = myHatchBrush;
-                    graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
-                    myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
-                    pen.Brush = myHatchBrush;
-                    graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
-
-                    // подсвечивание внешней и внутреней дуги на шкале
-                    float w2 = width / 2f;
-                    using (Pen pen1 = new Pen(Color.White, 1))
-                    {
-                        graphics.DrawArc(pen1, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
-                        graphics.DrawArc(pen1, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
-                    }
-                    using (Pen pen2 = new Pen(Color.Black, 1))
-                    {
-                        graphics.DrawArc(pen2, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
-                        graphics.DrawArc(pen2, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
-                    }
-                }
             }
             catch (Exception)
             {
 
             }
+
+            if (showProgressArea)
+            {
+                // подсвечивание шкалы заливкой
+                HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                pen.Brush = myHatchBrush;
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                pen.Brush = myHatchBrush;
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+
+                // подсвечивание внешней и внутреней дуги на шкале
+                float w2 = width / 2f;
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawArc(pen1, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
+                    graphics.DrawArc(pen1, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    graphics.DrawArc(pen2, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
+                    graphics.DrawArc(pen2, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                }
+            }
             src.Dispose();
-            Logger.WriteLine("* DrawScaleCircler (end)");
+            Logger.WriteLine("* DrawScaleCircle_image (end)");
 
         }
 
@@ -3987,6 +4055,7 @@ namespace AmazFit_Watchface_2
         /// <param name="color">Свет шкалы</param>
         /// <param name="lineCap">Тип окончания линии</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
+        /// <param name="showProgressArea">Подсвечивать шкалу</param>
         private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, 
             Color color, int lineCap, int backgroundIndex)
         {
@@ -4070,9 +4139,9 @@ namespace AmazFit_Watchface_2
         /// <param name="imageIndex">Изображение шкалы</param>
         /// <param name="lineCap">Тип окончания линии</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
-        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        /// <param name="showProgressArea">Подсвечивать шкалу</param>
         private void DrawScaleLinear(Graphics graphics, int x, int y, int length, int width, float position, 
-            int imageIndex, int lineCap, int backgroundIndex, bool showCircleScaleArea)
+            int imageIndex, int lineCap, int backgroundIndex, bool showProgressArea)
         {
             Bitmap src = new Bitmap(1, 1);
 
@@ -4131,7 +4200,7 @@ namespace AmazFit_Watchface_2
                     //src.Dispose();
                     mask.Dispose();
 
-                    if (showCircleScaleArea)
+                    if (showProgressArea)
                     {
                         // подсвечивание шкалы заливкой
                         HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
@@ -4188,7 +4257,7 @@ namespace AmazFit_Watchface_2
                     //src.Dispose();
                     mask.Dispose();
 
-                    if (showCircleScaleArea)
+                    if (showProgressArea)
                     {
                         // подсвечивание шкалы заливкой
                         HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
@@ -4220,8 +4289,9 @@ namespace AmazFit_Watchface_2
         /// <param name="color">Свет шкалы</param>
         /// <param name="pointerIndex">Номер изображения маркера</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
+        /// <param name="showProgressArea">Подсвечивать шкалу</param>
         private void DrawScaleLinearPointer(Graphics graphics, int x, int y, int length, int width, float position, Color color, 
-            int pointerIndex, int backgroundIndex)
+            int pointerIndex, int backgroundIndex, bool showProgressArea)
         {
             Bitmap src = new Bitmap(1, 1);
 
@@ -4252,7 +4322,18 @@ namespace AmazFit_Watchface_2
                     src = OpenFileStream(ListImagesFullName[pointerIndex]);
                     int x3 = x2 - width / 2;
                     graphics.DrawImage(src, new Rectangle(x3, y1 - src.Height/2, src.Width, src.Height));
-                } 
+                }
+
+                if (showProgressArea)
+                {
+                    // подсвечивание шкалы заливкой
+                    HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+                    myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+                }
             }
             else
             {
@@ -4280,6 +4361,17 @@ namespace AmazFit_Watchface_2
                     int x3 = x2 - src.Width / 2;
                     graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
                 }
+
+                if (showProgressArea)
+                {
+                    // подсвечивание шкалы заливкой
+                    HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawLine(pen, new Point(x1, y1), new Point(x1 + length1, y1));
+                    myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
+                }
             }
 
             src.Dispose();
@@ -4296,9 +4388,9 @@ namespace AmazFit_Watchface_2
         /// <param name="imageIndex">Изображение шкалы</param>
         /// <param name="pointerIndex">Номер изображения маркера</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
-        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
-        private void DrawScaleLinearPointer(Graphics graphics, int x, int y, int length, int width, float position, int imageIndex,
-            int pointerIndex, int backgroundIndex, bool showCircleScaleArea)
+        /// <param name="showProgressArea">Подсвечивать шкалу</param>
+        private void DrawScaleLinearPointer_image(Graphics graphics, int x, int y, int length, int width, float position, int imageIndex,
+            int pointerIndex, int backgroundIndex, bool showProgressArea)
         {
             Bitmap src = new Bitmap(1, 1);
 
@@ -4339,7 +4431,7 @@ namespace AmazFit_Watchface_2
                     //src.Dispose();
                     mask.Dispose();
 
-                    if (showCircleScaleArea)
+                    if (showProgressArea)
                     {
                         // подсвечивание шкалы заливкой
                         HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
@@ -4398,7 +4490,7 @@ namespace AmazFit_Watchface_2
                     //src.Dispose();
                     mask.Dispose();
 
-                    if (showCircleScaleArea)
+                    if (showProgressArea)
                     {
                         // подсвечивание шкалы заливкой
                         HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
@@ -4739,9 +4831,12 @@ namespace AmazFit_Watchface_2
                 }
                 else
                 {
-                    src = OpenFileStream(ListImagesFullName[image_minus_index]);
-                    DateLenghtReal = DateLenghtReal + src.Width + spacing;
-                    //src.Dispose();
+                    if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[image_minus_index]);
+                        DateLenghtReal = DateLenghtReal + src.Width + spacing;
+                        //src.Dispose(); 
+                    }
                 }
             }
 
@@ -4835,970 +4930,6 @@ namespace AmazFit_Watchface_2
             return result;
         }
 
-        /// <summary>Рисует число</summary>
-        /// <param name="graphics">Поверхность для рисования</param>
-        /// <param name="x1">TopLeftX</param>
-        /// <param name="y1">TopLefty</param>
-        /// <param name="x2">BottomRightX</param>
-        /// <param name="y2">BottomRightY</param>
-        /// <param name="image_index">Номер изображения</param>
-        /// <param name="spacing">Величина отступа</param>
-        /// <param name="alignment">Новер выравнивания</param>
-        /// <param name="data_number">Отображаемая величина</param>
-        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2,
-            int image_index, int spacing, int alignment, int data_number, bool BBorder)
-        {
-            Logger.WriteLine("* DrawNumber");
-            var Digit = new Bitmap(ListImagesFullName[image_index]);
-            string data_numberS = data_number.ToString();
-            char[] CH = data_numberS.ToCharArray();
-            int _number;
-            int i;
-            var src = new Bitmap(1, 1);
-            //int DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
-            int DateLenght = 0;
-            Logger.WriteLine("DateLenght");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        DateLenght = DateLenght + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-
-            }
-            DateLenght = DateLenght - spacing;
-            //src = new Bitmap(ListImagesFullName[image_index]);
-            src = OpenFileStream(ListImagesFullName[image_index]);
-            if (DateLenght < src.Width) DateLenght = src.Width;
-            //src.Dispose();
-
-            int DateHeight = Digit.Height;
-
-            int PointX = 0;
-            int PointY = 0;
-            switch (alignment)
-            {
-                case 0:
-                case 1:
-                case 2:
-                    PointY = y1;
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    PointY = (y1 + y2) / 2 - DateHeight / 2;
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    PointY = y2 - DateHeight;
-                    break;
-            }
-            switch (alignment)
-            {
-                case 0:
-                case 3:
-                case 6:
-                    PointX = x1;
-                    break;
-                case 1:
-                case 4:
-                case 7:
-                    PointX = (x1 + x2) / 2 - DateLenght / 2;
-                    break;
-                case 2:
-                case 5:
-                case 8:
-                    PointX = x2 - DateLenght;
-                    break;
-            }
-            if (PointX < x1) PointX = x1;
-            if (PointY < y1) PointY = y1;
-            Logger.WriteLine("DrawNumber");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-
-            }
-            src.Dispose();
-            Digit.Dispose();
-
-            if (BBorder)
-            {
-                Logger.WriteLine("DrawBorder");
-                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                using (Pen pen1 = new Pen(Color.White, 1))
-                {
-                    graphics.DrawRectangle(pen1, rect);
-                }
-                using (Pen pen2 = new Pen(Color.Black, 1))
-                {
-                    pen2.DashStyle = DashStyle.Dot;
-                    graphics.DrawRectangle(pen2, rect);
-                }
-            }
-            Logger.WriteLine("* DrawNumber (end)");
-        }
-
-        /// <summary>Рисует число с разделителем</summary>
-        /// <param name="graphics">Поверхность для рисования</param>
-        /// <param name="x1">TopLeftX</param>
-        /// <param name="y1">TopLefty</param>
-        /// <param name="x2">BottomRightX</param>
-        /// <param name="y2">BottomRightY</param>
-        /// <param name="image_index">Номер изображения</param>
-        /// <param name="spacing">Величина отступа</param>
-        /// <param name="alignment">Новер выравнивания</param>
-        /// <param name="data_number">Отображаемая величина</param>
-        /// <param name="suffix">Номер изображения суфикса</param>
-        /// <param name="dec">Номер изображения разделителя</param>
-        /// <param name="decCount">Число знаков после запятой</param>
-        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
-            int alignment, double data_number, int suffix, int dec, int decCount, bool BBorder)
-        {
-            Logger.WriteLine("* DrawFormatNumber");
-            data_number = Math.Round(data_number, 2);
-            var Digit = new Bitmap(ListImagesFullName[image_index]);
-            //var Delimit = new Bitmap(1, 1);
-            //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
-            string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
-            string data_numberS = data_number.ToString();
-            if (decCount > 0)
-            {
-                if (data_numberS.IndexOf(decimalSeparator) < 0) data_numberS = data_numberS + decimalSeparator;
-                while (data_numberS.IndexOf(decimalSeparator) > data_numberS.Length - decCount - 1)
-                {
-                    data_numberS = data_numberS + "0";
-                } 
-            }
-            int DateLenght = 0;
-            int _number;
-            int i;
-            var src = new Bitmap(1, 1);
-            char[] CH = data_numberS.ToCharArray();
-
-            Logger.WriteLine("DateLenght");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        DateLenght = DateLenght + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-                else
-                {
-                    if (dec >= 0)
-                    {
-                        //src = new Bitmap(ListImagesFullName[dec]);
-                        src = OpenFileStream(ListImagesFullName[dec]);
-                        DateLenght = DateLenght + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-
-            }
-            if (suffix >= 0)
-            {
-                //src = new Bitmap(ListImagesFullName[suffix]);
-                src = OpenFileStream(ListImagesFullName[suffix]);
-                DateLenght = DateLenght + src.Width + spacing;
-                //src.Dispose();
-            }
-            DateLenght = DateLenght - spacing;
-            //src = new Bitmap(ListImagesFullName[image_index]);
-            src = OpenFileStream(ListImagesFullName[image_index]);
-            if (DateLenght < src.Width) DateLenght = src.Width;
-            //src.Dispose();
-            //if ((data_number != (int)data_number) && (dec >= 0))
-            //{
-            //    DateLenght = Dagit.Width * (data_numberS.Length - 1) + spacing * (data_numberS.Length - 2);
-            //}
-            //else
-            //{
-            //    DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
-            //}
-
-            int DateHeight = Digit.Height;
-
-            int PointX = 0;
-            int PointY = 0;
-            switch (alignment)
-            {
-                case 0:
-                case 1:
-                case 2:
-                    PointY = y1;
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    PointY = (y1 + y2) / 2 - DateHeight / 2;
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    PointY = y2 - DateHeight;
-                    break;
-            }
-            switch (alignment)
-            {
-                case 0:
-                case 3:
-                case 6:
-                    PointX = x1;
-                    break;
-                case 1:
-                case 4:
-                case 7:
-                    PointX = (x1 + x2) / 2 - DateLenght / 2;
-                    break;
-                case 2:
-                case 5:
-                case 8:
-                    PointX = x2 - DateLenght;
-                    break;
-            }
-            if (PointX < x1) PointX = x1;
-            if (PointY < y1) PointY = y1;
-            Logger.WriteLine("DrawFormatNumber");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-                else
-                {
-                    if (dec >= 0)
-                    {
-                        //src = new Bitmap(ListImagesFullName[dec]);
-                        src = OpenFileStream(ListImagesFullName[dec]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-
-            }
-            if (suffix >= 0)
-            {
-                //src = new Bitmap(ListImagesFullName[suffix]);
-                src = OpenFileStream(ListImagesFullName[suffix]);
-                graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                //src.Dispose();
-
-            }
-            src.Dispose();
-            Digit.Dispose();
-
-            if (BBorder)
-            {
-                Logger.WriteLine("DrawBorder");
-                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                using (Pen pen1 = new Pen(Color.White, 1))
-                {
-                    graphics.DrawRectangle(pen1, rect);
-                }
-                using (Pen pen2 = new Pen(Color.Black, 1))
-                {
-                    pen2.DashStyle = DashStyle.Dot;
-                    graphics.DrawRectangle(pen2, rect);
-                }
-            }
-            Logger.WriteLine("* DrawFormatNumber (end)");
-        }
-
-        /// <summary>Рисует год</summary>
-        /// <param name="graphics">Поверхность для рисования</param>
-        /// <param name="x1">TopLeftX</param>
-        /// <param name="y1">TopLefty</param>
-        /// <param name="x2">BottomRightX</param>
-        /// <param name="y2">BottomRightY</param>
-        /// <param name="image_index">Номер изображения</param>
-        /// <param name="spacing">Величина отступа</param>
-        /// <param name="alignment">Новер выравнивания</param>
-        /// <param name="data_number">Отображаемая величина</param>
-        /// <param name="delimiter">Номер изображения разделителя</param>
-        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        public void DrawYear(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
-            int alignment, int data_number, int delimiter, bool BBorder)
-        {
-            Logger.WriteLine("* DrawYear");
-            var Digit = new Bitmap(ListImagesFullName[image_index]);
-            //var Delimit = new Bitmap(1, 1);
-            //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
-            string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
-            string data_numberS = data_number.ToString();
-            int DateLenght = 0;
-            int _number;
-            int i;
-            var src = new Bitmap(1, 1);
-            char[] CH = data_numberS.ToCharArray();
-
-            Logger.WriteLine("DateLenght");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        DateLenght = DateLenght + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-            }
-            if (delimiter >= 0)
-            {
-                //src = new Bitmap(ListImagesFullName[suffix]);
-                src = OpenFileStream(ListImagesFullName[delimiter]);
-                DateLenght = DateLenght + src.Width + spacing;
-                //src.Dispose();
-            }
-            DateLenght = DateLenght - spacing;
-            //src = new Bitmap(ListImagesFullName[image_index]);
-            src = OpenFileStream(ListImagesFullName[image_index]);
-            if (DateLenght < src.Width) DateLenght = src.Width;
-            //src.Dispose();
-            //if ((data_number != (int)data_number) && (dec >= 0))
-            //{
-            //    DateLenght = Dagit.Width * (data_numberS.Length - 1) + spacing * (data_numberS.Length - 2);
-            //}
-            //else
-            //{
-            //    DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
-            //}
-
-            int DateHeight = Digit.Height;
-
-            int PointX = 0;
-            int PointY = 0;
-            switch (alignment)
-            {
-                case 0:
-                case 1:
-                case 2:
-                    PointY = y1;
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    PointY = (y1 + y2) / 2 - DateHeight / 2;
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    PointY = y2 - DateHeight;
-                    break;
-            }
-            switch (alignment)
-            {
-                case 0:
-                case 3:
-                case 6:
-                    PointX = x1;
-                    break;
-                case 1:
-                case 4:
-                case 7:
-                    PointX = (x1 + x2) / 2 - DateLenght / 2;
-                    break;
-                case 2:
-                case 5:
-                case 8:
-                    PointX = x2 - DateLenght;
-                    break;
-            }
-            if (PointX < x1) PointX = x1;
-            if (PointY < y1) PointY = y1;
-            Logger.WriteLine("DrawYear");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-            }
-            if (delimiter >= 0)
-            {
-                //src = new Bitmap(ListImagesFullName[suffix]);
-                src = OpenFileStream(ListImagesFullName[delimiter]);
-                graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                //src.Dispose();
-
-            }
-            src.Dispose();
-            Digit.Dispose();
-
-            if (BBorder)
-            {
-                Logger.WriteLine("DrawBorder");
-                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                using (Pen pen1 = new Pen(Color.White, 1))
-                {
-                    graphics.DrawRectangle(pen1, rect);
-                }
-                using (Pen pen2 = new Pen(Color.Black, 1))
-                {
-                    pen2.DashStyle = DashStyle.Dot;
-                    graphics.DrawRectangle(pen2, rect);
-                }
-            }
-            Logger.WriteLine("* DrawYear (end)");
-        }
-
-        /// <summary>Рисует дату одной линией</summary>
-        /// <param name="graphics">Поверхность для рисования</param>
-        /// <param name="x1">TopLeftX</param>
-        /// <param name="y1">TopLefty</param>
-        /// <param name="x2">BottomRightX</param>
-        /// <param name="y2">BottomRightY</param>
-        /// <param name="image_index">Номер изображения</param>
-        /// <param name="spacing">Величина отступа</param>
-        /// <param name="alignment">Новер выравнивания</param>
-        /// <param name="month_value">Номер месяца</param>
-        /// <param name="day_value">Дата</param>
-        /// <param name="delimiter">Номер изображения разделителя</param>
-        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        /// <param name="TwoDigitsMonts">Две цифры в месяце</param>
-        /// <param name="TwoDigitsDay">Две цифры в дате</param>
-        public void DrawDateOneLine(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
-            int alignment, int month_value, int day_value, int delimiter, bool BBorder, bool TwoDigitsMonts, bool TwoDigitsDay)
-        {
-            Logger.WriteLine("* DrawDateOneLine");
-            var Digit = new Bitmap(ListImagesFullName[image_index]);
-            string month_valueS = month_value.ToString();
-            if (TwoDigitsMonts && month_valueS.Length < 2) month_valueS = "0" + month_valueS;
-            string day_valueS = day_value.ToString();
-            if (TwoDigitsDay && day_valueS.Length < 2) day_valueS = "0" + day_valueS;
-
-            int DateLenght = 0;
-            int _number;
-            int i;
-            var src = new Bitmap(1, 1);
-            String data_numberS = month_valueS + "." + day_valueS;
-            char[] CH = data_numberS.ToCharArray();
-
-            Logger.WriteLine("DateLenght");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        DateLenght = DateLenght + src.Width + spacing;
-                    }
-                }
-                else
-                {
-                    if (delimiter >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[delimiter]);
-                        DateLenght = DateLenght + src.Width + spacing;
-                    }
-                }
-
-            }
-            DateLenght = DateLenght - spacing;
-            src = OpenFileStream(ListImagesFullName[image_index]);
-            if (DateLenght < src.Width) DateLenght = src.Width;
-
-            int DateHeight = Digit.Height;
-
-            int PointX = 0;
-            int PointY = 0;
-            switch (alignment)
-            {
-                case 0:
-                case 1:
-                case 2:
-                    PointY = y1;
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    PointY = (y1 + y2) / 2 - DateHeight / 2;
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    PointY = y2 - DateHeight;
-                    break;
-            }
-            switch (alignment)
-            {
-                case 0:
-                case 3:
-                case 6:
-                    PointX = x1;
-                    break;
-                case 1:
-                case 4:
-                case 7:
-                    PointX = (x1 + x2) / 2 - DateLenght / 2;
-                    break;
-                case 2:
-                case 5:
-                case 8:
-                    PointX = x2 - DateLenght;
-                    break;
-            }
-            if (PointX < x1) PointX = x1;
-            if (PointY < y1) PointY = y1;
-            Logger.WriteLine("DrawDateOneLine");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                    }
-                }
-                else
-                {
-                    if (delimiter >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[delimiter]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                    }
-                }
-
-            }
-            src.Dispose();
-            Digit.Dispose();
-
-            if (BBorder)
-            {
-                Logger.WriteLine("DrawBorder");
-                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                using (Pen pen1 = new Pen(Color.White, 1))
-                {
-                    graphics.DrawRectangle(pen1, rect);
-                }
-                using (Pen pen2 = new Pen(Color.Black, 1))
-                {
-                    pen2.DashStyle = DashStyle.Dot;
-                    graphics.DrawRectangle(pen2, rect);
-                }
-            }
-            Logger.WriteLine("* DrawDateOneLine (end)");
-        }
-
-        /// <summary>Рисует число или дату</summary>
-        /// <param name="graphics">Поверхность для рисования</param>
-        /// <param name="x1">TopLeftX</param>
-        /// <param name="y1">TopLefty</param>
-        /// <param name="x2">BottomRightX</param>
-        /// <param name="y2">BottomRightY</param>
-        /// <param name="image_index">Номер изображения</param>
-        /// <param name="spacing">Величина отступа</param>
-        /// <param name="alignment">Новер выравнивания</param>
-        /// <param name="data_number">Единици в дате</param>
-        /// <param name="second_data_number">Десятки в дате</param>
-        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        /// <param name="TwoDigits">Две цифры в дате</param>
-        public void DrawNumberDate(Graphics graphics, int x1, int y1, int x2, int y2,int image_index, 
-            int spacing, int alignment, int data_number, bool BBorder, bool TwoDigits)
-        {
-            Logger.WriteLine("* DrawNumberDate");
-            var Digit = new Bitmap(ListImagesFullName[image_index]);
-            string data_numberS = data_number.ToString();
-            if (TwoDigits && data_numberS.Length < 2) data_numberS = "0" + data_numberS;
-            char[] CH = data_numberS.ToCharArray();
-            int _number;
-            int i;
-            var src = new Bitmap(1, 1);
-            //int DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
-            int DateLenght = 0;
-            Logger.WriteLine("DateLenght");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        DateLenght = DateLenght + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-
-            }
-            DateLenght = DateLenght - spacing;
-            //src = new Bitmap(ListImagesFullName[image_index]);
-            src = OpenFileStream(ListImagesFullName[image_index]);
-            if (DateLenght < src.Width) DateLenght = src.Width;
-            //src.Dispose();
-
-            int DateHeight = Digit.Height;
-
-            int PointX = 0;
-            int PointY = 0;
-            switch (alignment)
-            {
-                case 0:
-                case 1:
-                case 2:
-                    PointY = y1;
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    PointY = (y1 + y2) / 2 - DateHeight / 2;
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    PointY = y2 - DateHeight;
-                    break;
-            }
-            switch (alignment)
-            {
-                case 0:
-                case 3:
-                case 6:
-                    PointX = x1;
-                    break;
-                case 1:
-                case 4:
-                case 7:
-                    PointX = (x1 + x2) / 2 - DateLenght / 2;
-                    break;
-                case 2:
-                case 5:
-                case 8:
-                    PointX = x2 - DateLenght;
-                    break;
-            }
-            if (PointX < x1) PointX = x1;
-            if (PointY < y1) PointY = y1;
-            Logger.WriteLine("DrawNumberDate");
-            foreach (char ch in CH)
-            {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
-                {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
-                    {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                        //src.Dispose();
-                    }
-                }
-
-            }
-            src.Dispose();
-            Digit.Dispose();
-
-            if (BBorder)
-            {
-                Logger.WriteLine("DrawBorder");
-                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                using (Pen pen1 = new Pen(Color.White, 1))
-                {
-                    graphics.DrawRectangle(pen1, rect);
-                }
-                using (Pen pen2 = new Pen(Color.Black, 1))
-                {
-                    pen2.DashStyle = DashStyle.Dot;
-                    graphics.DrawRectangle(pen2, rect);
-                }
-            }
-            Logger.WriteLine("* DrawNumberDate (end)");
-        }
-
-        /// <summary>Рисует погоду</summary>
-        /// <param name="graphics">Поверхность для рисования</param>
-        /// <param name="x1">TopLeftX</param>
-        /// <param name="y1">TopLefty</param>
-        /// <param name="x2">BottomRightX</param>
-        /// <param name="y2">BottomRightY</param>
-        /// <param name="image_index">Номер изображения</param>
-        /// <param name="spacing">Величина отступа</param>
-        /// <param name="alignment">Новер выравнивания</param>
-        /// <param name="data_number">Отображаемая величина</param>
-        /// <param name="minus">Номер изображения минуса </param>
-        /// <param name="degris">Номер изображения градуса</param>
-        /// <param name="error">Номер изображения ошибки</param>
-        /// <param name="ND">Показывать ошибку</param>
-        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        public void DrawWeather(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
-            int alignment, int data_number, int minus, int degris, int error, bool ND, bool BBorder)
-        {
-            Logger.WriteLine("* DrawWeatherNumber");
-            //data_number = Math.Round(data_number, 2);
-            var Dagit = new Bitmap(ListImagesFullName[image_index]);
-            //var Delimit = new Bitmap(1, 1);
-            //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
-            string data_numberS = data_number.ToString();
-            int DateLenght = 0;
-            int _number;
-            var src = new Bitmap(1, 1);
-            char[] CH = data_numberS.ToCharArray();
-            int i;
-            Logger.WriteLine("DateLenght");
-            if (!ND)
-            {
-                foreach (char ch in CH)
-                {
-                    _number = 0;
-                    if (int.TryParse(ch.ToString(), out _number))
-                    {
-                        i = image_index + _number;
-                        if (i < ListImagesFullName.Count)
-                        {
-                            //src = new Bitmap(ListImagesFullName[i]);
-                            src = OpenFileStream(ListImagesFullName[i]);
-                            DateLenght = DateLenght + src.Width + spacing;
-                            //src.Dispose();
-                        }
-                    }
-                    else
-                    {
-                        if (minus >= 0)
-                        {
-                            //src = new Bitmap(ListImagesFullName[minus]);
-                            src = OpenFileStream(ListImagesFullName[minus]);
-                            DateLenght = DateLenght + src.Width + spacing;
-                            //src.Dispose();
-                        }
-                    }
-
-                }
-                if (degris >= 0)
-                {
-                    //src = new Bitmap(ListImagesFullName[degris]);
-                    src = OpenFileStream(ListImagesFullName[degris]);
-                    DateLenght = DateLenght + src.Width + spacing;
-                    //src.Dispose();
-                }
-                DateLenght = DateLenght - spacing;
-            }
-            else
-            {
-                if (error >= 0)
-                {
-                    //src = new Bitmap(ListImagesFullName[error]);
-                    src = OpenFileStream(ListImagesFullName[error]);
-                    DateLenght = DateLenght + src.Width;
-                    //src.Dispose();
-                }
-            }
-            //if ((data_number != (int)data_number) && (dec >= 0))
-            //{
-            //    DateLenght = Dagit.Width * (data_numberS.Length - 1) + spacing * (data_numberS.Length - 2);
-            //}
-            //else
-            //{
-            //    DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
-            //}
-
-            int DateHeight = Dagit.Height;
-
-            int PointX = 0;
-            int PointY = 0;
-            switch (alignment)
-            {
-                case 0:
-                case 1:
-                case 2:
-                    PointY = y1;
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    PointY = (y1 + y2) / 2 - DateHeight / 2;
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    PointY = y2 - DateHeight;
-                    break;
-            }
-            switch (alignment)
-            {
-                case 0:
-                case 3:
-                case 6:
-                    PointX = x1;
-                    break;
-                case 1:
-                case 4:
-                case 7:
-                    PointX = (x1 + x2) / 2 - DateLenght / 2;
-                    break;
-                case 2:
-                case 5:
-                case 8:
-                    PointX = x2 - DateLenght;
-                    break;
-            }
-            if (PointX < x1) PointX = x1;
-            if (PointY < y1) PointY = y1;
-            Logger.WriteLine("DrawWeatherNumber");
-            if (!ND)
-            {
-                foreach (char ch in CH)
-                {
-                    _number = 0;
-                    if (int.TryParse(ch.ToString(), out _number))
-                    {
-                        i = image_index + _number;
-                        if (i < ListImagesFullName.Count)
-                        {
-                            //src = new Bitmap(ListImagesFullName[i]);
-                            src = OpenFileStream(ListImagesFullName[i]);
-                            graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                            PointX = PointX + src.Width + spacing;
-                            //src.Dispose();
-                        }
-                    }
-                    else
-                    {
-                        if (minus >= 0)
-                        {
-                            //src = new Bitmap(ListImagesFullName[minus]);
-                            src = OpenFileStream(ListImagesFullName[minus]);
-                            graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                            PointX = PointX + src.Width + spacing;
-                            //src.Dispose();
-                        }
-                    }
-
-                }
-                if (degris >= 0)
-                {
-                    //src = new Bitmap(ListImagesFullName[degris]);
-                    src = OpenFileStream(ListImagesFullName[degris]);
-                    graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    //src.Dispose();
-                }
-            }
-            else
-            {
-                if (error >= 0)
-                {
-                    //src = new Bitmap(ListImagesFullName[error]);
-                    src = OpenFileStream(ListImagesFullName[error]);
-                    graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    //src.Dispose();
-                }
-            }
-            src.Dispose();
-            Dagit.Dispose();
-
-            if (BBorder)
-            {
-                Logger.WriteLine("DrawBorder");
-                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                using (Pen pen1 = new Pen(Color.White, 1))
-                {
-                    graphics.DrawRectangle(pen1, rect);
-                }
-                using (Pen pen2 = new Pen(Color.Black, 1))
-                {
-                    pen2.DashStyle = DashStyle.Dot;
-                    graphics.DrawRectangle(pen2, rect);
-                }
-            }
-            Logger.WriteLine("* DrawWeatherNumber (end)");
-        }
-
-
-        /// <summary>Рисует стрелки</summary>
-        /// <param name="graphics">Поверхность для рисования</param>
-        /// <param name="x1">Центр стрелки X</param>
-        /// <param name="y1">Центр стрелки Y</param>
-        /// <param name="offsetX">Смещение от центра по X</param>
-        /// <param name="offsetY">Смещение от центра по Y</param>
-        /// <param name="image_index">Номер изображения</param>
-        /// <param name="angle">Угол поворота стрелки в градусах</param>
-        public void DrawAnalogClock(Graphics graphics, int x1, int y1, float offsetX, float offsetY, int image_index, float angle)
-        {
-            Logger.WriteLine("* DrawAnalogClock");
-            //graphics.RotateTransform(angle);
-            //var src = new Bitmap(ListImagesFullName[image_index]);
-            Bitmap src = OpenFileStream(ListImagesFullName[image_index]);
-            //graphics.DrawImage(src, new Rectangle(227 - x1, 227 - y1, src.Width, src.Height));
-            //if (!model_gtr47)
-            //{
-            //    offSet_X = 195;
-            //    offSet_Y = 195;
-            //}
-            graphics.TranslateTransform(offSet_X + offsetX, offSet_Y + offsetY);
-            graphics.RotateTransform(angle);
-            graphics.DrawImage(src, new Rectangle(-x1, -y1, src.Width, src.Height));
-            graphics.RotateTransform(-angle);
-            graphics.TranslateTransform(-offSet_X - offsetX, -offSet_Y - offsetY);
-            src.Dispose();
-            Logger.WriteLine("* DrawAnalogClock (end)");
-        }
-
         /// <summary>Рисует стрелки</summary>
         /// <param name="graphics">Поверхность для рисования</param>
         /// <param name="x">Центр стрелки X</param>
@@ -5808,9 +4939,9 @@ namespace AmazFit_Watchface_2
         /// <param name="image_index">Номер изображения</param>
         /// <param name="angle">Угол поворота стрелки в градусах</param>
         /// <param name="center_marker">Отображать маркер на точке вращения</param>
-        public void DrawAnalogClock2(Graphics graphics, int x, int y, int offsetX, int offsetY, int image_index, float angle, bool showCentrHend)
+        public void DrawAnalogClock(Graphics graphics, int x, int y, int offsetX, int offsetY, int image_index, float angle, bool showCentrHend)
         {
-            Logger.WriteLine("* DrawAnalogClock2");
+            Logger.WriteLine("* DrawAnalogClock");
             Bitmap src = OpenFileStream(ListImagesFullName[image_index]);
             graphics.TranslateTransform(x, y);
             graphics.RotateTransform(angle);
@@ -5834,7 +4965,7 @@ namespace AmazFit_Watchface_2
                     graphics.DrawLine(pen2, new Point(x, y - 5), new Point(x, y + 5));
                 }
             }
-            Logger.WriteLine("* DrawAnalogClock2 (end)");
+            Logger.WriteLine("* DrawAnalogClock (end)");
         }
 
 
@@ -5848,9 +4979,9 @@ namespace AmazFit_Watchface_2
         /// <param name="lineCap">Тип окончания линии</param>
         /// <param name="startAngle">Начальный угол</param>
         /// <param name="endAngle">Общий угол</param>
-        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        /// <param name="showProgressArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         private void CircleOnBitmap(Graphics graphics, int x, int y, int imageIndex, int radius, float width,
-            int lineCap, float StartAngle, float EndAngle, bool showCircleScaleArea)
+            int lineCap, float StartAngle, float EndAngle, bool showProgressArea)
         {
             Logger.WriteLine("* CircleOnBitmap");
             if (EndAngle == 0) return;
@@ -5901,7 +5032,7 @@ namespace AmazFit_Watchface_2
                 //src.Dispose();
                 mask.Dispose();
 
-                if (showCircleScaleArea)
+                if (showProgressArea)
                 {
                     // подсвечивание шкалы заливкой
                     HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);

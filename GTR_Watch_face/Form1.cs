@@ -407,7 +407,7 @@ namespace AmazFit_Watchface_2
             //    float scale = newHeight / pictureBox_Preview.Height;
             //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
             //}
-            button_CreatePreview.Location= new Point(5, 583);
+            button_CreatePreview.Location= new Point(5, 563);
             Logger.WriteLine("* Form1_Shown(end)");
         }
 
@@ -3381,7 +3381,7 @@ namespace AmazFit_Watchface_2
             PreviewView = false;
             DateTime now = DateTime.Now;
             Random rnd = new Random();
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 10; i++)
             {
                 int year = now.Year;
                 int month = rnd.Next(0, 12)+1;
@@ -3562,6 +3562,7 @@ namespace AmazFit_Watchface_2
             //PreviewImage();
             button_Set10.PerformClick();
             PreviewView = true;
+            PreviewImage();
         }
 
         private void checkBox_WebW_CheckedChanged(object sender, EventArgs e)
@@ -3635,6 +3636,25 @@ namespace AmazFit_Watchface_2
                 FullFileDir = Path.GetDirectoryName(fullfilename);
                 JSON_Modified = false;
                 FormText();
+
+                if (comboBox_Preview_image.SelectedIndex >= 0)
+                {
+                    button_RefreshPreview.Visible = true;
+                    button_CreatePreview.Visible = false;
+                }
+                else
+                {
+                    button_RefreshPreview.Visible = false;
+                    if (FileName != null && FullFileDir != null)
+                    {
+                        button_CreatePreview.Visible = true;
+                    }
+                    else
+                    {
+                        button_CreatePreview.Visible = false;
+                    }
+                }
+
                 if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
             }
         }
@@ -6521,10 +6541,25 @@ namespace AmazFit_Watchface_2
             ComboBox comboBox_color = sender as ComboBox;
             colorDialog.Color = comboBox_color.BackColor;
             colorDialog.FullOpen = true;
+            colorDialog.CustomColors = Program_Settings.CustomColors;
+
+
             if (colorDialog.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка цвета формы
             comboBox_color.BackColor = colorDialog.Color;
+            if (Program_Settings.CustomColors != colorDialog.CustomColors)
+            {
+                Program_Settings.CustomColors = colorDialog.CustomColors;
+
+                string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8); 
+            }
+
             JSON_write();
             PreviewImage();
         }

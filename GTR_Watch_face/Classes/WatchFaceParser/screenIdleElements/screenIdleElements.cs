@@ -14,7 +14,7 @@ namespace AmazFit_Watchface_2
         public List<Activity> Activity { get; set; }
 
         /// <summary>Задний фон</summary>
-        public long BackgroundImageIndex { get; set; }
+        public long? BackgroundImageIndex { get; set; }
     }
 
 }
