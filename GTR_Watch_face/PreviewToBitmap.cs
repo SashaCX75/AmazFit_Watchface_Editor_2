@@ -4424,6 +4424,11 @@ namespace AmazFit_Watchface_2
                 try
                 {
                     gPanel.DrawLine(pen, new Point(x1 - x, y1 - y), new Point(x2 - x, y1 - y));
+                    if (x1 == x2)
+                    {
+                        pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
+                        gPanel.DrawLine(pen, new Point(x1 - x, y1 - y), new Point(x1 - x + 1, y1 - y));
+                    }
                     //src = ApplyAlfaMask(src, mask);
                     src = ApplyMask(src, mask);
 
@@ -4483,6 +4488,11 @@ namespace AmazFit_Watchface_2
                 try
                 {
                     gPanel.DrawLine(pen, new Point(x - x1, y1 - y), new Point(x - x2, y1 - y));
+                    if (x1 == x2)
+                    {
+                        pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
+                        gPanel.DrawLine(pen, new Point(x1 - x, y1 - y), new Point(x1 - x + 1, y1 - y));
+                    }
                     //src = ApplyAlfaMask(src, mask);
                     src = ApplyMask(src, mask);
 
@@ -4506,7 +4516,7 @@ namespace AmazFit_Watchface_2
                     {
                         src = OpenFileStream(ListImagesFullName[pointerIndex]);
                         int x3 = x2 - src.Width / 2;
-                        graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
+                        graphics.DrawImage(src, new Rectangle(x3, y1 - src.Height / 2, src.Width, src.Height));
                     }
                 }
                 catch (Exception)
@@ -4570,7 +4580,9 @@ namespace AmazFit_Watchface_2
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int DateLenght = width * value_lenght + spacing * (value_lenght - 1);
+            //int DateLenght = width * value_lenght + spacing * (value_lenght - 1);
+            int DateLenght = width * value_lenght;
+            if (spacing > 0) DateLenght = DateLenght + spacing * (value_lenght - 1);
 
             int PointX = 0;
             int PointY = y;
@@ -4845,13 +4857,14 @@ namespace AmazFit_Watchface_2
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int DateLenght = width * 3 + spacing * 2;
+            int DateLenght = width * 3;
+            if (spacing > 0) DateLenght = DateLenght + spacing * 2;
             if (radioButton_GTS2.Checked)
             {
                 if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
                 {
                     src = OpenFileStream(ListImagesFullName[image_minus_index]);
-                    DateLenght = DateLenght + src.Width + spacing;
+                    DateLenght = DateLenght + src.Width + Math.Abs(spacing);
                 } 
             }
 

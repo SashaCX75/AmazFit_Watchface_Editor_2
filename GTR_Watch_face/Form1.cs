@@ -83,6 +83,10 @@ namespace AmazFit_Watchface_2
                     {
                         Program_Settings.language = "English";
                     }
+                    if (language == "es")
+                    {
+                        Program_Settings.language = "Español";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();
@@ -3395,6 +3399,8 @@ namespace AmazFit_Watchface_2
                 int distance = rnd.Next(0, 15000);
                 int steps = rnd.Next(0, 15000);
                 int goal = rnd.Next(0, 15000);
+                int pai = rnd.Next(0, 150);
+                int standUp = rnd.Next(0, 13);
                 bool bluetooth = rnd.Next(2) == 0 ? false : true;
                 bool alarm = rnd.Next(2) == 0 ? false : true;
                 bool unlocked = rnd.Next(2) == 0 ? false : true;
@@ -3414,6 +3420,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set1.Checked = alarm;
                         checkBox_Lock_Set1.Checked = unlocked;
                         checkBox_DoNotDisturb_Set1.Checked = dnd;
+                        numericUpDown_PAI_Set1.Value = pai;
+                        numericUpDown_StandUp_Set1.Value = standUp;
                         //button_Set1.PerformClick();
                         break;
                     case 1:
@@ -3429,6 +3437,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set2.Checked = alarm;
                         checkBox_Lock_Set2.Checked = unlocked;
                         checkBox_DoNotDisturb_Set2.Checked = dnd;
+                        numericUpDown_PAI_Set2.Value = pai;
+                        numericUpDown_StandUp_Set2.Value = standUp;
                         //button_Set2.PerformClick();
                         break;
                     case 2:
@@ -3444,6 +3454,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set3.Checked = alarm;
                         checkBox_Lock_Set3.Checked = unlocked;
                         checkBox_DoNotDisturb_Set3.Checked = dnd;
+                        numericUpDown_PAI_Set3.Value = pai;
+                        numericUpDown_StandUp_Set3.Value = standUp;
                         //button_Set3.PerformClick();
                         break;
                     case 3:
@@ -3459,6 +3471,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set4.Checked = alarm;
                         checkBox_Lock_Set4.Checked = unlocked;
                         checkBox_DoNotDisturb_Set4.Checked = dnd;
+                        numericUpDown_PAI_Set4.Value = pai;
+                        numericUpDown_StandUp_Set4.Value = standUp;
                         //button_Set4.PerformClick();
                         break;
                     case 4:
@@ -3474,6 +3488,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set5.Checked = alarm;
                         checkBox_Lock_Set5.Checked = unlocked;
                         checkBox_DoNotDisturb_Set5.Checked = dnd;
+                        numericUpDown_PAI_Set5.Value = pai;
+                        numericUpDown_StandUp_Set5.Value = standUp;
                         //button_Set5.PerformClick();
                         break;
                     case 5:
@@ -3489,6 +3505,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set6.Checked = alarm;
                         checkBox_Lock_Set6.Checked = unlocked;
                         checkBox_DoNotDisturb_Set6.Checked = dnd;
+                        numericUpDown_PAI_Set6.Value = pai;
+                        numericUpDown_StandUp_Set6.Value = standUp;
                         //button_Set6.PerformClick();
                         break;
                     case 6:
@@ -3504,6 +3522,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set7.Checked = alarm;
                         checkBox_Lock_Set7.Checked = unlocked;
                         checkBox_DoNotDisturb_Set7.Checked = dnd;
+                        numericUpDown_PAI_Set7.Value = pai;
+                        numericUpDown_StandUp_Set7.Value = standUp;
                         //button_Set7.PerformClick();
                         break;
                     case 7:
@@ -3519,6 +3539,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set8.Checked = alarm;
                         checkBox_Lock_Set8.Checked = unlocked;
                         checkBox_DoNotDisturb_Set8.Checked = dnd;
+                        numericUpDown_PAI_Set8.Value = pai;
+                        numericUpDown_StandUp_Set8.Value = standUp;
                         //button_Set8.PerformClick();
                         break;
                     case 8:
@@ -3534,6 +3556,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set9.Checked = alarm;
                         checkBox_Lock_Set9.Checked = unlocked;
                         checkBox_DoNotDisturb_Set9.Checked = dnd;
+                        numericUpDown_PAI_Set9.Value = pai;
+                        numericUpDown_StandUp_Set9.Value = standUp;
                         //button_Set9.PerformClick();
                         break;
                     case 9:
@@ -3549,6 +3573,8 @@ namespace AmazFit_Watchface_2
                         checkBox_Alarm_Set10.Checked = alarm;
                         checkBox_Lock_Set10.Checked = unlocked;
                         checkBox_DoNotDisturb_Set10.Checked = dnd;
+                        numericUpDown_PAI_Set10.Value = pai;
+                        numericUpDown_StandUp_Set10.Value = standUp;
                         //button_Set10.PerformClick();
                         break;
                 }

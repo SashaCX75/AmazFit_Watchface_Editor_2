@@ -140,6 +140,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Classes\PROGRAM_SETTINGS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\FormStrings.es.Designer.cs">
+      <DependentUpon>FormStrings.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\FormStrings.en.Designer.cs">
       <DependentUpon>FormStrings.en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -156,6 +161,9 @@
     <EmbeddedResource Include="Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.es.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -169,11 +177,18 @@
     <EmbeddedResource Include="FormFileExists.en.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.es.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFileExists.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPreview.resx">
       <DependentUpon>FormPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\FormStrings.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
