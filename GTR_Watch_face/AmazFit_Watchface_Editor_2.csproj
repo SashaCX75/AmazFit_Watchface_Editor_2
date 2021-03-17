@@ -133,10 +133,16 @@
     <Compile Include="JSON_ReadWrite.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="JSON_ReadWrite_AOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PreviewToBitmap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\PREWIEV_STATES_Json.cs" />
+    <Compile Include="Preview_AOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Classes\PROGRAM_SETTINGS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

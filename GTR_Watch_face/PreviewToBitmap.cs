@@ -23,13 +23,18 @@ namespace AmazFit_Watchface_2
         /// <param name="showAnimation">Показывать анимацию при предпросмотре</param>
         /// <param name="showProgressArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         /// <param name="showCentrHend">Подсвечивать центр стрелки</param>
-        /// <param name="link">1 - если отрисовка только до анимации, 
-        /// 2 - если отрисовка только после анимации, в остальных случаях полная отрисовка</param>
+        /// <param name="link">0 - основной экран; 1 - AOD</param>
         public void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, 
             bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showProgressArea, 
             bool showCentrHend, int link)
         {
             Logger.WriteLine("* PreviewToBitmap");
+            if(link == 1)
+            {
+                Preview_AOD(gPanel, scale, crop, WMesh, BMesh, BBorder, showShortcuts, showShortcutsArea, 
+                    showShortcutsBorder, showAnimation, showProgressArea, showCentrHend);
+                return;
+            }
             var src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
             int i;
@@ -69,8 +74,9 @@ namespace AmazFit_Watchface_2
             #region дата 
             int date_offsetX = -1;
             int date_offsetY = -1;
+            //TODO выравнивание даты при слитном написании
             // год
-            if (checkBox__Year_text_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
+            if (checkBox_Year_text_Use.Checked && comboBox_Year_image.SelectedIndex >= 0)
             {
                 int imageIndex = comboBox_Year_image.SelectedIndex;
                 int x = (int)numericUpDown_YearX.Value;
@@ -348,8 +354,9 @@ namespace AmazFit_Watchface_2
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    int offSet = (int)Math.Ceiling(count * Watch_Face_Preview_Set.Battery / 100f);
-                    offSet--;
+                    //int offSet = (int)Math.Ceiling(count * Watch_Face_Preview_Set.Battery / 100f);
+                    int offSet = (int)(count * Watch_Face_Preview_Set.Battery / 100f);
+                    //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
@@ -421,6 +428,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -431,17 +439,18 @@ namespace AmazFit_Watchface_2
                 int width = (int)numericUpDown_width.Value;
                 Color color = comboBox_color.BackColor;
                 float position = Watch_Face_Preview_Set.Battery / 100f;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea); 
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea); 
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -551,8 +560,9 @@ namespace AmazFit_Watchface_2
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
-                    offSet--;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
+                    int offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
+                    //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
@@ -625,6 +635,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -636,17 +647,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -758,8 +770,9 @@ namespace AmazFit_Watchface_2
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Calories / 300f);
-                    offSet--;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Calories / 300f);
+                    int offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.Calories / 300f);
+                    //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
@@ -832,6 +845,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -843,17 +857,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -964,8 +979,9 @@ namespace AmazFit_Watchface_2
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
-                    offSet--;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
+                    int offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
+                    //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
@@ -1038,6 +1054,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1049,17 +1066,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 200f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1170,8 +1188,9 @@ namespace AmazFit_Watchface_2
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
-                    offSet--;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count+1f) * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
@@ -1244,6 +1263,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1255,17 +1275,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.PAI / 100f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1376,8 +1397,9 @@ namespace AmazFit_Watchface_2
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Distance / 10000f);
-                    offSet--;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Distance / 10000f);
+                    int offSet = (int)((count-1f) * Watch_Face_Preview_Set.Activity.Distance / 10000f);
+                    //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
@@ -1450,6 +1472,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1461,17 +1484,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1662,6 +1686,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1673,17 +1698,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -3817,9 +3843,6 @@ namespace AmazFit_Watchface_2
                 }
             }
             #endregion
-
-            DrawEnd:
-
             src.Dispose();
 
             if (crop)
@@ -3835,7 +3858,7 @@ namespace AmazFit_Watchface_2
                 mask.Dispose();
             }
 
-            if (link !=1 && link !=2) FormText();
+            FormText();
             Logger.WriteLine("* PreviewToBitmap (end)");
         }
 
@@ -4287,11 +4310,12 @@ namespace AmazFit_Watchface_2
         /// <param name="width">Толщина шкалы</param>
         /// <param name="position">Позиция шкалы от 0 до 1</param>
         /// <param name="color">Свет шкалы</param>
+        /// <param name="lineCap">Тип окончания линии</param>
         /// <param name="pointerIndex">Номер изображения маркера</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
         /// <param name="showProgressArea">Подсвечивать шкалу</param>
-        private void DrawScaleLinearPointer(Graphics graphics, int x, int y, int length, int width, float position, Color color, 
-            int pointerIndex, int backgroundIndex, bool showProgressArea)
+        private void DrawScaleLinearPointer(Graphics graphics, int x, int y, int length, int width, float position, Color color,
+            int lineCap, int pointerIndex, int backgroundIndex, bool showProgressArea)
         {
             Bitmap src = new Bitmap(1, 1);
 
@@ -4299,7 +4323,12 @@ namespace AmazFit_Watchface_2
             {
                 int x1 = (int)(x + width / 2f);
                 //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
-                int length1 = length - width;
+                int length1 = length - width; 
+                if (lineCap == 1)
+                {
+                    x1 = x;
+                    length1 = length;
+                }
                 int position1 = (int)(length1 * position);
                 if (position1 < 0) position1 = 0;
                 int x2 = x1 + position1;
@@ -4315,6 +4344,11 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(color, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
+                if (lineCap == 1)
+                {
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                }
                 graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
 
                 if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
@@ -4339,6 +4373,11 @@ namespace AmazFit_Watchface_2
             {
                 int x1 = x - width / 2;
                 int length1 = length + width;
+                if (lineCap == 1)
+                {
+                    x1 = x;
+                    length1 = length;
+                }
                 int position1 = (int)Math.Round(length1 * position);
                 if (position1 > 0) position1 = 0;
                 int x2 = x1 + position1;
@@ -4353,6 +4392,11 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(color, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
+                if (lineCap == 1)
+                {
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                }
                 graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
 
                 if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
@@ -4385,12 +4429,13 @@ namespace AmazFit_Watchface_2
         /// <param name="length">Длина шкалы</param>
         /// <param name="width">Толщина шкалы</param>
         /// <param name="position">Позиция шкалы от 0 до 1</param>
+        /// <param name="lineCap">Тип окончания линии</param>
         /// <param name="imageIndex">Изображение шкалы</param>
         /// <param name="pointerIndex">Номер изображения маркера</param>
         /// <param name="backgroundIndex">Номер фонового изображения</param>
         /// <param name="showProgressArea">Подсвечивать шкалу</param>
         private void DrawScaleLinearPointer_image(Graphics graphics, int x, int y, int length, int width, float position, int imageIndex,
-            int pointerIndex, int backgroundIndex, bool showProgressArea)
+            int lineCap, int pointerIndex, int backgroundIndex, bool showProgressArea)
         {
             Bitmap src = new Bitmap(1, 1);
 
@@ -4399,9 +4444,14 @@ namespace AmazFit_Watchface_2
                 int x1 = (int)(x + width / 2f);
                 //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
                 int length1 = length - width;
+                if (lineCap == 1)
+                {
+                    x1 = x;
+                    length1 = length;
+                }
                 int position1 = (int)(length1 * position);
                 //int position1 = (int)Math.Round(length1 * position, MidpointRounding.AwayFromZero);
-                if (position1 < 0) position1 = 0;
+                if (position1 <= 0) position1 = 1;
                 int x2 = x1 + position1;
                 int y1 = (int)(y + width / 2f);
                 //int y1 = (int)Math.Round(y + width / 2d, MidpointRounding.AwayFromZero);
@@ -4415,6 +4465,11 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(Color.Black, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
+                if (lineCap == 1)
+                {
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                }
 
                 //graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
 
@@ -4464,8 +4519,13 @@ namespace AmazFit_Watchface_2
             {
                 int x1 = x - width / 2;
                 int length1 = length + width;
+                if (lineCap == 1)
+                {
+                    x1 = x;
+                    length1 = length;
+                }
                 int position1 = (int)Math.Round(length1 * position);
-                if (position1 > 0) position1 = 0;
+                if (position1 >= 0) position1 = -1;
                 int x2 = x1 + position1;
                 int y1 = y + width / 2;
 
@@ -4479,6 +4539,11 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(Color.Black, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
+                if (lineCap == 1)
+                {
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                }
 
                 //graphics.DrawLine(pen, new Point(x1, y1), new Point(x2, y1));
 
@@ -4487,16 +4552,17 @@ namespace AmazFit_Watchface_2
                 gPanel.SmoothingMode = SmoothingMode.AntiAlias;
                 try
                 {
-                    gPanel.DrawLine(pen, new Point(x - x1, y1 - y), new Point(x - x2, y1 - y));
-                    if (x1 == x2)
-                    {
-                        pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
-                        gPanel.DrawLine(pen, new Point(x1 - x, y1 - y), new Point(x1 - x + 1, y1 - y));
-                    }
+                    gPanel.DrawLine(pen, new Point(x1 - x - length, y1 - y), new Point(x2 - x - length, y1 - y));
+                    //if (x1 == x2)
+                    //{
+                    //    pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
+                    //    gPanel.DrawLine(pen, new Point(x1 - x - length, y1 - y), new Point(x1 - x - length - 1, y1 - y));
+                    //}
                     //src = ApplyAlfaMask(src, mask);
                     src = ApplyMask(src, mask);
 
-                    graphics.DrawImage(src, new Rectangle(x2 - width / 2, y, src.Width, src.Height));
+                    graphics.DrawImage(src, new Rectangle(x + length, y, src.Width, src.Height));
+                    //graphics.DrawImage(src, new Rectangle(x2 - width / 2, y, src.Width, src.Height));
                     //src.Dispose();
                     mask.Dispose();
 

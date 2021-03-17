@@ -39,7 +39,6 @@ namespace AmazFit_Watchface_2
         PROGRAM_SETTINGS Program_Settings;
 
         Widgets WidgetsTemp; // временная переменная для хранения виджетов
-        ScreenIdle ScreenIdleTemp; // временная переменная для хранения AOD
 
         int offSet_X = 227;
         int offSet_Y = 227;
@@ -155,6 +154,20 @@ namespace AmazFit_Watchface_2
             tabControl_SystemWeather.TabPages[1].Parent = null;
             tabControl_SystemWeather.TabPages[1].Parent = null;
             tabControl_SystemWeather.TabPages[1].Parent = null;
+
+
+            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
+            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
+            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
+            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
+
+            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
 #endif
 
             splitContainer_EditParameters.Panel1Collapsed = false;
@@ -281,54 +294,56 @@ namespace AmazFit_Watchface_2
             comboBox_Minute_alignment.SelectedIndex = 0;
             comboBox_Second_alignment.SelectedIndex = 0;
 
+            comboBox_Hour_alignment_AOD.SelectedIndex = 0;
+            comboBox_Minute_alignment_AOD.SelectedIndex = 0;
+
             comboBox_Day_alignment.SelectedIndex = 0;
             comboBox_Month_alignment.SelectedIndex = 0;
             comboBox_Year_alignment.SelectedIndex = 0;
 
+            comboBox_Day_alignment_AOD.SelectedIndex = 0;
+            comboBox_Month_alignment_AOD.SelectedIndex = 0;
+            comboBox_Year_alignment_AOD.SelectedIndex = 0;
+
             comboBox_Battery_alignment.SelectedIndex = 0;
             comboBox_Battery_scaleCircle_flatness.SelectedIndex = 0;
+            comboBox_Battery_scaleLinear_flatness.SelectedIndex = 0;
+
+            comboBox_Battery_alignment_AOD.SelectedIndex = 0;
+            comboBox_Battery_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_Battery_scaleLinear_flatness_AOD.SelectedIndex = 0;
 
             comboBox_Steps_alignment.SelectedIndex = 0;
             comboBox_Steps_scaleCircle_flatness.SelectedIndex = 0;
+            comboBox_Steps_scaleLinear_flatness.SelectedIndex = 0;
+
+            comboBox_Steps_alignment_AOD.SelectedIndex = 0;
+            comboBox_Steps_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_Steps_scaleLinear_flatness_AOD.SelectedIndex = 0;
 
             comboBox_Calories_alignment.SelectedIndex = 0;
             comboBox_Calories_scaleCircle_flatness.SelectedIndex = 0;
+            comboBox_Calories_scaleLinear_flatness.SelectedIndex = 0;
 
             comboBox_HeartRate_alignment.SelectedIndex = 0;
             comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
+            comboBox_HeartRate_scaleLinear_flatness.SelectedIndex = 0;
 
             comboBox_PAI_alignment.SelectedIndex = 0;
             comboBox_PAI_scaleCircle_flatness.SelectedIndex = 0;
+            comboBox_PAI_scaleLinear_flatness.SelectedIndex = 0;
 
             comboBox_Distance_alignment.SelectedIndex = 0;
             comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
+            comboBox_Distance_scaleLinear_flatness.SelectedIndex = 0;
 
             comboBox_Weather_alignment.SelectedIndex = 0;
             comboBox_Weather_alignmentMin.SelectedIndex = 0;
             comboBox_Weather_alignmentMax.SelectedIndex = 0;
             comboBox_Weather_scaleCircle_flatness.SelectedIndex = 0;
+            comboBox_Weather_scaleLinear_flatness.SelectedIndex = 0;
 
-            //comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
-            //comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
-            //comboBox_OneLine_Alignment.SelectedIndex = 0;
-            //comboBox_Year_Alignment2.SelectedIndex = 0;
-
-            //comboBox_ActivitySteps_Alignment.SelectedIndex = 0;
-            //comboBox_ActivityStepsGoal_Alignment.SelectedIndex = 0;
-            //comboBox_ActivityDistance_Alignment.SelectedIndex = 0;
-            //comboBox_ActivityPuls_Alignment.SelectedIndex = 0;
-            //comboBox_ActivityCalories_Alignment.SelectedIndex = 0;
-            //comboBox_Battery_Text_Alignment.SelectedIndex = 0;
-
-            //comboBox_Weather_Text_Alignment.SelectedIndex = 0;
-            //comboBox_Weather_Day_Alignment.SelectedIndex = 0;
-            //comboBox_Weather_Night_Alignment.SelectedIndex = 0;
-
-
-            //comboBox_Battery_Flatness.SelectedIndex = 0;
-            //comboBox_StepsProgress_Flatness.SelectedIndex = 0;
-            //comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
-            //comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
+            
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -1861,10 +1876,11 @@ namespace AmazFit_Watchface_2
 #endregion
 
             Logger.WriteLine("PreviewToBitmap");
+            int link = radioButton_ScreenNormal.Checked ? 0 : 1;
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
                 checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 
-                checkBox_center_marker.Checked, 0);
+                checkBox_center_marker.Checked, link);
             pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -2334,8 +2350,8 @@ namespace AmazFit_Watchface_2
         {
             ComboBox comboBox = (ComboBox)(sender);
             
-            JSON_write();
             PreviewImage();
+            JSON_write();
 
             if (comboBox.Name == "comboBox_Preview_image")
             {
@@ -2363,8 +2379,8 @@ namespace AmazFit_Watchface_2
 
         private void checkBox_Click(object sender, EventArgs e)
         {
-            JSON_write();
             PreviewImage();
+            JSON_write();
         }
 
         private void checkBox_ShowSettings_Click(object sender, EventArgs e)
@@ -2374,8 +2390,8 @@ namespace AmazFit_Watchface_2
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            JSON_write();
             PreviewImage();
+            JSON_write();
         }
         
 
@@ -2769,12 +2785,13 @@ namespace AmazFit_Watchface_2
                         bitmapPreviewResize = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     }
                     Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
-#endregion
+                    #endregion
 
+                    int link_aod = radioButton_ScreenNormal.Checked ? 0 : 1;
                     PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
                         checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true,
-                        checkBox_CircleScaleImage.Checked, checkBox_center_marker.Checked, 0);
+                        checkBox_CircleScaleImage.Checked, checkBox_center_marker.Checked, link_aod);
                     formPreview.pictureBox_Preview.BackgroundImage = bitmapPreviewResize;
                     gPanelPreviewResize.Dispose();
                 };
@@ -2821,12 +2838,13 @@ namespace AmazFit_Watchface_2
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-#endregion
+            #endregion
 
+            int link = radioButton_ScreenNormal.Checked ? 0 : 1;
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
                 checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked,
-                checkBox_center_marker.Checked, 0);
+                checkBox_center_marker.Checked, link);
             formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -3895,8 +3913,8 @@ namespace AmazFit_Watchface_2
             {
                 comboBox_WeatherSet_Icon.Text = "";
                 comboBox_WeatherSet_Icon.SelectedIndex = -1;
-                //JSON_write();
                 PreviewImage();
+                //JSON_write();
             }
         }
 
@@ -3948,7 +3966,8 @@ namespace AmazFit_Watchface_2
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
+                int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -3981,6 +4000,10 @@ namespace AmazFit_Watchface_2
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
+                    int WeatherSet_Temp = (int)numericUpDown_WeatherSet_Temp.Value;
+                    int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_MaxTemp.Value;
+                    int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_MinTemp.Value;
+                    int WeatherSet_Icon = comboBox_WeatherSet_Icon.SelectedIndex;
                     for (int i = 0; i < 13; i++)
                     {
                         save = false;
@@ -4067,18 +4090,16 @@ namespace AmazFit_Watchface_2
 
                         if (save)
                         {
-                            Logger.WriteLine("SaveGIF SetPreferences1(" + i.ToString() + ")");
-                            int WeatherSet_Temp = (int)numericUpDown_WeatherSet_Temp.Value;
-                            int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-                            int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_MinTemp.Value;
-                            int WeatherSet_Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+                            Logger.WriteLine("SaveGIF SetPreferences(" + i.ToString() + ")");
 
                             numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
                             numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
                             numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
+                            //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+                            int link = 0;
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -4090,13 +4111,36 @@ namespace AmazFit_Watchface_2
                             //collection[collection.Count - 1].AnimationDelay = 100;
                             collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
 
-                            numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
-                            numericUpDown_WeatherSet_MaxTemp.Value = WeatherSet_DayTemp;
-                            numericUpDown_WeatherSet_MinTemp.Value = WeatherSet_NightTemp;
-                            comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
                         }
                     }
-                    
+
+                    Logger.WriteLine("SaveGIF_AOD");
+
+                    numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
+                    numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
+                    numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+                    comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+
+                    //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+                    int link_AOD = 1;
+                    PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
+                    if (checkBox_crop.Checked)
+                    {
+                        bitmap = ApplyMask(bitmap, mask);
+                        gPanel = Graphics.FromImage(bitmap);
+                    }
+                    // Add first image and set the animation delay to 100ms
+                    MagickImage item_AOD = new MagickImage(bitmap);
+                    //ExifProfile profile = item.GetExifProfile();
+                    collection.Add(item_AOD);
+                    //collection[collection.Count - 1].AnimationDelay = 100;
+                    collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
+
+                    numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
+                    numericUpDown_WeatherSet_MaxTemp.Value = WeatherSet_DayTemp;
+                    numericUpDown_WeatherSet_MinTemp.Value = WeatherSet_NightTemp;
+                    comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
+
                     // Optionally reduce colors
                     QuantizeSettings settings = new QuantizeSettings();
                     //settings.Colors = 256;
@@ -4188,8 +4232,8 @@ namespace AmazFit_Watchface_2
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
 
-            JSON_write();
             PreviewImage();
+            JSON_write();
         }
 
         // устанавливаем заголовок окна
@@ -4274,8 +4318,8 @@ namespace AmazFit_Watchface_2
                 ComboBox comboBox = sender as ComboBox;
                 comboBox.Text = "";
                 comboBox.SelectedIndex = -1;
-                JSON_write();
                 PreviewImage();
+                JSON_write();
             }
         }
 
@@ -4788,14 +4832,14 @@ namespace AmazFit_Watchface_2
             catch (Exception )
             {
             }
-            JSON_write();
             PreviewImage();
+            JSON_write();
         }
 
         private void dataGridView_IconSet_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            JSON_write();
             PreviewImage();
+            JSON_write();
         }
         
         private void dataGridView_IconSet_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -4911,8 +4955,8 @@ namespace AmazFit_Watchface_2
                     DataGridViewRow row = dataGridView.CurrentRow;
                     row.Cells[0].Value = MouseСoordinates.X;
                     row.Cells[1].Value = MouseСoordinates.Y;
-                    JSON_write();
                     PreviewImage();
+                    JSON_write();
                 }
             }
         }
@@ -4961,8 +5005,8 @@ namespace AmazFit_Watchface_2
                             dataGridView.CurrentCell = dataGridView.Rows[0].Cells[0];
                             dataGridView.CurrentCell = dataGridView.Rows[y].Cells[x];
                             dataGridView.BeginEdit(false);
-                            JSON_write();
                             PreviewImage();
+                            JSON_write();
                         }
                     }
 
@@ -5151,8 +5195,8 @@ namespace AmazFit_Watchface_2
                             dataGridView.CurrentCell = dataGridView.Rows[0].Cells[1];
                             dataGridView.CurrentCell = dataGridView.Rows[y].Cells[x];
                             dataGridView.BeginEdit(false);
-                            JSON_write();
                             PreviewImage();
+                            JSON_write();
                         }
                     }
 
@@ -5211,8 +5255,8 @@ namespace AmazFit_Watchface_2
 
                     MotiomAnimation_Update = false;
 
-                    JSON_write();
                     PreviewImage();
+                    JSON_write();
                 }
             }
         }
@@ -5268,8 +5312,8 @@ namespace AmazFit_Watchface_2
 
                     MotiomAnimation_Update = false;
 
-                    JSON_write();
                     PreviewImage();
+                    JSON_write();
                 }
             }
         }
@@ -5283,7 +5327,8 @@ namespace AmazFit_Watchface_2
                 mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, false, 1);
+            int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, false, link);
 
         }
 
@@ -6249,7 +6294,8 @@ namespace AmazFit_Watchface_2
                     PreviewHeight = 323;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
+                int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
                 if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
 
 
@@ -6302,7 +6348,8 @@ namespace AmazFit_Watchface_2
                     PreviewHeight = 323;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, 0);
+                int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
                 if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 float scale = (float)PreviewHeight / bitmap.Height;
                 bitmap = ResizeImage(bitmap, scale);
@@ -6586,8 +6633,8 @@ namespace AmazFit_Watchface_2
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8); 
             }
 
-            JSON_write();
             PreviewImage();
+            JSON_write();
         }
 
         private void radioButton_ScreenNormal_CheckedChanged(object sender, EventArgs e)
@@ -6596,7 +6643,7 @@ namespace AmazFit_Watchface_2
             splitContainer_EditParameters.Panel1Collapsed = !b;
             splitContainer_EditParameters.Panel2Collapsed = b;
 
-
+            PreviewImage();
         }
 
         private void button_OpenDir_Click(object sender, EventArgs e)
@@ -6659,12 +6706,6 @@ namespace AmazFit_Watchface_2
                 } 
             }
         }
-
-
-
-
-
-
 
 
 
