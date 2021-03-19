@@ -789,6 +789,14 @@ namespace AmazFit_Watchface_2
             Copy_scaleCircle_AOD(panel_Steps_scaleCircle, panel_Steps_scaleCircle_AOD);
             Copy_scaleLinear_AOD(panel_Steps_scaleLinear, panel_Steps_scaleLinear_AOD);
 
+            Copy_pictures_AOD(panel_Weather_pictures, panel_Weather_pictures_AOD);
+            Copy_Weather_textMin_AOD(panel_Weather_text, panel_Weather_text_AOD);
+            Copy_Weather_textMin_AOD(panel_Weather_textMin, panel_Weather_textMin_AOD);
+            Copy_Weather_textMax_AOD(panel_Weather_textMax, panel_Weather_textMax_AOD);
+            Copy_hand_AOD(panel_Weather_hand, panel_Weather_hand_AOD);
+            Copy_scaleCircle_AOD(panel_Weather_scaleCircle, panel_Weather_scaleCircle_AOD);
+            Copy_scaleLinear_AOD(panel_Weather_scaleLinear, panel_Weather_scaleLinear_AOD);
+
             PreviewView = true;
             PreviewImage();
             JSON_write();
@@ -1278,6 +1286,99 @@ namespace AmazFit_Watchface_2
             comboBox_flatness_AOD.SelectedIndex = comboBox_flatness.SelectedIndex;
         }
 
+        private void Copy_Weather_textMin_AOD(Panel panel_MainScreen, Panel panel_AOD)
+        {
+            CheckBox checkBox_Use = (CheckBox)panel_MainScreen.Controls[0];
+            ComboBox comboBox_image = (ComboBox)panel_MainScreen.Controls[1];
+            ComboBox comboBox_unit = (ComboBox)panel_MainScreen.Controls[2];
+            ComboBox comboBox_separatorF = (ComboBox)panel_MainScreen.Controls[3];
+            NumericUpDown numericUpDownX = (NumericUpDown)panel_MainScreen.Controls[4];
+            NumericUpDown numericUpDownY = (NumericUpDown)panel_MainScreen.Controls[5];
+            NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_MainScreen.Controls[6];
+            NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_MainScreen.Controls[7];
+            ComboBox comboBox_alignment = (ComboBox)panel_MainScreen.Controls[8];
+            NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_MainScreen.Controls[9];
+            //CheckBox checkBox_add_zero = (CheckBox)panel_MainScreen.Controls[10];
+            ComboBox comboBox_imageError = (ComboBox)panel_MainScreen.Controls[10];
+            ComboBox comboBox_imageMinus = (ComboBox)panel_MainScreen.Controls[11];
+
+            CheckBox checkBox_Use_AOD = (CheckBox)panel_AOD.Controls[0];
+            ComboBox comboBox_image_AOD = (ComboBox)panel_AOD.Controls[1];
+            ComboBox comboBox_unit_AOD = (ComboBox)panel_AOD.Controls[2];
+            ComboBox comboBox_separatorF_AOD = (ComboBox)panel_AOD.Controls[3];
+            NumericUpDown numericUpDownX_AOD = (NumericUpDown)panel_AOD.Controls[4];
+            NumericUpDown numericUpDownY_AOD = (NumericUpDown)panel_AOD.Controls[5];
+            NumericUpDown numericUpDown_unitX_AOD = (NumericUpDown)panel_AOD.Controls[6];
+            NumericUpDown numericUpDown_unitY_AOD = (NumericUpDown)panel_AOD.Controls[7];
+            ComboBox comboBox_alignment_AOD = (ComboBox)panel_AOD.Controls[8];
+            NumericUpDown numericUpDown_spacing_AOD = (NumericUpDown)panel_AOD.Controls[9];
+            //CheckBox checkBox_add_zero = (CheckBox)panel_AOD.Controls[10];
+            ComboBox comboBox_imageError_AOD = (ComboBox)panel_AOD.Controls[10];
+            ComboBox comboBox_imageMinus_AOD = (ComboBox)panel_AOD.Controls[11];
+
+            checkBox_Use_AOD.Checked = checkBox_Use.Checked;
+            comboBox_image_AOD.SelectedIndex = comboBox_image.SelectedIndex;
+            comboBox_unit_AOD.SelectedIndex = comboBox_unit.SelectedIndex;
+            comboBox_separatorF_AOD.SelectedIndex = comboBox_separatorF.SelectedIndex;
+            numericUpDownX_AOD.Value = numericUpDownX.Value;
+            numericUpDownY_AOD.Value = numericUpDownY.Value;
+            numericUpDown_unitX_AOD.Value = numericUpDown_unitX.Value;
+            numericUpDown_unitY_AOD.Value = numericUpDown_unitY.Value;
+            comboBox_alignment_AOD.SelectedIndex = comboBox_alignment.SelectedIndex;
+            numericUpDown_spacing_AOD.Value = numericUpDown_spacing.Value;
+            //checkBox_add_zero_AOD.Checked = checkBox_add_zero.Checked;
+            comboBox_imageError_AOD.SelectedIndex = comboBox_imageError.SelectedIndex;
+            comboBox_imageMinus_AOD.SelectedIndex = comboBox_imageMinus.SelectedIndex;
+        }
+        private void Copy_Weather_textMax_AOD(Panel panel_MainScreen, Panel panel_AOD)
+        {
+            CheckBox checkBox_Use = (CheckBox)panel_MainScreen.Controls[0];
+            ComboBox comboBox_image = (ComboBox)panel_MainScreen.Controls[1];
+            ComboBox comboBox_unit = (ComboBox)panel_MainScreen.Controls[2];
+            ComboBox comboBox_separatorF = (ComboBox)panel_MainScreen.Controls[3];
+            NumericUpDown numericUpDownX = (NumericUpDown)panel_MainScreen.Controls[4];
+            NumericUpDown numericUpDownY = (NumericUpDown)panel_MainScreen.Controls[5];
+            NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_MainScreen.Controls[6];
+            NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_MainScreen.Controls[7];
+            ComboBox comboBox_alignment = (ComboBox)panel_MainScreen.Controls[8];
+            NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_MainScreen.Controls[9];
+            //CheckBox checkBox_add_zero = (CheckBox)panel_MainScreen.Controls[10];
+            ComboBox comboBox_imageError = (ComboBox)panel_MainScreen.Controls[10];
+            ComboBox comboBox_imageMinus = (ComboBox)panel_MainScreen.Controls[11];
+            CheckBox checkBox_follow = (CheckBox)panel_MainScreen.Controls[12];
+
+            CheckBox checkBox_Use_AOD = (CheckBox)panel_AOD.Controls[0];
+            ComboBox comboBox_image_AOD = (ComboBox)panel_AOD.Controls[1];
+            ComboBox comboBox_unit_AOD = (ComboBox)panel_AOD.Controls[2];
+            ComboBox comboBox_separatorF_AOD = (ComboBox)panel_AOD.Controls[3];
+            NumericUpDown numericUpDownX_AOD = (NumericUpDown)panel_AOD.Controls[4];
+            NumericUpDown numericUpDownY_AOD = (NumericUpDown)panel_AOD.Controls[5];
+            NumericUpDown numericUpDown_unitX_AOD = (NumericUpDown)panel_AOD.Controls[6];
+            NumericUpDown numericUpDown_unitY_AOD = (NumericUpDown)panel_AOD.Controls[7];
+            ComboBox comboBox_alignment_AOD = (ComboBox)panel_AOD.Controls[8];
+            NumericUpDown numericUpDown_spacing_AOD = (NumericUpDown)panel_AOD.Controls[9];
+            //CheckBox checkBox_add_zero = (CheckBox)panel_AOD.Controls[10];
+            ComboBox comboBox_imageError_AOD = (ComboBox)panel_AOD.Controls[10];
+            ComboBox comboBox_imageMinus_AOD = (ComboBox)panel_AOD.Controls[11];
+            CheckBox checkBox_follow_AOD = (CheckBox)panel_AOD.Controls[12];
+
+            checkBox_Use_AOD.Checked = checkBox_Use.Checked;
+            comboBox_image_AOD.SelectedIndex = comboBox_image.SelectedIndex;
+            comboBox_unit_AOD.SelectedIndex = comboBox_unit.SelectedIndex;
+            comboBox_separatorF_AOD.SelectedIndex = comboBox_separatorF.SelectedIndex;
+            numericUpDownX_AOD.Value = numericUpDownX.Value;
+            numericUpDownY_AOD.Value = numericUpDownY.Value;
+            numericUpDown_unitX_AOD.Value = numericUpDown_unitX.Value;
+            numericUpDown_unitY_AOD.Value = numericUpDown_unitY.Value;
+            comboBox_alignment_AOD.SelectedIndex = comboBox_alignment.SelectedIndex;
+            numericUpDown_spacing_AOD.Value = numericUpDown_spacing.Value;
+            //checkBox_add_zero_AOD.Checked = checkBox_add_zero.Checked;
+            comboBox_imageError_AOD.SelectedIndex = comboBox_imageError.SelectedIndex;
+            comboBox_imageMinus_AOD.SelectedIndex = comboBox_imageMinus.SelectedIndex;
+            checkBox_follow_AOD.Checked = checkBox_follow.Checked;
+        }
+
+
         private void button_Copy_Battery_pictures_AOD_Click(object sender, EventArgs e)
         {
             Copy_pictures_AOD(panel_Battery_pictures, panel_Battery_pictures_AOD);
@@ -1318,6 +1419,42 @@ namespace AmazFit_Watchface_2
         private void button_Copy_Steps_scaleLinear_AOD_Click(object sender, EventArgs e)
         {
             Copy_scaleLinear_AOD(panel_Steps_scaleLinear, panel_Steps_scaleLinear_AOD);
+        }
+
+
+        private void button_Copy_Weather_pictures_AOD_Click(object sender, EventArgs e)
+        {
+            Copy_pictures_AOD(panel_Weather_pictures, panel_Weather_pictures_AOD);
+        }
+
+        private void button_Copy_Weather_text_AOD_Click(object sender, EventArgs e)
+        {
+            Copy_Weather_textMin_AOD(panel_Weather_text, panel_Weather_text_AOD);
+        }
+
+        private void button_Copy_Weather_textMin_AOD_Click(object sender, EventArgs e)
+        {
+            Copy_Weather_textMin_AOD(panel_Weather_textMin, panel_Weather_textMin_AOD);
+        }
+
+        private void button_Copy_Weather_textMax_AOD_Click(object sender, EventArgs e)
+        {
+            Copy_Weather_textMax_AOD(panel_Weather_textMax, panel_Weather_textMax_AOD);
+        }
+
+        private void button_Copy_Weather_hand_AOD_Click(object sender, EventArgs e)
+        {
+            Copy_hand_AOD(panel_Weather_hand, panel_Weather_hand_AOD);
+        }
+
+        private void button_Copy_Weather_scaleCircle_AOD_Click(object sender, EventArgs e)
+        {
+            Copy_scaleCircle_AOD(panel_Weather_scaleCircle, panel_Weather_scaleCircle_AOD);
+        }
+
+        private void button_Copy_Weather_scaleLinear_AOD_Click(object sender, EventArgs e)
+        {
+            Copy_scaleLinear_AOD(panel_Weather_scaleLinear, panel_Weather_scaleLinear_AOD);
         }
 
 

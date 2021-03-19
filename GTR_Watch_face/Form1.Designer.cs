@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.richTextBox_JsonText = new System.Windows.Forms.RichTextBox();
             this.treeView_JsonTree = new System.Windows.Forms.TreeView();
@@ -1697,7 +1697,7 @@
             this.tabPage_Activity_AOD = new System.Windows.Forms.TabPage();
             this.tabControl_SystemActivity_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Steps_AOD = new System.Windows.Forms.TabPage();
-            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel_Steps_icon_AOD = new System.Windows.Forms.Panel();
             this.panel_Steps_scaleLinear_AOD = new System.Windows.Forms.Panel();
             this.checkBox_Steps_scaleLinear_Use_AOD = new System.Windows.Forms.CheckBox();
             this.radioButton_Steps_scaleLinear_image_AOD = new System.Windows.Forms.RadioButton();
@@ -1821,475 +1821,9 @@
             this.button_Copy_Steps_pictures_AOD = new System.Windows.Forms.Button();
             this.button_Steps_pictures_AOD = new System.Windows.Forms.Button();
             this.tabPage_Calories_AOD = new System.Windows.Forms.TabPage();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.checkBox33 = new System.Windows.Forms.CheckBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.comboBox64 = new System.Windows.Forms.ComboBox();
-            this.comboBox65 = new System.Windows.Forms.ComboBox();
-            this.comboBox66 = new System.Windows.Forms.ComboBox();
-            this.comboBox67 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown115 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown116 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown117 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown118 = new System.Windows.Forms.NumericUpDown();
-            this.label901 = new System.Windows.Forms.Label();
-            this.label902 = new System.Windows.Forms.Label();
-            this.label903 = new System.Windows.Forms.Label();
-            this.label904 = new System.Windows.Forms.Label();
-            this.label905 = new System.Windows.Forms.Label();
-            this.label906 = new System.Windows.Forms.Label();
-            this.label907 = new System.Windows.Forms.Label();
-            this.button22 = new System.Windows.Forms.Button();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.checkBox34 = new System.Windows.Forms.CheckBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.comboBox68 = new System.Windows.Forms.ComboBox();
-            this.comboBox69 = new System.Windows.Forms.ComboBox();
-            this.comboBox70 = new System.Windows.Forms.ComboBox();
-            this.comboBox71 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown119 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown120 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown121 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown122 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown123 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown124 = new System.Windows.Forms.NumericUpDown();
-            this.label908 = new System.Windows.Forms.Label();
-            this.label909 = new System.Windows.Forms.Label();
-            this.label910 = new System.Windows.Forms.Label();
-            this.label911 = new System.Windows.Forms.Label();
-            this.label912 = new System.Windows.Forms.Label();
-            this.label913 = new System.Windows.Forms.Label();
-            this.label914 = new System.Windows.Forms.Label();
-            this.label915 = new System.Windows.Forms.Label();
-            this.label916 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.checkBox35 = new System.Windows.Forms.CheckBox();
-            this.comboBox72 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown125 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown126 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown127 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown128 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox73 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown129 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown130 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown131 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown132 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox74 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown133 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown134 = new System.Windows.Forms.NumericUpDown();
-            this.label917 = new System.Windows.Forms.Label();
-            this.label918 = new System.Windows.Forms.Label();
-            this.label919 = new System.Windows.Forms.Label();
-            this.label920 = new System.Windows.Forms.Label();
-            this.label921 = new System.Windows.Forms.Label();
-            this.label922 = new System.Windows.Forms.Label();
-            this.label923 = new System.Windows.Forms.Label();
-            this.label924 = new System.Windows.Forms.Label();
-            this.label925 = new System.Windows.Forms.Label();
-            this.label926 = new System.Windows.Forms.Label();
-            this.label927 = new System.Windows.Forms.Label();
-            this.label928 = new System.Windows.Forms.Label();
-            this.label929 = new System.Windows.Forms.Label();
-            this.label930 = new System.Windows.Forms.Label();
-            this.label931 = new System.Windows.Forms.Label();
-            this.label932 = new System.Windows.Forms.Label();
-            this.label933 = new System.Windows.Forms.Label();
-            this.button24 = new System.Windows.Forms.Button();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.checkBox36 = new System.Windows.Forms.CheckBox();
-            this.comboBox75 = new System.Windows.Forms.ComboBox();
-            this.comboBox76 = new System.Windows.Forms.ComboBox();
-            this.comboBox77 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown135 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown136 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown137 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown138 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox78 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown139 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox37 = new System.Windows.Forms.CheckBox();
-            this.comboBox79 = new System.Windows.Forms.ComboBox();
-            this.label934 = new System.Windows.Forms.Label();
-            this.label935 = new System.Windows.Forms.Label();
-            this.label936 = new System.Windows.Forms.Label();
-            this.label937 = new System.Windows.Forms.Label();
-            this.label938 = new System.Windows.Forms.Label();
-            this.label939 = new System.Windows.Forms.Label();
-            this.label940 = new System.Windows.Forms.Label();
-            this.label941 = new System.Windows.Forms.Label();
-            this.label942 = new System.Windows.Forms.Label();
-            this.label943 = new System.Windows.Forms.Label();
-            this.label944 = new System.Windows.Forms.Label();
-            this.label945 = new System.Windows.Forms.Label();
-            this.button25 = new System.Windows.Forms.Button();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.checkBox38 = new System.Windows.Forms.CheckBox();
-            this.comboBox80 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown140 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown141 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown142 = new System.Windows.Forms.NumericUpDown();
-            this.label946 = new System.Windows.Forms.Label();
-            this.label947 = new System.Windows.Forms.Label();
-            this.label948 = new System.Windows.Forms.Label();
-            this.label949 = new System.Windows.Forms.Label();
-            this.label950 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
             this.tabPage_HeartRate_AOD = new System.Windows.Forms.TabPage();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.checkBox39 = new System.Windows.Forms.CheckBox();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.comboBox81 = new System.Windows.Forms.ComboBox();
-            this.comboBox82 = new System.Windows.Forms.ComboBox();
-            this.comboBox83 = new System.Windows.Forms.ComboBox();
-            this.comboBox84 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown143 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown144 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown145 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown146 = new System.Windows.Forms.NumericUpDown();
-            this.label951 = new System.Windows.Forms.Label();
-            this.label952 = new System.Windows.Forms.Label();
-            this.label953 = new System.Windows.Forms.Label();
-            this.label954 = new System.Windows.Forms.Label();
-            this.label955 = new System.Windows.Forms.Label();
-            this.label956 = new System.Windows.Forms.Label();
-            this.label957 = new System.Windows.Forms.Label();
-            this.button27 = new System.Windows.Forms.Button();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.checkBox40 = new System.Windows.Forms.CheckBox();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.comboBox85 = new System.Windows.Forms.ComboBox();
-            this.comboBox86 = new System.Windows.Forms.ComboBox();
-            this.comboBox87 = new System.Windows.Forms.ComboBox();
-            this.comboBox88 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown147 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown148 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown149 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown150 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown151 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown152 = new System.Windows.Forms.NumericUpDown();
-            this.label958 = new System.Windows.Forms.Label();
-            this.label959 = new System.Windows.Forms.Label();
-            this.label960 = new System.Windows.Forms.Label();
-            this.label961 = new System.Windows.Forms.Label();
-            this.label962 = new System.Windows.Forms.Label();
-            this.label963 = new System.Windows.Forms.Label();
-            this.label964 = new System.Windows.Forms.Label();
-            this.label965 = new System.Windows.Forms.Label();
-            this.label966 = new System.Windows.Forms.Label();
-            this.button28 = new System.Windows.Forms.Button();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.checkBox41 = new System.Windows.Forms.CheckBox();
-            this.comboBox89 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown153 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown154 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown155 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown156 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox90 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown157 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown158 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown159 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown160 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox91 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown161 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown162 = new System.Windows.Forms.NumericUpDown();
-            this.label967 = new System.Windows.Forms.Label();
-            this.label968 = new System.Windows.Forms.Label();
-            this.label969 = new System.Windows.Forms.Label();
-            this.label970 = new System.Windows.Forms.Label();
-            this.label971 = new System.Windows.Forms.Label();
-            this.label972 = new System.Windows.Forms.Label();
-            this.label973 = new System.Windows.Forms.Label();
-            this.label974 = new System.Windows.Forms.Label();
-            this.label975 = new System.Windows.Forms.Label();
-            this.label976 = new System.Windows.Forms.Label();
-            this.label977 = new System.Windows.Forms.Label();
-            this.label978 = new System.Windows.Forms.Label();
-            this.label979 = new System.Windows.Forms.Label();
-            this.label980 = new System.Windows.Forms.Label();
-            this.label981 = new System.Windows.Forms.Label();
-            this.label982 = new System.Windows.Forms.Label();
-            this.label983 = new System.Windows.Forms.Label();
-            this.button29 = new System.Windows.Forms.Button();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.checkBox42 = new System.Windows.Forms.CheckBox();
-            this.comboBox92 = new System.Windows.Forms.ComboBox();
-            this.comboBox93 = new System.Windows.Forms.ComboBox();
-            this.comboBox94 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown163 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown164 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown165 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown166 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox95 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown167 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox43 = new System.Windows.Forms.CheckBox();
-            this.comboBox96 = new System.Windows.Forms.ComboBox();
-            this.label984 = new System.Windows.Forms.Label();
-            this.label985 = new System.Windows.Forms.Label();
-            this.label986 = new System.Windows.Forms.Label();
-            this.label987 = new System.Windows.Forms.Label();
-            this.label988 = new System.Windows.Forms.Label();
-            this.label989 = new System.Windows.Forms.Label();
-            this.label990 = new System.Windows.Forms.Label();
-            this.label991 = new System.Windows.Forms.Label();
-            this.label992 = new System.Windows.Forms.Label();
-            this.label993 = new System.Windows.Forms.Label();
-            this.label994 = new System.Windows.Forms.Label();
-            this.label995 = new System.Windows.Forms.Label();
-            this.button30 = new System.Windows.Forms.Button();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.checkBox44 = new System.Windows.Forms.CheckBox();
-            this.comboBox97 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown168 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown169 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown170 = new System.Windows.Forms.NumericUpDown();
-            this.label996 = new System.Windows.Forms.Label();
-            this.label997 = new System.Windows.Forms.Label();
-            this.label998 = new System.Windows.Forms.Label();
-            this.label999 = new System.Windows.Forms.Label();
-            this.label1000 = new System.Windows.Forms.Label();
-            this.button31 = new System.Windows.Forms.Button();
             this.tabPage_PAI_AOD = new System.Windows.Forms.TabPage();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.checkBox45 = new System.Windows.Forms.CheckBox();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.comboBox98 = new System.Windows.Forms.ComboBox();
-            this.comboBox99 = new System.Windows.Forms.ComboBox();
-            this.comboBox100 = new System.Windows.Forms.ComboBox();
-            this.comboBox101 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown171 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown172 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown173 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown174 = new System.Windows.Forms.NumericUpDown();
-            this.label1001 = new System.Windows.Forms.Label();
-            this.label1002 = new System.Windows.Forms.Label();
-            this.label1003 = new System.Windows.Forms.Label();
-            this.label1004 = new System.Windows.Forms.Label();
-            this.label1005 = new System.Windows.Forms.Label();
-            this.label1006 = new System.Windows.Forms.Label();
-            this.label1007 = new System.Windows.Forms.Label();
-            this.button32 = new System.Windows.Forms.Button();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.checkBox46 = new System.Windows.Forms.CheckBox();
-            this.radioButton17 = new System.Windows.Forms.RadioButton();
-            this.radioButton18 = new System.Windows.Forms.RadioButton();
-            this.comboBox102 = new System.Windows.Forms.ComboBox();
-            this.comboBox103 = new System.Windows.Forms.ComboBox();
-            this.comboBox104 = new System.Windows.Forms.ComboBox();
-            this.comboBox105 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown175 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown176 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown177 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown178 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown179 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown180 = new System.Windows.Forms.NumericUpDown();
-            this.label1008 = new System.Windows.Forms.Label();
-            this.label1009 = new System.Windows.Forms.Label();
-            this.label1010 = new System.Windows.Forms.Label();
-            this.label1011 = new System.Windows.Forms.Label();
-            this.label1012 = new System.Windows.Forms.Label();
-            this.label1013 = new System.Windows.Forms.Label();
-            this.label1014 = new System.Windows.Forms.Label();
-            this.label1015 = new System.Windows.Forms.Label();
-            this.label1016 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.checkBox47 = new System.Windows.Forms.CheckBox();
-            this.comboBox106 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown181 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown182 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown183 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown184 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox107 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown185 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown186 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown187 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown188 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox108 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown189 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown190 = new System.Windows.Forms.NumericUpDown();
-            this.label1017 = new System.Windows.Forms.Label();
-            this.label1018 = new System.Windows.Forms.Label();
-            this.label1019 = new System.Windows.Forms.Label();
-            this.label1020 = new System.Windows.Forms.Label();
-            this.label1021 = new System.Windows.Forms.Label();
-            this.label1022 = new System.Windows.Forms.Label();
-            this.label1023 = new System.Windows.Forms.Label();
-            this.label1024 = new System.Windows.Forms.Label();
-            this.label1025 = new System.Windows.Forms.Label();
-            this.label1026 = new System.Windows.Forms.Label();
-            this.label1027 = new System.Windows.Forms.Label();
-            this.label1028 = new System.Windows.Forms.Label();
-            this.label1029 = new System.Windows.Forms.Label();
-            this.label1030 = new System.Windows.Forms.Label();
-            this.label1031 = new System.Windows.Forms.Label();
-            this.label1032 = new System.Windows.Forms.Label();
-            this.label1033 = new System.Windows.Forms.Label();
-            this.button34 = new System.Windows.Forms.Button();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.checkBox48 = new System.Windows.Forms.CheckBox();
-            this.comboBox109 = new System.Windows.Forms.ComboBox();
-            this.comboBox110 = new System.Windows.Forms.ComboBox();
-            this.comboBox111 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown191 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown192 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown193 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown194 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox112 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown195 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox49 = new System.Windows.Forms.CheckBox();
-            this.comboBox113 = new System.Windows.Forms.ComboBox();
-            this.label1034 = new System.Windows.Forms.Label();
-            this.label1035 = new System.Windows.Forms.Label();
-            this.label1036 = new System.Windows.Forms.Label();
-            this.label1037 = new System.Windows.Forms.Label();
-            this.label1038 = new System.Windows.Forms.Label();
-            this.label1039 = new System.Windows.Forms.Label();
-            this.label1040 = new System.Windows.Forms.Label();
-            this.label1041 = new System.Windows.Forms.Label();
-            this.label1042 = new System.Windows.Forms.Label();
-            this.label1043 = new System.Windows.Forms.Label();
-            this.label1044 = new System.Windows.Forms.Label();
-            this.label1045 = new System.Windows.Forms.Label();
-            this.button35 = new System.Windows.Forms.Button();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.checkBox50 = new System.Windows.Forms.CheckBox();
-            this.comboBox114 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown196 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown197 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown198 = new System.Windows.Forms.NumericUpDown();
-            this.label1046 = new System.Windows.Forms.Label();
-            this.label1047 = new System.Windows.Forms.Label();
-            this.label1048 = new System.Windows.Forms.Label();
-            this.label1049 = new System.Windows.Forms.Label();
-            this.label1050 = new System.Windows.Forms.Label();
-            this.button36 = new System.Windows.Forms.Button();
             this.tabPage_Distance_AOD = new System.Windows.Forms.TabPage();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.checkBox51 = new System.Windows.Forms.CheckBox();
-            this.radioButton19 = new System.Windows.Forms.RadioButton();
-            this.radioButton20 = new System.Windows.Forms.RadioButton();
-            this.comboBox115 = new System.Windows.Forms.ComboBox();
-            this.comboBox116 = new System.Windows.Forms.ComboBox();
-            this.comboBox117 = new System.Windows.Forms.ComboBox();
-            this.comboBox118 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown199 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown200 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown201 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown202 = new System.Windows.Forms.NumericUpDown();
-            this.label1051 = new System.Windows.Forms.Label();
-            this.label1052 = new System.Windows.Forms.Label();
-            this.label1053 = new System.Windows.Forms.Label();
-            this.label1054 = new System.Windows.Forms.Label();
-            this.label1055 = new System.Windows.Forms.Label();
-            this.label1056 = new System.Windows.Forms.Label();
-            this.label1057 = new System.Windows.Forms.Label();
-            this.button37 = new System.Windows.Forms.Button();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.checkBox52 = new System.Windows.Forms.CheckBox();
-            this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.radioButton22 = new System.Windows.Forms.RadioButton();
-            this.comboBox119 = new System.Windows.Forms.ComboBox();
-            this.comboBox120 = new System.Windows.Forms.ComboBox();
-            this.comboBox121 = new System.Windows.Forms.ComboBox();
-            this.comboBox122 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown203 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown204 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown205 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown206 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown207 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown208 = new System.Windows.Forms.NumericUpDown();
-            this.label1058 = new System.Windows.Forms.Label();
-            this.label1059 = new System.Windows.Forms.Label();
-            this.label1060 = new System.Windows.Forms.Label();
-            this.label1061 = new System.Windows.Forms.Label();
-            this.label1062 = new System.Windows.Forms.Label();
-            this.label1063 = new System.Windows.Forms.Label();
-            this.label1064 = new System.Windows.Forms.Label();
-            this.label1065 = new System.Windows.Forms.Label();
-            this.label1066 = new System.Windows.Forms.Label();
-            this.button38 = new System.Windows.Forms.Button();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.checkBox53 = new System.Windows.Forms.CheckBox();
-            this.comboBox123 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown209 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown210 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown211 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown212 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox124 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown213 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown214 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown215 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown216 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox125 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown217 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown218 = new System.Windows.Forms.NumericUpDown();
-            this.label1067 = new System.Windows.Forms.Label();
-            this.label1068 = new System.Windows.Forms.Label();
-            this.label1069 = new System.Windows.Forms.Label();
-            this.label1070 = new System.Windows.Forms.Label();
-            this.label1071 = new System.Windows.Forms.Label();
-            this.label1072 = new System.Windows.Forms.Label();
-            this.label1073 = new System.Windows.Forms.Label();
-            this.label1074 = new System.Windows.Forms.Label();
-            this.label1075 = new System.Windows.Forms.Label();
-            this.label1076 = new System.Windows.Forms.Label();
-            this.label1077 = new System.Windows.Forms.Label();
-            this.label1078 = new System.Windows.Forms.Label();
-            this.label1079 = new System.Windows.Forms.Label();
-            this.label1080 = new System.Windows.Forms.Label();
-            this.label1081 = new System.Windows.Forms.Label();
-            this.label1082 = new System.Windows.Forms.Label();
-            this.label1083 = new System.Windows.Forms.Label();
-            this.button39 = new System.Windows.Forms.Button();
-            this.panel48 = new System.Windows.Forms.Panel();
-            this.checkBox54 = new System.Windows.Forms.CheckBox();
-            this.comboBox126 = new System.Windows.Forms.ComboBox();
-            this.comboBox127 = new System.Windows.Forms.ComboBox();
-            this.comboBox128 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown219 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown220 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown221 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown222 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox129 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown223 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox55 = new System.Windows.Forms.CheckBox();
-            this.comboBox130 = new System.Windows.Forms.ComboBox();
-            this.comboBox131 = new System.Windows.Forms.ComboBox();
-            this.label1084 = new System.Windows.Forms.Label();
-            this.label1085 = new System.Windows.Forms.Label();
-            this.label1086 = new System.Windows.Forms.Label();
-            this.label1087 = new System.Windows.Forms.Label();
-            this.label1088 = new System.Windows.Forms.Label();
-            this.label1089 = new System.Windows.Forms.Label();
-            this.label1090 = new System.Windows.Forms.Label();
-            this.label1091 = new System.Windows.Forms.Label();
-            this.label1092 = new System.Windows.Forms.Label();
-            this.label1093 = new System.Windows.Forms.Label();
-            this.label1094 = new System.Windows.Forms.Label();
-            this.label1095 = new System.Windows.Forms.Label();
-            this.label1096 = new System.Windows.Forms.Label();
-            this.button40 = new System.Windows.Forms.Button();
-            this.panel49 = new System.Windows.Forms.Panel();
-            this.checkBox56 = new System.Windows.Forms.CheckBox();
-            this.comboBox132 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown224 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown225 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown226 = new System.Windows.Forms.NumericUpDown();
-            this.label1097 = new System.Windows.Forms.Label();
-            this.label1098 = new System.Windows.Forms.Label();
-            this.label1099 = new System.Windows.Forms.Label();
-            this.label1100 = new System.Windows.Forms.Label();
-            this.label1101 = new System.Windows.Forms.Label();
-            this.button41 = new System.Windows.Forms.Button();
             this.tabPage_StandUp_AOD = new System.Windows.Forms.TabPage();
             this.tabPage_Stress_AOD = new System.Windows.Forms.TabPage();
             this.tabPage_ActivityGoal_AOD = new System.Windows.Forms.TabPage();
@@ -2299,17 +1833,19 @@
             this.tabPage_Weather_AOD = new System.Windows.Forms.TabPage();
             this.panel_Weather_icon_AOD = new System.Windows.Forms.Panel();
             this.panel_Weather_scaleLinear_AOD = new System.Windows.Forms.Panel();
-            this.checkBox57 = new System.Windows.Forms.CheckBox();
-            this.radioButton23 = new System.Windows.Forms.RadioButton();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
-            this.comboBox133 = new System.Windows.Forms.ComboBox();
-            this.comboBox134 = new System.Windows.Forms.ComboBox();
-            this.comboBox135 = new System.Windows.Forms.ComboBox();
-            this.comboBox136 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown227 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown228 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown229 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown230 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Weather_scaleLinear_Use_AOD = new System.Windows.Forms.CheckBox();
+            this.radioButton_Weather_scaleLinear_image_AOD = new System.Windows.Forms.RadioButton();
+            this.radioButtonWeather_scaleLinear_color_AOD = new System.Windows.Forms.RadioButton();
+            this.comboBox_Weather_scaleLinear_image_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_scaleLinear_color_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_scaleLinear_image_background_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_scaleLinearX_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleLinearY_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleLinear_length_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleLinear_width_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_scaleLinear_flatness_AOD = new System.Windows.Forms.ComboBox();
+            this.label304 = new System.Windows.Forms.Label();
             this.label1102 = new System.Windows.Forms.Label();
             this.label1103 = new System.Windows.Forms.Label();
             this.label1104 = new System.Windows.Forms.Label();
@@ -2317,21 +1853,22 @@
             this.label1106 = new System.Windows.Forms.Label();
             this.label1107 = new System.Windows.Forms.Label();
             this.label1108 = new System.Windows.Forms.Label();
+            this.button_Copy_Weather_scaleLinear_AOD = new System.Windows.Forms.Button();
             this.button_Weather_scaleLinear_AOD = new System.Windows.Forms.Button();
             this.panel_Weather_scaleCircle_AOD = new System.Windows.Forms.Panel();
-            this.checkBox58 = new System.Windows.Forms.CheckBox();
-            this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.radioButton26 = new System.Windows.Forms.RadioButton();
-            this.comboBox137 = new System.Windows.Forms.ComboBox();
-            this.comboBox138 = new System.Windows.Forms.ComboBox();
-            this.comboBox139 = new System.Windows.Forms.ComboBox();
-            this.comboBox140 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown231 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown232 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown233 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown234 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown235 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown236 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Weather_scaleCircle_Use_AOD = new System.Windows.Forms.CheckBox();
+            this.radioButton_Weather_scaleCircle_image_AOD = new System.Windows.Forms.RadioButton();
+            this.radioButton_Weather_scaleCircle_color_AOD = new System.Windows.Forms.RadioButton();
+            this.comboBox_Weather_scaleCircle_image_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_scaleCircle_color_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_scaleCircle_flatness_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_scaleCircle_image_background_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_scaleCircleX_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleCircleY_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleCircle_radius_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleCircle_width_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleCircle_startAngle_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_scaleCircle_endAngle_AOD = new System.Windows.Forms.NumericUpDown();
             this.label1109 = new System.Windows.Forms.Label();
             this.label1110 = new System.Windows.Forms.Label();
             this.label1111 = new System.Windows.Forms.Label();
@@ -2341,22 +1878,23 @@
             this.label1115 = new System.Windows.Forms.Label();
             this.label1116 = new System.Windows.Forms.Label();
             this.label1117 = new System.Windows.Forms.Label();
+            this.button_Copy_Weather_scaleCircle_AOD = new System.Windows.Forms.Button();
             this.button_Weather_scaleCircle_AOD = new System.Windows.Forms.Button();
             this.panel_Weather_hand_AOD = new System.Windows.Forms.Panel();
-            this.checkBox59 = new System.Windows.Forms.CheckBox();
-            this.comboBox141 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown237 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown238 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown239 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown240 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox142 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown241 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown242 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown243 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown244 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox143 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown245 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown246 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Weather_hand_Use_AOD = new System.Windows.Forms.CheckBox();
+            this.comboBox_Weather_hand_image_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_handX_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_handY_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_handX_offset_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_handY_offset_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_hand_imageCentr_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_handX_centr_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_handY_centr_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_hand_startAngle_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_hand_endAngle_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_hand_imageBackground_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_handX_background_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_handY_background_AOD = new System.Windows.Forms.NumericUpDown();
             this.label1118 = new System.Windows.Forms.Label();
             this.label1119 = new System.Windows.Forms.Label();
             this.label1120 = new System.Windows.Forms.Label();
@@ -2374,21 +1912,22 @@
             this.label1132 = new System.Windows.Forms.Label();
             this.label1133 = new System.Windows.Forms.Label();
             this.label1134 = new System.Windows.Forms.Label();
+            this.button_Copy_Weather_hand_AOD = new System.Windows.Forms.Button();
             this.button_Weather_hand_AOD = new System.Windows.Forms.Button();
             this.panel_Weather_textMax_AOD = new System.Windows.Forms.Panel();
-            this.checkBox60 = new System.Windows.Forms.CheckBox();
-            this.comboBox144 = new System.Windows.Forms.ComboBox();
-            this.comboBox145 = new System.Windows.Forms.ComboBox();
-            this.comboBox146 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown247 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown248 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown249 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown250 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox147 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown251 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox148 = new System.Windows.Forms.ComboBox();
-            this.comboBox149 = new System.Windows.Forms.ComboBox();
-            this.checkBox61 = new System.Windows.Forms.CheckBox();
+            this.checkBox_Weather_UseMax_AOD = new System.Windows.Forms.CheckBox();
+            this.comboBox_Weather_imageMax_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_iconMax_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_unitFMax_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_WeatherXMax_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WeatherYMax_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_iconXMax_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_iconYMax_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_alignmentMax_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_spacingMax_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_imageErrorMax_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_imageMinusMax_AOD = new System.Windows.Forms.ComboBox();
+            this.checkBox_Weather_followMax_AOD = new System.Windows.Forms.CheckBox();
             this.label1135 = new System.Windows.Forms.Label();
             this.label1136 = new System.Windows.Forms.Label();
             this.label1137 = new System.Windows.Forms.Label();
@@ -2402,20 +1941,21 @@
             this.label1145 = new System.Windows.Forms.Label();
             this.label1146 = new System.Windows.Forms.Label();
             this.label1147 = new System.Windows.Forms.Label();
+            this.button_Copy_Weather_textMax_AOD = new System.Windows.Forms.Button();
             this.button_Weather_textMax_AOD = new System.Windows.Forms.Button();
             this.panel_Weather_textMin_AOD = new System.Windows.Forms.Panel();
-            this.checkBox62 = new System.Windows.Forms.CheckBox();
-            this.comboBox150 = new System.Windows.Forms.ComboBox();
-            this.comboBox151 = new System.Windows.Forms.ComboBox();
-            this.comboBox152 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown252 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown253 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown254 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown255 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox153 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown256 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox154 = new System.Windows.Forms.ComboBox();
-            this.comboBox155 = new System.Windows.Forms.ComboBox();
+            this.checkBox_Weather_UseMin_AOD = new System.Windows.Forms.CheckBox();
+            this.comboBox_Weather_imageMin_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_iconMin_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_unitFMin_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_WeatherXMin_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WeatherYMin_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_iconXMin_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_iconYMin_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_alignmentMin_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_spacingMin_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_imageErrorMin_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_imageMinusMin_AOD = new System.Windows.Forms.ComboBox();
             this.label1148 = new System.Windows.Forms.Label();
             this.label1149 = new System.Windows.Forms.Label();
             this.label1150 = new System.Windows.Forms.Label();
@@ -2429,20 +1969,21 @@
             this.label1158 = new System.Windows.Forms.Label();
             this.label1159 = new System.Windows.Forms.Label();
             this.label1160 = new System.Windows.Forms.Label();
+            this.button_Copy_Weather_textMin_AOD = new System.Windows.Forms.Button();
             this.button_Weather_textMin_AOD = new System.Windows.Forms.Button();
             this.panel_Weather_text_AOD = new System.Windows.Forms.Panel();
-            this.checkBox63 = new System.Windows.Forms.CheckBox();
-            this.comboBox156 = new System.Windows.Forms.ComboBox();
-            this.comboBox157 = new System.Windows.Forms.ComboBox();
-            this.comboBox158 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown257 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown258 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown259 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown260 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox159 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown261 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox160 = new System.Windows.Forms.ComboBox();
-            this.comboBox161 = new System.Windows.Forms.ComboBox();
+            this.checkBox_Weather_Use_AOD = new System.Windows.Forms.CheckBox();
+            this.comboBox_Weather_image_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_icon_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_unitF_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_WeatherX_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WeatherY_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_iconX_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_iconY_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_alignment_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_spacing_AOD = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Weather_imageError_AOD = new System.Windows.Forms.ComboBox();
+            this.comboBox_Weather_imageMinus_AOD = new System.Windows.Forms.ComboBox();
             this.label1161 = new System.Windows.Forms.Label();
             this.label1162 = new System.Windows.Forms.Label();
             this.label1163 = new System.Windows.Forms.Label();
@@ -2456,18 +1997,20 @@
             this.label1171 = new System.Windows.Forms.Label();
             this.label1172 = new System.Windows.Forms.Label();
             this.label1173 = new System.Windows.Forms.Label();
+            this.button_Copy_Weather_text_AOD = new System.Windows.Forms.Button();
             this.button_Weather_text_AOD = new System.Windows.Forms.Button();
             this.panel_Weather_pictures_AOD = new System.Windows.Forms.Panel();
-            this.checkBox64 = new System.Windows.Forms.CheckBox();
-            this.comboBox162 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown262 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown263 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown264 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Weather_pictures_Use_AOD = new System.Windows.Forms.CheckBox();
+            this.comboBox_Weather_pictures_image_AOD = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Weather_picturesX_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_picturesY_AOD = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Weather_pictures_count_AOD = new System.Windows.Forms.NumericUpDown();
             this.label1174 = new System.Windows.Forms.Label();
             this.label1175 = new System.Windows.Forms.Label();
             this.label1176 = new System.Windows.Forms.Label();
             this.label1177 = new System.Windows.Forms.Label();
             this.label1178 = new System.Windows.Forms.Label();
+            this.button_Copy_Weather_pictures_AOD = new System.Windows.Forms.Button();
             this.button_Weather_pictures_AOD = new System.Windows.Forms.Button();
             this.tabPage_UVindex_AOD = new System.Windows.Forms.TabPage();
             this.tabPage_AirQuality_AOD = new System.Windows.Forms.TabPage();
@@ -2482,8 +2025,8 @@
             this.panel_Battery_icon_AOD = new System.Windows.Forms.Panel();
             this.panel_Battery_scaleLinear_AOD = new System.Windows.Forms.Panel();
             this.checkBox_Battery_scaleLinear_Use_AOD = new System.Windows.Forms.CheckBox();
-            this.radioButton27 = new System.Windows.Forms.RadioButton();
-            this.radioButton28 = new System.Windows.Forms.RadioButton();
+            this.radioButton_Battery_scaleLinear_image_AOD = new System.Windows.Forms.RadioButton();
+            this.radioButton_Battery_scaleLinear_color_AOD = new System.Windows.Forms.RadioButton();
             this.comboBox_Battery_scaleLinear_image_AOD = new System.Windows.Forms.ComboBox();
             this.comboBox_Battery_scaleLinear_color_AOD = new System.Windows.Forms.ComboBox();
             this.comboBox_Battery_scaleLinear_image_pointer_AOD = new System.Windows.Forms.ComboBox();
@@ -3540,190 +3083,54 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Steps_picturesX_AOD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Steps_picturesY_AOD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Steps_pictures_count_AOD)).BeginInit();
-            this.tabPage_Calories_AOD.SuspendLayout();
-            this.panel27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown115)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown116)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown117)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown118)).BeginInit();
-            this.panel28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown119)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown120)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown121)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown122)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown123)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown124)).BeginInit();
-            this.panel29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown125)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown126)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown127)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown128)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown129)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown130)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown131)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown133)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown134)).BeginInit();
-            this.panel30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown135)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown136)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown137)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown138)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown139)).BeginInit();
-            this.panel31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown140)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown141)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown142)).BeginInit();
-            this.tabPage_HeartRate_AOD.SuspendLayout();
-            this.panel33.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown143)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown144)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown145)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown146)).BeginInit();
-            this.panel34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown147)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown148)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown149)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown150)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown152)).BeginInit();
-            this.panel35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown153)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown154)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown155)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown156)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown157)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown158)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown159)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown160)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown161)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown162)).BeginInit();
-            this.panel36.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown163)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown164)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown165)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown166)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown167)).BeginInit();
-            this.panel37.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown168)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown169)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown170)).BeginInit();
-            this.tabPage_PAI_AOD.SuspendLayout();
-            this.panel39.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown171)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown172)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown173)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown174)).BeginInit();
-            this.panel40.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown175)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown176)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown177)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown178)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown179)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown180)).BeginInit();
-            this.panel41.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown181)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown182)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown183)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown184)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown185)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown186)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown187)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown188)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown189)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown190)).BeginInit();
-            this.panel42.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown191)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown192)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown193)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown194)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown195)).BeginInit();
-            this.panel43.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown196)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown197)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown198)).BeginInit();
-            this.tabPage_Distance_AOD.SuspendLayout();
-            this.panel45.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown199)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown200)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown201)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown202)).BeginInit();
-            this.panel46.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown203)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown204)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown205)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown206)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown207)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown208)).BeginInit();
-            this.panel47.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown209)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown210)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown211)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown212)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown213)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown214)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown215)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown216)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown217)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown218)).BeginInit();
-            this.panel48.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown219)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown220)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown222)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown223)).BeginInit();
-            this.panel49.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown224)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown225)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown226)).BeginInit();
             this.tabPage_Air_AOD.SuspendLayout();
             this.tabControl_SystemWeather_AOD.SuspendLayout();
             this.tabPage_Weather_AOD.SuspendLayout();
             this.panel_Weather_scaleLinear_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown227)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown230)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearX_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearY_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_length_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_width_AOD)).BeginInit();
             this.panel_Weather_scaleCircle_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown231)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown232)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown233)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown234)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown235)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown236)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleX_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleY_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_radius_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_width_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_startAngle_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_endAngle_AOD)).BeginInit();
             this.panel_Weather_hand_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown237)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown241)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown242)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown243)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown244)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown245)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown246)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_offset_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_offset_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_centr_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_centr_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_startAngle_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_endAngle_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_background_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_background_AOD)).BeginInit();
             this.panel_Weather_textMax_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown247)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown248)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown249)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown250)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown251)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMax_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMax_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMax_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMax_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMax_AOD)).BeginInit();
             this.panel_Weather_textMin_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown252)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown253)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown254)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown255)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown256)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMin_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMin_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMin_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMin_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMin_AOD)).BeginInit();
             this.panel_Weather_text_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown257)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown258)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown259)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherX_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherY_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconX_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconY_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacing_AOD)).BeginInit();
             this.panel_Weather_pictures_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown262)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown264)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesX_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesY_AOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_pictures_count_AOD)).BeginInit();
             this.tabPage_System_AOD.SuspendLayout();
             this.tabControl_System_AOD.SuspendLayout();
             this.tabPage_Battery_AOD.SuspendLayout();
@@ -22849,7 +22256,7 @@
             // 
             resources.ApplyResources(this.tabPage_Steps_AOD, "tabPage_Steps_AOD");
             this.tabPage_Steps_AOD.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Steps_AOD.Controls.Add(this.panel20);
+            this.tabPage_Steps_AOD.Controls.Add(this.panel_Steps_icon_AOD);
             this.tabPage_Steps_AOD.Controls.Add(this.panel_Steps_scaleLinear_AOD);
             this.tabPage_Steps_AOD.Controls.Add(this.button_Steps_scaleLinear_AOD);
             this.tabPage_Steps_AOD.Controls.Add(this.panel_Steps_scaleCircle_AOD);
@@ -22863,11 +22270,11 @@
             this.tabPage_Steps_AOD.Name = "tabPage_Steps_AOD";
             this.helpProvider1.SetShowHelp(this.tabPage_Steps_AOD, ((bool)(resources.GetObject("tabPage_Steps_AOD.ShowHelp"))));
             // 
-            // panel20
+            // panel_Steps_icon_AOD
             // 
-            resources.ApplyResources(this.panel20, "panel20");
-            this.panel20.Name = "panel20";
-            this.helpProvider1.SetShowHelp(this.panel20, ((bool)(resources.GetObject("panel20.ShowHelp"))));
+            resources.ApplyResources(this.panel_Steps_icon_AOD, "panel_Steps_icon_AOD");
+            this.panel_Steps_icon_AOD.Name = "panel_Steps_icon_AOD";
+            this.helpProvider1.SetShowHelp(this.panel_Steps_icon_AOD, ((bool)(resources.GetObject("panel_Steps_icon_AOD.ShowHelp"))));
             // 
             // panel_Steps_scaleLinear_AOD
             // 
@@ -24279,4954 +23686,29 @@
             // 
             resources.ApplyResources(this.tabPage_Calories_AOD, "tabPage_Calories_AOD");
             this.tabPage_Calories_AOD.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Calories_AOD.Controls.Add(this.panel26);
-            this.tabPage_Calories_AOD.Controls.Add(this.panel27);
-            this.tabPage_Calories_AOD.Controls.Add(this.button22);
-            this.tabPage_Calories_AOD.Controls.Add(this.panel28);
-            this.tabPage_Calories_AOD.Controls.Add(this.button23);
-            this.tabPage_Calories_AOD.Controls.Add(this.panel29);
-            this.tabPage_Calories_AOD.Controls.Add(this.button24);
-            this.tabPage_Calories_AOD.Controls.Add(this.panel30);
-            this.tabPage_Calories_AOD.Controls.Add(this.button25);
-            this.tabPage_Calories_AOD.Controls.Add(this.panel31);
-            this.tabPage_Calories_AOD.Controls.Add(this.button26);
             this.tabPage_Calories_AOD.Name = "tabPage_Calories_AOD";
             this.helpProvider1.SetShowHelp(this.tabPage_Calories_AOD, ((bool)(resources.GetObject("tabPage_Calories_AOD.ShowHelp"))));
-            // 
-            // panel26
-            // 
-            resources.ApplyResources(this.panel26, "panel26");
-            this.panel26.Name = "panel26";
-            this.helpProvider1.SetShowHelp(this.panel26, ((bool)(resources.GetObject("panel26.ShowHelp"))));
-            // 
-            // panel27
-            // 
-            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel27.Controls.Add(this.checkBox33);
-            this.panel27.Controls.Add(this.radioButton7);
-            this.panel27.Controls.Add(this.radioButton8);
-            this.panel27.Controls.Add(this.comboBox64);
-            this.panel27.Controls.Add(this.comboBox65);
-            this.panel27.Controls.Add(this.comboBox66);
-            this.panel27.Controls.Add(this.comboBox67);
-            this.panel27.Controls.Add(this.numericUpDown115);
-            this.panel27.Controls.Add(this.numericUpDown116);
-            this.panel27.Controls.Add(this.numericUpDown117);
-            this.panel27.Controls.Add(this.numericUpDown118);
-            this.panel27.Controls.Add(this.label901);
-            this.panel27.Controls.Add(this.label902);
-            this.panel27.Controls.Add(this.label903);
-            this.panel27.Controls.Add(this.label904);
-            this.panel27.Controls.Add(this.label905);
-            this.panel27.Controls.Add(this.label906);
-            this.panel27.Controls.Add(this.label907);
-            resources.ApplyResources(this.panel27, "panel27");
-            this.panel27.Name = "panel27";
-            this.helpProvider1.SetShowHelp(this.panel27, ((bool)(resources.GetObject("panel27.ShowHelp"))));
-            // 
-            // checkBox33
-            // 
-            resources.ApplyResources(this.checkBox33, "checkBox33");
-            this.checkBox33.Name = "checkBox33";
-            this.helpProvider1.SetShowHelp(this.checkBox33, ((bool)(resources.GetObject("checkBox33.ShowHelp"))));
-            this.checkBox33.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            resources.ApplyResources(this.radioButton7, "radioButton7");
-            this.radioButton7.Checked = true;
-            this.radioButton7.Name = "radioButton7";
-            this.helpProvider1.SetShowHelp(this.radioButton7, ((bool)(resources.GetObject("radioButton7.ShowHelp"))));
-            this.radioButton7.TabStop = true;
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            resources.ApplyResources(this.radioButton8, "radioButton8");
-            this.radioButton8.Name = "radioButton8";
-            this.helpProvider1.SetShowHelp(this.radioButton8, ((bool)(resources.GetObject("radioButton8.ShowHelp"))));
-            this.radioButton8.TabStop = true;
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // comboBox64
-            // 
-            this.comboBox64.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox64.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox64, "comboBox64");
-            this.comboBox64.FormattingEnabled = true;
-            this.comboBox64.Name = "comboBox64";
-            this.helpProvider1.SetShowHelp(this.comboBox64, ((bool)(resources.GetObject("comboBox64.ShowHelp"))));
-            // 
-            // comboBox65
-            // 
-            this.comboBox65.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox65.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox65, "comboBox65");
-            this.comboBox65.FormattingEnabled = true;
-            this.comboBox65.Name = "comboBox65";
-            this.helpProvider1.SetShowHelp(this.comboBox65, ((bool)(resources.GetObject("comboBox65.ShowHelp"))));
-            // 
-            // comboBox66
-            // 
-            this.comboBox66.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox66.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox66, "comboBox66");
-            this.comboBox66.FormattingEnabled = true;
-            this.comboBox66.Name = "comboBox66";
-            this.helpProvider1.SetShowHelp(this.comboBox66, ((bool)(resources.GetObject("comboBox66.ShowHelp"))));
-            // 
-            // comboBox67
-            // 
-            this.comboBox67.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox67.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox67, "comboBox67");
-            this.comboBox67.FormattingEnabled = true;
-            this.comboBox67.Name = "comboBox67";
-            this.helpProvider1.SetShowHelp(this.comboBox67, ((bool)(resources.GetObject("comboBox67.ShowHelp"))));
-            // 
-            // numericUpDown115
-            // 
-            this.numericUpDown115.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown115, "numericUpDown115");
-            this.numericUpDown115.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown115.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown115.Name = "numericUpDown115";
-            this.helpProvider1.SetShowHelp(this.numericUpDown115, ((bool)(resources.GetObject("numericUpDown115.ShowHelp"))));
-            // 
-            // numericUpDown116
-            // 
-            this.numericUpDown116.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown116, "numericUpDown116");
-            this.numericUpDown116.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown116.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown116.Name = "numericUpDown116";
-            this.helpProvider1.SetShowHelp(this.numericUpDown116, ((bool)(resources.GetObject("numericUpDown116.ShowHelp"))));
-            // 
-            // numericUpDown117
-            // 
-            resources.ApplyResources(this.numericUpDown117, "numericUpDown117");
-            this.numericUpDown117.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown117.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown117.Name = "numericUpDown117";
-            this.helpProvider1.SetShowHelp(this.numericUpDown117, ((bool)(resources.GetObject("numericUpDown117.ShowHelp"))));
-            this.numericUpDown117.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown118
-            // 
-            resources.ApplyResources(this.numericUpDown118, "numericUpDown118");
-            this.numericUpDown118.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown118.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown118.Name = "numericUpDown118";
-            this.helpProvider1.SetShowHelp(this.numericUpDown118, ((bool)(resources.GetObject("numericUpDown118.ShowHelp"))));
-            this.numericUpDown118.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label901
-            // 
-            resources.ApplyResources(this.label901, "label901");
-            this.label901.Name = "label901";
-            this.helpProvider1.SetShowHelp(this.label901, ((bool)(resources.GetObject("label901.ShowHelp"))));
-            // 
-            // label902
-            // 
-            resources.ApplyResources(this.label902, "label902");
-            this.label902.Name = "label902";
-            this.helpProvider1.SetShowHelp(this.label902, ((bool)(resources.GetObject("label902.ShowHelp"))));
-            // 
-            // label903
-            // 
-            resources.ApplyResources(this.label903, "label903");
-            this.label903.Name = "label903";
-            this.helpProvider1.SetShowHelp(this.label903, ((bool)(resources.GetObject("label903.ShowHelp"))));
-            // 
-            // label904
-            // 
-            resources.ApplyResources(this.label904, "label904");
-            this.label904.Name = "label904";
-            this.helpProvider1.SetShowHelp(this.label904, ((bool)(resources.GetObject("label904.ShowHelp"))));
-            // 
-            // label905
-            // 
-            resources.ApplyResources(this.label905, "label905");
-            this.label905.Name = "label905";
-            this.helpProvider1.SetShowHelp(this.label905, ((bool)(resources.GetObject("label905.ShowHelp"))));
-            // 
-            // label906
-            // 
-            resources.ApplyResources(this.label906, "label906");
-            this.label906.Name = "label906";
-            this.helpProvider1.SetShowHelp(this.label906, ((bool)(resources.GetObject("label906.ShowHelp"))));
-            // 
-            // label907
-            // 
-            resources.ApplyResources(this.label907, "label907");
-            this.label907.Name = "label907";
-            this.helpProvider1.SetShowHelp(this.label907, ((bool)(resources.GetObject("label907.ShowHelp"))));
-            // 
-            // button22
-            // 
-            resources.ApplyResources(this.button22, "button22");
-            this.button22.Name = "button22";
-            this.helpProvider1.SetShowHelp(this.button22, ((bool)(resources.GetObject("button22.ShowHelp"))));
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // panel28
-            // 
-            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel28.Controls.Add(this.checkBox34);
-            this.panel28.Controls.Add(this.radioButton9);
-            this.panel28.Controls.Add(this.radioButton10);
-            this.panel28.Controls.Add(this.comboBox68);
-            this.panel28.Controls.Add(this.comboBox69);
-            this.panel28.Controls.Add(this.comboBox70);
-            this.panel28.Controls.Add(this.comboBox71);
-            this.panel28.Controls.Add(this.numericUpDown119);
-            this.panel28.Controls.Add(this.numericUpDown120);
-            this.panel28.Controls.Add(this.numericUpDown121);
-            this.panel28.Controls.Add(this.numericUpDown122);
-            this.panel28.Controls.Add(this.numericUpDown123);
-            this.panel28.Controls.Add(this.numericUpDown124);
-            this.panel28.Controls.Add(this.label908);
-            this.panel28.Controls.Add(this.label909);
-            this.panel28.Controls.Add(this.label910);
-            this.panel28.Controls.Add(this.label911);
-            this.panel28.Controls.Add(this.label912);
-            this.panel28.Controls.Add(this.label913);
-            this.panel28.Controls.Add(this.label914);
-            this.panel28.Controls.Add(this.label915);
-            this.panel28.Controls.Add(this.label916);
-            resources.ApplyResources(this.panel28, "panel28");
-            this.panel28.Name = "panel28";
-            this.helpProvider1.SetShowHelp(this.panel28, ((bool)(resources.GetObject("panel28.ShowHelp"))));
-            // 
-            // checkBox34
-            // 
-            resources.ApplyResources(this.checkBox34, "checkBox34");
-            this.checkBox34.Name = "checkBox34";
-            this.helpProvider1.SetShowHelp(this.checkBox34, ((bool)(resources.GetObject("checkBox34.ShowHelp"))));
-            this.checkBox34.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            resources.ApplyResources(this.radioButton9, "radioButton9");
-            this.radioButton9.Checked = true;
-            this.radioButton9.Name = "radioButton9";
-            this.helpProvider1.SetShowHelp(this.radioButton9, ((bool)(resources.GetObject("radioButton9.ShowHelp"))));
-            this.radioButton9.TabStop = true;
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            resources.ApplyResources(this.radioButton10, "radioButton10");
-            this.radioButton10.Name = "radioButton10";
-            this.helpProvider1.SetShowHelp(this.radioButton10, ((bool)(resources.GetObject("radioButton10.ShowHelp"))));
-            this.radioButton10.TabStop = true;
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // comboBox68
-            // 
-            this.comboBox68.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox68.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox68, "comboBox68");
-            this.comboBox68.FormattingEnabled = true;
-            this.comboBox68.Name = "comboBox68";
-            this.helpProvider1.SetShowHelp(this.comboBox68, ((bool)(resources.GetObject("comboBox68.ShowHelp"))));
-            // 
-            // comboBox69
-            // 
-            this.comboBox69.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox69.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox69, "comboBox69");
-            this.comboBox69.FormattingEnabled = true;
-            this.comboBox69.Name = "comboBox69";
-            this.helpProvider1.SetShowHelp(this.comboBox69, ((bool)(resources.GetObject("comboBox69.ShowHelp"))));
-            // 
-            // comboBox70
-            // 
-            this.comboBox70.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox70, "comboBox70");
-            this.comboBox70.FormattingEnabled = true;
-            this.comboBox70.Items.AddRange(new object[] {
-            resources.GetString("comboBox70.Items"),
-            resources.GetString("comboBox70.Items1"),
-            resources.GetString("comboBox70.Items2")});
-            this.comboBox70.Name = "comboBox70";
-            this.helpProvider1.SetShowHelp(this.comboBox70, ((bool)(resources.GetObject("comboBox70.ShowHelp"))));
-            // 
-            // comboBox71
-            // 
-            this.comboBox71.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox71.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox71, "comboBox71");
-            this.comboBox71.FormattingEnabled = true;
-            this.comboBox71.Name = "comboBox71";
-            this.helpProvider1.SetShowHelp(this.comboBox71, ((bool)(resources.GetObject("comboBox71.ShowHelp"))));
-            // 
-            // numericUpDown119
-            // 
-            this.numericUpDown119.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown119, "numericUpDown119");
-            this.numericUpDown119.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown119.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown119.Name = "numericUpDown119";
-            this.helpProvider1.SetShowHelp(this.numericUpDown119, ((bool)(resources.GetObject("numericUpDown119.ShowHelp"))));
-            // 
-            // numericUpDown120
-            // 
-            this.numericUpDown120.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown120, "numericUpDown120");
-            this.numericUpDown120.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown120.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown120.Name = "numericUpDown120";
-            this.helpProvider1.SetShowHelp(this.numericUpDown120, ((bool)(resources.GetObject("numericUpDown120.ShowHelp"))));
-            // 
-            // numericUpDown121
-            // 
-            resources.ApplyResources(this.numericUpDown121, "numericUpDown121");
-            this.numericUpDown121.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown121.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown121.Name = "numericUpDown121";
-            this.helpProvider1.SetShowHelp(this.numericUpDown121, ((bool)(resources.GetObject("numericUpDown121.ShowHelp"))));
-            this.numericUpDown121.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown122
-            // 
-            resources.ApplyResources(this.numericUpDown122, "numericUpDown122");
-            this.numericUpDown122.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown122.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown122.Name = "numericUpDown122";
-            this.helpProvider1.SetShowHelp(this.numericUpDown122, ((bool)(resources.GetObject("numericUpDown122.ShowHelp"))));
-            this.numericUpDown122.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown123
-            // 
-            resources.ApplyResources(this.numericUpDown123, "numericUpDown123");
-            this.numericUpDown123.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown123.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown123.Name = "numericUpDown123";
-            this.helpProvider1.SetShowHelp(this.numericUpDown123, ((bool)(resources.GetObject("numericUpDown123.ShowHelp"))));
-            // 
-            // numericUpDown124
-            // 
-            resources.ApplyResources(this.numericUpDown124, "numericUpDown124");
-            this.numericUpDown124.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown124.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown124.Name = "numericUpDown124";
-            this.helpProvider1.SetShowHelp(this.numericUpDown124, ((bool)(resources.GetObject("numericUpDown124.ShowHelp"))));
-            this.numericUpDown124.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // label908
-            // 
-            resources.ApplyResources(this.label908, "label908");
-            this.label908.Name = "label908";
-            this.helpProvider1.SetShowHelp(this.label908, ((bool)(resources.GetObject("label908.ShowHelp"))));
-            // 
-            // label909
-            // 
-            resources.ApplyResources(this.label909, "label909");
-            this.label909.Name = "label909";
-            this.helpProvider1.SetShowHelp(this.label909, ((bool)(resources.GetObject("label909.ShowHelp"))));
-            // 
-            // label910
-            // 
-            resources.ApplyResources(this.label910, "label910");
-            this.label910.Name = "label910";
-            this.helpProvider1.SetShowHelp(this.label910, ((bool)(resources.GetObject("label910.ShowHelp"))));
-            // 
-            // label911
-            // 
-            resources.ApplyResources(this.label911, "label911");
-            this.label911.Name = "label911";
-            this.helpProvider1.SetShowHelp(this.label911, ((bool)(resources.GetObject("label911.ShowHelp"))));
-            // 
-            // label912
-            // 
-            resources.ApplyResources(this.label912, "label912");
-            this.label912.Name = "label912";
-            this.helpProvider1.SetShowHelp(this.label912, ((bool)(resources.GetObject("label912.ShowHelp"))));
-            // 
-            // label913
-            // 
-            resources.ApplyResources(this.label913, "label913");
-            this.label913.Name = "label913";
-            this.helpProvider1.SetShowHelp(this.label913, ((bool)(resources.GetObject("label913.ShowHelp"))));
-            // 
-            // label914
-            // 
-            resources.ApplyResources(this.label914, "label914");
-            this.label914.Name = "label914";
-            this.helpProvider1.SetShowHelp(this.label914, ((bool)(resources.GetObject("label914.ShowHelp"))));
-            // 
-            // label915
-            // 
-            resources.ApplyResources(this.label915, "label915");
-            this.label915.Name = "label915";
-            this.helpProvider1.SetShowHelp(this.label915, ((bool)(resources.GetObject("label915.ShowHelp"))));
-            // 
-            // label916
-            // 
-            resources.ApplyResources(this.label916, "label916");
-            this.label916.Name = "label916";
-            this.helpProvider1.SetShowHelp(this.label916, ((bool)(resources.GetObject("label916.ShowHelp"))));
-            // 
-            // button23
-            // 
-            resources.ApplyResources(this.button23, "button23");
-            this.button23.Name = "button23";
-            this.helpProvider1.SetShowHelp(this.button23, ((bool)(resources.GetObject("button23.ShowHelp"))));
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // panel29
-            // 
-            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel29.Controls.Add(this.checkBox35);
-            this.panel29.Controls.Add(this.comboBox72);
-            this.panel29.Controls.Add(this.numericUpDown125);
-            this.panel29.Controls.Add(this.numericUpDown126);
-            this.panel29.Controls.Add(this.numericUpDown127);
-            this.panel29.Controls.Add(this.numericUpDown128);
-            this.panel29.Controls.Add(this.comboBox73);
-            this.panel29.Controls.Add(this.numericUpDown129);
-            this.panel29.Controls.Add(this.numericUpDown130);
-            this.panel29.Controls.Add(this.numericUpDown131);
-            this.panel29.Controls.Add(this.numericUpDown132);
-            this.panel29.Controls.Add(this.comboBox74);
-            this.panel29.Controls.Add(this.numericUpDown133);
-            this.panel29.Controls.Add(this.numericUpDown134);
-            this.panel29.Controls.Add(this.label917);
-            this.panel29.Controls.Add(this.label918);
-            this.panel29.Controls.Add(this.label919);
-            this.panel29.Controls.Add(this.label920);
-            this.panel29.Controls.Add(this.label921);
-            this.panel29.Controls.Add(this.label922);
-            this.panel29.Controls.Add(this.label923);
-            this.panel29.Controls.Add(this.label924);
-            this.panel29.Controls.Add(this.label925);
-            this.panel29.Controls.Add(this.label926);
-            this.panel29.Controls.Add(this.label927);
-            this.panel29.Controls.Add(this.label928);
-            this.panel29.Controls.Add(this.label929);
-            this.panel29.Controls.Add(this.label930);
-            this.panel29.Controls.Add(this.label931);
-            this.panel29.Controls.Add(this.label932);
-            this.panel29.Controls.Add(this.label933);
-            resources.ApplyResources(this.panel29, "panel29");
-            this.panel29.Name = "panel29";
-            this.helpProvider1.SetShowHelp(this.panel29, ((bool)(resources.GetObject("panel29.ShowHelp"))));
-            // 
-            // checkBox35
-            // 
-            resources.ApplyResources(this.checkBox35, "checkBox35");
-            this.checkBox35.Name = "checkBox35";
-            this.helpProvider1.SetShowHelp(this.checkBox35, ((bool)(resources.GetObject("checkBox35.ShowHelp"))));
-            this.checkBox35.UseVisualStyleBackColor = true;
-            // 
-            // comboBox72
-            // 
-            this.comboBox72.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox72.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox72, "comboBox72");
-            this.comboBox72.FormattingEnabled = true;
-            this.comboBox72.Name = "comboBox72";
-            this.helpProvider1.SetShowHelp(this.comboBox72, ((bool)(resources.GetObject("comboBox72.ShowHelp"))));
-            // 
-            // numericUpDown125
-            // 
-            this.numericUpDown125.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown125, "numericUpDown125");
-            this.numericUpDown125.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown125.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown125.Name = "numericUpDown125";
-            this.helpProvider1.SetShowHelp(this.numericUpDown125, ((bool)(resources.GetObject("numericUpDown125.ShowHelp"))));
-            // 
-            // numericUpDown126
-            // 
-            this.numericUpDown126.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown126, "numericUpDown126");
-            this.numericUpDown126.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown126.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown126.Name = "numericUpDown126";
-            this.helpProvider1.SetShowHelp(this.numericUpDown126, ((bool)(resources.GetObject("numericUpDown126.ShowHelp"))));
-            // 
-            // numericUpDown127
-            // 
-            resources.ApplyResources(this.numericUpDown127, "numericUpDown127");
-            this.numericUpDown127.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown127.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown127.Name = "numericUpDown127";
-            this.helpProvider1.SetShowHelp(this.numericUpDown127, ((bool)(resources.GetObject("numericUpDown127.ShowHelp"))));
-            // 
-            // numericUpDown128
-            // 
-            resources.ApplyResources(this.numericUpDown128, "numericUpDown128");
-            this.numericUpDown128.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown128.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown128.Name = "numericUpDown128";
-            this.helpProvider1.SetShowHelp(this.numericUpDown128, ((bool)(resources.GetObject("numericUpDown128.ShowHelp"))));
-            // 
-            // comboBox73
-            // 
-            this.comboBox73.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox73.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox73, "comboBox73");
-            this.comboBox73.FormattingEnabled = true;
-            this.comboBox73.Name = "comboBox73";
-            this.helpProvider1.SetShowHelp(this.comboBox73, ((bool)(resources.GetObject("comboBox73.ShowHelp"))));
-            // 
-            // numericUpDown129
-            // 
-            this.numericUpDown129.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown129, "numericUpDown129");
-            this.numericUpDown129.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown129.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown129.Name = "numericUpDown129";
-            this.helpProvider1.SetShowHelp(this.numericUpDown129, ((bool)(resources.GetObject("numericUpDown129.ShowHelp"))));
-            // 
-            // numericUpDown130
-            // 
-            this.numericUpDown130.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown130, "numericUpDown130");
-            this.numericUpDown130.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown130.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown130.Name = "numericUpDown130";
-            this.helpProvider1.SetShowHelp(this.numericUpDown130, ((bool)(resources.GetObject("numericUpDown130.ShowHelp"))));
-            // 
-            // numericUpDown131
-            // 
-            resources.ApplyResources(this.numericUpDown131, "numericUpDown131");
-            this.numericUpDown131.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown131.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown131.Name = "numericUpDown131";
-            this.helpProvider1.SetShowHelp(this.numericUpDown131, ((bool)(resources.GetObject("numericUpDown131.ShowHelp"))));
-            // 
-            // numericUpDown132
-            // 
-            resources.ApplyResources(this.numericUpDown132, "numericUpDown132");
-            this.numericUpDown132.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown132.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown132.Name = "numericUpDown132";
-            this.helpProvider1.SetShowHelp(this.numericUpDown132, ((bool)(resources.GetObject("numericUpDown132.ShowHelp"))));
-            this.numericUpDown132.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // comboBox74
-            // 
-            this.comboBox74.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox74.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox74, "comboBox74");
-            this.comboBox74.FormattingEnabled = true;
-            this.comboBox74.Name = "comboBox74";
-            this.helpProvider1.SetShowHelp(this.comboBox74, ((bool)(resources.GetObject("comboBox74.ShowHelp"))));
-            // 
-            // numericUpDown133
-            // 
-            this.numericUpDown133.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown133, "numericUpDown133");
-            this.numericUpDown133.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown133.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown133.Name = "numericUpDown133";
-            this.helpProvider1.SetShowHelp(this.numericUpDown133, ((bool)(resources.GetObject("numericUpDown133.ShowHelp"))));
-            // 
-            // numericUpDown134
-            // 
-            this.numericUpDown134.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown134, "numericUpDown134");
-            this.numericUpDown134.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown134.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown134.Name = "numericUpDown134";
-            this.helpProvider1.SetShowHelp(this.numericUpDown134, ((bool)(resources.GetObject("numericUpDown134.ShowHelp"))));
-            // 
-            // label917
-            // 
-            resources.ApplyResources(this.label917, "label917");
-            this.label917.Name = "label917";
-            this.helpProvider1.SetShowHelp(this.label917, ((bool)(resources.GetObject("label917.ShowHelp"))));
-            // 
-            // label918
-            // 
-            resources.ApplyResources(this.label918, "label918");
-            this.label918.Name = "label918";
-            this.helpProvider1.SetShowHelp(this.label918, ((bool)(resources.GetObject("label918.ShowHelp"))));
-            // 
-            // label919
-            // 
-            resources.ApplyResources(this.label919, "label919");
-            this.label919.Name = "label919";
-            this.helpProvider1.SetShowHelp(this.label919, ((bool)(resources.GetObject("label919.ShowHelp"))));
-            // 
-            // label920
-            // 
-            resources.ApplyResources(this.label920, "label920");
-            this.label920.Name = "label920";
-            this.helpProvider1.SetShowHelp(this.label920, ((bool)(resources.GetObject("label920.ShowHelp"))));
-            // 
-            // label921
-            // 
-            resources.ApplyResources(this.label921, "label921");
-            this.label921.Name = "label921";
-            this.helpProvider1.SetShowHelp(this.label921, ((bool)(resources.GetObject("label921.ShowHelp"))));
-            // 
-            // label922
-            // 
-            resources.ApplyResources(this.label922, "label922");
-            this.label922.Name = "label922";
-            this.helpProvider1.SetShowHelp(this.label922, ((bool)(resources.GetObject("label922.ShowHelp"))));
-            // 
-            // label923
-            // 
-            resources.ApplyResources(this.label923, "label923");
-            this.label923.Name = "label923";
-            this.helpProvider1.SetShowHelp(this.label923, ((bool)(resources.GetObject("label923.ShowHelp"))));
-            // 
-            // label924
-            // 
-            resources.ApplyResources(this.label924, "label924");
-            this.label924.Name = "label924";
-            this.helpProvider1.SetShowHelp(this.label924, ((bool)(resources.GetObject("label924.ShowHelp"))));
-            // 
-            // label925
-            // 
-            resources.ApplyResources(this.label925, "label925");
-            this.label925.Name = "label925";
-            this.helpProvider1.SetShowHelp(this.label925, ((bool)(resources.GetObject("label925.ShowHelp"))));
-            // 
-            // label926
-            // 
-            resources.ApplyResources(this.label926, "label926");
-            this.label926.Name = "label926";
-            this.helpProvider1.SetShowHelp(this.label926, ((bool)(resources.GetObject("label926.ShowHelp"))));
-            // 
-            // label927
-            // 
-            resources.ApplyResources(this.label927, "label927");
-            this.label927.Name = "label927";
-            this.helpProvider1.SetShowHelp(this.label927, ((bool)(resources.GetObject("label927.ShowHelp"))));
-            // 
-            // label928
-            // 
-            resources.ApplyResources(this.label928, "label928");
-            this.label928.Name = "label928";
-            this.helpProvider1.SetShowHelp(this.label928, ((bool)(resources.GetObject("label928.ShowHelp"))));
-            // 
-            // label929
-            // 
-            resources.ApplyResources(this.label929, "label929");
-            this.label929.Name = "label929";
-            this.helpProvider1.SetShowHelp(this.label929, ((bool)(resources.GetObject("label929.ShowHelp"))));
-            // 
-            // label930
-            // 
-            resources.ApplyResources(this.label930, "label930");
-            this.label930.Name = "label930";
-            this.helpProvider1.SetShowHelp(this.label930, ((bool)(resources.GetObject("label930.ShowHelp"))));
-            // 
-            // label931
-            // 
-            resources.ApplyResources(this.label931, "label931");
-            this.label931.Name = "label931";
-            this.helpProvider1.SetShowHelp(this.label931, ((bool)(resources.GetObject("label931.ShowHelp"))));
-            // 
-            // label932
-            // 
-            resources.ApplyResources(this.label932, "label932");
-            this.label932.Name = "label932";
-            this.helpProvider1.SetShowHelp(this.label932, ((bool)(resources.GetObject("label932.ShowHelp"))));
-            // 
-            // label933
-            // 
-            resources.ApplyResources(this.label933, "label933");
-            this.label933.Name = "label933";
-            this.helpProvider1.SetShowHelp(this.label933, ((bool)(resources.GetObject("label933.ShowHelp"))));
-            // 
-            // button24
-            // 
-            resources.ApplyResources(this.button24, "button24");
-            this.button24.Name = "button24";
-            this.helpProvider1.SetShowHelp(this.button24, ((bool)(resources.GetObject("button24.ShowHelp"))));
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // panel30
-            // 
-            this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel30.Controls.Add(this.checkBox36);
-            this.panel30.Controls.Add(this.comboBox75);
-            this.panel30.Controls.Add(this.comboBox76);
-            this.panel30.Controls.Add(this.comboBox77);
-            this.panel30.Controls.Add(this.numericUpDown135);
-            this.panel30.Controls.Add(this.numericUpDown136);
-            this.panel30.Controls.Add(this.numericUpDown137);
-            this.panel30.Controls.Add(this.numericUpDown138);
-            this.panel30.Controls.Add(this.comboBox78);
-            this.panel30.Controls.Add(this.numericUpDown139);
-            this.panel30.Controls.Add(this.checkBox37);
-            this.panel30.Controls.Add(this.comboBox79);
-            this.panel30.Controls.Add(this.label934);
-            this.panel30.Controls.Add(this.label935);
-            this.panel30.Controls.Add(this.label936);
-            this.panel30.Controls.Add(this.label937);
-            this.panel30.Controls.Add(this.label938);
-            this.panel30.Controls.Add(this.label939);
-            this.panel30.Controls.Add(this.label940);
-            this.panel30.Controls.Add(this.label941);
-            this.panel30.Controls.Add(this.label942);
-            this.panel30.Controls.Add(this.label943);
-            this.panel30.Controls.Add(this.label944);
-            this.panel30.Controls.Add(this.label945);
-            resources.ApplyResources(this.panel30, "panel30");
-            this.panel30.Name = "panel30";
-            this.helpProvider1.SetShowHelp(this.panel30, ((bool)(resources.GetObject("panel30.ShowHelp"))));
-            // 
-            // checkBox36
-            // 
-            resources.ApplyResources(this.checkBox36, "checkBox36");
-            this.checkBox36.Name = "checkBox36";
-            this.helpProvider1.SetShowHelp(this.checkBox36, ((bool)(resources.GetObject("checkBox36.ShowHelp"))));
-            this.checkBox36.UseVisualStyleBackColor = true;
-            // 
-            // comboBox75
-            // 
-            this.comboBox75.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox75.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox75, "comboBox75");
-            this.comboBox75.FormattingEnabled = true;
-            this.comboBox75.Name = "comboBox75";
-            this.helpProvider1.SetShowHelp(this.comboBox75, ((bool)(resources.GetObject("comboBox75.ShowHelp"))));
-            // 
-            // comboBox76
-            // 
-            this.comboBox76.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox76.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox76, "comboBox76");
-            this.comboBox76.FormattingEnabled = true;
-            this.comboBox76.Name = "comboBox76";
-            this.helpProvider1.SetShowHelp(this.comboBox76, ((bool)(resources.GetObject("comboBox76.ShowHelp"))));
-            // 
-            // comboBox77
-            // 
-            this.comboBox77.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox77.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox77, "comboBox77");
-            this.comboBox77.FormattingEnabled = true;
-            this.comboBox77.Name = "comboBox77";
-            this.helpProvider1.SetShowHelp(this.comboBox77, ((bool)(resources.GetObject("comboBox77.ShowHelp"))));
-            // 
-            // numericUpDown135
-            // 
-            this.numericUpDown135.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown135, "numericUpDown135");
-            this.numericUpDown135.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown135.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown135.Name = "numericUpDown135";
-            this.helpProvider1.SetShowHelp(this.numericUpDown135, ((bool)(resources.GetObject("numericUpDown135.ShowHelp"))));
-            // 
-            // numericUpDown136
-            // 
-            this.numericUpDown136.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown136, "numericUpDown136");
-            this.numericUpDown136.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown136.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown136.Name = "numericUpDown136";
-            this.helpProvider1.SetShowHelp(this.numericUpDown136, ((bool)(resources.GetObject("numericUpDown136.ShowHelp"))));
-            // 
-            // numericUpDown137
-            // 
-            this.numericUpDown137.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown137, "numericUpDown137");
-            this.numericUpDown137.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown137.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown137.Name = "numericUpDown137";
-            this.helpProvider1.SetShowHelp(this.numericUpDown137, ((bool)(resources.GetObject("numericUpDown137.ShowHelp"))));
-            // 
-            // numericUpDown138
-            // 
-            this.numericUpDown138.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown138, "numericUpDown138");
-            this.numericUpDown138.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown138.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown138.Name = "numericUpDown138";
-            this.helpProvider1.SetShowHelp(this.numericUpDown138, ((bool)(resources.GetObject("numericUpDown138.ShowHelp"))));
-            // 
-            // comboBox78
-            // 
-            this.comboBox78.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox78, "comboBox78");
-            this.comboBox78.FormattingEnabled = true;
-            this.comboBox78.Items.AddRange(new object[] {
-            resources.GetString("comboBox78.Items"),
-            resources.GetString("comboBox78.Items1"),
-            resources.GetString("comboBox78.Items2")});
-            this.comboBox78.Name = "comboBox78";
-            this.helpProvider1.SetShowHelp(this.comboBox78, ((bool)(resources.GetObject("comboBox78.ShowHelp"))));
-            // 
-            // numericUpDown139
-            // 
-            resources.ApplyResources(this.numericUpDown139, "numericUpDown139");
-            this.numericUpDown139.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown139.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown139.Name = "numericUpDown139";
-            this.helpProvider1.SetShowHelp(this.numericUpDown139, ((bool)(resources.GetObject("numericUpDown139.ShowHelp"))));
-            // 
-            // checkBox37
-            // 
-            resources.ApplyResources(this.checkBox37, "checkBox37");
-            this.checkBox37.Name = "checkBox37";
-            this.helpProvider1.SetShowHelp(this.checkBox37, ((bool)(resources.GetObject("checkBox37.ShowHelp"))));
-            this.checkBox37.UseVisualStyleBackColor = true;
-            // 
-            // comboBox79
-            // 
-            this.comboBox79.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox79.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox79, "comboBox79");
-            this.comboBox79.FormattingEnabled = true;
-            this.comboBox79.Name = "comboBox79";
-            this.helpProvider1.SetShowHelp(this.comboBox79, ((bool)(resources.GetObject("comboBox79.ShowHelp"))));
-            // 
-            // label934
-            // 
-            resources.ApplyResources(this.label934, "label934");
-            this.label934.Name = "label934";
-            this.helpProvider1.SetShowHelp(this.label934, ((bool)(resources.GetObject("label934.ShowHelp"))));
-            // 
-            // label935
-            // 
-            resources.ApplyResources(this.label935, "label935");
-            this.label935.Name = "label935";
-            this.helpProvider1.SetShowHelp(this.label935, ((bool)(resources.GetObject("label935.ShowHelp"))));
-            // 
-            // label936
-            // 
-            resources.ApplyResources(this.label936, "label936");
-            this.label936.Name = "label936";
-            this.helpProvider1.SetShowHelp(this.label936, ((bool)(resources.GetObject("label936.ShowHelp"))));
-            // 
-            // label937
-            // 
-            resources.ApplyResources(this.label937, "label937");
-            this.label937.Name = "label937";
-            this.helpProvider1.SetShowHelp(this.label937, ((bool)(resources.GetObject("label937.ShowHelp"))));
-            // 
-            // label938
-            // 
-            resources.ApplyResources(this.label938, "label938");
-            this.label938.Name = "label938";
-            this.helpProvider1.SetShowHelp(this.label938, ((bool)(resources.GetObject("label938.ShowHelp"))));
-            // 
-            // label939
-            // 
-            resources.ApplyResources(this.label939, "label939");
-            this.label939.Name = "label939";
-            this.helpProvider1.SetShowHelp(this.label939, ((bool)(resources.GetObject("label939.ShowHelp"))));
-            // 
-            // label940
-            // 
-            resources.ApplyResources(this.label940, "label940");
-            this.label940.Name = "label940";
-            this.helpProvider1.SetShowHelp(this.label940, ((bool)(resources.GetObject("label940.ShowHelp"))));
-            // 
-            // label941
-            // 
-            resources.ApplyResources(this.label941, "label941");
-            this.label941.Name = "label941";
-            this.helpProvider1.SetShowHelp(this.label941, ((bool)(resources.GetObject("label941.ShowHelp"))));
-            // 
-            // label942
-            // 
-            resources.ApplyResources(this.label942, "label942");
-            this.label942.Name = "label942";
-            this.helpProvider1.SetShowHelp(this.label942, ((bool)(resources.GetObject("label942.ShowHelp"))));
-            // 
-            // label943
-            // 
-            resources.ApplyResources(this.label943, "label943");
-            this.label943.Name = "label943";
-            this.helpProvider1.SetShowHelp(this.label943, ((bool)(resources.GetObject("label943.ShowHelp"))));
-            // 
-            // label944
-            // 
-            resources.ApplyResources(this.label944, "label944");
-            this.label944.Name = "label944";
-            this.helpProvider1.SetShowHelp(this.label944, ((bool)(resources.GetObject("label944.ShowHelp"))));
-            // 
-            // label945
-            // 
-            resources.ApplyResources(this.label945, "label945");
-            this.label945.Name = "label945";
-            this.helpProvider1.SetShowHelp(this.label945, ((bool)(resources.GetObject("label945.ShowHelp"))));
-            // 
-            // button25
-            // 
-            resources.ApplyResources(this.button25, "button25");
-            this.button25.Name = "button25";
-            this.helpProvider1.SetShowHelp(this.button25, ((bool)(resources.GetObject("button25.ShowHelp"))));
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // panel31
-            // 
-            this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel31.Controls.Add(this.checkBox38);
-            this.panel31.Controls.Add(this.comboBox80);
-            this.panel31.Controls.Add(this.numericUpDown140);
-            this.panel31.Controls.Add(this.numericUpDown141);
-            this.panel31.Controls.Add(this.numericUpDown142);
-            this.panel31.Controls.Add(this.label946);
-            this.panel31.Controls.Add(this.label947);
-            this.panel31.Controls.Add(this.label948);
-            this.panel31.Controls.Add(this.label949);
-            this.panel31.Controls.Add(this.label950);
-            resources.ApplyResources(this.panel31, "panel31");
-            this.panel31.Name = "panel31";
-            this.helpProvider1.SetShowHelp(this.panel31, ((bool)(resources.GetObject("panel31.ShowHelp"))));
-            // 
-            // checkBox38
-            // 
-            resources.ApplyResources(this.checkBox38, "checkBox38");
-            this.checkBox38.Name = "checkBox38";
-            this.helpProvider1.SetShowHelp(this.checkBox38, ((bool)(resources.GetObject("checkBox38.ShowHelp"))));
-            this.checkBox38.UseVisualStyleBackColor = true;
-            // 
-            // comboBox80
-            // 
-            this.comboBox80.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox80.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox80, "comboBox80");
-            this.comboBox80.FormattingEnabled = true;
-            this.comboBox80.Name = "comboBox80";
-            this.helpProvider1.SetShowHelp(this.comboBox80, ((bool)(resources.GetObject("comboBox80.ShowHelp"))));
-            // 
-            // numericUpDown140
-            // 
-            this.numericUpDown140.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown140, "numericUpDown140");
-            this.numericUpDown140.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown140.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown140.Name = "numericUpDown140";
-            this.helpProvider1.SetShowHelp(this.numericUpDown140, ((bool)(resources.GetObject("numericUpDown140.ShowHelp"))));
-            // 
-            // numericUpDown141
-            // 
-            this.numericUpDown141.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown141, "numericUpDown141");
-            this.numericUpDown141.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown141.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown141.Name = "numericUpDown141";
-            this.helpProvider1.SetShowHelp(this.numericUpDown141, ((bool)(resources.GetObject("numericUpDown141.ShowHelp"))));
-            // 
-            // numericUpDown142
-            // 
-            this.numericUpDown142.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown142, "numericUpDown142");
-            this.numericUpDown142.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown142.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown142.Name = "numericUpDown142";
-            this.helpProvider1.SetShowHelp(this.numericUpDown142, ((bool)(resources.GetObject("numericUpDown142.ShowHelp"))));
-            this.numericUpDown142.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label946
-            // 
-            resources.ApplyResources(this.label946, "label946");
-            this.label946.Name = "label946";
-            this.helpProvider1.SetShowHelp(this.label946, ((bool)(resources.GetObject("label946.ShowHelp"))));
-            // 
-            // label947
-            // 
-            resources.ApplyResources(this.label947, "label947");
-            this.label947.Name = "label947";
-            this.helpProvider1.SetShowHelp(this.label947, ((bool)(resources.GetObject("label947.ShowHelp"))));
-            // 
-            // label948
-            // 
-            resources.ApplyResources(this.label948, "label948");
-            this.label948.Name = "label948";
-            this.helpProvider1.SetShowHelp(this.label948, ((bool)(resources.GetObject("label948.ShowHelp"))));
-            // 
-            // label949
-            // 
-            resources.ApplyResources(this.label949, "label949");
-            this.label949.Name = "label949";
-            this.helpProvider1.SetShowHelp(this.label949, ((bool)(resources.GetObject("label949.ShowHelp"))));
-            // 
-            // label950
-            // 
-            resources.ApplyResources(this.label950, "label950");
-            this.label950.Name = "label950";
-            this.helpProvider1.SetShowHelp(this.label950, ((bool)(resources.GetObject("label950.ShowHelp"))));
-            // 
-            // button26
-            // 
-            resources.ApplyResources(this.button26, "button26");
-            this.button26.Name = "button26";
-            this.helpProvider1.SetShowHelp(this.button26, ((bool)(resources.GetObject("button26.ShowHelp"))));
-            this.button26.UseVisualStyleBackColor = true;
             // 
             // tabPage_HeartRate_AOD
             // 
             resources.ApplyResources(this.tabPage_HeartRate_AOD, "tabPage_HeartRate_AOD");
             this.tabPage_HeartRate_AOD.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_HeartRate_AOD.Controls.Add(this.panel32);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.panel33);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.button27);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.panel34);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.button28);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.panel35);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.button29);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.panel36);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.button30);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.panel37);
-            this.tabPage_HeartRate_AOD.Controls.Add(this.button31);
             this.tabPage_HeartRate_AOD.Name = "tabPage_HeartRate_AOD";
             this.helpProvider1.SetShowHelp(this.tabPage_HeartRate_AOD, ((bool)(resources.GetObject("tabPage_HeartRate_AOD.ShowHelp"))));
-            // 
-            // panel32
-            // 
-            resources.ApplyResources(this.panel32, "panel32");
-            this.panel32.Name = "panel32";
-            this.helpProvider1.SetShowHelp(this.panel32, ((bool)(resources.GetObject("panel32.ShowHelp"))));
-            // 
-            // panel33
-            // 
-            this.panel33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel33.Controls.Add(this.checkBox39);
-            this.panel33.Controls.Add(this.radioButton11);
-            this.panel33.Controls.Add(this.radioButton12);
-            this.panel33.Controls.Add(this.comboBox81);
-            this.panel33.Controls.Add(this.comboBox82);
-            this.panel33.Controls.Add(this.comboBox83);
-            this.panel33.Controls.Add(this.comboBox84);
-            this.panel33.Controls.Add(this.numericUpDown143);
-            this.panel33.Controls.Add(this.numericUpDown144);
-            this.panel33.Controls.Add(this.numericUpDown145);
-            this.panel33.Controls.Add(this.numericUpDown146);
-            this.panel33.Controls.Add(this.label951);
-            this.panel33.Controls.Add(this.label952);
-            this.panel33.Controls.Add(this.label953);
-            this.panel33.Controls.Add(this.label954);
-            this.panel33.Controls.Add(this.label955);
-            this.panel33.Controls.Add(this.label956);
-            this.panel33.Controls.Add(this.label957);
-            resources.ApplyResources(this.panel33, "panel33");
-            this.panel33.Name = "panel33";
-            this.helpProvider1.SetShowHelp(this.panel33, ((bool)(resources.GetObject("panel33.ShowHelp"))));
-            // 
-            // checkBox39
-            // 
-            resources.ApplyResources(this.checkBox39, "checkBox39");
-            this.checkBox39.Name = "checkBox39";
-            this.helpProvider1.SetShowHelp(this.checkBox39, ((bool)(resources.GetObject("checkBox39.ShowHelp"))));
-            this.checkBox39.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            resources.ApplyResources(this.radioButton11, "radioButton11");
-            this.radioButton11.Checked = true;
-            this.radioButton11.Name = "radioButton11";
-            this.helpProvider1.SetShowHelp(this.radioButton11, ((bool)(resources.GetObject("radioButton11.ShowHelp"))));
-            this.radioButton11.TabStop = true;
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            resources.ApplyResources(this.radioButton12, "radioButton12");
-            this.radioButton12.Name = "radioButton12";
-            this.helpProvider1.SetShowHelp(this.radioButton12, ((bool)(resources.GetObject("radioButton12.ShowHelp"))));
-            this.radioButton12.TabStop = true;
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // comboBox81
-            // 
-            this.comboBox81.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox81.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox81, "comboBox81");
-            this.comboBox81.FormattingEnabled = true;
-            this.comboBox81.Name = "comboBox81";
-            this.helpProvider1.SetShowHelp(this.comboBox81, ((bool)(resources.GetObject("comboBox81.ShowHelp"))));
-            // 
-            // comboBox82
-            // 
-            this.comboBox82.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox82.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox82, "comboBox82");
-            this.comboBox82.FormattingEnabled = true;
-            this.comboBox82.Name = "comboBox82";
-            this.helpProvider1.SetShowHelp(this.comboBox82, ((bool)(resources.GetObject("comboBox82.ShowHelp"))));
-            // 
-            // comboBox83
-            // 
-            this.comboBox83.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox83.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox83, "comboBox83");
-            this.comboBox83.FormattingEnabled = true;
-            this.comboBox83.Name = "comboBox83";
-            this.helpProvider1.SetShowHelp(this.comboBox83, ((bool)(resources.GetObject("comboBox83.ShowHelp"))));
-            // 
-            // comboBox84
-            // 
-            this.comboBox84.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox84.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox84, "comboBox84");
-            this.comboBox84.FormattingEnabled = true;
-            this.comboBox84.Name = "comboBox84";
-            this.helpProvider1.SetShowHelp(this.comboBox84, ((bool)(resources.GetObject("comboBox84.ShowHelp"))));
-            // 
-            // numericUpDown143
-            // 
-            this.numericUpDown143.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown143, "numericUpDown143");
-            this.numericUpDown143.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown143.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown143.Name = "numericUpDown143";
-            this.helpProvider1.SetShowHelp(this.numericUpDown143, ((bool)(resources.GetObject("numericUpDown143.ShowHelp"))));
-            // 
-            // numericUpDown144
-            // 
-            this.numericUpDown144.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown144, "numericUpDown144");
-            this.numericUpDown144.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown144.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown144.Name = "numericUpDown144";
-            this.helpProvider1.SetShowHelp(this.numericUpDown144, ((bool)(resources.GetObject("numericUpDown144.ShowHelp"))));
-            // 
-            // numericUpDown145
-            // 
-            resources.ApplyResources(this.numericUpDown145, "numericUpDown145");
-            this.numericUpDown145.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown145.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown145.Name = "numericUpDown145";
-            this.helpProvider1.SetShowHelp(this.numericUpDown145, ((bool)(resources.GetObject("numericUpDown145.ShowHelp"))));
-            this.numericUpDown145.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown146
-            // 
-            resources.ApplyResources(this.numericUpDown146, "numericUpDown146");
-            this.numericUpDown146.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown146.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown146.Name = "numericUpDown146";
-            this.helpProvider1.SetShowHelp(this.numericUpDown146, ((bool)(resources.GetObject("numericUpDown146.ShowHelp"))));
-            this.numericUpDown146.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label951
-            // 
-            resources.ApplyResources(this.label951, "label951");
-            this.label951.Name = "label951";
-            this.helpProvider1.SetShowHelp(this.label951, ((bool)(resources.GetObject("label951.ShowHelp"))));
-            // 
-            // label952
-            // 
-            resources.ApplyResources(this.label952, "label952");
-            this.label952.Name = "label952";
-            this.helpProvider1.SetShowHelp(this.label952, ((bool)(resources.GetObject("label952.ShowHelp"))));
-            // 
-            // label953
-            // 
-            resources.ApplyResources(this.label953, "label953");
-            this.label953.Name = "label953";
-            this.helpProvider1.SetShowHelp(this.label953, ((bool)(resources.GetObject("label953.ShowHelp"))));
-            // 
-            // label954
-            // 
-            resources.ApplyResources(this.label954, "label954");
-            this.label954.Name = "label954";
-            this.helpProvider1.SetShowHelp(this.label954, ((bool)(resources.GetObject("label954.ShowHelp"))));
-            // 
-            // label955
-            // 
-            resources.ApplyResources(this.label955, "label955");
-            this.label955.Name = "label955";
-            this.helpProvider1.SetShowHelp(this.label955, ((bool)(resources.GetObject("label955.ShowHelp"))));
-            // 
-            // label956
-            // 
-            resources.ApplyResources(this.label956, "label956");
-            this.label956.Name = "label956";
-            this.helpProvider1.SetShowHelp(this.label956, ((bool)(resources.GetObject("label956.ShowHelp"))));
-            // 
-            // label957
-            // 
-            resources.ApplyResources(this.label957, "label957");
-            this.label957.Name = "label957";
-            this.helpProvider1.SetShowHelp(this.label957, ((bool)(resources.GetObject("label957.ShowHelp"))));
-            // 
-            // button27
-            // 
-            resources.ApplyResources(this.button27, "button27");
-            this.button27.Name = "button27";
-            this.helpProvider1.SetShowHelp(this.button27, ((bool)(resources.GetObject("button27.ShowHelp"))));
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // panel34
-            // 
-            this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel34.Controls.Add(this.checkBox40);
-            this.panel34.Controls.Add(this.radioButton13);
-            this.panel34.Controls.Add(this.radioButton14);
-            this.panel34.Controls.Add(this.comboBox85);
-            this.panel34.Controls.Add(this.comboBox86);
-            this.panel34.Controls.Add(this.comboBox87);
-            this.panel34.Controls.Add(this.comboBox88);
-            this.panel34.Controls.Add(this.numericUpDown147);
-            this.panel34.Controls.Add(this.numericUpDown148);
-            this.panel34.Controls.Add(this.numericUpDown149);
-            this.panel34.Controls.Add(this.numericUpDown150);
-            this.panel34.Controls.Add(this.numericUpDown151);
-            this.panel34.Controls.Add(this.numericUpDown152);
-            this.panel34.Controls.Add(this.label958);
-            this.panel34.Controls.Add(this.label959);
-            this.panel34.Controls.Add(this.label960);
-            this.panel34.Controls.Add(this.label961);
-            this.panel34.Controls.Add(this.label962);
-            this.panel34.Controls.Add(this.label963);
-            this.panel34.Controls.Add(this.label964);
-            this.panel34.Controls.Add(this.label965);
-            this.panel34.Controls.Add(this.label966);
-            resources.ApplyResources(this.panel34, "panel34");
-            this.panel34.Name = "panel34";
-            this.helpProvider1.SetShowHelp(this.panel34, ((bool)(resources.GetObject("panel34.ShowHelp"))));
-            // 
-            // checkBox40
-            // 
-            resources.ApplyResources(this.checkBox40, "checkBox40");
-            this.checkBox40.Name = "checkBox40";
-            this.helpProvider1.SetShowHelp(this.checkBox40, ((bool)(resources.GetObject("checkBox40.ShowHelp"))));
-            this.checkBox40.UseVisualStyleBackColor = true;
-            // 
-            // radioButton13
-            // 
-            resources.ApplyResources(this.radioButton13, "radioButton13");
-            this.radioButton13.Checked = true;
-            this.radioButton13.Name = "radioButton13";
-            this.helpProvider1.SetShowHelp(this.radioButton13, ((bool)(resources.GetObject("radioButton13.ShowHelp"))));
-            this.radioButton13.TabStop = true;
-            this.radioButton13.UseVisualStyleBackColor = true;
-            // 
-            // radioButton14
-            // 
-            resources.ApplyResources(this.radioButton14, "radioButton14");
-            this.radioButton14.Name = "radioButton14";
-            this.helpProvider1.SetShowHelp(this.radioButton14, ((bool)(resources.GetObject("radioButton14.ShowHelp"))));
-            this.radioButton14.TabStop = true;
-            this.radioButton14.UseVisualStyleBackColor = true;
-            // 
-            // comboBox85
-            // 
-            this.comboBox85.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox85.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox85, "comboBox85");
-            this.comboBox85.FormattingEnabled = true;
-            this.comboBox85.Name = "comboBox85";
-            this.helpProvider1.SetShowHelp(this.comboBox85, ((bool)(resources.GetObject("comboBox85.ShowHelp"))));
-            // 
-            // comboBox86
-            // 
-            this.comboBox86.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox86.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox86, "comboBox86");
-            this.comboBox86.FormattingEnabled = true;
-            this.comboBox86.Name = "comboBox86";
-            this.helpProvider1.SetShowHelp(this.comboBox86, ((bool)(resources.GetObject("comboBox86.ShowHelp"))));
-            // 
-            // comboBox87
-            // 
-            this.comboBox87.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox87, "comboBox87");
-            this.comboBox87.FormattingEnabled = true;
-            this.comboBox87.Items.AddRange(new object[] {
-            resources.GetString("comboBox87.Items"),
-            resources.GetString("comboBox87.Items1"),
-            resources.GetString("comboBox87.Items2")});
-            this.comboBox87.Name = "comboBox87";
-            this.helpProvider1.SetShowHelp(this.comboBox87, ((bool)(resources.GetObject("comboBox87.ShowHelp"))));
-            // 
-            // comboBox88
-            // 
-            this.comboBox88.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox88.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox88, "comboBox88");
-            this.comboBox88.FormattingEnabled = true;
-            this.comboBox88.Name = "comboBox88";
-            this.helpProvider1.SetShowHelp(this.comboBox88, ((bool)(resources.GetObject("comboBox88.ShowHelp"))));
-            // 
-            // numericUpDown147
-            // 
-            this.numericUpDown147.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown147, "numericUpDown147");
-            this.numericUpDown147.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown147.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown147.Name = "numericUpDown147";
-            this.helpProvider1.SetShowHelp(this.numericUpDown147, ((bool)(resources.GetObject("numericUpDown147.ShowHelp"))));
-            // 
-            // numericUpDown148
-            // 
-            this.numericUpDown148.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown148, "numericUpDown148");
-            this.numericUpDown148.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown148.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown148.Name = "numericUpDown148";
-            this.helpProvider1.SetShowHelp(this.numericUpDown148, ((bool)(resources.GetObject("numericUpDown148.ShowHelp"))));
-            // 
-            // numericUpDown149
-            // 
-            resources.ApplyResources(this.numericUpDown149, "numericUpDown149");
-            this.numericUpDown149.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown149.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown149.Name = "numericUpDown149";
-            this.helpProvider1.SetShowHelp(this.numericUpDown149, ((bool)(resources.GetObject("numericUpDown149.ShowHelp"))));
-            this.numericUpDown149.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown150
-            // 
-            resources.ApplyResources(this.numericUpDown150, "numericUpDown150");
-            this.numericUpDown150.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown150.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown150.Name = "numericUpDown150";
-            this.helpProvider1.SetShowHelp(this.numericUpDown150, ((bool)(resources.GetObject("numericUpDown150.ShowHelp"))));
-            this.numericUpDown150.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown151
-            // 
-            resources.ApplyResources(this.numericUpDown151, "numericUpDown151");
-            this.numericUpDown151.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown151.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown151.Name = "numericUpDown151";
-            this.helpProvider1.SetShowHelp(this.numericUpDown151, ((bool)(resources.GetObject("numericUpDown151.ShowHelp"))));
-            // 
-            // numericUpDown152
-            // 
-            resources.ApplyResources(this.numericUpDown152, "numericUpDown152");
-            this.numericUpDown152.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown152.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown152.Name = "numericUpDown152";
-            this.helpProvider1.SetShowHelp(this.numericUpDown152, ((bool)(resources.GetObject("numericUpDown152.ShowHelp"))));
-            this.numericUpDown152.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // label958
-            // 
-            resources.ApplyResources(this.label958, "label958");
-            this.label958.Name = "label958";
-            this.helpProvider1.SetShowHelp(this.label958, ((bool)(resources.GetObject("label958.ShowHelp"))));
-            // 
-            // label959
-            // 
-            resources.ApplyResources(this.label959, "label959");
-            this.label959.Name = "label959";
-            this.helpProvider1.SetShowHelp(this.label959, ((bool)(resources.GetObject("label959.ShowHelp"))));
-            // 
-            // label960
-            // 
-            resources.ApplyResources(this.label960, "label960");
-            this.label960.Name = "label960";
-            this.helpProvider1.SetShowHelp(this.label960, ((bool)(resources.GetObject("label960.ShowHelp"))));
-            // 
-            // label961
-            // 
-            resources.ApplyResources(this.label961, "label961");
-            this.label961.Name = "label961";
-            this.helpProvider1.SetShowHelp(this.label961, ((bool)(resources.GetObject("label961.ShowHelp"))));
-            // 
-            // label962
-            // 
-            resources.ApplyResources(this.label962, "label962");
-            this.label962.Name = "label962";
-            this.helpProvider1.SetShowHelp(this.label962, ((bool)(resources.GetObject("label962.ShowHelp"))));
-            // 
-            // label963
-            // 
-            resources.ApplyResources(this.label963, "label963");
-            this.label963.Name = "label963";
-            this.helpProvider1.SetShowHelp(this.label963, ((bool)(resources.GetObject("label963.ShowHelp"))));
-            // 
-            // label964
-            // 
-            resources.ApplyResources(this.label964, "label964");
-            this.label964.Name = "label964";
-            this.helpProvider1.SetShowHelp(this.label964, ((bool)(resources.GetObject("label964.ShowHelp"))));
-            // 
-            // label965
-            // 
-            resources.ApplyResources(this.label965, "label965");
-            this.label965.Name = "label965";
-            this.helpProvider1.SetShowHelp(this.label965, ((bool)(resources.GetObject("label965.ShowHelp"))));
-            // 
-            // label966
-            // 
-            resources.ApplyResources(this.label966, "label966");
-            this.label966.Name = "label966";
-            this.helpProvider1.SetShowHelp(this.label966, ((bool)(resources.GetObject("label966.ShowHelp"))));
-            // 
-            // button28
-            // 
-            resources.ApplyResources(this.button28, "button28");
-            this.button28.Name = "button28";
-            this.helpProvider1.SetShowHelp(this.button28, ((bool)(resources.GetObject("button28.ShowHelp"))));
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // panel35
-            // 
-            this.panel35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel35.Controls.Add(this.checkBox41);
-            this.panel35.Controls.Add(this.comboBox89);
-            this.panel35.Controls.Add(this.numericUpDown153);
-            this.panel35.Controls.Add(this.numericUpDown154);
-            this.panel35.Controls.Add(this.numericUpDown155);
-            this.panel35.Controls.Add(this.numericUpDown156);
-            this.panel35.Controls.Add(this.comboBox90);
-            this.panel35.Controls.Add(this.numericUpDown157);
-            this.panel35.Controls.Add(this.numericUpDown158);
-            this.panel35.Controls.Add(this.numericUpDown159);
-            this.panel35.Controls.Add(this.numericUpDown160);
-            this.panel35.Controls.Add(this.comboBox91);
-            this.panel35.Controls.Add(this.numericUpDown161);
-            this.panel35.Controls.Add(this.numericUpDown162);
-            this.panel35.Controls.Add(this.label967);
-            this.panel35.Controls.Add(this.label968);
-            this.panel35.Controls.Add(this.label969);
-            this.panel35.Controls.Add(this.label970);
-            this.panel35.Controls.Add(this.label971);
-            this.panel35.Controls.Add(this.label972);
-            this.panel35.Controls.Add(this.label973);
-            this.panel35.Controls.Add(this.label974);
-            this.panel35.Controls.Add(this.label975);
-            this.panel35.Controls.Add(this.label976);
-            this.panel35.Controls.Add(this.label977);
-            this.panel35.Controls.Add(this.label978);
-            this.panel35.Controls.Add(this.label979);
-            this.panel35.Controls.Add(this.label980);
-            this.panel35.Controls.Add(this.label981);
-            this.panel35.Controls.Add(this.label982);
-            this.panel35.Controls.Add(this.label983);
-            resources.ApplyResources(this.panel35, "panel35");
-            this.panel35.Name = "panel35";
-            this.helpProvider1.SetShowHelp(this.panel35, ((bool)(resources.GetObject("panel35.ShowHelp"))));
-            // 
-            // checkBox41
-            // 
-            resources.ApplyResources(this.checkBox41, "checkBox41");
-            this.checkBox41.Name = "checkBox41";
-            this.helpProvider1.SetShowHelp(this.checkBox41, ((bool)(resources.GetObject("checkBox41.ShowHelp"))));
-            this.checkBox41.UseVisualStyleBackColor = true;
-            // 
-            // comboBox89
-            // 
-            this.comboBox89.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox89.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox89, "comboBox89");
-            this.comboBox89.FormattingEnabled = true;
-            this.comboBox89.Name = "comboBox89";
-            this.helpProvider1.SetShowHelp(this.comboBox89, ((bool)(resources.GetObject("comboBox89.ShowHelp"))));
-            // 
-            // numericUpDown153
-            // 
-            this.numericUpDown153.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown153, "numericUpDown153");
-            this.numericUpDown153.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown153.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown153.Name = "numericUpDown153";
-            this.helpProvider1.SetShowHelp(this.numericUpDown153, ((bool)(resources.GetObject("numericUpDown153.ShowHelp"))));
-            // 
-            // numericUpDown154
-            // 
-            this.numericUpDown154.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown154, "numericUpDown154");
-            this.numericUpDown154.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown154.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown154.Name = "numericUpDown154";
-            this.helpProvider1.SetShowHelp(this.numericUpDown154, ((bool)(resources.GetObject("numericUpDown154.ShowHelp"))));
-            // 
-            // numericUpDown155
-            // 
-            resources.ApplyResources(this.numericUpDown155, "numericUpDown155");
-            this.numericUpDown155.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown155.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown155.Name = "numericUpDown155";
-            this.helpProvider1.SetShowHelp(this.numericUpDown155, ((bool)(resources.GetObject("numericUpDown155.ShowHelp"))));
-            // 
-            // numericUpDown156
-            // 
-            resources.ApplyResources(this.numericUpDown156, "numericUpDown156");
-            this.numericUpDown156.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown156.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown156.Name = "numericUpDown156";
-            this.helpProvider1.SetShowHelp(this.numericUpDown156, ((bool)(resources.GetObject("numericUpDown156.ShowHelp"))));
-            // 
-            // comboBox90
-            // 
-            this.comboBox90.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox90.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox90, "comboBox90");
-            this.comboBox90.FormattingEnabled = true;
-            this.comboBox90.Name = "comboBox90";
-            this.helpProvider1.SetShowHelp(this.comboBox90, ((bool)(resources.GetObject("comboBox90.ShowHelp"))));
-            // 
-            // numericUpDown157
-            // 
-            this.numericUpDown157.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown157, "numericUpDown157");
-            this.numericUpDown157.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown157.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown157.Name = "numericUpDown157";
-            this.helpProvider1.SetShowHelp(this.numericUpDown157, ((bool)(resources.GetObject("numericUpDown157.ShowHelp"))));
-            // 
-            // numericUpDown158
-            // 
-            this.numericUpDown158.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown158, "numericUpDown158");
-            this.numericUpDown158.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown158.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown158.Name = "numericUpDown158";
-            this.helpProvider1.SetShowHelp(this.numericUpDown158, ((bool)(resources.GetObject("numericUpDown158.ShowHelp"))));
-            // 
-            // numericUpDown159
-            // 
-            resources.ApplyResources(this.numericUpDown159, "numericUpDown159");
-            this.numericUpDown159.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown159.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown159.Name = "numericUpDown159";
-            this.helpProvider1.SetShowHelp(this.numericUpDown159, ((bool)(resources.GetObject("numericUpDown159.ShowHelp"))));
-            // 
-            // numericUpDown160
-            // 
-            resources.ApplyResources(this.numericUpDown160, "numericUpDown160");
-            this.numericUpDown160.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown160.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown160.Name = "numericUpDown160";
-            this.helpProvider1.SetShowHelp(this.numericUpDown160, ((bool)(resources.GetObject("numericUpDown160.ShowHelp"))));
-            this.numericUpDown160.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // comboBox91
-            // 
-            this.comboBox91.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox91.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox91, "comboBox91");
-            this.comboBox91.FormattingEnabled = true;
-            this.comboBox91.Name = "comboBox91";
-            this.helpProvider1.SetShowHelp(this.comboBox91, ((bool)(resources.GetObject("comboBox91.ShowHelp"))));
-            // 
-            // numericUpDown161
-            // 
-            this.numericUpDown161.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown161, "numericUpDown161");
-            this.numericUpDown161.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown161.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown161.Name = "numericUpDown161";
-            this.helpProvider1.SetShowHelp(this.numericUpDown161, ((bool)(resources.GetObject("numericUpDown161.ShowHelp"))));
-            // 
-            // numericUpDown162
-            // 
-            this.numericUpDown162.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown162, "numericUpDown162");
-            this.numericUpDown162.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown162.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown162.Name = "numericUpDown162";
-            this.helpProvider1.SetShowHelp(this.numericUpDown162, ((bool)(resources.GetObject("numericUpDown162.ShowHelp"))));
-            // 
-            // label967
-            // 
-            resources.ApplyResources(this.label967, "label967");
-            this.label967.Name = "label967";
-            this.helpProvider1.SetShowHelp(this.label967, ((bool)(resources.GetObject("label967.ShowHelp"))));
-            // 
-            // label968
-            // 
-            resources.ApplyResources(this.label968, "label968");
-            this.label968.Name = "label968";
-            this.helpProvider1.SetShowHelp(this.label968, ((bool)(resources.GetObject("label968.ShowHelp"))));
-            // 
-            // label969
-            // 
-            resources.ApplyResources(this.label969, "label969");
-            this.label969.Name = "label969";
-            this.helpProvider1.SetShowHelp(this.label969, ((bool)(resources.GetObject("label969.ShowHelp"))));
-            // 
-            // label970
-            // 
-            resources.ApplyResources(this.label970, "label970");
-            this.label970.Name = "label970";
-            this.helpProvider1.SetShowHelp(this.label970, ((bool)(resources.GetObject("label970.ShowHelp"))));
-            // 
-            // label971
-            // 
-            resources.ApplyResources(this.label971, "label971");
-            this.label971.Name = "label971";
-            this.helpProvider1.SetShowHelp(this.label971, ((bool)(resources.GetObject("label971.ShowHelp"))));
-            // 
-            // label972
-            // 
-            resources.ApplyResources(this.label972, "label972");
-            this.label972.Name = "label972";
-            this.helpProvider1.SetShowHelp(this.label972, ((bool)(resources.GetObject("label972.ShowHelp"))));
-            // 
-            // label973
-            // 
-            resources.ApplyResources(this.label973, "label973");
-            this.label973.Name = "label973";
-            this.helpProvider1.SetShowHelp(this.label973, ((bool)(resources.GetObject("label973.ShowHelp"))));
-            // 
-            // label974
-            // 
-            resources.ApplyResources(this.label974, "label974");
-            this.label974.Name = "label974";
-            this.helpProvider1.SetShowHelp(this.label974, ((bool)(resources.GetObject("label974.ShowHelp"))));
-            // 
-            // label975
-            // 
-            resources.ApplyResources(this.label975, "label975");
-            this.label975.Name = "label975";
-            this.helpProvider1.SetShowHelp(this.label975, ((bool)(resources.GetObject("label975.ShowHelp"))));
-            // 
-            // label976
-            // 
-            resources.ApplyResources(this.label976, "label976");
-            this.label976.Name = "label976";
-            this.helpProvider1.SetShowHelp(this.label976, ((bool)(resources.GetObject("label976.ShowHelp"))));
-            // 
-            // label977
-            // 
-            resources.ApplyResources(this.label977, "label977");
-            this.label977.Name = "label977";
-            this.helpProvider1.SetShowHelp(this.label977, ((bool)(resources.GetObject("label977.ShowHelp"))));
-            // 
-            // label978
-            // 
-            resources.ApplyResources(this.label978, "label978");
-            this.label978.Name = "label978";
-            this.helpProvider1.SetShowHelp(this.label978, ((bool)(resources.GetObject("label978.ShowHelp"))));
-            // 
-            // label979
-            // 
-            resources.ApplyResources(this.label979, "label979");
-            this.label979.Name = "label979";
-            this.helpProvider1.SetShowHelp(this.label979, ((bool)(resources.GetObject("label979.ShowHelp"))));
-            // 
-            // label980
-            // 
-            resources.ApplyResources(this.label980, "label980");
-            this.label980.Name = "label980";
-            this.helpProvider1.SetShowHelp(this.label980, ((bool)(resources.GetObject("label980.ShowHelp"))));
-            // 
-            // label981
-            // 
-            resources.ApplyResources(this.label981, "label981");
-            this.label981.Name = "label981";
-            this.helpProvider1.SetShowHelp(this.label981, ((bool)(resources.GetObject("label981.ShowHelp"))));
-            // 
-            // label982
-            // 
-            resources.ApplyResources(this.label982, "label982");
-            this.label982.Name = "label982";
-            this.helpProvider1.SetShowHelp(this.label982, ((bool)(resources.GetObject("label982.ShowHelp"))));
-            // 
-            // label983
-            // 
-            resources.ApplyResources(this.label983, "label983");
-            this.label983.Name = "label983";
-            this.helpProvider1.SetShowHelp(this.label983, ((bool)(resources.GetObject("label983.ShowHelp"))));
-            // 
-            // button29
-            // 
-            resources.ApplyResources(this.button29, "button29");
-            this.button29.Name = "button29";
-            this.helpProvider1.SetShowHelp(this.button29, ((bool)(resources.GetObject("button29.ShowHelp"))));
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // panel36
-            // 
-            this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel36.Controls.Add(this.checkBox42);
-            this.panel36.Controls.Add(this.comboBox92);
-            this.panel36.Controls.Add(this.comboBox93);
-            this.panel36.Controls.Add(this.comboBox94);
-            this.panel36.Controls.Add(this.numericUpDown163);
-            this.panel36.Controls.Add(this.numericUpDown164);
-            this.panel36.Controls.Add(this.numericUpDown165);
-            this.panel36.Controls.Add(this.numericUpDown166);
-            this.panel36.Controls.Add(this.comboBox95);
-            this.panel36.Controls.Add(this.numericUpDown167);
-            this.panel36.Controls.Add(this.checkBox43);
-            this.panel36.Controls.Add(this.comboBox96);
-            this.panel36.Controls.Add(this.label984);
-            this.panel36.Controls.Add(this.label985);
-            this.panel36.Controls.Add(this.label986);
-            this.panel36.Controls.Add(this.label987);
-            this.panel36.Controls.Add(this.label988);
-            this.panel36.Controls.Add(this.label989);
-            this.panel36.Controls.Add(this.label990);
-            this.panel36.Controls.Add(this.label991);
-            this.panel36.Controls.Add(this.label992);
-            this.panel36.Controls.Add(this.label993);
-            this.panel36.Controls.Add(this.label994);
-            this.panel36.Controls.Add(this.label995);
-            resources.ApplyResources(this.panel36, "panel36");
-            this.panel36.Name = "panel36";
-            this.helpProvider1.SetShowHelp(this.panel36, ((bool)(resources.GetObject("panel36.ShowHelp"))));
-            // 
-            // checkBox42
-            // 
-            resources.ApplyResources(this.checkBox42, "checkBox42");
-            this.checkBox42.Name = "checkBox42";
-            this.helpProvider1.SetShowHelp(this.checkBox42, ((bool)(resources.GetObject("checkBox42.ShowHelp"))));
-            this.checkBox42.UseVisualStyleBackColor = true;
-            // 
-            // comboBox92
-            // 
-            this.comboBox92.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox92.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox92, "comboBox92");
-            this.comboBox92.FormattingEnabled = true;
-            this.comboBox92.Name = "comboBox92";
-            this.helpProvider1.SetShowHelp(this.comboBox92, ((bool)(resources.GetObject("comboBox92.ShowHelp"))));
-            // 
-            // comboBox93
-            // 
-            this.comboBox93.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox93.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox93, "comboBox93");
-            this.comboBox93.FormattingEnabled = true;
-            this.comboBox93.Name = "comboBox93";
-            this.helpProvider1.SetShowHelp(this.comboBox93, ((bool)(resources.GetObject("comboBox93.ShowHelp"))));
-            // 
-            // comboBox94
-            // 
-            this.comboBox94.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox94.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox94, "comboBox94");
-            this.comboBox94.FormattingEnabled = true;
-            this.comboBox94.Name = "comboBox94";
-            this.helpProvider1.SetShowHelp(this.comboBox94, ((bool)(resources.GetObject("comboBox94.ShowHelp"))));
-            // 
-            // numericUpDown163
-            // 
-            this.numericUpDown163.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown163, "numericUpDown163");
-            this.numericUpDown163.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown163.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown163.Name = "numericUpDown163";
-            this.helpProvider1.SetShowHelp(this.numericUpDown163, ((bool)(resources.GetObject("numericUpDown163.ShowHelp"))));
-            // 
-            // numericUpDown164
-            // 
-            this.numericUpDown164.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown164, "numericUpDown164");
-            this.numericUpDown164.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown164.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown164.Name = "numericUpDown164";
-            this.helpProvider1.SetShowHelp(this.numericUpDown164, ((bool)(resources.GetObject("numericUpDown164.ShowHelp"))));
-            // 
-            // numericUpDown165
-            // 
-            this.numericUpDown165.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown165, "numericUpDown165");
-            this.numericUpDown165.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown165.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown165.Name = "numericUpDown165";
-            this.helpProvider1.SetShowHelp(this.numericUpDown165, ((bool)(resources.GetObject("numericUpDown165.ShowHelp"))));
-            // 
-            // numericUpDown166
-            // 
-            this.numericUpDown166.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown166, "numericUpDown166");
-            this.numericUpDown166.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown166.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown166.Name = "numericUpDown166";
-            this.helpProvider1.SetShowHelp(this.numericUpDown166, ((bool)(resources.GetObject("numericUpDown166.ShowHelp"))));
-            // 
-            // comboBox95
-            // 
-            this.comboBox95.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox95, "comboBox95");
-            this.comboBox95.FormattingEnabled = true;
-            this.comboBox95.Items.AddRange(new object[] {
-            resources.GetString("comboBox95.Items"),
-            resources.GetString("comboBox95.Items1"),
-            resources.GetString("comboBox95.Items2")});
-            this.comboBox95.Name = "comboBox95";
-            this.helpProvider1.SetShowHelp(this.comboBox95, ((bool)(resources.GetObject("comboBox95.ShowHelp"))));
-            // 
-            // numericUpDown167
-            // 
-            resources.ApplyResources(this.numericUpDown167, "numericUpDown167");
-            this.numericUpDown167.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown167.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown167.Name = "numericUpDown167";
-            this.helpProvider1.SetShowHelp(this.numericUpDown167, ((bool)(resources.GetObject("numericUpDown167.ShowHelp"))));
-            // 
-            // checkBox43
-            // 
-            resources.ApplyResources(this.checkBox43, "checkBox43");
-            this.checkBox43.Name = "checkBox43";
-            this.helpProvider1.SetShowHelp(this.checkBox43, ((bool)(resources.GetObject("checkBox43.ShowHelp"))));
-            this.checkBox43.UseVisualStyleBackColor = true;
-            // 
-            // comboBox96
-            // 
-            this.comboBox96.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox96.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox96, "comboBox96");
-            this.comboBox96.FormattingEnabled = true;
-            this.comboBox96.Name = "comboBox96";
-            this.helpProvider1.SetShowHelp(this.comboBox96, ((bool)(resources.GetObject("comboBox96.ShowHelp"))));
-            // 
-            // label984
-            // 
-            resources.ApplyResources(this.label984, "label984");
-            this.label984.Name = "label984";
-            this.helpProvider1.SetShowHelp(this.label984, ((bool)(resources.GetObject("label984.ShowHelp"))));
-            // 
-            // label985
-            // 
-            resources.ApplyResources(this.label985, "label985");
-            this.label985.Name = "label985";
-            this.helpProvider1.SetShowHelp(this.label985, ((bool)(resources.GetObject("label985.ShowHelp"))));
-            // 
-            // label986
-            // 
-            resources.ApplyResources(this.label986, "label986");
-            this.label986.Name = "label986";
-            this.helpProvider1.SetShowHelp(this.label986, ((bool)(resources.GetObject("label986.ShowHelp"))));
-            // 
-            // label987
-            // 
-            resources.ApplyResources(this.label987, "label987");
-            this.label987.Name = "label987";
-            this.helpProvider1.SetShowHelp(this.label987, ((bool)(resources.GetObject("label987.ShowHelp"))));
-            // 
-            // label988
-            // 
-            resources.ApplyResources(this.label988, "label988");
-            this.label988.Name = "label988";
-            this.helpProvider1.SetShowHelp(this.label988, ((bool)(resources.GetObject("label988.ShowHelp"))));
-            // 
-            // label989
-            // 
-            resources.ApplyResources(this.label989, "label989");
-            this.label989.Name = "label989";
-            this.helpProvider1.SetShowHelp(this.label989, ((bool)(resources.GetObject("label989.ShowHelp"))));
-            // 
-            // label990
-            // 
-            resources.ApplyResources(this.label990, "label990");
-            this.label990.Name = "label990";
-            this.helpProvider1.SetShowHelp(this.label990, ((bool)(resources.GetObject("label990.ShowHelp"))));
-            // 
-            // label991
-            // 
-            resources.ApplyResources(this.label991, "label991");
-            this.label991.Name = "label991";
-            this.helpProvider1.SetShowHelp(this.label991, ((bool)(resources.GetObject("label991.ShowHelp"))));
-            // 
-            // label992
-            // 
-            resources.ApplyResources(this.label992, "label992");
-            this.label992.Name = "label992";
-            this.helpProvider1.SetShowHelp(this.label992, ((bool)(resources.GetObject("label992.ShowHelp"))));
-            // 
-            // label993
-            // 
-            resources.ApplyResources(this.label993, "label993");
-            this.label993.Name = "label993";
-            this.helpProvider1.SetShowHelp(this.label993, ((bool)(resources.GetObject("label993.ShowHelp"))));
-            // 
-            // label994
-            // 
-            resources.ApplyResources(this.label994, "label994");
-            this.label994.Name = "label994";
-            this.helpProvider1.SetShowHelp(this.label994, ((bool)(resources.GetObject("label994.ShowHelp"))));
-            // 
-            // label995
-            // 
-            resources.ApplyResources(this.label995, "label995");
-            this.label995.Name = "label995";
-            this.helpProvider1.SetShowHelp(this.label995, ((bool)(resources.GetObject("label995.ShowHelp"))));
-            // 
-            // button30
-            // 
-            resources.ApplyResources(this.button30, "button30");
-            this.button30.Name = "button30";
-            this.helpProvider1.SetShowHelp(this.button30, ((bool)(resources.GetObject("button30.ShowHelp"))));
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // panel37
-            // 
-            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel37.Controls.Add(this.checkBox44);
-            this.panel37.Controls.Add(this.comboBox97);
-            this.panel37.Controls.Add(this.numericUpDown168);
-            this.panel37.Controls.Add(this.numericUpDown169);
-            this.panel37.Controls.Add(this.numericUpDown170);
-            this.panel37.Controls.Add(this.label996);
-            this.panel37.Controls.Add(this.label997);
-            this.panel37.Controls.Add(this.label998);
-            this.panel37.Controls.Add(this.label999);
-            this.panel37.Controls.Add(this.label1000);
-            resources.ApplyResources(this.panel37, "panel37");
-            this.panel37.Name = "panel37";
-            this.helpProvider1.SetShowHelp(this.panel37, ((bool)(resources.GetObject("panel37.ShowHelp"))));
-            // 
-            // checkBox44
-            // 
-            resources.ApplyResources(this.checkBox44, "checkBox44");
-            this.checkBox44.Name = "checkBox44";
-            this.helpProvider1.SetShowHelp(this.checkBox44, ((bool)(resources.GetObject("checkBox44.ShowHelp"))));
-            this.checkBox44.UseVisualStyleBackColor = true;
-            // 
-            // comboBox97
-            // 
-            this.comboBox97.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox97.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox97, "comboBox97");
-            this.comboBox97.FormattingEnabled = true;
-            this.comboBox97.Name = "comboBox97";
-            this.helpProvider1.SetShowHelp(this.comboBox97, ((bool)(resources.GetObject("comboBox97.ShowHelp"))));
-            // 
-            // numericUpDown168
-            // 
-            this.numericUpDown168.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown168, "numericUpDown168");
-            this.numericUpDown168.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown168.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown168.Name = "numericUpDown168";
-            this.helpProvider1.SetShowHelp(this.numericUpDown168, ((bool)(resources.GetObject("numericUpDown168.ShowHelp"))));
-            // 
-            // numericUpDown169
-            // 
-            this.numericUpDown169.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown169, "numericUpDown169");
-            this.numericUpDown169.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown169.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown169.Name = "numericUpDown169";
-            this.helpProvider1.SetShowHelp(this.numericUpDown169, ((bool)(resources.GetObject("numericUpDown169.ShowHelp"))));
-            // 
-            // numericUpDown170
-            // 
-            this.numericUpDown170.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown170, "numericUpDown170");
-            this.numericUpDown170.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown170.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown170.Name = "numericUpDown170";
-            this.helpProvider1.SetShowHelp(this.numericUpDown170, ((bool)(resources.GetObject("numericUpDown170.ShowHelp"))));
-            this.numericUpDown170.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            // 
-            // label996
-            // 
-            resources.ApplyResources(this.label996, "label996");
-            this.label996.Name = "label996";
-            this.helpProvider1.SetShowHelp(this.label996, ((bool)(resources.GetObject("label996.ShowHelp"))));
-            // 
-            // label997
-            // 
-            resources.ApplyResources(this.label997, "label997");
-            this.label997.Name = "label997";
-            this.helpProvider1.SetShowHelp(this.label997, ((bool)(resources.GetObject("label997.ShowHelp"))));
-            // 
-            // label998
-            // 
-            resources.ApplyResources(this.label998, "label998");
-            this.label998.Name = "label998";
-            this.helpProvider1.SetShowHelp(this.label998, ((bool)(resources.GetObject("label998.ShowHelp"))));
-            // 
-            // label999
-            // 
-            resources.ApplyResources(this.label999, "label999");
-            this.label999.Name = "label999";
-            this.helpProvider1.SetShowHelp(this.label999, ((bool)(resources.GetObject("label999.ShowHelp"))));
-            // 
-            // label1000
-            // 
-            resources.ApplyResources(this.label1000, "label1000");
-            this.label1000.Name = "label1000";
-            this.helpProvider1.SetShowHelp(this.label1000, ((bool)(resources.GetObject("label1000.ShowHelp"))));
-            // 
-            // button31
-            // 
-            resources.ApplyResources(this.button31, "button31");
-            this.button31.Name = "button31";
-            this.helpProvider1.SetShowHelp(this.button31, ((bool)(resources.GetObject("button31.ShowHelp"))));
-            this.button31.UseVisualStyleBackColor = true;
             // 
             // tabPage_PAI_AOD
             // 
             resources.ApplyResources(this.tabPage_PAI_AOD, "tabPage_PAI_AOD");
             this.tabPage_PAI_AOD.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_PAI_AOD.Controls.Add(this.panel38);
-            this.tabPage_PAI_AOD.Controls.Add(this.panel39);
-            this.tabPage_PAI_AOD.Controls.Add(this.button32);
-            this.tabPage_PAI_AOD.Controls.Add(this.panel40);
-            this.tabPage_PAI_AOD.Controls.Add(this.button33);
-            this.tabPage_PAI_AOD.Controls.Add(this.panel41);
-            this.tabPage_PAI_AOD.Controls.Add(this.button34);
-            this.tabPage_PAI_AOD.Controls.Add(this.panel42);
-            this.tabPage_PAI_AOD.Controls.Add(this.button35);
-            this.tabPage_PAI_AOD.Controls.Add(this.panel43);
-            this.tabPage_PAI_AOD.Controls.Add(this.button36);
             this.tabPage_PAI_AOD.Name = "tabPage_PAI_AOD";
             this.helpProvider1.SetShowHelp(this.tabPage_PAI_AOD, ((bool)(resources.GetObject("tabPage_PAI_AOD.ShowHelp"))));
-            // 
-            // panel38
-            // 
-            resources.ApplyResources(this.panel38, "panel38");
-            this.panel38.Name = "panel38";
-            this.helpProvider1.SetShowHelp(this.panel38, ((bool)(resources.GetObject("panel38.ShowHelp"))));
-            // 
-            // panel39
-            // 
-            this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel39.Controls.Add(this.checkBox45);
-            this.panel39.Controls.Add(this.radioButton15);
-            this.panel39.Controls.Add(this.radioButton16);
-            this.panel39.Controls.Add(this.comboBox98);
-            this.panel39.Controls.Add(this.comboBox99);
-            this.panel39.Controls.Add(this.comboBox100);
-            this.panel39.Controls.Add(this.comboBox101);
-            this.panel39.Controls.Add(this.numericUpDown171);
-            this.panel39.Controls.Add(this.numericUpDown172);
-            this.panel39.Controls.Add(this.numericUpDown173);
-            this.panel39.Controls.Add(this.numericUpDown174);
-            this.panel39.Controls.Add(this.label1001);
-            this.panel39.Controls.Add(this.label1002);
-            this.panel39.Controls.Add(this.label1003);
-            this.panel39.Controls.Add(this.label1004);
-            this.panel39.Controls.Add(this.label1005);
-            this.panel39.Controls.Add(this.label1006);
-            this.panel39.Controls.Add(this.label1007);
-            resources.ApplyResources(this.panel39, "panel39");
-            this.panel39.Name = "panel39";
-            this.helpProvider1.SetShowHelp(this.panel39, ((bool)(resources.GetObject("panel39.ShowHelp"))));
-            // 
-            // checkBox45
-            // 
-            resources.ApplyResources(this.checkBox45, "checkBox45");
-            this.checkBox45.Name = "checkBox45";
-            this.helpProvider1.SetShowHelp(this.checkBox45, ((bool)(resources.GetObject("checkBox45.ShowHelp"))));
-            this.checkBox45.UseVisualStyleBackColor = true;
-            // 
-            // radioButton15
-            // 
-            resources.ApplyResources(this.radioButton15, "radioButton15");
-            this.radioButton15.Checked = true;
-            this.radioButton15.Name = "radioButton15";
-            this.helpProvider1.SetShowHelp(this.radioButton15, ((bool)(resources.GetObject("radioButton15.ShowHelp"))));
-            this.radioButton15.TabStop = true;
-            this.radioButton15.UseVisualStyleBackColor = true;
-            // 
-            // radioButton16
-            // 
-            resources.ApplyResources(this.radioButton16, "radioButton16");
-            this.radioButton16.Name = "radioButton16";
-            this.helpProvider1.SetShowHelp(this.radioButton16, ((bool)(resources.GetObject("radioButton16.ShowHelp"))));
-            this.radioButton16.TabStop = true;
-            this.radioButton16.UseVisualStyleBackColor = true;
-            // 
-            // comboBox98
-            // 
-            this.comboBox98.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox98.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox98, "comboBox98");
-            this.comboBox98.FormattingEnabled = true;
-            this.comboBox98.Name = "comboBox98";
-            this.helpProvider1.SetShowHelp(this.comboBox98, ((bool)(resources.GetObject("comboBox98.ShowHelp"))));
-            // 
-            // comboBox99
-            // 
-            this.comboBox99.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox99.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox99, "comboBox99");
-            this.comboBox99.FormattingEnabled = true;
-            this.comboBox99.Name = "comboBox99";
-            this.helpProvider1.SetShowHelp(this.comboBox99, ((bool)(resources.GetObject("comboBox99.ShowHelp"))));
-            // 
-            // comboBox100
-            // 
-            this.comboBox100.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox100.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox100, "comboBox100");
-            this.comboBox100.FormattingEnabled = true;
-            this.comboBox100.Name = "comboBox100";
-            this.helpProvider1.SetShowHelp(this.comboBox100, ((bool)(resources.GetObject("comboBox100.ShowHelp"))));
-            // 
-            // comboBox101
-            // 
-            this.comboBox101.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox101.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox101, "comboBox101");
-            this.comboBox101.FormattingEnabled = true;
-            this.comboBox101.Name = "comboBox101";
-            this.helpProvider1.SetShowHelp(this.comboBox101, ((bool)(resources.GetObject("comboBox101.ShowHelp"))));
-            // 
-            // numericUpDown171
-            // 
-            this.numericUpDown171.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown171, "numericUpDown171");
-            this.numericUpDown171.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown171.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown171.Name = "numericUpDown171";
-            this.helpProvider1.SetShowHelp(this.numericUpDown171, ((bool)(resources.GetObject("numericUpDown171.ShowHelp"))));
-            // 
-            // numericUpDown172
-            // 
-            this.numericUpDown172.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown172, "numericUpDown172");
-            this.numericUpDown172.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown172.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown172.Name = "numericUpDown172";
-            this.helpProvider1.SetShowHelp(this.numericUpDown172, ((bool)(resources.GetObject("numericUpDown172.ShowHelp"))));
-            // 
-            // numericUpDown173
-            // 
-            resources.ApplyResources(this.numericUpDown173, "numericUpDown173");
-            this.numericUpDown173.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown173.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown173.Name = "numericUpDown173";
-            this.helpProvider1.SetShowHelp(this.numericUpDown173, ((bool)(resources.GetObject("numericUpDown173.ShowHelp"))));
-            this.numericUpDown173.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown174
-            // 
-            resources.ApplyResources(this.numericUpDown174, "numericUpDown174");
-            this.numericUpDown174.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown174.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown174.Name = "numericUpDown174";
-            this.helpProvider1.SetShowHelp(this.numericUpDown174, ((bool)(resources.GetObject("numericUpDown174.ShowHelp"))));
-            this.numericUpDown174.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label1001
-            // 
-            resources.ApplyResources(this.label1001, "label1001");
-            this.label1001.Name = "label1001";
-            this.helpProvider1.SetShowHelp(this.label1001, ((bool)(resources.GetObject("label1001.ShowHelp"))));
-            // 
-            // label1002
-            // 
-            resources.ApplyResources(this.label1002, "label1002");
-            this.label1002.Name = "label1002";
-            this.helpProvider1.SetShowHelp(this.label1002, ((bool)(resources.GetObject("label1002.ShowHelp"))));
-            // 
-            // label1003
-            // 
-            resources.ApplyResources(this.label1003, "label1003");
-            this.label1003.Name = "label1003";
-            this.helpProvider1.SetShowHelp(this.label1003, ((bool)(resources.GetObject("label1003.ShowHelp"))));
-            // 
-            // label1004
-            // 
-            resources.ApplyResources(this.label1004, "label1004");
-            this.label1004.Name = "label1004";
-            this.helpProvider1.SetShowHelp(this.label1004, ((bool)(resources.GetObject("label1004.ShowHelp"))));
-            // 
-            // label1005
-            // 
-            resources.ApplyResources(this.label1005, "label1005");
-            this.label1005.Name = "label1005";
-            this.helpProvider1.SetShowHelp(this.label1005, ((bool)(resources.GetObject("label1005.ShowHelp"))));
-            // 
-            // label1006
-            // 
-            resources.ApplyResources(this.label1006, "label1006");
-            this.label1006.Name = "label1006";
-            this.helpProvider1.SetShowHelp(this.label1006, ((bool)(resources.GetObject("label1006.ShowHelp"))));
-            // 
-            // label1007
-            // 
-            resources.ApplyResources(this.label1007, "label1007");
-            this.label1007.Name = "label1007";
-            this.helpProvider1.SetShowHelp(this.label1007, ((bool)(resources.GetObject("label1007.ShowHelp"))));
-            // 
-            // button32
-            // 
-            resources.ApplyResources(this.button32, "button32");
-            this.button32.Name = "button32";
-            this.helpProvider1.SetShowHelp(this.button32, ((bool)(resources.GetObject("button32.ShowHelp"))));
-            this.button32.UseVisualStyleBackColor = true;
-            // 
-            // panel40
-            // 
-            this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel40.Controls.Add(this.checkBox46);
-            this.panel40.Controls.Add(this.radioButton17);
-            this.panel40.Controls.Add(this.radioButton18);
-            this.panel40.Controls.Add(this.comboBox102);
-            this.panel40.Controls.Add(this.comboBox103);
-            this.panel40.Controls.Add(this.comboBox104);
-            this.panel40.Controls.Add(this.comboBox105);
-            this.panel40.Controls.Add(this.numericUpDown175);
-            this.panel40.Controls.Add(this.numericUpDown176);
-            this.panel40.Controls.Add(this.numericUpDown177);
-            this.panel40.Controls.Add(this.numericUpDown178);
-            this.panel40.Controls.Add(this.numericUpDown179);
-            this.panel40.Controls.Add(this.numericUpDown180);
-            this.panel40.Controls.Add(this.label1008);
-            this.panel40.Controls.Add(this.label1009);
-            this.panel40.Controls.Add(this.label1010);
-            this.panel40.Controls.Add(this.label1011);
-            this.panel40.Controls.Add(this.label1012);
-            this.panel40.Controls.Add(this.label1013);
-            this.panel40.Controls.Add(this.label1014);
-            this.panel40.Controls.Add(this.label1015);
-            this.panel40.Controls.Add(this.label1016);
-            resources.ApplyResources(this.panel40, "panel40");
-            this.panel40.Name = "panel40";
-            this.helpProvider1.SetShowHelp(this.panel40, ((bool)(resources.GetObject("panel40.ShowHelp"))));
-            // 
-            // checkBox46
-            // 
-            resources.ApplyResources(this.checkBox46, "checkBox46");
-            this.checkBox46.Name = "checkBox46";
-            this.helpProvider1.SetShowHelp(this.checkBox46, ((bool)(resources.GetObject("checkBox46.ShowHelp"))));
-            this.checkBox46.UseVisualStyleBackColor = true;
-            // 
-            // radioButton17
-            // 
-            resources.ApplyResources(this.radioButton17, "radioButton17");
-            this.radioButton17.Checked = true;
-            this.radioButton17.Name = "radioButton17";
-            this.helpProvider1.SetShowHelp(this.radioButton17, ((bool)(resources.GetObject("radioButton17.ShowHelp"))));
-            this.radioButton17.TabStop = true;
-            this.radioButton17.UseVisualStyleBackColor = true;
-            // 
-            // radioButton18
-            // 
-            resources.ApplyResources(this.radioButton18, "radioButton18");
-            this.radioButton18.Name = "radioButton18";
-            this.helpProvider1.SetShowHelp(this.radioButton18, ((bool)(resources.GetObject("radioButton18.ShowHelp"))));
-            this.radioButton18.TabStop = true;
-            this.radioButton18.UseVisualStyleBackColor = true;
-            // 
-            // comboBox102
-            // 
-            this.comboBox102.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox102.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox102, "comboBox102");
-            this.comboBox102.FormattingEnabled = true;
-            this.comboBox102.Name = "comboBox102";
-            this.helpProvider1.SetShowHelp(this.comboBox102, ((bool)(resources.GetObject("comboBox102.ShowHelp"))));
-            // 
-            // comboBox103
-            // 
-            this.comboBox103.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox103.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox103, "comboBox103");
-            this.comboBox103.FormattingEnabled = true;
-            this.comboBox103.Name = "comboBox103";
-            this.helpProvider1.SetShowHelp(this.comboBox103, ((bool)(resources.GetObject("comboBox103.ShowHelp"))));
-            // 
-            // comboBox104
-            // 
-            this.comboBox104.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox104, "comboBox104");
-            this.comboBox104.FormattingEnabled = true;
-            this.comboBox104.Items.AddRange(new object[] {
-            resources.GetString("comboBox104.Items"),
-            resources.GetString("comboBox104.Items1"),
-            resources.GetString("comboBox104.Items2")});
-            this.comboBox104.Name = "comboBox104";
-            this.helpProvider1.SetShowHelp(this.comboBox104, ((bool)(resources.GetObject("comboBox104.ShowHelp"))));
-            // 
-            // comboBox105
-            // 
-            this.comboBox105.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox105.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox105, "comboBox105");
-            this.comboBox105.FormattingEnabled = true;
-            this.comboBox105.Name = "comboBox105";
-            this.helpProvider1.SetShowHelp(this.comboBox105, ((bool)(resources.GetObject("comboBox105.ShowHelp"))));
-            // 
-            // numericUpDown175
-            // 
-            this.numericUpDown175.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown175, "numericUpDown175");
-            this.numericUpDown175.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown175.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown175.Name = "numericUpDown175";
-            this.helpProvider1.SetShowHelp(this.numericUpDown175, ((bool)(resources.GetObject("numericUpDown175.ShowHelp"))));
-            // 
-            // numericUpDown176
-            // 
-            this.numericUpDown176.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown176, "numericUpDown176");
-            this.numericUpDown176.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown176.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown176.Name = "numericUpDown176";
-            this.helpProvider1.SetShowHelp(this.numericUpDown176, ((bool)(resources.GetObject("numericUpDown176.ShowHelp"))));
-            // 
-            // numericUpDown177
-            // 
-            resources.ApplyResources(this.numericUpDown177, "numericUpDown177");
-            this.numericUpDown177.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown177.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown177.Name = "numericUpDown177";
-            this.helpProvider1.SetShowHelp(this.numericUpDown177, ((bool)(resources.GetObject("numericUpDown177.ShowHelp"))));
-            this.numericUpDown177.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown178
-            // 
-            resources.ApplyResources(this.numericUpDown178, "numericUpDown178");
-            this.numericUpDown178.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown178.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown178.Name = "numericUpDown178";
-            this.helpProvider1.SetShowHelp(this.numericUpDown178, ((bool)(resources.GetObject("numericUpDown178.ShowHelp"))));
-            this.numericUpDown178.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown179
-            // 
-            resources.ApplyResources(this.numericUpDown179, "numericUpDown179");
-            this.numericUpDown179.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown179.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown179.Name = "numericUpDown179";
-            this.helpProvider1.SetShowHelp(this.numericUpDown179, ((bool)(resources.GetObject("numericUpDown179.ShowHelp"))));
-            // 
-            // numericUpDown180
-            // 
-            resources.ApplyResources(this.numericUpDown180, "numericUpDown180");
-            this.numericUpDown180.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown180.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown180.Name = "numericUpDown180";
-            this.helpProvider1.SetShowHelp(this.numericUpDown180, ((bool)(resources.GetObject("numericUpDown180.ShowHelp"))));
-            this.numericUpDown180.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // label1008
-            // 
-            resources.ApplyResources(this.label1008, "label1008");
-            this.label1008.Name = "label1008";
-            this.helpProvider1.SetShowHelp(this.label1008, ((bool)(resources.GetObject("label1008.ShowHelp"))));
-            // 
-            // label1009
-            // 
-            resources.ApplyResources(this.label1009, "label1009");
-            this.label1009.Name = "label1009";
-            this.helpProvider1.SetShowHelp(this.label1009, ((bool)(resources.GetObject("label1009.ShowHelp"))));
-            // 
-            // label1010
-            // 
-            resources.ApplyResources(this.label1010, "label1010");
-            this.label1010.Name = "label1010";
-            this.helpProvider1.SetShowHelp(this.label1010, ((bool)(resources.GetObject("label1010.ShowHelp"))));
-            // 
-            // label1011
-            // 
-            resources.ApplyResources(this.label1011, "label1011");
-            this.label1011.Name = "label1011";
-            this.helpProvider1.SetShowHelp(this.label1011, ((bool)(resources.GetObject("label1011.ShowHelp"))));
-            // 
-            // label1012
-            // 
-            resources.ApplyResources(this.label1012, "label1012");
-            this.label1012.Name = "label1012";
-            this.helpProvider1.SetShowHelp(this.label1012, ((bool)(resources.GetObject("label1012.ShowHelp"))));
-            // 
-            // label1013
-            // 
-            resources.ApplyResources(this.label1013, "label1013");
-            this.label1013.Name = "label1013";
-            this.helpProvider1.SetShowHelp(this.label1013, ((bool)(resources.GetObject("label1013.ShowHelp"))));
-            // 
-            // label1014
-            // 
-            resources.ApplyResources(this.label1014, "label1014");
-            this.label1014.Name = "label1014";
-            this.helpProvider1.SetShowHelp(this.label1014, ((bool)(resources.GetObject("label1014.ShowHelp"))));
-            // 
-            // label1015
-            // 
-            resources.ApplyResources(this.label1015, "label1015");
-            this.label1015.Name = "label1015";
-            this.helpProvider1.SetShowHelp(this.label1015, ((bool)(resources.GetObject("label1015.ShowHelp"))));
-            // 
-            // label1016
-            // 
-            resources.ApplyResources(this.label1016, "label1016");
-            this.label1016.Name = "label1016";
-            this.helpProvider1.SetShowHelp(this.label1016, ((bool)(resources.GetObject("label1016.ShowHelp"))));
-            // 
-            // button33
-            // 
-            resources.ApplyResources(this.button33, "button33");
-            this.button33.Name = "button33";
-            this.helpProvider1.SetShowHelp(this.button33, ((bool)(resources.GetObject("button33.ShowHelp"))));
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // panel41
-            // 
-            this.panel41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel41.Controls.Add(this.checkBox47);
-            this.panel41.Controls.Add(this.comboBox106);
-            this.panel41.Controls.Add(this.numericUpDown181);
-            this.panel41.Controls.Add(this.numericUpDown182);
-            this.panel41.Controls.Add(this.numericUpDown183);
-            this.panel41.Controls.Add(this.numericUpDown184);
-            this.panel41.Controls.Add(this.comboBox107);
-            this.panel41.Controls.Add(this.numericUpDown185);
-            this.panel41.Controls.Add(this.numericUpDown186);
-            this.panel41.Controls.Add(this.numericUpDown187);
-            this.panel41.Controls.Add(this.numericUpDown188);
-            this.panel41.Controls.Add(this.comboBox108);
-            this.panel41.Controls.Add(this.numericUpDown189);
-            this.panel41.Controls.Add(this.numericUpDown190);
-            this.panel41.Controls.Add(this.label1017);
-            this.panel41.Controls.Add(this.label1018);
-            this.panel41.Controls.Add(this.label1019);
-            this.panel41.Controls.Add(this.label1020);
-            this.panel41.Controls.Add(this.label1021);
-            this.panel41.Controls.Add(this.label1022);
-            this.panel41.Controls.Add(this.label1023);
-            this.panel41.Controls.Add(this.label1024);
-            this.panel41.Controls.Add(this.label1025);
-            this.panel41.Controls.Add(this.label1026);
-            this.panel41.Controls.Add(this.label1027);
-            this.panel41.Controls.Add(this.label1028);
-            this.panel41.Controls.Add(this.label1029);
-            this.panel41.Controls.Add(this.label1030);
-            this.panel41.Controls.Add(this.label1031);
-            this.panel41.Controls.Add(this.label1032);
-            this.panel41.Controls.Add(this.label1033);
-            resources.ApplyResources(this.panel41, "panel41");
-            this.panel41.Name = "panel41";
-            this.helpProvider1.SetShowHelp(this.panel41, ((bool)(resources.GetObject("panel41.ShowHelp"))));
-            // 
-            // checkBox47
-            // 
-            resources.ApplyResources(this.checkBox47, "checkBox47");
-            this.checkBox47.Name = "checkBox47";
-            this.helpProvider1.SetShowHelp(this.checkBox47, ((bool)(resources.GetObject("checkBox47.ShowHelp"))));
-            this.checkBox47.UseVisualStyleBackColor = true;
-            // 
-            // comboBox106
-            // 
-            this.comboBox106.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox106.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox106, "comboBox106");
-            this.comboBox106.FormattingEnabled = true;
-            this.comboBox106.Name = "comboBox106";
-            this.helpProvider1.SetShowHelp(this.comboBox106, ((bool)(resources.GetObject("comboBox106.ShowHelp"))));
-            // 
-            // numericUpDown181
-            // 
-            this.numericUpDown181.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown181, "numericUpDown181");
-            this.numericUpDown181.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown181.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown181.Name = "numericUpDown181";
-            this.helpProvider1.SetShowHelp(this.numericUpDown181, ((bool)(resources.GetObject("numericUpDown181.ShowHelp"))));
-            // 
-            // numericUpDown182
-            // 
-            this.numericUpDown182.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown182, "numericUpDown182");
-            this.numericUpDown182.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown182.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown182.Name = "numericUpDown182";
-            this.helpProvider1.SetShowHelp(this.numericUpDown182, ((bool)(resources.GetObject("numericUpDown182.ShowHelp"))));
-            // 
-            // numericUpDown183
-            // 
-            resources.ApplyResources(this.numericUpDown183, "numericUpDown183");
-            this.numericUpDown183.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown183.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown183.Name = "numericUpDown183";
-            this.helpProvider1.SetShowHelp(this.numericUpDown183, ((bool)(resources.GetObject("numericUpDown183.ShowHelp"))));
-            // 
-            // numericUpDown184
-            // 
-            resources.ApplyResources(this.numericUpDown184, "numericUpDown184");
-            this.numericUpDown184.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown184.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown184.Name = "numericUpDown184";
-            this.helpProvider1.SetShowHelp(this.numericUpDown184, ((bool)(resources.GetObject("numericUpDown184.ShowHelp"))));
-            // 
-            // comboBox107
-            // 
-            this.comboBox107.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox107.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox107, "comboBox107");
-            this.comboBox107.FormattingEnabled = true;
-            this.comboBox107.Name = "comboBox107";
-            this.helpProvider1.SetShowHelp(this.comboBox107, ((bool)(resources.GetObject("comboBox107.ShowHelp"))));
-            // 
-            // numericUpDown185
-            // 
-            this.numericUpDown185.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown185, "numericUpDown185");
-            this.numericUpDown185.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown185.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown185.Name = "numericUpDown185";
-            this.helpProvider1.SetShowHelp(this.numericUpDown185, ((bool)(resources.GetObject("numericUpDown185.ShowHelp"))));
-            // 
-            // numericUpDown186
-            // 
-            this.numericUpDown186.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown186, "numericUpDown186");
-            this.numericUpDown186.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown186.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown186.Name = "numericUpDown186";
-            this.helpProvider1.SetShowHelp(this.numericUpDown186, ((bool)(resources.GetObject("numericUpDown186.ShowHelp"))));
-            // 
-            // numericUpDown187
-            // 
-            resources.ApplyResources(this.numericUpDown187, "numericUpDown187");
-            this.numericUpDown187.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown187.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown187.Name = "numericUpDown187";
-            this.helpProvider1.SetShowHelp(this.numericUpDown187, ((bool)(resources.GetObject("numericUpDown187.ShowHelp"))));
-            // 
-            // numericUpDown188
-            // 
-            resources.ApplyResources(this.numericUpDown188, "numericUpDown188");
-            this.numericUpDown188.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown188.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown188.Name = "numericUpDown188";
-            this.helpProvider1.SetShowHelp(this.numericUpDown188, ((bool)(resources.GetObject("numericUpDown188.ShowHelp"))));
-            this.numericUpDown188.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // comboBox108
-            // 
-            this.comboBox108.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox108.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox108, "comboBox108");
-            this.comboBox108.FormattingEnabled = true;
-            this.comboBox108.Name = "comboBox108";
-            this.helpProvider1.SetShowHelp(this.comboBox108, ((bool)(resources.GetObject("comboBox108.ShowHelp"))));
-            // 
-            // numericUpDown189
-            // 
-            this.numericUpDown189.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown189, "numericUpDown189");
-            this.numericUpDown189.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown189.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown189.Name = "numericUpDown189";
-            this.helpProvider1.SetShowHelp(this.numericUpDown189, ((bool)(resources.GetObject("numericUpDown189.ShowHelp"))));
-            // 
-            // numericUpDown190
-            // 
-            this.numericUpDown190.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown190, "numericUpDown190");
-            this.numericUpDown190.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown190.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown190.Name = "numericUpDown190";
-            this.helpProvider1.SetShowHelp(this.numericUpDown190, ((bool)(resources.GetObject("numericUpDown190.ShowHelp"))));
-            // 
-            // label1017
-            // 
-            resources.ApplyResources(this.label1017, "label1017");
-            this.label1017.Name = "label1017";
-            this.helpProvider1.SetShowHelp(this.label1017, ((bool)(resources.GetObject("label1017.ShowHelp"))));
-            // 
-            // label1018
-            // 
-            resources.ApplyResources(this.label1018, "label1018");
-            this.label1018.Name = "label1018";
-            this.helpProvider1.SetShowHelp(this.label1018, ((bool)(resources.GetObject("label1018.ShowHelp"))));
-            // 
-            // label1019
-            // 
-            resources.ApplyResources(this.label1019, "label1019");
-            this.label1019.Name = "label1019";
-            this.helpProvider1.SetShowHelp(this.label1019, ((bool)(resources.GetObject("label1019.ShowHelp"))));
-            // 
-            // label1020
-            // 
-            resources.ApplyResources(this.label1020, "label1020");
-            this.label1020.Name = "label1020";
-            this.helpProvider1.SetShowHelp(this.label1020, ((bool)(resources.GetObject("label1020.ShowHelp"))));
-            // 
-            // label1021
-            // 
-            resources.ApplyResources(this.label1021, "label1021");
-            this.label1021.Name = "label1021";
-            this.helpProvider1.SetShowHelp(this.label1021, ((bool)(resources.GetObject("label1021.ShowHelp"))));
-            // 
-            // label1022
-            // 
-            resources.ApplyResources(this.label1022, "label1022");
-            this.label1022.Name = "label1022";
-            this.helpProvider1.SetShowHelp(this.label1022, ((bool)(resources.GetObject("label1022.ShowHelp"))));
-            // 
-            // label1023
-            // 
-            resources.ApplyResources(this.label1023, "label1023");
-            this.label1023.Name = "label1023";
-            this.helpProvider1.SetShowHelp(this.label1023, ((bool)(resources.GetObject("label1023.ShowHelp"))));
-            // 
-            // label1024
-            // 
-            resources.ApplyResources(this.label1024, "label1024");
-            this.label1024.Name = "label1024";
-            this.helpProvider1.SetShowHelp(this.label1024, ((bool)(resources.GetObject("label1024.ShowHelp"))));
-            // 
-            // label1025
-            // 
-            resources.ApplyResources(this.label1025, "label1025");
-            this.label1025.Name = "label1025";
-            this.helpProvider1.SetShowHelp(this.label1025, ((bool)(resources.GetObject("label1025.ShowHelp"))));
-            // 
-            // label1026
-            // 
-            resources.ApplyResources(this.label1026, "label1026");
-            this.label1026.Name = "label1026";
-            this.helpProvider1.SetShowHelp(this.label1026, ((bool)(resources.GetObject("label1026.ShowHelp"))));
-            // 
-            // label1027
-            // 
-            resources.ApplyResources(this.label1027, "label1027");
-            this.label1027.Name = "label1027";
-            this.helpProvider1.SetShowHelp(this.label1027, ((bool)(resources.GetObject("label1027.ShowHelp"))));
-            // 
-            // label1028
-            // 
-            resources.ApplyResources(this.label1028, "label1028");
-            this.label1028.Name = "label1028";
-            this.helpProvider1.SetShowHelp(this.label1028, ((bool)(resources.GetObject("label1028.ShowHelp"))));
-            // 
-            // label1029
-            // 
-            resources.ApplyResources(this.label1029, "label1029");
-            this.label1029.Name = "label1029";
-            this.helpProvider1.SetShowHelp(this.label1029, ((bool)(resources.GetObject("label1029.ShowHelp"))));
-            // 
-            // label1030
-            // 
-            resources.ApplyResources(this.label1030, "label1030");
-            this.label1030.Name = "label1030";
-            this.helpProvider1.SetShowHelp(this.label1030, ((bool)(resources.GetObject("label1030.ShowHelp"))));
-            // 
-            // label1031
-            // 
-            resources.ApplyResources(this.label1031, "label1031");
-            this.label1031.Name = "label1031";
-            this.helpProvider1.SetShowHelp(this.label1031, ((bool)(resources.GetObject("label1031.ShowHelp"))));
-            // 
-            // label1032
-            // 
-            resources.ApplyResources(this.label1032, "label1032");
-            this.label1032.Name = "label1032";
-            this.helpProvider1.SetShowHelp(this.label1032, ((bool)(resources.GetObject("label1032.ShowHelp"))));
-            // 
-            // label1033
-            // 
-            resources.ApplyResources(this.label1033, "label1033");
-            this.label1033.Name = "label1033";
-            this.helpProvider1.SetShowHelp(this.label1033, ((bool)(resources.GetObject("label1033.ShowHelp"))));
-            // 
-            // button34
-            // 
-            resources.ApplyResources(this.button34, "button34");
-            this.button34.Name = "button34";
-            this.helpProvider1.SetShowHelp(this.button34, ((bool)(resources.GetObject("button34.ShowHelp"))));
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // panel42
-            // 
-            this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel42.Controls.Add(this.checkBox48);
-            this.panel42.Controls.Add(this.comboBox109);
-            this.panel42.Controls.Add(this.comboBox110);
-            this.panel42.Controls.Add(this.comboBox111);
-            this.panel42.Controls.Add(this.numericUpDown191);
-            this.panel42.Controls.Add(this.numericUpDown192);
-            this.panel42.Controls.Add(this.numericUpDown193);
-            this.panel42.Controls.Add(this.numericUpDown194);
-            this.panel42.Controls.Add(this.comboBox112);
-            this.panel42.Controls.Add(this.numericUpDown195);
-            this.panel42.Controls.Add(this.checkBox49);
-            this.panel42.Controls.Add(this.comboBox113);
-            this.panel42.Controls.Add(this.label1034);
-            this.panel42.Controls.Add(this.label1035);
-            this.panel42.Controls.Add(this.label1036);
-            this.panel42.Controls.Add(this.label1037);
-            this.panel42.Controls.Add(this.label1038);
-            this.panel42.Controls.Add(this.label1039);
-            this.panel42.Controls.Add(this.label1040);
-            this.panel42.Controls.Add(this.label1041);
-            this.panel42.Controls.Add(this.label1042);
-            this.panel42.Controls.Add(this.label1043);
-            this.panel42.Controls.Add(this.label1044);
-            this.panel42.Controls.Add(this.label1045);
-            resources.ApplyResources(this.panel42, "panel42");
-            this.panel42.Name = "panel42";
-            this.helpProvider1.SetShowHelp(this.panel42, ((bool)(resources.GetObject("panel42.ShowHelp"))));
-            // 
-            // checkBox48
-            // 
-            resources.ApplyResources(this.checkBox48, "checkBox48");
-            this.checkBox48.Name = "checkBox48";
-            this.helpProvider1.SetShowHelp(this.checkBox48, ((bool)(resources.GetObject("checkBox48.ShowHelp"))));
-            this.checkBox48.UseVisualStyleBackColor = true;
-            // 
-            // comboBox109
-            // 
-            this.comboBox109.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox109.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox109, "comboBox109");
-            this.comboBox109.FormattingEnabled = true;
-            this.comboBox109.Name = "comboBox109";
-            this.helpProvider1.SetShowHelp(this.comboBox109, ((bool)(resources.GetObject("comboBox109.ShowHelp"))));
-            // 
-            // comboBox110
-            // 
-            this.comboBox110.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox110.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox110, "comboBox110");
-            this.comboBox110.FormattingEnabled = true;
-            this.comboBox110.Name = "comboBox110";
-            this.helpProvider1.SetShowHelp(this.comboBox110, ((bool)(resources.GetObject("comboBox110.ShowHelp"))));
-            // 
-            // comboBox111
-            // 
-            this.comboBox111.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox111.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox111, "comboBox111");
-            this.comboBox111.FormattingEnabled = true;
-            this.comboBox111.Name = "comboBox111";
-            this.helpProvider1.SetShowHelp(this.comboBox111, ((bool)(resources.GetObject("comboBox111.ShowHelp"))));
-            // 
-            // numericUpDown191
-            // 
-            this.numericUpDown191.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown191, "numericUpDown191");
-            this.numericUpDown191.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown191.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown191.Name = "numericUpDown191";
-            this.helpProvider1.SetShowHelp(this.numericUpDown191, ((bool)(resources.GetObject("numericUpDown191.ShowHelp"))));
-            // 
-            // numericUpDown192
-            // 
-            this.numericUpDown192.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown192, "numericUpDown192");
-            this.numericUpDown192.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown192.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown192.Name = "numericUpDown192";
-            this.helpProvider1.SetShowHelp(this.numericUpDown192, ((bool)(resources.GetObject("numericUpDown192.ShowHelp"))));
-            // 
-            // numericUpDown193
-            // 
-            this.numericUpDown193.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown193, "numericUpDown193");
-            this.numericUpDown193.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown193.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown193.Name = "numericUpDown193";
-            this.helpProvider1.SetShowHelp(this.numericUpDown193, ((bool)(resources.GetObject("numericUpDown193.ShowHelp"))));
-            // 
-            // numericUpDown194
-            // 
-            this.numericUpDown194.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown194, "numericUpDown194");
-            this.numericUpDown194.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown194.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown194.Name = "numericUpDown194";
-            this.helpProvider1.SetShowHelp(this.numericUpDown194, ((bool)(resources.GetObject("numericUpDown194.ShowHelp"))));
-            // 
-            // comboBox112
-            // 
-            this.comboBox112.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox112, "comboBox112");
-            this.comboBox112.FormattingEnabled = true;
-            this.comboBox112.Items.AddRange(new object[] {
-            resources.GetString("comboBox112.Items"),
-            resources.GetString("comboBox112.Items1"),
-            resources.GetString("comboBox112.Items2")});
-            this.comboBox112.Name = "comboBox112";
-            this.helpProvider1.SetShowHelp(this.comboBox112, ((bool)(resources.GetObject("comboBox112.ShowHelp"))));
-            // 
-            // numericUpDown195
-            // 
-            resources.ApplyResources(this.numericUpDown195, "numericUpDown195");
-            this.numericUpDown195.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown195.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown195.Name = "numericUpDown195";
-            this.helpProvider1.SetShowHelp(this.numericUpDown195, ((bool)(resources.GetObject("numericUpDown195.ShowHelp"))));
-            // 
-            // checkBox49
-            // 
-            resources.ApplyResources(this.checkBox49, "checkBox49");
-            this.checkBox49.Name = "checkBox49";
-            this.helpProvider1.SetShowHelp(this.checkBox49, ((bool)(resources.GetObject("checkBox49.ShowHelp"))));
-            this.checkBox49.UseVisualStyleBackColor = true;
-            // 
-            // comboBox113
-            // 
-            this.comboBox113.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox113.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox113, "comboBox113");
-            this.comboBox113.FormattingEnabled = true;
-            this.comboBox113.Name = "comboBox113";
-            this.helpProvider1.SetShowHelp(this.comboBox113, ((bool)(resources.GetObject("comboBox113.ShowHelp"))));
-            // 
-            // label1034
-            // 
-            resources.ApplyResources(this.label1034, "label1034");
-            this.label1034.Name = "label1034";
-            this.helpProvider1.SetShowHelp(this.label1034, ((bool)(resources.GetObject("label1034.ShowHelp"))));
-            // 
-            // label1035
-            // 
-            resources.ApplyResources(this.label1035, "label1035");
-            this.label1035.Name = "label1035";
-            this.helpProvider1.SetShowHelp(this.label1035, ((bool)(resources.GetObject("label1035.ShowHelp"))));
-            // 
-            // label1036
-            // 
-            resources.ApplyResources(this.label1036, "label1036");
-            this.label1036.Name = "label1036";
-            this.helpProvider1.SetShowHelp(this.label1036, ((bool)(resources.GetObject("label1036.ShowHelp"))));
-            // 
-            // label1037
-            // 
-            resources.ApplyResources(this.label1037, "label1037");
-            this.label1037.Name = "label1037";
-            this.helpProvider1.SetShowHelp(this.label1037, ((bool)(resources.GetObject("label1037.ShowHelp"))));
-            // 
-            // label1038
-            // 
-            resources.ApplyResources(this.label1038, "label1038");
-            this.label1038.Name = "label1038";
-            this.helpProvider1.SetShowHelp(this.label1038, ((bool)(resources.GetObject("label1038.ShowHelp"))));
-            // 
-            // label1039
-            // 
-            resources.ApplyResources(this.label1039, "label1039");
-            this.label1039.Name = "label1039";
-            this.helpProvider1.SetShowHelp(this.label1039, ((bool)(resources.GetObject("label1039.ShowHelp"))));
-            // 
-            // label1040
-            // 
-            resources.ApplyResources(this.label1040, "label1040");
-            this.label1040.Name = "label1040";
-            this.helpProvider1.SetShowHelp(this.label1040, ((bool)(resources.GetObject("label1040.ShowHelp"))));
-            // 
-            // label1041
-            // 
-            resources.ApplyResources(this.label1041, "label1041");
-            this.label1041.Name = "label1041";
-            this.helpProvider1.SetShowHelp(this.label1041, ((bool)(resources.GetObject("label1041.ShowHelp"))));
-            // 
-            // label1042
-            // 
-            resources.ApplyResources(this.label1042, "label1042");
-            this.label1042.Name = "label1042";
-            this.helpProvider1.SetShowHelp(this.label1042, ((bool)(resources.GetObject("label1042.ShowHelp"))));
-            // 
-            // label1043
-            // 
-            resources.ApplyResources(this.label1043, "label1043");
-            this.label1043.Name = "label1043";
-            this.helpProvider1.SetShowHelp(this.label1043, ((bool)(resources.GetObject("label1043.ShowHelp"))));
-            // 
-            // label1044
-            // 
-            resources.ApplyResources(this.label1044, "label1044");
-            this.label1044.Name = "label1044";
-            this.helpProvider1.SetShowHelp(this.label1044, ((bool)(resources.GetObject("label1044.ShowHelp"))));
-            // 
-            // label1045
-            // 
-            resources.ApplyResources(this.label1045, "label1045");
-            this.label1045.Name = "label1045";
-            this.helpProvider1.SetShowHelp(this.label1045, ((bool)(resources.GetObject("label1045.ShowHelp"))));
-            // 
-            // button35
-            // 
-            resources.ApplyResources(this.button35, "button35");
-            this.button35.Name = "button35";
-            this.helpProvider1.SetShowHelp(this.button35, ((bool)(resources.GetObject("button35.ShowHelp"))));
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // panel43
-            // 
-            this.panel43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel43.Controls.Add(this.checkBox50);
-            this.panel43.Controls.Add(this.comboBox114);
-            this.panel43.Controls.Add(this.numericUpDown196);
-            this.panel43.Controls.Add(this.numericUpDown197);
-            this.panel43.Controls.Add(this.numericUpDown198);
-            this.panel43.Controls.Add(this.label1046);
-            this.panel43.Controls.Add(this.label1047);
-            this.panel43.Controls.Add(this.label1048);
-            this.panel43.Controls.Add(this.label1049);
-            this.panel43.Controls.Add(this.label1050);
-            resources.ApplyResources(this.panel43, "panel43");
-            this.panel43.Name = "panel43";
-            this.helpProvider1.SetShowHelp(this.panel43, ((bool)(resources.GetObject("panel43.ShowHelp"))));
-            // 
-            // checkBox50
-            // 
-            resources.ApplyResources(this.checkBox50, "checkBox50");
-            this.checkBox50.Name = "checkBox50";
-            this.helpProvider1.SetShowHelp(this.checkBox50, ((bool)(resources.GetObject("checkBox50.ShowHelp"))));
-            this.checkBox50.UseVisualStyleBackColor = true;
-            // 
-            // comboBox114
-            // 
-            this.comboBox114.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox114.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox114, "comboBox114");
-            this.comboBox114.FormattingEnabled = true;
-            this.comboBox114.Name = "comboBox114";
-            this.helpProvider1.SetShowHelp(this.comboBox114, ((bool)(resources.GetObject("comboBox114.ShowHelp"))));
-            // 
-            // numericUpDown196
-            // 
-            this.numericUpDown196.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown196, "numericUpDown196");
-            this.numericUpDown196.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown196.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown196.Name = "numericUpDown196";
-            this.helpProvider1.SetShowHelp(this.numericUpDown196, ((bool)(resources.GetObject("numericUpDown196.ShowHelp"))));
-            // 
-            // numericUpDown197
-            // 
-            this.numericUpDown197.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown197, "numericUpDown197");
-            this.numericUpDown197.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown197.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown197.Name = "numericUpDown197";
-            this.helpProvider1.SetShowHelp(this.numericUpDown197, ((bool)(resources.GetObject("numericUpDown197.ShowHelp"))));
-            // 
-            // numericUpDown198
-            // 
-            this.numericUpDown198.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown198, "numericUpDown198");
-            this.numericUpDown198.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown198.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown198.Name = "numericUpDown198";
-            this.helpProvider1.SetShowHelp(this.numericUpDown198, ((bool)(resources.GetObject("numericUpDown198.ShowHelp"))));
-            this.numericUpDown198.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label1046
-            // 
-            resources.ApplyResources(this.label1046, "label1046");
-            this.label1046.Name = "label1046";
-            this.helpProvider1.SetShowHelp(this.label1046, ((bool)(resources.GetObject("label1046.ShowHelp"))));
-            // 
-            // label1047
-            // 
-            resources.ApplyResources(this.label1047, "label1047");
-            this.label1047.Name = "label1047";
-            this.helpProvider1.SetShowHelp(this.label1047, ((bool)(resources.GetObject("label1047.ShowHelp"))));
-            // 
-            // label1048
-            // 
-            resources.ApplyResources(this.label1048, "label1048");
-            this.label1048.Name = "label1048";
-            this.helpProvider1.SetShowHelp(this.label1048, ((bool)(resources.GetObject("label1048.ShowHelp"))));
-            // 
-            // label1049
-            // 
-            resources.ApplyResources(this.label1049, "label1049");
-            this.label1049.Name = "label1049";
-            this.helpProvider1.SetShowHelp(this.label1049, ((bool)(resources.GetObject("label1049.ShowHelp"))));
-            // 
-            // label1050
-            // 
-            resources.ApplyResources(this.label1050, "label1050");
-            this.label1050.Name = "label1050";
-            this.helpProvider1.SetShowHelp(this.label1050, ((bool)(resources.GetObject("label1050.ShowHelp"))));
-            // 
-            // button36
-            // 
-            resources.ApplyResources(this.button36, "button36");
-            this.button36.Name = "button36";
-            this.helpProvider1.SetShowHelp(this.button36, ((bool)(resources.GetObject("button36.ShowHelp"))));
-            this.button36.UseVisualStyleBackColor = true;
             // 
             // tabPage_Distance_AOD
             // 
             resources.ApplyResources(this.tabPage_Distance_AOD, "tabPage_Distance_AOD");
             this.tabPage_Distance_AOD.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Distance_AOD.Controls.Add(this.panel44);
-            this.tabPage_Distance_AOD.Controls.Add(this.panel45);
-            this.tabPage_Distance_AOD.Controls.Add(this.button37);
-            this.tabPage_Distance_AOD.Controls.Add(this.panel46);
-            this.tabPage_Distance_AOD.Controls.Add(this.button38);
-            this.tabPage_Distance_AOD.Controls.Add(this.panel47);
-            this.tabPage_Distance_AOD.Controls.Add(this.button39);
-            this.tabPage_Distance_AOD.Controls.Add(this.panel48);
-            this.tabPage_Distance_AOD.Controls.Add(this.button40);
-            this.tabPage_Distance_AOD.Controls.Add(this.panel49);
-            this.tabPage_Distance_AOD.Controls.Add(this.button41);
             this.tabPage_Distance_AOD.Name = "tabPage_Distance_AOD";
             this.helpProvider1.SetShowHelp(this.tabPage_Distance_AOD, ((bool)(resources.GetObject("tabPage_Distance_AOD.ShowHelp"))));
-            // 
-            // panel44
-            // 
-            resources.ApplyResources(this.panel44, "panel44");
-            this.panel44.Name = "panel44";
-            this.helpProvider1.SetShowHelp(this.panel44, ((bool)(resources.GetObject("panel44.ShowHelp"))));
-            // 
-            // panel45
-            // 
-            this.panel45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel45.Controls.Add(this.checkBox51);
-            this.panel45.Controls.Add(this.radioButton19);
-            this.panel45.Controls.Add(this.radioButton20);
-            this.panel45.Controls.Add(this.comboBox115);
-            this.panel45.Controls.Add(this.comboBox116);
-            this.panel45.Controls.Add(this.comboBox117);
-            this.panel45.Controls.Add(this.comboBox118);
-            this.panel45.Controls.Add(this.numericUpDown199);
-            this.panel45.Controls.Add(this.numericUpDown200);
-            this.panel45.Controls.Add(this.numericUpDown201);
-            this.panel45.Controls.Add(this.numericUpDown202);
-            this.panel45.Controls.Add(this.label1051);
-            this.panel45.Controls.Add(this.label1052);
-            this.panel45.Controls.Add(this.label1053);
-            this.panel45.Controls.Add(this.label1054);
-            this.panel45.Controls.Add(this.label1055);
-            this.panel45.Controls.Add(this.label1056);
-            this.panel45.Controls.Add(this.label1057);
-            resources.ApplyResources(this.panel45, "panel45");
-            this.panel45.Name = "panel45";
-            this.helpProvider1.SetShowHelp(this.panel45, ((bool)(resources.GetObject("panel45.ShowHelp"))));
-            // 
-            // checkBox51
-            // 
-            resources.ApplyResources(this.checkBox51, "checkBox51");
-            this.checkBox51.Name = "checkBox51";
-            this.helpProvider1.SetShowHelp(this.checkBox51, ((bool)(resources.GetObject("checkBox51.ShowHelp"))));
-            this.checkBox51.UseVisualStyleBackColor = true;
-            // 
-            // radioButton19
-            // 
-            resources.ApplyResources(this.radioButton19, "radioButton19");
-            this.radioButton19.Checked = true;
-            this.radioButton19.Name = "radioButton19";
-            this.helpProvider1.SetShowHelp(this.radioButton19, ((bool)(resources.GetObject("radioButton19.ShowHelp"))));
-            this.radioButton19.TabStop = true;
-            this.radioButton19.UseVisualStyleBackColor = true;
-            // 
-            // radioButton20
-            // 
-            resources.ApplyResources(this.radioButton20, "radioButton20");
-            this.radioButton20.Name = "radioButton20";
-            this.helpProvider1.SetShowHelp(this.radioButton20, ((bool)(resources.GetObject("radioButton20.ShowHelp"))));
-            this.radioButton20.TabStop = true;
-            this.radioButton20.UseVisualStyleBackColor = true;
-            // 
-            // comboBox115
-            // 
-            this.comboBox115.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox115.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox115, "comboBox115");
-            this.comboBox115.FormattingEnabled = true;
-            this.comboBox115.Name = "comboBox115";
-            this.helpProvider1.SetShowHelp(this.comboBox115, ((bool)(resources.GetObject("comboBox115.ShowHelp"))));
-            // 
-            // comboBox116
-            // 
-            this.comboBox116.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox116.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox116, "comboBox116");
-            this.comboBox116.FormattingEnabled = true;
-            this.comboBox116.Name = "comboBox116";
-            this.helpProvider1.SetShowHelp(this.comboBox116, ((bool)(resources.GetObject("comboBox116.ShowHelp"))));
-            // 
-            // comboBox117
-            // 
-            this.comboBox117.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox117.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox117, "comboBox117");
-            this.comboBox117.FormattingEnabled = true;
-            this.comboBox117.Name = "comboBox117";
-            this.helpProvider1.SetShowHelp(this.comboBox117, ((bool)(resources.GetObject("comboBox117.ShowHelp"))));
-            // 
-            // comboBox118
-            // 
-            this.comboBox118.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox118.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox118, "comboBox118");
-            this.comboBox118.FormattingEnabled = true;
-            this.comboBox118.Name = "comboBox118";
-            this.helpProvider1.SetShowHelp(this.comboBox118, ((bool)(resources.GetObject("comboBox118.ShowHelp"))));
-            // 
-            // numericUpDown199
-            // 
-            this.numericUpDown199.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown199, "numericUpDown199");
-            this.numericUpDown199.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown199.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown199.Name = "numericUpDown199";
-            this.helpProvider1.SetShowHelp(this.numericUpDown199, ((bool)(resources.GetObject("numericUpDown199.ShowHelp"))));
-            // 
-            // numericUpDown200
-            // 
-            this.numericUpDown200.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown200, "numericUpDown200");
-            this.numericUpDown200.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown200.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown200.Name = "numericUpDown200";
-            this.helpProvider1.SetShowHelp(this.numericUpDown200, ((bool)(resources.GetObject("numericUpDown200.ShowHelp"))));
-            // 
-            // numericUpDown201
-            // 
-            resources.ApplyResources(this.numericUpDown201, "numericUpDown201");
-            this.numericUpDown201.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown201.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown201.Name = "numericUpDown201";
-            this.helpProvider1.SetShowHelp(this.numericUpDown201, ((bool)(resources.GetObject("numericUpDown201.ShowHelp"))));
-            this.numericUpDown201.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown202
-            // 
-            resources.ApplyResources(this.numericUpDown202, "numericUpDown202");
-            this.numericUpDown202.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown202.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown202.Name = "numericUpDown202";
-            this.helpProvider1.SetShowHelp(this.numericUpDown202, ((bool)(resources.GetObject("numericUpDown202.ShowHelp"))));
-            this.numericUpDown202.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label1051
-            // 
-            resources.ApplyResources(this.label1051, "label1051");
-            this.label1051.Name = "label1051";
-            this.helpProvider1.SetShowHelp(this.label1051, ((bool)(resources.GetObject("label1051.ShowHelp"))));
-            // 
-            // label1052
-            // 
-            resources.ApplyResources(this.label1052, "label1052");
-            this.label1052.Name = "label1052";
-            this.helpProvider1.SetShowHelp(this.label1052, ((bool)(resources.GetObject("label1052.ShowHelp"))));
-            // 
-            // label1053
-            // 
-            resources.ApplyResources(this.label1053, "label1053");
-            this.label1053.Name = "label1053";
-            this.helpProvider1.SetShowHelp(this.label1053, ((bool)(resources.GetObject("label1053.ShowHelp"))));
-            // 
-            // label1054
-            // 
-            resources.ApplyResources(this.label1054, "label1054");
-            this.label1054.Name = "label1054";
-            this.helpProvider1.SetShowHelp(this.label1054, ((bool)(resources.GetObject("label1054.ShowHelp"))));
-            // 
-            // label1055
-            // 
-            resources.ApplyResources(this.label1055, "label1055");
-            this.label1055.Name = "label1055";
-            this.helpProvider1.SetShowHelp(this.label1055, ((bool)(resources.GetObject("label1055.ShowHelp"))));
-            // 
-            // label1056
-            // 
-            resources.ApplyResources(this.label1056, "label1056");
-            this.label1056.Name = "label1056";
-            this.helpProvider1.SetShowHelp(this.label1056, ((bool)(resources.GetObject("label1056.ShowHelp"))));
-            // 
-            // label1057
-            // 
-            resources.ApplyResources(this.label1057, "label1057");
-            this.label1057.Name = "label1057";
-            this.helpProvider1.SetShowHelp(this.label1057, ((bool)(resources.GetObject("label1057.ShowHelp"))));
-            // 
-            // button37
-            // 
-            resources.ApplyResources(this.button37, "button37");
-            this.button37.Name = "button37";
-            this.helpProvider1.SetShowHelp(this.button37, ((bool)(resources.GetObject("button37.ShowHelp"))));
-            this.button37.UseVisualStyleBackColor = true;
-            // 
-            // panel46
-            // 
-            this.panel46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel46.Controls.Add(this.checkBox52);
-            this.panel46.Controls.Add(this.radioButton21);
-            this.panel46.Controls.Add(this.radioButton22);
-            this.panel46.Controls.Add(this.comboBox119);
-            this.panel46.Controls.Add(this.comboBox120);
-            this.panel46.Controls.Add(this.comboBox121);
-            this.panel46.Controls.Add(this.comboBox122);
-            this.panel46.Controls.Add(this.numericUpDown203);
-            this.panel46.Controls.Add(this.numericUpDown204);
-            this.panel46.Controls.Add(this.numericUpDown205);
-            this.panel46.Controls.Add(this.numericUpDown206);
-            this.panel46.Controls.Add(this.numericUpDown207);
-            this.panel46.Controls.Add(this.numericUpDown208);
-            this.panel46.Controls.Add(this.label1058);
-            this.panel46.Controls.Add(this.label1059);
-            this.panel46.Controls.Add(this.label1060);
-            this.panel46.Controls.Add(this.label1061);
-            this.panel46.Controls.Add(this.label1062);
-            this.panel46.Controls.Add(this.label1063);
-            this.panel46.Controls.Add(this.label1064);
-            this.panel46.Controls.Add(this.label1065);
-            this.panel46.Controls.Add(this.label1066);
-            resources.ApplyResources(this.panel46, "panel46");
-            this.panel46.Name = "panel46";
-            this.helpProvider1.SetShowHelp(this.panel46, ((bool)(resources.GetObject("panel46.ShowHelp"))));
-            // 
-            // checkBox52
-            // 
-            resources.ApplyResources(this.checkBox52, "checkBox52");
-            this.checkBox52.Name = "checkBox52";
-            this.helpProvider1.SetShowHelp(this.checkBox52, ((bool)(resources.GetObject("checkBox52.ShowHelp"))));
-            this.checkBox52.UseVisualStyleBackColor = true;
-            // 
-            // radioButton21
-            // 
-            resources.ApplyResources(this.radioButton21, "radioButton21");
-            this.radioButton21.Checked = true;
-            this.radioButton21.Name = "radioButton21";
-            this.helpProvider1.SetShowHelp(this.radioButton21, ((bool)(resources.GetObject("radioButton21.ShowHelp"))));
-            this.radioButton21.TabStop = true;
-            this.radioButton21.UseVisualStyleBackColor = true;
-            // 
-            // radioButton22
-            // 
-            resources.ApplyResources(this.radioButton22, "radioButton22");
-            this.radioButton22.Name = "radioButton22";
-            this.helpProvider1.SetShowHelp(this.radioButton22, ((bool)(resources.GetObject("radioButton22.ShowHelp"))));
-            this.radioButton22.TabStop = true;
-            this.radioButton22.UseVisualStyleBackColor = true;
-            // 
-            // comboBox119
-            // 
-            this.comboBox119.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox119.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox119, "comboBox119");
-            this.comboBox119.FormattingEnabled = true;
-            this.comboBox119.Name = "comboBox119";
-            this.helpProvider1.SetShowHelp(this.comboBox119, ((bool)(resources.GetObject("comboBox119.ShowHelp"))));
-            // 
-            // comboBox120
-            // 
-            this.comboBox120.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox120.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox120, "comboBox120");
-            this.comboBox120.FormattingEnabled = true;
-            this.comboBox120.Name = "comboBox120";
-            this.helpProvider1.SetShowHelp(this.comboBox120, ((bool)(resources.GetObject("comboBox120.ShowHelp"))));
-            // 
-            // comboBox121
-            // 
-            this.comboBox121.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox121, "comboBox121");
-            this.comboBox121.FormattingEnabled = true;
-            this.comboBox121.Items.AddRange(new object[] {
-            resources.GetString("comboBox121.Items"),
-            resources.GetString("comboBox121.Items1"),
-            resources.GetString("comboBox121.Items2")});
-            this.comboBox121.Name = "comboBox121";
-            this.helpProvider1.SetShowHelp(this.comboBox121, ((bool)(resources.GetObject("comboBox121.ShowHelp"))));
-            // 
-            // comboBox122
-            // 
-            this.comboBox122.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox122.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox122, "comboBox122");
-            this.comboBox122.FormattingEnabled = true;
-            this.comboBox122.Name = "comboBox122";
-            this.helpProvider1.SetShowHelp(this.comboBox122, ((bool)(resources.GetObject("comboBox122.ShowHelp"))));
-            // 
-            // numericUpDown203
-            // 
-            this.numericUpDown203.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown203, "numericUpDown203");
-            this.numericUpDown203.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown203.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown203.Name = "numericUpDown203";
-            this.helpProvider1.SetShowHelp(this.numericUpDown203, ((bool)(resources.GetObject("numericUpDown203.ShowHelp"))));
-            // 
-            // numericUpDown204
-            // 
-            this.numericUpDown204.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown204, "numericUpDown204");
-            this.numericUpDown204.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown204.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown204.Name = "numericUpDown204";
-            this.helpProvider1.SetShowHelp(this.numericUpDown204, ((bool)(resources.GetObject("numericUpDown204.ShowHelp"))));
-            // 
-            // numericUpDown205
-            // 
-            resources.ApplyResources(this.numericUpDown205, "numericUpDown205");
-            this.numericUpDown205.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown205.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown205.Name = "numericUpDown205";
-            this.helpProvider1.SetShowHelp(this.numericUpDown205, ((bool)(resources.GetObject("numericUpDown205.ShowHelp"))));
-            this.numericUpDown205.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown206
-            // 
-            resources.ApplyResources(this.numericUpDown206, "numericUpDown206");
-            this.numericUpDown206.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown206.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown206.Name = "numericUpDown206";
-            this.helpProvider1.SetShowHelp(this.numericUpDown206, ((bool)(resources.GetObject("numericUpDown206.ShowHelp"))));
-            this.numericUpDown206.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown207
-            // 
-            resources.ApplyResources(this.numericUpDown207, "numericUpDown207");
-            this.numericUpDown207.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown207.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown207.Name = "numericUpDown207";
-            this.helpProvider1.SetShowHelp(this.numericUpDown207, ((bool)(resources.GetObject("numericUpDown207.ShowHelp"))));
-            // 
-            // numericUpDown208
-            // 
-            resources.ApplyResources(this.numericUpDown208, "numericUpDown208");
-            this.numericUpDown208.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown208.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown208.Name = "numericUpDown208";
-            this.helpProvider1.SetShowHelp(this.numericUpDown208, ((bool)(resources.GetObject("numericUpDown208.ShowHelp"))));
-            this.numericUpDown208.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // label1058
-            // 
-            resources.ApplyResources(this.label1058, "label1058");
-            this.label1058.Name = "label1058";
-            this.helpProvider1.SetShowHelp(this.label1058, ((bool)(resources.GetObject("label1058.ShowHelp"))));
-            // 
-            // label1059
-            // 
-            resources.ApplyResources(this.label1059, "label1059");
-            this.label1059.Name = "label1059";
-            this.helpProvider1.SetShowHelp(this.label1059, ((bool)(resources.GetObject("label1059.ShowHelp"))));
-            // 
-            // label1060
-            // 
-            resources.ApplyResources(this.label1060, "label1060");
-            this.label1060.Name = "label1060";
-            this.helpProvider1.SetShowHelp(this.label1060, ((bool)(resources.GetObject("label1060.ShowHelp"))));
-            // 
-            // label1061
-            // 
-            resources.ApplyResources(this.label1061, "label1061");
-            this.label1061.Name = "label1061";
-            this.helpProvider1.SetShowHelp(this.label1061, ((bool)(resources.GetObject("label1061.ShowHelp"))));
-            // 
-            // label1062
-            // 
-            resources.ApplyResources(this.label1062, "label1062");
-            this.label1062.Name = "label1062";
-            this.helpProvider1.SetShowHelp(this.label1062, ((bool)(resources.GetObject("label1062.ShowHelp"))));
-            // 
-            // label1063
-            // 
-            resources.ApplyResources(this.label1063, "label1063");
-            this.label1063.Name = "label1063";
-            this.helpProvider1.SetShowHelp(this.label1063, ((bool)(resources.GetObject("label1063.ShowHelp"))));
-            // 
-            // label1064
-            // 
-            resources.ApplyResources(this.label1064, "label1064");
-            this.label1064.Name = "label1064";
-            this.helpProvider1.SetShowHelp(this.label1064, ((bool)(resources.GetObject("label1064.ShowHelp"))));
-            // 
-            // label1065
-            // 
-            resources.ApplyResources(this.label1065, "label1065");
-            this.label1065.Name = "label1065";
-            this.helpProvider1.SetShowHelp(this.label1065, ((bool)(resources.GetObject("label1065.ShowHelp"))));
-            // 
-            // label1066
-            // 
-            resources.ApplyResources(this.label1066, "label1066");
-            this.label1066.Name = "label1066";
-            this.helpProvider1.SetShowHelp(this.label1066, ((bool)(resources.GetObject("label1066.ShowHelp"))));
-            // 
-            // button38
-            // 
-            resources.ApplyResources(this.button38, "button38");
-            this.button38.Name = "button38";
-            this.helpProvider1.SetShowHelp(this.button38, ((bool)(resources.GetObject("button38.ShowHelp"))));
-            this.button38.UseVisualStyleBackColor = true;
-            // 
-            // panel47
-            // 
-            this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel47.Controls.Add(this.checkBox53);
-            this.panel47.Controls.Add(this.comboBox123);
-            this.panel47.Controls.Add(this.numericUpDown209);
-            this.panel47.Controls.Add(this.numericUpDown210);
-            this.panel47.Controls.Add(this.numericUpDown211);
-            this.panel47.Controls.Add(this.numericUpDown212);
-            this.panel47.Controls.Add(this.comboBox124);
-            this.panel47.Controls.Add(this.numericUpDown213);
-            this.panel47.Controls.Add(this.numericUpDown214);
-            this.panel47.Controls.Add(this.numericUpDown215);
-            this.panel47.Controls.Add(this.numericUpDown216);
-            this.panel47.Controls.Add(this.comboBox125);
-            this.panel47.Controls.Add(this.numericUpDown217);
-            this.panel47.Controls.Add(this.numericUpDown218);
-            this.panel47.Controls.Add(this.label1067);
-            this.panel47.Controls.Add(this.label1068);
-            this.panel47.Controls.Add(this.label1069);
-            this.panel47.Controls.Add(this.label1070);
-            this.panel47.Controls.Add(this.label1071);
-            this.panel47.Controls.Add(this.label1072);
-            this.panel47.Controls.Add(this.label1073);
-            this.panel47.Controls.Add(this.label1074);
-            this.panel47.Controls.Add(this.label1075);
-            this.panel47.Controls.Add(this.label1076);
-            this.panel47.Controls.Add(this.label1077);
-            this.panel47.Controls.Add(this.label1078);
-            this.panel47.Controls.Add(this.label1079);
-            this.panel47.Controls.Add(this.label1080);
-            this.panel47.Controls.Add(this.label1081);
-            this.panel47.Controls.Add(this.label1082);
-            this.panel47.Controls.Add(this.label1083);
-            resources.ApplyResources(this.panel47, "panel47");
-            this.panel47.Name = "panel47";
-            this.helpProvider1.SetShowHelp(this.panel47, ((bool)(resources.GetObject("panel47.ShowHelp"))));
-            // 
-            // checkBox53
-            // 
-            resources.ApplyResources(this.checkBox53, "checkBox53");
-            this.checkBox53.Name = "checkBox53";
-            this.helpProvider1.SetShowHelp(this.checkBox53, ((bool)(resources.GetObject("checkBox53.ShowHelp"))));
-            this.checkBox53.UseVisualStyleBackColor = true;
-            // 
-            // comboBox123
-            // 
-            this.comboBox123.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox123.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox123, "comboBox123");
-            this.comboBox123.FormattingEnabled = true;
-            this.comboBox123.Name = "comboBox123";
-            this.helpProvider1.SetShowHelp(this.comboBox123, ((bool)(resources.GetObject("comboBox123.ShowHelp"))));
-            // 
-            // numericUpDown209
-            // 
-            this.numericUpDown209.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown209, "numericUpDown209");
-            this.numericUpDown209.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown209.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown209.Name = "numericUpDown209";
-            this.helpProvider1.SetShowHelp(this.numericUpDown209, ((bool)(resources.GetObject("numericUpDown209.ShowHelp"))));
-            // 
-            // numericUpDown210
-            // 
-            this.numericUpDown210.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown210, "numericUpDown210");
-            this.numericUpDown210.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown210.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown210.Name = "numericUpDown210";
-            this.helpProvider1.SetShowHelp(this.numericUpDown210, ((bool)(resources.GetObject("numericUpDown210.ShowHelp"))));
-            // 
-            // numericUpDown211
-            // 
-            resources.ApplyResources(this.numericUpDown211, "numericUpDown211");
-            this.numericUpDown211.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown211.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown211.Name = "numericUpDown211";
-            this.helpProvider1.SetShowHelp(this.numericUpDown211, ((bool)(resources.GetObject("numericUpDown211.ShowHelp"))));
-            // 
-            // numericUpDown212
-            // 
-            resources.ApplyResources(this.numericUpDown212, "numericUpDown212");
-            this.numericUpDown212.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown212.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown212.Name = "numericUpDown212";
-            this.helpProvider1.SetShowHelp(this.numericUpDown212, ((bool)(resources.GetObject("numericUpDown212.ShowHelp"))));
-            // 
-            // comboBox124
-            // 
-            this.comboBox124.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox124.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox124, "comboBox124");
-            this.comboBox124.FormattingEnabled = true;
-            this.comboBox124.Name = "comboBox124";
-            this.helpProvider1.SetShowHelp(this.comboBox124, ((bool)(resources.GetObject("comboBox124.ShowHelp"))));
-            // 
-            // numericUpDown213
-            // 
-            this.numericUpDown213.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown213, "numericUpDown213");
-            this.numericUpDown213.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown213.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown213.Name = "numericUpDown213";
-            this.helpProvider1.SetShowHelp(this.numericUpDown213, ((bool)(resources.GetObject("numericUpDown213.ShowHelp"))));
-            // 
-            // numericUpDown214
-            // 
-            this.numericUpDown214.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown214, "numericUpDown214");
-            this.numericUpDown214.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown214.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown214.Name = "numericUpDown214";
-            this.helpProvider1.SetShowHelp(this.numericUpDown214, ((bool)(resources.GetObject("numericUpDown214.ShowHelp"))));
-            // 
-            // numericUpDown215
-            // 
-            resources.ApplyResources(this.numericUpDown215, "numericUpDown215");
-            this.numericUpDown215.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown215.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown215.Name = "numericUpDown215";
-            this.helpProvider1.SetShowHelp(this.numericUpDown215, ((bool)(resources.GetObject("numericUpDown215.ShowHelp"))));
-            // 
-            // numericUpDown216
-            // 
-            resources.ApplyResources(this.numericUpDown216, "numericUpDown216");
-            this.numericUpDown216.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown216.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown216.Name = "numericUpDown216";
-            this.helpProvider1.SetShowHelp(this.numericUpDown216, ((bool)(resources.GetObject("numericUpDown216.ShowHelp"))));
-            this.numericUpDown216.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            // 
-            // comboBox125
-            // 
-            this.comboBox125.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox125.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox125, "comboBox125");
-            this.comboBox125.FormattingEnabled = true;
-            this.comboBox125.Name = "comboBox125";
-            this.helpProvider1.SetShowHelp(this.comboBox125, ((bool)(resources.GetObject("comboBox125.ShowHelp"))));
-            // 
-            // numericUpDown217
-            // 
-            this.numericUpDown217.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown217, "numericUpDown217");
-            this.numericUpDown217.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown217.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown217.Name = "numericUpDown217";
-            this.helpProvider1.SetShowHelp(this.numericUpDown217, ((bool)(resources.GetObject("numericUpDown217.ShowHelp"))));
-            // 
-            // numericUpDown218
-            // 
-            this.numericUpDown218.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown218, "numericUpDown218");
-            this.numericUpDown218.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown218.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown218.Name = "numericUpDown218";
-            this.helpProvider1.SetShowHelp(this.numericUpDown218, ((bool)(resources.GetObject("numericUpDown218.ShowHelp"))));
-            // 
-            // label1067
-            // 
-            resources.ApplyResources(this.label1067, "label1067");
-            this.label1067.Name = "label1067";
-            this.helpProvider1.SetShowHelp(this.label1067, ((bool)(resources.GetObject("label1067.ShowHelp"))));
-            // 
-            // label1068
-            // 
-            resources.ApplyResources(this.label1068, "label1068");
-            this.label1068.Name = "label1068";
-            this.helpProvider1.SetShowHelp(this.label1068, ((bool)(resources.GetObject("label1068.ShowHelp"))));
-            // 
-            // label1069
-            // 
-            resources.ApplyResources(this.label1069, "label1069");
-            this.label1069.Name = "label1069";
-            this.helpProvider1.SetShowHelp(this.label1069, ((bool)(resources.GetObject("label1069.ShowHelp"))));
-            // 
-            // label1070
-            // 
-            resources.ApplyResources(this.label1070, "label1070");
-            this.label1070.Name = "label1070";
-            this.helpProvider1.SetShowHelp(this.label1070, ((bool)(resources.GetObject("label1070.ShowHelp"))));
-            // 
-            // label1071
-            // 
-            resources.ApplyResources(this.label1071, "label1071");
-            this.label1071.Name = "label1071";
-            this.helpProvider1.SetShowHelp(this.label1071, ((bool)(resources.GetObject("label1071.ShowHelp"))));
-            // 
-            // label1072
-            // 
-            resources.ApplyResources(this.label1072, "label1072");
-            this.label1072.Name = "label1072";
-            this.helpProvider1.SetShowHelp(this.label1072, ((bool)(resources.GetObject("label1072.ShowHelp"))));
-            // 
-            // label1073
-            // 
-            resources.ApplyResources(this.label1073, "label1073");
-            this.label1073.Name = "label1073";
-            this.helpProvider1.SetShowHelp(this.label1073, ((bool)(resources.GetObject("label1073.ShowHelp"))));
-            // 
-            // label1074
-            // 
-            resources.ApplyResources(this.label1074, "label1074");
-            this.label1074.Name = "label1074";
-            this.helpProvider1.SetShowHelp(this.label1074, ((bool)(resources.GetObject("label1074.ShowHelp"))));
-            // 
-            // label1075
-            // 
-            resources.ApplyResources(this.label1075, "label1075");
-            this.label1075.Name = "label1075";
-            this.helpProvider1.SetShowHelp(this.label1075, ((bool)(resources.GetObject("label1075.ShowHelp"))));
-            // 
-            // label1076
-            // 
-            resources.ApplyResources(this.label1076, "label1076");
-            this.label1076.Name = "label1076";
-            this.helpProvider1.SetShowHelp(this.label1076, ((bool)(resources.GetObject("label1076.ShowHelp"))));
-            // 
-            // label1077
-            // 
-            resources.ApplyResources(this.label1077, "label1077");
-            this.label1077.Name = "label1077";
-            this.helpProvider1.SetShowHelp(this.label1077, ((bool)(resources.GetObject("label1077.ShowHelp"))));
-            // 
-            // label1078
-            // 
-            resources.ApplyResources(this.label1078, "label1078");
-            this.label1078.Name = "label1078";
-            this.helpProvider1.SetShowHelp(this.label1078, ((bool)(resources.GetObject("label1078.ShowHelp"))));
-            // 
-            // label1079
-            // 
-            resources.ApplyResources(this.label1079, "label1079");
-            this.label1079.Name = "label1079";
-            this.helpProvider1.SetShowHelp(this.label1079, ((bool)(resources.GetObject("label1079.ShowHelp"))));
-            // 
-            // label1080
-            // 
-            resources.ApplyResources(this.label1080, "label1080");
-            this.label1080.Name = "label1080";
-            this.helpProvider1.SetShowHelp(this.label1080, ((bool)(resources.GetObject("label1080.ShowHelp"))));
-            // 
-            // label1081
-            // 
-            resources.ApplyResources(this.label1081, "label1081");
-            this.label1081.Name = "label1081";
-            this.helpProvider1.SetShowHelp(this.label1081, ((bool)(resources.GetObject("label1081.ShowHelp"))));
-            // 
-            // label1082
-            // 
-            resources.ApplyResources(this.label1082, "label1082");
-            this.label1082.Name = "label1082";
-            this.helpProvider1.SetShowHelp(this.label1082, ((bool)(resources.GetObject("label1082.ShowHelp"))));
-            // 
-            // label1083
-            // 
-            resources.ApplyResources(this.label1083, "label1083");
-            this.label1083.Name = "label1083";
-            this.helpProvider1.SetShowHelp(this.label1083, ((bool)(resources.GetObject("label1083.ShowHelp"))));
-            // 
-            // button39
-            // 
-            resources.ApplyResources(this.button39, "button39");
-            this.button39.Name = "button39";
-            this.helpProvider1.SetShowHelp(this.button39, ((bool)(resources.GetObject("button39.ShowHelp"))));
-            this.button39.UseVisualStyleBackColor = true;
-            // 
-            // panel48
-            // 
-            this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel48.Controls.Add(this.checkBox54);
-            this.panel48.Controls.Add(this.comboBox126);
-            this.panel48.Controls.Add(this.comboBox127);
-            this.panel48.Controls.Add(this.comboBox128);
-            this.panel48.Controls.Add(this.numericUpDown219);
-            this.panel48.Controls.Add(this.numericUpDown220);
-            this.panel48.Controls.Add(this.numericUpDown221);
-            this.panel48.Controls.Add(this.numericUpDown222);
-            this.panel48.Controls.Add(this.comboBox129);
-            this.panel48.Controls.Add(this.numericUpDown223);
-            this.panel48.Controls.Add(this.checkBox55);
-            this.panel48.Controls.Add(this.comboBox130);
-            this.panel48.Controls.Add(this.comboBox131);
-            this.panel48.Controls.Add(this.label1084);
-            this.panel48.Controls.Add(this.label1085);
-            this.panel48.Controls.Add(this.label1086);
-            this.panel48.Controls.Add(this.label1087);
-            this.panel48.Controls.Add(this.label1088);
-            this.panel48.Controls.Add(this.label1089);
-            this.panel48.Controls.Add(this.label1090);
-            this.panel48.Controls.Add(this.label1091);
-            this.panel48.Controls.Add(this.label1092);
-            this.panel48.Controls.Add(this.label1093);
-            this.panel48.Controls.Add(this.label1094);
-            this.panel48.Controls.Add(this.label1095);
-            this.panel48.Controls.Add(this.label1096);
-            resources.ApplyResources(this.panel48, "panel48");
-            this.panel48.Name = "panel48";
-            this.helpProvider1.SetShowHelp(this.panel48, ((bool)(resources.GetObject("panel48.ShowHelp"))));
-            // 
-            // checkBox54
-            // 
-            resources.ApplyResources(this.checkBox54, "checkBox54");
-            this.checkBox54.Name = "checkBox54";
-            this.helpProvider1.SetShowHelp(this.checkBox54, ((bool)(resources.GetObject("checkBox54.ShowHelp"))));
-            this.checkBox54.UseVisualStyleBackColor = true;
-            // 
-            // comboBox126
-            // 
-            this.comboBox126.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox126.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox126, "comboBox126");
-            this.comboBox126.FormattingEnabled = true;
-            this.comboBox126.Name = "comboBox126";
-            this.helpProvider1.SetShowHelp(this.comboBox126, ((bool)(resources.GetObject("comboBox126.ShowHelp"))));
-            // 
-            // comboBox127
-            // 
-            this.comboBox127.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox127.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox127, "comboBox127");
-            this.comboBox127.FormattingEnabled = true;
-            this.comboBox127.Name = "comboBox127";
-            this.helpProvider1.SetShowHelp(this.comboBox127, ((bool)(resources.GetObject("comboBox127.ShowHelp"))));
-            // 
-            // comboBox128
-            // 
-            this.comboBox128.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox128.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox128, "comboBox128");
-            this.comboBox128.FormattingEnabled = true;
-            this.comboBox128.Name = "comboBox128";
-            this.helpProvider1.SetShowHelp(this.comboBox128, ((bool)(resources.GetObject("comboBox128.ShowHelp"))));
-            // 
-            // numericUpDown219
-            // 
-            this.numericUpDown219.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown219, "numericUpDown219");
-            this.numericUpDown219.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown219.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown219.Name = "numericUpDown219";
-            this.helpProvider1.SetShowHelp(this.numericUpDown219, ((bool)(resources.GetObject("numericUpDown219.ShowHelp"))));
-            // 
-            // numericUpDown220
-            // 
-            this.numericUpDown220.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown220, "numericUpDown220");
-            this.numericUpDown220.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown220.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown220.Name = "numericUpDown220";
-            this.helpProvider1.SetShowHelp(this.numericUpDown220, ((bool)(resources.GetObject("numericUpDown220.ShowHelp"))));
-            // 
-            // numericUpDown221
-            // 
-            this.numericUpDown221.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown221, "numericUpDown221");
-            this.numericUpDown221.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown221.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown221.Name = "numericUpDown221";
-            this.helpProvider1.SetShowHelp(this.numericUpDown221, ((bool)(resources.GetObject("numericUpDown221.ShowHelp"))));
-            // 
-            // numericUpDown222
-            // 
-            this.numericUpDown222.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown222, "numericUpDown222");
-            this.numericUpDown222.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown222.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown222.Name = "numericUpDown222";
-            this.helpProvider1.SetShowHelp(this.numericUpDown222, ((bool)(resources.GetObject("numericUpDown222.ShowHelp"))));
-            // 
-            // comboBox129
-            // 
-            this.comboBox129.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox129, "comboBox129");
-            this.comboBox129.FormattingEnabled = true;
-            this.comboBox129.Items.AddRange(new object[] {
-            resources.GetString("comboBox129.Items"),
-            resources.GetString("comboBox129.Items1"),
-            resources.GetString("comboBox129.Items2")});
-            this.comboBox129.Name = "comboBox129";
-            this.helpProvider1.SetShowHelp(this.comboBox129, ((bool)(resources.GetObject("comboBox129.ShowHelp"))));
-            // 
-            // numericUpDown223
-            // 
-            resources.ApplyResources(this.numericUpDown223, "numericUpDown223");
-            this.numericUpDown223.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown223.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown223.Name = "numericUpDown223";
-            this.helpProvider1.SetShowHelp(this.numericUpDown223, ((bool)(resources.GetObject("numericUpDown223.ShowHelp"))));
-            // 
-            // checkBox55
-            // 
-            resources.ApplyResources(this.checkBox55, "checkBox55");
-            this.checkBox55.Name = "checkBox55";
-            this.helpProvider1.SetShowHelp(this.checkBox55, ((bool)(resources.GetObject("checkBox55.ShowHelp"))));
-            this.checkBox55.UseVisualStyleBackColor = true;
-            // 
-            // comboBox130
-            // 
-            this.comboBox130.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox130.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox130, "comboBox130");
-            this.comboBox130.FormattingEnabled = true;
-            this.comboBox130.Name = "comboBox130";
-            this.helpProvider1.SetShowHelp(this.comboBox130, ((bool)(resources.GetObject("comboBox130.ShowHelp"))));
-            // 
-            // comboBox131
-            // 
-            this.comboBox131.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox131.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox131, "comboBox131");
-            this.comboBox131.FormattingEnabled = true;
-            this.comboBox131.Name = "comboBox131";
-            this.helpProvider1.SetShowHelp(this.comboBox131, ((bool)(resources.GetObject("comboBox131.ShowHelp"))));
-            // 
-            // label1084
-            // 
-            resources.ApplyResources(this.label1084, "label1084");
-            this.label1084.Name = "label1084";
-            this.helpProvider1.SetShowHelp(this.label1084, ((bool)(resources.GetObject("label1084.ShowHelp"))));
-            // 
-            // label1085
-            // 
-            resources.ApplyResources(this.label1085, "label1085");
-            this.label1085.Name = "label1085";
-            this.helpProvider1.SetShowHelp(this.label1085, ((bool)(resources.GetObject("label1085.ShowHelp"))));
-            // 
-            // label1086
-            // 
-            resources.ApplyResources(this.label1086, "label1086");
-            this.label1086.Name = "label1086";
-            this.helpProvider1.SetShowHelp(this.label1086, ((bool)(resources.GetObject("label1086.ShowHelp"))));
-            // 
-            // label1087
-            // 
-            resources.ApplyResources(this.label1087, "label1087");
-            this.label1087.Name = "label1087";
-            this.helpProvider1.SetShowHelp(this.label1087, ((bool)(resources.GetObject("label1087.ShowHelp"))));
-            // 
-            // label1088
-            // 
-            resources.ApplyResources(this.label1088, "label1088");
-            this.label1088.Name = "label1088";
-            this.helpProvider1.SetShowHelp(this.label1088, ((bool)(resources.GetObject("label1088.ShowHelp"))));
-            // 
-            // label1089
-            // 
-            resources.ApplyResources(this.label1089, "label1089");
-            this.label1089.Name = "label1089";
-            this.helpProvider1.SetShowHelp(this.label1089, ((bool)(resources.GetObject("label1089.ShowHelp"))));
-            // 
-            // label1090
-            // 
-            resources.ApplyResources(this.label1090, "label1090");
-            this.label1090.Name = "label1090";
-            this.helpProvider1.SetShowHelp(this.label1090, ((bool)(resources.GetObject("label1090.ShowHelp"))));
-            // 
-            // label1091
-            // 
-            resources.ApplyResources(this.label1091, "label1091");
-            this.label1091.Name = "label1091";
-            this.helpProvider1.SetShowHelp(this.label1091, ((bool)(resources.GetObject("label1091.ShowHelp"))));
-            // 
-            // label1092
-            // 
-            resources.ApplyResources(this.label1092, "label1092");
-            this.label1092.Name = "label1092";
-            this.helpProvider1.SetShowHelp(this.label1092, ((bool)(resources.GetObject("label1092.ShowHelp"))));
-            // 
-            // label1093
-            // 
-            resources.ApplyResources(this.label1093, "label1093");
-            this.label1093.Name = "label1093";
-            this.helpProvider1.SetShowHelp(this.label1093, ((bool)(resources.GetObject("label1093.ShowHelp"))));
-            // 
-            // label1094
-            // 
-            resources.ApplyResources(this.label1094, "label1094");
-            this.label1094.Name = "label1094";
-            this.helpProvider1.SetShowHelp(this.label1094, ((bool)(resources.GetObject("label1094.ShowHelp"))));
-            // 
-            // label1095
-            // 
-            resources.ApplyResources(this.label1095, "label1095");
-            this.label1095.Name = "label1095";
-            this.helpProvider1.SetShowHelp(this.label1095, ((bool)(resources.GetObject("label1095.ShowHelp"))));
-            // 
-            // label1096
-            // 
-            resources.ApplyResources(this.label1096, "label1096");
-            this.label1096.Name = "label1096";
-            this.helpProvider1.SetShowHelp(this.label1096, ((bool)(resources.GetObject("label1096.ShowHelp"))));
-            // 
-            // button40
-            // 
-            resources.ApplyResources(this.button40, "button40");
-            this.button40.Name = "button40";
-            this.helpProvider1.SetShowHelp(this.button40, ((bool)(resources.GetObject("button40.ShowHelp"))));
-            this.button40.UseVisualStyleBackColor = true;
-            // 
-            // panel49
-            // 
-            this.panel49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel49.Controls.Add(this.checkBox56);
-            this.panel49.Controls.Add(this.comboBox132);
-            this.panel49.Controls.Add(this.numericUpDown224);
-            this.panel49.Controls.Add(this.numericUpDown225);
-            this.panel49.Controls.Add(this.numericUpDown226);
-            this.panel49.Controls.Add(this.label1097);
-            this.panel49.Controls.Add(this.label1098);
-            this.panel49.Controls.Add(this.label1099);
-            this.panel49.Controls.Add(this.label1100);
-            this.panel49.Controls.Add(this.label1101);
-            resources.ApplyResources(this.panel49, "panel49");
-            this.panel49.Name = "panel49";
-            this.helpProvider1.SetShowHelp(this.panel49, ((bool)(resources.GetObject("panel49.ShowHelp"))));
-            // 
-            // checkBox56
-            // 
-            resources.ApplyResources(this.checkBox56, "checkBox56");
-            this.checkBox56.Name = "checkBox56";
-            this.helpProvider1.SetShowHelp(this.checkBox56, ((bool)(resources.GetObject("checkBox56.ShowHelp"))));
-            this.checkBox56.UseVisualStyleBackColor = true;
-            // 
-            // comboBox132
-            // 
-            this.comboBox132.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox132.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox132, "comboBox132");
-            this.comboBox132.FormattingEnabled = true;
-            this.comboBox132.Name = "comboBox132";
-            this.helpProvider1.SetShowHelp(this.comboBox132, ((bool)(resources.GetObject("comboBox132.ShowHelp"))));
-            // 
-            // numericUpDown224
-            // 
-            this.numericUpDown224.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown224, "numericUpDown224");
-            this.numericUpDown224.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown224.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown224.Name = "numericUpDown224";
-            this.helpProvider1.SetShowHelp(this.numericUpDown224, ((bool)(resources.GetObject("numericUpDown224.ShowHelp"))));
-            // 
-            // numericUpDown225
-            // 
-            this.numericUpDown225.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown225, "numericUpDown225");
-            this.numericUpDown225.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown225.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown225.Name = "numericUpDown225";
-            this.helpProvider1.SetShowHelp(this.numericUpDown225, ((bool)(resources.GetObject("numericUpDown225.ShowHelp"))));
-            // 
-            // numericUpDown226
-            // 
-            this.numericUpDown226.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown226, "numericUpDown226");
-            this.numericUpDown226.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown226.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown226.Name = "numericUpDown226";
-            this.helpProvider1.SetShowHelp(this.numericUpDown226, ((bool)(resources.GetObject("numericUpDown226.ShowHelp"))));
-            this.numericUpDown226.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label1097
-            // 
-            resources.ApplyResources(this.label1097, "label1097");
-            this.label1097.Name = "label1097";
-            this.helpProvider1.SetShowHelp(this.label1097, ((bool)(resources.GetObject("label1097.ShowHelp"))));
-            // 
-            // label1098
-            // 
-            resources.ApplyResources(this.label1098, "label1098");
-            this.label1098.Name = "label1098";
-            this.helpProvider1.SetShowHelp(this.label1098, ((bool)(resources.GetObject("label1098.ShowHelp"))));
-            // 
-            // label1099
-            // 
-            resources.ApplyResources(this.label1099, "label1099");
-            this.label1099.Name = "label1099";
-            this.helpProvider1.SetShowHelp(this.label1099, ((bool)(resources.GetObject("label1099.ShowHelp"))));
-            // 
-            // label1100
-            // 
-            resources.ApplyResources(this.label1100, "label1100");
-            this.label1100.Name = "label1100";
-            this.helpProvider1.SetShowHelp(this.label1100, ((bool)(resources.GetObject("label1100.ShowHelp"))));
-            // 
-            // label1101
-            // 
-            resources.ApplyResources(this.label1101, "label1101");
-            this.label1101.Name = "label1101";
-            this.helpProvider1.SetShowHelp(this.label1101, ((bool)(resources.GetObject("label1101.ShowHelp"))));
-            // 
-            // button41
-            // 
-            resources.ApplyResources(this.button41, "button41");
-            this.button41.Name = "button41";
-            this.helpProvider1.SetShowHelp(this.button41, ((bool)(resources.GetObject("button41.ShowHelp"))));
-            this.button41.UseVisualStyleBackColor = true;
             // 
             // tabPage_StandUp_AOD
             // 
@@ -29310,17 +23792,19 @@
             // panel_Weather_scaleLinear_AOD
             // 
             this.panel_Weather_scaleLinear_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.checkBox57);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.radioButton23);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.radioButton24);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox133);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox134);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox135);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox136);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown227);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown228);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown229);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown230);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.checkBox_Weather_scaleLinear_Use_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.radioButton_Weather_scaleLinear_image_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.radioButtonWeather_scaleLinear_color_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_image_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_color_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_image_pointer_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_image_background_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinearX_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinearY_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinear_length_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinear_width_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_flatness_AOD);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label304);
             this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1102);
             this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1103);
             this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1104);
@@ -29328,145 +23812,190 @@
             this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1106);
             this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1107);
             this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1108);
+            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.button_Copy_Weather_scaleLinear_AOD);
             resources.ApplyResources(this.panel_Weather_scaleLinear_AOD, "panel_Weather_scaleLinear_AOD");
             this.panel_Weather_scaleLinear_AOD.Name = "panel_Weather_scaleLinear_AOD";
             this.helpProvider1.SetShowHelp(this.panel_Weather_scaleLinear_AOD, ((bool)(resources.GetObject("panel_Weather_scaleLinear_AOD.ShowHelp"))));
             // 
-            // checkBox57
+            // checkBox_Weather_scaleLinear_Use_AOD
             // 
-            resources.ApplyResources(this.checkBox57, "checkBox57");
-            this.checkBox57.Name = "checkBox57";
-            this.helpProvider1.SetShowHelp(this.checkBox57, ((bool)(resources.GetObject("checkBox57.ShowHelp"))));
-            this.checkBox57.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_scaleLinear_Use_AOD, "checkBox_Weather_scaleLinear_Use_AOD");
+            this.checkBox_Weather_scaleLinear_Use_AOD.Name = "checkBox_Weather_scaleLinear_Use_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_scaleLinear_Use_AOD, ((bool)(resources.GetObject("checkBox_Weather_scaleLinear_Use_AOD.ShowHelp"))));
+            this.checkBox_Weather_scaleLinear_Use_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_scaleLinear_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_scaleLinear_Use_AOD_CheckedChanged);
+            this.checkBox_Weather_scaleLinear_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // radioButton23
+            // radioButton_Weather_scaleLinear_image_AOD
             // 
-            resources.ApplyResources(this.radioButton23, "radioButton23");
-            this.radioButton23.Checked = true;
-            this.radioButton23.Name = "radioButton23";
-            this.helpProvider1.SetShowHelp(this.radioButton23, ((bool)(resources.GetObject("radioButton23.ShowHelp"))));
-            this.radioButton23.TabStop = true;
-            this.radioButton23.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.radioButton_Weather_scaleLinear_image_AOD, "radioButton_Weather_scaleLinear_image_AOD");
+            this.radioButton_Weather_scaleLinear_image_AOD.Checked = true;
+            this.radioButton_Weather_scaleLinear_image_AOD.Name = "radioButton_Weather_scaleLinear_image_AOD";
+            this.helpProvider1.SetShowHelp(this.radioButton_Weather_scaleLinear_image_AOD, ((bool)(resources.GetObject("radioButton_Weather_scaleLinear_image_AOD.ShowHelp"))));
+            this.radioButton_Weather_scaleLinear_image_AOD.TabStop = true;
+            this.radioButton_Weather_scaleLinear_image_AOD.UseVisualStyleBackColor = true;
+            this.radioButton_Weather_scaleLinear_image_AOD.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
             // 
-            // radioButton24
+            // radioButtonWeather_scaleLinear_color_AOD
             // 
-            resources.ApplyResources(this.radioButton24, "radioButton24");
-            this.radioButton24.Name = "radioButton24";
-            this.helpProvider1.SetShowHelp(this.radioButton24, ((bool)(resources.GetObject("radioButton24.ShowHelp"))));
-            this.radioButton24.TabStop = true;
-            this.radioButton24.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.radioButtonWeather_scaleLinear_color_AOD, "radioButtonWeather_scaleLinear_color_AOD");
+            this.radioButtonWeather_scaleLinear_color_AOD.Name = "radioButtonWeather_scaleLinear_color_AOD";
+            this.helpProvider1.SetShowHelp(this.radioButtonWeather_scaleLinear_color_AOD, ((bool)(resources.GetObject("radioButtonWeather_scaleLinear_color_AOD.ShowHelp"))));
+            this.radioButtonWeather_scaleLinear_color_AOD.TabStop = true;
+            this.radioButtonWeather_scaleLinear_color_AOD.UseVisualStyleBackColor = true;
             // 
-            // comboBox133
+            // comboBox_Weather_scaleLinear_image_AOD
             // 
-            this.comboBox133.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox133.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox133, "comboBox133");
-            this.comboBox133.FormattingEnabled = true;
-            this.comboBox133.Name = "comboBox133";
-            this.helpProvider1.SetShowHelp(this.comboBox133, ((bool)(resources.GetObject("comboBox133.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_scaleLinear_image_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_AOD, "comboBox_Weather_scaleLinear_image_AOD");
+            this.comboBox_Weather_scaleLinear_image_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleLinear_image_AOD.Name = "comboBox_Weather_scaleLinear_image_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleLinear_image_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleLinear_image_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_scaleLinear_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_scaleLinear_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_scaleLinear_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_scaleLinear_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox134
+            // comboBox_Weather_scaleLinear_color_AOD
             // 
-            this.comboBox134.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox134.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox134, "comboBox134");
-            this.comboBox134.FormattingEnabled = true;
-            this.comboBox134.Name = "comboBox134";
-            this.helpProvider1.SetShowHelp(this.comboBox134, ((bool)(resources.GetObject("comboBox134.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_color_AOD.BackColor = System.Drawing.Color.DarkOrange;
+            this.comboBox_Weather_scaleLinear_color_AOD.DropDownHeight = 1;
+            resources.ApplyResources(this.comboBox_Weather_scaleLinear_color_AOD, "comboBox_Weather_scaleLinear_color_AOD");
+            this.comboBox_Weather_scaleLinear_color_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleLinear_color_AOD.Name = "comboBox_Weather_scaleLinear_color_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleLinear_color_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleLinear_color_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_color_AOD.Click += new System.EventHandler(this.comboBox_color_Click);
+            this.comboBox_Weather_scaleLinear_color_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox135
+            // comboBox_Weather_scaleLinear_image_pointer_AOD
             // 
-            this.comboBox135.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox135.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox135, "comboBox135");
-            this.comboBox135.FormattingEnabled = true;
-            this.comboBox135.Name = "comboBox135";
-            this.helpProvider1.SetShowHelp(this.comboBox135, ((bool)(resources.GetObject("comboBox135.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_pointer_AOD, "comboBox_Weather_scaleLinear_image_pointer_AOD");
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.Name = "comboBox_Weather_scaleLinear_image_pointer_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleLinear_image_pointer_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleLinear_image_pointer_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_scaleLinear_image_pointer_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox136
+            // comboBox_Weather_scaleLinear_image_background_AOD
             // 
-            this.comboBox136.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox136.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox136, "comboBox136");
-            this.comboBox136.FormattingEnabled = true;
-            this.comboBox136.Name = "comboBox136";
-            this.helpProvider1.SetShowHelp(this.comboBox136, ((bool)(resources.GetObject("comboBox136.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_image_background_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_scaleLinear_image_background_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_background_AOD, "comboBox_Weather_scaleLinear_image_background_AOD");
+            this.comboBox_Weather_scaleLinear_image_background_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleLinear_image_background_AOD.Name = "comboBox_Weather_scaleLinear_image_background_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleLinear_image_background_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleLinear_image_background_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_image_background_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_scaleLinear_image_background_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_scaleLinear_image_background_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_scaleLinear_image_background_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_scaleLinear_image_background_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown227
+            // numericUpDown_Weather_scaleLinearX_AOD
             // 
-            this.numericUpDown227.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown227, "numericUpDown227");
-            this.numericUpDown227.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinearX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_scaleLinearX_AOD, "numericUpDown_Weather_scaleLinearX_AOD");
+            this.numericUpDown_Weather_scaleLinearX_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown227.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinearX_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown227.Name = "numericUpDown227";
-            this.helpProvider1.SetShowHelp(this.numericUpDown227, ((bool)(resources.GetObject("numericUpDown227.ShowHelp"))));
+            this.numericUpDown_Weather_scaleLinearX_AOD.Name = "numericUpDown_Weather_scaleLinearX_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleLinearX_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleLinearX_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleLinearX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_scaleLinearX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown228
+            // numericUpDown_Weather_scaleLinearY_AOD
             // 
-            this.numericUpDown228.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown228, "numericUpDown228");
-            this.numericUpDown228.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinearY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_scaleLinearY_AOD, "numericUpDown_Weather_scaleLinearY_AOD");
+            this.numericUpDown_Weather_scaleLinearY_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown228.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinearY_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown228.Name = "numericUpDown228";
-            this.helpProvider1.SetShowHelp(this.numericUpDown228, ((bool)(resources.GetObject("numericUpDown228.ShowHelp"))));
+            this.numericUpDown_Weather_scaleLinearY_AOD.Name = "numericUpDown_Weather_scaleLinearY_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleLinearY_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleLinearY_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleLinearY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_scaleLinearY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown229
+            // numericUpDown_Weather_scaleLinear_length_AOD
             // 
-            resources.ApplyResources(this.numericUpDown229, "numericUpDown229");
-            this.numericUpDown229.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_scaleLinear_length_AOD, "numericUpDown_Weather_scaleLinear_length_AOD");
+            this.numericUpDown_Weather_scaleLinear_length_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown229.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinear_length_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown229.Name = "numericUpDown229";
-            this.helpProvider1.SetShowHelp(this.numericUpDown229, ((bool)(resources.GetObject("numericUpDown229.ShowHelp"))));
-            this.numericUpDown229.Value = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinear_length_AOD.Name = "numericUpDown_Weather_scaleLinear_length_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleLinear_length_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleLinear_length_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleLinear_length_AOD.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
+            this.numericUpDown_Weather_scaleLinear_length_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // numericUpDown230
+            // numericUpDown_Weather_scaleLinear_width_AOD
             // 
-            resources.ApplyResources(this.numericUpDown230, "numericUpDown230");
-            this.numericUpDown230.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_scaleLinear_width_AOD, "numericUpDown_Weather_scaleLinear_width_AOD");
+            this.numericUpDown_Weather_scaleLinear_width_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown230.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinear_width_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown230.Name = "numericUpDown230";
-            this.helpProvider1.SetShowHelp(this.numericUpDown230, ((bool)(resources.GetObject("numericUpDown230.ShowHelp"))));
-            this.numericUpDown230.Value = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleLinear_width_AOD.Name = "numericUpDown_Weather_scaleLinear_width_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleLinear_width_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleLinear_width_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleLinear_width_AOD.Value = new decimal(new int[] {
             5,
             0,
             0,
             0});
+            this.numericUpDown_Weather_scaleLinear_width_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // comboBox_Weather_scaleLinear_flatness_AOD
+            // 
+            this.comboBox_Weather_scaleLinear_flatness_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_Weather_scaleLinear_flatness_AOD, "comboBox_Weather_scaleLinear_flatness_AOD");
+            this.comboBox_Weather_scaleLinear_flatness_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleLinear_flatness_AOD.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Weather_scaleLinear_flatness_AOD.Items"),
+            resources.GetString("comboBox_Weather_scaleLinear_flatness_AOD.Items1")});
+            this.comboBox_Weather_scaleLinear_flatness_AOD.Name = "comboBox_Weather_scaleLinear_flatness_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleLinear_flatness_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleLinear_flatness_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleLinear_flatness_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label304
+            // 
+            resources.ApplyResources(this.label304, "label304");
+            this.label304.Name = "label304";
+            this.helpProvider1.SetShowHelp(this.label304, ((bool)(resources.GetObject("label304.ShowHelp"))));
             // 
             // label1102
             // 
@@ -29510,6 +24039,14 @@
             this.label1108.Name = "label1108";
             this.helpProvider1.SetShowHelp(this.label1108, ((bool)(resources.GetObject("label1108.ShowHelp"))));
             // 
+            // button_Copy_Weather_scaleLinear_AOD
+            // 
+            resources.ApplyResources(this.button_Copy_Weather_scaleLinear_AOD, "button_Copy_Weather_scaleLinear_AOD");
+            this.button_Copy_Weather_scaleLinear_AOD.Name = "button_Copy_Weather_scaleLinear_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Weather_scaleLinear_AOD, ((bool)(resources.GetObject("button_Copy_Weather_scaleLinear_AOD.ShowHelp"))));
+            this.button_Copy_Weather_scaleLinear_AOD.UseVisualStyleBackColor = true;
+            this.button_Copy_Weather_scaleLinear_AOD.Click += new System.EventHandler(this.button_Copy_Weather_scaleLinear_AOD_Click);
+            // 
             // button_Weather_scaleLinear_AOD
             // 
             resources.ApplyResources(this.button_Weather_scaleLinear_AOD, "button_Weather_scaleLinear_AOD");
@@ -29521,19 +24058,19 @@
             // panel_Weather_scaleCircle_AOD
             // 
             this.panel_Weather_scaleCircle_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.checkBox58);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.radioButton25);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.radioButton26);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox137);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox138);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox139);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox140);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown231);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown232);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown233);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown234);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown235);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown236);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.checkBox_Weather_scaleCircle_Use_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.radioButton_Weather_scaleCircle_image_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.radioButton_Weather_scaleCircle_color_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_image_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_color_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_flatness_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_image_background_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircleX_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircleY_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_radius_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_width_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_startAngle_AOD);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_endAngle_AOD);
             this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1109);
             this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1110);
             this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1111);
@@ -29543,185 +24080,210 @@
             this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1115);
             this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1116);
             this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1117);
+            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.button_Copy_Weather_scaleCircle_AOD);
             resources.ApplyResources(this.panel_Weather_scaleCircle_AOD, "panel_Weather_scaleCircle_AOD");
             this.panel_Weather_scaleCircle_AOD.Name = "panel_Weather_scaleCircle_AOD";
             this.helpProvider1.SetShowHelp(this.panel_Weather_scaleCircle_AOD, ((bool)(resources.GetObject("panel_Weather_scaleCircle_AOD.ShowHelp"))));
             // 
-            // checkBox58
+            // checkBox_Weather_scaleCircle_Use_AOD
             // 
-            resources.ApplyResources(this.checkBox58, "checkBox58");
-            this.checkBox58.Name = "checkBox58";
-            this.helpProvider1.SetShowHelp(this.checkBox58, ((bool)(resources.GetObject("checkBox58.ShowHelp"))));
-            this.checkBox58.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_scaleCircle_Use_AOD, "checkBox_Weather_scaleCircle_Use_AOD");
+            this.checkBox_Weather_scaleCircle_Use_AOD.Name = "checkBox_Weather_scaleCircle_Use_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_scaleCircle_Use_AOD, ((bool)(resources.GetObject("checkBox_Weather_scaleCircle_Use_AOD.ShowHelp"))));
+            this.checkBox_Weather_scaleCircle_Use_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_scaleCircle_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_scaleCircle_Use_AOD_CheckedChanged);
+            this.checkBox_Weather_scaleCircle_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // radioButton25
+            // radioButton_Weather_scaleCircle_image_AOD
             // 
-            resources.ApplyResources(this.radioButton25, "radioButton25");
-            this.radioButton25.Checked = true;
-            this.radioButton25.Name = "radioButton25";
-            this.helpProvider1.SetShowHelp(this.radioButton25, ((bool)(resources.GetObject("radioButton25.ShowHelp"))));
-            this.radioButton25.TabStop = true;
-            this.radioButton25.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.radioButton_Weather_scaleCircle_image_AOD, "radioButton_Weather_scaleCircle_image_AOD");
+            this.radioButton_Weather_scaleCircle_image_AOD.Checked = true;
+            this.radioButton_Weather_scaleCircle_image_AOD.Name = "radioButton_Weather_scaleCircle_image_AOD";
+            this.helpProvider1.SetShowHelp(this.radioButton_Weather_scaleCircle_image_AOD, ((bool)(resources.GetObject("radioButton_Weather_scaleCircle_image_AOD.ShowHelp"))));
+            this.radioButton_Weather_scaleCircle_image_AOD.TabStop = true;
+            this.radioButton_Weather_scaleCircle_image_AOD.UseVisualStyleBackColor = true;
+            this.radioButton_Weather_scaleCircle_image_AOD.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
             // 
-            // radioButton26
+            // radioButton_Weather_scaleCircle_color_AOD
             // 
-            resources.ApplyResources(this.radioButton26, "radioButton26");
-            this.radioButton26.Name = "radioButton26";
-            this.helpProvider1.SetShowHelp(this.radioButton26, ((bool)(resources.GetObject("radioButton26.ShowHelp"))));
-            this.radioButton26.TabStop = true;
-            this.radioButton26.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.radioButton_Weather_scaleCircle_color_AOD, "radioButton_Weather_scaleCircle_color_AOD");
+            this.radioButton_Weather_scaleCircle_color_AOD.Name = "radioButton_Weather_scaleCircle_color_AOD";
+            this.helpProvider1.SetShowHelp(this.radioButton_Weather_scaleCircle_color_AOD, ((bool)(resources.GetObject("radioButton_Weather_scaleCircle_color_AOD.ShowHelp"))));
+            this.radioButton_Weather_scaleCircle_color_AOD.TabStop = true;
+            this.radioButton_Weather_scaleCircle_color_AOD.UseVisualStyleBackColor = true;
             // 
-            // comboBox137
+            // comboBox_Weather_scaleCircle_image_AOD
             // 
-            this.comboBox137.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox137.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox137, "comboBox137");
-            this.comboBox137.FormattingEnabled = true;
-            this.comboBox137.Name = "comboBox137";
-            this.helpProvider1.SetShowHelp(this.comboBox137, ((bool)(resources.GetObject("comboBox137.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_scaleCircle_image_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_scaleCircle_image_AOD, "comboBox_Weather_scaleCircle_image_AOD");
+            this.comboBox_Weather_scaleCircle_image_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleCircle_image_AOD.Name = "comboBox_Weather_scaleCircle_image_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleCircle_image_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleCircle_image_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_scaleCircle_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_scaleCircle_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_scaleCircle_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_scaleCircle_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox138
+            // comboBox_Weather_scaleCircle_color_AOD
             // 
-            this.comboBox138.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox138.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox138, "comboBox138");
-            this.comboBox138.FormattingEnabled = true;
-            this.comboBox138.Name = "comboBox138";
-            this.helpProvider1.SetShowHelp(this.comboBox138, ((bool)(resources.GetObject("comboBox138.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_color_AOD.BackColor = System.Drawing.Color.DarkOrange;
+            this.comboBox_Weather_scaleCircle_color_AOD.DropDownHeight = 1;
+            resources.ApplyResources(this.comboBox_Weather_scaleCircle_color_AOD, "comboBox_Weather_scaleCircle_color_AOD");
+            this.comboBox_Weather_scaleCircle_color_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleCircle_color_AOD.Name = "comboBox_Weather_scaleCircle_color_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleCircle_color_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleCircle_color_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_color_AOD.Click += new System.EventHandler(this.comboBox_color_Click);
+            this.comboBox_Weather_scaleCircle_color_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox139
+            // comboBox_Weather_scaleCircle_flatness_AOD
             // 
-            this.comboBox139.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox139, "comboBox139");
-            this.comboBox139.FormattingEnabled = true;
-            this.comboBox139.Items.AddRange(new object[] {
-            resources.GetString("comboBox139.Items"),
-            resources.GetString("comboBox139.Items1"),
-            resources.GetString("comboBox139.Items2")});
-            this.comboBox139.Name = "comboBox139";
-            this.helpProvider1.SetShowHelp(this.comboBox139, ((bool)(resources.GetObject("comboBox139.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_flatness_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_Weather_scaleCircle_flatness_AOD, "comboBox_Weather_scaleCircle_flatness_AOD");
+            this.comboBox_Weather_scaleCircle_flatness_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleCircle_flatness_AOD.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Weather_scaleCircle_flatness_AOD.Items"),
+            resources.GetString("comboBox_Weather_scaleCircle_flatness_AOD.Items1"),
+            resources.GetString("comboBox_Weather_scaleCircle_flatness_AOD.Items2")});
+            this.comboBox_Weather_scaleCircle_flatness_AOD.Name = "comboBox_Weather_scaleCircle_flatness_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleCircle_flatness_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleCircle_flatness_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_flatness_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // comboBox140
+            // comboBox_Weather_scaleCircle_image_background_AOD
             // 
-            this.comboBox140.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox140.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox140, "comboBox140");
-            this.comboBox140.FormattingEnabled = true;
-            this.comboBox140.Name = "comboBox140";
-            this.helpProvider1.SetShowHelp(this.comboBox140, ((bool)(resources.GetObject("comboBox140.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_image_background_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_scaleCircle_image_background_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_scaleCircle_image_background_AOD, "comboBox_Weather_scaleCircle_image_background_AOD");
+            this.comboBox_Weather_scaleCircle_image_background_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_scaleCircle_image_background_AOD.Name = "comboBox_Weather_scaleCircle_image_background_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_scaleCircle_image_background_AOD, ((bool)(resources.GetObject("comboBox_Weather_scaleCircle_image_background_AOD.ShowHelp"))));
+            this.comboBox_Weather_scaleCircle_image_background_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_scaleCircle_image_background_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_scaleCircle_image_background_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_scaleCircle_image_background_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_scaleCircle_image_background_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown231
+            // numericUpDown_Weather_scaleCircleX_AOD
             // 
-            this.numericUpDown231.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown231, "numericUpDown231");
-            this.numericUpDown231.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircleX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_scaleCircleX_AOD, "numericUpDown_Weather_scaleCircleX_AOD");
+            this.numericUpDown_Weather_scaleCircleX_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown231.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircleX_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown231.Name = "numericUpDown231";
-            this.helpProvider1.SetShowHelp(this.numericUpDown231, ((bool)(resources.GetObject("numericUpDown231.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircleX_AOD.Name = "numericUpDown_Weather_scaleCircleX_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleCircleX_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleCircleX_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircleX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_scaleCircleX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown232
+            // numericUpDown_Weather_scaleCircleY_AOD
             // 
-            this.numericUpDown232.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown232, "numericUpDown232");
-            this.numericUpDown232.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircleY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_scaleCircleY_AOD, "numericUpDown_Weather_scaleCircleY_AOD");
+            this.numericUpDown_Weather_scaleCircleY_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown232.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircleY_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown232.Name = "numericUpDown232";
-            this.helpProvider1.SetShowHelp(this.numericUpDown232, ((bool)(resources.GetObject("numericUpDown232.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircleY_AOD.Name = "numericUpDown_Weather_scaleCircleY_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleCircleY_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleCircleY_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircleY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_scaleCircleY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown233
+            // numericUpDown_Weather_scaleCircle_radius_AOD
             // 
-            resources.ApplyResources(this.numericUpDown233, "numericUpDown233");
-            this.numericUpDown233.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_radius_AOD, "numericUpDown_Weather_scaleCircle_radius_AOD");
+            this.numericUpDown_Weather_scaleCircle_radius_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown233.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircle_radius_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown233.Name = "numericUpDown233";
-            this.helpProvider1.SetShowHelp(this.numericUpDown233, ((bool)(resources.GetObject("numericUpDown233.ShowHelp"))));
-            this.numericUpDown233.Value = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircle_radius_AOD.Name = "numericUpDown_Weather_scaleCircle_radius_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleCircle_radius_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleCircle_radius_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircle_radius_AOD.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
+            this.numericUpDown_Weather_scaleCircle_radius_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // numericUpDown234
+            // numericUpDown_Weather_scaleCircle_width_AOD
             // 
-            resources.ApplyResources(this.numericUpDown234, "numericUpDown234");
-            this.numericUpDown234.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_width_AOD, "numericUpDown_Weather_scaleCircle_width_AOD");
+            this.numericUpDown_Weather_scaleCircle_width_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown234.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircle_width_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown234.Name = "numericUpDown234";
-            this.helpProvider1.SetShowHelp(this.numericUpDown234, ((bool)(resources.GetObject("numericUpDown234.ShowHelp"))));
-            this.numericUpDown234.Value = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircle_width_AOD.Name = "numericUpDown_Weather_scaleCircle_width_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleCircle_width_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleCircle_width_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircle_width_AOD.Value = new decimal(new int[] {
             5,
             0,
             0,
             0});
+            this.numericUpDown_Weather_scaleCircle_width_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // numericUpDown235
+            // numericUpDown_Weather_scaleCircle_startAngle_AOD
             // 
-            resources.ApplyResources(this.numericUpDown235, "numericUpDown235");
-            this.numericUpDown235.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_startAngle_AOD, "numericUpDown_Weather_scaleCircle_startAngle_AOD");
+            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown235.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown235.Name = "numericUpDown235";
-            this.helpProvider1.SetShowHelp(this.numericUpDown235, ((bool)(resources.GetObject("numericUpDown235.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.Name = "numericUpDown_Weather_scaleCircle_startAngle_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleCircle_startAngle_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleCircle_startAngle_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // numericUpDown236
+            // numericUpDown_Weather_scaleCircle_endAngle_AOD
             // 
-            resources.ApplyResources(this.numericUpDown236, "numericUpDown236");
-            this.numericUpDown236.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_endAngle_AOD, "numericUpDown_Weather_scaleCircle_endAngle_AOD");
+            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown236.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown236.Name = "numericUpDown236";
-            this.helpProvider1.SetShowHelp(this.numericUpDown236, ((bool)(resources.GetObject("numericUpDown236.ShowHelp"))));
-            this.numericUpDown236.Value = new decimal(new int[] {
+            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Name = "numericUpDown_Weather_scaleCircle_endAngle_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_scaleCircle_endAngle_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_scaleCircle_endAngle_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Value = new decimal(new int[] {
             360,
             0,
             0,
             0});
+            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label1109
             // 
@@ -29777,6 +24339,14 @@
             this.label1117.Name = "label1117";
             this.helpProvider1.SetShowHelp(this.label1117, ((bool)(resources.GetObject("label1117.ShowHelp"))));
             // 
+            // button_Copy_Weather_scaleCircle_AOD
+            // 
+            resources.ApplyResources(this.button_Copy_Weather_scaleCircle_AOD, "button_Copy_Weather_scaleCircle_AOD");
+            this.button_Copy_Weather_scaleCircle_AOD.Name = "button_Copy_Weather_scaleCircle_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Weather_scaleCircle_AOD, ((bool)(resources.GetObject("button_Copy_Weather_scaleCircle_AOD.ShowHelp"))));
+            this.button_Copy_Weather_scaleCircle_AOD.UseVisualStyleBackColor = true;
+            this.button_Copy_Weather_scaleCircle_AOD.Click += new System.EventHandler(this.button_Copy_Weather_scaleCircle_AOD_Click);
+            // 
             // button_Weather_scaleCircle_AOD
             // 
             resources.ApplyResources(this.button_Weather_scaleCircle_AOD, "button_Weather_scaleCircle_AOD");
@@ -29788,20 +24358,20 @@
             // panel_Weather_hand_AOD
             // 
             this.panel_Weather_hand_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_hand_AOD.Controls.Add(this.checkBox59);
-            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox141);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown237);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown238);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown239);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown240);
-            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox142);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown241);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown242);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown243);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown244);
-            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox143);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown245);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown246);
+            this.panel_Weather_hand_AOD.Controls.Add(this.checkBox_Weather_hand_Use_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox_Weather_hand_image_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_offset_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_offset_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox_Weather_hand_imageCentr_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_centr_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_centr_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_hand_startAngle_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_hand_endAngle_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox_Weather_hand_imageBackground_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_background_AOD);
+            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_background_AOD);
             this.panel_Weather_hand_AOD.Controls.Add(this.label1118);
             this.panel_Weather_hand_AOD.Controls.Add(this.label1119);
             this.panel_Weather_hand_AOD.Controls.Add(this.label1120);
@@ -29819,214 +24389,248 @@
             this.panel_Weather_hand_AOD.Controls.Add(this.label1132);
             this.panel_Weather_hand_AOD.Controls.Add(this.label1133);
             this.panel_Weather_hand_AOD.Controls.Add(this.label1134);
+            this.panel_Weather_hand_AOD.Controls.Add(this.button_Copy_Weather_hand_AOD);
             resources.ApplyResources(this.panel_Weather_hand_AOD, "panel_Weather_hand_AOD");
             this.panel_Weather_hand_AOD.Name = "panel_Weather_hand_AOD";
             this.helpProvider1.SetShowHelp(this.panel_Weather_hand_AOD, ((bool)(resources.GetObject("panel_Weather_hand_AOD.ShowHelp"))));
             // 
-            // checkBox59
+            // checkBox_Weather_hand_Use_AOD
             // 
-            resources.ApplyResources(this.checkBox59, "checkBox59");
-            this.checkBox59.Name = "checkBox59";
-            this.helpProvider1.SetShowHelp(this.checkBox59, ((bool)(resources.GetObject("checkBox59.ShowHelp"))));
-            this.checkBox59.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_hand_Use_AOD, "checkBox_Weather_hand_Use_AOD");
+            this.checkBox_Weather_hand_Use_AOD.Name = "checkBox_Weather_hand_Use_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_hand_Use_AOD, ((bool)(resources.GetObject("checkBox_Weather_hand_Use_AOD.ShowHelp"))));
+            this.checkBox_Weather_hand_Use_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_hand_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_hand_Use_AOD_CheckedChanged);
+            this.checkBox_Weather_hand_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // comboBox141
+            // comboBox_Weather_hand_image_AOD
             // 
-            this.comboBox141.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox141.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox141, "comboBox141");
-            this.comboBox141.FormattingEnabled = true;
-            this.comboBox141.Name = "comboBox141";
-            this.helpProvider1.SetShowHelp(this.comboBox141, ((bool)(resources.GetObject("comboBox141.ShowHelp"))));
+            this.comboBox_Weather_hand_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_hand_image_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_hand_image_AOD, "comboBox_Weather_hand_image_AOD");
+            this.comboBox_Weather_hand_image_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_hand_image_AOD.Name = "comboBox_Weather_hand_image_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_hand_image_AOD, ((bool)(resources.GetObject("comboBox_Weather_hand_image_AOD.ShowHelp"))));
+            this.comboBox_Weather_hand_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_hand_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_hand_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_hand_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_hand_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown237
+            // numericUpDown_Weather_handX_AOD
             // 
-            this.numericUpDown237.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown237, "numericUpDown237");
-            this.numericUpDown237.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_handX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_handX_AOD, "numericUpDown_Weather_handX_AOD");
+            this.numericUpDown_Weather_handX_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown237.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handX_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown237.Name = "numericUpDown237";
-            this.helpProvider1.SetShowHelp(this.numericUpDown237, ((bool)(resources.GetObject("numericUpDown237.ShowHelp"))));
+            this.numericUpDown_Weather_handX_AOD.Name = "numericUpDown_Weather_handX_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handX_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handX_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_handX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown238
+            // numericUpDown_Weather_handY_AOD
             // 
-            this.numericUpDown238.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown238, "numericUpDown238");
-            this.numericUpDown238.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_handY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_handY_AOD, "numericUpDown_Weather_handY_AOD");
+            this.numericUpDown_Weather_handY_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown238.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handY_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown238.Name = "numericUpDown238";
-            this.helpProvider1.SetShowHelp(this.numericUpDown238, ((bool)(resources.GetObject("numericUpDown238.ShowHelp"))));
+            this.numericUpDown_Weather_handY_AOD.Name = "numericUpDown_Weather_handY_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handY_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handY_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_handY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown239
+            // numericUpDown_Weather_handX_offset_AOD
             // 
-            resources.ApplyResources(this.numericUpDown239, "numericUpDown239");
-            this.numericUpDown239.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_handX_offset_AOD, "numericUpDown_Weather_handX_offset_AOD");
+            this.numericUpDown_Weather_handX_offset_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown239.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handX_offset_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown239.Name = "numericUpDown239";
-            this.helpProvider1.SetShowHelp(this.numericUpDown239, ((bool)(resources.GetObject("numericUpDown239.ShowHelp"))));
+            this.numericUpDown_Weather_handX_offset_AOD.Name = "numericUpDown_Weather_handX_offset_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handX_offset_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handX_offset_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handX_offset_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // numericUpDown240
+            // numericUpDown_Weather_handY_offset_AOD
             // 
-            resources.ApplyResources(this.numericUpDown240, "numericUpDown240");
-            this.numericUpDown240.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_handY_offset_AOD, "numericUpDown_Weather_handY_offset_AOD");
+            this.numericUpDown_Weather_handY_offset_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown240.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handY_offset_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown240.Name = "numericUpDown240";
-            this.helpProvider1.SetShowHelp(this.numericUpDown240, ((bool)(resources.GetObject("numericUpDown240.ShowHelp"))));
+            this.numericUpDown_Weather_handY_offset_AOD.Name = "numericUpDown_Weather_handY_offset_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handY_offset_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handY_offset_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handY_offset_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // comboBox142
+            // comboBox_Weather_hand_imageCentr_AOD
             // 
-            this.comboBox142.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox142.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox142, "comboBox142");
-            this.comboBox142.FormattingEnabled = true;
-            this.comboBox142.Name = "comboBox142";
-            this.helpProvider1.SetShowHelp(this.comboBox142, ((bool)(resources.GetObject("comboBox142.ShowHelp"))));
+            this.comboBox_Weather_hand_imageCentr_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_hand_imageCentr_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_hand_imageCentr_AOD, "comboBox_Weather_hand_imageCentr_AOD");
+            this.comboBox_Weather_hand_imageCentr_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_hand_imageCentr_AOD.Name = "comboBox_Weather_hand_imageCentr_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_hand_imageCentr_AOD, ((bool)(resources.GetObject("comboBox_Weather_hand_imageCentr_AOD.ShowHelp"))));
+            this.comboBox_Weather_hand_imageCentr_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_hand_imageCentr_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_hand_imageCentr_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_hand_imageCentr_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_hand_imageCentr_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown241
+            // numericUpDown_Weather_handX_centr_AOD
             // 
-            this.numericUpDown241.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown241, "numericUpDown241");
-            this.numericUpDown241.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_handX_centr_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_handX_centr_AOD, "numericUpDown_Weather_handX_centr_AOD");
+            this.numericUpDown_Weather_handX_centr_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown241.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handX_centr_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown241.Name = "numericUpDown241";
-            this.helpProvider1.SetShowHelp(this.numericUpDown241, ((bool)(resources.GetObject("numericUpDown241.ShowHelp"))));
+            this.numericUpDown_Weather_handX_centr_AOD.Name = "numericUpDown_Weather_handX_centr_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handX_centr_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handX_centr_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handX_centr_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_handX_centr_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown242
+            // numericUpDown_Weather_handY_centr_AOD
             // 
-            this.numericUpDown242.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown242, "numericUpDown242");
-            this.numericUpDown242.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_handY_centr_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_handY_centr_AOD, "numericUpDown_Weather_handY_centr_AOD");
+            this.numericUpDown_Weather_handY_centr_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown242.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handY_centr_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown242.Name = "numericUpDown242";
-            this.helpProvider1.SetShowHelp(this.numericUpDown242, ((bool)(resources.GetObject("numericUpDown242.ShowHelp"))));
+            this.numericUpDown_Weather_handY_centr_AOD.Name = "numericUpDown_Weather_handY_centr_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handY_centr_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handY_centr_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handY_centr_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_handY_centr_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown243
+            // numericUpDown_Weather_hand_startAngle_AOD
             // 
-            resources.ApplyResources(this.numericUpDown243, "numericUpDown243");
-            this.numericUpDown243.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_hand_startAngle_AOD, "numericUpDown_Weather_hand_startAngle_AOD");
+            this.numericUpDown_Weather_hand_startAngle_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown243.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_hand_startAngle_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown243.Name = "numericUpDown243";
-            this.helpProvider1.SetShowHelp(this.numericUpDown243, ((bool)(resources.GetObject("numericUpDown243.ShowHelp"))));
+            this.numericUpDown_Weather_hand_startAngle_AOD.Name = "numericUpDown_Weather_hand_startAngle_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_hand_startAngle_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_hand_startAngle_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_hand_startAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // numericUpDown244
+            // numericUpDown_Weather_hand_endAngle_AOD
             // 
-            resources.ApplyResources(this.numericUpDown244, "numericUpDown244");
-            this.numericUpDown244.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_hand_endAngle_AOD, "numericUpDown_Weather_hand_endAngle_AOD");
+            this.numericUpDown_Weather_hand_endAngle_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown244.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_hand_endAngle_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown244.Name = "numericUpDown244";
-            this.helpProvider1.SetShowHelp(this.numericUpDown244, ((bool)(resources.GetObject("numericUpDown244.ShowHelp"))));
-            this.numericUpDown244.Value = new decimal(new int[] {
+            this.numericUpDown_Weather_hand_endAngle_AOD.Name = "numericUpDown_Weather_hand_endAngle_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_hand_endAngle_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_hand_endAngle_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_hand_endAngle_AOD.Value = new decimal(new int[] {
             360,
             0,
             0,
             0});
+            this.numericUpDown_Weather_hand_endAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // comboBox143
+            // comboBox_Weather_hand_imageBackground_AOD
             // 
-            this.comboBox143.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox143.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox143, "comboBox143");
-            this.comboBox143.FormattingEnabled = true;
-            this.comboBox143.Name = "comboBox143";
-            this.helpProvider1.SetShowHelp(this.comboBox143, ((bool)(resources.GetObject("comboBox143.ShowHelp"))));
+            this.comboBox_Weather_hand_imageBackground_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_hand_imageBackground_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_hand_imageBackground_AOD, "comboBox_Weather_hand_imageBackground_AOD");
+            this.comboBox_Weather_hand_imageBackground_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_hand_imageBackground_AOD.Name = "comboBox_Weather_hand_imageBackground_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_hand_imageBackground_AOD, ((bool)(resources.GetObject("comboBox_Weather_hand_imageBackground_AOD.ShowHelp"))));
+            this.comboBox_Weather_hand_imageBackground_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_hand_imageBackground_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_hand_imageBackground_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_hand_imageBackground_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_hand_imageBackground_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown245
+            // numericUpDown_Weather_handX_background_AOD
             // 
-            this.numericUpDown245.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown245, "numericUpDown245");
-            this.numericUpDown245.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_handX_background_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_handX_background_AOD, "numericUpDown_Weather_handX_background_AOD");
+            this.numericUpDown_Weather_handX_background_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown245.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handX_background_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown245.Name = "numericUpDown245";
-            this.helpProvider1.SetShowHelp(this.numericUpDown245, ((bool)(resources.GetObject("numericUpDown245.ShowHelp"))));
+            this.numericUpDown_Weather_handX_background_AOD.Name = "numericUpDown_Weather_handX_background_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handX_background_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handX_background_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handX_background_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_handX_background_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown246
+            // numericUpDown_Weather_handY_background_AOD
             // 
-            this.numericUpDown246.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown246, "numericUpDown246");
-            this.numericUpDown246.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_handY_background_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_handY_background_AOD, "numericUpDown_Weather_handY_background_AOD");
+            this.numericUpDown_Weather_handY_background_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown246.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_handY_background_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown246.Name = "numericUpDown246";
-            this.helpProvider1.SetShowHelp(this.numericUpDown246, ((bool)(resources.GetObject("numericUpDown246.ShowHelp"))));
+            this.numericUpDown_Weather_handY_background_AOD.Name = "numericUpDown_Weather_handY_background_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_handY_background_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_handY_background_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_handY_background_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_handY_background_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label1118
             // 
@@ -30130,6 +24734,14 @@
             this.label1134.Name = "label1134";
             this.helpProvider1.SetShowHelp(this.label1134, ((bool)(resources.GetObject("label1134.ShowHelp"))));
             // 
+            // button_Copy_Weather_hand_AOD
+            // 
+            resources.ApplyResources(this.button_Copy_Weather_hand_AOD, "button_Copy_Weather_hand_AOD");
+            this.button_Copy_Weather_hand_AOD.Name = "button_Copy_Weather_hand_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Weather_hand_AOD, ((bool)(resources.GetObject("button_Copy_Weather_hand_AOD.ShowHelp"))));
+            this.button_Copy_Weather_hand_AOD.UseVisualStyleBackColor = true;
+            this.button_Copy_Weather_hand_AOD.Click += new System.EventHandler(this.button_Copy_Weather_hand_AOD_Click);
+            // 
             // button_Weather_hand_AOD
             // 
             resources.ApplyResources(this.button_Weather_hand_AOD, "button_Weather_hand_AOD");
@@ -30141,19 +24753,19 @@
             // panel_Weather_textMax_AOD
             // 
             this.panel_Weather_textMax_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_textMax_AOD.Controls.Add(this.checkBox60);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox144);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox145);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox146);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown247);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown248);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown249);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown250);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox147);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown251);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox148);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox149);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.checkBox61);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.checkBox_Weather_UseMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_imageMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_iconMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_unitFMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_WeatherXMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_WeatherYMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_Weather_iconXMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_Weather_iconYMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_alignmentMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_Weather_spacingMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_imageErrorMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_imageMinusMax_AOD);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.checkBox_Weather_followMax_AOD);
             this.panel_Weather_textMax_AOD.Controls.Add(this.label1135);
             this.panel_Weather_textMax_AOD.Controls.Add(this.label1136);
             this.panel_Weather_textMax_AOD.Controls.Add(this.label1137);
@@ -30167,164 +24779,204 @@
             this.panel_Weather_textMax_AOD.Controls.Add(this.label1145);
             this.panel_Weather_textMax_AOD.Controls.Add(this.label1146);
             this.panel_Weather_textMax_AOD.Controls.Add(this.label1147);
+            this.panel_Weather_textMax_AOD.Controls.Add(this.button_Copy_Weather_textMax_AOD);
             resources.ApplyResources(this.panel_Weather_textMax_AOD, "panel_Weather_textMax_AOD");
             this.panel_Weather_textMax_AOD.Name = "panel_Weather_textMax_AOD";
             this.helpProvider1.SetShowHelp(this.panel_Weather_textMax_AOD, ((bool)(resources.GetObject("panel_Weather_textMax_AOD.ShowHelp"))));
             // 
-            // checkBox60
+            // checkBox_Weather_UseMax_AOD
             // 
-            resources.ApplyResources(this.checkBox60, "checkBox60");
-            this.checkBox60.Name = "checkBox60";
-            this.helpProvider1.SetShowHelp(this.checkBox60, ((bool)(resources.GetObject("checkBox60.ShowHelp"))));
-            this.checkBox60.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_UseMax_AOD, "checkBox_Weather_UseMax_AOD");
+            this.checkBox_Weather_UseMax_AOD.Name = "checkBox_Weather_UseMax_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_UseMax_AOD, ((bool)(resources.GetObject("checkBox_Weather_UseMax_AOD.ShowHelp"))));
+            this.checkBox_Weather_UseMax_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_UseMax_AOD.CheckedChanged += new System.EventHandler(this.checkBox_Weather_textMax_Use_AOD_CheckedChanged);
+            this.checkBox_Weather_UseMax_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // comboBox144
+            // comboBox_Weather_imageMax_AOD
             // 
-            this.comboBox144.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox144.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox144, "comboBox144");
-            this.comboBox144.FormattingEnabled = true;
-            this.comboBox144.Name = "comboBox144";
-            this.helpProvider1.SetShowHelp(this.comboBox144, ((bool)(resources.GetObject("comboBox144.ShowHelp"))));
+            this.comboBox_Weather_imageMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageMax_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageMax_AOD, "comboBox_Weather_imageMax_AOD");
+            this.comboBox_Weather_imageMax_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageMax_AOD.Name = "comboBox_Weather_imageMax_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageMax_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageMax_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox145
+            // comboBox_Weather_iconMax_AOD
             // 
-            this.comboBox145.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox145.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox145, "comboBox145");
-            this.comboBox145.FormattingEnabled = true;
-            this.comboBox145.Name = "comboBox145";
-            this.helpProvider1.SetShowHelp(this.comboBox145, ((bool)(resources.GetObject("comboBox145.ShowHelp"))));
+            this.comboBox_Weather_iconMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_iconMax_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_iconMax_AOD, "comboBox_Weather_iconMax_AOD");
+            this.comboBox_Weather_iconMax_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_iconMax_AOD.Name = "comboBox_Weather_iconMax_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_iconMax_AOD, ((bool)(resources.GetObject("comboBox_Weather_iconMax_AOD.ShowHelp"))));
+            this.comboBox_Weather_iconMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_iconMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_iconMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_iconMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_iconMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox146
+            // comboBox_Weather_unitFMax_AOD
             // 
-            this.comboBox146.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox146.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox146, "comboBox146");
-            this.comboBox146.FormattingEnabled = true;
-            this.comboBox146.Name = "comboBox146";
-            this.helpProvider1.SetShowHelp(this.comboBox146, ((bool)(resources.GetObject("comboBox146.ShowHelp"))));
+            this.comboBox_Weather_unitFMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_unitFMax_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_unitFMax_AOD, "comboBox_Weather_unitFMax_AOD");
+            this.comboBox_Weather_unitFMax_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_unitFMax_AOD.Name = "comboBox_Weather_unitFMax_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_unitFMax_AOD, ((bool)(resources.GetObject("comboBox_Weather_unitFMax_AOD.ShowHelp"))));
+            this.comboBox_Weather_unitFMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_unitFMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_unitFMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_unitFMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_unitFMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown247
+            // numericUpDown_WeatherXMax_AOD
             // 
-            this.numericUpDown247.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown247, "numericUpDown247");
-            this.numericUpDown247.Maximum = new decimal(new int[] {
+            this.numericUpDown_WeatherXMax_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WeatherXMax_AOD, "numericUpDown_WeatherXMax_AOD");
+            this.numericUpDown_WeatherXMax_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown247.Minimum = new decimal(new int[] {
+            this.numericUpDown_WeatherXMax_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown247.Name = "numericUpDown247";
-            this.helpProvider1.SetShowHelp(this.numericUpDown247, ((bool)(resources.GetObject("numericUpDown247.ShowHelp"))));
+            this.numericUpDown_WeatherXMax_AOD.Name = "numericUpDown_WeatherXMax_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherXMax_AOD, ((bool)(resources.GetObject("numericUpDown_WeatherXMax_AOD.ShowHelp"))));
+            this.numericUpDown_WeatherXMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherXMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown248
+            // numericUpDown_WeatherYMax_AOD
             // 
-            this.numericUpDown248.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown248, "numericUpDown248");
-            this.numericUpDown248.Maximum = new decimal(new int[] {
+            this.numericUpDown_WeatherYMax_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WeatherYMax_AOD, "numericUpDown_WeatherYMax_AOD");
+            this.numericUpDown_WeatherYMax_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown248.Minimum = new decimal(new int[] {
+            this.numericUpDown_WeatherYMax_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown248.Name = "numericUpDown248";
-            this.helpProvider1.SetShowHelp(this.numericUpDown248, ((bool)(resources.GetObject("numericUpDown248.ShowHelp"))));
+            this.numericUpDown_WeatherYMax_AOD.Name = "numericUpDown_WeatherYMax_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherYMax_AOD, ((bool)(resources.GetObject("numericUpDown_WeatherYMax_AOD.ShowHelp"))));
+            this.numericUpDown_WeatherYMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherYMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown249
+            // numericUpDown_Weather_iconXMax_AOD
             // 
-            this.numericUpDown249.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown249, "numericUpDown249");
-            this.numericUpDown249.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconXMax_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_iconXMax_AOD, "numericUpDown_Weather_iconXMax_AOD");
+            this.numericUpDown_Weather_iconXMax_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown249.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconXMax_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown249.Name = "numericUpDown249";
-            this.helpProvider1.SetShowHelp(this.numericUpDown249, ((bool)(resources.GetObject("numericUpDown249.ShowHelp"))));
+            this.numericUpDown_Weather_iconXMax_AOD.Name = "numericUpDown_Weather_iconXMax_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_iconXMax_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_iconXMax_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_iconXMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_iconXMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown250
+            // numericUpDown_Weather_iconYMax_AOD
             // 
-            this.numericUpDown250.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown250, "numericUpDown250");
-            this.numericUpDown250.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconYMax_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_iconYMax_AOD, "numericUpDown_Weather_iconYMax_AOD");
+            this.numericUpDown_Weather_iconYMax_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown250.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconYMax_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown250.Name = "numericUpDown250";
-            this.helpProvider1.SetShowHelp(this.numericUpDown250, ((bool)(resources.GetObject("numericUpDown250.ShowHelp"))));
+            this.numericUpDown_Weather_iconYMax_AOD.Name = "numericUpDown_Weather_iconYMax_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_iconYMax_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_iconYMax_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_iconYMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_iconYMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // comboBox147
+            // comboBox_Weather_alignmentMax_AOD
             // 
-            this.comboBox147.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox147, "comboBox147");
-            this.comboBox147.FormattingEnabled = true;
-            this.comboBox147.Items.AddRange(new object[] {
-            resources.GetString("comboBox147.Items"),
-            resources.GetString("comboBox147.Items1"),
-            resources.GetString("comboBox147.Items2")});
-            this.comboBox147.Name = "comboBox147";
-            this.helpProvider1.SetShowHelp(this.comboBox147, ((bool)(resources.GetObject("comboBox147.ShowHelp"))));
+            this.comboBox_Weather_alignmentMax_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_Weather_alignmentMax_AOD, "comboBox_Weather_alignmentMax_AOD");
+            this.comboBox_Weather_alignmentMax_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_alignmentMax_AOD.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Weather_alignmentMax_AOD.Items"),
+            resources.GetString("comboBox_Weather_alignmentMax_AOD.Items1"),
+            resources.GetString("comboBox_Weather_alignmentMax_AOD.Items2")});
+            this.comboBox_Weather_alignmentMax_AOD.Name = "comboBox_Weather_alignmentMax_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_alignmentMax_AOD, ((bool)(resources.GetObject("comboBox_Weather_alignmentMax_AOD.ShowHelp"))));
+            this.comboBox_Weather_alignmentMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // numericUpDown251
+            // numericUpDown_Weather_spacingMax_AOD
             // 
-            resources.ApplyResources(this.numericUpDown251, "numericUpDown251");
-            this.numericUpDown251.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_spacingMax_AOD, "numericUpDown_Weather_spacingMax_AOD");
+            this.numericUpDown_Weather_spacingMax_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown251.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_spacingMax_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown251.Name = "numericUpDown251";
-            this.helpProvider1.SetShowHelp(this.numericUpDown251, ((bool)(resources.GetObject("numericUpDown251.ShowHelp"))));
+            this.numericUpDown_Weather_spacingMax_AOD.Name = "numericUpDown_Weather_spacingMax_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_spacingMax_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_spacingMax_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_spacingMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // comboBox148
+            // comboBox_Weather_imageErrorMax_AOD
             // 
-            this.comboBox148.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox148.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox148, "comboBox148");
-            this.comboBox148.FormattingEnabled = true;
-            this.comboBox148.Name = "comboBox148";
-            this.helpProvider1.SetShowHelp(this.comboBox148, ((bool)(resources.GetObject("comboBox148.ShowHelp"))));
+            this.comboBox_Weather_imageErrorMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageErrorMax_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageErrorMax_AOD, "comboBox_Weather_imageErrorMax_AOD");
+            this.comboBox_Weather_imageErrorMax_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageErrorMax_AOD.Name = "comboBox_Weather_imageErrorMax_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageErrorMax_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageErrorMax_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageErrorMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageErrorMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageErrorMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageErrorMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageErrorMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox149
+            // comboBox_Weather_imageMinusMax_AOD
             // 
-            this.comboBox149.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox149.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox149, "comboBox149");
-            this.comboBox149.FormattingEnabled = true;
-            this.comboBox149.Name = "comboBox149";
-            this.helpProvider1.SetShowHelp(this.comboBox149, ((bool)(resources.GetObject("comboBox149.ShowHelp"))));
+            this.comboBox_Weather_imageMinusMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageMinusMax_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageMinusMax_AOD, "comboBox_Weather_imageMinusMax_AOD");
+            this.comboBox_Weather_imageMinusMax_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageMinusMax_AOD.Name = "comboBox_Weather_imageMinusMax_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageMinusMax_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageMinusMax_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageMinusMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageMinusMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageMinusMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageMinusMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageMinusMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // checkBox61
+            // checkBox_Weather_followMax_AOD
             // 
-            resources.ApplyResources(this.checkBox61, "checkBox61");
-            this.checkBox61.Name = "checkBox61";
-            this.helpProvider1.SetShowHelp(this.checkBox61, ((bool)(resources.GetObject("checkBox61.ShowHelp"))));
-            this.checkBox61.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_followMax_AOD, "checkBox_Weather_followMax_AOD");
+            this.checkBox_Weather_followMax_AOD.Name = "checkBox_Weather_followMax_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_followMax_AOD, ((bool)(resources.GetObject("checkBox_Weather_followMax_AOD.ShowHelp"))));
+            this.checkBox_Weather_followMax_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_followMax_AOD.CheckedChanged += new System.EventHandler(this.checkBox_Weather_followMax_AOD_CheckedChanged);
+            this.checkBox_Weather_followMax_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // label1135
             // 
@@ -30404,6 +25056,14 @@
             this.label1147.Name = "label1147";
             this.helpProvider1.SetShowHelp(this.label1147, ((bool)(resources.GetObject("label1147.ShowHelp"))));
             // 
+            // button_Copy_Weather_textMax_AOD
+            // 
+            resources.ApplyResources(this.button_Copy_Weather_textMax_AOD, "button_Copy_Weather_textMax_AOD");
+            this.button_Copy_Weather_textMax_AOD.Name = "button_Copy_Weather_textMax_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Weather_textMax_AOD, ((bool)(resources.GetObject("button_Copy_Weather_textMax_AOD.ShowHelp"))));
+            this.button_Copy_Weather_textMax_AOD.UseVisualStyleBackColor = true;
+            this.button_Copy_Weather_textMax_AOD.Click += new System.EventHandler(this.button_Copy_Weather_textMax_AOD_Click);
+            // 
             // button_Weather_textMax_AOD
             // 
             resources.ApplyResources(this.button_Weather_textMax_AOD, "button_Weather_textMax_AOD");
@@ -30415,18 +25075,18 @@
             // panel_Weather_textMin_AOD
             // 
             this.panel_Weather_textMin_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_textMin_AOD.Controls.Add(this.checkBox62);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox150);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox151);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox152);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown252);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown253);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown254);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown255);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox153);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown256);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox154);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox155);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.checkBox_Weather_UseMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_imageMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_iconMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_unitFMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_WeatherXMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_WeatherYMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_Weather_iconXMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_Weather_iconYMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_alignmentMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_Weather_spacingMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_imageErrorMin_AOD);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_imageMinusMin_AOD);
             this.panel_Weather_textMin_AOD.Controls.Add(this.label1148);
             this.panel_Weather_textMin_AOD.Controls.Add(this.label1149);
             this.panel_Weather_textMin_AOD.Controls.Add(this.label1150);
@@ -30440,157 +25100,195 @@
             this.panel_Weather_textMin_AOD.Controls.Add(this.label1158);
             this.panel_Weather_textMin_AOD.Controls.Add(this.label1159);
             this.panel_Weather_textMin_AOD.Controls.Add(this.label1160);
+            this.panel_Weather_textMin_AOD.Controls.Add(this.button_Copy_Weather_textMin_AOD);
             resources.ApplyResources(this.panel_Weather_textMin_AOD, "panel_Weather_textMin_AOD");
             this.panel_Weather_textMin_AOD.Name = "panel_Weather_textMin_AOD";
             this.helpProvider1.SetShowHelp(this.panel_Weather_textMin_AOD, ((bool)(resources.GetObject("panel_Weather_textMin_AOD.ShowHelp"))));
             // 
-            // checkBox62
+            // checkBox_Weather_UseMin_AOD
             // 
-            resources.ApplyResources(this.checkBox62, "checkBox62");
-            this.checkBox62.Name = "checkBox62";
-            this.helpProvider1.SetShowHelp(this.checkBox62, ((bool)(resources.GetObject("checkBox62.ShowHelp"))));
-            this.checkBox62.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_UseMin_AOD, "checkBox_Weather_UseMin_AOD");
+            this.checkBox_Weather_UseMin_AOD.Name = "checkBox_Weather_UseMin_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_UseMin_AOD, ((bool)(resources.GetObject("checkBox_Weather_UseMin_AOD.ShowHelp"))));
+            this.checkBox_Weather_UseMin_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_UseMin_AOD.CheckedChanged += new System.EventHandler(this.checkBox_text_Use_AOD_CheckedChanged);
+            this.checkBox_Weather_UseMin_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // comboBox150
+            // comboBox_Weather_imageMin_AOD
             // 
-            this.comboBox150.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox150.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox150, "comboBox150");
-            this.comboBox150.FormattingEnabled = true;
-            this.comboBox150.Name = "comboBox150";
-            this.helpProvider1.SetShowHelp(this.comboBox150, ((bool)(resources.GetObject("comboBox150.ShowHelp"))));
+            this.comboBox_Weather_imageMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageMin_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageMin_AOD, "comboBox_Weather_imageMin_AOD");
+            this.comboBox_Weather_imageMin_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageMin_AOD.Name = "comboBox_Weather_imageMin_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageMin_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageMin_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox151
+            // comboBox_Weather_iconMin_AOD
             // 
-            this.comboBox151.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox151.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox151, "comboBox151");
-            this.comboBox151.FormattingEnabled = true;
-            this.comboBox151.Name = "comboBox151";
-            this.helpProvider1.SetShowHelp(this.comboBox151, ((bool)(resources.GetObject("comboBox151.ShowHelp"))));
+            this.comboBox_Weather_iconMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_iconMin_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_iconMin_AOD, "comboBox_Weather_iconMin_AOD");
+            this.comboBox_Weather_iconMin_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_iconMin_AOD.Name = "comboBox_Weather_iconMin_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_iconMin_AOD, ((bool)(resources.GetObject("comboBox_Weather_iconMin_AOD.ShowHelp"))));
+            this.comboBox_Weather_iconMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_iconMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_iconMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_iconMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_iconMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox152
+            // comboBox_Weather_unitFMin_AOD
             // 
-            this.comboBox152.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox152.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox152, "comboBox152");
-            this.comboBox152.FormattingEnabled = true;
-            this.comboBox152.Name = "comboBox152";
-            this.helpProvider1.SetShowHelp(this.comboBox152, ((bool)(resources.GetObject("comboBox152.ShowHelp"))));
+            this.comboBox_Weather_unitFMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_unitFMin_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_unitFMin_AOD, "comboBox_Weather_unitFMin_AOD");
+            this.comboBox_Weather_unitFMin_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_unitFMin_AOD.Name = "comboBox_Weather_unitFMin_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_unitFMin_AOD, ((bool)(resources.GetObject("comboBox_Weather_unitFMin_AOD.ShowHelp"))));
+            this.comboBox_Weather_unitFMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_unitFMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_unitFMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_unitFMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_unitFMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown252
+            // numericUpDown_WeatherXMin_AOD
             // 
-            this.numericUpDown252.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown252, "numericUpDown252");
-            this.numericUpDown252.Maximum = new decimal(new int[] {
+            this.numericUpDown_WeatherXMin_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WeatherXMin_AOD, "numericUpDown_WeatherXMin_AOD");
+            this.numericUpDown_WeatherXMin_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown252.Minimum = new decimal(new int[] {
+            this.numericUpDown_WeatherXMin_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown252.Name = "numericUpDown252";
-            this.helpProvider1.SetShowHelp(this.numericUpDown252, ((bool)(resources.GetObject("numericUpDown252.ShowHelp"))));
+            this.numericUpDown_WeatherXMin_AOD.Name = "numericUpDown_WeatherXMin_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherXMin_AOD, ((bool)(resources.GetObject("numericUpDown_WeatherXMin_AOD.ShowHelp"))));
+            this.numericUpDown_WeatherXMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherXMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown253
+            // numericUpDown_WeatherYMin_AOD
             // 
-            this.numericUpDown253.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown253, "numericUpDown253");
-            this.numericUpDown253.Maximum = new decimal(new int[] {
+            this.numericUpDown_WeatherYMin_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WeatherYMin_AOD, "numericUpDown_WeatherYMin_AOD");
+            this.numericUpDown_WeatherYMin_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown253.Minimum = new decimal(new int[] {
+            this.numericUpDown_WeatherYMin_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown253.Name = "numericUpDown253";
-            this.helpProvider1.SetShowHelp(this.numericUpDown253, ((bool)(resources.GetObject("numericUpDown253.ShowHelp"))));
+            this.numericUpDown_WeatherYMin_AOD.Name = "numericUpDown_WeatherYMin_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherYMin_AOD, ((bool)(resources.GetObject("numericUpDown_WeatherYMin_AOD.ShowHelp"))));
+            this.numericUpDown_WeatherYMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherYMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown254
+            // numericUpDown_Weather_iconXMin_AOD
             // 
-            this.numericUpDown254.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown254, "numericUpDown254");
-            this.numericUpDown254.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconXMin_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_iconXMin_AOD, "numericUpDown_Weather_iconXMin_AOD");
+            this.numericUpDown_Weather_iconXMin_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown254.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconXMin_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown254.Name = "numericUpDown254";
-            this.helpProvider1.SetShowHelp(this.numericUpDown254, ((bool)(resources.GetObject("numericUpDown254.ShowHelp"))));
+            this.numericUpDown_Weather_iconXMin_AOD.Name = "numericUpDown_Weather_iconXMin_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_iconXMin_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_iconXMin_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_iconXMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_iconXMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown255
+            // numericUpDown_Weather_iconYMin_AOD
             // 
-            this.numericUpDown255.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown255, "numericUpDown255");
-            this.numericUpDown255.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconYMin_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_iconYMin_AOD, "numericUpDown_Weather_iconYMin_AOD");
+            this.numericUpDown_Weather_iconYMin_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown255.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconYMin_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown255.Name = "numericUpDown255";
-            this.helpProvider1.SetShowHelp(this.numericUpDown255, ((bool)(resources.GetObject("numericUpDown255.ShowHelp"))));
+            this.numericUpDown_Weather_iconYMin_AOD.Name = "numericUpDown_Weather_iconYMin_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_iconYMin_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_iconYMin_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_iconYMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_iconYMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // comboBox153
+            // comboBox_Weather_alignmentMin_AOD
             // 
-            this.comboBox153.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox153, "comboBox153");
-            this.comboBox153.FormattingEnabled = true;
-            this.comboBox153.Items.AddRange(new object[] {
-            resources.GetString("comboBox153.Items"),
-            resources.GetString("comboBox153.Items1"),
-            resources.GetString("comboBox153.Items2")});
-            this.comboBox153.Name = "comboBox153";
-            this.helpProvider1.SetShowHelp(this.comboBox153, ((bool)(resources.GetObject("comboBox153.ShowHelp"))));
+            this.comboBox_Weather_alignmentMin_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_Weather_alignmentMin_AOD, "comboBox_Weather_alignmentMin_AOD");
+            this.comboBox_Weather_alignmentMin_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_alignmentMin_AOD.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Weather_alignmentMin_AOD.Items"),
+            resources.GetString("comboBox_Weather_alignmentMin_AOD.Items1"),
+            resources.GetString("comboBox_Weather_alignmentMin_AOD.Items2")});
+            this.comboBox_Weather_alignmentMin_AOD.Name = "comboBox_Weather_alignmentMin_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_alignmentMin_AOD, ((bool)(resources.GetObject("comboBox_Weather_alignmentMin_AOD.ShowHelp"))));
+            this.comboBox_Weather_alignmentMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // numericUpDown256
+            // numericUpDown_Weather_spacingMin_AOD
             // 
-            resources.ApplyResources(this.numericUpDown256, "numericUpDown256");
-            this.numericUpDown256.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_spacingMin_AOD, "numericUpDown_Weather_spacingMin_AOD");
+            this.numericUpDown_Weather_spacingMin_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown256.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_spacingMin_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown256.Name = "numericUpDown256";
-            this.helpProvider1.SetShowHelp(this.numericUpDown256, ((bool)(resources.GetObject("numericUpDown256.ShowHelp"))));
+            this.numericUpDown_Weather_spacingMin_AOD.Name = "numericUpDown_Weather_spacingMin_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_spacingMin_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_spacingMin_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_spacingMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // comboBox154
+            // comboBox_Weather_imageErrorMin_AOD
             // 
-            this.comboBox154.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox154.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox154, "comboBox154");
-            this.comboBox154.FormattingEnabled = true;
-            this.comboBox154.Name = "comboBox154";
-            this.helpProvider1.SetShowHelp(this.comboBox154, ((bool)(resources.GetObject("comboBox154.ShowHelp"))));
+            this.comboBox_Weather_imageErrorMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageErrorMin_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageErrorMin_AOD, "comboBox_Weather_imageErrorMin_AOD");
+            this.comboBox_Weather_imageErrorMin_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageErrorMin_AOD.Name = "comboBox_Weather_imageErrorMin_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageErrorMin_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageErrorMin_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageErrorMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageErrorMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageErrorMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageErrorMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageErrorMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox155
+            // comboBox_Weather_imageMinusMin_AOD
             // 
-            this.comboBox155.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox155.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox155, "comboBox155");
-            this.comboBox155.FormattingEnabled = true;
-            this.comboBox155.Name = "comboBox155";
-            this.helpProvider1.SetShowHelp(this.comboBox155, ((bool)(resources.GetObject("comboBox155.ShowHelp"))));
+            this.comboBox_Weather_imageMinusMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageMinusMin_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageMinusMin_AOD, "comboBox_Weather_imageMinusMin_AOD");
+            this.comboBox_Weather_imageMinusMin_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageMinusMin_AOD.Name = "comboBox_Weather_imageMinusMin_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageMinusMin_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageMinusMin_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageMinusMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageMinusMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageMinusMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageMinusMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageMinusMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label1148
             // 
@@ -30670,6 +25368,14 @@
             this.label1160.Name = "label1160";
             this.helpProvider1.SetShowHelp(this.label1160, ((bool)(resources.GetObject("label1160.ShowHelp"))));
             // 
+            // button_Copy_Weather_textMin_AOD
+            // 
+            resources.ApplyResources(this.button_Copy_Weather_textMin_AOD, "button_Copy_Weather_textMin_AOD");
+            this.button_Copy_Weather_textMin_AOD.Name = "button_Copy_Weather_textMin_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Weather_textMin_AOD, ((bool)(resources.GetObject("button_Copy_Weather_textMin_AOD.ShowHelp"))));
+            this.button_Copy_Weather_textMin_AOD.UseVisualStyleBackColor = true;
+            this.button_Copy_Weather_textMin_AOD.Click += new System.EventHandler(this.button_Copy_Weather_textMin_AOD_Click);
+            // 
             // button_Weather_textMin_AOD
             // 
             resources.ApplyResources(this.button_Weather_textMin_AOD, "button_Weather_textMin_AOD");
@@ -30681,18 +25387,18 @@
             // panel_Weather_text_AOD
             // 
             this.panel_Weather_text_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_text_AOD.Controls.Add(this.checkBox63);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox156);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox157);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox158);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown257);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown258);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown259);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown260);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox159);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown261);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox160);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox161);
+            this.panel_Weather_text_AOD.Controls.Add(this.checkBox_Weather_Use_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_image_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_icon_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_unitF_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_WeatherX_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_WeatherY_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_Weather_iconX_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_Weather_iconY_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_alignment_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_Weather_spacing_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_imageError_AOD);
+            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_imageMinus_AOD);
             this.panel_Weather_text_AOD.Controls.Add(this.label1161);
             this.panel_Weather_text_AOD.Controls.Add(this.label1162);
             this.panel_Weather_text_AOD.Controls.Add(this.label1163);
@@ -30706,157 +25412,195 @@
             this.panel_Weather_text_AOD.Controls.Add(this.label1171);
             this.panel_Weather_text_AOD.Controls.Add(this.label1172);
             this.panel_Weather_text_AOD.Controls.Add(this.label1173);
+            this.panel_Weather_text_AOD.Controls.Add(this.button_Copy_Weather_text_AOD);
             resources.ApplyResources(this.panel_Weather_text_AOD, "panel_Weather_text_AOD");
             this.panel_Weather_text_AOD.Name = "panel_Weather_text_AOD";
             this.helpProvider1.SetShowHelp(this.panel_Weather_text_AOD, ((bool)(resources.GetObject("panel_Weather_text_AOD.ShowHelp"))));
             // 
-            // checkBox63
+            // checkBox_Weather_Use_AOD
             // 
-            resources.ApplyResources(this.checkBox63, "checkBox63");
-            this.checkBox63.Name = "checkBox63";
-            this.helpProvider1.SetShowHelp(this.checkBox63, ((bool)(resources.GetObject("checkBox63.ShowHelp"))));
-            this.checkBox63.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_Use_AOD, "checkBox_Weather_Use_AOD");
+            this.checkBox_Weather_Use_AOD.Name = "checkBox_Weather_Use_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_Use_AOD, ((bool)(resources.GetObject("checkBox_Weather_Use_AOD.ShowHelp"))));
+            this.checkBox_Weather_Use_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_text_Use_AOD_CheckedChanged);
+            this.checkBox_Weather_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // comboBox156
+            // comboBox_Weather_image_AOD
             // 
-            this.comboBox156.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox156.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox156, "comboBox156");
-            this.comboBox156.FormattingEnabled = true;
-            this.comboBox156.Name = "comboBox156";
-            this.helpProvider1.SetShowHelp(this.comboBox156, ((bool)(resources.GetObject("comboBox156.ShowHelp"))));
+            this.comboBox_Weather_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_image_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_image_AOD, "comboBox_Weather_image_AOD");
+            this.comboBox_Weather_image_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_image_AOD.Name = "comboBox_Weather_image_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_image_AOD, ((bool)(resources.GetObject("comboBox_Weather_image_AOD.ShowHelp"))));
+            this.comboBox_Weather_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox157
+            // comboBox_Weather_icon_AOD
             // 
-            this.comboBox157.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox157.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox157, "comboBox157");
-            this.comboBox157.FormattingEnabled = true;
-            this.comboBox157.Name = "comboBox157";
-            this.helpProvider1.SetShowHelp(this.comboBox157, ((bool)(resources.GetObject("comboBox157.ShowHelp"))));
+            this.comboBox_Weather_icon_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_icon_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_icon_AOD, "comboBox_Weather_icon_AOD");
+            this.comboBox_Weather_icon_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_icon_AOD.Name = "comboBox_Weather_icon_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_icon_AOD, ((bool)(resources.GetObject("comboBox_Weather_icon_AOD.ShowHelp"))));
+            this.comboBox_Weather_icon_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_icon_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_icon_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_icon_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_icon_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox158
+            // comboBox_Weather_unitF_AOD
             // 
-            this.comboBox158.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox158.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox158, "comboBox158");
-            this.comboBox158.FormattingEnabled = true;
-            this.comboBox158.Name = "comboBox158";
-            this.helpProvider1.SetShowHelp(this.comboBox158, ((bool)(resources.GetObject("comboBox158.ShowHelp"))));
+            this.comboBox_Weather_unitF_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_unitF_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_unitF_AOD, "comboBox_Weather_unitF_AOD");
+            this.comboBox_Weather_unitF_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_unitF_AOD.Name = "comboBox_Weather_unitF_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_unitF_AOD, ((bool)(resources.GetObject("comboBox_Weather_unitF_AOD.ShowHelp"))));
+            this.comboBox_Weather_unitF_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_unitF_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_unitF_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_unitF_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_unitF_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown257
+            // numericUpDown_WeatherX_AOD
             // 
-            this.numericUpDown257.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown257, "numericUpDown257");
-            this.numericUpDown257.Maximum = new decimal(new int[] {
+            this.numericUpDown_WeatherX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WeatherX_AOD, "numericUpDown_WeatherX_AOD");
+            this.numericUpDown_WeatherX_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown257.Minimum = new decimal(new int[] {
+            this.numericUpDown_WeatherX_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown257.Name = "numericUpDown257";
-            this.helpProvider1.SetShowHelp(this.numericUpDown257, ((bool)(resources.GetObject("numericUpDown257.ShowHelp"))));
+            this.numericUpDown_WeatherX_AOD.Name = "numericUpDown_WeatherX_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherX_AOD, ((bool)(resources.GetObject("numericUpDown_WeatherX_AOD.ShowHelp"))));
+            this.numericUpDown_WeatherX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown258
+            // numericUpDown_WeatherY_AOD
             // 
-            this.numericUpDown258.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown258, "numericUpDown258");
-            this.numericUpDown258.Maximum = new decimal(new int[] {
+            this.numericUpDown_WeatherY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WeatherY_AOD, "numericUpDown_WeatherY_AOD");
+            this.numericUpDown_WeatherY_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown258.Minimum = new decimal(new int[] {
+            this.numericUpDown_WeatherY_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown258.Name = "numericUpDown258";
-            this.helpProvider1.SetShowHelp(this.numericUpDown258, ((bool)(resources.GetObject("numericUpDown258.ShowHelp"))));
+            this.numericUpDown_WeatherY_AOD.Name = "numericUpDown_WeatherY_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherY_AOD, ((bool)(resources.GetObject("numericUpDown_WeatherY_AOD.ShowHelp"))));
+            this.numericUpDown_WeatherY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown259
+            // numericUpDown_Weather_iconX_AOD
             // 
-            this.numericUpDown259.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown259, "numericUpDown259");
-            this.numericUpDown259.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_iconX_AOD, "numericUpDown_Weather_iconX_AOD");
+            this.numericUpDown_Weather_iconX_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown259.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconX_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown259.Name = "numericUpDown259";
-            this.helpProvider1.SetShowHelp(this.numericUpDown259, ((bool)(resources.GetObject("numericUpDown259.ShowHelp"))));
+            this.numericUpDown_Weather_iconX_AOD.Name = "numericUpDown_Weather_iconX_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_iconX_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_iconX_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_iconX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_iconX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown260
+            // numericUpDown_Weather_iconY_AOD
             // 
-            this.numericUpDown260.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown260, "numericUpDown260");
-            this.numericUpDown260.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_iconY_AOD, "numericUpDown_Weather_iconY_AOD");
+            this.numericUpDown_Weather_iconY_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown260.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_iconY_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown260.Name = "numericUpDown260";
-            this.helpProvider1.SetShowHelp(this.numericUpDown260, ((bool)(resources.GetObject("numericUpDown260.ShowHelp"))));
+            this.numericUpDown_Weather_iconY_AOD.Name = "numericUpDown_Weather_iconY_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_iconY_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_iconY_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_iconY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_iconY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // comboBox159
+            // comboBox_Weather_alignment_AOD
             // 
-            this.comboBox159.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox159, "comboBox159");
-            this.comboBox159.FormattingEnabled = true;
-            this.comboBox159.Items.AddRange(new object[] {
-            resources.GetString("comboBox159.Items"),
-            resources.GetString("comboBox159.Items1"),
-            resources.GetString("comboBox159.Items2")});
-            this.comboBox159.Name = "comboBox159";
-            this.helpProvider1.SetShowHelp(this.comboBox159, ((bool)(resources.GetObject("comboBox159.ShowHelp"))));
+            this.comboBox_Weather_alignment_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_Weather_alignment_AOD, "comboBox_Weather_alignment_AOD");
+            this.comboBox_Weather_alignment_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_alignment_AOD.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Weather_alignment_AOD.Items"),
+            resources.GetString("comboBox_Weather_alignment_AOD.Items1"),
+            resources.GetString("comboBox_Weather_alignment_AOD.Items2")});
+            this.comboBox_Weather_alignment_AOD.Name = "comboBox_Weather_alignment_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_alignment_AOD, ((bool)(resources.GetObject("comboBox_Weather_alignment_AOD.ShowHelp"))));
+            this.comboBox_Weather_alignment_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // numericUpDown261
+            // numericUpDown_Weather_spacing_AOD
             // 
-            resources.ApplyResources(this.numericUpDown261, "numericUpDown261");
-            this.numericUpDown261.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_Weather_spacing_AOD, "numericUpDown_Weather_spacing_AOD");
+            this.numericUpDown_Weather_spacing_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown261.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_spacing_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown261.Name = "numericUpDown261";
-            this.helpProvider1.SetShowHelp(this.numericUpDown261, ((bool)(resources.GetObject("numericUpDown261.ShowHelp"))));
+            this.numericUpDown_Weather_spacing_AOD.Name = "numericUpDown_Weather_spacing_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_spacing_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_spacing_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_spacing_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // comboBox160
+            // comboBox_Weather_imageError_AOD
             // 
-            this.comboBox160.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox160.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox160, "comboBox160");
-            this.comboBox160.FormattingEnabled = true;
-            this.comboBox160.Name = "comboBox160";
-            this.helpProvider1.SetShowHelp(this.comboBox160, ((bool)(resources.GetObject("comboBox160.ShowHelp"))));
+            this.comboBox_Weather_imageError_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageError_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageError_AOD, "comboBox_Weather_imageError_AOD");
+            this.comboBox_Weather_imageError_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageError_AOD.Name = "comboBox_Weather_imageError_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageError_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageError_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageError_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageError_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageError_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageError_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageError_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // comboBox161
+            // comboBox_Weather_imageMinus_AOD
             // 
-            this.comboBox161.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox161.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox161, "comboBox161");
-            this.comboBox161.FormattingEnabled = true;
-            this.comboBox161.Name = "comboBox161";
-            this.helpProvider1.SetShowHelp(this.comboBox161, ((bool)(resources.GetObject("comboBox161.ShowHelp"))));
+            this.comboBox_Weather_imageMinus_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_imageMinus_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_imageMinus_AOD, "comboBox_Weather_imageMinus_AOD");
+            this.comboBox_Weather_imageMinus_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_imageMinus_AOD.Name = "comboBox_Weather_imageMinus_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_imageMinus_AOD, ((bool)(resources.GetObject("comboBox_Weather_imageMinus_AOD.ShowHelp"))));
+            this.comboBox_Weather_imageMinus_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_imageMinus_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_imageMinus_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_imageMinus_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_imageMinus_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label1161
             // 
@@ -30936,6 +25680,14 @@
             this.label1173.Name = "label1173";
             this.helpProvider1.SetShowHelp(this.label1173, ((bool)(resources.GetObject("label1173.ShowHelp"))));
             // 
+            // button_Copy_Weather_text_AOD
+            // 
+            resources.ApplyResources(this.button_Copy_Weather_text_AOD, "button_Copy_Weather_text_AOD");
+            this.button_Copy_Weather_text_AOD.Name = "button_Copy_Weather_text_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Weather_text_AOD, ((bool)(resources.GetObject("button_Copy_Weather_text_AOD.ShowHelp"))));
+            this.button_Copy_Weather_text_AOD.UseVisualStyleBackColor = true;
+            this.button_Copy_Weather_text_AOD.Click += new System.EventHandler(this.button_Copy_Weather_text_AOD_Click);
+            // 
             // button_Weather_text_AOD
             // 
             resources.ApplyResources(this.button_Weather_text_AOD, "button_Weather_text_AOD");
@@ -30947,92 +25699,105 @@
             // panel_Weather_pictures_AOD
             // 
             this.panel_Weather_pictures_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_pictures_AOD.Controls.Add(this.checkBox64);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.comboBox162);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown262);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown263);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown264);
+            this.panel_Weather_pictures_AOD.Controls.Add(this.checkBox_Weather_pictures_Use_AOD);
+            this.panel_Weather_pictures_AOD.Controls.Add(this.comboBox_Weather_pictures_image_AOD);
+            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown_Weather_picturesX_AOD);
+            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown_Weather_picturesY_AOD);
+            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown_Weather_pictures_count_AOD);
             this.panel_Weather_pictures_AOD.Controls.Add(this.label1174);
             this.panel_Weather_pictures_AOD.Controls.Add(this.label1175);
             this.panel_Weather_pictures_AOD.Controls.Add(this.label1176);
             this.panel_Weather_pictures_AOD.Controls.Add(this.label1177);
             this.panel_Weather_pictures_AOD.Controls.Add(this.label1178);
+            this.panel_Weather_pictures_AOD.Controls.Add(this.button_Copy_Weather_pictures_AOD);
             resources.ApplyResources(this.panel_Weather_pictures_AOD, "panel_Weather_pictures_AOD");
             this.panel_Weather_pictures_AOD.Name = "panel_Weather_pictures_AOD";
             this.helpProvider1.SetShowHelp(this.panel_Weather_pictures_AOD, ((bool)(resources.GetObject("panel_Weather_pictures_AOD.ShowHelp"))));
             // 
-            // checkBox64
+            // checkBox_Weather_pictures_Use_AOD
             // 
-            resources.ApplyResources(this.checkBox64, "checkBox64");
-            this.checkBox64.Name = "checkBox64";
-            this.helpProvider1.SetShowHelp(this.checkBox64, ((bool)(resources.GetObject("checkBox64.ShowHelp"))));
-            this.checkBox64.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.checkBox_Weather_pictures_Use_AOD, "checkBox_Weather_pictures_Use_AOD");
+            this.checkBox_Weather_pictures_Use_AOD.Name = "checkBox_Weather_pictures_Use_AOD";
+            this.helpProvider1.SetShowHelp(this.checkBox_Weather_pictures_Use_AOD, ((bool)(resources.GetObject("checkBox_Weather_pictures_Use_AOD.ShowHelp"))));
+            this.checkBox_Weather_pictures_Use_AOD.UseVisualStyleBackColor = true;
+            this.checkBox_Weather_pictures_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_pictures_Use_AOD_CheckedChanged);
+            this.checkBox_Weather_pictures_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // comboBox162
+            // comboBox_Weather_pictures_image_AOD
             // 
-            this.comboBox162.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox162.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox162, "comboBox162");
-            this.comboBox162.FormattingEnabled = true;
-            this.comboBox162.Name = "comboBox162";
-            this.helpProvider1.SetShowHelp(this.comboBox162, ((bool)(resources.GetObject("comboBox162.ShowHelp"))));
-            this.toolTip_Weather.SetToolTip(this.comboBox162, resources.GetString("comboBox162.ToolTip"));
+            this.comboBox_Weather_pictures_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_pictures_image_AOD.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Weather_pictures_image_AOD, "comboBox_Weather_pictures_image_AOD");
+            this.comboBox_Weather_pictures_image_AOD.FormattingEnabled = true;
+            this.comboBox_Weather_pictures_image_AOD.Name = "comboBox_Weather_pictures_image_AOD";
+            this.helpProvider1.SetShowHelp(this.comboBox_Weather_pictures_image_AOD, ((bool)(resources.GetObject("comboBox_Weather_pictures_image_AOD.ShowHelp"))));
+            this.toolTip_Weather.SetToolTip(this.comboBox_Weather_pictures_image_AOD, resources.GetString("comboBox_Weather_pictures_image_AOD.ToolTip"));
+            this.comboBox_Weather_pictures_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_pictures_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Weather_pictures_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_pictures_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_pictures_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
-            // numericUpDown262
+            // numericUpDown_Weather_picturesX_AOD
             // 
-            this.numericUpDown262.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown262, "numericUpDown262");
-            this.numericUpDown262.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_picturesX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_picturesX_AOD, "numericUpDown_Weather_picturesX_AOD");
+            this.numericUpDown_Weather_picturesX_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown262.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_picturesX_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown262.Name = "numericUpDown262";
-            this.helpProvider1.SetShowHelp(this.numericUpDown262, ((bool)(resources.GetObject("numericUpDown262.ShowHelp"))));
+            this.numericUpDown_Weather_picturesX_AOD.Name = "numericUpDown_Weather_picturesX_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_picturesX_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_picturesX_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_picturesX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_picturesX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // numericUpDown263
+            // numericUpDown_Weather_picturesY_AOD
             // 
-            this.numericUpDown263.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown263, "numericUpDown263");
-            this.numericUpDown263.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_picturesY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Weather_picturesY_AOD, "numericUpDown_Weather_picturesY_AOD");
+            this.numericUpDown_Weather_picturesY_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown263.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_picturesY_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown263.Name = "numericUpDown263";
-            this.helpProvider1.SetShowHelp(this.numericUpDown263, ((bool)(resources.GetObject("numericUpDown263.ShowHelp"))));
+            this.numericUpDown_Weather_picturesY_AOD.Name = "numericUpDown_Weather_picturesY_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_picturesY_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_picturesY_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_picturesY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_picturesY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // numericUpDown264
+            // numericUpDown_Weather_pictures_count_AOD
             // 
-            this.numericUpDown264.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown264, "numericUpDown264");
-            this.numericUpDown264.Maximum = new decimal(new int[] {
+            this.numericUpDown_Weather_pictures_count_AOD.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Weather_pictures_count_AOD, "numericUpDown_Weather_pictures_count_AOD");
+            this.numericUpDown_Weather_pictures_count_AOD.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown264.Minimum = new decimal(new int[] {
+            this.numericUpDown_Weather_pictures_count_AOD.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown264.Name = "numericUpDown264";
-            this.helpProvider1.SetShowHelp(this.numericUpDown264, ((bool)(resources.GetObject("numericUpDown264.ShowHelp"))));
-            this.numericUpDown264.Value = new decimal(new int[] {
+            this.numericUpDown_Weather_pictures_count_AOD.Name = "numericUpDown_Weather_pictures_count_AOD";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_pictures_count_AOD, ((bool)(resources.GetObject("numericUpDown_Weather_pictures_count_AOD.ShowHelp"))));
+            this.numericUpDown_Weather_pictures_count_AOD.Value = new decimal(new int[] {
             29,
             0,
             0,
             0});
+            this.numericUpDown_Weather_pictures_count_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label1174
             // 
@@ -31063,6 +25828,14 @@
             resources.ApplyResources(this.label1178, "label1178");
             this.label1178.Name = "label1178";
             this.helpProvider1.SetShowHelp(this.label1178, ((bool)(resources.GetObject("label1178.ShowHelp"))));
+            // 
+            // button_Copy_Weather_pictures_AOD
+            // 
+            resources.ApplyResources(this.button_Copy_Weather_pictures_AOD, "button_Copy_Weather_pictures_AOD");
+            this.button_Copy_Weather_pictures_AOD.Name = "button_Copy_Weather_pictures_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Weather_pictures_AOD, ((bool)(resources.GetObject("button_Copy_Weather_pictures_AOD.ShowHelp"))));
+            this.button_Copy_Weather_pictures_AOD.UseVisualStyleBackColor = true;
+            this.button_Copy_Weather_pictures_AOD.Click += new System.EventHandler(this.button_Copy_Weather_pictures_AOD_Click);
             // 
             // button_Weather_pictures_AOD
             // 
@@ -31165,8 +25938,8 @@
             // 
             this.panel_Battery_scaleLinear_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Battery_scaleLinear_AOD.Controls.Add(this.checkBox_Battery_scaleLinear_Use_AOD);
-            this.panel_Battery_scaleLinear_AOD.Controls.Add(this.radioButton27);
-            this.panel_Battery_scaleLinear_AOD.Controls.Add(this.radioButton28);
+            this.panel_Battery_scaleLinear_AOD.Controls.Add(this.radioButton_Battery_scaleLinear_image_AOD);
+            this.panel_Battery_scaleLinear_AOD.Controls.Add(this.radioButton_Battery_scaleLinear_color_AOD);
             this.panel_Battery_scaleLinear_AOD.Controls.Add(this.comboBox_Battery_scaleLinear_image_AOD);
             this.panel_Battery_scaleLinear_AOD.Controls.Add(this.comboBox_Battery_scaleLinear_color_AOD);
             this.panel_Battery_scaleLinear_AOD.Controls.Add(this.comboBox_Battery_scaleLinear_image_pointer_AOD);
@@ -31198,23 +25971,23 @@
             this.checkBox_Battery_scaleLinear_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_scaleLinear_Use_AOD_CheckedChanged);
             this.checkBox_Battery_scaleLinear_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // radioButton27
+            // radioButton_Battery_scaleLinear_image_AOD
             // 
-            resources.ApplyResources(this.radioButton27, "radioButton27");
-            this.radioButton27.Checked = true;
-            this.radioButton27.Name = "radioButton27";
-            this.helpProvider1.SetShowHelp(this.radioButton27, ((bool)(resources.GetObject("radioButton27.ShowHelp"))));
-            this.radioButton27.TabStop = true;
-            this.radioButton27.UseVisualStyleBackColor = true;
-            this.radioButton27.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
+            resources.ApplyResources(this.radioButton_Battery_scaleLinear_image_AOD, "radioButton_Battery_scaleLinear_image_AOD");
+            this.radioButton_Battery_scaleLinear_image_AOD.Checked = true;
+            this.radioButton_Battery_scaleLinear_image_AOD.Name = "radioButton_Battery_scaleLinear_image_AOD";
+            this.helpProvider1.SetShowHelp(this.radioButton_Battery_scaleLinear_image_AOD, ((bool)(resources.GetObject("radioButton_Battery_scaleLinear_image_AOD.ShowHelp"))));
+            this.radioButton_Battery_scaleLinear_image_AOD.TabStop = true;
+            this.radioButton_Battery_scaleLinear_image_AOD.UseVisualStyleBackColor = true;
+            this.radioButton_Battery_scaleLinear_image_AOD.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
             // 
-            // radioButton28
+            // radioButton_Battery_scaleLinear_color_AOD
             // 
-            resources.ApplyResources(this.radioButton28, "radioButton28");
-            this.radioButton28.Name = "radioButton28";
-            this.helpProvider1.SetShowHelp(this.radioButton28, ((bool)(resources.GetObject("radioButton28.ShowHelp"))));
-            this.radioButton28.TabStop = true;
-            this.radioButton28.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.radioButton_Battery_scaleLinear_color_AOD, "radioButton_Battery_scaleLinear_color_AOD");
+            this.radioButton_Battery_scaleLinear_color_AOD.Name = "radioButton_Battery_scaleLinear_color_AOD";
+            this.helpProvider1.SetShowHelp(this.radioButton_Battery_scaleLinear_color_AOD, ((bool)(resources.GetObject("radioButton_Battery_scaleLinear_color_AOD.ShowHelp"))));
+            this.radioButton_Battery_scaleLinear_color_AOD.TabStop = true;
+            this.radioButton_Battery_scaleLinear_color_AOD.UseVisualStyleBackColor = true;
             // 
             // comboBox_Battery_scaleLinear_image_AOD
             // 
@@ -35667,8 +30440,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -35690,11 +30463,11 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -37424,217 +32197,61 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Steps_picturesX_AOD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Steps_picturesY_AOD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Steps_pictures_count_AOD)).EndInit();
-            this.tabPage_Calories_AOD.ResumeLayout(false);
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown115)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown116)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown117)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown118)).EndInit();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown119)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown120)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown121)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown122)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown123)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown124)).EndInit();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown125)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown126)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown127)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown128)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown129)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown130)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown131)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown133)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown134)).EndInit();
-            this.panel30.ResumeLayout(false);
-            this.panel30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown135)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown136)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown137)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown138)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown139)).EndInit();
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown140)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown141)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown142)).EndInit();
-            this.tabPage_HeartRate_AOD.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown143)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown144)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown145)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown146)).EndInit();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown147)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown148)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown149)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown150)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown152)).EndInit();
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown153)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown154)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown155)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown156)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown157)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown158)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown159)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown160)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown161)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown162)).EndInit();
-            this.panel36.ResumeLayout(false);
-            this.panel36.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown163)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown164)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown165)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown166)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown167)).EndInit();
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown168)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown169)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown170)).EndInit();
-            this.tabPage_PAI_AOD.ResumeLayout(false);
-            this.panel39.ResumeLayout(false);
-            this.panel39.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown171)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown172)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown173)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown174)).EndInit();
-            this.panel40.ResumeLayout(false);
-            this.panel40.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown175)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown176)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown177)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown178)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown179)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown180)).EndInit();
-            this.panel41.ResumeLayout(false);
-            this.panel41.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown181)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown182)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown183)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown184)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown185)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown186)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown187)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown188)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown189)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown190)).EndInit();
-            this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown191)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown192)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown193)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown194)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown195)).EndInit();
-            this.panel43.ResumeLayout(false);
-            this.panel43.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown196)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown197)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown198)).EndInit();
-            this.tabPage_Distance_AOD.ResumeLayout(false);
-            this.panel45.ResumeLayout(false);
-            this.panel45.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown199)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown200)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown201)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown202)).EndInit();
-            this.panel46.ResumeLayout(false);
-            this.panel46.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown203)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown204)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown205)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown206)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown207)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown208)).EndInit();
-            this.panel47.ResumeLayout(false);
-            this.panel47.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown209)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown210)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown211)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown212)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown213)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown214)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown215)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown216)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown217)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown218)).EndInit();
-            this.panel48.ResumeLayout(false);
-            this.panel48.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown219)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown220)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown222)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown223)).EndInit();
-            this.panel49.ResumeLayout(false);
-            this.panel49.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown224)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown225)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown226)).EndInit();
             this.tabPage_Air_AOD.ResumeLayout(false);
             this.tabControl_SystemWeather_AOD.ResumeLayout(false);
             this.tabPage_Weather_AOD.ResumeLayout(false);
             this.panel_Weather_scaleLinear_AOD.ResumeLayout(false);
             this.panel_Weather_scaleLinear_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown227)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown230)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearX_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearY_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_length_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_width_AOD)).EndInit();
             this.panel_Weather_scaleCircle_AOD.ResumeLayout(false);
             this.panel_Weather_scaleCircle_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown231)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown232)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown233)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown234)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown235)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown236)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleX_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleY_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_radius_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_width_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_startAngle_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_endAngle_AOD)).EndInit();
             this.panel_Weather_hand_AOD.ResumeLayout(false);
             this.panel_Weather_hand_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown237)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown241)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown242)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown243)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown244)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown245)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown246)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_offset_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_offset_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_centr_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_centr_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_startAngle_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_endAngle_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_background_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_background_AOD)).EndInit();
             this.panel_Weather_textMax_AOD.ResumeLayout(false);
             this.panel_Weather_textMax_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown247)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown248)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown249)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown250)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown251)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMax_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMax_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMax_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMax_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMax_AOD)).EndInit();
             this.panel_Weather_textMin_AOD.ResumeLayout(false);
             this.panel_Weather_textMin_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown252)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown253)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown254)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown255)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown256)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMin_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMin_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMin_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMin_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMin_AOD)).EndInit();
             this.panel_Weather_text_AOD.ResumeLayout(false);
             this.panel_Weather_text_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown257)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown258)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown259)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherX_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherY_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconX_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconY_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacing_AOD)).EndInit();
             this.panel_Weather_pictures_AOD.ResumeLayout(false);
             this.panel_Weather_pictures_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown262)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown264)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesX_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesY_AOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_pictures_count_AOD)).EndInit();
             this.tabPage_System_AOD.ResumeLayout(false);
             this.tabControl_System_AOD.ResumeLayout(false);
             this.tabPage_Battery_AOD.ResumeLayout(false);
@@ -39873,7 +34490,7 @@
         private System.Windows.Forms.TabPage tabPage_Activity_AOD;
         private System.Windows.Forms.TabControl tabControl_SystemActivity_AOD;
         private System.Windows.Forms.TabPage tabPage_Steps_AOD;
-        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel_Steps_icon_AOD;
         private System.Windows.Forms.Panel panel_Steps_scaleLinear_AOD;
         private System.Windows.Forms.CheckBox checkBox_Steps_scaleLinear_Use_AOD;
         private System.Windows.Forms.RadioButton radioButton_Steps_scaleLinear_image_AOD;
@@ -39990,475 +34607,9 @@
         private System.Windows.Forms.Label label900;
         private System.Windows.Forms.Button button_Steps_pictures_AOD;
         private System.Windows.Forms.TabPage tabPage_Calories_AOD;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.CheckBox checkBox33;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.ComboBox comboBox64;
-        private System.Windows.Forms.ComboBox comboBox65;
-        private System.Windows.Forms.ComboBox comboBox66;
-        private System.Windows.Forms.ComboBox comboBox67;
-        private System.Windows.Forms.NumericUpDown numericUpDown115;
-        private System.Windows.Forms.NumericUpDown numericUpDown116;
-        private System.Windows.Forms.NumericUpDown numericUpDown117;
-        private System.Windows.Forms.NumericUpDown numericUpDown118;
-        private System.Windows.Forms.Label label901;
-        private System.Windows.Forms.Label label902;
-        private System.Windows.Forms.Label label903;
-        private System.Windows.Forms.Label label904;
-        private System.Windows.Forms.Label label905;
-        private System.Windows.Forms.Label label906;
-        private System.Windows.Forms.Label label907;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.CheckBox checkBox34;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.ComboBox comboBox68;
-        private System.Windows.Forms.ComboBox comboBox69;
-        private System.Windows.Forms.ComboBox comboBox70;
-        private System.Windows.Forms.ComboBox comboBox71;
-        private System.Windows.Forms.NumericUpDown numericUpDown119;
-        private System.Windows.Forms.NumericUpDown numericUpDown120;
-        private System.Windows.Forms.NumericUpDown numericUpDown121;
-        private System.Windows.Forms.NumericUpDown numericUpDown122;
-        private System.Windows.Forms.NumericUpDown numericUpDown123;
-        private System.Windows.Forms.NumericUpDown numericUpDown124;
-        private System.Windows.Forms.Label label908;
-        private System.Windows.Forms.Label label909;
-        private System.Windows.Forms.Label label910;
-        private System.Windows.Forms.Label label911;
-        private System.Windows.Forms.Label label912;
-        private System.Windows.Forms.Label label913;
-        private System.Windows.Forms.Label label914;
-        private System.Windows.Forms.Label label915;
-        private System.Windows.Forms.Label label916;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.CheckBox checkBox35;
-        private System.Windows.Forms.ComboBox comboBox72;
-        private System.Windows.Forms.NumericUpDown numericUpDown125;
-        private System.Windows.Forms.NumericUpDown numericUpDown126;
-        private System.Windows.Forms.NumericUpDown numericUpDown127;
-        private System.Windows.Forms.NumericUpDown numericUpDown128;
-        private System.Windows.Forms.ComboBox comboBox73;
-        private System.Windows.Forms.NumericUpDown numericUpDown129;
-        private System.Windows.Forms.NumericUpDown numericUpDown130;
-        private System.Windows.Forms.NumericUpDown numericUpDown131;
-        private System.Windows.Forms.NumericUpDown numericUpDown132;
-        private System.Windows.Forms.ComboBox comboBox74;
-        private System.Windows.Forms.NumericUpDown numericUpDown133;
-        private System.Windows.Forms.NumericUpDown numericUpDown134;
-        private System.Windows.Forms.Label label917;
-        private System.Windows.Forms.Label label918;
-        private System.Windows.Forms.Label label919;
-        private System.Windows.Forms.Label label920;
-        private System.Windows.Forms.Label label921;
-        private System.Windows.Forms.Label label922;
-        private System.Windows.Forms.Label label923;
-        private System.Windows.Forms.Label label924;
-        private System.Windows.Forms.Label label925;
-        private System.Windows.Forms.Label label926;
-        private System.Windows.Forms.Label label927;
-        private System.Windows.Forms.Label label928;
-        private System.Windows.Forms.Label label929;
-        private System.Windows.Forms.Label label930;
-        private System.Windows.Forms.Label label931;
-        private System.Windows.Forms.Label label932;
-        private System.Windows.Forms.Label label933;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.CheckBox checkBox36;
-        private System.Windows.Forms.ComboBox comboBox75;
-        private System.Windows.Forms.ComboBox comboBox76;
-        private System.Windows.Forms.ComboBox comboBox77;
-        private System.Windows.Forms.NumericUpDown numericUpDown135;
-        private System.Windows.Forms.NumericUpDown numericUpDown136;
-        private System.Windows.Forms.NumericUpDown numericUpDown137;
-        private System.Windows.Forms.NumericUpDown numericUpDown138;
-        private System.Windows.Forms.ComboBox comboBox78;
-        private System.Windows.Forms.NumericUpDown numericUpDown139;
-        private System.Windows.Forms.CheckBox checkBox37;
-        private System.Windows.Forms.ComboBox comboBox79;
-        private System.Windows.Forms.Label label934;
-        private System.Windows.Forms.Label label935;
-        private System.Windows.Forms.Label label936;
-        private System.Windows.Forms.Label label937;
-        private System.Windows.Forms.Label label938;
-        private System.Windows.Forms.Label label939;
-        private System.Windows.Forms.Label label940;
-        private System.Windows.Forms.Label label941;
-        private System.Windows.Forms.Label label942;
-        private System.Windows.Forms.Label label943;
-        private System.Windows.Forms.Label label944;
-        private System.Windows.Forms.Label label945;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.CheckBox checkBox38;
-        private System.Windows.Forms.ComboBox comboBox80;
-        private System.Windows.Forms.NumericUpDown numericUpDown140;
-        private System.Windows.Forms.NumericUpDown numericUpDown141;
-        private System.Windows.Forms.NumericUpDown numericUpDown142;
-        private System.Windows.Forms.Label label946;
-        private System.Windows.Forms.Label label947;
-        private System.Windows.Forms.Label label948;
-        private System.Windows.Forms.Label label949;
-        private System.Windows.Forms.Label label950;
-        private System.Windows.Forms.Button button26;
         private System.Windows.Forms.TabPage tabPage_HeartRate_AOD;
-        private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.Panel panel33;
-        private System.Windows.Forms.CheckBox checkBox39;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.ComboBox comboBox81;
-        private System.Windows.Forms.ComboBox comboBox82;
-        private System.Windows.Forms.ComboBox comboBox83;
-        private System.Windows.Forms.ComboBox comboBox84;
-        private System.Windows.Forms.NumericUpDown numericUpDown143;
-        private System.Windows.Forms.NumericUpDown numericUpDown144;
-        private System.Windows.Forms.NumericUpDown numericUpDown145;
-        private System.Windows.Forms.NumericUpDown numericUpDown146;
-        private System.Windows.Forms.Label label951;
-        private System.Windows.Forms.Label label952;
-        private System.Windows.Forms.Label label953;
-        private System.Windows.Forms.Label label954;
-        private System.Windows.Forms.Label label955;
-        private System.Windows.Forms.Label label956;
-        private System.Windows.Forms.Label label957;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.CheckBox checkBox40;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.ComboBox comboBox85;
-        private System.Windows.Forms.ComboBox comboBox86;
-        private System.Windows.Forms.ComboBox comboBox87;
-        private System.Windows.Forms.ComboBox comboBox88;
-        private System.Windows.Forms.NumericUpDown numericUpDown147;
-        private System.Windows.Forms.NumericUpDown numericUpDown148;
-        private System.Windows.Forms.NumericUpDown numericUpDown149;
-        private System.Windows.Forms.NumericUpDown numericUpDown150;
-        private System.Windows.Forms.NumericUpDown numericUpDown151;
-        private System.Windows.Forms.NumericUpDown numericUpDown152;
-        private System.Windows.Forms.Label label958;
-        private System.Windows.Forms.Label label959;
-        private System.Windows.Forms.Label label960;
-        private System.Windows.Forms.Label label961;
-        private System.Windows.Forms.Label label962;
-        private System.Windows.Forms.Label label963;
-        private System.Windows.Forms.Label label964;
-        private System.Windows.Forms.Label label965;
-        private System.Windows.Forms.Label label966;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.CheckBox checkBox41;
-        private System.Windows.Forms.ComboBox comboBox89;
-        private System.Windows.Forms.NumericUpDown numericUpDown153;
-        private System.Windows.Forms.NumericUpDown numericUpDown154;
-        private System.Windows.Forms.NumericUpDown numericUpDown155;
-        private System.Windows.Forms.NumericUpDown numericUpDown156;
-        private System.Windows.Forms.ComboBox comboBox90;
-        private System.Windows.Forms.NumericUpDown numericUpDown157;
-        private System.Windows.Forms.NumericUpDown numericUpDown158;
-        private System.Windows.Forms.NumericUpDown numericUpDown159;
-        private System.Windows.Forms.NumericUpDown numericUpDown160;
-        private System.Windows.Forms.ComboBox comboBox91;
-        private System.Windows.Forms.NumericUpDown numericUpDown161;
-        private System.Windows.Forms.NumericUpDown numericUpDown162;
-        private System.Windows.Forms.Label label967;
-        private System.Windows.Forms.Label label968;
-        private System.Windows.Forms.Label label969;
-        private System.Windows.Forms.Label label970;
-        private System.Windows.Forms.Label label971;
-        private System.Windows.Forms.Label label972;
-        private System.Windows.Forms.Label label973;
-        private System.Windows.Forms.Label label974;
-        private System.Windows.Forms.Label label975;
-        private System.Windows.Forms.Label label976;
-        private System.Windows.Forms.Label label977;
-        private System.Windows.Forms.Label label978;
-        private System.Windows.Forms.Label label979;
-        private System.Windows.Forms.Label label980;
-        private System.Windows.Forms.Label label981;
-        private System.Windows.Forms.Label label982;
-        private System.Windows.Forms.Label label983;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.CheckBox checkBox42;
-        private System.Windows.Forms.ComboBox comboBox92;
-        private System.Windows.Forms.ComboBox comboBox93;
-        private System.Windows.Forms.ComboBox comboBox94;
-        private System.Windows.Forms.NumericUpDown numericUpDown163;
-        private System.Windows.Forms.NumericUpDown numericUpDown164;
-        private System.Windows.Forms.NumericUpDown numericUpDown165;
-        private System.Windows.Forms.NumericUpDown numericUpDown166;
-        private System.Windows.Forms.ComboBox comboBox95;
-        private System.Windows.Forms.NumericUpDown numericUpDown167;
-        private System.Windows.Forms.CheckBox checkBox43;
-        private System.Windows.Forms.ComboBox comboBox96;
-        private System.Windows.Forms.Label label984;
-        private System.Windows.Forms.Label label985;
-        private System.Windows.Forms.Label label986;
-        private System.Windows.Forms.Label label987;
-        private System.Windows.Forms.Label label988;
-        private System.Windows.Forms.Label label989;
-        private System.Windows.Forms.Label label990;
-        private System.Windows.Forms.Label label991;
-        private System.Windows.Forms.Label label992;
-        private System.Windows.Forms.Label label993;
-        private System.Windows.Forms.Label label994;
-        private System.Windows.Forms.Label label995;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Panel panel37;
-        private System.Windows.Forms.CheckBox checkBox44;
-        private System.Windows.Forms.ComboBox comboBox97;
-        private System.Windows.Forms.NumericUpDown numericUpDown168;
-        private System.Windows.Forms.NumericUpDown numericUpDown169;
-        private System.Windows.Forms.NumericUpDown numericUpDown170;
-        private System.Windows.Forms.Label label996;
-        private System.Windows.Forms.Label label997;
-        private System.Windows.Forms.Label label998;
-        private System.Windows.Forms.Label label999;
-        private System.Windows.Forms.Label label1000;
-        private System.Windows.Forms.Button button31;
         private System.Windows.Forms.TabPage tabPage_PAI_AOD;
-        private System.Windows.Forms.Panel panel38;
-        private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.CheckBox checkBox45;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
-        private System.Windows.Forms.ComboBox comboBox98;
-        private System.Windows.Forms.ComboBox comboBox99;
-        private System.Windows.Forms.ComboBox comboBox100;
-        private System.Windows.Forms.ComboBox comboBox101;
-        private System.Windows.Forms.NumericUpDown numericUpDown171;
-        private System.Windows.Forms.NumericUpDown numericUpDown172;
-        private System.Windows.Forms.NumericUpDown numericUpDown173;
-        private System.Windows.Forms.NumericUpDown numericUpDown174;
-        private System.Windows.Forms.Label label1001;
-        private System.Windows.Forms.Label label1002;
-        private System.Windows.Forms.Label label1003;
-        private System.Windows.Forms.Label label1004;
-        private System.Windows.Forms.Label label1005;
-        private System.Windows.Forms.Label label1006;
-        private System.Windows.Forms.Label label1007;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Panel panel40;
-        private System.Windows.Forms.CheckBox checkBox46;
-        private System.Windows.Forms.RadioButton radioButton17;
-        private System.Windows.Forms.RadioButton radioButton18;
-        private System.Windows.Forms.ComboBox comboBox102;
-        private System.Windows.Forms.ComboBox comboBox103;
-        private System.Windows.Forms.ComboBox comboBox104;
-        private System.Windows.Forms.ComboBox comboBox105;
-        private System.Windows.Forms.NumericUpDown numericUpDown175;
-        private System.Windows.Forms.NumericUpDown numericUpDown176;
-        private System.Windows.Forms.NumericUpDown numericUpDown177;
-        private System.Windows.Forms.NumericUpDown numericUpDown178;
-        private System.Windows.Forms.NumericUpDown numericUpDown179;
-        private System.Windows.Forms.NumericUpDown numericUpDown180;
-        private System.Windows.Forms.Label label1008;
-        private System.Windows.Forms.Label label1009;
-        private System.Windows.Forms.Label label1010;
-        private System.Windows.Forms.Label label1011;
-        private System.Windows.Forms.Label label1012;
-        private System.Windows.Forms.Label label1013;
-        private System.Windows.Forms.Label label1014;
-        private System.Windows.Forms.Label label1015;
-        private System.Windows.Forms.Label label1016;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.CheckBox checkBox47;
-        private System.Windows.Forms.ComboBox comboBox106;
-        private System.Windows.Forms.NumericUpDown numericUpDown181;
-        private System.Windows.Forms.NumericUpDown numericUpDown182;
-        private System.Windows.Forms.NumericUpDown numericUpDown183;
-        private System.Windows.Forms.NumericUpDown numericUpDown184;
-        private System.Windows.Forms.ComboBox comboBox107;
-        private System.Windows.Forms.NumericUpDown numericUpDown185;
-        private System.Windows.Forms.NumericUpDown numericUpDown186;
-        private System.Windows.Forms.NumericUpDown numericUpDown187;
-        private System.Windows.Forms.NumericUpDown numericUpDown188;
-        private System.Windows.Forms.ComboBox comboBox108;
-        private System.Windows.Forms.NumericUpDown numericUpDown189;
-        private System.Windows.Forms.NumericUpDown numericUpDown190;
-        private System.Windows.Forms.Label label1017;
-        private System.Windows.Forms.Label label1018;
-        private System.Windows.Forms.Label label1019;
-        private System.Windows.Forms.Label label1020;
-        private System.Windows.Forms.Label label1021;
-        private System.Windows.Forms.Label label1022;
-        private System.Windows.Forms.Label label1023;
-        private System.Windows.Forms.Label label1024;
-        private System.Windows.Forms.Label label1025;
-        private System.Windows.Forms.Label label1026;
-        private System.Windows.Forms.Label label1027;
-        private System.Windows.Forms.Label label1028;
-        private System.Windows.Forms.Label label1029;
-        private System.Windows.Forms.Label label1030;
-        private System.Windows.Forms.Label label1031;
-        private System.Windows.Forms.Label label1032;
-        private System.Windows.Forms.Label label1033;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.CheckBox checkBox48;
-        private System.Windows.Forms.ComboBox comboBox109;
-        private System.Windows.Forms.ComboBox comboBox110;
-        private System.Windows.Forms.ComboBox comboBox111;
-        private System.Windows.Forms.NumericUpDown numericUpDown191;
-        private System.Windows.Forms.NumericUpDown numericUpDown192;
-        private System.Windows.Forms.NumericUpDown numericUpDown193;
-        private System.Windows.Forms.NumericUpDown numericUpDown194;
-        private System.Windows.Forms.ComboBox comboBox112;
-        private System.Windows.Forms.NumericUpDown numericUpDown195;
-        private System.Windows.Forms.CheckBox checkBox49;
-        private System.Windows.Forms.ComboBox comboBox113;
-        private System.Windows.Forms.Label label1034;
-        private System.Windows.Forms.Label label1035;
-        private System.Windows.Forms.Label label1036;
-        private System.Windows.Forms.Label label1037;
-        private System.Windows.Forms.Label label1038;
-        private System.Windows.Forms.Label label1039;
-        private System.Windows.Forms.Label label1040;
-        private System.Windows.Forms.Label label1041;
-        private System.Windows.Forms.Label label1042;
-        private System.Windows.Forms.Label label1043;
-        private System.Windows.Forms.Label label1044;
-        private System.Windows.Forms.Label label1045;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.CheckBox checkBox50;
-        private System.Windows.Forms.ComboBox comboBox114;
-        private System.Windows.Forms.NumericUpDown numericUpDown196;
-        private System.Windows.Forms.NumericUpDown numericUpDown197;
-        private System.Windows.Forms.NumericUpDown numericUpDown198;
-        private System.Windows.Forms.Label label1046;
-        private System.Windows.Forms.Label label1047;
-        private System.Windows.Forms.Label label1048;
-        private System.Windows.Forms.Label label1049;
-        private System.Windows.Forms.Label label1050;
-        private System.Windows.Forms.Button button36;
         private System.Windows.Forms.TabPage tabPage_Distance_AOD;
-        private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.CheckBox checkBox51;
-        private System.Windows.Forms.RadioButton radioButton19;
-        private System.Windows.Forms.RadioButton radioButton20;
-        private System.Windows.Forms.ComboBox comboBox115;
-        private System.Windows.Forms.ComboBox comboBox116;
-        private System.Windows.Forms.ComboBox comboBox117;
-        private System.Windows.Forms.ComboBox comboBox118;
-        private System.Windows.Forms.NumericUpDown numericUpDown199;
-        private System.Windows.Forms.NumericUpDown numericUpDown200;
-        private System.Windows.Forms.NumericUpDown numericUpDown201;
-        private System.Windows.Forms.NumericUpDown numericUpDown202;
-        private System.Windows.Forms.Label label1051;
-        private System.Windows.Forms.Label label1052;
-        private System.Windows.Forms.Label label1053;
-        private System.Windows.Forms.Label label1054;
-        private System.Windows.Forms.Label label1055;
-        private System.Windows.Forms.Label label1056;
-        private System.Windows.Forms.Label label1057;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Panel panel46;
-        private System.Windows.Forms.CheckBox checkBox52;
-        private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.RadioButton radioButton22;
-        private System.Windows.Forms.ComboBox comboBox119;
-        private System.Windows.Forms.ComboBox comboBox120;
-        private System.Windows.Forms.ComboBox comboBox121;
-        private System.Windows.Forms.ComboBox comboBox122;
-        private System.Windows.Forms.NumericUpDown numericUpDown203;
-        private System.Windows.Forms.NumericUpDown numericUpDown204;
-        private System.Windows.Forms.NumericUpDown numericUpDown205;
-        private System.Windows.Forms.NumericUpDown numericUpDown206;
-        private System.Windows.Forms.NumericUpDown numericUpDown207;
-        private System.Windows.Forms.NumericUpDown numericUpDown208;
-        private System.Windows.Forms.Label label1058;
-        private System.Windows.Forms.Label label1059;
-        private System.Windows.Forms.Label label1060;
-        private System.Windows.Forms.Label label1061;
-        private System.Windows.Forms.Label label1062;
-        private System.Windows.Forms.Label label1063;
-        private System.Windows.Forms.Label label1064;
-        private System.Windows.Forms.Label label1065;
-        private System.Windows.Forms.Label label1066;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Panel panel47;
-        private System.Windows.Forms.CheckBox checkBox53;
-        private System.Windows.Forms.ComboBox comboBox123;
-        private System.Windows.Forms.NumericUpDown numericUpDown209;
-        private System.Windows.Forms.NumericUpDown numericUpDown210;
-        private System.Windows.Forms.NumericUpDown numericUpDown211;
-        private System.Windows.Forms.NumericUpDown numericUpDown212;
-        private System.Windows.Forms.ComboBox comboBox124;
-        private System.Windows.Forms.NumericUpDown numericUpDown213;
-        private System.Windows.Forms.NumericUpDown numericUpDown214;
-        private System.Windows.Forms.NumericUpDown numericUpDown215;
-        private System.Windows.Forms.NumericUpDown numericUpDown216;
-        private System.Windows.Forms.ComboBox comboBox125;
-        private System.Windows.Forms.NumericUpDown numericUpDown217;
-        private System.Windows.Forms.NumericUpDown numericUpDown218;
-        private System.Windows.Forms.Label label1067;
-        private System.Windows.Forms.Label label1068;
-        private System.Windows.Forms.Label label1069;
-        private System.Windows.Forms.Label label1070;
-        private System.Windows.Forms.Label label1071;
-        private System.Windows.Forms.Label label1072;
-        private System.Windows.Forms.Label label1073;
-        private System.Windows.Forms.Label label1074;
-        private System.Windows.Forms.Label label1075;
-        private System.Windows.Forms.Label label1076;
-        private System.Windows.Forms.Label label1077;
-        private System.Windows.Forms.Label label1078;
-        private System.Windows.Forms.Label label1079;
-        private System.Windows.Forms.Label label1080;
-        private System.Windows.Forms.Label label1081;
-        private System.Windows.Forms.Label label1082;
-        private System.Windows.Forms.Label label1083;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Panel panel48;
-        private System.Windows.Forms.CheckBox checkBox54;
-        private System.Windows.Forms.ComboBox comboBox126;
-        private System.Windows.Forms.ComboBox comboBox127;
-        private System.Windows.Forms.ComboBox comboBox128;
-        private System.Windows.Forms.NumericUpDown numericUpDown219;
-        private System.Windows.Forms.NumericUpDown numericUpDown220;
-        private System.Windows.Forms.NumericUpDown numericUpDown221;
-        private System.Windows.Forms.NumericUpDown numericUpDown222;
-        private System.Windows.Forms.ComboBox comboBox129;
-        private System.Windows.Forms.NumericUpDown numericUpDown223;
-        private System.Windows.Forms.CheckBox checkBox55;
-        private System.Windows.Forms.ComboBox comboBox130;
-        private System.Windows.Forms.ComboBox comboBox131;
-        private System.Windows.Forms.Label label1084;
-        private System.Windows.Forms.Label label1085;
-        private System.Windows.Forms.Label label1086;
-        private System.Windows.Forms.Label label1087;
-        private System.Windows.Forms.Label label1088;
-        private System.Windows.Forms.Label label1089;
-        private System.Windows.Forms.Label label1090;
-        private System.Windows.Forms.Label label1091;
-        private System.Windows.Forms.Label label1092;
-        private System.Windows.Forms.Label label1093;
-        private System.Windows.Forms.Label label1094;
-        private System.Windows.Forms.Label label1095;
-        private System.Windows.Forms.Label label1096;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Panel panel49;
-        private System.Windows.Forms.CheckBox checkBox56;
-        private System.Windows.Forms.ComboBox comboBox132;
-        private System.Windows.Forms.NumericUpDown numericUpDown224;
-        private System.Windows.Forms.NumericUpDown numericUpDown225;
-        private System.Windows.Forms.NumericUpDown numericUpDown226;
-        private System.Windows.Forms.Label label1097;
-        private System.Windows.Forms.Label label1098;
-        private System.Windows.Forms.Label label1099;
-        private System.Windows.Forms.Label label1100;
-        private System.Windows.Forms.Label label1101;
-        private System.Windows.Forms.Button button41;
         private System.Windows.Forms.TabPage tabPage_StandUp_AOD;
         private System.Windows.Forms.TabPage tabPage_Stress_AOD;
         private System.Windows.Forms.TabPage tabPage_ActivityGoal_AOD;
@@ -40468,17 +34619,17 @@
         private System.Windows.Forms.TabPage tabPage_Weather_AOD;
         private System.Windows.Forms.Panel panel_Weather_icon_AOD;
         private System.Windows.Forms.Panel panel_Weather_scaleLinear_AOD;
-        private System.Windows.Forms.CheckBox checkBox57;
-        private System.Windows.Forms.RadioButton radioButton23;
-        private System.Windows.Forms.RadioButton radioButton24;
-        private System.Windows.Forms.ComboBox comboBox133;
-        private System.Windows.Forms.ComboBox comboBox134;
-        private System.Windows.Forms.ComboBox comboBox135;
-        private System.Windows.Forms.ComboBox comboBox136;
-        private System.Windows.Forms.NumericUpDown numericUpDown227;
-        private System.Windows.Forms.NumericUpDown numericUpDown228;
-        private System.Windows.Forms.NumericUpDown numericUpDown229;
-        private System.Windows.Forms.NumericUpDown numericUpDown230;
+        private System.Windows.Forms.CheckBox checkBox_Weather_scaleLinear_Use_AOD;
+        private System.Windows.Forms.RadioButton radioButton_Weather_scaleLinear_image_AOD;
+        private System.Windows.Forms.RadioButton radioButtonWeather_scaleLinear_color_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_color_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_pointer_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_background_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinearX_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinearY_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinear_length_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinear_width_AOD;
         private System.Windows.Forms.Label label1102;
         private System.Windows.Forms.Label label1103;
         private System.Windows.Forms.Label label1104;
@@ -40488,19 +34639,19 @@
         private System.Windows.Forms.Label label1108;
         private System.Windows.Forms.Button button_Weather_scaleLinear_AOD;
         private System.Windows.Forms.Panel panel_Weather_scaleCircle_AOD;
-        private System.Windows.Forms.CheckBox checkBox58;
-        private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.RadioButton radioButton26;
-        private System.Windows.Forms.ComboBox comboBox137;
-        private System.Windows.Forms.ComboBox comboBox138;
-        private System.Windows.Forms.ComboBox comboBox139;
-        private System.Windows.Forms.ComboBox comboBox140;
-        private System.Windows.Forms.NumericUpDown numericUpDown231;
-        private System.Windows.Forms.NumericUpDown numericUpDown232;
-        private System.Windows.Forms.NumericUpDown numericUpDown233;
-        private System.Windows.Forms.NumericUpDown numericUpDown234;
-        private System.Windows.Forms.NumericUpDown numericUpDown235;
-        private System.Windows.Forms.NumericUpDown numericUpDown236;
+        private System.Windows.Forms.CheckBox checkBox_Weather_scaleCircle_Use_AOD;
+        private System.Windows.Forms.RadioButton radioButton_Weather_scaleCircle_image_AOD;
+        private System.Windows.Forms.RadioButton radioButton_Weather_scaleCircle_color_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_image_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_color_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_flatness_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_image_background_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircleX_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircleY_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_radius_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_width_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_startAngle_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_endAngle_AOD;
         private System.Windows.Forms.Label label1109;
         private System.Windows.Forms.Label label1110;
         private System.Windows.Forms.Label label1111;
@@ -40512,20 +34663,20 @@
         private System.Windows.Forms.Label label1117;
         private System.Windows.Forms.Button button_Weather_scaleCircle_AOD;
         private System.Windows.Forms.Panel panel_Weather_hand_AOD;
-        private System.Windows.Forms.CheckBox checkBox59;
-        private System.Windows.Forms.ComboBox comboBox141;
-        private System.Windows.Forms.NumericUpDown numericUpDown237;
-        private System.Windows.Forms.NumericUpDown numericUpDown238;
-        private System.Windows.Forms.NumericUpDown numericUpDown239;
-        private System.Windows.Forms.NumericUpDown numericUpDown240;
-        private System.Windows.Forms.ComboBox comboBox142;
-        private System.Windows.Forms.NumericUpDown numericUpDown241;
-        private System.Windows.Forms.NumericUpDown numericUpDown242;
-        private System.Windows.Forms.NumericUpDown numericUpDown243;
-        private System.Windows.Forms.NumericUpDown numericUpDown244;
-        private System.Windows.Forms.ComboBox comboBox143;
-        private System.Windows.Forms.NumericUpDown numericUpDown245;
-        private System.Windows.Forms.NumericUpDown numericUpDown246;
+        private System.Windows.Forms.CheckBox checkBox_Weather_hand_Use_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_hand_image_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_offset_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_offset_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_hand_imageCentr_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_centr_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_centr_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_hand_startAngle_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_hand_endAngle_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_hand_imageBackground_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_background_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_background_AOD;
         private System.Windows.Forms.Label label1118;
         private System.Windows.Forms.Label label1119;
         private System.Windows.Forms.Label label1120;
@@ -40545,19 +34696,19 @@
         private System.Windows.Forms.Label label1134;
         private System.Windows.Forms.Button button_Weather_hand_AOD;
         private System.Windows.Forms.Panel panel_Weather_textMax_AOD;
-        private System.Windows.Forms.CheckBox checkBox60;
-        private System.Windows.Forms.ComboBox comboBox144;
-        private System.Windows.Forms.ComboBox comboBox145;
-        private System.Windows.Forms.ComboBox comboBox146;
-        private System.Windows.Forms.NumericUpDown numericUpDown247;
-        private System.Windows.Forms.NumericUpDown numericUpDown248;
-        private System.Windows.Forms.NumericUpDown numericUpDown249;
-        private System.Windows.Forms.NumericUpDown numericUpDown250;
-        private System.Windows.Forms.ComboBox comboBox147;
-        private System.Windows.Forms.NumericUpDown numericUpDown251;
-        private System.Windows.Forms.ComboBox comboBox148;
-        private System.Windows.Forms.ComboBox comboBox149;
-        private System.Windows.Forms.CheckBox checkBox61;
+        private System.Windows.Forms.CheckBox checkBox_Weather_UseMax_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageMax_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_iconMax_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_unitFMax_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherXMax_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherYMax_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconXMax_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconYMax_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_alignmentMax_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacingMax_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageErrorMax_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinusMax_AOD;
+        private System.Windows.Forms.CheckBox checkBox_Weather_followMax_AOD;
         private System.Windows.Forms.Label label1135;
         private System.Windows.Forms.Label label1136;
         private System.Windows.Forms.Label label1137;
@@ -40573,18 +34724,18 @@
         private System.Windows.Forms.Label label1147;
         private System.Windows.Forms.Button button_Weather_textMax_AOD;
         private System.Windows.Forms.Panel panel_Weather_textMin_AOD;
-        private System.Windows.Forms.CheckBox checkBox62;
-        private System.Windows.Forms.ComboBox comboBox150;
-        private System.Windows.Forms.ComboBox comboBox151;
-        private System.Windows.Forms.ComboBox comboBox152;
-        private System.Windows.Forms.NumericUpDown numericUpDown252;
-        private System.Windows.Forms.NumericUpDown numericUpDown253;
-        private System.Windows.Forms.NumericUpDown numericUpDown254;
-        private System.Windows.Forms.NumericUpDown numericUpDown255;
-        private System.Windows.Forms.ComboBox comboBox153;
-        private System.Windows.Forms.NumericUpDown numericUpDown256;
-        private System.Windows.Forms.ComboBox comboBox154;
-        private System.Windows.Forms.ComboBox comboBox155;
+        private System.Windows.Forms.CheckBox checkBox_Weather_UseMin_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageMin_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_iconMin_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_unitFMin_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherXMin_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherYMin_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconXMin_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconYMin_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_alignmentMin_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacingMin_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageErrorMin_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinusMin_AOD;
         private System.Windows.Forms.Label label1148;
         private System.Windows.Forms.Label label1149;
         private System.Windows.Forms.Label label1150;
@@ -40600,18 +34751,18 @@
         private System.Windows.Forms.Label label1160;
         private System.Windows.Forms.Button button_Weather_textMin_AOD;
         private System.Windows.Forms.Panel panel_Weather_text_AOD;
-        private System.Windows.Forms.CheckBox checkBox63;
-        private System.Windows.Forms.ComboBox comboBox156;
-        private System.Windows.Forms.ComboBox comboBox157;
-        private System.Windows.Forms.ComboBox comboBox158;
-        private System.Windows.Forms.NumericUpDown numericUpDown257;
-        private System.Windows.Forms.NumericUpDown numericUpDown258;
-        private System.Windows.Forms.NumericUpDown numericUpDown259;
-        private System.Windows.Forms.NumericUpDown numericUpDown260;
-        private System.Windows.Forms.ComboBox comboBox159;
-        private System.Windows.Forms.NumericUpDown numericUpDown261;
-        private System.Windows.Forms.ComboBox comboBox160;
-        private System.Windows.Forms.ComboBox comboBox161;
+        private System.Windows.Forms.CheckBox checkBox_Weather_Use_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_image_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_icon_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_unitF_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherX_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherY_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconX_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconY_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_alignment_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacing_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageError_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinus_AOD;
         private System.Windows.Forms.Label label1161;
         private System.Windows.Forms.Label label1162;
         private System.Windows.Forms.Label label1163;
@@ -40627,11 +34778,11 @@
         private System.Windows.Forms.Label label1173;
         private System.Windows.Forms.Button button_Weather_text_AOD;
         private System.Windows.Forms.Panel panel_Weather_pictures_AOD;
-        private System.Windows.Forms.CheckBox checkBox64;
-        private System.Windows.Forms.ComboBox comboBox162;
-        private System.Windows.Forms.NumericUpDown numericUpDown262;
-        private System.Windows.Forms.NumericUpDown numericUpDown263;
-        private System.Windows.Forms.NumericUpDown numericUpDown264;
+        private System.Windows.Forms.CheckBox checkBox_Weather_pictures_Use_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_pictures_image_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_picturesX_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_picturesY_AOD;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_pictures_count_AOD;
         private System.Windows.Forms.Label label1174;
         private System.Windows.Forms.Label label1175;
         private System.Windows.Forms.Label label1176;
@@ -40651,8 +34802,8 @@
         private System.Windows.Forms.Panel panel_Battery_icon_AOD;
         private System.Windows.Forms.Panel panel_Battery_scaleLinear_AOD;
         private System.Windows.Forms.CheckBox checkBox_Battery_scaleLinear_Use_AOD;
-        private System.Windows.Forms.RadioButton radioButton27;
-        private System.Windows.Forms.RadioButton radioButton28;
+        private System.Windows.Forms.RadioButton radioButton_Battery_scaleLinear_image_AOD;
+        private System.Windows.Forms.RadioButton radioButton_Battery_scaleLinear_color_AOD;
         private System.Windows.Forms.ComboBox comboBox_Battery_scaleLinear_image_AOD;
         private System.Windows.Forms.ComboBox comboBox_Battery_scaleLinear_color_AOD;
         private System.Windows.Forms.ComboBox comboBox_Battery_scaleLinear_image_pointer_AOD;
@@ -40806,6 +34957,15 @@
         private System.Windows.Forms.Button button_Copy_Steps_hand_AOD;
         private System.Windows.Forms.Button button_Copy_Steps_text_AOD;
         private System.Windows.Forms.Button button_Copy_Steps_pictures_AOD;
+        private System.Windows.Forms.Button button_Copy_Weather_scaleLinear_AOD;
+        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_flatness_AOD;
+        private System.Windows.Forms.Label label304;
+        private System.Windows.Forms.Button button_Copy_Weather_scaleCircle_AOD;
+        private System.Windows.Forms.Button button_Copy_Weather_hand_AOD;
+        private System.Windows.Forms.Button button_Copy_Weather_textMax_AOD;
+        private System.Windows.Forms.Button button_Copy_Weather_textMin_AOD;
+        private System.Windows.Forms.Button button_Copy_Weather_text_AOD;
+        private System.Windows.Forms.Button button_Copy_Weather_pictures_AOD;
     }
 }
 

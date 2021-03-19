@@ -1572,16 +1572,17 @@ namespace AmazFit_Watchface_2
                 }
             }
             #endregion
-
+            
+            */
             #region погода
-            panel_pictures = panel_Weather_pictures;
-            panel_text = panel_Weather_text;
-            panel_hand = panel_Weather_hand;
-            panel_scaleCircle = panel_Weather_scaleCircle;
-            panel_scaleLinear = panel_Weather_scaleLinear;
+            panel_pictures = panel_Weather_pictures_AOD;
+            panel_text = panel_Weather_text_AOD;
+            panel_hand = panel_Weather_hand_AOD;
+            panel_scaleCircle = panel_Weather_scaleCircle_AOD;
+            panel_scaleLinear = panel_Weather_scaleLinear_AOD;
 
-            Panel panel_text_min = panel_Weather_textMin;
-            Panel panel_text_max = panel_Weather_textMax;
+            Panel panel_text_min = panel_Weather_textMin_AOD;
+            Panel panel_text_max = panel_Weather_textMax_AOD;
 
             // погода картинками
             checkBox_Use = (CheckBox)panel_pictures.Controls[0];
@@ -1656,7 +1657,7 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            // пульс линейной шкалой
+            // погода линейной шкалой
             checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
             if (checkBox_Use.Checked)
             {
@@ -1670,6 +1671,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1681,20 +1683,21 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
-
+            
             // погода надписью
             checkBox_Use = (CheckBox)panel_text.Controls[0];
             if (checkBox_Use.Checked)
@@ -1907,7 +1910,6 @@ namespace AmazFit_Watchface_2
             }
 
             #endregion
-            */
 
 
             #endregion

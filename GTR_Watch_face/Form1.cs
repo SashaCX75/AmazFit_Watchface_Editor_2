@@ -343,7 +343,13 @@ namespace AmazFit_Watchface_2
             comboBox_Weather_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_Weather_scaleLinear_flatness.SelectedIndex = 0;
 
-            
+            comboBox_Weather_alignment_AOD.SelectedIndex = 0;
+            comboBox_Weather_alignmentMin_AOD.SelectedIndex = 0;
+            comboBox_Weather_alignmentMax_AOD.SelectedIndex = 0;
+            comboBox_Weather_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_Weather_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
+
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -6663,6 +6669,19 @@ namespace AmazFit_Watchface_2
 
             bool b = !checkBox.Checked;
             for (int i = 1; i < controlCollection.Count; i++)
+            {
+                if (i == 4 || i == 5 || i == 13 || i == 20 || i == 21) controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_Weather_followMax_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = !checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count-1; i++)
             {
                 if (i == 4 || i == 5 || i == 13 || i == 20 || i == 21) controlCollection[i].Enabled = b;
             }
