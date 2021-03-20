@@ -18,20 +18,6 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
-        private void radioButton_image_color_CheckedChanged(object sender, EventArgs e)
-        {
-            RadioButton radioButton = sender as RadioButton;
-            Control control = radioButton.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = radioButton.Checked;
-            controlCollection[3].Enabled = b;
-            controlCollection[4].Enabled = !b;
-
-            JSON_write();
-            PreviewImage();
-        }
-
 
         private void checkBox_Hour_Use_CheckedChanged(object sender, EventArgs e)
         {
@@ -876,56 +862,6 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        private void checkBox_pictures_Use_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            for (int i = 1; i < controlCollection.Count; i++)
-            {
-                controlCollection[i].Enabled = b;
-            }
-        }
-        private void checkBox_pictures_Use_AOD_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            for (int i = 1; i < controlCollection.Count-1; i++)
-            {
-                controlCollection[i].Enabled = b;
-            }
-        }
-
-        private void checkBox_text_Use_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            for (int i = 1; i < controlCollection.Count; i++)
-            {
-                controlCollection[i].Enabled = b;
-            }
-        }
-        private void checkBox_text_Use_AOD_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            for (int i = 1; i < controlCollection.Count-1; i++)
-            {
-                controlCollection[i].Enabled = b;
-            }
-        }
-
         private void checkBox_Weather_textMax_Use_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = sender as CheckBox;
@@ -954,109 +890,6 @@ namespace AmazFit_Watchface_2
             {
                 controlCollection[i].Enabled = b;
                 if (b && (i == 4 || i == 5 || i == 13 || i == 20 || i == 21)) controlCollection[i].Enabled = b2;
-            }
-        }
-
-        private void checkBox_hand_Use_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            for (int i = 1; i < controlCollection.Count; i++)
-            {
-                controlCollection[i].Enabled = b;
-            }
-        }
-        private void checkBox_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            for (int i = 1; i < controlCollection.Count-1; i++)
-            {
-                controlCollection[i].Enabled = b;
-            }
-        }
-
-        private void checkBox_scaleCircle_Use_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            RadioButton radioButton = (RadioButton)controlCollection[1];
-            bool bImage = radioButton.Checked;
-            for (int i = 1; i < controlCollection.Count; i++)
-            {
-                controlCollection[i].Enabled = b;
-                if (b)
-                {
-                    if (i == 3) controlCollection[i].Enabled = bImage;
-                    if (i == 4) controlCollection[i].Enabled = !bImage;
-                }
-            }
-        }
-        private void checkBox_scaleCircle_Use_AOD_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            RadioButton radioButton = (RadioButton)controlCollection[1];
-            bool bImage = radioButton.Checked;
-            for (int i = 1; i < controlCollection.Count-1; i++)
-            {
-                controlCollection[i].Enabled = b;
-                if (b)
-                {
-                    if (i == 3) controlCollection[i].Enabled = bImage;
-                    if (i == 4) controlCollection[i].Enabled = !bImage;
-                }
-            }
-        }
-
-        private void checkBox_scaleLinear_Use_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            RadioButton radioButton = (RadioButton)controlCollection[1];
-            bool bImage = radioButton.Checked;
-            for (int i = 1; i < controlCollection.Count; i++)
-            {
-                controlCollection[i].Enabled = b;
-                if (b)
-                {
-                    if (i == 3) controlCollection[i].Enabled = bImage;
-                    if (i == 4) controlCollection[i].Enabled = !bImage;
-                }
-            }
-        }
-        private void checkBox_scaleLinear_Use_AOD_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-
-            bool b = checkBox.Checked;
-            RadioButton radioButton = (RadioButton)controlCollection[1];
-            bool bImage = radioButton.Checked;
-            for (int i = 1; i < controlCollection.Count-1; i++)
-            {
-                controlCollection[i].Enabled = b;
-                if (b)
-                {
-                    if (i == 3) controlCollection[i].Enabled = bImage;
-                    if (i == 4) controlCollection[i].Enabled = !bImage;
-                }
             }
         }
 

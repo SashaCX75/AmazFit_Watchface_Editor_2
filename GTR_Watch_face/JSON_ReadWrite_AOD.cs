@@ -588,34 +588,34 @@ namespace AmazFit_Watchface_2
                             panel_scaleCircle = panel_Steps_scaleCircle_AOD;
                             panel_scaleLinear = panel_Steps_scaleLinear_AOD;
                             break;
-                        //case "Calories":
-                        //    panel_pictures = panel_Calories_pictures_AOD;
-                        //    panel_text = panel_Calories_text_AOD;
-                        //    panel_hand = panel_Calories_hand_AOD;
-                        //    panel_scaleCircle = panel_Calories_scaleCircle_AOD;
-                        //    panel_scaleLinear = panel_Calories_scaleLinear_AOD;
-                        //    break;
-                        //case "HeartRate":
-                        //    panel_pictures = panel_HeartRate_pictures_AOD;
-                        //    panel_text = panel_HeartRate_text_AOD;
-                        //    panel_hand = panel_HeartRate_hand_AOD;
-                        //    panel_scaleCircle = panel_HeartRate_scaleCircle_AOD;
-                        //    panel_scaleLinear = panel_HeartRate_scaleLinear_AOD;
-                        //    break;
-                        //case "PAI":
-                        //    panel_pictures = panel_PAI_pictures_AOD;
-                        //    panel_text = panel_PAI_text_AOD;
-                        //    panel_hand = panel_PAI_hand_AOD;
-                        //    panel_scaleCircle = panel_PAI_scaleCircle_AOD;
-                        //    panel_scaleLinear = panel_PAI_scaleLinear_AOD;
-                        //    break;
-                        //case "Distance":
-                        //    panel_pictures = panel_Distance_pictures_AOD;
-                        //    panel_text = panel_Distance_text_AOD;
-                        //    panel_hand = panel_Distance_hand_AOD;
-                        //    panel_scaleCircle = panel_Distance_scaleCircle_AOD;
-                        //    panel_scaleLinear = panel_Distance_scaleLinear_AOD;
-                        //    break;
+                        case "Calories":
+                            panel_pictures = panel_Calories_pictures_AOD;
+                            panel_text = panel_Calories_text_AOD;
+                            panel_hand = panel_Calories_hand_AOD;
+                            panel_scaleCircle = panel_Calories_scaleCircle_AOD;
+                            panel_scaleLinear = panel_Calories_scaleLinear_AOD;
+                            break;
+                        case "HeartRate":
+                            panel_pictures = panel_HeartRate_pictures_AOD;
+                            panel_text = panel_HeartRate_text_AOD;
+                            panel_hand = panel_HeartRate_hand_AOD;
+                            panel_scaleCircle = panel_HeartRate_scaleCircle_AOD;
+                            panel_scaleLinear = panel_HeartRate_scaleLinear_AOD;
+                            break;
+                        case "PAI":
+                            panel_pictures = panel_PAI_pictures_AOD;
+                            panel_text = panel_PAI_text_AOD;
+                            panel_hand = panel_PAI_hand_AOD;
+                            panel_scaleCircle = panel_PAI_scaleCircle_AOD;
+                            panel_scaleLinear = panel_PAI_scaleLinear_AOD;
+                            break;
+                        case "Distance":
+                            panel_pictures = panel_Distance_pictures_AOD;
+                            panel_text = panel_Distance_text_AOD;
+                            panel_hand = panel_Distance_hand_AOD;
+                            panel_scaleCircle = panel_Distance_scaleCircle_AOD;
+                            panel_scaleLinear = panel_Distance_scaleLinear_AOD;
+                            break;
 
 
 
@@ -1535,49 +1535,49 @@ namespace AmazFit_Watchface_2
 
             #region Calories
 
-            //panel_pictures = panel_Calories_pictures;
-            //panel_text = panel_Calories_text;
-            //panel_hand = panel_Calories_hand;
-            //panel_scaleCircle = panel_Calories_scaleCircle;
-            //panel_scaleLinear = panel_Calories_scaleLinear;
+            panel_pictures = panel_Calories_pictures_AOD;
+            panel_text = panel_Calories_text_AOD;
+            panel_hand = panel_Calories_hand_AOD;
+            panel_scaleCircle = panel_Calories_scaleCircle_AOD;
+            panel_scaleLinear = panel_Calories_scaleLinear_AOD;
 
-            //AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "Calories");
+            AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "Calories");
 
             #endregion
 
             #region HeartRate
 
-            //panel_pictures = panel_HeartRate_pictures;
-            //panel_text = panel_HeartRate_text;
-            //panel_hand = panel_HeartRate_hand;
-            //panel_scaleCircle = panel_HeartRate_scaleCircle;
-            //panel_scaleLinear = panel_HeartRate_scaleLinear;
+            panel_pictures = panel_HeartRate_pictures_AOD;
+            panel_text = panel_HeartRate_text;
+            panel_hand = panel_HeartRate_hand;
+            panel_scaleCircle = panel_HeartRate_scaleCircle_AOD;
+            panel_scaleLinear = panel_HeartRate_scaleLinear_AOD;
 
-            //AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "HeartRate");
+            AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "HeartRate");
 
             #endregion
 
             #region PAI
 
-            //panel_pictures = panel_PAI_pictures;
-            //panel_text = panel_PAI_text;
-            //panel_hand = panel_PAI_hand;
-            //panel_scaleCircle = panel_PAI_scaleCircle;
-            //panel_scaleLinear = panel_PAI_scaleLinear;
+            panel_pictures = panel_PAI_pictures_AOD;
+            panel_text = panel_PAI_text_AOD;
+            panel_hand = panel_PAI_hand_AOD;
+            panel_scaleCircle = panel_PAI_scaleCircle_AOD;
+            panel_scaleLinear = panel_PAI_scaleLinear_AOD;
 
-            //AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "PAI");
+            AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "PAI");
 
             #endregion
 
             #region Distance
 
-            //panel_pictures = panel_Distance_pictures;
-            //panel_text = panel_Distance_text;
-            //panel_hand = panel_Distance_hand;
-            //panel_scaleCircle = panel_Distance_scaleCircle;
-            //panel_scaleLinear = panel_Distance_scaleLinear;
+            panel_pictures = panel_Distance_pictures_AOD;
+            panel_text = panel_Distance_text_AOD;
+            panel_hand = panel_Distance_hand_AOD;
+            panel_scaleCircle = panel_Distance_scaleCircle_AOD;
+            panel_scaleLinear = panel_Distance_scaleLinear_AOD;
 
-            //AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "Distance");
+            AddActivity_AOD(ScreenIdle, panel_pictures, panel_text, panel_hand, panel_scaleCircle, panel_scaleLinear, "Distance");
 
             #endregion
 
@@ -1976,6 +1976,71 @@ namespace AmazFit_Watchface_2
             comboBox_Steps_scaleLinear_image_pointer_AOD.Items.AddRange(ListImages.ToArray());
             comboBox_Steps_scaleLinear_image_background_AOD.Items.AddRange(ListImages.ToArray());
 
+            comboBox_Calories_pictures_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_icon_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_unit_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_imageError_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_hand_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_hand_imageCentr_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_hand_imageBackground_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_Calories_scaleCircle_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_scaleCircle_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_Calories_scaleLinear_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_scaleLinear_image_pointer_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_scaleLinear_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_HeartRate_pictures_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_icon_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_unit_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_imageError_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_hand_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_hand_imageCentr_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_hand_imageBackground_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_HeartRate_scaleCircle_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_scaleCircle_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_HeartRate_scaleLinear_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_scaleLinear_image_pointer_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_HeartRate_scaleLinear_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_PAI_pictures_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_icon_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_unit_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_imageError_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_hand_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_hand_imageCentr_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_hand_imageBackground_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_PAI_scaleCircle_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_scaleCircle_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
+            comboBox_PAI_scaleLinear_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_scaleLinear_image_pointer_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_PAI_scaleLinear_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
+            //comboBox_Distance_pictures_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Distance_image_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Distance_icon_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Distance_unit_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Distance_imageError_AOD.Items.AddRange(ListImages.ToArray());
+            comboBox_Distance_imageDecimalPoint_AOD.Items.AddRange(ListImages.ToArray());
+            //comboBox_Distance_hand_image_AOD.Items.AddRange(ListImages.ToArray());
+            //comboBox_Distance_hand_imageCentr_AOD.Items.AddRange(ListImages.ToArray());
+            //comboBox_Distance_hand_imageBackground_AOD.Items.AddRange(ListImages.ToArray());
+
+            //comboBox_Distance_scaleCircle_image_AOD.Items.AddRange(ListImages.ToArray());
+            //comboBox_Distance_scaleCircle_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
+            //comboBox_Distance_scaleLinear_image_AOD.Items.AddRange(ListImages.ToArray());
+            //comboBox_Distance_scaleLinear_image_pointer_AOD.Items.AddRange(ListImages.ToArray());
+            //comboBox_Distance_scaleLinear_image_background_AOD.Items.AddRange(ListImages.ToArray());
+
 
 
 
@@ -2041,6 +2106,30 @@ namespace AmazFit_Watchface_2
             checkBox_Steps_hand_Use_AOD.Checked = false;
             checkBox_Steps_scaleCircle_Use_AOD.Checked = false;
             checkBox_Steps_scaleLinear_Use_AOD.Checked = false;
+
+            checkBox_Calories_pictures_Use_AOD.Checked = false;
+            checkBox_Calories_Use_AOD.Checked = false;
+            checkBox_Calories_hand_Use_AOD.Checked = false;
+            checkBox_Calories_scaleCircle_Use_AOD.Checked = false;
+            checkBox_Calories_scaleLinear_Use_AOD.Checked = false;
+
+            checkBox_HeartRate_pictures_Use_AOD.Checked = false;
+            checkBox_HeartRate_Use_AOD.Checked = false;
+            checkBox_HeartRate_hand_Use_AOD.Checked = false;
+            checkBox_HeartRate_scaleCircle_Use_AOD.Checked = false;
+            checkBox_HeartRate_scaleLinear_Use_AOD.Checked = false;
+
+            checkBox_PAI_pictures_Use_AOD.Checked = false;
+            checkBox_PAI_Use_AOD.Checked = false;
+            checkBox_PAI_hand_Use_AOD.Checked = false;
+            checkBox_PAI_scaleCircle_Use_AOD.Checked = false;
+            checkBox_PAI_scaleLinear_Use_AOD.Checked = false;
+
+            checkBox_Distance_pictures_Use_AOD.Checked = false;
+            checkBox_Distance_Use_AOD.Checked = false;
+            checkBox_Distance_hand_Use_AOD.Checked = false;
+            checkBox_Distance_scaleCircle_Use_AOD.Checked = false;
+            checkBox_Distance_scaleLinear_Use_AOD.Checked = false;
 
 
 
@@ -2195,6 +2284,135 @@ namespace AmazFit_Watchface_2
             comboBox_Steps_scaleLinear_image_pointer_AOD.Text = "";
             comboBox_Steps_scaleLinear_image_background_AOD.Items.Clear();
             comboBox_Steps_scaleLinear_image_background_AOD.Text = "";
+
+            comboBox_Calories_pictures_image_AOD.Items.Clear();
+            comboBox_Calories_pictures_image.Text = "";
+
+            comboBox_Calories_image_AOD.Items.Clear();
+            comboBox_Calories_image_AOD.Text = "";
+            comboBox_Calories_icon_AOD.Items.Clear();
+            comboBox_Calories_icon_AOD.Text = "";
+            comboBox_Calories_unit_AOD.Items.Clear();
+            comboBox_Calories_unit_AOD.Text = "";
+            comboBox_Calories_imageError_AOD.Items.Clear();
+            comboBox_Calories_imageError_AOD.Text = "";
+
+            comboBox_Calories_hand_image_AOD.Items.Clear();
+            comboBox_Calories_hand_image_AOD.Text = "";
+            comboBox_Calories_hand_imageCentr_AOD.Items.Clear();
+            comboBox_Calories_hand_imageCentr_AOD.Text = "";
+            comboBox_Calories_hand_imageBackground_AOD.Items.Clear();
+            comboBox_Calories_hand_imageBackground_AOD.Text = "";
+
+            comboBox_Calories_scaleCircle_image_AOD.Items.Clear();
+            comboBox_Calories_scaleCircle_image_AOD.Text = "";
+            comboBox_Calories_scaleCircle_image_background_AOD.Items.Clear();
+            comboBox_Calories_scaleCircle_image_background_AOD.Text = "";
+
+            comboBox_Calories_scaleLinear_image_AOD.Items.Clear();
+            comboBox_Calories_scaleLinear_image_AOD.Text = "";
+            comboBox_Calories_scaleLinear_image_pointer_AOD.Items.Clear();
+            comboBox_Calories_scaleLinear_image_pointer_AOD.Text = "";
+            comboBox_Calories_scaleLinear_image_background_AOD.Items.Clear();
+            comboBox_Calories_scaleLinear_image_background_AOD.Text = "";
+
+            comboBox_HeartRate_pictures_image_AOD.Items.Clear();
+            comboBox_HeartRate_pictures_image_AOD.Text = "";
+
+            comboBox_HeartRate_image_AOD.Items.Clear();
+            comboBox_HeartRate_image_AOD.Text = "";
+            comboBox_HeartRate_icon_AOD.Items.Clear();
+            comboBox_HeartRate_icon_AOD.Text = "";
+            comboBox_HeartRate_unit_AOD.Items.Clear();
+            comboBox_HeartRate_unit_AOD.Text = "";
+            comboBox_HeartRate_imageError_AOD.Items.Clear();
+            comboBox_HeartRate_imageError_AOD.Text = "";
+
+            comboBox_HeartRate_hand_image_AOD.Items.Clear();
+            comboBox_HeartRate_hand_image_AOD.Text = "";
+            comboBox_HeartRate_hand_imageCentr_AOD.Items.Clear();
+            comboBox_HeartRate_hand_imageCentr_AOD.Text = "";
+            comboBox_HeartRate_hand_imageBackground_AOD.Items.Clear();
+            comboBox_HeartRate_hand_imageBackground_AOD.Text = "";
+
+            comboBox_HeartRate_scaleCircle_image_AOD.Items.Clear();
+            comboBox_HeartRate_scaleCircle_image_AOD.Text = "";
+            comboBox_HeartRate_scaleCircle_image_background_AOD.Items.Clear();
+            comboBox_HeartRate_scaleCircle_image_background_AOD.Text = "";
+
+            comboBox_HeartRate_scaleLinear_image_AOD.Items.Clear();
+            comboBox_HeartRate_scaleLinear_image_AOD.Text = "";
+            comboBox_HeartRate_scaleLinear_image_pointer_AOD.Items.Clear();
+            comboBox_HeartRate_scaleLinear_image_pointer_AOD.Text = "";
+            comboBox_HeartRate_scaleLinear_image_background_AOD.Items.Clear();
+            comboBox_HeartRate_scaleLinear_image_background_AOD.Text = "";
+
+            comboBox_PAI_pictures_image_AOD.Items.Clear();
+            comboBox_PAI_pictures_image_AOD.Text = "";
+
+            comboBox_PAI_image_AOD.Items.Clear();
+            comboBox_PAI_image_AOD.Text = "";
+            comboBox_PAI_icon_AOD.Items.Clear();
+            comboBox_PAI_icon_AOD.Text = "";
+            comboBox_PAI_unit_AOD.Items.Clear();
+            comboBox_PAI_unit_AOD.Text = "";
+            comboBox_PAI_imageError_AOD.Items.Clear();
+            comboBox_PAI_imageError_AOD.Text = "";
+
+            comboBox_PAI_hand_image_AOD.Items.Clear();
+            comboBox_PAI_hand_image_AOD.Text = "";
+            comboBox_PAI_hand_imageCentr_AOD.Items.Clear();
+            comboBox_PAI_hand_imageCentr_AOD.Text = "";
+            comboBox_PAI_hand_imageBackground_AOD.Items.Clear();
+            comboBox_PAI_hand_imageBackground_AOD.Text = "";
+
+            comboBox_PAI_scaleCircle_image_AOD.Items.Clear();
+            comboBox_PAI_scaleCircle_image_AOD.Text = "";
+            comboBox_PAI_scaleCircle_image_background_AOD.Items.Clear();
+            comboBox_PAI_scaleCircle_image_background_AOD.Text = "";
+
+            comboBox_PAI_scaleLinear_image_AOD.Items.Clear();
+            comboBox_PAI_scaleLinear_image_AOD.Text = "";
+            comboBox_PAI_scaleLinear_image_pointer_AOD.Items.Clear();
+            comboBox_PAI_scaleLinear_image_pointer_AOD.Text = "";
+            comboBox_PAI_scaleLinear_image_background_AOD.Items.Clear();
+            comboBox_PAI_scaleLinear_image_background_AOD.Text = "";
+
+            //comboBox_Distance_pictures_image_AOD.Items.Clear();
+            //comboBox_Distance_pictures_image_AOD.Text = "";
+
+            comboBox_Distance_image_AOD.Items.Clear();
+            comboBox_Distance_image_AOD.Text = "";
+            comboBox_Distance_icon_AOD.Items.Clear();
+            comboBox_Distance_icon_AOD.Text = "";
+            comboBox_Distance_unit_AOD.Items.Clear();
+            comboBox_Distance_unit_AOD.Text = "";
+            comboBox_Distance_imageError_AOD.Items.Clear();
+            comboBox_Distance_imageError_AOD.Text = "";
+            comboBox_Distance_imageDecimalPoint_AOD.Items.Clear();
+            comboBox_Distance_imageDecimalPoint_AOD.Text = "";
+
+            //comboBox_Distance_hand_image_AOD.Items.Clear();
+            //comboBox_Distance_hand_image_AOD.Text = "";
+            //comboBox_Distance_hand_imageCentr_AOD.Items.Clear();
+            //comboBox_Distance_hand_imageCentr_AOD.Text = "";
+            //comboBox_Distance_hand_imageBackground_AOD.Items.Clear();
+            //comboBox_Distance_hand_imageBackground_AOD.Text = "";
+
+            //comboBox_Distance_scaleCircle_image_AOD.Items.Clear();
+            //comboBox_Distance_scaleCircle_image_AOD.Text = "";
+            //comboBox_Distance_scaleCircle_image_background_AOD.Items.Clear();
+            //comboBox_Distance_scaleCircle_image_background_AOD.Text = "";
+
+            //comboBox_Distance_scaleLinear_image_AOD.Items.Clear();
+            //comboBox_Distance_scaleLinear_image_AOD.Text = "";
+            //comboBox_Distance_scaleLinear_image_pointer_AOD.Items.Clear();
+            //comboBox_Distance_scaleLinear_image_pointer_AOD.Text = "";
+            //comboBox_Distance_scaleLinear_image_background_AOD.Items.Clear();
+            //comboBox_Distance_scaleLinear_image_background_AOD.Text = "";
+
+
+
 
             comboBox_Weather_pictures_image_AOD.Items.Clear();
             comboBox_Weather_pictures_image_AOD.Text = "";

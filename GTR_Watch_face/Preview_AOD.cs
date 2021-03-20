@@ -741,13 +741,12 @@ namespace AmazFit_Watchface_2
             }
             #endregion
 
-            /*
             #region калории
-            panel_pictures = panel_Calories_pictures;
-            panel_text = panel_Calories_text;
-            panel_hand = panel_Calories_hand;
-            panel_scaleCircle = panel_Calories_scaleCircle;
-            panel_scaleLinear = panel_Calories_scaleLinear;
+            panel_pictures = panel_Calories_pictures_AOD;
+            panel_text = panel_Calories_text_AOD;
+            panel_hand = panel_Calories_hand_AOD;
+            panel_scaleCircle = panel_Calories_scaleCircle_AOD;
+            panel_scaleLinear = panel_Calories_scaleLinear_AOD;
             // калории картинками
             checkBox_Use = (CheckBox)panel_pictures.Controls[0];
             if (checkBox_Use.Checked)
@@ -837,6 +836,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -848,17 +848,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1044,6 +1045,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1055,17 +1057,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 200f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1251,6 +1254,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1262,17 +1266,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.PAI / 100f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1364,11 +1369,11 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region путь
-            panel_pictures = panel_Distance_pictures;
-            panel_text = panel_Distance_text;
-            panel_hand = panel_Distance_hand;
-            panel_scaleCircle = panel_Distance_scaleCircle;
-            panel_scaleLinear = panel_Distance_scaleLinear;
+            panel_pictures = panel_Distance_pictures_AOD;
+            panel_text = panel_Distance_text_AOD;
+            panel_hand = panel_Distance_hand_AOD;
+            panel_scaleCircle = panel_Distance_scaleCircle_AOD;
+            panel_scaleLinear = panel_Distance_scaleLinear_AOD;
             // путь картинками
             checkBox_Use = (CheckBox)panel_pictures.Controls[0];
             if (checkBox_Use.Checked)
@@ -1458,6 +1463,7 @@ namespace AmazFit_Watchface_2
                 NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
                 NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
                 NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
@@ -1469,17 +1475,18 @@ namespace AmazFit_Watchface_2
                 Color color = comboBox_color.BackColor;
                 float position = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
                 if (position > 1) position = 1;
+                int lineCap = comboBox_flatness.SelectedIndex;
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, pointerIndex, backgroundIndex, showProgressArea);
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
                 {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, pointerIndex, backgroundIndex, showProgressArea);
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
 
@@ -1573,7 +1580,6 @@ namespace AmazFit_Watchface_2
             }
             #endregion
             
-            */
             #region погода
             panel_pictures = panel_Weather_pictures_AOD;
             panel_text = panel_Weather_text_AOD;

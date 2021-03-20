@@ -325,6 +325,14 @@ namespace AmazFit_Watchface_2
             comboBox_Calories_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_Calories_scaleLinear_flatness.SelectedIndex = 0;
 
+            comboBox_Calories_alignment_AOD.SelectedIndex = 0;
+            comboBox_Calories_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_Calories_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
+            comboBox_HeartRate_alignment_AOD.SelectedIndex = 0;
+            comboBox_HeartRate_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_HeartRate_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
             comboBox_HeartRate_alignment.SelectedIndex = 0;
             comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_HeartRate_scaleLinear_flatness.SelectedIndex = 0;
@@ -333,9 +341,15 @@ namespace AmazFit_Watchface_2
             comboBox_PAI_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_PAI_scaleLinear_flatness.SelectedIndex = 0;
 
+            comboBox_PAI_alignment_AOD.SelectedIndex = 0;
+            comboBox_PAI_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_PAI_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
             comboBox_Distance_alignment.SelectedIndex = 0;
             comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_Distance_scaleLinear_flatness.SelectedIndex = 0;
+
+            comboBox_Distance_alignment_AOD.SelectedIndex = 0;
 
             comboBox_Weather_alignment.SelectedIndex = 0;
             comboBox_Weather_alignmentMin.SelectedIndex = 0;
@@ -6592,9 +6606,19 @@ namespace AmazFit_Watchface_2
                 var obj = (JObject)token;
                 foreach (var property in obj.Properties())
                 {
-                    var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name))];
-                    childNode.Tag = property;
-                    AddNode(property.Value, childNode);
+                    //var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name + "*+*"))];
+                    //childNode.Tag = property;
+                    if (property.Value is JValue)
+                    {
+                        var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name + ":" + property.Value.ToString()))];
+                        childNode.Tag = property;
+                    }
+                    else
+                    {
+                        var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name))];
+                        childNode.Tag = property;
+                        AddNode(property.Value, childNode); 
+                    }
                 }
             }
             else if (token is JArray)
@@ -6613,6 +6637,7 @@ namespace AmazFit_Watchface_2
             }
 
         }
+        #endregion
 
         private void comboBox_color_Click(object sender, EventArgs e)
         {
@@ -6726,12 +6751,181 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        private void checkBox_pictures_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+        private void checkBox_pictures_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_text_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+        private void checkBox_text_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+        private void checkBox_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_scaleCircle_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+        private void checkBox_scaleCircle_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+
+        private void checkBox_scaleLinear_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+        private void checkBox_scaleLinear_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+
+        private void radioButton_image_color_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            Control control = radioButton.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = radioButton.Checked;
+            controlCollection[3].Enabled = b;
+            controlCollection[4].Enabled = !b;
+
+            JSON_write();
+            PreviewImage();
+        }
 
 
 
 
 
-        #endregion
+
+
+
+
 
         //private int getOSversion()
         //{
