@@ -1945,6 +1945,7 @@
             this.button_Copy_Calories_pictures_AOD = new System.Windows.Forms.Button();
             this.button_Calories_pictures_AOD = new System.Windows.Forms.Button();
             this.tabPage_HeartRate_AOD = new System.Windows.Forms.TabPage();
+            this.panel_HeartRate_icon_AOD = new System.Windows.Forms.Panel();
             this.panel_HeartRate_scaleLinear_AOD = new System.Windows.Forms.Panel();
             this.checkBox_HeartRate_scaleLinear_Use_AOD = new System.Windows.Forms.CheckBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -2068,6 +2069,7 @@
             this.button_Copy_HeartRate_pictures_AOD = new System.Windows.Forms.Button();
             this.button_HeartRate_pictures_AOD = new System.Windows.Forms.Button();
             this.tabPage_PAI_AOD = new System.Windows.Forms.TabPage();
+            this.panel_PAI_icon_AOD = new System.Windows.Forms.Panel();
             this.panel_PAI_scaleLinear_AOD = new System.Windows.Forms.Panel();
             this.checkBox_PAI_scaleLinear_Use_AOD = new System.Windows.Forms.CheckBox();
             this.radioButton_PAI_scaleLinear_image_AOD = new System.Windows.Forms.RadioButton();
@@ -3047,8 +3049,6 @@
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
             this.toolTip_Weather = new System.Windows.Forms.ToolTip(this.components);
-            this.panel_HeartRate_icon_AOD = new System.Windows.Forms.Panel();
-            this.panel_PAI_icon_AOD = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -19174,6 +19174,7 @@
             // 
             resources.ApplyResources(this.label284, "label284");
             this.label284.Name = "label284";
+            this.helpProvider1.SetShowHelp(this.label284, ((bool)(resources.GetObject("label284.ShowHelp"))));
             // 
             // button_Capy_ScreenNormal
             // 
@@ -20965,6 +20966,7 @@
             // 
             resources.ApplyResources(this.button_Copy_Day_text_AOD, "button_Copy_Day_text_AOD");
             this.button_Copy_Day_text_AOD.Name = "button_Copy_Day_text_AOD";
+            this.helpProvider1.SetShowHelp(this.button_Copy_Day_text_AOD, ((bool)(resources.GetObject("button_Copy_Day_text_AOD.ShowHelp"))));
             this.button_Copy_Day_text_AOD.UseVisualStyleBackColor = true;
             this.button_Copy_Day_text_AOD.Click += new System.EventHandler(this.button_Copy_Day_text_AOD_Click);
             // 
@@ -25762,6 +25764,12 @@
             this.tabPage_HeartRate_AOD.Name = "tabPage_HeartRate_AOD";
             this.helpProvider1.SetShowHelp(this.tabPage_HeartRate_AOD, ((bool)(resources.GetObject("tabPage_HeartRate_AOD.ShowHelp"))));
             // 
+            // panel_HeartRate_icon_AOD
+            // 
+            resources.ApplyResources(this.panel_HeartRate_icon_AOD, "panel_HeartRate_icon_AOD");
+            this.panel_HeartRate_icon_AOD.Name = "panel_HeartRate_icon_AOD";
+            this.helpProvider1.SetShowHelp(this.panel_HeartRate_icon_AOD, ((bool)(resources.GetObject("panel_HeartRate_icon_AOD.ShowHelp"))));
+            // 
             // panel_HeartRate_scaleLinear_AOD
             // 
             this.panel_HeartRate_scaleLinear_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -27187,6 +27195,12 @@
             this.tabPage_PAI_AOD.Controls.Add(this.button_PAI_pictures_AOD);
             this.tabPage_PAI_AOD.Name = "tabPage_PAI_AOD";
             this.helpProvider1.SetShowHelp(this.tabPage_PAI_AOD, ((bool)(resources.GetObject("tabPage_PAI_AOD.ShowHelp"))));
+            // 
+            // panel_PAI_icon_AOD
+            // 
+            resources.ApplyResources(this.panel_PAI_icon_AOD, "panel_PAI_icon_AOD");
+            this.panel_PAI_icon_AOD.Name = "panel_PAI_icon_AOD";
+            this.helpProvider1.SetShowHelp(this.panel_PAI_icon_AOD, ((bool)(resources.GetObject("panel_PAI_icon_AOD.ShowHelp"))));
             // 
             // panel_PAI_scaleLinear_AOD
             // 
@@ -37794,18 +37808,6 @@
             // toolTip_Weather
             // 
             this.toolTip_Weather.ToolTipTitle = "Weather icons";
-            // 
-            // panel_HeartRate_icon_AOD
-            // 
-            resources.ApplyResources(this.panel_HeartRate_icon_AOD, "panel_HeartRate_icon_AOD");
-            this.panel_HeartRate_icon_AOD.Name = "panel_HeartRate_icon_AOD";
-            this.helpProvider1.SetShowHelp(this.panel_HeartRate_icon_AOD, ((bool)(resources.GetObject("panel_HeartRate_icon_AOD.ShowHelp"))));
-            // 
-            // panel_PAI_icon_AOD
-            // 
-            resources.ApplyResources(this.panel_PAI_icon_AOD, "panel_PAI_icon_AOD");
-            this.panel_PAI_icon_AOD.Name = "panel_PAI_icon_AOD";
-            this.helpProvider1.SetShowHelp(this.panel_PAI_icon_AOD, ((bool)(resources.GetObject("panel_PAI_icon_AOD.ShowHelp"))));
             // 
             // Form1
             // 

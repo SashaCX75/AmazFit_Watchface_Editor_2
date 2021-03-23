@@ -951,11 +951,11 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region пульс
-            panel_pictures = panel_HeartRate_pictures;
-            panel_text = panel_HeartRate_text;
-            panel_hand = panel_HeartRate_hand;
-            panel_scaleCircle = panel_HeartRate_scaleCircle;
-            panel_scaleLinear = panel_HeartRate_scaleLinear;
+            panel_pictures = panel_HeartRate_pictures_AOD;
+            panel_text = panel_HeartRate_text_AOD;
+            panel_hand = panel_HeartRate_hand_AOD;
+            panel_scaleCircle = panel_HeartRate_scaleCircle_AOD;
+            panel_scaleLinear = panel_HeartRate_scaleLinear_AOD;
             // пульс картинками
             checkBox_Use = (CheckBox)panel_pictures.Controls[0];
             if (checkBox_Use.Checked)
@@ -1160,11 +1160,11 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region PAI
-            panel_pictures = panel_PAI_pictures;
-            panel_text = panel_PAI_text;
-            panel_hand = panel_PAI_hand;
-            panel_scaleCircle = panel_PAI_scaleCircle;
-            panel_scaleLinear = panel_PAI_scaleLinear;
+            panel_pictures = panel_PAI_pictures_AOD;
+            panel_text = panel_PAI_text_AOD;
+            panel_hand = panel_PAI_hand_AOD;
+            panel_scaleCircle = panel_PAI_scaleCircle_AOD;
+            panel_scaleLinear = panel_PAI_scaleLinear_AOD;
             // PAI картинками
             checkBox_Use = (CheckBox)panel_pictures.Controls[0];
             if (checkBox_Use.Checked)

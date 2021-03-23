@@ -623,7 +623,7 @@ namespace AmazFit_Watchface_2
                         case "Weather":
                             panel_pictures = panel_Weather_pictures_AOD;
                             panel_text = panel_Weather_text_AOD;
-                            panel_hand = panel_Weather_hand;
+                            panel_hand = panel_Weather_hand_AOD;
                             panel_scaleCircle = panel_Weather_scaleCircle_AOD;
                             panel_scaleLinear = panel_Weather_scaleLinear_AOD;
                             break;
@@ -1548,8 +1548,8 @@ namespace AmazFit_Watchface_2
             #region HeartRate
 
             panel_pictures = panel_HeartRate_pictures_AOD;
-            panel_text = panel_HeartRate_text;
-            panel_hand = panel_HeartRate_hand;
+            panel_text = panel_HeartRate_text_AOD;
+            panel_hand = panel_HeartRate_hand_AOD;
             panel_scaleCircle = panel_HeartRate_scaleCircle_AOD;
             panel_scaleLinear = panel_HeartRate_scaleLinear_AOD;
 
