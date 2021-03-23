@@ -36086,7 +36086,8 @@
             this.comboBox_Language.Items.AddRange(new object[] {
             resources.GetString("comboBox_Language.Items"),
             resources.GetString("comboBox_Language.Items1"),
-            resources.GetString("comboBox_Language.Items2")});
+            resources.GetString("comboBox_Language.Items2"),
+            resources.GetString("comboBox_Language.Items3"),});
             resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));

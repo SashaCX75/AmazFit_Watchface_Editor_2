@@ -156,6 +156,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Properties\FormStrings.zh.Designer.cs">
+      <DependentUpon>FormStrings.zh.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\FormStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,6 +172,10 @@
     <EmbeddedResource Include="Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.zh.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.es.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,10 +186,16 @@
     <EmbeddedResource Include="FormAnimation.en.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.zh.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFileExists.en.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.zh.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFileExists.es.resx">
@@ -199,6 +214,10 @@
     <EmbeddedResource Include="Properties\FormStrings.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FormStrings.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.zh.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.zh.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\FormStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
