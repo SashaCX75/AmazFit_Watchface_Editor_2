@@ -329,6 +329,14 @@ namespace AmazFit_Watchface_2
             comboBox_Calories_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_Calories_scaleLinear_flatness.SelectedIndex = 0;
 
+            comboBox_Calories_alignment_AOD.SelectedIndex = 0;
+            comboBox_Calories_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_Calories_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
+            comboBox_HeartRate_alignment_AOD.SelectedIndex = 0;
+            comboBox_HeartRate_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_HeartRate_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
             comboBox_HeartRate_alignment.SelectedIndex = 0;
             comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_HeartRate_scaleLinear_flatness.SelectedIndex = 0;
@@ -337,9 +345,15 @@ namespace AmazFit_Watchface_2
             comboBox_PAI_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_PAI_scaleLinear_flatness.SelectedIndex = 0;
 
+            comboBox_PAI_alignment_AOD.SelectedIndex = 0;
+            comboBox_PAI_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_PAI_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
             comboBox_Distance_alignment.SelectedIndex = 0;
             comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_Distance_scaleLinear_flatness.SelectedIndex = 0;
+
+            comboBox_Distance_alignment_AOD.SelectedIndex = 0;
 
             comboBox_Weather_alignment.SelectedIndex = 0;
             comboBox_Weather_alignmentMin.SelectedIndex = 0;
@@ -347,7 +361,13 @@ namespace AmazFit_Watchface_2
             comboBox_Weather_scaleCircle_flatness.SelectedIndex = 0;
             comboBox_Weather_scaleLinear_flatness.SelectedIndex = 0;
 
-            
+            comboBox_Weather_alignment_AOD.SelectedIndex = 0;
+            comboBox_Weather_alignmentMin_AOD.SelectedIndex = 0;
+            comboBox_Weather_alignmentMax_AOD.SelectedIndex = 0;
+            comboBox_Weather_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            comboBox_Weather_scaleLinear_flatness_AOD.SelectedIndex = 0;
+
+
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -1807,10 +1827,10 @@ namespace AmazFit_Watchface_2
                 checkBox_UseID.Checked = false;
             }
 
-            newFullName = Path.Combine(path, "PreviewStates.json");
+            newFullName = Path.Combine(path, "Preview.States");
             if (File.Exists(newFullName))
             {
-                Logger.WriteLine("Load PreviewStates.json");
+                Logger.WriteLine("Load Preview.States");
                 if (Program_Settings.Settings_Open_Download)
                 {
                     JsonPreview_Read(newFullName);
@@ -2863,9 +2883,9 @@ namespace AmazFit_Watchface_2
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = FullFileDir;
-            openFileDialog.Filter = Properties.FormStrings.FilterJson;
-            openFileDialog.FileName = "PreviewStates.json";
-            //openFileDialog.Filter = "Json files (*.json) | *.json";
+            //openFileDialog.Filter = Properties.FormStrings.FilterJson;
+            openFileDialog.FileName = "Preview.States";
+            openFileDialog.Filter = "PreviewStates file | *.States|Json files (*.json) | *.json";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_PreviewStates;
@@ -3097,306 +3117,302 @@ namespace AmazFit_Watchface_2
         // записываем параметры в JsonPreview
         private void button_JsonPreview_Write_Click(object sender, EventArgs e)
         {
-            
-            object[] objson = new object[] { };
-            int count = 0;
-            for (int i = 0; i < 13; i++)
-            {
-                PREWIEV_STATES_Json ps = new PREWIEV_STATES_Json();
-                ps.Time = new TimePreview();
-                switch (i)
-                {
-                    case 0:
-                        ps.Time.Year = dateTimePicker_Date_Set1.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set1.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set1.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set1.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set1.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set1.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set1.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set1.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set1.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set1.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set1.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set1.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set1.Checked;
-                        ps.Alarm = checkBox_Alarm_Set1.Checked;
-                        ps.Unlocked = checkBox_Lock_Set1.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set1.Checked;
-
-                        if (numericUpDown_Calories_Set1.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1); 
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 1:
-                        ps.Time.Year = dateTimePicker_Date_Set2.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set2.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set2.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set2.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set2.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set2.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set2.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set2.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set2.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set2.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set2.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set2.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set2.Checked;
-                        ps.Alarm = checkBox_Alarm_Set2.Checked;
-                        ps.Unlocked = checkBox_Lock_Set2.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set2.Checked;
-
-                        if (numericUpDown_Calories_Set2.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 2:
-                        ps.Time.Year = dateTimePicker_Date_Set3.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set3.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set3.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set3.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set3.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set3.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set3.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set3.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set3.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set3.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set3.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set3.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set3.Checked;
-                        ps.Alarm = checkBox_Alarm_Set3.Checked;
-                        ps.Unlocked = checkBox_Lock_Set3.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set3.Checked;
-
-                        if (numericUpDown_Calories_Set3.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 3:
-                        ps.Time.Year = dateTimePicker_Date_Set4.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set4.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set4.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set4.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set4.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set4.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set4.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set4.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set4.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set4.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set4.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set4.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set4.Checked;
-                        ps.Alarm = checkBox_Alarm_Set4.Checked;
-                        ps.Unlocked = checkBox_Lock_Set4.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set4.Checked;
-
-                        if (numericUpDown_Calories_Set4.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 4:
-                        ps.Time.Year = dateTimePicker_Date_Set5.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set5.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set5.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set5.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set5.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set5.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set5.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set5.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set5.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set5.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set5.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set5.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set5.Checked;
-                        ps.Alarm = checkBox_Alarm_Set5.Checked;
-                        ps.Unlocked = checkBox_Lock_Set5.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set5.Checked;
-
-                        if (numericUpDown_Calories_Set5.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 5:
-                        ps.Time.Year = dateTimePicker_Date_Set6.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set6.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set6.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set6.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set6.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set6.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set6.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set6.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set6.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set6.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set6.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set6.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set6.Checked;
-                        ps.Alarm = checkBox_Alarm_Set6.Checked;
-                        ps.Unlocked = checkBox_Lock_Set6.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set6.Checked;
-
-                        if (numericUpDown_Calories_Set6.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 6:
-                        ps.Time.Year = dateTimePicker_Date_Set7.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set7.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set7.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set7.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set7.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set7.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set7.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set7.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set7.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set7.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set7.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set7.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set7.Checked;
-                        ps.Alarm = checkBox_Alarm_Set7.Checked;
-                        ps.Unlocked = checkBox_Lock_Set7.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set7.Checked;
-
-                        if (numericUpDown_Calories_Set7.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 7:
-                        ps.Time.Year = dateTimePicker_Date_Set8.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set8.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set8.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set8.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set8.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set8.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set8.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set8.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set8.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set8.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set8.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set8.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set8.Checked;
-                        ps.Alarm = checkBox_Alarm_Set8.Checked;
-                        ps.Unlocked = checkBox_Lock_Set8.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set8.Checked;
-
-                        if (numericUpDown_Calories_Set8.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 8:
-                        ps.Time.Year = dateTimePicker_Date_Set9.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set9.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set9.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set9.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set9.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set9.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set9.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set9.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set9.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set9.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set9.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set9.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set9.Checked;
-                        ps.Alarm = checkBox_Alarm_Set9.Checked;
-                        ps.Unlocked = checkBox_Lock_Set9.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set9.Checked;
-
-                        if (numericUpDown_Calories_Set9.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                    case 9:
-                        ps.Time.Year = dateTimePicker_Date_Set10.Value.Year;
-                        ps.Time.Month = dateTimePicker_Date_Set10.Value.Month;
-                        ps.Time.Day = dateTimePicker_Date_Set10.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Time_Set10.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Time_Set10.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Time_Set10.Value.Second;
-                        ps.BatteryLevel = (int)numericUpDown_Battery_Set10.Value;
-                        ps.Calories = (int)numericUpDown_Calories_Set10.Value;
-                        ps.Pulse = (int)numericUpDown_Pulse_Set10.Value;
-                        ps.Distance = (int)numericUpDown_Distance_Set10.Value;
-                        ps.Steps = (int)numericUpDown_Steps_Set10.Value;
-                        ps.Goal = (int)numericUpDown_Goal_Set10.Value;
-                        ps.Bluetooth = check_BoxBluetooth_Set10.Checked;
-                        ps.Alarm = checkBox_Alarm_Set10.Checked;
-                        ps.Unlocked = checkBox_Lock_Set10.Checked;
-                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set10.Checked;
-
-                        if (numericUpDown_Calories_Set10.Value != 1234)
-                        {
-                            Array.Resize(ref objson, objson.Length + 1);
-                            objson[count] = ps;
-                            count++;
-                        }
-                        break;
-                }
-            }
-
-            string string_json_temp = JsonConvert.SerializeObject(objson, Formatting.None, new JsonSerializerSettings
-            {
-                //DefaultValueHandling = DefaultValueHandling.Ignore,
-                NullValueHandling = NullValueHandling.Ignore
-            });
-            var objsontemp = JsonConvert.DeserializeObject<object[]>(string_json_temp);
-
-            string formatted = JsonConvert.SerializeObject(objsontemp, Formatting.Indented);
-            richTextBox_JsonText.Text = formatted;
-
-
-            if (formatted.Length < 10)
-            {
-                MessageBox.Show(Properties.FormStrings.Message_SaveOnly1234_Text);
-                return;
-            }
-            //text = text.Replace(@"\", "");
-            //text = text.Replace("\"{", "{");
-            //text = text.Replace("}\"", "}");
-            //text = text.Replace(",", ",\r\n");
-            //text = text.Replace(":", ": ");
-            //text = text.Replace(": {", ": {\r\n");
-            //string formatted = JsonConvert.SerializeObject(text, Formatting.Indented);
-
-            
-
-
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             //openFileDialog.InitialDirectory = subPath;
-            saveFileDialog.Filter = Properties.FormStrings.FilterJson;
-            saveFileDialog.FileName = "PreviewStates.json";
-            //openFileDialog.Filter = "Json files (*.json) | *.json";
+            //saveFileDialog.Filter = Properties.FormStrings.FilterJson;
+            saveFileDialog.FileName = "Preview.States";
+            saveFileDialog.Filter = "PreviewStates file | *.States";
             saveFileDialog.RestoreDirectory = true;
             saveFileDialog.Title = Properties.FormStrings.Dialog_Title_PreviewStates;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
+                object[] objson = new object[] { };
+                int count = 0;
+                for (int i = 0; i < 13; i++)
+                {
+                    PREWIEV_STATES_Json ps = new PREWIEV_STATES_Json();
+                    ps.Time = new TimePreview();
+                    switch (i)
+                    {
+                        case 0:
+                            ps.Time.Year = dateTimePicker_Date_Set1.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set1.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set1.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set1.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set1.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set1.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set1.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set1.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set1.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set1.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set1.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set1.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set1.Checked;
+                            ps.Alarm = checkBox_Alarm_Set1.Checked;
+                            ps.Unlocked = checkBox_Lock_Set1.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set1.Checked;
+
+                            if (numericUpDown_Calories_Set1.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 1:
+                            ps.Time.Year = dateTimePicker_Date_Set2.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set2.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set2.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set2.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set2.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set2.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set2.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set2.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set2.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set2.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set2.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set2.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set2.Checked;
+                            ps.Alarm = checkBox_Alarm_Set2.Checked;
+                            ps.Unlocked = checkBox_Lock_Set2.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set2.Checked;
+
+                            if (numericUpDown_Calories_Set2.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 2:
+                            ps.Time.Year = dateTimePicker_Date_Set3.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set3.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set3.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set3.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set3.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set3.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set3.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set3.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set3.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set3.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set3.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set3.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set3.Checked;
+                            ps.Alarm = checkBox_Alarm_Set3.Checked;
+                            ps.Unlocked = checkBox_Lock_Set3.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set3.Checked;
+
+                            if (numericUpDown_Calories_Set3.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 3:
+                            ps.Time.Year = dateTimePicker_Date_Set4.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set4.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set4.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set4.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set4.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set4.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set4.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set4.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set4.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set4.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set4.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set4.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set4.Checked;
+                            ps.Alarm = checkBox_Alarm_Set4.Checked;
+                            ps.Unlocked = checkBox_Lock_Set4.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set4.Checked;
+
+                            if (numericUpDown_Calories_Set4.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 4:
+                            ps.Time.Year = dateTimePicker_Date_Set5.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set5.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set5.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set5.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set5.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set5.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set5.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set5.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set5.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set5.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set5.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set5.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set5.Checked;
+                            ps.Alarm = checkBox_Alarm_Set5.Checked;
+                            ps.Unlocked = checkBox_Lock_Set5.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set5.Checked;
+
+                            if (numericUpDown_Calories_Set5.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 5:
+                            ps.Time.Year = dateTimePicker_Date_Set6.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set6.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set6.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set6.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set6.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set6.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set6.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set6.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set6.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set6.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set6.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set6.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set6.Checked;
+                            ps.Alarm = checkBox_Alarm_Set6.Checked;
+                            ps.Unlocked = checkBox_Lock_Set6.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set6.Checked;
+
+                            if (numericUpDown_Calories_Set6.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 6:
+                            ps.Time.Year = dateTimePicker_Date_Set7.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set7.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set7.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set7.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set7.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set7.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set7.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set7.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set7.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set7.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set7.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set7.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set7.Checked;
+                            ps.Alarm = checkBox_Alarm_Set7.Checked;
+                            ps.Unlocked = checkBox_Lock_Set7.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set7.Checked;
+
+                            if (numericUpDown_Calories_Set7.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 7:
+                            ps.Time.Year = dateTimePicker_Date_Set8.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set8.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set8.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set8.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set8.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set8.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set8.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set8.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set8.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set8.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set8.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set8.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set8.Checked;
+                            ps.Alarm = checkBox_Alarm_Set8.Checked;
+                            ps.Unlocked = checkBox_Lock_Set8.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set8.Checked;
+
+                            if (numericUpDown_Calories_Set8.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 8:
+                            ps.Time.Year = dateTimePicker_Date_Set9.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set9.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set9.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set9.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set9.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set9.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set9.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set9.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set9.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set9.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set9.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set9.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set9.Checked;
+                            ps.Alarm = checkBox_Alarm_Set9.Checked;
+                            ps.Unlocked = checkBox_Lock_Set9.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set9.Checked;
+
+                            if (numericUpDown_Calories_Set9.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                        case 9:
+                            ps.Time.Year = dateTimePicker_Date_Set10.Value.Year;
+                            ps.Time.Month = dateTimePicker_Date_Set10.Value.Month;
+                            ps.Time.Day = dateTimePicker_Date_Set10.Value.Day;
+                            ps.Time.Hour = dateTimePicker_Time_Set10.Value.Hour;
+                            ps.Time.Minute = dateTimePicker_Time_Set10.Value.Minute;
+                            ps.Time.Second = dateTimePicker_Time_Set10.Value.Second;
+                            ps.BatteryLevel = (int)numericUpDown_Battery_Set10.Value;
+                            ps.Calories = (int)numericUpDown_Calories_Set10.Value;
+                            ps.Pulse = (int)numericUpDown_Pulse_Set10.Value;
+                            ps.Distance = (int)numericUpDown_Distance_Set10.Value;
+                            ps.Steps = (int)numericUpDown_Steps_Set10.Value;
+                            ps.Goal = (int)numericUpDown_Goal_Set10.Value;
+                            ps.Bluetooth = check_BoxBluetooth_Set10.Checked;
+                            ps.Alarm = checkBox_Alarm_Set10.Checked;
+                            ps.Unlocked = checkBox_Lock_Set10.Checked;
+                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set10.Checked;
+
+                            if (numericUpDown_Calories_Set10.Value != 1234)
+                            {
+                                Array.Resize(ref objson, objson.Length + 1);
+                                objson[count] = ps;
+                                count++;
+                            }
+                            break;
+                    }
+                }
+
+                string string_json_temp = JsonConvert.SerializeObject(objson, Formatting.None, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                var objsontemp = JsonConvert.DeserializeObject<object[]>(string_json_temp);
+
+                string formatted = JsonConvert.SerializeObject(objsontemp, Formatting.Indented);
+                //richTextBox_JsonText.Text = formatted;
+
+
+                if (formatted.Length < 10)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_SaveOnly1234_Text);
+                    return;
+                }
+                //text = text.Replace(@"\", "");
+                //text = text.Replace("\"{", "{");
+                //text = text.Replace("}\"", "}");
+                //text = text.Replace(",", ",\r\n");
+                //text = text.Replace(":", ": ");
+                //text = text.Replace(": {", ": {\r\n");
+                //string formatted = JsonConvert.SerializeObject(text, Formatting.Indented);
+
                 string fullfilename = saveFileDialog.FileName;
-                richTextBox_JsonText.Text = formatted;
+                //richTextBox_JsonText.Text = formatted;
                 File.WriteAllText(fullfilename, formatted, Encoding.UTF8);
             }
         }
@@ -6590,9 +6606,19 @@ namespace AmazFit_Watchface_2
                 var obj = (JObject)token;
                 foreach (var property in obj.Properties())
                 {
-                    var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name))];
-                    childNode.Tag = property;
-                    AddNode(property.Value, childNode);
+                    //var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name + "*+*"))];
+                    //childNode.Tag = property;
+                    if (property.Value is JValue)
+                    {
+                        var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name + ":" + property.Value.ToString()))];
+                        childNode.Tag = property;
+                    }
+                    else
+                    {
+                        var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name))];
+                        childNode.Tag = property;
+                        AddNode(property.Value, childNode); 
+                    }
                 }
             }
             else if (token is JArray)
@@ -6611,6 +6637,7 @@ namespace AmazFit_Watchface_2
             }
 
         }
+        #endregion
 
         private void comboBox_color_Click(object sender, EventArgs e)
         {
@@ -6672,6 +6699,19 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        private void checkBox_Weather_followMax_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = !checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count-1; i++)
+            {
+                if (i == 4 || i == 5 || i == 13 || i == 20 || i == 21) controlCollection[i].Enabled = b;
+            }
+        }
+
         private void checkBox_SaveID_CheckedChanged(object sender, EventArgs e)
         {
             if (Settings_Load) return;
@@ -6711,12 +6751,181 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        private void checkBox_pictures_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+        private void checkBox_pictures_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_text_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+        private void checkBox_text_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+        private void checkBox_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_scaleCircle_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+        private void checkBox_scaleCircle_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+
+        private void checkBox_scaleLinear_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+        private void checkBox_scaleLinear_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            RadioButton radioButton = (RadioButton)controlCollection[1];
+            bool bImage = radioButton.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = bImage;
+                    if (i == 4) controlCollection[i].Enabled = !bImage;
+                }
+            }
+        }
+
+        private void radioButton_image_color_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            Control control = radioButton.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = radioButton.Checked;
+            controlCollection[3].Enabled = b;
+            controlCollection[4].Enabled = !b;
+
+            JSON_write();
+            PreviewImage();
+        }
 
 
 
 
 
-        #endregion
+
+
+
+
 
         //private int getOSversion()
         //{

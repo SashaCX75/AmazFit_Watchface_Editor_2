@@ -6122,6 +6122,8 @@ namespace AmazFit_Watchface_2
             comboBox_Distance_scaleLinear_image_background.Items.Clear();
             comboBox_Distance_scaleLinear_image_background.Text = "";
 
+
+
             comboBox_Weather_pictures_image.Items.Clear();
             comboBox_Weather_pictures_image.Text = "";
 
@@ -6360,7 +6362,6 @@ namespace AmazFit_Watchface_2
                     case 65:
                         radioButton_GTS2.Checked = true;
                         break;
-                    case 52:
                     default:
                         return;
                 }

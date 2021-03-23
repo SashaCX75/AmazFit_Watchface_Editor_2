@@ -1672,7 +1672,7 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            // пульс линейной шкалой
+            // погода линейной шкалой
             checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
             if (checkBox_Use.Checked)
             {
