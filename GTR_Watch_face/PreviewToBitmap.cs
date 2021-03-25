@@ -980,7 +980,8 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
                     //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
-                    int offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
+                    //int offSet = (int)((count - 1f) * (Watch_Face_Preview_Set.Activity.HeartRate - 70) / 100f);
+                    int offSet = (int)(count * (Watch_Face_Preview_Set.Activity.HeartRate - 70) / 100f);
                     //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
@@ -3902,10 +3903,12 @@ namespace AmazFit_Watchface_2
                     break;
             }
 
-            int srcX = (int)Math.Round(x - radius - width / 2, MidpointRounding.AwayFromZero);
-            int srcY = (int)Math.Round(y - radius - width / 2, MidpointRounding.AwayFromZero);
-            int arcX = (int)Math.Round(x - radius, MidpointRounding.AwayFromZero);
-            int arcY = (int)Math.Round(y - radius, MidpointRounding.AwayFromZero);
+            //int srcX = (int)Math.Round(x - radius - width / 2, MidpointRounding.AwayFromZero);
+            //int srcY = (int)Math.Round(y - radius - width / 2, MidpointRounding.AwayFromZero);
+            int srcX = (int)(x - radius - width / 2);
+            int srcY = (int)(y - radius - width / 2);
+            int arcX = (int)(x - radius);
+            int arcY = (int)(y - radius);
             float CircleWidth = 2 * radius ;
 
             if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
@@ -3916,7 +3919,11 @@ namespace AmazFit_Watchface_2
 
             try
             {
-                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, valueAngle);
+                //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, valueAngle);
+                int s = Math.Sign(valueAngle);
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
+                //TODO исправить отрисовку при большой толщине
             }
             catch (Exception)
             {
@@ -3937,19 +3944,25 @@ namespace AmazFit_Watchface_2
                 graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
                 myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
                 pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                int s = Math.Sign(valueAngle);
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
 
                 // подсвечивание внешней и внутреней дуги на шкале
-                float w2 = width / 2f;
                 using (Pen pen1 = new Pen(Color.White, 1))
                 {
                     graphics.DrawArc(pen1, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
-                    graphics.DrawArc(pen1, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                    int ArcWidth = (int)(CircleWidth - width);
+                    if (ArcWidth < 1) ArcWidth = 1;
+                    graphics.DrawArc(pen1, srcX + width, srcY + width, ArcWidth, ArcWidth, startAngle, endAngle);
                 }
                 using (Pen pen2 = new Pen(Color.Black, 1))
                 {
                     graphics.DrawArc(pen2, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
-                    graphics.DrawArc(pen2, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                    int ArcWidth = (int)(CircleWidth - width);
+                    if (ArcWidth < 1) ArcWidth = 1;
+                    graphics.DrawArc(pen2, srcX + width, srcY + width, ArcWidth, ArcWidth, startAngle, endAngle);
                 }
             }
             Logger.WriteLine("* DrawScaleCircle_image (end)");
@@ -3998,10 +4011,12 @@ namespace AmazFit_Watchface_2
                     pen.StartCap = LineCap.Round;
                     break;
             }
-            int srcX = (int)Math.Round(x - radius - width / 2, MidpointRounding.AwayFromZero);
-            int srcY = (int)Math.Round(y - radius - width / 2, MidpointRounding.AwayFromZero);
-            int arcX = (int)Math.Round(x - radius, MidpointRounding.AwayFromZero);
-            int arcY = (int)Math.Round(y - radius, MidpointRounding.AwayFromZero);
+            //int srcX = (int)Math.Round(x - radius - width / 2, MidpointRounding.AwayFromZero);
+            //int srcY = (int)Math.Round(y - radius - width / 2, MidpointRounding.AwayFromZero);
+            int srcX = (int)(x - radius - width / 2);
+            int srcY = (int)(y - radius - width / 2);
+            int arcX = (int)(x - radius);
+            int arcY = (int)(y - radius);
             float CircleWidth = 2 * radius;
 
             if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
@@ -4022,10 +4037,15 @@ namespace AmazFit_Watchface_2
                 pen = new Pen(Color.Black, width);
                 //pen.Width = width;
                 //pen.Color = Color.Black;
-                gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth, 
-                    startAngle, valueAngle);
 
-             
+                //gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth, 
+                //    startAngle, valueAngle);
+
+                int s = Math.Sign(valueAngle);
+                graphics.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
+
+
                 //src = ApplyAlfaMask(src, mask);
                 src = ApplyMask(src, mask);
                 //src = mask;
@@ -4047,19 +4067,25 @@ namespace AmazFit_Watchface_2
                 graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
                 myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
                 pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                int s = Math.Sign(valueAngle);
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
 
                 // подсвечивание внешней и внутреней дуги на шкале
-                float w2 = width / 2f;
                 using (Pen pen1 = new Pen(Color.White, 1))
                 {
                     graphics.DrawArc(pen1, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
-                    graphics.DrawArc(pen1, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                    int ArcWidth = (int)(CircleWidth - width);
+                    if (ArcWidth < 1) ArcWidth = 1;
+                    graphics.DrawArc(pen1, srcX + width, srcY + width, ArcWidth, ArcWidth, startAngle, endAngle);
                 }
                 using (Pen pen2 = new Pen(Color.Black, 1))
                 {
                     graphics.DrawArc(pen2, srcX, srcY, CircleWidth + width, CircleWidth + width, startAngle, endAngle);
-                    graphics.DrawArc(pen2, srcX + width, srcY + width, CircleWidth - width, CircleWidth - width, startAngle, endAngle);
+                    int ArcWidth = (int)(CircleWidth - width);
+                    if (ArcWidth < 1) ArcWidth = 1;
+                    graphics.DrawArc(pen2, srcX + width, srcY + width, ArcWidth, ArcWidth, startAngle, endAngle);
                 }
             }
             src.Dispose();

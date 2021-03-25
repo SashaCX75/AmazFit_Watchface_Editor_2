@@ -971,7 +971,8 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
                     //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
-                    int offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.HeartRate / 200f);
+                    //int offSet = (int)((count - 1f) * (Watch_Face_Preview_Set.Activity.HeartRate - 70) / 100f);
+                    int offSet = (int)(count * (Watch_Face_Preview_Set.Activity.HeartRate - 70) / 100f);
                     //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
