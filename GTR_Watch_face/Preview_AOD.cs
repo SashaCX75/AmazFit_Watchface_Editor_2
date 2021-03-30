@@ -30,6 +30,14 @@ namespace AmazFit_Watchface_2
             bool showCentrHend)
 
         {
+            if (Watch_Face.ScreenIdle == null)
+            {
+                Preview_AOD_WithoutScreenIdle(gPanel, scale, crop, WMesh, BMesh, BBorder,
+            showShortcuts, showShortcutsArea, showShortcutsBorder, showAnimation, showProgressArea,
+            showCentrHend);
+                return;
+            }
+
             Logger.WriteLine("* Preview_AOD");
             var src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
@@ -2125,6 +2133,247 @@ namespace AmazFit_Watchface_2
 
             FormText();
             Logger.WriteLine("* Preview_AOD (end)");
+        }
+
+        /// <summary>формируем изображение на панедли Graphics</summary>
+        /// <param name="gPanel">Поверхность для рисования</param>
+        /// <param name="scale">Масштаб прорисовки</param>
+        /// <param name="crop">Обрезать по форме экрана</param>
+        /// <param name="WMesh">Рисовать белую сетку</param>
+        /// <param name="BMesh">Рисовать черную сетку</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        /// <param name="showShortcuts">Подсвечивать область ярлыков</param>
+        /// <param name="showShortcutsArea">Подсвечивать область ярлыков рамкой</param>
+        /// <param name="showShortcutsBorder">Подсвечивать область ярлыков заливкой</param>
+        /// <param name="showAnimation">Показывать анимацию при предпросмотре</param>
+        /// <param name="showProgressArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
+        /// <param name="showCentrHend">Подсвечивать центр стрелки</param>
+        /// 2 - если отрисовка только после анимации, в остальных случаях полная отрисовка</param>
+        public void Preview_AOD_WithoutScreenIdle(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder,
+            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showProgressArea,
+            bool showCentrHend)
+        {
+            Logger.WriteLine("* Preview_AOD_WithoutScreenIdle");
+            var src = new Bitmap(1, 1);
+            gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
+            int i;
+
+            #region Black background
+            Logger.WriteLine("PreviewToBitmap (Black background)");
+            src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+            if (radioButton_GTS2.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts_2.png");
+            }
+            offSet_X = src.Width / 2;
+            offSet_Y = src.Height / 2;
+            gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
+            //src.Dispose();
+            #endregion
+
+            #region цифровое время
+            int time_offsetX = -1;
+            int time_offsetY = -1;
+            bool _pm = false;
+            // часы
+            if (checkBox_Hour_Use.Checked && comboBox_Hour_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Hour_image.SelectedIndex;
+                int x = (int)numericUpDown_HourX.Value;
+                int y = (int)numericUpDown_HourY.Value;
+                time_offsetY = y;
+                int spasing = (int)numericUpDown_Hour_spacing.Value;
+                int alignment = comboBox_Hour_alignment.SelectedIndex;
+                bool addZero = checkBox_Hour_add_zero.Checked;
+                //addZero = true;
+                int value = Watch_Face_Preview_Set.Time.Hours;
+                int separator_index = -1;
+                if (comboBox_Hour_separator.SelectedIndex >= 0) separator_index = comboBox_Hour_separator.SelectedIndex;
+
+                if (checkBox_12h_Use.Checked && Program_Settings.ShowIn12hourFormat)
+                {
+                    if (comboBox_AM_image.SelectedIndex >= 0 && comboBox_PM_image.SelectedIndex >= 0)
+                    {
+                        if (value > 11)
+                        {
+                            _pm = true;
+                            value -= 12;
+                        }
+                        if (value == 0) value = 12;
+                    }
+                }
+                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                if (comboBox_Hour_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Hour_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hour_unitX.Value,
+                        (int)numericUpDown_Hour_unitY.Value, src.Width, src.Height));
+                }
+            }
+
+            // минуты
+            if (checkBox_Minute_Use.Checked && comboBox_Minute_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Minute_image.SelectedIndex;
+                int x = (int)numericUpDown_MinuteX.Value;
+                int y = (int)numericUpDown_MinuteY.Value;
+                int spasing = (int)numericUpDown_Minute_spacing.Value;
+                int alignment = comboBox_Minute_alignment.SelectedIndex;
+                bool addZero = checkBox_Minute_add_zero.Checked;
+                addZero = true;
+                int value = Watch_Face_Preview_Set.Time.Minutes;
+                int separator_index = -1;
+                if (comboBox_Minute_separator.SelectedIndex >= 0) separator_index = comboBox_Minute_separator.SelectedIndex;
+                if (checkBox_Minute_follow.Checked && time_offsetX > -1)
+                {
+                    x = time_offsetX;
+                    alignment = 0;
+                    y = time_offsetY;
+                }
+                time_offsetY = y;
+                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                if (comboBox_Minute_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Minute_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Minute_unitX.Value,
+                        (int)numericUpDown_Minute_unitY.Value, src.Width, src.Height));
+                }
+            }
+
+            // AM/PM
+            if (checkBox_12h_Use.Checked && Program_Settings.ShowIn12hourFormat)
+            {
+                if (comboBox_AM_image.SelectedIndex >= 0 && comboBox_PM_image.SelectedIndex >= 0)
+                {
+                    if (_pm)
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_PM_image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_PM_X.Value,
+                            (int)numericUpDown_PM_Y.Value, src.Width, src.Height));
+                    }
+                    else
+                    {
+                        src = OpenFileStream(ListImagesFullName[comboBox_AM_image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AM_X.Value,
+                            (int)numericUpDown_AM_Y.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region аналоговое время
+            // часы
+            if (checkBox_Hour_hand_Use.Checked && comboBox_Hour_hand_image.SelectedIndex >= 0)
+            {
+                int x = (int)numericUpDown_Hour_handX.Value;
+                int y = (int)numericUpDown_Hour_handY.Value;
+                int offsetX = (int)numericUpDown_Hour_handX_offset.Value;
+                int offsetY = (int)numericUpDown_Hour_handY_offset.Value;
+                int image_index = comboBox_Hour_hand_image.SelectedIndex;
+                int hour = Watch_Face_Preview_Set.Time.Hours;
+                int min = Watch_Face_Preview_Set.Time.Minutes;
+                //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
+                if (hour >= 12) hour = hour - 12;
+                float angle = 360 * hour / 12 + 360 * min / (60 * 12);
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_Hour_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Hour_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hour_handX_centr.Value,
+                        (int)numericUpDown_Hour_handY_centr.Value, src.Width, src.Height));
+                }
+            }
+
+            // минуты
+            if (checkBox_Minute_hand_Use.Checked && comboBox_Minute_hand_image.SelectedIndex >= 0)
+            {
+                int x = (int)numericUpDown_Minute_handX.Value;
+                int y = (int)numericUpDown_Minute_handY.Value;
+                int offsetX = (int)numericUpDown_Minute_handX_offset.Value;
+                int offsetY = (int)numericUpDown_Minute_handY_offset.Value;
+                int image_index = comboBox_Minute_hand_image.SelectedIndex;
+                int min = Watch_Face_Preview_Set.Time.Minutes;
+                float angle = 360 * min / 60;
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_Minute_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Minute_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Minute_handX_centr.Value,
+                        (int)numericUpDown_Minute_handY_centr.Value, src.Width, src.Height));
+                }
+            }
+            #endregion
+
+
+            #region Mesh
+            Logger.WriteLine("Preview_AOD_WithoutScreenIdle (Mesh)");
+
+            if (WMesh)
+            {
+                Pen pen = new Pen(Color.White, 2);
+                int LineDistance = 30;
+                if (scale >= 1) LineDistance = 15;
+                if (scale >= 2) LineDistance = 10;
+                if (scale >= 2) pen.Width = 1;
+                //if (panel_Preview.Height > 300) LineDistance = 15;
+                //if (panel_Preview.Height > 690) LineDistance = 10;
+                for (i = 0; i < 30; i++)
+                {
+                    gPanel.DrawLine(pen, new Point(offSet_X + i * LineDistance, 0), new Point(offSet_X + i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(offSet_X - i * LineDistance, 0), new Point(offSet_X - i * LineDistance, 454));
+
+                    gPanel.DrawLine(pen, new Point(0, offSet_Y + i * LineDistance), new Point(454, offSet_Y + i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, offSet_Y - i * LineDistance), new Point(454, offSet_Y - i * LineDistance));
+
+                    if (i == 0) pen.Width = pen.Width / 3f;
+                }
+            }
+
+            if (BMesh)
+            {
+                Pen pen = new Pen(Color.Black, 2);
+                int LineDistance = 30;
+                if (scale >= 1) LineDistance = 15;
+                if (scale >= 2) LineDistance = 10;
+                if (scale >= 2) pen.Width = 1;
+                //if (panel_Preview.Height > 300) LineDistance = 15;
+                //if (panel_Preview.Height > 690) LineDistance = 10;
+                for (i = 0; i < 30; i++)
+                {
+                    gPanel.DrawLine(pen, new Point(offSet_X + i * LineDistance, 0), new Point(offSet_X + i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(offSet_X - i * LineDistance, 0), new Point(offSet_X - i * LineDistance, 454));
+
+                    gPanel.DrawLine(pen, new Point(0, offSet_Y + i * LineDistance), new Point(454, offSet_Y + i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, offSet_Y - i * LineDistance), new Point(454, offSet_Y - i * LineDistance));
+
+                    if (i == 0) pen.Width = pen.Width / 3f;
+                }
+            }
+            #endregion
+            src.Dispose();
+
+            if (crop)
+            {
+                Logger.WriteLine("Preview_AOD (crop)");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+                if (radioButton_GTS2.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+                }
+                mask = FormColor(mask);
+                gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
+                mask.Dispose();
+            }
+
+            FormText();
+            Logger.WriteLine("* Preview_AOD_WithoutScreenIdle (end)");
+
         }
     }
 }

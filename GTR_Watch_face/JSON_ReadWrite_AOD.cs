@@ -541,12 +541,13 @@ namespace AmazFit_Watchface_2
                 // день недели картинкой
                 if (Watch_Face.ScreenIdle.Date.WeeksDigits != null)
                 {
-                    checkBox_DOW_pictures_Use_AOD.Checked = true;
-                    if (Watch_Face.ScreenIdle.Date.WeeksDigits.Digit != null &&
-                        Watch_Face.ScreenIdle.Date.WeeksDigits.Digit.DisplayFormAnalog)
+                    if (Watch_Face.ScreenIdle.Date.WeeksDigits.Digit != null)
+                    //if (Watch_Face.ScreenIdle.Date.WeeksDigits.Digit != null &&
+                    //Watch_Face.ScreenIdle.Date.WeeksDigits.Digit.DisplayFormAnalog)
                     {
                         if (Watch_Face.ScreenIdle.Date.WeeksDigits.Digit.Image != null)
                         {
+                            checkBox_DOW_pictures_Use_AOD.Checked = true;
                             numericUpDown_DOW_picturesX_AOD.Value = Watch_Face.ScreenIdle.Date.WeeksDigits.Digit.Image.X;
                             numericUpDown_DOW_picturesY_AOD.Value = Watch_Face.ScreenIdle.Date.WeeksDigits.Digit.Image.Y;
                             foreach (MultilangImage multilangImage in Watch_Face.ScreenIdle.Date.WeeksDigits.Digit.Image.MultilangImage)
@@ -1013,7 +1014,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalTimeDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Hour_alignment_AOD.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Hour_alignment_AOD.SelectedIndex);
                 digitalTimeDigit.Digit.Alignment = Alignment;
                 digitalTimeDigit.Digit.Spacing = (long)numericUpDown_Hour_spacing_AOD.Value;
                 digitalTimeDigit.Digit.PaddingZero = checkBox_Hour_add_zero_AOD.Checked;
@@ -1065,7 +1066,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalTimeDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Minute_alignment_AOD.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Minute_alignment_AOD.SelectedIndex);
                 digitalTimeDigit.Digit.Alignment = Alignment;
                 digitalTimeDigit.Digit.Spacing = (long)numericUpDown_Minute_spacing_AOD.Value;
                 digitalTimeDigit.Digit.PaddingZero = checkBox_Minute_add_zero_AOD.Checked;
@@ -1269,7 +1270,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Year_alignment_AOD.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Year_alignment_AOD.SelectedIndex);
                 digitalDateDigit.Digit.Alignment = Alignment;
                 digitalDateDigit.Digit.Spacing = (long)numericUpDown_Year_spacing_AOD.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Year_add_zero.Checked ? 1 : 0;
@@ -1319,7 +1320,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Month_alignment_AOD.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Month_alignment_AOD.SelectedIndex);
                 digitalDateDigit.Digit.Alignment = Alignment;
                 digitalDateDigit.Digit.Spacing = (long)numericUpDown_Month_spacing_AOD.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Month_add_zero.Checked ? 1 : 0;
@@ -1440,7 +1441,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Day_alignment_AOD.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Day_alignment_AOD.SelectedIndex);
                 digitalDateDigit.Digit.Alignment = Alignment;
                 digitalDateDigit.Digit.Spacing = (long)numericUpDown_Day_spacing_AOD.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Day_add_zero.Checked ? 1 : 0;
@@ -1591,7 +1592,7 @@ namespace AmazFit_Watchface_2
             Panel panel_text_min = panel_Weather_textMin_AOD;
             Panel panel_text_max = panel_Weather_textMax_AOD;
 
-            AddActivityWeather(panel_pictures, panel_text, panel_text_min, panel_text_max, panel_hand, panel_scaleCircle, panel_scaleLinear);
+            AddActivityWeather_AOD(ScreenIdle, panel_pictures, panel_text, panel_text_min, panel_text_max, panel_hand, panel_scaleCircle, panel_scaleLinear);
 
             #endregion
 
@@ -1656,7 +1657,7 @@ namespace AmazFit_Watchface_2
                     DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
                     digitalCommonDigit.CombingMode = "Single";
                     digitalCommonDigit.Digit = new Text();
-                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
                     digitalCommonDigit.Digit.Alignment = Alignment;
                     digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
                     digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
@@ -1888,6 +1889,434 @@ namespace AmazFit_Watchface_2
             if (activity != null)
             {
                 activity.Type = type;
+                if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
+                ScreenIdle.Activity.Add(activity);
+            }
+        }
+
+
+        private void AddActivityWeather_AOD(ScreenIdle ScreenIdle, Panel panel_pictures, Panel panel_text, Panel panel_text_min, Panel panel_text_max, Panel panel_hand, Panel panel_scaleCircle, Panel panel_scaleLinear)
+        {
+            Activity activity = null;
+            CheckBox checkBox_Use;
+
+            // данные картинками
+            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+
+                    if (activity == null) activity = new Activity();
+                    activity.ImageProgress = new ImageProgress();
+                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activity.ImageProgress.Coordinates = new List<Coordinates>();
+                    activity.ImageProgress.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    activity.ImageProgress.ImageSet.ImagesCount = 29;
+                    //activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    Coordinates coordinates = new Coordinates();
+                    coordinates.X = (long)numericUpDownX.Value;
+                    coordinates.Y = (long)numericUpDownY.Value;
+                    activity.ImageProgress.Coordinates.Add(coordinates);
+                }
+            }
+
+            // данные надписью
+            checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    ComboBox comboBox_separatorF = (ComboBox)panel_text.Controls[3];
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
+                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
+                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
+                    ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
+                    //CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                    ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                    ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (comboBox_imageError.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = Int32.Parse(comboBox_imageError.Text);
+
+                    if (comboBox_imageMinus.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = Int32.Parse(comboBox_imageMinus.Text);
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (comboBox_separatorF.SelectedIndex >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_separatorF.Text);
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = Int32.Parse(comboBox_unit.Text);
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью min temperature
+            checkBox_Use = (CheckBox)panel_text_min.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text_min.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    ComboBox comboBox_unit = (ComboBox)panel_text_min.Controls[2];
+                    ComboBox comboBox_separatorF = (ComboBox)panel_text_min.Controls[3];
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text_min.Controls[4];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text_min.Controls[5];
+                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_min.Controls[6];
+                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_min.Controls[7];
+                    ComboBox comboBox_alignment = (ComboBox)panel_text_min.Controls[8];
+                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_min.Controls[9];
+                    //CheckBox checkBox_add_zero = (CheckBox)panel_text_min.Controls[10];
+                    ComboBox comboBox_imageError = (ComboBox)panel_text_min.Controls[10];
+                    ComboBox comboBox_imageMinus = (ComboBox)panel_text_min.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Min";
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (comboBox_imageError.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = Int32.Parse(comboBox_imageError.Text);
+
+                    if (comboBox_imageMinus.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = Int32.Parse(comboBox_imageMinus.Text);
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (comboBox_separatorF.SelectedIndex >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_separatorF.Text);
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = Int32.Parse(comboBox_unit.Text);
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью max temperature
+            checkBox_Use = (CheckBox)panel_text_max.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_text_max.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    ComboBox comboBox_unit = (ComboBox)panel_text_max.Controls[2];
+                    ComboBox comboBox_separatorF = (ComboBox)panel_text_max.Controls[3];
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_text_max.Controls[4];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_text_max.Controls[5];
+                    NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_max.Controls[6];
+                    NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_max.Controls[7];
+                    ComboBox comboBox_alignment = (ComboBox)panel_text_max.Controls[8];
+                    NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_max.Controls[9];
+                    //CheckBox checkBox_add_zero = (CheckBox)panel_text_max.Controls[10];
+                    ComboBox comboBox_imageError = (ComboBox)panel_text_max.Controls[10];
+                    ComboBox comboBox_imageMinus = (ComboBox)panel_text_max.Controls[11];
+                    CheckBox checkBox_follow = (CheckBox)panel_text_max.Controls[12];
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Max";
+                    if (!checkBox_follow.Checked) digitalCommonDigit.CombingMode = "Single";
+                    //digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (comboBox_imageError.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = Int32.Parse(comboBox_imageError.Text);
+
+                    if (comboBox_imageMinus.SelectedIndex >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = Int32.Parse(comboBox_imageMinus.Text);
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (comboBox_separatorF.SelectedIndex >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_separatorF.Text);
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (comboBox_unit.SelectedIndex >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = Int32.Parse(comboBox_unit.Text);
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные стрелкой
+            checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                if (comboBox_image.SelectedIndex >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
+                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
+                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
+                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
+                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
+                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
+                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
+                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
+                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
+                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+
+                    if (activity == null) activity = new Activity();
+                    activity.PointerProgress = new ClockHand();
+                    activity.PointerProgress.X = (long)numericUpDownX.Value;
+                    activity.PointerProgress.Y = (long)numericUpDownY.Value;
+                    activity.PointerProgress.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.PointerProgress.EndAngle = (float)numericUpDown_endAngle.Value;
+
+                    activity.PointerProgress.Pointer = new ImageCoord();
+                    activity.PointerProgress.Pointer.ImageIndex = Int32.Parse(comboBox_image.Text);
+                    activity.PointerProgress.Pointer.Coordinates = new Coordinates();
+                    activity.PointerProgress.Pointer.Coordinates.X = (long)numericUpDown_offsetX.Value;
+                    activity.PointerProgress.Pointer.Coordinates.Y = (long)numericUpDown_offsetY.Value;
+
+                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    {
+                        activity.PointerProgress.Cover = new ImageCoord();
+                        activity.PointerProgress.Cover.ImageIndex = Int32.Parse(comboBox_imageCentr.Text);
+                        activity.PointerProgress.Cover.Coordinates = new Coordinates();
+                        activity.PointerProgress.Cover.Coordinates.X = (long)numericUpDownX_centr.Value;
+                        activity.PointerProgress.Cover.Coordinates.Y = (long)numericUpDownY_centr.Value;
+                    }
+
+                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    {
+                        activity.PointerProgress.Scale = new MultilangImageCoord();
+                        activity.PointerProgress.Scale.Coordinates = new Coordinates();
+                        activity.PointerProgress.Scale.Coordinates.X = (long)numericUpDownX_background.Value;
+                        activity.PointerProgress.Scale.Coordinates.Y = (long)numericUpDownY_background.Value;
+                        activity.PointerProgress.Scale.ImageSet = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_imageBackground.Text);
+                        activity.PointerProgress.Scale.ImageSet.Add(multilangImage);
+                    }
+                }
+            }
+
+            // данные круговой шкалой
+            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
+                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
+                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
+                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+
+                if ((radioButton_image.Checked && comboBox_image.SelectedIndex >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.AngleSettings = new AngleSettings();
+                    if (radioButton_image.Checked && comboBox_image.SelectedIndex >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = Int32.Parse(comboBox_image.Text);
+                    }
+                    else
+                    {
+                        Color color = comboBox_color.BackColor;
+                        Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+                        string colorStr = ColorTranslator.ToHtml(new_color);
+                        colorStr = colorStr.Replace("#", "0xFF");
+                        activity.ProgressBar.Color = colorStr;
+                    }
+
+                    if (comboBox_background.SelectedIndex >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = Int32.Parse(comboBox_background.Text);
+
+                    activity.ProgressBar.AngleSettings.X = (long)numericUpDownX.Value;
+                    activity.ProgressBar.AngleSettings.Y = (long)numericUpDownY.Value;
+                    activity.ProgressBar.AngleSettings.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.ProgressBar.AngleSettings.EndAngle = (float)numericUpDown_endAngle.Value;
+                    activity.ProgressBar.AngleSettings.Radius = (float)numericUpDown_radius.Value;
+
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+
+                    switch (comboBox_flatness.SelectedIndex)
+                    {
+                        case 1:
+                            activity.ProgressBar.Flatness = 90;
+                            break;
+                        case 2:
+                            activity.ProgressBar.Flatness = 180;
+                            break;
+                        default:
+                            activity.ProgressBar.Flatness = 0;
+                            break;
+                    }
+                }
+            }
+
+            // данные линейной шкалой
+            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (checkBox_Use.Checked)
+            {
+                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
+                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
+                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
+                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
+
+                if ((radioButton_image.Checked && comboBox_image.SelectedIndex >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.LinearSettings = new LinearSettings();
+                    if (radioButton_image.Checked && comboBox_image.SelectedIndex >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = Int32.Parse(comboBox_image.Text);
+                    }
+                    else
+                    {
+                        Color color = comboBox_color.BackColor;
+                        Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+                        string colorStr = ColorTranslator.ToHtml(new_color);
+                        colorStr = colorStr.Replace("#", "0xFF");
+                        activity.ProgressBar.Color = colorStr;
+                    }
+                    if (comboBox_pointer.SelectedIndex >= 0)
+                        activity.ProgressBar.PointerImageIndex = Int32.Parse(comboBox_pointer.Text);
+                    if (comboBox_background.SelectedIndex >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = Int32.Parse(comboBox_background.Text);
+
+                    activity.ProgressBar.LinearSettings.StartX = (long)numericUpDownX.Value;
+                    activity.ProgressBar.LinearSettings.StartY = (long)numericUpDownY.Value;
+                    long endX = (long)(numericUpDownX.Value + numericUpDown_length.Value);
+                    activity.ProgressBar.LinearSettings.EndX = endX;
+                    activity.ProgressBar.LinearSettings.EndY = (long)numericUpDownY.Value;
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                }
+
+            }
+
+            if (activity != null)
+            {
+                activity.Type = "Weather";
                 if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
                 ScreenIdle.Activity.Add(activity);
             }

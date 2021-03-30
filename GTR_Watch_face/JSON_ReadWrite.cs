@@ -633,12 +633,13 @@ namespace AmazFit_Watchface_2
                 // день недели картинкой
                 if (Watch_Face.System.Date.WeeksDigits != null)
                 {
-                    checkBox_DOW_pictures_Use.Checked = true;
-                    if (Watch_Face.System.Date.WeeksDigits.Digit != null && 
-                        Watch_Face.System.Date.WeeksDigits.Digit.DisplayFormAnalog)
+                    if (Watch_Face.System.Date.WeeksDigits.Digit != null)
+                    //if (Watch_Face.System.Date.WeeksDigits.Digit != null &&
+                    //Watch_Face.System.Date.WeeksDigits.Digit.DisplayFormAnalog)
                     {
                         if (Watch_Face.System.Date.WeeksDigits.Digit.Image != null)
                         {
+                            checkBox_DOW_pictures_Use.Checked = true;
                             numericUpDown_DOW_picturesX.Value = Watch_Face.System.Date.WeeksDigits.Digit.Image.X;
                             numericUpDown_DOW_picturesY.Value = Watch_Face.System.Date.WeeksDigits.Digit.Image.Y;
                             foreach (MultilangImage multilangImage in Watch_Face.System.Date.WeeksDigits.Digit.Image.MultilangImage)
@@ -2549,7 +2550,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalTimeDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit); 
                 }
-                string Alignment = StringToAlignment2(comboBox_Hour_alignment.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Hour_alignment.SelectedIndex);
                 digitalTimeDigit.Digit.Alignment = Alignment;
                 digitalTimeDigit.Digit.Spacing = (long)numericUpDown_Hour_spacing.Value;
                 //if (checkBox_Hour_add_zero.Checked) digitalTimeDigit.Digit.PaddingZero = 0;
@@ -2604,7 +2605,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalTimeDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit); 
                 }
-                string Alignment = StringToAlignment2(comboBox_Minute_alignment.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Minute_alignment.SelectedIndex);
                 digitalTimeDigit.Digit.Alignment = Alignment;
                 digitalTimeDigit.Digit.Spacing = (long)numericUpDown_Minute_spacing.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Minute_add_zero.Checked ? 1 : 0;
@@ -2655,7 +2656,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalTimeDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit); 
                 }
-                string Alignment = StringToAlignment2(comboBox_Second_alignment.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Second_alignment.SelectedIndex);
                 digitalTimeDigit.Digit.Alignment = Alignment;
                 digitalTimeDigit.Digit.Spacing = (long)numericUpDown_Second_spacing.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Second_add_zero.Checked ? 1 : 0;
@@ -2890,7 +2891,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Year_alignment.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Year_alignment.SelectedIndex);
                 digitalDateDigit.Digit.Alignment = Alignment;
                 digitalDateDigit.Digit.Spacing = (long)numericUpDown_Year_spacing.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Year_add_zero.Checked ? 1 : 0;
@@ -2941,7 +2942,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Month_alignment.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Month_alignment.SelectedIndex);
                 digitalDateDigit.Digit.Alignment = Alignment;
                 digitalDateDigit.Digit.Spacing = (long)numericUpDown_Month_spacing.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Month_add_zero.Checked ? 1 : 0;
@@ -3065,7 +3066,7 @@ namespace AmazFit_Watchface_2
                     multilangImageUnit.ImageSet.ImagesCount = 1;
                     digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
                 }
-                string Alignment = StringToAlignment2(comboBox_Day_alignment.SelectedIndex);
+                string Alignment = StringToAlignment(comboBox_Day_alignment.SelectedIndex);
                 digitalDateDigit.Digit.Alignment = Alignment;
                 digitalDateDigit.Digit.Spacing = (long)numericUpDown_Day_spacing.Value;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Day_add_zero.Checked ? 1 : 0;
@@ -4795,7 +4796,7 @@ namespace AmazFit_Watchface_2
                     DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
                     digitalCommonDigit.CombingMode = "Single";
                     digitalCommonDigit.Digit = new Text();
-                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
                     digitalCommonDigit.Digit.Alignment = Alignment;
                     //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
                     digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
@@ -4868,7 +4869,7 @@ namespace AmazFit_Watchface_2
                     digitalCommonDigit.Type = "Min";
                     digitalCommonDigit.CombingMode = "Single";
                     digitalCommonDigit.Digit = new Text();
-                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
                     digitalCommonDigit.Digit.Alignment = Alignment;
                     //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
                     digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
@@ -4943,7 +4944,7 @@ namespace AmazFit_Watchface_2
                     if (!checkBox_follow.Checked) digitalCommonDigit.CombingMode = "Single";
                     //digitalCommonDigit.CombingMode = "Single";
                     digitalCommonDigit.Digit = new Text();
-                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
                     digitalCommonDigit.Digit.Alignment = Alignment;
                     //digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
                     digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
@@ -5221,7 +5222,7 @@ namespace AmazFit_Watchface_2
                     DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
                     digitalCommonDigit.CombingMode = "Single";
                     digitalCommonDigit.Digit = new Text();
-                    string Alignment = StringToAlignment2(comboBox_alignment.SelectedIndex);
+                    string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
                     digitalCommonDigit.Digit.Alignment = Alignment;
                     digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
                     digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
@@ -5483,7 +5484,7 @@ namespace AmazFit_Watchface_2
             comboBoxAlignment.SelectedIndex = result;
         }
 
-        private string StringToAlignment2(int Alignment)
+        private string StringToAlignment(int Alignment)
         {
             string result = "Left";
             switch (Alignment)
@@ -5564,6 +5565,9 @@ namespace AmazFit_Watchface_2
 
         private void ComboBoxAddItems()
         {
+            userControl_pictures1.ComboBoxAddItems(ListImages);
+            userControl_pictures1.numericUpDown_pictures_count.Value = 13;
+
             comboBox_Background_image.Items.AddRange(ListImages.ToArray());
             comboBox_Preview_image.Items.AddRange(ListImages.ToArray());
 
@@ -5832,6 +5836,8 @@ namespace AmazFit_Watchface_2
         }
         private void SettingsClear()
         {
+            userControl_pictures1.SettingsClear();
+
             comboBox_Background_image.Items.Clear();
             comboBox_Background_image.Text = "";
             comboBox_Preview_image.Items.Clear();

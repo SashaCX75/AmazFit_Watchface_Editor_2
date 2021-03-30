@@ -25,10 +25,9 @@ namespace AmazFit_Watchface_2
         WATCH_FACE_PREWIEV_TwoDigits Watch_Face_Preview_TwoDigits;
         WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set;
         List<string> ListImages = new List<string>(); // перечень имен файлов с картинками
-        List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
+        public static List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
         public bool PreviewView; // включает прорисовку предпросмотра
         bool Settings_Load; // включать при обновлении настроек для выключения перерисовки
-        bool MotiomAnimation_Update = false; // включать при обновлении параметров анимации
         bool JSON_Modified = false; // JSON файл был изменен
         string FileName; // Запоминает имя для диалогов
         string FullFileDir; // Запоминает папку для диалогов
@@ -4136,25 +4135,28 @@ namespace AmazFit_Watchface_2
 
                     Logger.WriteLine("SaveGIF_AOD");
 
-                    numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
-                    numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
-                    numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
-                    comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
-
-                    //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
-                    int link_AOD = 1;
-                    PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
-                    if (checkBox_crop.Checked)
+                    if (Watch_Face.ScreenIdle != null)
                     {
-                        bitmap = ApplyMask(bitmap, mask);
-                        gPanel = Graphics.FromImage(bitmap);
+                        numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
+                        numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
+                        numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+                        comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+
+                        //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+                        int link_AOD = 1;
+                        PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
+                        if (checkBox_crop.Checked)
+                        {
+                            bitmap = ApplyMask(bitmap, mask);
+                            gPanel = Graphics.FromImage(bitmap);
+                        }
+                        // Add first image and set the animation delay to 100ms
+                        MagickImage item_AOD = new MagickImage(bitmap);
+                        //ExifProfile profile = item.GetExifProfile();
+                        collection.Add(item_AOD);
+                        //collection[collection.Count - 1].AnimationDelay = 100;
+                        collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value); 
                     }
-                    // Add first image and set the animation delay to 100ms
-                    MagickImage item_AOD = new MagickImage(bitmap);
-                    //ExifProfile profile = item.GetExifProfile();
-                    collection.Add(item_AOD);
-                    //collection[collection.Count - 1].AnimationDelay = 100;
-                    collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
 
                     numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
                     numericUpDown_WeatherSet_MaxTemp.Value = WeatherSet_DayTemp;
@@ -5242,7 +5244,7 @@ namespace AmazFit_Watchface_2
                     row.Cells[2].Value = MouseСoordinates.Y;
 
                     // копируем данные в поля для редактирования
-                    MotiomAnimation_Update = true;
+                    //MotiomAnimation_Update = true;
                     int StartCoordinates_X = 0;
                     int StartCoordinates_Y = 0;
                     int EndCoordinates_X = 0;
@@ -5273,7 +5275,7 @@ namespace AmazFit_Watchface_2
                     //    comboBox_MotiomAnimation_Image.Text = "";
                     //}
 
-                    MotiomAnimation_Update = false;
+                    //MotiomAnimation_Update = false;
 
                     PreviewImage();
                     JSON_write();
@@ -5299,7 +5301,7 @@ namespace AmazFit_Watchface_2
                     row.Cells[4].Value = MouseСoordinates.Y;
 
                     // копируем данные в поля для редактирования
-                    MotiomAnimation_Update = true;
+                    //MotiomAnimation_Update = true;
                     int StartCoordinates_X = 0;
                     int StartCoordinates_Y = 0;
                     int EndCoordinates_X = 0;
@@ -5330,7 +5332,7 @@ namespace AmazFit_Watchface_2
                     //    comboBox_MotiomAnimation_Image.Text = "";
                     //}
 
-                    MotiomAnimation_Update = false;
+                    //MotiomAnimation_Update = false;
 
                     PreviewImage();
                     JSON_write();

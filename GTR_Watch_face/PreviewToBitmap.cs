@@ -3941,13 +3941,15 @@ namespace AmazFit_Watchface_2
                 // подсвечивание шкалы заливкой
                 HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
                 pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                int s = Math.Sign(endAngle);
+                //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
                 myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
                 pen.Brush = myHatchBrush;
                 //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
-                int s = Math.Sign(valueAngle);
                 graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
-                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
 
                 // подсвечивание внешней и внутреней дуги на шкале
                 using (Pen pen1 = new Pen(Color.White, 1))
@@ -4038,11 +4040,11 @@ namespace AmazFit_Watchface_2
                 //pen.Width = width;
                 //pen.Color = Color.Black;
 
-                //gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth, 
+                //gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth,
                 //    startAngle, valueAngle);
 
                 int s = Math.Sign(valueAngle);
-                graphics.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth,
+                gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth,
                     (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
 
 
@@ -4064,13 +4066,15 @@ namespace AmazFit_Watchface_2
                 // подсвечивание шкалы заливкой
                 HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
                 pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                int s = Math.Sign(endAngle);
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
                 myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
                 pen.Brush = myHatchBrush;
                 //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
-                int s = Math.Sign(valueAngle);
                 graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
-                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
 
                 // подсвечивание внешней и внутреней дуги на шкале
                 using (Pen pen1 = new Pen(Color.White, 1))
@@ -4770,6 +4774,13 @@ namespace AmazFit_Watchface_2
                 while (data_numberS.IndexOf(decimalSeparator) > data_numberS.Length - decCount - 1)
                 {
                     data_numberS = data_numberS + "0";
+                }
+            }
+            if (addZero)
+            {
+                while (data_numberS.Length <= value_lenght)
+                {
+                    data_numberS = "0" + data_numberS;
                 }
             }
             int DateLenghtReal = 0;

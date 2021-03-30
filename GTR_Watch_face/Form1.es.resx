@@ -117,108 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="tabPage_Background.Text" xml:space="preserve">
-    <value>Fondo</value>
-  </data>
-  <data name="tabPage_Time.Text" xml:space="preserve">
-    <value>Hora</value>
-  </data>
-  <data name="tabPage_Date.Text" xml:space="preserve">
-    <value>Fecha</value>
-  </data>
-  <data name="tabPage_Activity.Text" xml:space="preserve">
-    <value>Actividad</value>
-  </data>
-  <data name="tabPage_Air.Text" xml:space="preserve">
-    <value>Tiempo</value>
-  </data>
-  <data name="tabPage_System.Text" xml:space="preserve">
-    <value>Sistema</value>
-  </data>
-  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
-        DQAAAk1TRnQBSQFMAgEBBgEAAWwBCAFwAQgBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
-        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
-        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
-        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
-        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
-        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
-        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
-        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
-        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
-        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
-        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
-        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
-        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
-        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
-        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
-        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
-        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
-        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
-        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
-        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
-        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
-        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
-        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
-        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
-        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
-        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
-        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
-        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
-        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wkAAf8BDgH/OwABbQIA
-        ARQBBwEAAW0JAAEOAgAB8gEOAfAqAAEOAesEAAEQARMEAAHyAfEBAAH0AwAB7AEUAQAB8SgAARMIDgH3
-        AgAB8QIAARMBDgEQAgAB7AEAAREB/ycAAQ8BDgfsAW0BAAETAQABEQFDAf8BEQHsAf8CAAH0Af8BDgHx
-        JAAB/wwAAf8CAAH/AQAB8QMAAf8pAAFDAQ4CAAG8DAABDgHwAQABbQkAAQ4iAAEPAewBQwEAAQ4HAAHy
-        AQABDgEAAQ4BAAHxAQAB/wEAAfACAAH0AgABFSUAAW0GAAHvAQ4BDwEAAe0EAAFtARQEAAH/AgAB/yIA
-        AhABkgQAAbwDAAEOARABbQH0AgABDgHqAQAB7wEOAgAB/wIAAf8BDwEAAQ4hAAJtAbwDAAHvAQABEgGS
-        AQ4GAAHyAQAB9AEAAg4BFAEAAW0BAAHrAQ8B9CUAAg4B7AEOAe0BDwEOARIHAAEOAe8CAAHvAW0B8QIA
-        ARABEiQAAf8BAAH3ARMBDgJtAQ4IAAFtAQ4BAAHvAfQDAAG8AfAB/wEAAfEjAAJDBQABDgFtBwAB7AEA
-        AQ8BDgEAARIBAAIOAQABQwEAAfI0AAHsAeoBAAHzAQ4DAAH/AREB8SgAAewSAAEOOwABBwFtAUMCDwFD
-        AW0BBwQAAfESAAEQAQAB8AMAAfQCDgH/CwAB/wkAAfMBbQHqAbwE/wG8AeoBbQHzAwAB9xEAAQ8BkgEO
-        Af8CAAEPAe8BDgH/BAAB/wgAAf8GAAHzARIB7wH/AfAB7AIVAewB8AH/Ae8BEgHzAgAB7wQAAQcBAAEV
-        CgAB8gEOAe0BEAEAAewBQwHsARQFAAL/BwAC/wUAAW0B7wHyARIEEAIPARIB8gHvAW0CAAHvEgAB7AEV
-        AQ8B7wEOAfMBDgH/BgAC/wcAAv8DAAEHAeoB/wESBBABDwEOAewBDwETAf8B6gEHAQAB7wUAAQcBAAHv
-        CwABDgEHAQAB9wERAfcIAAL/BwAC/wIAAW0CvAEPAxABDwEOAewBAAHsAQ8CvAFtAQAB7xMAAREBbQEQ
-        AQcBDwoAAv8HAAL/AQABQwH/AesBDwIQAQ8BDgHsAQAB7AIPAesB/wFDAQAB7wYAAQcBAAH0CAAB7AEA
-        ARIBAAH0AQ4B8wEAAfIB7wgAAv8HAAH/AQABDgH/ARAEDwHsAQAB7AMPARAB/wEOAQAB7wgAARAIAAHq
-        AhEBEAEAAQ4B7QIOAQAB8wgAAv8IAAEOAf8BEAMPAQ4BAAEQBA8BEAH/AQ4BAAHvBAAE8gHzCAAB7wFD
-        Ag4BAAEQAQ4BEQEOAW0KAAL/BwABEQH/AW0BDgIPAQ4BAAEVAw8BDgFtAf8BEQEAAe8RAAH0AQ4BDwIA
-        AW0BDgESDQAC/wYAAW0CvAIOAQ8BDgEAAewCDwIOArwBbRQAARQBEQFtAf8BvAEAAf8GAAH/AQAB/wUA
-        Av8FAAEHAeoB/wEUAw4B7AEVAw4BFAH/AeoBBxUAAesBDgHvAhMIAAH/BwAC/wUAAW0B7wHyARUGDgEV
-        AfIB7wFtBAAB6gH0AZIFAAL/CQABBwEQAQABbQgAAv8BAAH/BQAC/wQAAfMBEwHvAf8BvAFtAg8BbQG8
-        Af8B7wETAfMBAAHsAgAB9AYAAQ8BQwHtCgABDgHvARUBbQgAAv8HAAL/BAAB8wFtARIBvAT/AbwBEgFt
-        AfMDAAHwAfcB/wIABPcB7wFDAe0C9wH/BwABDgEAAQcBERkAAQcBbQEQAg4BEAFtAQcIAAEOBgAB9wHw
-        CgAB6gIOAfEFAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQAB/wEfAf8FAAH9
-        AZcB/AEOBAAB/AHzAckBBgQAAfgBAQGBAQYEAAHwAQABgQEGBAABtwH8AY4FAAGTAf4ByAUAAcEB/AER
-        ASEEAAHlAeABcwGZBAABDAHhARMBIQQAAQwBDwGIASMEAAHgAR8BzAFnBAABgAF/AZMBgwQAAZsBPwGB
-        AQMEAAH7Af8ByQFHBAAB+wH/AfwBfwYAAfABDwIAAeMBhwE2AVoBwAEDAT8B/gHhAYcBGwFMAYABAQE8
-        AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
-        AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
-        AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
-</value>
-  </data>
-  <data name="tabPage_Background_AOD.Text" xml:space="preserve">
-    <value>Fondo</value>
-  </data>
-  <data name="tabPage_Time_AOD.Text" xml:space="preserve">
-    <value>Hora</value>
-  </data>
-  <data name="tabPage_Date_AOD.Text" xml:space="preserve">
-    <value>Fecha</value>
-  </data>
-  <data name="tabPage_Activity_AOD.Text" xml:space="preserve">
-    <value>Actividad</value>
-  </data>
-  <data name="tabPage_Air_AOD.Text" xml:space="preserve">
-    <value>Tiempo</value>
-  </data>
-  <data name="tabPage_System_AOD.Text" xml:space="preserve">
-    <value>Sistema</value>
-  </data>
   <data name="button_GenerateID.Text" xml:space="preserve">
     <value>Generar</value>
   </data>
@@ -241,14 +139,11 @@
   <data name="radioButton_Background_image.Text" xml:space="preserve">
     <value>Imagen</value>
   </data>
-  <data name="tabPage_Digital_time.Text" xml:space="preserve">
-    <value>Reloj digital</value>
+  <data name="tabPage_Background.Text" xml:space="preserve">
+    <value>Fondo</value>
   </data>
   <data name="checkBox_12h_Use.Text" xml:space="preserve">
     <value>Formato de 12 h</value>
-  </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 82</value>
   </data>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -315,14 +210,14 @@
   <data name="вставитьToolStripMenuItem1.Text" xml:space="preserve">
     <value>Pegar</value>
   </data>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 82</value>
+  </data>
   <data name="label573.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
   </data>
   <data name="label573.Text" xml:space="preserve">
     <value>Coordenadas</value>
-  </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 82</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -388,6 +283,9 @@
   </data>
   <data name="вставитьToolStripMenuItem.Text" xml:space="preserve">
     <value>Pegar</value>
+  </data>
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 82</value>
   </data>
   <data name="label570.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
@@ -651,8 +549,8 @@
   <data name="button_Hour.Text" xml:space="preserve">
     <value>Horas</value>
   </data>
-  <data name="tabPage_Analog_time.Text" xml:space="preserve">
-    <value>Reloj Analógico</value>
+  <data name="tabPage_Digital_time.Text" xml:space="preserve">
+    <value>Reloj digital</value>
   </data>
   <data name="label557.Text" xml:space="preserve">
     <value>Desplazamiento del punto de rotación</value>
@@ -807,8 +705,11 @@
   <data name="button_Hour_hand.Text" xml:space="preserve">
     <value>Horas</value>
   </data>
-  <data name="tabPage_Day.Text" xml:space="preserve">
-    <value>Día</value>
+  <data name="tabPage_Analog_time.Text" xml:space="preserve">
+    <value>Reloj Analógico</value>
+  </data>
+  <data name="tabPage_Time.Text" xml:space="preserve">
+    <value>Hora</value>
   </data>
   <data name="checkBox_Day_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -966,8 +867,8 @@
   <data name="button_Day_text.Text" xml:space="preserve">
     <value>Valores numéricos</value>
   </data>
-  <data name="tabPage_Month.Text" xml:space="preserve">
-    <value>Mes</value>
+  <data name="tabPage_Day.Text" xml:space="preserve">
+    <value>Día</value>
   </data>
   <data name="label706.Text" xml:space="preserve">
     <value>Coordenadas de la imagen de fondo</value>
@@ -1152,8 +1053,8 @@
   <data name="button_Month_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Year.Text" xml:space="preserve">
-    <value>Año  </value>
+  <data name="tabPage_Month.Text" xml:space="preserve">
+    <value>Mes</value>
   </data>
   <data name="button_Year_hand.Text" xml:space="preserve">
     <value>Dial</value>
@@ -1239,8 +1140,8 @@
   <data name="button_Year_text.Text" xml:space="preserve">
     <value>Valores numéricos</value>
   </data>
-  <data name="tabPage_Day_of_week.Text" xml:space="preserve">
-    <value>Día de la semana</value>
+  <data name="tabPage_Year.Text" xml:space="preserve">
+    <value>Año  </value>
   </data>
   <data name="label710.Text" xml:space="preserve">
     <value>Coordenadas de la imagen de fondo</value>
@@ -1338,8 +1239,11 @@
   <data name="button_DOW_image.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Steps.Text" xml:space="preserve">
-    <value>Pasos</value>
+  <data name="tabPage_Day_of_week.Text" xml:space="preserve">
+    <value>Día de la semana</value>
+  </data>
+  <data name="tabPage_Date.Text" xml:space="preserve">
+    <value>Fecha</value>
   </data>
   <data name="checkBox_Steps_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -1638,8 +1542,8 @@
   <data name="button_Steps_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Calories.Text" xml:space="preserve">
-    <value>Calorías</value>
+  <data name="tabPage_Steps.Text" xml:space="preserve">
+    <value>Pasos</value>
   </data>
   <data name="checkBox_Calories_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -1938,8 +1842,8 @@
   <data name="button_Calories_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_HeartRate.Text" xml:space="preserve">
-    <value>Pulso</value>
+  <data name="tabPage_Calories.Text" xml:space="preserve">
+    <value>Calorías</value>
   </data>
   <data name="checkBox_HeartRate_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -2238,6 +2142,9 @@
   <data name="button_HeartRate_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_HeartRate.Text" xml:space="preserve">
+    <value>Pulso</value>
+  </data>
   <data name="checkBox_PAI_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
@@ -2535,9 +2442,6 @@
   <data name="button_PAI_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Distance.Text" xml:space="preserve">
-    <value>Distancia</value>
-  </data>
   <data name="checkBox_Distance_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
@@ -2772,6 +2676,9 @@
   <data name="button_Distance_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_Distance.Text" xml:space="preserve">
+    <value>Distancia</value>
+  </data>
   <data name="tabPage_StandUp.Text" xml:space="preserve">
     <value>Ponerlo de pie</value>
   </data>
@@ -2781,8 +2688,8 @@
   <data name="tabPage_FatBurning.Text" xml:space="preserve">
     <value>Quema de grasa</value>
   </data>
-  <data name="tabPage_Weather.Text" xml:space="preserve">
-    <value>Tiempo</value>
+  <data name="tabPage_Activity.Text" xml:space="preserve">
+    <value>Actividad</value>
   </data>
   <data name="checkBox_Weather_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -3250,6 +3157,9 @@
   <data name="button_Weather_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_Weather.Text" xml:space="preserve">
+    <value>Tiempo</value>
+  </data>
   <data name="tabPage_UVindex.Text" xml:space="preserve">
     <value>Índice UV</value>
   </data>
@@ -3271,11 +3181,8 @@
   <data name="tabPage_AirPressure.Text" xml:space="preserve">
     <value>Presión del aire</value>
   </data>
-  <data name="tabPage_Status.Text" xml:space="preserve">
-    <value>Estado</value>
-  </data>
-  <data name="groupBox_Lock.Text" xml:space="preserve">
-    <value>Bloqueo</value>
+  <data name="tabPage_Air.Text" xml:space="preserve">
+    <value>Tiempo</value>
   </data>
   <data name="checkBox_Lock_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -3295,6 +3202,9 @@
   <data name="label661.Text" xml:space="preserve">
     <value>Imagen</value>
   </data>
+  <data name="groupBox_Lock.Text" xml:space="preserve">
+    <value>Bloqueo</value>
+  </data>
   <data name="checkBox_DND_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
@@ -3312,9 +3222,6 @@
   </data>
   <data name="label669.Text" xml:space="preserve">
     <value>Imagen</value>
-  </data>
-  <data name="groupBox_Alarm.Text" xml:space="preserve">
-    <value>Alarma</value>
   </data>
   <data name="checkBox_Alarm_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -3334,6 +3241,9 @@
   <data name="label665.Text" xml:space="preserve">
     <value>Imagen</value>
   </data>
+  <data name="groupBox_Alarm.Text" xml:space="preserve">
+    <value>Alarma</value>
+  </data>
   <data name="checkBox_Bluetooth_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
@@ -3352,8 +3262,8 @@
   <data name="label657.Text" xml:space="preserve">
     <value>Imagen</value>
   </data>
-  <data name="tabPage_Battery.Text" xml:space="preserve">
-    <value>Batería</value>
+  <data name="tabPage_Status.Text" xml:space="preserve">
+    <value>Estado</value>
   </data>
   <data name="checkBox_Battery_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -3652,6 +3562,78 @@
   <data name="button_Battery_pictures.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_Battery.Text" xml:space="preserve">
+    <value>Batería</value>
+  </data>
+  <data name="tabPage_System.Text" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
+        DQAAAk1TRnQBSQFMAgEBBgEAAYgBCAGIAQgBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wkAAf8BDgH/OwABbQIA
+        ARQBBwEAAW0JAAEOAgAB8gEOAfAqAAEOAesEAAEQARMEAAHyAfEBAAH0AwAB7AEUAQAB8SgAARMIDgH3
+        AgAB8QIAARMBDgEQAgAB7AEAAREB/ycAAQ8BDgfsAW0BAAETAQABEQFDAf8BEQHsAf8CAAH0Af8BDgHx
+        JAAB/wwAAf8CAAH/AQAB8QMAAf8pAAFDAQ4CAAG8DAABDgHwAQABbQkAAQ4iAAEPAewBQwEAAQ4HAAHy
+        AQABDgEAAQ4BAAHxAQAB/wEAAfACAAH0AgABFSUAAW0GAAHvAQ4BDwEAAe0EAAFtARQEAAH/AgAB/yIA
+        AhABkgQAAbwDAAEOARABbQH0AgABDgHqAQAB7wEOAgAB/wIAAf8BDwEAAQ4hAAJtAbwDAAHvAQABEgGS
+        AQ4GAAHyAQAB9AEAAg4BFAEAAW0BAAHrAQ8B9CUAAg4B7AEOAe0BDwEOARIHAAEOAe8CAAHvAW0B8QIA
+        ARABEiQAAf8BAAH3ARMBDgJtAQ4IAAFtAQ4BAAHvAfQDAAG8AfAB/wEAAfEjAAJDBQABDgFtBwAB7AEA
+        AQ8BDgEAARIBAAIOAQABQwEAAfI0AAHsAeoBAAHzAQ4DAAH/AREB8SgAAewSAAEOOwABBwFtAUMCDwFD
+        AW0BBwQAAfESAAEQAQAB8AMAAfQCDgH/CwAB/wkAAfMBbQHqAbwE/wG8AeoBbQHzAwAB9xEAAQ8BkgEO
+        Af8CAAEPAe8BDgH/BAAB/wgAAf8GAAHzARIB7wH/AfAB7AIVAewB8AH/Ae8BEgHzAgAB7wQAAQcBAAEV
+        CgAB8gEOAe0BEAEAAewBQwHsARQFAAL/BwAC/wUAAW0B7wHyARIEEAIPARIB8gHvAW0CAAHvEgAB7AEV
+        AQ8B7wEOAfMBDgH/BgAC/wcAAv8DAAEHAeoB/wESBBABDwEOAewBDwETAf8B6gEHAQAB7wUAAQcBAAHv
+        CwABDgEHAQAB9wERAfcIAAL/BwAC/wIAAW0CvAEPAxABDwEOAewBAAHsAQ8CvAFtAQAB7xMAAREBbQEQ
+        AQcBDwoAAv8HAAL/AQABQwH/AesBDwIQAQ8BDgHsAQAB7AIPAesB/wFDAQAB7wYAAQcBAAH0CAAB7AEA
+        ARIBAAH0AQ4B8wEAAfIB7wgAAv8HAAH/AQABDgH/ARAEDwHsAQAB7AMPARAB/wEOAQAB7wgAARAIAAHq
+        AhEBEAEAAQ4B7QIOAQAB8wgAAv8IAAEOAf8BEAMPAQ4BAAEQBA8BEAH/AQ4BAAHvBAAE8gHzCAAB7wFD
+        Ag4BAAEQAQ4BEQEOAW0KAAL/BwABEQH/AW0BDgIPAQ4BAAEVAw8BDgFtAf8BEQEAAe8RAAH0AQ4BDwIA
+        AW0BDgESDQAC/wYAAW0CvAIOAQ8BDgEAAewCDwIOArwBbRQAARQBEQFtAf8BvAEAAf8GAAH/AQAB/wUA
+        Av8FAAEHAeoB/wEUAw4B7AEVAw4BFAH/AeoBBxUAAesBDgHvAhMIAAH/BwAC/wUAAW0B7wHyARUGDgEV
+        AfIB7wFtBAAB6gH0AZIFAAL/CQABBwEQAQABbQgAAv8BAAH/BQAC/wQAAfMBEwHvAf8BvAFtAg8BbQG8
+        Af8B7wETAfMBAAHsAgAB9AYAAQ8BQwHtCgABDgHvARUBbQgAAv8HAAL/BAAB8wFtARIBvAT/AbwBEgFt
+        AfMDAAHwAfcB/wIABPcB7wFDAe0C9wH/BwABDgEAAQcBERkAAQcBbQEQAg4BEAFtAQcIAAEOBgAB9wHw
+        CgAB6gIOAfEFAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQAB/wEfAf8FAAH9
+        AZcB/AEOBAAB/AHzAckBBgQAAfgBAQGBAQYEAAHwAQABgQEGBAABtwH8AY4FAAGTAf4ByAUAAcEB/AER
+        ASEEAAHlAeABcwGZBAABDAHhARMBIQQAAQwBDwGIASMEAAHgAR8BzAFnBAABgAF/AZMBgwQAAZsBPwGB
+        AQMEAAH7Af8ByQFHBAAB+wH/AfwBfwYAAfABDwIAAeMBhwE2AVoBwAEDAT8B/gHhAYcBGwFMAYABAQE8
+        AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
+        AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
+        AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
+        AZ8CAAHwAQ8B9wHnAf4BHws=
+</value>
+  </data>
   <data name="label284.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 13</value>
   </data>
@@ -3661,8 +3643,8 @@
   <data name="button_Capy_ScreenNormal.Text" xml:space="preserve">
     <value>Copia todos los elementos de la pantalla principal</value>
   </data>
-  <data name="tabPage_Digital_time_AOD.Text" xml:space="preserve">
-    <value>Reloj digital</value>
+  <data name="tabPage_Background_AOD.Text" xml:space="preserve">
+    <value>Fondo</value>
   </data>
   <data name="button_Copy_AM_PM_AOD.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
@@ -3856,8 +3838,8 @@
   <data name="button_Hour_AOD.Text" xml:space="preserve">
     <value>Horas</value>
   </data>
-  <data name="tabPage_Analog_time_AOD.Text" xml:space="preserve">
-    <value>Reloj Analógico</value>
+  <data name="tabPage_Digital_time_AOD.Text" xml:space="preserve">
+    <value>Reloj digital</value>
   </data>
   <data name="button_Copy_Minute_hand_AOD.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
@@ -3967,14 +3949,11 @@
   <data name="button_Hour_hand_AOD.Text" xml:space="preserve">
     <value>Horas</value>
   </data>
-  <data name="tabPage_Day_AOD.Text" xml:space="preserve">
-    <value>Día</value>
+  <data name="tabPage_Analog_time_AOD.Text" xml:space="preserve">
+    <value>Reloj Analógico</value>
   </data>
-  <data name="panel_Day_hand_AOD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 50</value>
-  </data>
-  <data name="panel_Day_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 1</value>
+  <data name="tabPage_Time_AOD.Text" xml:space="preserve">
+    <value>Hora</value>
   </data>
   <data name="button_Copy_Day_hand_AOD.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
@@ -4045,17 +4024,8 @@
   <data name="label379.Text" xml:space="preserve">
     <value>Ángulo final</value>
   </data>
-  <data name="button_Day_hand_AOD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 27</value>
-  </data>
-  <data name="button_Day_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="button_Day_hand_AOD.Text" xml:space="preserve">
     <value>Dial</value>
-  </data>
-  <data name="panel_Day_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 1</value>
   </data>
   <data name="button_Copy_Day_text_AOD.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
@@ -4144,14 +4114,11 @@
   <data name="label386.Text" xml:space="preserve">
     <value>Espaciado</value>
   </data>
-  <data name="button_Day_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="button_Day_text_AOD.Text" xml:space="preserve">
     <value>Valores numéricos</value>
   </data>
-  <data name="tabPage_Month_AOD.Text" xml:space="preserve">
-    <value>Mes</value>
+  <data name="tabPage_Day_AOD.Text" xml:space="preserve">
+    <value>Día</value>
   </data>
   <data name="button_Copy_Month_hand_AOD.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
@@ -4345,8 +4312,8 @@
   <data name="button_Month_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Year_AOD.Text" xml:space="preserve">
-    <value>Año  </value>
+  <data name="tabPage_Month_AOD.Text" xml:space="preserve">
+    <value>Mes</value>
   </data>
   <data name="button13.Text" xml:space="preserve">
     <value>Dial</value>
@@ -4435,8 +4402,8 @@
   <data name="button_Year_text_AOD.Text" xml:space="preserve">
     <value>Valores numéricos</value>
   </data>
-  <data name="tabPage_Day_of_week_AOD.Text" xml:space="preserve">
-    <value>Día de la semana</value>
+  <data name="tabPage_Year_AOD.Text" xml:space="preserve">
+    <value>Año  </value>
   </data>
   <data name="button_Copy_DOW_hand_AOD.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
@@ -4552,8 +4519,11 @@
   <data name="button_DOW_image_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Steps_AOD.Text" xml:space="preserve">
-    <value>Pasos</value>
+  <data name="tabPage_Day_of_week_AOD.Text" xml:space="preserve">
+    <value>Día de la semana</value>
+  </data>
+  <data name="tabPage_Date_AOD.Text" xml:space="preserve">
+    <value>Fecha</value>
   </data>
   <data name="checkBox_Steps_scaleLinear_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -4867,8 +4837,8 @@
   <data name="button_Steps_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Calories_AOD.Text" xml:space="preserve">
-    <value>Calorías</value>
+  <data name="tabPage_Steps_AOD.Text" xml:space="preserve">
+    <value>Pasos</value>
   </data>
   <data name="checkBox_Calories_scaleLinear_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -5176,8 +5146,8 @@
   <data name="button_Calories_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_HeartRate_AOD.Text" xml:space="preserve">
-    <value>Pulso</value>
+  <data name="tabPage_Calories_AOD.Text" xml:space="preserve">
+    <value>Calorías</value>
   </data>
   <data name="checkBox_HeartRate_scaleLinear_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -5485,6 +5455,9 @@
   <data name="button_HeartRate_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_HeartRate_AOD.Text" xml:space="preserve">
+    <value>Pulso</value>
+  </data>
   <data name="checkBox_PAI_scaleLinear_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
@@ -5791,9 +5764,6 @@
   <data name="button_PAI_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
-  <data name="tabPage_Distance_AOD.Text" xml:space="preserve">
-    <value>Distancia</value>
-  </data>
   <data name="checkBox_Distance_scaleLinear_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
@@ -6043,14 +6013,17 @@
   <data name="button_Distance_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_Distance_AOD.Text" xml:space="preserve">
+    <value>Distancia</value>
+  </data>
   <data name="tabPage_StandUp_AOD.Text" xml:space="preserve">
     <value>Ponerlo de pie</value>
   </data>
   <data name="tabPage_FatBurning_AOD.Text" xml:space="preserve">
     <value>Quema de grasa</value>
   </data>
-  <data name="tabPage_Weather_AOD.Text" xml:space="preserve">
-    <value>Tiempo</value>
+  <data name="tabPage_Activity_AOD.Text" xml:space="preserve">
+    <value>Actividad</value>
   </data>
   <data name="checkBox_Weather_scaleLinear_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -6551,6 +6524,9 @@
   <data name="button_Weather_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_Weather_AOD.Text" xml:space="preserve">
+    <value>Tiempo</value>
+  </data>
   <data name="tabPage_UVindex_AOD.Text" xml:space="preserve">
     <value>Índice UV</value>
   </data>
@@ -6572,8 +6548,8 @@
   <data name="tabPage_AirPressure_AOD.Text" xml:space="preserve">
     <value>Presión del aire</value>
   </data>
-  <data name="tabPage_Battery_AOD.Text" xml:space="preserve">
-    <value>Batería</value>
+  <data name="tabPage_Air_AOD.Text" xml:space="preserve">
+    <value>Tiempo</value>
   </data>
   <data name="checkBox_Battery_scaleLinear_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -6887,11 +6863,14 @@
   <data name="button_Battery_pictures_AOD.Text" xml:space="preserve">
     <value>Progreso de la imagen</value>
   </data>
+  <data name="tabPage_Battery_AOD.Text" xml:space="preserve">
+    <value>Batería</value>
+  </data>
+  <data name="tabPage_System_AOD.Text" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Desempaquetar/Empaquetar</value>
-  </data>
-  <data name="tabPage_Show.Text" xml:space="preserve">
-    <value>Navegar</value>
   </data>
   <data name="button_SetWeather.Text" xml:space="preserve">
     <value>Tiempo</value>
@@ -7766,8 +7745,8 @@
   <data name="label4.Text" xml:space="preserve">
     <value>JSON con imágenes:</value>
   </data>
-  <data name="tabPage_Edit.Text" xml:space="preserve">
-    <value>Editar</value>
+  <data name="tabPage_Show.Text" xml:space="preserve">
+    <value>Navegar</value>
   </data>
   <data name="button_RandomPreview.Text" xml:space="preserve">
     <value>Vista previa aleatoria</value>
@@ -7784,8 +7763,8 @@
   <data name="button_OpenDir.Text" xml:space="preserve">
     <value>Abrir carpeta</value>
   </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Convirtiendo</value>
+  <data name="tabPage_Edit.Text" xml:space="preserve">
+    <value>Editar</value>
   </data>
   <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 13</value>
@@ -7814,17 +7793,14 @@
   <data name="button_Converting.Text" xml:space="preserve">
     <value>Convertir</value>
   </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Modelo de destino</value>
-  </data>
   <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 17</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
     <value>Tamaño personalizado</value>
   </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Tipo de fuente</value>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Modelo de destino</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 17</value>
@@ -7832,8 +7808,11 @@
   <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
     <value>Tamaño personalizado</value>
   </data>
-  <data name="tabPage_Settings.Text" xml:space="preserve">
-    <value>Ajustes</value>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Tipo de fuente</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Convirtiendo</value>
   </data>
   <data name="checkBox_ShowIn12hourFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>275, 17</value>
@@ -7847,9 +7826,6 @@
   <data name="checkBox_SaveID.Text" xml:space="preserve">
     <value>Guardar el ID de la esfera del reloj</value>
   </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>Tipo de resaltado del área de acceso directo</value>
-  </data>
   <data name="checkBox_Shortcuts_Border.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 17</value>
   </data>
@@ -7861,6 +7837,9 @@
   </data>
   <data name="checkBox_Shortcuts_Area.Text" xml:space="preserve">
     <value>Cuadrícula punteada</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>Tipo de resaltado del área de acceso directo</value>
   </data>
   <data name="button_Reset.Text" xml:space="preserve">
     <value>Reiniciar</value>
@@ -7876,9 +7855,6 @@
   </data>
   <data name="label356.Text" xml:space="preserve">
     <value>Idioma</value>
-  </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>Después de empaquetar el proyecto</value>
   </data>
   <data name="radioButton_Settings_Pack_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 17</value>
@@ -7898,8 +7874,8 @@
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
     <value>Dejar Elegir</value>
   </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Después de abrir el proyecto</value>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Después de empaquetar el proyecto</value>
   </data>
   <data name="radioButton_Settings_Open_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 17</value>
@@ -7908,7 +7884,7 @@
     <value>No hacer nada</value>
   </data>
   <data name="radioButton_Settings_Open_Download.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 17</value>
+    <value>176, 17</value>
   </data>
   <data name="radioButton_Settings_Open_Download.Text" xml:space="preserve">
     <value>Cargar Preview.States (si existe)</value>
@@ -7919,8 +7895,8 @@
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
     <value>Dejar Elegir</value>
   </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Después de la extracción del .bin</value>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Después de abrir el proyecto</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 17</value>
@@ -7940,8 +7916,8 @@
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>Dejar Elegir</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Si los nombres de los archivos extraídos son los mismos</value>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Después de la extracción del .bin</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 17</value>
@@ -7961,8 +7937,11 @@
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>Dejar Elegir</value>
   </data>
-  <data name="tabPage_About.Text" xml:space="preserve">
-    <value>Sobre</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Si los nombres de los archivos extraídos son los mismos</value>
+  </data>
+  <data name="tabPage_Settings.Text" xml:space="preserve">
+    <value>Ajustes</value>
   </data>
   <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 13</value>
@@ -8015,6 +7994,9 @@
   <data name="label406.Text" xml:space="preserve">
     <value>Versión:</value>
   </data>
+  <data name="tabPage_About.Text" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 13</value>
   </data>
@@ -8051,9 +8033,6 @@
   <data name="label355.Text" xml:space="preserve">
     <value>Velocidad de animación GIF</value>
   </data>
-  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 120</value>
-  </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
   </data>
@@ -8087,8 +8066,8 @@
   <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
     <value>Borrar fila</value>
   </data>
-  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 92</value>
+  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 120</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 22</value>
@@ -8113,6 +8092,9 @@
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
     <value>Borrar fila</value>
+  </data>
+  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 92</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
     <value>Desempaquetar .bin comprimido</value>
