@@ -30,6 +30,7 @@ namespace AmazFit_Watchface_2
             bool showCentrHend)
 
         {
+            if (Watch_Face == null) return;
             if (Watch_Face.ScreenIdle == null)
             {
                 Preview_AOD_WithoutScreenIdle(gPanel, scale, crop, WMesh, BMesh, BBorder,
@@ -49,6 +50,10 @@ namespace AmazFit_Watchface_2
             if (radioButton_GTS2.Checked)
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts_2.png");
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
             }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
@@ -1154,8 +1159,14 @@ namespace AmazFit_Watchface_2
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.HeartRate * (endAngle - startAngle) / 200f;
-                    if (Watch_Face_Preview_Set.Activity.HeartRate > 200) angle = endAngle;
+                    //float angle = startAngle + Watch_Face_Preview_Set.Activity.HeartRate * (endAngle - startAngle) / 200f;
+                    //if (Watch_Face_Preview_Set.Activity.HeartRate > 200) angle = endAngle;
+
+                    float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 200f;
+                    //float position = (Watch_Face_Preview_Set.Activity.HeartRate - 25) / 130f;
+                    float angle = startAngle + position * (endAngle - startAngle);
+                    if (position < 0) angle = startAngle;
+                    if (position > 1) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
@@ -2135,7 +2146,7 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("* Preview_AOD (end)");
         }
 
-        /// <summary>формируем изображение на панедли Graphics</summary>
+        /// <summary>формируем изображение на панедли Graphics если AOD нет в циферблате</summary>
         /// <param name="gPanel">Поверхность для рисования</param>
         /// <param name="scale">Масштаб прорисовки</param>
         /// <param name="crop">Обрезать по форме экрана</param>
@@ -2164,6 +2175,10 @@ namespace AmazFit_Watchface_2
             if (radioButton_GTS2.Checked)
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts_2.png");
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
             }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
@@ -2365,6 +2380,14 @@ namespace AmazFit_Watchface_2
                 if (radioButton_GTS2.Checked)
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+                }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));

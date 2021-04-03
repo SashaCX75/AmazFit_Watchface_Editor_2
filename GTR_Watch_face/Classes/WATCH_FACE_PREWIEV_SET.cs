@@ -54,6 +54,8 @@
         public int WindForce { get; set; }
         public int Altitude { get; set; }
         public int AirPressure { get; set; }
+        public bool showTemperature { get; set; }
+        public bool showTemperatureMaxMin { get; set; }
     }
 
     public class StatusSet

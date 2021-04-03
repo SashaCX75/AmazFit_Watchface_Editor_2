@@ -14,6 +14,11 @@ namespace AmazFit_Watchface_2
             SettingsClear();
             checkBoxUseClear();
             ComboBoxAddItems();
+
+            SettingsClear_AOD();
+            checkBoxUseClear_AOD();
+            ComboBoxAddItems_AOD();
+
             WidgetsTemp = null;
 
             if (Watch_Face == null) return;
@@ -2456,21 +2461,21 @@ namespace AmazFit_Watchface_2
                 Watch_Face.Info = new Device_Id();
                 Watch_Face.Info.DeviceId = 59;
             }
-            //if (radioButton_42.Checked)
-            //{
-            //    Watch_Face.Info = new Device_Id();
-            //    Watch_Face.Info.DeviceId = 42;
-            //}
+            if (radioButton_GTR2e.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 64;
+            }
             if (radioButton_GTS2.Checked)
             {
                 Watch_Face.Info = new Device_Id();
                 Watch_Face.Info.DeviceId = 65;
             }
-            //if (radioButton_TRex.Checked)
-            //{
-            //    Watch_Face.Info = new Device_Id();
-            //    Watch_Face.Info.DeviceId = 52;
-            //}
+            if (radioButton_TRex_pro.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 83;
+            }
             //if (radioButton_Verge.Checked)
             //{
             //    Watch_Face.Info = new Device_Id();
@@ -5565,9 +5570,6 @@ namespace AmazFit_Watchface_2
 
         private void ComboBoxAddItems()
         {
-            userControl_pictures1.ComboBoxAddItems(ListImages);
-            userControl_pictures1.numericUpDown_pictures_count.Value = 13;
-
             comboBox_Background_image.Items.AddRange(ListImages.ToArray());
             comboBox_Preview_image.Items.AddRange(ListImages.ToArray());
 
@@ -5836,8 +5838,6 @@ namespace AmazFit_Watchface_2
         }
         private void SettingsClear()
         {
-            userControl_pictures1.SettingsClear();
-
             comboBox_Background_image.Items.Clear();
             comboBox_Background_image.Text = "";
             comboBox_Preview_image.Items.Clear();
@@ -6363,10 +6363,13 @@ namespace AmazFit_Watchface_2
                         radioButton_GTR2.Checked = true;
                         break;
                     case 64:
-                        radioButton_GTR2.Checked = true;
+                        radioButton_GTR2e.Checked = true;
                         break;
                     case 65:
                         radioButton_GTS2.Checked = true;
+                        break;
+                    case 83:
+                        radioButton_TRex_pro.Checked = true;
                         break;
                     default:
                         return;
@@ -6378,12 +6381,15 @@ namespace AmazFit_Watchface_2
                     //pictureBox_Preview.Height = 230;
                     //pictureBox_Preview.Width = 230;
                     pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
-                    
-                    textBox_unpack_command.Text = Program_Settings.unpack_command_GTR_2;
-
-                    button_unpack.Enabled = true;
-                    button_pack.Enabled = true;
-                    button_zip.Enabled = true;
+                    Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+                }
+                else if (radioButton_GTR2e.Checked)
+                {
+                    this.Text = "GTS 2e watch face editor";
+                    //pictureBox_Preview.Height = 224;
+                    //pictureBox_Preview.Width = 177;
+                    pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
+                    Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
                 }
                 else if (radioButton_GTS2.Checked)
                 {
@@ -6391,22 +6397,29 @@ namespace AmazFit_Watchface_2
                     //pictureBox_Preview.Height = 224;
                     //pictureBox_Preview.Width = 177;
                     pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
-
-                    textBox_unpack_command.Text = Program_Settings.unpack_command_GTS_2;
-
-                    button_unpack.Enabled = false;
-                    button_pack.Enabled = false;
-                    button_zip.Enabled = false;
+                    Program_Settings.unpack_command = Program_Settings.unpack_command_GTS_2;
+                }
+                else if (radioButton_TRex_pro.Checked)
+                {
+                    this.Text = "T-Rex Pro watch face editor";
+                    //pictureBox_Preview.Height = 224;
+                    //pictureBox_Preview.Width = 177;
+                    pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
+                    Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
                 }
 
                 if ((formPreview != null) && (formPreview.Visible))
                 {
-                    Form_Preview.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-                    Form_Preview.Model_Wath.model_gts = radioButton_GTS2.Checked;
+                    Form_Preview.Model_Wath.model_GTR2 = radioButton_GTR2.Checked;
+                    Form_Preview.Model_Wath.model_GTR2e = radioButton_GTR2e.Checked;
+                    Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
+                    Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
                 }
 
-                Program_Settings.Model_GTR47 = radioButton_GTR2.Checked;
-                Program_Settings.Model_GTS = radioButton_GTS2.Checked;
+                Program_Settings.Model_GTR2 = radioButton_GTR2.Checked;
+                Program_Settings.Model_GTR2e = radioButton_GTR2e.Checked;
+                Program_Settings.Model_GTS2 = radioButton_GTS2.Checked;
+                Program_Settings.Model_TRex_pro = radioButton_TRex_pro.Checked;
                 string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
                 {
                     //DefaultValueHandling = DefaultValueHandling.Ignore,

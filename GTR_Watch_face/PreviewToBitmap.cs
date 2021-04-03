@@ -48,6 +48,10 @@ namespace AmazFit_Watchface_2
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts_2.png");
             }
+            if (radioButton_TRex_pro.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+            }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
             gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
@@ -1154,9 +1158,14 @@ namespace AmazFit_Watchface_2
                     int image_index = comboBox_image.SelectedIndex;
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
-
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.HeartRate * (endAngle - startAngle) / 200f;
-                    if (Watch_Face_Preview_Set.Activity.HeartRate > 200) angle = endAngle;
+                    //TODO определить пределы изменения пульса
+                    //float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 200f;
+                    float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 159f;
+                    //if (position < 0) position = 0;
+                    //if (position > 1) position = 1;
+                    float angle = startAngle + position * (endAngle - startAngle);
+                    if (position < 0) angle = startAngle;
+                    if (position > 1) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (comboBox_imageCentr.SelectedIndex >= 0)
@@ -3853,6 +3862,10 @@ namespace AmazFit_Watchface_2
                 if (radioButton_GTS2.Checked)
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+                }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));

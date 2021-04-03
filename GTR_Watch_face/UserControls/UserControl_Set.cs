@@ -112,6 +112,7 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Устанавливает надпись на кнопке</summary>
+        [Localizable(true)]
         public string ButtonText
         {
             get
@@ -161,7 +162,7 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Возвращает данные для предпросмотра из выбранного набора параметров</summary>
-        /// <param name="Activity">Данные активностей (год, число, день недели, часы, минуты, секунды,
+        /// <param name="Activity">Данные активностей (год, число, день, день недели, часы, минуты, секунды,
         /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, ActivityGoal, жиросжигание)</param>
         /// <param name="Air">Атмосферные данные (иконка погоды, текущая температура, максимальная температура, 
         /// минимальная температура, УФ индекс, качество воздуха, влажность, сила ветра,
@@ -176,6 +177,7 @@ namespace AmazFit_Watchface_2
 
             Activity.Add("Year", dateTimePicker_Date_Set.Value.Year);
             Activity.Add("Month", dateTimePicker_Date_Set.Value.Month);
+            Activity.Add("Day", dateTimePicker_Date_Set.Value.Day);
             int WeekDay = (int)dateTimePicker_Date_Set.Value.DayOfWeek;
             if (WeekDay == 0) WeekDay = 7;
             Activity.Add("WeekDay", WeekDay);
@@ -221,13 +223,145 @@ namespace AmazFit_Watchface_2
 
         }
 
+        /// <summary>Устанавливает данные для предпросмотра из выбранного набора параметров</summary>
+        /// <param name="Activity">Данные активностей (год, число, день, часы, минуты, секунды,
+        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, ActivityGoal, жиросжигание)</param>
+        /// <param name="Air">Атмосферные данные (иконка погоды, текущая температура, максимальная температура, 
+        /// минимальная температура, УФ индекс, качество воздуха, влажность, сила ветра,
+        /// высота, давление)</param>
+        /// <param name="Activity">ДЗначение переключателей (год, число, день недели, Часы, минуты, секунды,
+        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, ActivityGoal, жиросжигание)</param>
+        public void SetValue(Dictionary<string, int> Activity, Dictionary<string, int> Air, Dictionary<string, bool> checkValue)
+        {
+            int year;
+            Activity.TryGetValue("Year", out year);
+            int month;
+            Activity.TryGetValue("Month", out month);
+            int day;
+            Activity.TryGetValue("Day", out day);
+            int hour;
+            Activity.TryGetValue("Hour", out hour);
+            int min;
+            Activity.TryGetValue("Minute", out min);
+            int sec;
+            Activity.TryGetValue("Second", out sec);
+
+            int battery;
+            Activity.TryGetValue("Battery", out battery);
+            int calories;
+            Activity.TryGetValue("Calories", out calories);
+            int heartRate;
+            Activity.TryGetValue("HeartRate", out heartRate);
+            int distance;
+            Activity.TryGetValue("Distance", out distance);
+            int steps;
+            Activity.TryGetValue("Steps", out steps);
+            int stepsGoal;
+            Activity.TryGetValue("StepsGoal", out stepsGoal);
+
+            int PAI;
+            Activity.TryGetValue("PAI", out PAI);
+            int standUp;
+            Activity.TryGetValue("StandUp", out standUp);
+            int stress;
+            Activity.TryGetValue("Stress", out stress);
+            int activityGoal;
+            Activity.TryGetValue("ActivityGoal", out activityGoal);
+            int fatBurning;
+            Activity.TryGetValue("FatBurning", out fatBurning);
+
+            int weather_Icon;
+            Air.TryGetValue("Weather_Icon", out weather_Icon);
+            int temperature;
+            Air.TryGetValue("Temperature", out temperature);
+            int temperatureMax;
+            Air.TryGetValue("TemperatureMax", out temperatureMax);
+            int temperatureMin;
+            Air.TryGetValue("TemperatureMin", out temperatureMin);
+
+            int UVindex;
+            Air.TryGetValue("UVindex", out UVindex);
+            int airQuality;
+            Air.TryGetValue("AirQuality", out airQuality);
+            int humidity;
+            Air.TryGetValue("Humidity", out humidity);
+            int windForce;
+            Air.TryGetValue("WindForce", out windForce);
+            int altitude;
+            Air.TryGetValue("Altitude", out altitude);
+            int airPressure;
+            Air.TryGetValue("AirPressure", out airPressure);
+
+            bool bluetooth;
+            checkValue.TryGetValue("Bluetooth", out bluetooth);
+            bool alarm;
+            checkValue.TryGetValue("Alarm", out alarm);
+            bool Lock;
+            checkValue.TryGetValue("Lock", out Lock);
+            bool DND;
+            checkValue.TryGetValue("DND", out DND);
+
+            bool showTemperature;
+            checkValue.TryGetValue("ShowTemperature", out showTemperature);
+            bool showTemperatureMaxMin;
+            checkValue.TryGetValue("ShowTemperatureMaxMin", out showTemperatureMaxMin);
+
+            try
+            {
+                setValue = true;
+
+                dateTimePicker_Date_Set.Value = new DateTime(year, month, day, hour, min, sec);
+                dateTimePicker_Time_Set.Value = new DateTime(year, month, day, hour, min, sec);
+
+                numericUpDown_Battery_Set.Value = battery;
+                numericUpDown_Calories_Set.Value = calories;
+                numericUpDown_HeartRate_Set.Value = heartRate;
+                numericUpDown_Distance_Set.Value = distance;
+                numericUpDown_Steps_Set.Value = steps;
+                numericUpDown_Goal_Set.Value = stepsGoal;
+
+                numericUpDown_PAI_Set.Value = PAI;
+                numericUpDown_StandUp_Set.Value = standUp;
+                numericUpDown_Stress_Set.Value = stress;
+                numericUpDown_ActivityGoal_Set.Value = activityGoal;
+                numericUpDown_FatBurning_Set.Value = fatBurning;
+
+
+                comboBox_WeatherSet_Icon.SelectedIndex = weather_Icon;
+                numericUpDown_WeatherSet_Temp.Value = temperature;
+                numericUpDown_WeatherSet_MaxTemp.Value = temperatureMax;
+                numericUpDown_WeatherSet_MinTemp.Value = temperatureMin;
+
+
+                numericUp_UVindex_Set.Value = UVindex;
+                numericUpDown_AirQuality_Set.Value = airQuality;
+                numericUpDown_Humidity_Set.Value = humidity;
+                numericUpDown_WindForce.Value = windForce;
+                numericUpDown_Altitude_Set.Value = altitude;
+                numericUpDown_AirPressure_Set.Value = airPressure;
+
+                checkBox_Bluetooth_Set.Checked = bluetooth;
+                checkBox_Alarm_Set.Checked = alarm;
+                checkBox_Lock_Set.Checked = Lock;
+                checkBox_DND_Set.Checked = DND;
+
+                checkBox_WeatherSet_Temp.Checked = showTemperature;
+                checkBox_WeatherSet_MaxMinTemp.Checked = showTemperatureMaxMin;
+            }
+            finally
+            {
+                setValue = false;
+            }
+
+        }
+
         /// <summary>Устанавливает случайные данные для значений</summary>
-        public void RandomValue()
+        public void RandomValue(Random rnd)
         {
             setValue = true;
 
             DateTime now = DateTime.Now;
-            Random rnd = new Random();
+            //Random rnd = new Random();
 
             int year = now.Year;
             int month = rnd.Next(0, 12) + 1;
@@ -239,7 +373,7 @@ namespace AmazFit_Watchface_2
             dateTimePicker_Time_Set.Value = new DateTime(year, month, day, hour, min, sec);
 
             numericUpDown_Battery_Set.Value = rnd.Next(0, 101);
-            numericUpDown_Calories_Set.Value = rnd.Next(0, 2500);
+            numericUpDown_Calories_Set.Value = rnd.Next(0, 500);
             numericUpDown_HeartRate_Set.Value = rnd.Next(45, 180);
             numericUpDown_Distance_Set.Value = rnd.Next(0, 15000);
             numericUpDown_Steps_Set.Value = rnd.Next(0, 15000);

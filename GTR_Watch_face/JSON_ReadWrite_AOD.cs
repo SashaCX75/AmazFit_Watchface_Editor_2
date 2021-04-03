@@ -12,10 +12,6 @@ namespace AmazFit_Watchface_2
     {
         private void JSON_read_AOD()
         {
-            SettingsClear_AOD();
-            checkBoxUseClear_AOD();
-            ComboBoxAddItems_AOD();
-
             if (Watch_Face == null || Watch_Face.ScreenIdle == null) return;
 
             #region Background
