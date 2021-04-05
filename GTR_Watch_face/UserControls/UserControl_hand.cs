@@ -14,6 +14,7 @@ namespace AmazFit_Watchface_2
     public partial class UserControl_hand : UserControl
     {
         private bool setValue;
+        private bool AODmode;
         public UserControl_hand()
         {
             InitializeComponent();
@@ -64,11 +65,12 @@ namespace AmazFit_Watchface_2
         {
             get
             {
-                return button_Copy_hand.Visible;
+                return AODmode;
             }
             set
             {
-                button_Copy_hand.Visible = value;
+                AODmode = value;
+                button_Copy_hand.Visible = AODmode;
             }
         }
 
@@ -423,6 +425,5 @@ namespace AmazFit_Watchface_2
         }
 
         #endregion
-
     }
 }

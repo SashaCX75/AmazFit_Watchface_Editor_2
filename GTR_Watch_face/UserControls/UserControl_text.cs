@@ -14,6 +14,10 @@ namespace AmazFit_Watchface_2
     public partial class UserControl_text : UserControl
     {
         private bool setValue;
+        private bool AODmode;
+        private bool ImageError_mode;
+        private bool OptionalSymbol_mode;
+        private bool PaddingZero_follow_mode;
         public UserControl_text()
         {
             InitializeComponent();
@@ -137,11 +141,12 @@ namespace AmazFit_Watchface_2
         {
             get
             {
-                return button_Copy_text.Visible;
+                return AODmode;
             }
             set
             {
-                button_Copy_text.Visible = value;
+                AODmode = value;
+                button_Copy_text.Visible = AODmode;
             }
         }
 
@@ -150,39 +155,42 @@ namespace AmazFit_Watchface_2
         {
             get
             {
-                return comboBox_imageError.Visible;
+                return ImageError_mode;
             }
             set
             {
-                comboBox_imageError.Visible = value;
-                label06.Visible = value;
+                ImageError_mode = value;
+                comboBox_imageError.Visible = ImageError_mode;
+                label06.Visible = ImageError_mode;
             }
         }
 
         /// <summary>Отображение поля изображения десятичного разделителя</summary>
-        public bool ImageDecimalPoint
+        public bool OptionalSymbol
         {
             get
             {
-                return comboBox_imageDecimalPoint.Visible;
+                return OptionalSymbol_mode;
             }
             set
             {
-                comboBox_imageDecimalPoint.Visible = value;
-                label07.Visible = value;
+                OptionalSymbol_mode = value;
+                comboBox_imageDecimalPoint.Visible = OptionalSymbol_mode;
+                label07.Visible = OptionalSymbol_mode;
             }
         }
 
         /// <summary>Отображение чекбокса добавления нулей в начале</summary>
-        public bool PaddingZero
+        public bool PaddingZero_follow
         {
             get
             {
-                return checkBox_addZero.Visible;
+                return PaddingZero_follow_mode;
             }
             set
             {
-                checkBox_addZero.Visible = value;
+                PaddingZero_follow_mode = value;
+                checkBox_addZero.Visible = PaddingZero_follow_mode;
             }
         }
 
@@ -532,7 +540,7 @@ namespace AmazFit_Watchface_2
 
         #endregion
 
-        private void checkBox_Use_CheckedChanged(object sender, EventArgs e)
+        protected virtual void checkBox_Use_CheckedChanged(object sender, EventArgs e)
         {
             Control.ControlCollection controlCollection = panel_text.Controls;
 

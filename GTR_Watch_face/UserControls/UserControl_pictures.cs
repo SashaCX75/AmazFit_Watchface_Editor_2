@@ -15,17 +15,19 @@ namespace AmazFit_Watchface_2
     {
         private bool setValue;
         private int imagesCount = 10;
+        private bool AODmode;
 
         /// <summary>Отображение кнопки копирования значений для AOD</summary>
         public bool AOD
         {
             get
             {
-                return button_Copy_pictures.Visible;
+                return AODmode;
             }
             set
             {
-                button_Copy_pictures.Visible = value;
+                AODmode = value;
+                button_Copy_pictures.Visible = AODmode;
             }
         }
 

@@ -14,7 +14,8 @@ namespace AmazFit_Watchface_2
 {
     public partial class UserControl_scaleLinear : UserControl
     {
-        private bool setValue;
+        private bool setValue; 
+        private bool AODmode;
         public UserControl_scaleLinear()
         {
             InitializeComponent();
@@ -111,11 +112,12 @@ namespace AmazFit_Watchface_2
         {
             get
             {
-                return button_Copy_scaleLinear.Visible;
+                return AODmode;
             }
             set
             {
-                button_Copy_scaleLinear.Visible = value;
+                AODmode = value;
+                button_Copy_scaleLinear.Visible = AODmode;
             }
         }
 
@@ -262,6 +264,11 @@ namespace AmazFit_Watchface_2
             for (int i = 1; i < controlCollection.Count - 1; i++)
             {
                 controlCollection[i].Enabled = b;
+                if (b)
+                {
+                    if (i == 3) controlCollection[i].Enabled = radioButton_scaleLinear_image.Checked;
+                    if (i == 4) controlCollection[i].Enabled = !radioButton_scaleLinear_image.Checked;
+                }
             }
         }
         private void comboBox_color_Click(object sender, EventArgs e)
@@ -298,11 +305,9 @@ namespace AmazFit_Watchface_2
 
         private void radioButton_image_color_CheckedChanged(object sender, EventArgs e)
         {
-            Control.ControlCollection controlCollection = panel_scaleLinear.Controls;
-
             bool b = radioButton_scaleLinear_image.Checked;
-            controlCollection[3].Enabled = b;
-            controlCollection[4].Enabled = !b;
+            comboBox_scaleLinear_image.Enabled = b;
+            comboBox_scaleLinear_color.Enabled = !b;
 
             if (ValueChanged != null && !setValue)
             {
@@ -509,5 +514,6 @@ namespace AmazFit_Watchface_2
         }
 
         #endregion
+
     }
 }

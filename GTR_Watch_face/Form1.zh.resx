@@ -129,6 +129,543 @@
   <data name="tabPage_Activity.Text" xml:space="preserve">
     <value>活动</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBox_Weather_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_Weather_scaleLinear_Use.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="radioButton_Weather_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButton_Weather_scaleLinear_image.Text" xml:space="preserve">
+    <value>图像</value>
+  </data>
+  <data name="radioButtonWeather_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButtonWeather_scaleLinear_color.Text" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 82</value>
+  </data>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 82</value>
+  </data>
+  <data name="comboBox_Weather_scaleLinear_flatness.Items" xml:space="preserve">
+    <value>圆</value>
+  </data>
+  <data name="comboBox_Weather_scaleLinear_flatness.Items1" xml:space="preserve">
+    <value>平底</value>
+  </data>
+  <data name="label103.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label103.Text" xml:space="preserve">
+    <value>开始坐标</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="label107.Text" xml:space="preserve">
+    <value>长度</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value>指针图像</value>
+  </data>
+  <data name="label109.Text" xml:space="preserve">
+    <value>背景图像</value>
+  </data>
+  <data name="label295.Text" xml:space="preserve">
+    <value>结束线</value>
+  </data>
+  <data name="button_Weather_scaleLinear.Text" xml:space="preserve">
+    <value>线性刻度</value>
+  </data>
+  <data name="checkBox_Weather_scaleCircle_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_Weather_scaleCircle_Use.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_image.Text" xml:space="preserve">
+    <value>图像</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_color.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_color.Text" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="comboBox_Weather_scaleCircle_flatness.Items" xml:space="preserve">
+    <value>圆</value>
+  </data>
+  <data name="comboBox_Weather_scaleCircle_flatness.Items1" xml:space="preserve">
+    <value>三角形</value>
+  </data>
+  <data name="comboBox_Weather_scaleCircle_flatness.Items2" xml:space="preserve">
+    <value>平底</value>
+  </data>
+  <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label110.Text" xml:space="preserve">
+    <value>中心坐标</value>
+  </data>
+  <data name="label113.Text" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="label114.Text" xml:space="preserve">
+    <value>半径</value>
+  </data>
+  <data name="label115.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 110</value>
+  </data>
+  <data name="label115.Text" xml:space="preserve">
+    <value>结束角</value>
+  </data>
+  <data name="label116.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 110</value>
+  </data>
+  <data name="label116.Text" xml:space="preserve">
+    <value>起始角</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label117.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label117.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 110</value>
+  </data>
+  <data name="label117.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="label117.Text" xml:space="preserve">
+    <value>结束线</value>
+  </data>
+  <data name="label117.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="label118.Text" xml:space="preserve">
+    <value>背景图像</value>
+  </data>
+  <data name="button_Weather_scaleCircle.Text" xml:space="preserve">
+    <value>环形刻度</value>
+  </data>
+  <data name="checkBox_Weather_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_Weather_hand_Use.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="label119.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
+  </data>
+  <data name="label119.Text" xml:space="preserve">
+    <value>结束角</value>
+  </data>
+  <data name="label120.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 110</value>
+  </data>
+  <data name="label120.Text" xml:space="preserve">
+    <value>起始角</value>
+  </data>
+  <data name="label121.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label121.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label121.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="label121.Text" xml:space="preserve">
+    <value>旋转点偏移</value>
+  </data>
+  <data name="label124.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label124.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label124.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="label124.Text" xml:space="preserve">
+    <value>旋转中心坐标</value>
+  </data>
+  <data name="label125.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label125.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label125.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label125.Text" xml:space="preserve">
+    <value>指针图像</value>
+  </data>
+  <data name="label126.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label126.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label126.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="label126.Text" xml:space="preserve">
+    <value>中心图像坐标</value>
+  </data>
+  <data name="label131.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label131.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label131.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label131.Text" xml:space="preserve">
+    <value>中心图像</value>
+  </data>
+  <data name="label132.Text" xml:space="preserve">
+    <value>背景图像坐标</value>
+  </data>
+  <data name="label135.Text" xml:space="preserve">
+    <value>背景图像</value>
+  </data>
+  <data name="button_Weather_hand.Text" xml:space="preserve">
+    <value>指针</value>
+  </data>
+  <data name="checkBox_Weather_UseMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_Weather_UseMax.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMax.Items" xml:space="preserve">
+    <value>左对齐</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMax.Items1" xml:space="preserve">
+    <value>右对齐</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMax.Items2" xml:space="preserve">
+    <value>居中对齐</value>
+  </data>
+  <data name="checkBox_Weather_followMax.Text" xml:space="preserve">
+    <value>跟随最低温度</value>
+  </data>
+  <data name="label154.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label154.Text" xml:space="preserve">
+    <value>坐标</value>
+  </data>
+  <data name="label156.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label156.Text" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="label157.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label157.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label157.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label157.Text" xml:space="preserve">
+    <value>起始图像</value>
+  </data>
+  <data name="label158.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label158.Text" xml:space="preserve">
+    <value>图标坐标</value>
+  </data>
+  <data name="label159.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label159.Text" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="label160.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label160.Text" xml:space="preserve">
+    <value>间距</value>
+  </data>
+  <data name="label165.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 104</value>
+  </data>
+  <data name="label165.Text" xml:space="preserve">
+    <value>错误图像</value>
+  </data>
+  <data name="label166.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="label166.Text" xml:space="preserve">
+    <value>"°" 符号</value>
+  </data>
+  <data name="label180.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="label180.Text" xml:space="preserve">
+    <value>"-" 符号</value>
+  </data>
+  <data name="button_Weather_textMax.Text" xml:space="preserve">
+    <value>最高温度</value>
+  </data>
+  <data name="checkBox_Weather_UseMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_Weather_UseMin.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMin.Items" xml:space="preserve">
+    <value>左对齐</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMin.Items1" xml:space="preserve">
+    <value>右对齐</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMin.Items2" xml:space="preserve">
+    <value>居中对齐</value>
+  </data>
+  <data name="label167.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label167.Text" xml:space="preserve">
+    <value>坐标</value>
+  </data>
+  <data name="label169.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label169.Text" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="label170.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label170.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label170.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label170.Text" xml:space="preserve">
+    <value>起始图像</value>
+  </data>
+  <data name="label171.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label171.Text" xml:space="preserve">
+    <value>图标坐标</value>
+  </data>
+  <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label172.Text" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="label173.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label173.Text" xml:space="preserve">
+    <value>间距</value>
+  </data>
+  <data name="label178.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 104</value>
+  </data>
+  <data name="label178.Text" xml:space="preserve">
+    <value>错误图像</value>
+  </data>
+  <data name="label179.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="label179.Text" xml:space="preserve">
+    <value>"°" 符号</value>
+  </data>
+  <data name="label181.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="label181.Text" xml:space="preserve">
+    <value>"-" 符号</value>
+  </data>
+  <data name="button_Weather_textMin.Text" xml:space="preserve">
+    <value>最低温度</value>
+  </data>
+  <data name="checkBox_Weather_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_Weather_Use.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="comboBox_Weather_alignment.Items" xml:space="preserve">
+    <value>左对齐</value>
+  </data>
+  <data name="comboBox_Weather_alignment.Items1" xml:space="preserve">
+    <value>右对齐</value>
+  </data>
+  <data name="comboBox_Weather_alignment.Items2" xml:space="preserve">
+    <value>居中对齐</value>
+  </data>
+  <data name="label136.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label136.Text" xml:space="preserve">
+    <value>坐标</value>
+  </data>
+  <data name="label138.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label138.Text" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="label139.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label139.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label139.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label139.Text" xml:space="preserve">
+    <value>起始图像</value>
+  </data>
+  <data name="label140.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label140.Text" xml:space="preserve">
+    <value>图标坐标</value>
+  </data>
+  <data name="label141.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label141.Text" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="label142.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label142.Text" xml:space="preserve">
+    <value>间距</value>
+  </data>
+  <data name="label147.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 104</value>
+  </data>
+  <data name="label147.Text" xml:space="preserve">
+    <value>错误图像</value>
+  </data>
+  <data name="label153.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="label153.Text" xml:space="preserve">
+    <value>"°" 符号</value>
+  </data>
+  <data name="label182.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="label182.Text" xml:space="preserve">
+    <value>"-" 符号</value>
+  </data>
+  <data name="button_Weather_text.Text" xml:space="preserve">
+    <value>当前温度</value>
+  </data>
+  <data name="checkBox_Weather_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_Weather_pictures_Use.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="comboBox_Weather_pictures_image.ToolTip" xml:space="preserve">
+    <value>1. Cloudy
+2. Chance of rain
+3. Chance of snow
+4. Sunny
+5. Overcast
+6. Light rain
+7. Light snow
+8. Moderate rain
+9. Moderate snow
+10. Heavy snowfall
+11. Heavy rain
+12. Sandstorm
+13. Sleet
+14. Fog
+15. Haze
+16. Thunderstorm
+17. Snowstorm
+18. Dusty
+19. Extreme rain
+20. Rain with hail
+21. Heavy rain with hail
+22. Rainstorm
+23. Dust storm
+24. Severe sandstorm
+25. Torrential rain
+26. Unknown weather
+27. Cloudy night
+28. Rainy night
+29. Clear night</value>
+  </data>
+  <data name="label148.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label148.Text" xml:space="preserve">
+    <value>坐标</value>
+  </data>
+  <data name="label149.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label149.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label149.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label149.Text" xml:space="preserve">
+    <value>起始图像</value>
+  </data>
+  <data name="label152.Text" xml:space="preserve">
+    <value>图像数量</value>
+  </data>
+  <data name="button_Weather_pictures.Text" xml:space="preserve">
+    <value>图像进度</value>
+  </data>
+  <data name="tabPage_Weather.Text" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="tabPage_UVindex.Text" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="tabPage_AirQuality.Text" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="tabPage_Humidity.Text" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="tabPage_Sunrise.Text" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="tabPage_WindForce.Text" xml:space="preserve">
+    <value>风力</value>
+  </data>
+  <data name="tabPage_Altitude.Text" xml:space="preserve">
+    <value>海拔高度</value>
+  </data>
+  <data name="tabPage_AirPressure.Text" xml:space="preserve">
+    <value>气压</value>
+  </data>
   <data name="tabPage_Air.Text" xml:space="preserve">
     <value>天气</value>
   </data>
@@ -140,7 +677,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAARABBAEQAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAATABBAEwAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -219,7 +756,6 @@
   <data name="tabPage_System_AOD.Text" xml:space="preserve">
     <value>系统</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button_GenerateID.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 23</value>
   </data>
@@ -255,9 +791,6 @@
   </data>
   <data name="checkBox_12h_Use.Text" xml:space="preserve">
     <value>12小时制</value>
-  </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 82</value>
   </data>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -329,9 +862,6 @@
   </data>
   <data name="label573.Text" xml:space="preserve">
     <value>坐标</value>
-  </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 82</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -419,7 +949,6 @@
   <data name="checkBox_Second_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label522.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3000,535 +3529,6 @@
   <data name="tabPage_FatBurning.Text" xml:space="preserve">
     <value>燃烧脂肪</value>
   </data>
-  <data name="tabPage_Weather.Text" xml:space="preserve">
-    <value>天气</value>
-  </data>
-  <data name="checkBox_Weather_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Weather_scaleLinear_Use.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
-  <data name="radioButton_Weather_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButton_Weather_scaleLinear_image.Text" xml:space="preserve">
-    <value>图像</value>
-  </data>
-  <data name="radioButtonWeather_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButtonWeather_scaleLinear_color.Text" xml:space="preserve">
-    <value>颜色</value>
-  </data>
-  <data name="comboBox_Weather_scaleLinear_flatness.Items" xml:space="preserve">
-    <value>圆</value>
-  </data>
-  <data name="comboBox_Weather_scaleLinear_flatness.Items1" xml:space="preserve">
-    <value>平底</value>
-  </data>
-  <data name="label103.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label103.Text" xml:space="preserve">
-    <value>开始坐标</value>
-  </data>
-  <data name="label106.Text" xml:space="preserve">
-    <value>宽度</value>
-  </data>
-  <data name="label107.Text" xml:space="preserve">
-    <value>长度</value>
-  </data>
-  <data name="label108.Text" xml:space="preserve">
-    <value>指针图像</value>
-  </data>
-  <data name="label109.Text" xml:space="preserve">
-    <value>背景图像</value>
-  </data>
-  <data name="label295.Text" xml:space="preserve">
-    <value>结束线</value>
-  </data>
-  <data name="button_Weather_scaleLinear.Text" xml:space="preserve">
-    <value>线性刻度</value>
-  </data>
-  <data name="checkBox_Weather_scaleCircle_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Weather_scaleCircle_Use.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_image.Text" xml:space="preserve">
-    <value>图像</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_color.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_color.Text" xml:space="preserve">
-    <value>颜色</value>
-  </data>
-  <data name="comboBox_Weather_scaleCircle_flatness.Items" xml:space="preserve">
-    <value>圆</value>
-  </data>
-  <data name="comboBox_Weather_scaleCircle_flatness.Items1" xml:space="preserve">
-    <value>三角形</value>
-  </data>
-  <data name="comboBox_Weather_scaleCircle_flatness.Items2" xml:space="preserve">
-    <value>平底</value>
-  </data>
-  <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label110.Text" xml:space="preserve">
-    <value>中心坐标</value>
-  </data>
-  <data name="label113.Text" xml:space="preserve">
-    <value>宽度</value>
-  </data>
-  <data name="label114.Text" xml:space="preserve">
-    <value>半径</value>
-  </data>
-  <data name="label115.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 110</value>
-  </data>
-  <data name="label115.Text" xml:space="preserve">
-    <value>结束角</value>
-  </data>
-  <data name="label116.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 110</value>
-  </data>
-  <data name="label116.Text" xml:space="preserve">
-    <value>起始角</value>
-  </data>
-  <data name="label117.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label117.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 110</value>
-  </data>
-  <data name="label117.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 13</value>
-  </data>
-  <data name="label117.Text" xml:space="preserve">
-    <value>结束线</value>
-  </data>
-  <data name="label117.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="label118.Text" xml:space="preserve">
-    <value>背景图像</value>
-  </data>
-  <data name="button_Weather_scaleCircle.Text" xml:space="preserve">
-    <value>环形刻度</value>
-  </data>
-  <data name="checkBox_Weather_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Weather_hand_Use.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
-  <data name="label119.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 110</value>
-  </data>
-  <data name="label119.Text" xml:space="preserve">
-    <value>结束角</value>
-  </data>
-  <data name="label120.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 110</value>
-  </data>
-  <data name="label120.Text" xml:space="preserve">
-    <value>起始角</value>
-  </data>
-  <data name="label121.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label121.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 41</value>
-  </data>
-  <data name="label121.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="label121.Text" xml:space="preserve">
-    <value>旋转点偏移</value>
-  </data>
-  <data name="label124.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label124.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 41</value>
-  </data>
-  <data name="label124.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 13</value>
-  </data>
-  <data name="label124.Text" xml:space="preserve">
-    <value>旋转中心坐标</value>
-  </data>
-  <data name="label125.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label125.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label125.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label125.Text" xml:space="preserve">
-    <value>指针图像</value>
-  </data>
-  <data name="label126.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label126.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 110</value>
-  </data>
-  <data name="label126.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 13</value>
-  </data>
-  <data name="label126.Text" xml:space="preserve">
-    <value>中心图像坐标</value>
-  </data>
-  <data name="label131.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label131.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 110</value>
-  </data>
-  <data name="label131.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label131.Text" xml:space="preserve">
-    <value>中心图像</value>
-  </data>
-  <data name="label132.Text" xml:space="preserve">
-    <value>背景图像坐标</value>
-  </data>
-  <data name="label135.Text" xml:space="preserve">
-    <value>背景图像</value>
-  </data>
-  <data name="button_Weather_hand.Text" xml:space="preserve">
-    <value>指针</value>
-  </data>
-  <data name="checkBox_Weather_UseMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Weather_UseMax.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMax.Items" xml:space="preserve">
-    <value>左对齐</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMax.Items1" xml:space="preserve">
-    <value>右对齐</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMax.Items2" xml:space="preserve">
-    <value>居中对齐</value>
-  </data>
-  <data name="checkBox_Weather_followMax.Text" xml:space="preserve">
-    <value>跟随最低温度</value>
-  </data>
-  <data name="label154.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label154.Text" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="label156.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label156.Text" xml:space="preserve">
-    <value>图标</value>
-  </data>
-  <data name="label157.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label157.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label157.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label157.Text" xml:space="preserve">
-    <value>起始图像</value>
-  </data>
-  <data name="label158.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label158.Text" xml:space="preserve">
-    <value>图标坐标</value>
-  </data>
-  <data name="label159.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label159.Text" xml:space="preserve">
-    <value>对齐方式</value>
-  </data>
-  <data name="label160.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label160.Text" xml:space="preserve">
-    <value>间距</value>
-  </data>
-  <data name="label165.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 104</value>
-  </data>
-  <data name="label165.Text" xml:space="preserve">
-    <value>错误图像</value>
-  </data>
-  <data name="label166.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="label166.Text" xml:space="preserve">
-    <value>"°" 符号</value>
-  </data>
-  <data name="label180.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
-  </data>
-  <data name="label180.Text" xml:space="preserve">
-    <value>"-" 符号</value>
-  </data>
-  <data name="button_Weather_textMax.Text" xml:space="preserve">
-    <value>最高温度</value>
-  </data>
-  <data name="checkBox_Weather_UseMin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Weather_UseMin.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMin.Items" xml:space="preserve">
-    <value>左对齐</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMin.Items1" xml:space="preserve">
-    <value>右对齐</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMin.Items2" xml:space="preserve">
-    <value>居中对齐</value>
-  </data>
-  <data name="label167.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label167.Text" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="label169.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label169.Text" xml:space="preserve">
-    <value>图标</value>
-  </data>
-  <data name="label170.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label170.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label170.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label170.Text" xml:space="preserve">
-    <value>起始图像</value>
-  </data>
-  <data name="label171.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label171.Text" xml:space="preserve">
-    <value>图标坐标</value>
-  </data>
-  <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label172.Text" xml:space="preserve">
-    <value>对齐方式</value>
-  </data>
-  <data name="label173.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label173.Text" xml:space="preserve">
-    <value>间距</value>
-  </data>
-  <data name="label178.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 104</value>
-  </data>
-  <data name="label178.Text" xml:space="preserve">
-    <value>错误图像</value>
-  </data>
-  <data name="label179.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="label179.Text" xml:space="preserve">
-    <value>"°" 符号</value>
-  </data>
-  <data name="label181.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
-  </data>
-  <data name="label181.Text" xml:space="preserve">
-    <value>"-" 符号</value>
-  </data>
-  <data name="button_Weather_textMin.Text" xml:space="preserve">
-    <value>最低温度</value>
-  </data>
-  <data name="checkBox_Weather_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Weather_Use.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
-  <data name="comboBox_Weather_alignment.Items" xml:space="preserve">
-    <value>左对齐</value>
-  </data>
-  <data name="comboBox_Weather_alignment.Items1" xml:space="preserve">
-    <value>右对齐</value>
-  </data>
-  <data name="comboBox_Weather_alignment.Items2" xml:space="preserve">
-    <value>居中对齐</value>
-  </data>
-  <data name="label136.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label136.Text" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="label138.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label138.Text" xml:space="preserve">
-    <value>图标</value>
-  </data>
-  <data name="label139.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label139.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label139.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label139.Text" xml:space="preserve">
-    <value>起始图像</value>
-  </data>
-  <data name="label140.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label140.Text" xml:space="preserve">
-    <value>图标坐标</value>
-  </data>
-  <data name="label141.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label141.Text" xml:space="preserve">
-    <value>对齐方式</value>
-  </data>
-  <data name="label142.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label142.Text" xml:space="preserve">
-    <value>间距</value>
-  </data>
-  <data name="label147.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 104</value>
-  </data>
-  <data name="label147.Text" xml:space="preserve">
-    <value>错误图像</value>
-  </data>
-  <data name="label153.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="label153.Text" xml:space="preserve">
-    <value>"°" 符号</value>
-  </data>
-  <data name="label182.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
-  </data>
-  <data name="label182.Text" xml:space="preserve">
-    <value>"-" 符号</value>
-  </data>
-  <data name="button_Weather_text.Text" xml:space="preserve">
-    <value>当前温度</value>
-  </data>
-  <data name="checkBox_Weather_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Weather_pictures_Use.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
-  <data name="comboBox_Weather_pictures_image.ToolTip" xml:space="preserve">
-    <value>1. Cloudy
-2. Chance of rain
-3. Chance of snow
-4. Sunny
-5. Overcast
-6. Light rain
-7. Light snow
-8. Moderate rain
-9. Moderate snow
-10. Heavy snowfall
-11. Heavy rain
-12. Sandstorm
-13. Sleet
-14. Fog
-15. Haze
-16. Thunderstorm
-17. Snowstorm
-18. Dusty
-19. Extreme rain
-20. Rain with hail
-21. Heavy rain with hail
-22. Rainstorm
-23. Dust storm
-24. Severe sandstorm
-25. Torrential rain
-26. Unknown weather
-27. Cloudy night
-28. Rainy night
-29. Clear night</value>
-  </data>
-  <data name="label148.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label148.Text" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="label149.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label149.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label149.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label149.Text" xml:space="preserve">
-    <value>起始图像</value>
-  </data>
-  <data name="label152.Text" xml:space="preserve">
-    <value>图像数量</value>
-  </data>
-  <data name="button_Weather_pictures.Text" xml:space="preserve">
-    <value>图像进度</value>
-  </data>
-  <data name="tabPage_UVindex.Text" xml:space="preserve">
-    <value>紫外线指数</value>
-  </data>
-  <data name="tabPage_AirQuality.Text" xml:space="preserve">
-    <value>空气质量</value>
-  </data>
-  <data name="tabPage_Humidity.Text" xml:space="preserve">
-    <value>湿度</value>
-  </data>
-  <data name="tabPage_Sunrise.Text" xml:space="preserve">
-    <value>日出</value>
-  </data>
-  <data name="tabPage_WindForce.Text" xml:space="preserve">
-    <value>风力</value>
-  </data>
-  <data name="tabPage_Altitude.Text" xml:space="preserve">
-    <value>海拔高度</value>
-  </data>
-  <data name="tabPage_AirPressure.Text" xml:space="preserve">
-    <value>气压</value>
-  </data>
   <data name="tabPage_Status.Text" xml:space="preserve">
     <value>状态</value>
   </data>
@@ -5791,11 +5791,20 @@
   <data name="button_Battery_pictures_AOD.Text" xml:space="preserve">
     <value>图像</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>解包/打包</value>
-  </data>
   <data name="tabPage_Show.Text" xml:space="preserve">
     <value>浏览</value>
+  </data>
+  <data name="tabPage_Edit.Text" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>转换中</value>
+  </data>
+  <data name="tabPage_Settings.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="tabPage_About.Text" xml:space="preserve">
+    <value>关于</value>
   </data>
   <data name="userControl_Set12.ButtonText" xml:space="preserve">
     <value>预设值 12</value>
@@ -5878,9 +5887,6 @@
   <data name="label4.Text" xml:space="preserve">
     <value>带json的图像</value>
   </data>
-  <data name="tabPage_Edit.Text" xml:space="preserve">
-    <value>编辑</value>
-  </data>
   <data name="button_RandomPreview.Text" xml:space="preserve">
     <value>随机预览</value>
   </data>
@@ -5901,9 +5907,6 @@
   </data>
   <data name="button_OpenDir.Text" xml:space="preserve">
     <value>打开文件夹</value>
-  </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>转换中</value>
   </data>
   <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 13</value>
@@ -5956,8 +5959,14 @@
   <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
     <value>自定义大小</value>
   </data>
-  <data name="tabPage_Settings.Text" xml:space="preserve">
-    <value>设置</value>
+  <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 213</value>
+  </data>
+  <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="label355.Text" xml:space="preserve">
+    <value>GIF 动画速度</value>
   </data>
   <data name="checkBox_ShowIn12hourFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 17</value>
@@ -6088,9 +6097,6 @@
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>让我自己选</value>
   </data>
-  <data name="tabPage_About.Text" xml:space="preserve">
-    <value>关于</value>
-  </data>
   <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 13</value>
   </data>
@@ -6141,47 +6147,6 @@
   </data>
   <data name="label406.Text" xml:space="preserve">
     <value>版本:</value>
-  </data>
-  <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 39</value>
-  </data>
-  <data name="label483.Text" xml:space="preserve">
-    <value>预览动画速度
-（更高的速度-更流畅的动画，
-但系统负载更多）</value>
-  </data>
-  <data name="button_pack_unpack.Text" xml:space="preserve">
-    <value>浏览</value>
-  </data>
-  <data name="button_unpack.Text" xml:space="preserve">
-    <value>解压bin</value>
-  </data>
-  <data name="button_pack.Text" xml:space="preserve">
-    <value>打包bin</value>
-  </data>
-  <data name="button_zip.Text" xml:space="preserve">
-    <value>压缩bin</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 13</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>打包程序路径</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 13</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>提取表盘的命令</value>
-  </data>
-  <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
-  </data>
-  <data name="label355.Text" xml:space="preserve">
-    <value>GIF 动画速度</value>
-  </data>
-  <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 213</value>
   </data>
   <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 120</value>

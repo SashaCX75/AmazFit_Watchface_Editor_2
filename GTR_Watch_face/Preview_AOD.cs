@@ -2137,6 +2137,10 @@ namespace AmazFit_Watchface_2
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    mask = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
                 mask.Dispose();
@@ -2380,10 +2384,6 @@ namespace AmazFit_Watchface_2
                 if (radioButton_GTS2.Checked)
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
-                }
-                if (radioButton_TRex_pro.Checked)
-                {
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
                 if (radioButton_TRex_pro.Checked)
                 {
