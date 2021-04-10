@@ -31,11 +31,19 @@ namespace AmazFit_Watchface_2
             if (comboBox_image.SelectedIndex < 0) comboBox_image.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImage()
         {
+            if (comboBox_image.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_image.Text, out value);
             return value;
+        }
+
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImage()
+        {
+            return comboBox_image.SelectedIndex;
         }
 
         internal void comboBoxSetIcon(int value)
@@ -44,11 +52,18 @@ namespace AmazFit_Watchface_2
             if (comboBox_icon.SelectedIndex < 0) comboBox_icon.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetIcon()
         {
+            if (comboBox_icon.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_icon.Text, out value);
             return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexIcon()
+        {
+            return comboBox_icon.SelectedIndex;
         }
 
         internal void comboBoxSetUnit(int value)
@@ -57,11 +72,18 @@ namespace AmazFit_Watchface_2
             if (comboBox_unit.SelectedIndex < 0) comboBox_unit.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetUnit()
         {
+            if (comboBox_unit.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_unit.Text, out value);
             return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexUnit()
+        {
+            return comboBox_unit.SelectedIndex;
         }
 
         internal void comboBoxSetImageError(int value)
@@ -70,24 +92,33 @@ namespace AmazFit_Watchface_2
             if (comboBox_imageError.SelectedIndex < 0) comboBox_imageError.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImageError()
         {
+            if (comboBox_imageError.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_imageError.Text, out value);
             return value;
         }
 
-        internal void comboBoxSetImageDecimalPoint(int value)
+        internal void comboBoxSetImageDecimalPointOrMinus(int value)
         {
             comboBox_imageDecimalPoint.Text = value.ToString();
             if (comboBox_imageDecimalPoint.SelectedIndex < 0) comboBox_imageDecimalPoint.Text = "";
         }
 
-        internal int comboBoxGetImageDecimalPoint()
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
+        internal int comboBoxGetImageDecimalPointOrMinus()
         {
+            if (comboBox_imageDecimalPoint.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_imageDecimalPoint.Text, out value);
             return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImageDecimalPointOrMinus()
+        {
+            return comboBox_imageDecimalPoint.SelectedIndex;
         }
 
         internal void comboBoxSetAlignment(string alignment)
@@ -113,6 +144,7 @@ namespace AmazFit_Watchface_2
             comboBox_alignment.SelectedIndex = result;
         }
 
+        /// <summary>Возвращает выравнивание строкой "Left", "Right", "Center"</summary>
         internal string comboBoxGetAlignment()
         {
             string result;
@@ -134,6 +166,11 @@ namespace AmazFit_Watchface_2
 
             }
             return result;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexAlignment()
+        {
+            return comboBox_alignment.SelectedIndex;
         }
 
         /// <summary>Отображение кнопки копирования значений для AOD</summary>
@@ -199,8 +236,8 @@ namespace AmazFit_Watchface_2
         public delegate void CollapseHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
-        protected internal event ValueChangedHandler ValueChanged;
-        protected internal delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
+        public event ValueChangedHandler ValueChanged;
+        public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
         public event AOD_CopyHandler AOD_Copy_text;

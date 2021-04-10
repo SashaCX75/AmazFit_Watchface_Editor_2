@@ -9,694 +9,6 @@ namespace AmazFit_Watchface_2
 {
     public partial class Form1 : Form
     {
-        private void button_Hour_Click(object sender, EventArgs e)
-        {
-            if (panel_Hour.Height == 1)
-            {
-                panel_Hour.Height = (int)(215 * currentDPI);
-                //panel_Minute.Height = 1;
-                //panel_Second.Height = 1;
-            }
-            else panel_Hour.Height = 1;
-        }
-
-        private void button_Minute_Click(object sender, EventArgs e)
-        {
-            if (panel_Minute.Height == 1)
-            {
-                //panel_Hour.Height = 1;
-                panel_Minute.Height = (int)(215 * currentDPI);
-                //panel_Second.Height = 1;
-            }
-            else panel_Minute.Height = 1;
-        }
-
-        private void button_Second_Click(object sender, EventArgs e)
-        {
-            if (panel_Second.Height == 1)
-            {
-                //panel_Hour.Height = 1;
-                //panel_Minute.Height = 1;
-                panel_Second.Height = (int)(215 * currentDPI);
-            }
-            else panel_Second.Height = 1;
-        }
-
-        private void button_Hour_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Hour_hand.Height == 1)
-            {
-                panel_Hour_hand.Height = (int)(155 * currentDPI);
-                //panel_Minute_hand.Height = 1;
-                //panel_Second_hand.Height = 1;
-            }
-            else panel_Hour_hand.Height = 1;
-        }
-
-        private void button_Minute_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Minute_hand.Height == 1)
-            {
-                //panel_Hour_hand.Height = 1;
-                panel_Minute_hand.Height = (int)(155 * currentDPI);
-                //panel_Second_hand.Height = 1;
-            }
-            else panel_Minute_hand.Height = 1;
-        }
-
-        private void button_Second_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Second_hand.Height == 1)
-            {
-                //panel_Hour_hand.Height = 1;
-                //panel_Minute_hand.Height = 1;
-                panel_Second_hand.Height = (int)(155 * currentDPI);
-            }
-            else panel_Second_hand.Height = 1;
-        }
-
-        private void button_Day_text_Click(object sender, EventArgs e)
-        {
-            if (panel_Day_text.Height == 1)
-            {
-                panel_Day_text.Height = (int)(215 * currentDPI);
-            }
-            else panel_Day_text.Height = 1;
-        }
-
-        private void button_Day_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Day_hand.Height == 1)
-            {
-                panel_Day_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_Day_hand.Height = 1;
-        }
-
-        private void button_Month_image_Click(object sender, EventArgs e)
-        {
-            if (panel_Month_pictures.Height == 1)
-            {
-                panel_Month_pictures.Height = (int)(85 * currentDPI);
-            }
-            else panel_Month_pictures.Height = 1;
-        }
-
-        private void button_Month_text_Click(object sender, EventArgs e)
-        {
-            if (panel_Month_text.Height == 1)
-            {
-                panel_Month_text.Height = (int)(215 * currentDPI);
-            }
-            else panel_Month_text.Height = 1;
-        }
-
-        private void button_Month_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Month_hand.Height == 1)
-            {
-                panel_Month_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_Month_hand.Height = 1;
-        }
-
-        private void button_DOW_image_Click(object sender, EventArgs e)
-        {
-            if (panel_DOW_image.Height == 1)
-            {
-                panel_DOW_image.Height = (int)(85 * currentDPI);
-            }
-            else panel_DOW_image.Height = 1;
-        }
-
-        private void button_DOW_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_DOW_hand.Height == 1)
-            {
-                panel_DOW_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_DOW_hand.Height = 1;
-        }
-
-
-
-        private void button_Hour_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Hour_AOD.Height == 1)
-            {
-                panel_Hour_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Hour_AOD.Height = 1;
-
-        }
-
-        private void button_Minute_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Minute_AOD.Height == 1)
-            {
-                panel_Minute_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Minute_AOD.Height = 1;
-        }
-
-        private void button_Hour_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Hour_hand_AOD.Height == 1)
-            {
-                panel_Hour_hand_AOD.Height = (int)(155 * currentDPI);
-            }
-            else panel_Hour_hand_AOD.Height = 1;
-        }
-
-        private void button_Minute_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Minute_hand_AOD.Height == 1)
-            {
-                panel_Minute_hand_AOD.Height = (int)(155 * currentDPI);
-            }
-            else panel_Minute_hand_AOD.Height = 1;
-        }
-
-        private void button_Day_text_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Day_text_AOD.Height == 1)
-            {
-                panel_Day_text_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Day_text_AOD.Height = 1;
-        }
-
-        private void button_Day_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Day_hand_AOD.Height == 1)
-            {
-                panel_Day_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_Day_hand_AOD.Height = 1;
-        }
-
-        private void button_Month_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Month_pictures_AOD.Height == 1)
-            {
-                panel_Month_pictures_AOD.Height = (int)(85 * currentDPI);
-            }
-            else panel_Month_pictures_AOD.Height = 1;
-        }
-
-        private void button_Month_text_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Month_text_AOD.Height == 1)
-            {
-                panel_Month_text_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Month_text_AOD.Height = 1;
-        }
-
-        private void button_Month_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Month_hand_AOD.Height == 1)
-            {
-                panel_Month_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_Month_hand_AOD.Height = 1;
-        }
-
-        private void button_DOW_image_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_DOW_image_AOD.Height == 1)
-            {
-                panel_DOW_image_AOD.Height = (int)(85 * currentDPI);
-            }
-            else panel_DOW_image_AOD.Height = 1;
-        }
-
-        private void button_DOW_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_DOW_hand_AOD.Height == 1)
-            {
-                panel_DOW_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_DOW_hand_AOD.Height = 1;
-        }
-
-
-
-        private void button_Battery_pictures_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_pictures.Height == 1)
-            {
-                panel_Battery_pictures.Height = (int)(85 * currentDPI);
-            }
-            else panel_Battery_pictures.Height = 1;
-        }
-
-        private void button_Battery_text_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_text.Height == 1)
-            {
-                panel_Battery_text.Height = (int)(215 * currentDPI);
-            }
-            else panel_Battery_text.Height = 1;
-        }
-
-        private void button_Battery_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_hand.Height == 1)
-            {
-                panel_Battery_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_Battery_hand.Height = 1;
-        }
-
-        private void button_Battery_scaleCircle_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_scaleCircle.Height == 1)
-            {
-                panel_Battery_scaleCircle.Height = (int)(215 * currentDPI);
-            }
-            else panel_Battery_scaleCircle.Height = 1;
-        }
-
-        private void button_Battery_scaleLinear_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_scaleLinear.Height == 1)
-            {
-                panel_Battery_scaleLinear.Height = (int)(155 * currentDPI);
-            }
-            else panel_Battery_scaleLinear.Height = 1;
-        }
-
-        private void button_Battery_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_pictures_AOD.Height == 1)
-            {
-                panel_Battery_pictures_AOD.Height = (int)(85 * currentDPI);
-            }
-            else panel_Battery_pictures_AOD.Height = 1;
-        }
-
-        private void button_Battery_text_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_text_AOD.Height == 1)
-            {
-                panel_Battery_text_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Battery_text_AOD.Height = 1;
-        }
-
-        private void button_Battery_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_hand_AOD.Height == 1)
-            {
-                panel_Battery_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_Battery_hand_AOD.Height = 1;
-        }
-
-        private void button_Battery_scaleCircle_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_scaleCircle_AOD.Height == 1)
-            {
-                panel_Battery_scaleCircle_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Battery_scaleCircle_AOD.Height = 1;
-        }
-
-        private void button_Battery_scaleLinear_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Battery_scaleLinear_AOD.Height == 1)
-            {
-                panel_Battery_scaleLinear_AOD.Height = (int)(155 * currentDPI);
-            }
-            else panel_Battery_scaleLinear_AOD.Height = 1;
-        }
-
-
-        private void button_Steps_pictures_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_pictures.Height == 1)
-            {
-                panel_Steps_pictures.Height = (int)(85 * currentDPI);
-            }
-            else panel_Steps_pictures.Height = 1;
-        }
-
-        private void button_Steps_text_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_text.Height == 1)
-            {
-                panel_Steps_text.Height = (int)(215 * currentDPI);
-            }
-            else panel_Steps_text.Height = 1;
-        }
-
-        private void button_Steps_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_hand.Height == 1)
-            {
-                panel_Steps_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_Steps_hand.Height = 1;
-        }
-
-        private void button_Steps_scaleCircle_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_scaleCircle.Height == 1)
-            {
-                panel_Steps_scaleCircle.Height = (int)(215 * currentDPI);
-            }
-            else panel_Steps_scaleCircle.Height = 1;
-        }
-
-        private void button_Steps_scaleLinear_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_scaleLinear.Height == 1)
-            {
-                panel_Steps_scaleLinear.Height = (int)(155 * currentDPI);
-            }
-            else panel_Steps_scaleLinear.Height = 1;
-        }
-
-        private void button_Steps_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_pictures_AOD.Height == 1)
-            {
-                panel_Steps_pictures_AOD.Height = (int)(85 * currentDPI);
-            }
-            else panel_Steps_pictures_AOD.Height = 1;
-        }
-
-        private void button_Steps_text_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_text_AOD.Height == 1)
-            {
-                panel_Steps_text_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Steps_text_AOD.Height = 1;
-        }
-
-        private void button_Steps_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_hand_AOD.Height == 1)
-            {
-                panel_Steps_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_Steps_hand_AOD.Height = 1;
-        }
-
-        private void button_Steps_scaleCircle_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_scaleCircle_AOD.Height == 1)
-            {
-                panel_Steps_scaleCircle_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Steps_scaleCircle_AOD.Height = 1;
-        }
-
-        private void button_Steps_scaleLinear_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Steps_scaleLinear_AOD.Height == 1)
-            {
-                panel_Steps_scaleLinear_AOD.Height = (int)(155 * currentDPI);
-            }
-            else panel_Steps_scaleLinear_AOD.Height = 1;
-        }
-
-
-        private void button_Calories_pictures_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_pictures.Height == 1)
-            {
-                panel_Calories_pictures.Height = (int)(85 * currentDPI);
-            }
-            else panel_Calories_pictures.Height = 1;
-        }
-
-        private void button_Calories_text_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_text.Height == 1)
-            {
-                panel_Calories_text.Height = (int)(215 * currentDPI);
-            }
-            else panel_Calories_text.Height = 1;
-        }
-
-        private void button_Calories_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_hand.Height == 1)
-            {
-                panel_Calories_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_Calories_hand.Height = 1;
-        }
-
-        private void button_Calories_scaleCircle_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_scaleCircle.Height == 1)
-            {
-                panel_Calories_scaleCircle.Height = (int)(215 * currentDPI);
-            }
-            else panel_Calories_scaleCircle.Height = 1;
-        }
-
-        private void button_Calories_scaleLinear_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_scaleLinear.Height == 1)
-            {
-                panel_Calories_scaleLinear.Height = (int)(155 * currentDPI);
-            }
-            else panel_Calories_scaleLinear.Height = 1;
-        }
-
-        private void button_Calories_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_pictures_AOD.Height == 1)
-            {
-                panel_Calories_pictures_AOD.Height = (int)(85 * currentDPI);
-            }
-            else panel_Calories_pictures_AOD.Height = 1;
-        }
-
-        private void button_Calories_text_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_text_AOD.Height == 1)
-            {
-                panel_Calories_text_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Calories_text_AOD.Height = 1;
-        }
-
-        private void button_Calories_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_hand_AOD.Height == 1)
-            {
-                panel_Calories_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_Calories_hand_AOD.Height = 1;
-        }
-
-        private void button_Calories_scaleCircle_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_scaleCircle_AOD.Height == 1)
-            {
-                panel_Calories_scaleCircle_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_Calories_scaleCircle_AOD.Height = 1;
-        }
-
-        private void button_Calories_scaleLinear_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_Calories_scaleLinear_AOD.Height == 1)
-            {
-                panel_Calories_scaleLinear_AOD.Height = (int)(155 * currentDPI);
-            }
-            else panel_Calories_scaleLinear_AOD.Height = 1;
-        }
-
-
-        private void button_HeartRate_pictures_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_pictures.Height == 1)
-            {
-                panel_HeartRate_pictures.Height = (int)(85 * currentDPI);
-            }
-            else panel_HeartRate_pictures.Height = 1;
-        }
-
-        private void button_HeartRate_text_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_text.Height == 1)
-            {
-                panel_HeartRate_text.Height = (int)(215 * currentDPI);
-            }
-            else panel_HeartRate_text.Height = 1;
-        }
-
-        private void button_HeartRate_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_hand.Height == 1)
-            {
-                panel_HeartRate_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_HeartRate_hand.Height = 1;
-        }
-
-        private void button_HeartRate_scaleCircle_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_scaleCircle.Height == 1)
-            {
-                panel_HeartRate_scaleCircle.Height = (int)(215 * currentDPI);
-            }
-            else panel_HeartRate_scaleCircle.Height = 1;
-        }
-
-        private void button_HeartRate_scaleLinear_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_scaleLinear.Height == 1)
-            {
-                panel_HeartRate_scaleLinear.Height = (int)(155 * currentDPI);
-            }
-            else panel_HeartRate_scaleLinear.Height = 1;
-        }
-
-        private void button_HeartRate_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_pictures_AOD.Height == 1)
-            {
-                panel_HeartRate_pictures_AOD.Height = (int)(85 * currentDPI);
-            }
-            else panel_HeartRate_pictures_AOD.Height = 1;
-        }
-
-        private void button_HeartRate_text_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_text_AOD.Height == 1)
-            {
-                panel_HeartRate_text_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_HeartRate_text_AOD.Height = 1;
-        }
-
-        private void button_HeartRate_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_hand_AOD.Height == 1)
-            {
-                panel_HeartRate_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_HeartRate_hand_AOD.Height = 1;
-        }
-
-        private void button_HeartRate_scaleCircle_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_scaleCircle_AOD.Height == 1)
-            {
-                panel_HeartRate_scaleCircle_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_HeartRate_scaleCircle_AOD.Height = 1;
-        }
-
-        private void button_HeartRate_scaleLinear_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_HeartRate_scaleLinear_AOD.Height == 1)
-            {
-                panel_HeartRate_scaleLinear_AOD.Height = (int)(155 * currentDPI);
-            }
-            else panel_HeartRate_scaleLinear_AOD.Height = 1;
-        }
-
-
-        private void button_PAI_pictures_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_pictures.Height == 1)
-            {
-                panel_PAI_pictures.Height = (int)(85 * currentDPI);
-            }
-            else panel_PAI_pictures.Height = 1;
-        }
-
-        private void button_PAI_text_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_text.Height == 1)
-            {
-                panel_PAI_text.Height = (int)(215 * currentDPI);
-            }
-            else panel_PAI_text.Height = 1;
-        }
-
-        private void button_PAI_hand_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_hand.Height == 1)
-            {
-                panel_PAI_hand.Height = (int)(225 * currentDPI);
-            }
-            else panel_PAI_hand.Height = 1;
-        }
-
-        private void button_PAI_scaleCircle_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_scaleCircle.Height == 1)
-            {
-                panel_PAI_scaleCircle.Height = (int)(215 * currentDPI);
-            }
-            else panel_PAI_scaleCircle.Height = 1;
-        }
-
-        private void button_PAI_scaleLinear_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_scaleLinear.Height == 1)
-            {
-                panel_PAI_scaleLinear.Height = (int)(155 * currentDPI);
-            }
-            else panel_PAI_scaleLinear.Height = 1;
-        }
-
-        private void button_PAI_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_pictures_AOD.Height == 1)
-            {
-                panel_PAI_pictures_AOD.Height = (int)(85 * currentDPI);
-            }
-            else panel_PAI_pictures_AOD.Height = 1;
-        }
-
-        private void button_PAI_text_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_text_AOD.Height == 1)
-            {
-                panel_PAI_text_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_PAI_text_AOD.Height = 1;
-        }
-
-        private void button_PAI_hand_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_hand_AOD.Height == 1)
-            {
-                panel_PAI_hand_AOD.Height = (int)(225 * currentDPI);
-            }
-            else panel_PAI_hand_AOD.Height = 1;
-        }
-
-        private void button_PAI_scaleCircle_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_scaleCircle_AOD.Height == 1)
-            {
-                panel_PAI_scaleCircle_AOD.Height = (int)(215 * currentDPI);
-            }
-            else panel_PAI_scaleCircle_AOD.Height = 1;
-        }
-
-        private void button_PAI_scaleLinear_AOD_Click(object sender, EventArgs e)
-        {
-            if (panel_PAI_scaleLinear_AOD.Height == 1)
-            {
-                panel_PAI_scaleLinear_AOD.Height = (int)(155 * currentDPI);
-            }
-            else panel_PAI_scaleLinear_AOD.Height = 1;
-        }
-
-
         private void button_Weather_pictures_Click(object sender, EventArgs e)
         {
             if (panel_Weather_pictures.Height == 1)
@@ -914,37 +226,47 @@ namespace AmazFit_Watchface_2
             Copy_DOW_image_AOD();
             Copy_DOW_hand_AOD();
 
-            Copy_pictures_AOD(panel_Battery_pictures, panel_Battery_pictures_AOD);
-            Copy_text_AOD(panel_Battery_text, panel_Battery_text_AOD);
-            Copy_hand_AOD(panel_Battery_hand, panel_Battery_hand_AOD);
-            Copy_scaleCircle_AOD(panel_Battery_scaleCircle, panel_Battery_scaleCircle_AOD);
-            Copy_scaleLinear_AOD(panel_Battery_scaleLinear, panel_Battery_scaleLinear_AOD);
 
-            Copy_pictures_AOD(panel_Steps_pictures, panel_Steps_pictures_AOD);
-            Copy_text_AOD(panel_Steps_text, panel_Steps_text_AOD);
-            Copy_hand_AOD(panel_Steps_hand, panel_Steps_hand_AOD);
-            Copy_scaleCircle_AOD(panel_Steps_scaleCircle, panel_Steps_scaleCircle_AOD);
-            Copy_scaleLinear_AOD(panel_Steps_scaleLinear, panel_Steps_scaleLinear_AOD);
+            Copy_pictures_AOD(userControl_pictures_Battery, userControl_pictures_Battery_AOD);
+            Copy_text_AOD(userControl_text_Battery, userControl_text_Battery_AOD);
+            Copy_hand_AOD(userControl_hand_Battery, userControl_hand_Battery_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Battery, userControl_scaleCircle_Battery_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Battery, userControl_scaleLinear_Battery_AOD);
 
-            Copy_pictures_AOD(panel_Calories_pictures, panel_Calories_pictures_AOD);
-            Copy_text_AOD(panel_Calories_text, panel_Calories_text_AOD);
-            Copy_hand_AOD(panel_Calories_hand, panel_Calories_hand_AOD);
-            Copy_scaleCircle_AOD(panel_Calories_scaleCircle, panel_Calories_scaleCircle_AOD);
-            Copy_scaleLinear_AOD(panel_Calories_scaleLinear, panel_Calories_scaleLinear_AOD);
+            Copy_pictures_AOD(userControl_pictures_Steps, userControl_pictures_Steps_AOD);
+            Copy_text_AOD(userControl_text_Steps, userControl_text_Steps_AOD);
+            Copy_hand_AOD(userControl_hand_Steps, userControl_hand_Steps_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Steps, userControl_scaleCircle_Steps_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Steps, userControl_scaleLinear_Steps_AOD);
 
-            Copy_pictures_AOD(panel_HeartRate_pictures, panel_HeartRate_pictures_AOD);
-            Copy_text_AOD(panel_HeartRate_text, panel_HeartRate_text_AOD);
-            Copy_hand_AOD(panel_HeartRate_hand, panel_HeartRate_hand_AOD);
-            Copy_scaleCircle_AOD(panel_HeartRate_scaleCircle, panel_HeartRate_scaleCircle_AOD);
-            Copy_scaleLinear_AOD(panel_HeartRate_scaleLinear, panel_HeartRate_scaleLinear_AOD);
+            Copy_pictures_AOD(userControl_pictures_Calories, userControl_pictures_Calories_AOD);
+            Copy_text_AOD(userControl_text_Calories, userControl_text_Calories_AOD);
+            Copy_hand_AOD(userControl_hand_Calories, userControl_hand_Calories_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Calories, userControl_scaleCircle_Calories_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Calories, userControl_scaleLinear_Calories_AOD);
 
-            Copy_pictures_AOD(panel_PAI_pictures, panel_PAI_pictures_AOD);
-            Copy_text_AOD(panel_PAI_text, panel_PAI_text_AOD);
-            Copy_hand_AOD(panel_PAI_hand, panel_PAI_hand_AOD);
-            Copy_scaleCircle_AOD(panel_PAI_scaleCircle, panel_PAI_scaleCircle_AOD);
-            Copy_scaleLinear_AOD(panel_PAI_scaleLinear, panel_PAI_scaleLinear_AOD);
+            Copy_pictures_AOD(userControl_pictures_HeartRate, userControl_pictures_HeartRate_AOD);
+            Copy_text_AOD(userControl_text_HeartRate, userControl_text_HeartRate_AOD);
+            Copy_hand_AOD(userControl_hand_HeartRate, userControl_hand_HeartRate_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_HeartRate, userControl_scaleCircle_HeartRate_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_HeartRate, userControl_scaleLinear_HeartRate_AOD);
 
-            Copy_text_Distance_AOD(panel_Distance_text, panel_Distance_text_AOD);
+            Copy_pictures_AOD(userControl_pictures_PAI, userControl_pictures_PAI_AOD);
+            Copy_text_AOD(userControl_text_PAI, userControl_text_PAI_AOD);
+            Copy_hand_AOD(userControl_hand_PAI, userControl_hand_PAI_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_PAI, userControl_scaleCircle_PAI_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_PAI, userControl_scaleLinear_PAI_AOD);
+
+            Copy_text_AOD(userControl_text_Distance, userControl_text_Distance_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_StandUp, userControl_pictures_StandUp_AOD);
+            Copy_text_AOD(userControl_text_StandUp, userControl_text_StandUp_AOD);
+            Copy_hand_AOD(userControl_hand_StandUp, userControl_hand_StandUp_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_StandUp, userControl_scaleCircle_StandUp_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_StandUp, userControl_scaleLinear_StandUp_AOD);
+
+
+
 
             Copy_pictures_AOD(panel_Weather_pictures, panel_Weather_pictures_AOD);
             Copy_Weather_textMin_AOD(panel_Weather_text, panel_Weather_text_AOD);
@@ -954,9 +276,36 @@ namespace AmazFit_Watchface_2
             Copy_scaleCircle_AOD(panel_Weather_scaleCircle, panel_Weather_scaleCircle_AOD);
             Copy_scaleLinear_AOD(panel_Weather_scaleLinear, panel_Weather_scaleLinear_AOD);
 
+
+
+
+            Copy_pictures_AOD(userControl_pictures_Stress, userControl_pictures_Stress_AOD);
+            Copy_text_AOD(userControl_text_Stress, userControl_text_Stress_AOD);
+            Copy_hand_AOD(userControl_hand_Stress, userControl_hand_Stress_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Stress, userControl_scaleCircle_Stress_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Stress, userControl_scaleLinear_Stress_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_ActivityGoal, userControl_pictures_ActivityGoal_AOD);
+            Copy_text_AOD(userControl_text_ActivityGoal, userControl_text_ActivityGoal_AOD);
+            Copy_hand_AOD(userControl_hand_ActivityGoal, userControl_hand_ActivityGoal_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_ActivityGoal, userControl_scaleCircle_ActivityGoal_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_ActivityGoal, userControl_scaleLinear_ActivityGoal_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_FatBurning, userControl_pictures_FatBurning_AOD);
+            Copy_text_AOD(userControl_text_FatBurning, userControl_text_FatBurning_AOD);
+            Copy_hand_AOD(userControl_hand_FatBurning, userControl_hand_FatBurning_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_FatBurning, userControl_scaleCircle_FatBurning_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_FatBurning, userControl_scaleLinear_FatBurning_AOD);
+
+
+
+
+
+
+
             PreviewView = true;
-            PreviewImage();
             JSON_write();
+            PreviewImage();
         }
 
         private void button_Copy_Hour_AOD_Click(object sender, EventArgs e)
@@ -1248,6 +597,82 @@ namespace AmazFit_Watchface_2
             numericUpDown_DOW_hand_endAngle_AOD.Value = numericUpDown_DOW_hand_endAngle.Value;
         }
 
+
+
+        private void Copy_pictures_AOD(UserControl_pictures userControl_pictures, UserControl_pictures userControl_pictures_AOD)
+        {
+            userControl_pictures_AOD.checkBox_pictures_Use.Checked = userControl_pictures.checkBox_pictures_Use.Checked;
+            userControl_pictures_AOD.comboBoxSetImage(userControl_pictures.comboBoxGetImage());
+            userControl_pictures_AOD.numericUpDown_picturesX.Value = userControl_pictures.numericUpDown_picturesX.Value;
+            userControl_pictures_AOD.numericUpDown_picturesY.Value = userControl_pictures.numericUpDown_picturesY.Value;
+            userControl_pictures_AOD.numericUpDown_pictures_count.Value = userControl_pictures.numericUpDown_pictures_count.Value;
+        }
+        private void Copy_text_AOD(UserControl_text userControl_text, UserControl_text userControl_text_AOD)
+        {
+            userControl_text_AOD.checkBox_Use.Checked = userControl_text.checkBox_Use.Checked;
+            userControl_text_AOD.comboBoxSetImage(userControl_text.comboBoxGetImage());
+            userControl_text_AOD.comboBoxSetIcon(userControl_text.comboBoxGetIcon());
+            userControl_text_AOD.comboBoxSetUnit(userControl_text.comboBoxGetUnit());
+            userControl_text_AOD.numericUpDown_imageX.Value = userControl_text.numericUpDown_imageX.Value;
+            userControl_text_AOD.numericUpDown_imageY.Value = userControl_text.numericUpDown_imageY.Value;
+            userControl_text_AOD.numericUpDown_iconX.Value = userControl_text.numericUpDown_iconX.Value;
+            userControl_text_AOD.numericUpDown_iconY.Value = userControl_text.numericUpDown_iconY.Value;
+            userControl_text_AOD.comboBoxSetAlignment(userControl_text.comboBoxGetAlignment());
+            userControl_text_AOD.numericUpDown_spacing.Value = userControl_text.numericUpDown_spacing.Value;
+            userControl_text_AOD.checkBox_addZero.Checked = userControl_text.checkBox_addZero.Checked;
+            userControl_text_AOD.comboBoxSetImageError(userControl_text.comboBoxGetImageError());
+            userControl_text_AOD.comboBoxSetImageDecimalPointOrMinus(userControl_text.comboBoxGetImageDecimalPointOrMinus());
+
+        }
+        private void Copy_hand_AOD(UserControl_hand userControl_hand, UserControl_hand userControl_hand_AOD)
+        {
+            userControl_hand_AOD.checkBox_hand_Use.Checked = userControl_hand.checkBox_hand_Use.Checked;
+            userControl_hand_AOD.comboBoxSetHandImage(userControl_hand.comboBoxGetHandImage());
+            userControl_hand_AOD.numericUpDown_handX.Value = userControl_hand.numericUpDown_handX.Value;
+            userControl_hand_AOD.numericUpDown_handY.Value = userControl_hand.numericUpDown_handY.Value;
+            userControl_hand_AOD.numericUpDown_handX_offset.Value = userControl_hand.numericUpDown_handX_offset.Value;
+            userControl_hand_AOD.numericUpDown_handY_offset.Value = userControl_hand.numericUpDown_handY_offset.Value;
+            userControl_hand_AOD.comboBoxSetHandImageCentr(userControl_hand.comboBoxGetHandImageCentr());
+            userControl_hand_AOD.numericUpDown_handX_centr.Value = userControl_hand.numericUpDown_handX_centr.Value;
+            userControl_hand_AOD.numericUpDown_handY_centr.Value = userControl_hand.numericUpDown_handY_centr.Value;
+            userControl_hand_AOD.numericUpDown_hand_startAngle.Value = userControl_hand.numericUpDown_hand_startAngle.Value;
+            userControl_hand_AOD.numericUpDown_hand_endAngle.Value = userControl_hand.numericUpDown_hand_endAngle.Value;
+            userControl_hand_AOD.comboBoxSetHandImageBackground(userControl_hand.comboBoxGetHandImageBackground());
+            userControl_hand_AOD.numericUpDown_handX_background.Value = userControl_hand.numericUpDown_handX_background.Value;
+            userControl_hand_AOD.numericUpDown_handY_background.Value = userControl_hand.numericUpDown_handY_background.Value;
+
+        }
+        private void Copy_scaleCircle_AOD(UserControl_scaleCircle userControl_scaleCircle, UserControl_scaleCircle userControl_scaleCircle_AOD)
+        {
+            userControl_scaleCircle_AOD.checkBox_scaleCircle_Use.Checked = userControl_scaleCircle.checkBox_scaleCircle_Use.Checked;
+            userControl_scaleCircle_AOD.radioButton_scaleCircle_image.Checked = userControl_scaleCircle.radioButton_scaleCircle_image.Checked;
+            userControl_scaleCircle_AOD.radioButton_scaleCircle_color.Checked = userControl_scaleCircle.radioButton_scaleCircle_color.Checked;
+            userControl_scaleCircle_AOD.comboBoxSetImage(userControl_scaleCircle.comboBoxGetImage());
+            userControl_scaleCircle_AOD.comboBoxSetColorString(userControl_scaleCircle.comboBoxGetColorString());
+            userControl_scaleCircle_AOD.comboBoxSetFlatness(userControl_scaleCircle.comboBoxGetFlatness());
+            userControl_scaleCircle_AOD.comboBoxSetImageBackground(userControl_scaleCircle.comboBoxGetImageBackground());
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircleX.Value = userControl_scaleCircle.numericUpDown_scaleCircleX.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircleY.Value = userControl_scaleCircle.numericUpDown_scaleCircleY.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_radius.Value = userControl_scaleCircle.numericUpDown_scaleCircle_radius.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_width.Value = userControl_scaleCircle.numericUpDown_scaleCircle_width.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_startAngle.Value = userControl_scaleCircle.numericUpDown_scaleCircle_startAngle.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_endAngle.Value = userControl_scaleCircle.numericUpDown_scaleCircle_endAngle.Value;
+        }
+        private void Copy_scaleLinear_AOD(UserControl_scaleLinear userControl_scaleLinear, UserControl_scaleLinear userControl_scaleLinear_AOD)
+        {
+            userControl_scaleLinear_AOD.checkBox_scaleLinear_Use.Checked = userControl_scaleLinear.checkBox_scaleLinear_Use.Checked;
+            userControl_scaleLinear_AOD.radioButton_scaleLinear_image.Checked = userControl_scaleLinear.radioButton_scaleLinear_image.Checked;
+            userControl_scaleLinear_AOD.radioButton_scaleLinear_color.Checked = userControl_scaleLinear.radioButton_scaleLinear_color.Checked;
+            userControl_scaleLinear_AOD.comboBoxSetImage(userControl_scaleLinear.comboBoxGetImage());
+            userControl_scaleLinear_AOD.comboBoxSetColorString(userControl_scaleLinear.comboBoxGetColorString());
+            userControl_scaleLinear_AOD.comboBoxSetImagePointer(userControl_scaleLinear.comboBoxGetImagePointer());
+            userControl_scaleLinear_AOD.comboBoxSetImageBackground(userControl_scaleLinear.comboBoxGetImageBackground());
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinearX.Value = userControl_scaleLinear.numericUpDown_scaleLinearX.Value;
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinearY.Value = userControl_scaleLinear.numericUpDown_scaleLinearY.Value;
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinear_length.Value = userControl_scaleLinear.numericUpDown_scaleLinear_length.Value;
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinear_width.Value = userControl_scaleLinear.numericUpDown_scaleLinear_width.Value;
+            userControl_scaleLinear_AOD.comboBoxSetFlatness(userControl_scaleLinear.comboBoxGetFlatness());
+        }
 
         private void Copy_pictures_AOD(Panel panel_MainScreen, Panel panel_AOD)
         {
@@ -1581,115 +1006,144 @@ namespace AmazFit_Watchface_2
         }
 
 
-        private void button_Copy_Battery_pictures_AOD_Click(object sender, EventArgs e)
+
+        private void userControl_pictures_Battery_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_pictures_AOD(panel_Battery_pictures, panel_Battery_pictures_AOD);
+            Copy_pictures_AOD(userControl_pictures_Battery, userControl_pictures_Battery_AOD);
         }
-        private void button_Copy_Battery_text_AOD_Click(object sender, EventArgs e)
+        private void userControl_text_Battery_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_text_AOD(panel_Battery_text, panel_Battery_text_AOD);
+            Copy_text_AOD(userControl_text_Battery, userControl_text_Battery_AOD);
         }
-        private void button_Copy_Battery_hand_AOD_Click(object sender, EventArgs e)
+        private void userControl_hand_Battery_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_hand_AOD(panel_Battery_hand, panel_Battery_hand_AOD);
+            Copy_hand_AOD(userControl_hand_Battery, userControl_hand_Battery_AOD);
         }
-        private void button_Copy_Battery_scaleCircle_AOD_Click(object sender, EventArgs e)
+        private void userControl_scaleCircle_Battery_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_scaleCircle_AOD(panel_Battery_scaleCircle, panel_Battery_scaleCircle_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Battery, userControl_scaleCircle_Battery_AOD);
         }
-        private void button_Copy_Battery_scaleLinear_AOD_Click(object sender, EventArgs e)
+        private void userControl_scaleLinear_Battery_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_scaleLinear_AOD(panel_Battery_scaleLinear, panel_Battery_scaleLinear_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Battery, userControl_scaleLinear_Battery_AOD);
         }
 
-        private void button_Copy_Steps_pictures_AOD_Click(object sender, EventArgs e)
+        private void userControl_pictures_Steps_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_pictures_AOD(panel_Steps_pictures, panel_Steps_pictures_AOD);
+            Copy_pictures_AOD(userControl_pictures_Steps, userControl_pictures_Steps_AOD);
         }
-        private void button_Copy_Steps_text_AOD_Click(object sender, EventArgs e)
+        private void userControl_text_Steps_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_text_AOD(panel_Steps_text, panel_Steps_text_AOD);
+            Copy_text_AOD(userControl_text_Steps, userControl_text_Steps_AOD);
         }
-        private void button_Copy_Steps_hand_AOD_Click(object sender, EventArgs e)
+        private void userControl_hand_Steps_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_hand_AOD(panel_Steps_hand, panel_Steps_hand_AOD);
+            Copy_hand_AOD(userControl_hand_Steps, userControl_hand_Steps_AOD);
         }
-        private void button_Copy_Steps_scaleCircle_AOD_Click(object sender, EventArgs e)
+        private void userControl_scaleCircle_Steps_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_scaleCircle_AOD(panel_Steps_scaleCircle, panel_Steps_scaleCircle_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Steps, userControl_scaleCircle_Steps_AOD);
         }
-        private void button_Copy_Steps_scaleLinear_AOD_Click(object sender, EventArgs e)
+        private void userControl_scaleLinear_Steps_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_scaleLinear_AOD(panel_Steps_scaleLinear, panel_Steps_scaleLinear_AOD);
-        }
-
-        private void button_Copy_Calories_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_pictures_AOD(panel_Calories_pictures, panel_Calories_pictures_AOD);
-        }
-        private void button_Copy_Calories_text_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_text_AOD(panel_Calories_text, panel_Calories_text_AOD);
-        }
-        private void button_Copy_Calories_hand_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_hand_AOD(panel_Calories_hand, panel_Calories_hand_AOD);
-        }
-        private void button_Copy_Calories_scaleCircle_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_scaleCircle_AOD(panel_Calories_scaleCircle, panel_Calories_scaleCircle_AOD);
-        }
-        private void button_Copy_Calories_scaleLinear_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_scaleLinear_AOD(panel_Calories_scaleLinear, panel_Calories_scaleLinear_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Steps, userControl_scaleLinear_Steps_AOD);
         }
 
-        private void button_Copy_HeartRate_pictures_AOD_Click(object sender, EventArgs e)
+        private void userControl_pictures_Calories_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_pictures_AOD(panel_HeartRate_pictures, panel_HeartRate_pictures_AOD);
+            Copy_pictures_AOD(userControl_pictures_Calories, userControl_pictures_Calories_AOD);
         }
-        private void button_Copy_HeartRate_text_AOD_Click(object sender, EventArgs e)
+        private void userControl_text_Calories_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_text_AOD(panel_HeartRate_text, panel_HeartRate_text_AOD);
+            Copy_text_AOD(userControl_text_Calories, userControl_text_Calories_AOD);
         }
-        private void button_Copy_HeartRate_hand_AOD_Click(object sender, EventArgs e)
+        private void userControl_hand_Calories_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_hand_AOD(panel_HeartRate_hand, panel_HeartRate_hand_AOD);
+            Copy_hand_AOD(userControl_hand_Calories, userControl_hand_Calories_AOD);
         }
-        private void button_Copy_HeartRate_scaleCircle_AOD_Click(object sender, EventArgs e)
+        private void userControl_scaleCircle_Calories_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_scaleCircle_AOD(panel_HeartRate_scaleCircle, panel_HeartRate_scaleCircle_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Calories, userControl_scaleCircle_Calories_AOD);
         }
-        private void button_Copy_HeartRate_scaleLinear_AOD_Click(object sender, EventArgs e)
+        private void userControl_scaleLinear_Calories_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_scaleLinear_AOD(panel_HeartRate_scaleLinear, panel_HeartRate_scaleLinear_AOD);
-        }
-
-        private void button_Copy_PAI_pictures_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_pictures_AOD(panel_PAI_pictures, panel_PAI_pictures_AOD);
-        }
-        private void button_Copy_PAI_text_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_text_AOD(panel_PAI_text, panel_PAI_text_AOD);
-        }
-        private void button_Copy_PAI_hand_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_hand_AOD(panel_PAI_hand, panel_PAI_hand_AOD);
-        }
-        private void button_Copy_PAI_scaleCircle_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_scaleCircle_AOD(panel_PAI_scaleCircle, panel_PAI_scaleCircle_AOD);
-        }
-        private void button_Copy_PAI_scaleLinear_AOD_Click(object sender, EventArgs e)
-        {
-            Copy_scaleLinear_AOD(panel_PAI_scaleLinear, panel_PAI_scaleLinear_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Calories, userControl_scaleLinear_Calories_AOD);
         }
 
-        private void button_Copy_Distance_text_AOD_Click(object sender, EventArgs e)
+        private void userControl_pictures_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            Copy_text_Distance_AOD(panel_Distance_text, panel_Distance_text_AOD);
+            Copy_pictures_AOD(userControl_pictures_HeartRate, userControl_pictures_HeartRate_AOD);
         }
+        private void userControl_text_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_text_AOD(userControl_text_HeartRate, userControl_text_HeartRate_AOD);
+        }
+        private void userControl_hand_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_hand_AOD(userControl_hand_HeartRate, userControl_hand_HeartRate_AOD);
+        }
+        private void userControl_scaleCircle_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleCircle_AOD(userControl_scaleCircle_HeartRate, userControl_scaleCircle_HeartRate_AOD);
+        }
+        private void userControl_scaleLinear_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleLinear_AOD(userControl_scaleLinear_HeartRate, userControl_scaleLinear_HeartRate_AOD);
+        }
+
+        private void userControl_pictures_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_pictures_AOD(userControl_pictures_PAI, userControl_pictures_PAI_AOD);
+        }
+        private void userControl_text_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_text_AOD(userControl_text_PAI, userControl_text_PAI_AOD);
+        }
+        private void userControl_hand_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_hand_AOD(userControl_hand_PAI, userControl_hand_PAI_AOD);
+        }
+        private void userControl_scaleCircle_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleCircle_AOD(userControl_scaleCircle_PAI, userControl_scaleCircle_PAI_AOD);
+        }
+        private void userControl_scaleLinear_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleLinear_AOD(userControl_scaleLinear_PAI, userControl_scaleLinear_PAI_AOD);
+        }
+
+        private void userControl_text_Distance_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_text_AOD(userControl_text_Distance, userControl_text_Distance_AOD);
+        }
+
+        private void userControl_pictures_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_pictures_AOD(userControl_pictures_StandUp, userControl_pictures_StandUp_AOD);
+        }
+        private void userControl_text_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_text_AOD(userControl_text_StandUp, userControl_text_StandUp_AOD);
+        }
+        private void userControl_hand_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_hand_AOD(userControl_hand_StandUp, userControl_hand_StandUp_AOD);
+        }
+        private void userControl_scaleCircle_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleCircle_AOD(userControl_scaleCircle_StandUp, userControl_scaleCircle_StandUp_AOD);
+        }
+        private void userControl_scaleLinear_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleLinear_AOD(userControl_scaleLinear_StandUp, userControl_scaleLinear_StandUp_AOD);
+        }
+
+
+
+
+
+
+
 
 
         private void button_Copy_Weather_pictures_AOD_Click(object sender, EventArgs e)
@@ -1725,6 +1179,74 @@ namespace AmazFit_Watchface_2
         private void button_Copy_Weather_scaleLinear_AOD_Click(object sender, EventArgs e)
         {
             Copy_scaleLinear_AOD(panel_Weather_scaleLinear, panel_Weather_scaleLinear_AOD);
+        }
+
+
+
+
+
+
+        private void userControl_pictures_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_pictures_AOD(userControl_pictures_Stress, userControl_pictures_Stress_AOD);
+        }
+        private void userControl_text_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_text_AOD(userControl_text_Stress, userControl_text_Stress_AOD);
+        }
+        private void userControl_hand_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_hand_AOD(userControl_hand_Stress, userControl_hand_Stress_AOD);
+        }
+        private void userControl_scaleCircle_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Stress, userControl_scaleCircle_Stress_AOD);
+        }
+        private void userControl_scaleLinear_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Stress, userControl_scaleLinear_Stress_AOD);
+        }
+
+        private void userControl_pictures_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_pictures_AOD(userControl_pictures_ActivityGoal, userControl_pictures_ActivityGoal_AOD);
+        }
+        private void userControl_text_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_text_AOD(userControl_text_ActivityGoal, userControl_text_ActivityGoal_AOD);
+        }
+        private void userControl_hand_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_hand_AOD(userControl_hand_ActivityGoal, userControl_hand_ActivityGoal_AOD);
+        }
+        private void userControl_scaleCircle_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleCircle_AOD(userControl_scaleCircle_ActivityGoal, userControl_scaleCircle_ActivityGoal_AOD);
+        }
+        private void userControl_scaleLinear_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleLinear_AOD(userControl_scaleLinear_ActivityGoal, userControl_scaleLinear_ActivityGoal_AOD);
+        }
+
+        private void userControl_pictures_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_pictures_AOD(userControl_pictures_FatBurning, userControl_pictures_FatBurning_AOD);
+        }
+        private void userControl_text_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_text_AOD(userControl_text_FatBurning, userControl_text_FatBurning_AOD);
+        }
+        private void userControl_hand_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_hand_AOD(userControl_hand_FatBurning, userControl_hand_FatBurning_AOD);
+        }
+        private void userControl_scaleCircle_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleCircle_AOD(userControl_scaleCircle_FatBurning, userControl_scaleCircle_FatBurning_AOD);
+        }
+        private void userControl_scaleLinear_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Copy_scaleLinear_AOD(userControl_scaleLinear_FatBurning, userControl_scaleLinear_FatBurning_AOD);
         }
 
 

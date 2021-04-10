@@ -39,8 +39,8 @@ namespace AmazFit_Watchface_2
                 }
                 else if (Model_Wath.model_GTR2e)
                 {
-                    pictureBox_Preview.Size = new Size(198, 198);
-                    this.Size = new Size(198 + (int)(22 * currentDPI), 198 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(230, 230);
+                    this.Size = new Size(230 + (int)(22 * currentDPI), 230 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_GTS2)
                 {
@@ -70,8 +70,8 @@ namespace AmazFit_Watchface_2
                 }
                 else if (Model_Wath.model_GTR2e)
                 {
-                    pictureBox_Preview.Size = new Size(392, 392);
-                    this.Size = new Size(392 + (int)(22 * currentDPI), 392 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(456, 456);
+                    this.Size = new Size(456 + (int)(22 * currentDPI), 456 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_GTS2)
                 {
@@ -100,8 +100,8 @@ namespace AmazFit_Watchface_2
                 }
                 else if (Model_Wath.model_GTR2e)
                 {
-                    pictureBox_Preview.Size = new Size(587, 587);
-                    this.Size = new Size(587 + (int)(22 * currentDPI), 587 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(683, 683);
+                    this.Size = new Size(683 + (int)(22 * currentDPI), 683 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_GTS2)
                 {
@@ -130,8 +130,8 @@ namespace AmazFit_Watchface_2
                 }
                 else if (Model_Wath.model_GTR2e)
                 {
-                    pictureBox_Preview.Size = new Size(781, 781);
-                    this.Size = new Size(781 + (int)(22 * currentDPI), 781 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(909, 909);
+                    this.Size = new Size(909 + (int)(22 * currentDPI), 909 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_GTS2)
                 {
@@ -160,8 +160,8 @@ namespace AmazFit_Watchface_2
                 }
                 else if (Model_Wath.model_GTR2e)
                 {
-                    pictureBox_Preview.Size = new Size(976, 976);
-                    this.Size = new Size(976 + (int)(22 * currentDPI), 976 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(1136, 1136);
+                    this.Size = new Size(1136 + (int)(22 * currentDPI), 1136 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_GTS2)
                 {

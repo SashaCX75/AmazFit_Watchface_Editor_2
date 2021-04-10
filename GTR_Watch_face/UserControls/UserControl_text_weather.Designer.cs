@@ -30,8 +30,6 @@ namespace AmazFit_Watchface_2
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_text_weather));
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_imageX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_imageY)).BeginInit();
             this.SuspendLayout();
             // 
             // label08
@@ -46,11 +44,6 @@ namespace AmazFit_Watchface_2
             // 
             resources.ApplyResources(this.label07, "label07");
             // 
-            // checkBox_addZero
-            // 
-            resources.ApplyResources(this.checkBox_addZero, "checkBox_addZero");
-            this.checkBox_addZero.CheckedChanged += new System.EventHandler(this.checkBox_addZero_CheckedChanged);
-            // 
             // label02
             // 
             resources.ApplyResources(this.label02, "label02");
@@ -63,24 +56,19 @@ namespace AmazFit_Watchface_2
             // 
             resources.ApplyResources(this.label1085, "label1085");
             // 
-            // numericUpDown_imageX
-            // 
-            resources.ApplyResources(this.numericUpDown_imageX, "numericUpDown_imageX");
-            // 
-            // numericUpDown_imageY
-            // 
-            resources.ApplyResources(this.numericUpDown_imageY, "numericUpDown_imageY");
-            // 
             // button_text
             // 
             resources.ApplyResources(this.button_text, "button_text");
+            // 
+            // checkBox_addZero
+            // 
+            resources.ApplyResources(this.checkBox_addZero, "checkBox_addZero");
+            this.checkBox_addZero.CheckedChanged += new System.EventHandler(this.checkBox_addZero_CheckedChanged);
             // 
             // UserControl_text_weather
             // 
             resources.ApplyResources(this, "$this");
             this.Name = "UserControl_text_weather";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_imageX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_imageY)).EndInit();
             this.ResumeLayout(false);
 
         }

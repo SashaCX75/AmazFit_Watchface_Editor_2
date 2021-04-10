@@ -28,11 +28,19 @@ namespace AmazFit_Watchface_2
             comboBox_scaleLinear_image.Text = value.ToString();
             if (comboBox_scaleLinear_image.SelectedIndex < 0) comboBox_scaleLinear_image.Text = "";
         }
+
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImage()
         {
+            if (comboBox_scaleLinear_image.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_scaleLinear_image.Text, out value);
             return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImage()
+        {
+            return comboBox_scaleLinear_image.SelectedIndex;
         }
 
         internal void comboBoxSetImagePointer(int value)
@@ -40,11 +48,19 @@ namespace AmazFit_Watchface_2
             comboBox_scaleLinear_image_pointer.Text = value.ToString();
             if (comboBox_scaleLinear_image_pointer.SelectedIndex < 0) comboBox_scaleLinear_image_pointer.Text = "";
         }
+
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImagePointer()
         {
+            if (comboBox_scaleLinear_image_pointer.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_scaleLinear_image_pointer.Text, out value);
             return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImagePointer()
+        {
+            return comboBox_scaleLinear_image_pointer.SelectedIndex;
         }
 
         internal void comboBoxSetImageBackground(int value)
@@ -52,11 +68,19 @@ namespace AmazFit_Watchface_2
             comboBox_scaleLinear_image_background.Text = value.ToString();
             if (comboBox_scaleLinear_image_background.SelectedIndex < 0) comboBox_scaleLinear_image_background.Text = "";
         }
+
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImageBackground()
         {
+            if (comboBox_scaleLinear_image_background.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_scaleLinear_image_background.Text, out value);
             return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImageBackground()
+        {
+            return comboBox_scaleLinear_image_background.SelectedIndex;
         }
 
         internal void comboBoxSetFlatness(int flatness)
@@ -75,6 +99,8 @@ namespace AmazFit_Watchface_2
 
             comboBox_scaleLinear_flatness.SelectedIndex = result;
         }
+
+        /// <summary>Возвращает тип окончания линии числом</summary>
         internal int comboBoxGetFlatness()
         {
             int result;
@@ -90,14 +116,14 @@ namespace AmazFit_Watchface_2
             return result;
         }
 
-        internal void comboBoxSetColour(string color)
+        internal void comboBoxSetColorString(string color)
         {
             if (color.Length == 18) color = color.Remove(2, 8);
             Color old_color = ColorTranslator.FromHtml(color);
             Color new_color = Color.FromArgb(255, old_color.R, old_color.G, old_color.B);
             comboBox_scaleLinear_color.BackColor = new_color;
         }
-        internal string comboBoxGetColour()
+        internal string comboBoxGetColorString()
         {
             Color color = comboBox_scaleLinear_color.BackColor;
             Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
@@ -105,7 +131,10 @@ namespace AmazFit_Watchface_2
             colorStr = colorStr.Replace("#", "0xFF");
             return colorStr;
         }
-
+        internal Color comboBoxGetColor()
+        {
+            return comboBox_scaleLinear_color.BackColor;
+        }
 
         /// <summary>Отображение кнопки копирования значений для AOD</summary>
         public bool AOD
@@ -126,8 +155,8 @@ namespace AmazFit_Watchface_2
         public delegate void CollapseHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
-        protected internal event ValueChangedHandler ValueChanged;
-        protected internal delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
+        public event ValueChangedHandler ValueChanged;
+        public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
         public event AOD_CopyHandler AOD_Copy_scaleLinear;
@@ -347,8 +376,8 @@ namespace AmazFit_Watchface_2
 
             comboBox_scaleLinear_flatness.SelectedIndex = 0;
 
-            numericUpDown_scaleLinear_length.Value = 0;
-            numericUpDown_scaleLinear_width.Value = 0;
+            numericUpDown_scaleLinear_length.Value = 100;
+            numericUpDown_scaleLinear_width.Value = 5;
 
             setValue = false;
         }

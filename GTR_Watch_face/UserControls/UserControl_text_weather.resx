@@ -123,14 +123,15 @@
   <data name="&gt;&gt;label08.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_imageY.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;label08.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
-  <data name="&gt;&gt;label06.Name" xml:space="preserve">
-    <value>label06</value>
+  <data name="&gt;&gt;label1085.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <data name="&gt;&gt;label07.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -147,11 +148,11 @@
   <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_imageY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl_text_weather</value>
+  </data>
+  <data name="checkBox_addZero.Text" xml:space="preserve">
+    <value>Следовать за минимальной температурой</value>
   </data>
   <data name="&gt;&gt;label02.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -165,27 +166,26 @@
   <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="&gt;&gt;button_text.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
     <value>265, 179</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_imageX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 30</value>
   </data>
-  <data name="&gt;&gt;button_text.Name" xml:space="preserve">
-    <value>button_text</value>
+  <data name="&gt;&gt;label06.Name" xml:space="preserve">
+    <value>label06</value>
   </data>
   <data name="&gt;&gt;label1084.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="&gt;&gt;button_text.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="label07.Text" xml:space="preserve">
+    <value>Символ "-"</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="checkBox_addZero.Text" xml:space="preserve">
-    <value>Следовать за минимальной температурой</value>
+  <data name="&gt;&gt;button_text.Name" xml:space="preserve">
+    <value>button_text</value>
   </data>
   <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -196,8 +196,8 @@
   <data name="&gt;&gt;label1084.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 30</value>
+  <data name="&gt;&gt;label07.Name" xml:space="preserve">
+    <value>label07</value>
   </data>
   <data name="&gt;&gt;label1085.Name" xml:space="preserve">
     <value>label1085</value>
@@ -211,12 +211,6 @@
   <data name="&gt;&gt;label02.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_imageY.Name" xml:space="preserve">
-    <value>numericUpDown_imageY</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_imageX.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="label08.Text" xml:space="preserve">
     <value>Символ "°"</value>
   </data>
@@ -229,26 +223,11 @@
   <data name="&gt;&gt;checkBox_addZero.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1085.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_imageY.Parent" xml:space="preserve">
-    <value>panel_text</value>
-  </data>
   <data name="&gt;&gt;label1085.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label06.Parent" xml:space="preserve">
     <value>panel_text</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_imageX.Parent" xml:space="preserve">
-    <value>panel_text</value>
-  </data>
-  <data name="&gt;&gt;label07.Name" xml:space="preserve">
-    <value>label07</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_imageX.Name" xml:space="preserve">
-    <value>numericUpDown_imageX</value>
   </data>
   <data name="&gt;&gt;button_text.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

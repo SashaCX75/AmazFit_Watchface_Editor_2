@@ -77,13 +77,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_X
             // 
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуХToolStripMenuItem,
             this.копироватьToolStripMenuItemX,
             this.вставитьToolStripMenuItemX});
             this.contextMenuStrip_X.Name = "contextMenuStrip_X";
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // вставитьКоординатуХToolStripMenuItem
@@ -106,13 +106,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_Y
             // 
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуYToolStripMenuItem,
             this.копироватьToolStripMenuItemY,
             this.вставитьToolStripMenuItemY});
             this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
             // 
             // вставитьКоординатуYToolStripMenuItem
@@ -135,7 +135,6 @@ namespace AmazFit_Watchface_2
             // 
             // panel_scaleCircle
             // 
-            resources.ApplyResources(this.panel_scaleCircle, "panel_scaleCircle");
             this.panel_scaleCircle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_scaleCircle.Controls.Add(this.checkBox_scaleCircle_Use);
             this.panel_scaleCircle.Controls.Add(this.radioButton_scaleCircle_image);
@@ -160,6 +159,7 @@ namespace AmazFit_Watchface_2
             this.panel_scaleCircle.Controls.Add(this.label02);
             this.panel_scaleCircle.Controls.Add(this.label09);
             this.panel_scaleCircle.Controls.Add(this.button_Copy_scaleCircle);
+            resources.ApplyResources(this.panel_scaleCircle, "panel_scaleCircle");
             this.panel_scaleCircle.Name = "panel_scaleCircle";
             // 
             // checkBox_scaleCircle_Use
@@ -188,9 +188,9 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_scaleCircle_image
             // 
-            resources.ApplyResources(this.comboBox_scaleCircle_image, "comboBox_scaleCircle_image");
             this.comboBox_scaleCircle_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_scaleCircle_image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_scaleCircle_image, "comboBox_scaleCircle_image");
             this.comboBox_scaleCircle_image.FormattingEnabled = true;
             this.comboBox_scaleCircle_image.Name = "comboBox_scaleCircle_image";
             this.comboBox_scaleCircle_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_DrawItem);
@@ -201,9 +201,9 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_scaleCircle_color
             // 
-            resources.ApplyResources(this.comboBox_scaleCircle_color, "comboBox_scaleCircle_color");
             this.comboBox_scaleCircle_color.BackColor = System.Drawing.Color.DarkOrange;
             this.comboBox_scaleCircle_color.DropDownHeight = 1;
+            resources.ApplyResources(this.comboBox_scaleCircle_color, "comboBox_scaleCircle_color");
             this.comboBox_scaleCircle_color.FormattingEnabled = true;
             this.comboBox_scaleCircle_color.Name = "comboBox_scaleCircle_color";
             this.comboBox_scaleCircle_color.Click += new System.EventHandler(this.comboBox_color_Click);
@@ -211,8 +211,8 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_scaleCircle_flatness
             // 
-            resources.ApplyResources(this.comboBox_scaleCircle_flatness, "comboBox_scaleCircle_flatness");
             this.comboBox_scaleCircle_flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_scaleCircle_flatness, "comboBox_scaleCircle_flatness");
             this.comboBox_scaleCircle_flatness.FormattingEnabled = true;
             this.comboBox_scaleCircle_flatness.Items.AddRange(new object[] {
             resources.GetString("comboBox_scaleCircle_flatness.Items"),
@@ -223,9 +223,9 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_scaleCircle_image_background
             // 
-            resources.ApplyResources(this.comboBox_scaleCircle_image_background, "comboBox_scaleCircle_image_background");
             this.comboBox_scaleCircle_image_background.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_scaleCircle_image_background.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_scaleCircle_image_background, "comboBox_scaleCircle_image_background");
             this.comboBox_scaleCircle_image_background.FormattingEnabled = true;
             this.comboBox_scaleCircle_image_background.Name = "comboBox_scaleCircle_image_background";
             this.comboBox_scaleCircle_image_background.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_DrawItem);
@@ -236,8 +236,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_scaleCircleX
             // 
-            resources.ApplyResources(this.numericUpDown_scaleCircleX, "numericUpDown_scaleCircleX");
             this.numericUpDown_scaleCircleX.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_scaleCircleX, "numericUpDown_scaleCircleX");
             this.numericUpDown_scaleCircleX.Maximum = new decimal(new int[] {
             999,
             0,
@@ -254,8 +254,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_scaleCircleY
             // 
-            resources.ApplyResources(this.numericUpDown_scaleCircleY, "numericUpDown_scaleCircleY");
             this.numericUpDown_scaleCircleY.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_scaleCircleY, "numericUpDown_scaleCircleY");
             this.numericUpDown_scaleCircleY.Maximum = new decimal(new int[] {
             999,
             0,
@@ -440,8 +440,6 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItemY;
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItemY;
         private System.Windows.Forms.Panel panel_scaleCircle;
-        private System.Windows.Forms.RadioButton radioButton_scaleCircle_image;
-        private System.Windows.Forms.RadioButton radioButton_scaleCircle_color;
         private System.Windows.Forms.ComboBox comboBox_scaleCircle_image;
         private System.Windows.Forms.ComboBox comboBox_scaleCircle_color;
         private System.Windows.Forms.ComboBox comboBox_scaleCircle_flatness;
@@ -464,5 +462,7 @@ namespace AmazFit_Watchface_2
         internal System.Windows.Forms.NumericUpDown numericUpDown_scaleCircle_width;
         internal System.Windows.Forms.NumericUpDown numericUpDown_scaleCircle_startAngle;
         internal System.Windows.Forms.NumericUpDown numericUpDown_scaleCircle_endAngle;
+        internal System.Windows.Forms.RadioButton radioButton_scaleCircle_image;
+        internal System.Windows.Forms.RadioButton radioButton_scaleCircle_color;
     }
 }

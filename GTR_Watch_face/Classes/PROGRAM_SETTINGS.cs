@@ -43,7 +43,7 @@
         public string pack_unpack_dir { get; set; }
         public string unpack_command_GTR_2 = "--gtr2 47 --file";
         public string unpack_command_GTS_2 = "--gts2 --file";
-        public string unpack_command_TRex_pro = "--gtr2 47 --file";
+        public string unpack_command_TRex_pro = "--trexpro --file";
         public string unpack_command = "--gtr2 47 --file";
         public string language { get; set; }
 

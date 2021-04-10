@@ -27,37 +27,56 @@ namespace AmazFit_Watchface_2
             if (comboBox_hand_image.SelectedIndex < 0) comboBox_hand_image.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetHandImage()
         {
+            if (comboBox_hand_image.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_hand_image.Text, out value);
             return value;
         }
-
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexHandImage()
+        {
+            return comboBox_hand_image.SelectedIndex;
+        }
         internal void comboBoxSetHandImageCentr(int value)
         {
             comboBox_hand_imageCentr.Text = value.ToString();
             if (comboBox_hand_imageCentr.SelectedIndex < 0) comboBox_hand_imageCentr.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetHandImageCentr()
         {
+            if (comboBox_hand_imageCentr.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_hand_imageCentr.Text, out value);
             return value;
         }
-
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexHandImageCentr()
+        {
+            return comboBox_hand_imageCentr.SelectedIndex;
+        }
         internal void comboBoxSetHandImageBackground(int value)
         {
             comboBox_hand_imageBackground.Text = value.ToString();
             if (comboBox_hand_imageBackground.SelectedIndex < 0) comboBox_hand_imageBackground.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetHandImageBackground()
         {
+            if (comboBox_hand_imageBackground.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_hand_imageBackground.Text, out value);
             return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexHandImageBackground()
+        {
+            return comboBox_hand_imageBackground.SelectedIndex;
         }
 
         /// <summary>Отображение кнопки копирования значений для AOD</summary>
@@ -79,8 +98,8 @@ namespace AmazFit_Watchface_2
         public delegate void CollapseHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
-        protected internal event ValueChangedHandler ValueChanged;
-        protected internal delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
+        public event ValueChangedHandler ValueChanged;
+        public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
         public event AOD_CopyHandler AOD_Copy_hand;
@@ -259,7 +278,7 @@ namespace AmazFit_Watchface_2
             numericUpDown_handY_offset.Value = 0;
 
             numericUpDown_hand_startAngle.Value = 0;
-            numericUpDown_hand_endAngle.Value = 0;
+            numericUpDown_hand_endAngle.Value = 360;
 
             setValue = false;
         }

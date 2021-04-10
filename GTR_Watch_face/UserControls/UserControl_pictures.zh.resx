@@ -127,18 +127,6 @@
   <data name="checkBox_pictures_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>起始图像</value>
-  </data>
-  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="label02.Text" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="label03.Text" xml:space="preserve">
-    <value>图像数量</value>
-  </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -232,5 +220,17 @@
         xrTrBLnaVtvFoxj1DmPM8xof3g/DN+7Bx9ERjHnfYtQzhKEXz/HsiQPXGo9AvHAYlQdLWjPlgqARBDNd
         5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>起始图像</value>
+  </data>
+  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>坐标</value>
+  </data>
+  <data name="label03.Text" xml:space="preserve">
+    <value>图像数量</value>
   </data>
 </root>

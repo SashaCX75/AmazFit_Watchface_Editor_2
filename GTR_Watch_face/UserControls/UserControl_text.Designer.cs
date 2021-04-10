@@ -479,12 +479,12 @@ namespace AmazFit_Watchface_2
         protected System.Windows.Forms.Label label08;
         protected System.Windows.Forms.Label label06;
         protected System.Windows.Forms.Label label07;
-        protected System.Windows.Forms.CheckBox checkBox_addZero;
         protected System.Windows.Forms.Label label02;
         protected System.Windows.Forms.Label label1084;
         protected System.Windows.Forms.Label label1085;
-        protected System.Windows.Forms.NumericUpDown numericUpDown_imageX;
-        protected System.Windows.Forms.NumericUpDown numericUpDown_imageY;
         protected System.Windows.Forms.Button button_text;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_imageX;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_imageY;
+        public System.Windows.Forms.CheckBox checkBox_addZero;
     }
 }

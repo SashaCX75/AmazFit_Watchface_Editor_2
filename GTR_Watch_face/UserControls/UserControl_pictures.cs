@@ -67,8 +67,8 @@ namespace AmazFit_Watchface_2
         public delegate void CollapseHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
-        protected internal event ValueChangedHandler ValueChanged;
-        protected internal delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
+        public event ValueChangedHandler ValueChanged;
+        public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
         public event AOD_CopyHandler AOD_Copy_pictures;
@@ -120,11 +120,19 @@ namespace AmazFit_Watchface_2
             if (comboBox_pictures_image.SelectedIndex < 0) comboBox_pictures_image.Text = "";
         }
 
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImage()
         {
+            if (comboBox_pictures_image.SelectedIndex < 0) return -1;
             int value = -1;
             Int32.TryParse(comboBox_pictures_image.Text, out value);
             return value;
+        }
+
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImage()
+        {
+            return comboBox_pictures_image.SelectedIndex;
         }
 
         #region Standard events
