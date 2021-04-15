@@ -129,872 +129,8 @@
   <data name="tabPage_Activity.Text" xml:space="preserve">
     <value>Activity</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="checkBox_Weather_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Weather_scaleLinear_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="radioButton_Weather_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
-  </data>
-  <data name="radioButton_Weather_scaleLinear_image.Text" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="radioButtonWeather_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButtonWeather_scaleLinear_color.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 82</value>
-  </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 82</value>
-  </data>
-  <data name="comboBox_Weather_scaleLinear_flatness.Items" xml:space="preserve">
-    <value>Circle</value>
-  </data>
-  <data name="comboBox_Weather_scaleLinear_flatness.Items1" xml:space="preserve">
-    <value>Flat</value>
-  </data>
-  <data name="label103.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 13</value>
-  </data>
-  <data name="label103.Text" xml:space="preserve">
-    <value>Start coordinates</value>
-  </data>
-  <data name="label106.Text" xml:space="preserve">
-    <value>Width</value>
-  </data>
-  <data name="label107.Text" xml:space="preserve">
-    <value>Length</value>
-  </data>
-  <data name="label108.Text" xml:space="preserve">
-    <value>Pointer image</value>
-  </data>
-  <data name="label109.Text" xml:space="preserve">
-    <value>Background image</value>
-  </data>
-  <data name="label295.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 41</value>
-  </data>
-  <data name="label295.Text" xml:space="preserve">
-    <value>Line ending</value>
-  </data>
-  <data name="label295.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="button_Weather_scaleLinear.Text" xml:space="preserve">
-    <value>Line progress</value>
-  </data>
-  <data name="checkBox_Weather_scaleCircle_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Weather_scaleCircle_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_image.Text" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_color.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButton_Weather_scaleCircle_color.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="comboBox_Weather_scaleCircle_flatness.Items" xml:space="preserve">
-    <value>Circle</value>
-  </data>
-  <data name="comboBox_Weather_scaleCircle_flatness.Items1" xml:space="preserve">
-    <value>Triangle</value>
-  </data>
-  <data name="comboBox_Weather_scaleCircle_flatness.Items2" xml:space="preserve">
-    <value>Flat</value>
-  </data>
-  <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 13</value>
-  </data>
-  <data name="label110.Text" xml:space="preserve">
-    <value>Center coordinates</value>
-  </data>
-  <data name="label113.Text" xml:space="preserve">
-    <value>Width</value>
-  </data>
-  <data name="label114.Text" xml:space="preserve">
-    <value>Radius</value>
-  </data>
-  <data name="label115.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 110</value>
-  </data>
-  <data name="label115.Text" xml:space="preserve">
-    <value>End angle</value>
-  </data>
-  <data name="label116.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 110</value>
-  </data>
-  <data name="label116.Text" xml:space="preserve">
-    <value>Start angle</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label117.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label117.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 110</value>
-  </data>
-  <data name="label117.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
-  </data>
-  <data name="label117.Text" xml:space="preserve">
-    <value>Line ending</value>
-  </data>
-  <data name="label117.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="label118.Text" xml:space="preserve">
-    <value>Background image</value>
-  </data>
-  <data name="button_Weather_scaleCircle.Text" xml:space="preserve">
-    <value>Circle progress</value>
-  </data>
-  <data name="checkBox_Weather_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Weather_hand_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="label119.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 110</value>
-  </data>
-  <data name="label119.Text" xml:space="preserve">
-    <value>End angle</value>
-  </data>
-  <data name="label120.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 110</value>
-  </data>
-  <data name="label120.Text" xml:space="preserve">
-    <value>Start angle</value>
-  </data>
-  <data name="label121.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label121.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 41</value>
-  </data>
-  <data name="label121.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 13</value>
-  </data>
-  <data name="label121.Text" xml:space="preserve">
-    <value>Rotation point offset</value>
-  </data>
-  <data name="label124.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label124.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 41</value>
-  </data>
-  <data name="label124.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 13</value>
-  </data>
-  <data name="label124.Text" xml:space="preserve">
-    <value>Rotation center coordinates</value>
-  </data>
-  <data name="label125.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label125.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label125.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="label125.Text" xml:space="preserve">
-    <value>Pointer image</value>
-  </data>
-  <data name="label126.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label126.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 110</value>
-  </data>
-  <data name="label126.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 13</value>
-  </data>
-  <data name="label126.Text" xml:space="preserve">
-    <value>Center image coordinates</value>
-  </data>
-  <data name="label131.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label131.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 110</value>
-  </data>
-  <data name="label131.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="label131.Text" xml:space="preserve">
-    <value>Center image</value>
-  </data>
-  <data name="label132.Text" xml:space="preserve">
-    <value>Background image coordinates</value>
-  </data>
-  <data name="label135.Text" xml:space="preserve">
-    <value>Background image</value>
-  </data>
-  <data name="button_Weather_hand.Text" xml:space="preserve">
-    <value>Pointer</value>
-  </data>
-  <data name="checkBox_Weather_UseMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Weather_UseMax.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMax.Items" xml:space="preserve">
-    <value>Left</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMax.Items1" xml:space="preserve">
-    <value>Right</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMax.Items2" xml:space="preserve">
-    <value>Center</value>
-  </data>
-  <data name="checkBox_Weather_followMax.Text" xml:space="preserve">
-    <value>Follow the minimum temperature</value>
-  </data>
-  <data name="label154.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label154.Text" xml:space="preserve">
-    <value>Coordinates</value>
-  </data>
-  <data name="label156.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 13</value>
-  </data>
-  <data name="label156.Text" xml:space="preserve">
-    <value>Icon</value>
-  </data>
-  <data name="label157.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label157.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label157.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="label157.Text" xml:space="preserve">
-    <value>First Image</value>
-  </data>
-  <data name="label158.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="label158.Text" xml:space="preserve">
-    <value>Icon coordinates</value>
-  </data>
-  <data name="label159.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="label159.Text" xml:space="preserve">
-    <value>Alignment</value>
-  </data>
-  <data name="label160.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="label160.Text" xml:space="preserve">
-    <value>Spacing</value>
-  </data>
-  <data name="label165.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 104</value>
-  </data>
-  <data name="label165.Text" xml:space="preserve">
-    <value>Error image</value>
-  </data>
-  <data name="label166.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="label166.Text" xml:space="preserve">
-    <value>" ° " Symbol</value>
-  </data>
-  <data name="label180.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label180.Text" xml:space="preserve">
-    <value>" - " Symbol</value>
-  </data>
-  <data name="button_Weather_textMax.Text" xml:space="preserve">
-    <value>Maximum temperature</value>
-  </data>
-  <data name="checkBox_Weather_UseMin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Weather_UseMin.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMin.Items" xml:space="preserve">
-    <value>Left</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMin.Items1" xml:space="preserve">
-    <value>Right</value>
-  </data>
-  <data name="comboBox_Weather_alignmentMin.Items2" xml:space="preserve">
-    <value>Center</value>
-  </data>
-  <data name="label167.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label167.Text" xml:space="preserve">
-    <value>Coordinates</value>
-  </data>
-  <data name="label169.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 13</value>
-  </data>
-  <data name="label169.Text" xml:space="preserve">
-    <value>Icon</value>
-  </data>
-  <data name="label170.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label170.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label170.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="label170.Text" xml:space="preserve">
-    <value>First Image</value>
-  </data>
-  <data name="label171.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="label171.Text" xml:space="preserve">
-    <value>Icon coordinates</value>
-  </data>
-  <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="label172.Text" xml:space="preserve">
-    <value>Alignment</value>
-  </data>
-  <data name="label173.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="label173.Text" xml:space="preserve">
-    <value>Spacing</value>
-  </data>
-  <data name="label178.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 104</value>
-  </data>
-  <data name="label178.Text" xml:space="preserve">
-    <value>Error image</value>
-  </data>
-  <data name="label179.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="label179.Text" xml:space="preserve">
-    <value>" ° " Symbol</value>
-  </data>
-  <data name="label181.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label181.Text" xml:space="preserve">
-    <value>" - " Symbol</value>
-  </data>
-  <data name="button_Weather_textMin.Text" xml:space="preserve">
-    <value>Minimum Temperature</value>
-  </data>
-  <data name="checkBox_Weather_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Weather_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="comboBox_Weather_alignment.Items" xml:space="preserve">
-    <value>Left</value>
-  </data>
-  <data name="comboBox_Weather_alignment.Items1" xml:space="preserve">
-    <value>Right</value>
-  </data>
-  <data name="comboBox_Weather_alignment.Items2" xml:space="preserve">
-    <value>Center</value>
-  </data>
-  <data name="label136.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label136.Text" xml:space="preserve">
-    <value>Coordinates</value>
-  </data>
-  <data name="label138.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 13</value>
-  </data>
-  <data name="label138.Text" xml:space="preserve">
-    <value>Icon</value>
-  </data>
-  <data name="label139.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label139.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label139.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="label139.Text" xml:space="preserve">
-    <value>First Image</value>
-  </data>
-  <data name="label140.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="label140.Text" xml:space="preserve">
-    <value>Icon coordinates</value>
-  </data>
-  <data name="label141.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="label141.Text" xml:space="preserve">
-    <value>Alignment</value>
-  </data>
-  <data name="label142.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="label142.Text" xml:space="preserve">
-    <value>Spacing</value>
-  </data>
-  <data name="label147.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 104</value>
-  </data>
-  <data name="label147.Text" xml:space="preserve">
-    <value>Error image</value>
-  </data>
-  <data name="label153.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="label153.Text" xml:space="preserve">
-    <value>" ° " Symbol</value>
-  </data>
-  <data name="label182.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label182.Text" xml:space="preserve">
-    <value>" - " Symbol</value>
-  </data>
-  <data name="button_Weather_text.Text" xml:space="preserve">
-    <value>Current temperature</value>
-  </data>
-  <data name="checkBox_Weather_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Weather_pictures_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="comboBox_Weather_pictures_image.ToolTip" xml:space="preserve">
-    <value>1. Cloudy
-2. Chance of rain
-3. Chance of snow
-4. Sunny
-5. Overcast
-6. Light rain
-7. Light snow
-8. Moderate rain
-9. Moderate snow
-10. Heavy snowfall
-11. Heavy rain
-12. Sandstorm
-13. Sleet
-14. Fog
-15. Haze
-16. Thunderstorm
-17. Snowstorm
-18. Dusty
-19. Extreme rain
-20. Rain with hail
-21. Heavy rain with hail
-22. Rainstorm
-23. Dust storm
-24. Severe sandstorm
-25. Torrential rain
-26. Unknown weather
-27. Cloudy night
-28. Rainy night
-29. Clear night</value>
-  </data>
-  <data name="label148.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label148.Text" xml:space="preserve">
-    <value>Coordinates</value>
-  </data>
-  <data name="label149.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label149.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label149.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="label149.Text" xml:space="preserve">
-    <value>First Image</value>
-  </data>
-  <data name="label152.Text" xml:space="preserve">
-    <value>Number of images</value>
-  </data>
-  <data name="button_Weather_pictures.Text" xml:space="preserve">
-    <value>Image progress</value>
-  </data>
-  <data name="tabPage_Weather.Text" xml:space="preserve">
-    <value>Weather</value>
-  </data>
-  <data name="tabPage_UVindex.Text" xml:space="preserve">
-    <value>UV Index</value>
-  </data>
-  <data name="tabPage_AirQuality.Text" xml:space="preserve">
-    <value>Air Quality</value>
-  </data>
-  <data name="tabPage_Humidity.Text" xml:space="preserve">
-    <value>Humidity</value>
-  </data>
-  <data name="tabPage_Sunrise.Text" xml:space="preserve">
-    <value>Sunrise</value>
-  </data>
-  <data name="tabPage_WindForce.Text" xml:space="preserve">
-    <value>Wind force</value>
-  </data>
-  <data name="tabPage_Altitude.Text" xml:space="preserve">
-    <value>Altitude</value>
-  </data>
-  <data name="tabPage_AirPressure.Text" xml:space="preserve">
-    <value>Air pressure</value>
-  </data>
   <data name="tabPage_Air.Text" xml:space="preserve">
     <value>Atmosphere</value>
-  </data>
-  <data name="tabPage_Status.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="checkBox_Battery_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Battery_scaleLinear_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="radioButton_Battery_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
-  </data>
-  <data name="radioButton_Battery_scaleLinear_image.Text" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="radioButton_Battery_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButton_Battery_scaleLinear_color.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="comboBox_Battery_scaleLinear_flatness.Items" xml:space="preserve">
-    <value>Circle</value>
-  </data>
-  <data name="comboBox_Battery_scaleLinear_flatness.Items1" xml:space="preserve">
-    <value>Flat</value>
-  </data>
-  <data name="label294.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 41</value>
-  </data>
-  <data name="label294.Text" xml:space="preserve">
-    <value>Line ending</value>
-  </data>
-  <data name="label294.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="label718.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 13</value>
-  </data>
-  <data name="label718.Text" xml:space="preserve">
-    <value>Start coordinates</value>
-  </data>
-  <data name="label721.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 110</value>
-  </data>
-  <data name="label721.Text" xml:space="preserve">
-    <value>Width</value>
-  </data>
-  <data name="label722.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 110</value>
-  </data>
-  <data name="label722.Text" xml:space="preserve">
-    <value>Length</value>
-  </data>
-  <data name="label723.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 110</value>
-  </data>
-  <data name="label723.Text" xml:space="preserve">
-    <value>Pointer image</value>
-  </data>
-  <data name="label724.Text" xml:space="preserve">
-    <value>Background image</value>
-  </data>
-  <data name="button_Battery_scaleLinear.Text" xml:space="preserve">
-    <value>Line progress</value>
-  </data>
-  <data name="checkBox_Battery_scaleCircle_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Battery_scaleCircle_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="radioButton_Battery_scaleCircle_image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
-  </data>
-  <data name="radioButton_Battery_scaleCircle_image.Text" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="radioButton_Battery_scaleCircle_color.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="radioButton_Battery_scaleCircle_color.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="comboBox_Battery_scaleCircle_flatness.Items" xml:space="preserve">
-    <value>Circle</value>
-  </data>
-  <data name="comboBox_Battery_scaleCircle_flatness.Items1" xml:space="preserve">
-    <value>Triangle</value>
-  </data>
-  <data name="comboBox_Battery_scaleCircle_flatness.Items2" xml:space="preserve">
-    <value>Flat</value>
-  </data>
-  <data name="label725.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 13</value>
-  </data>
-  <data name="label725.Text" xml:space="preserve">
-    <value>Center coordinates</value>
-  </data>
-  <data name="label728.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 110</value>
-  </data>
-  <data name="label728.Text" xml:space="preserve">
-    <value>Width</value>
-  </data>
-  <data name="label729.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 110</value>
-  </data>
-  <data name="label729.Text" xml:space="preserve">
-    <value>Radius</value>
-  </data>
-  <data name="label730.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 110</value>
-  </data>
-  <data name="label730.Text" xml:space="preserve">
-    <value>End angle</value>
-  </data>
-  <data name="label731.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 110</value>
-  </data>
-  <data name="label731.Text" xml:space="preserve">
-    <value>Start angle</value>
-  </data>
-  <data name="label732.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 110</value>
-  </data>
-  <data name="label732.Text" xml:space="preserve">
-    <value>Line ending</value>
-  </data>
-  <data name="label732.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="label734.Text" xml:space="preserve">
-    <value>Background image</value>
-  </data>
-  <data name="button_Battery_scaleCircle.Text" xml:space="preserve">
-    <value>Circle progress</value>
-  </data>
-  <data name="checkBox_Battery_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Battery_hand_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="label672.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 110</value>
-  </data>
-  <data name="label672.Text" xml:space="preserve">
-    <value>End angle</value>
-  </data>
-  <data name="label673.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 110</value>
-  </data>
-  <data name="label673.Text" xml:space="preserve">
-    <value>Start angle</value>
-  </data>
-  <data name="label674.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label674.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 41</value>
-  </data>
-  <data name="label674.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 13</value>
-  </data>
-  <data name="label674.Text" xml:space="preserve">
-    <value>Rotation point offset</value>
-  </data>
-  <data name="label677.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label677.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 41</value>
-  </data>
-  <data name="label677.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 13</value>
-  </data>
-  <data name="label677.Text" xml:space="preserve">
-    <value>Rotation center coordinates</value>
-  </data>
-  <data name="label678.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label678.Text" xml:space="preserve">
-    <value>Pointer image</value>
-  </data>
-  <data name="label679.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label679.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 110</value>
-  </data>
-  <data name="label679.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 13</value>
-  </data>
-  <data name="label679.Text" xml:space="preserve">
-    <value>Center image coordinates</value>
-  </data>
-  <data name="label684.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label684.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 110</value>
-  </data>
-  <data name="label684.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="label684.Text" xml:space="preserve">
-    <value>Center image</value>
-  </data>
-  <data name="label702.Text" xml:space="preserve">
-    <value>Background image coordinates</value>
-  </data>
-  <data name="label705.Text" xml:space="preserve">
-    <value>Background image</value>
-  </data>
-  <data name="button_Battery_hand.Text" xml:space="preserve">
-    <value>Pointer</value>
-  </data>
-  <data name="checkBox_Battery_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Battery_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="comboBox_Battery_alignment.Items" xml:space="preserve">
-    <value>Left</value>
-  </data>
-  <data name="comboBox_Battery_alignment.Items1" xml:space="preserve">
-    <value>Right</value>
-  </data>
-  <data name="comboBox_Battery_alignment.Items2" xml:space="preserve">
-    <value>Center</value>
-  </data>
-  <data name="checkBox_Battery_add_zero.Text" xml:space="preserve">
-    <value>Add leading zeros</value>
-  </data>
-  <data name="label685.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label685.Text" xml:space="preserve">
-    <value>Coordinates</value>
-  </data>
-  <data name="label686.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label686.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 167</value>
-  </data>
-  <data name="label686.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
-  </data>
-  <data name="label686.Text" xml:space="preserve">
-    <value>Unit</value>
-  </data>
-  <data name="label687.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 13</value>
-  </data>
-  <data name="label687.Text" xml:space="preserve">
-    <value>Icon</value>
-  </data>
-  <data name="label688.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label688.Text" xml:space="preserve">
-    <value>First Image</value>
-  </data>
-  <data name="label689.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="label689.Text" xml:space="preserve">
-    <value>Icon coordinates</value>
-  </data>
-  <data name="label690.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="label690.Text" xml:space="preserve">
-    <value>Alignment</value>
-  </data>
-  <data name="label691.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="label691.Text" xml:space="preserve">
-    <value>Spacing</value>
-  </data>
-  <data name="label701.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 106</value>
-  </data>
-  <data name="label701.Text" xml:space="preserve">
-    <value>Error image</value>
-  </data>
-  <data name="button_Battery_text.Text" xml:space="preserve">
-    <value>Numerical values</value>
-  </data>
-  <data name="checkBox_Battery_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="checkBox_Battery_pictures_Use.Text" xml:space="preserve">
-    <value>Use</value>
-  </data>
-  <data name="label696.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label696.Text" xml:space="preserve">
-    <value>Coordinates</value>
-  </data>
-  <data name="label697.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 41</value>
-  </data>
-  <data name="label697.Text" xml:space="preserve">
-    <value>First Image</value>
-  </data>
-  <data name="label700.Text" xml:space="preserve">
-    <value>Number of images</value>
-  </data>
-  <data name="button_Battery_pictures.Text" xml:space="preserve">
-    <value>Image progress</value>
-  </data>
-  <data name="tabPage_Battery.Text" xml:space="preserve">
-    <value>Battery</value>
   </data>
   <data name="tabPage_System.Text" xml:space="preserve">
     <value>System</value>
@@ -1003,8 +139,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
-        DQAAAk1TRnQBSQFMAgEBBgEAAfABAwH0AQMBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
+        DQAAAk1TRnQBSQFMAgEBBgEAAXwBBAF8AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1062,7 +198,7 @@
         AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
         AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
+        AZ8CAAHwAQ8B9wHnAf4BHws=
 </value>
   </data>
   <data name="tabPage_Background_AOD.Text" xml:space="preserve">
@@ -1083,6 +219,7 @@
   <data name="tabPage_System_AOD.Text" xml:space="preserve">
     <value>System</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button_GenerateID.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 23</value>
   </data>
@@ -1112,6 +249,9 @@
   </data>
   <data name="checkBox_12h_Use.Text" xml:space="preserve">
     <value>12-h format</value>
+  </data>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 82</value>
   </data>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1183,6 +323,9 @@
   </data>
   <data name="label573.Text" xml:space="preserve">
     <value>Coordinates</value>
+  </data>
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 82</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1270,6 +413,7 @@
   <data name="checkBox_Second_Use.Text" xml:space="preserve">
     <value>Use</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label522.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3871,6 +3015,544 @@
   <data name="tabPage_FatBurning.Text" xml:space="preserve">
     <value>Fat-burning</value>
   </data>
+  <data name="tabPage_Weather.Text" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="checkBox_Weather_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Weather_scaleLinear_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="radioButton_Weather_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton_Weather_scaleLinear_image.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="radioButtonWeather_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButtonWeather_scaleLinear_color.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBox_Weather_scaleLinear_flatness.Items" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="comboBox_Weather_scaleLinear_flatness.Items1" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="label103.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 13</value>
+  </data>
+  <data name="label103.Text" xml:space="preserve">
+    <value>Start coordinates</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="label107.Text" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value>Pointer image</value>
+  </data>
+  <data name="label109.Text" xml:space="preserve">
+    <value>Background image</value>
+  </data>
+  <data name="label295.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 41</value>
+  </data>
+  <data name="label295.Text" xml:space="preserve">
+    <value>Line ending</value>
+  </data>
+  <data name="label295.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="button_Weather_scaleLinear.Text" xml:space="preserve">
+    <value>Line progress</value>
+  </data>
+  <data name="checkBox_Weather_scaleCircle_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Weather_scaleCircle_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_image.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_color.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButton_Weather_scaleCircle_color.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBox_Weather_scaleCircle_flatness.Items" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="comboBox_Weather_scaleCircle_flatness.Items1" xml:space="preserve">
+    <value>Triangle</value>
+  </data>
+  <data name="comboBox_Weather_scaleCircle_flatness.Items2" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="label110.Text" xml:space="preserve">
+    <value>Center coordinates</value>
+  </data>
+  <data name="label113.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="label114.Text" xml:space="preserve">
+    <value>Radius</value>
+  </data>
+  <data name="label115.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 110</value>
+  </data>
+  <data name="label115.Text" xml:space="preserve">
+    <value>End angle</value>
+  </data>
+  <data name="label116.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 110</value>
+  </data>
+  <data name="label116.Text" xml:space="preserve">
+    <value>Start angle</value>
+  </data>
+  <data name="label117.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label117.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 110</value>
+  </data>
+  <data name="label117.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="label117.Text" xml:space="preserve">
+    <value>Line ending</value>
+  </data>
+  <data name="label117.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="label118.Text" xml:space="preserve">
+    <value>Background image</value>
+  </data>
+  <data name="button_Weather_scaleCircle.Text" xml:space="preserve">
+    <value>Circle progress</value>
+  </data>
+  <data name="checkBox_Weather_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Weather_hand_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="label119.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
+  </data>
+  <data name="label119.Text" xml:space="preserve">
+    <value>End angle</value>
+  </data>
+  <data name="label120.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 110</value>
+  </data>
+  <data name="label120.Text" xml:space="preserve">
+    <value>Start angle</value>
+  </data>
+  <data name="label121.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label121.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label121.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="label121.Text" xml:space="preserve">
+    <value>Rotation point offset</value>
+  </data>
+  <data name="label124.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label124.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label124.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 13</value>
+  </data>
+  <data name="label124.Text" xml:space="preserve">
+    <value>Rotation center coordinates</value>
+  </data>
+  <data name="label125.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label125.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label125.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="label125.Text" xml:space="preserve">
+    <value>Pointer image</value>
+  </data>
+  <data name="label126.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label126.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label126.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
+  </data>
+  <data name="label126.Text" xml:space="preserve">
+    <value>Center image coordinates</value>
+  </data>
+  <data name="label131.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label131.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label131.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="label131.Text" xml:space="preserve">
+    <value>Center image</value>
+  </data>
+  <data name="label132.Text" xml:space="preserve">
+    <value>Background image coordinates</value>
+  </data>
+  <data name="label135.Text" xml:space="preserve">
+    <value>Background image</value>
+  </data>
+  <data name="button_Weather_hand.Text" xml:space="preserve">
+    <value>Pointer</value>
+  </data>
+  <data name="checkBox_Weather_UseMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Weather_UseMax.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMax.Items" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMax.Items1" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMax.Items2" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="checkBox_Weather_followMax.Text" xml:space="preserve">
+    <value>Follow the minimum temperature</value>
+  </data>
+  <data name="label154.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label154.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label156.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="label156.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="label157.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label157.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label157.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label157.Text" xml:space="preserve">
+    <value>First Image</value>
+  </data>
+  <data name="label158.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="label158.Text" xml:space="preserve">
+    <value>Icon coordinates</value>
+  </data>
+  <data name="label159.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="label159.Text" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="label160.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label160.Text" xml:space="preserve">
+    <value>Spacing</value>
+  </data>
+  <data name="label165.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 104</value>
+  </data>
+  <data name="label165.Text" xml:space="preserve">
+    <value>Error image</value>
+  </data>
+  <data name="label166.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="label166.Text" xml:space="preserve">
+    <value>" ° " Symbol</value>
+  </data>
+  <data name="label180.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label180.Text" xml:space="preserve">
+    <value>" - " Symbol</value>
+  </data>
+  <data name="button_Weather_textMax.Text" xml:space="preserve">
+    <value>Maximum temperature</value>
+  </data>
+  <data name="checkBox_Weather_UseMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Weather_UseMin.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMin.Items" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMin.Items1" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="comboBox_Weather_alignmentMin.Items2" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="label167.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label167.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label169.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="label169.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="label170.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label170.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label170.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label170.Text" xml:space="preserve">
+    <value>First Image</value>
+  </data>
+  <data name="label171.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="label171.Text" xml:space="preserve">
+    <value>Icon coordinates</value>
+  </data>
+  <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="label172.Text" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="label173.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label173.Text" xml:space="preserve">
+    <value>Spacing</value>
+  </data>
+  <data name="label178.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 104</value>
+  </data>
+  <data name="label178.Text" xml:space="preserve">
+    <value>Error image</value>
+  </data>
+  <data name="label179.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="label179.Text" xml:space="preserve">
+    <value>" ° " Symbol</value>
+  </data>
+  <data name="label181.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label181.Text" xml:space="preserve">
+    <value>" - " Symbol</value>
+  </data>
+  <data name="button_Weather_textMin.Text" xml:space="preserve">
+    <value>Minimum Temperature</value>
+  </data>
+  <data name="checkBox_Weather_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Weather_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="comboBox_Weather_alignment.Items" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="comboBox_Weather_alignment.Items1" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="comboBox_Weather_alignment.Items2" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="label136.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label136.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label138.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="label138.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="label139.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label139.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label139.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label139.Text" xml:space="preserve">
+    <value>First Image</value>
+  </data>
+  <data name="label140.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="label140.Text" xml:space="preserve">
+    <value>Icon coordinates</value>
+  </data>
+  <data name="label141.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="label141.Text" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="label142.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label142.Text" xml:space="preserve">
+    <value>Spacing</value>
+  </data>
+  <data name="label147.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 104</value>
+  </data>
+  <data name="label147.Text" xml:space="preserve">
+    <value>Error image</value>
+  </data>
+  <data name="label153.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="label153.Text" xml:space="preserve">
+    <value>" ° " Symbol</value>
+  </data>
+  <data name="label182.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label182.Text" xml:space="preserve">
+    <value>" - " Symbol</value>
+  </data>
+  <data name="button_Weather_text.Text" xml:space="preserve">
+    <value>Current temperature</value>
+  </data>
+  <data name="checkBox_Weather_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Weather_pictures_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="comboBox_Weather_pictures_image.ToolTip" xml:space="preserve">
+    <value>1. Cloudy
+2. Chance of rain
+3. Chance of snow
+4. Sunny
+5. Overcast
+6. Light rain
+7. Light snow
+8. Moderate rain
+9. Moderate snow
+10. Heavy snowfall
+11. Heavy rain
+12. Sandstorm
+13. Sleet
+14. Fog
+15. Haze
+16. Thunderstorm
+17. Snowstorm
+18. Dusty
+19. Extreme rain
+20. Rain with hail
+21. Heavy rain with hail
+22. Rainstorm
+23. Dust storm
+24. Severe sandstorm
+25. Torrential rain
+26. Unknown weather
+27. Cloudy night
+28. Rainy night
+29. Clear night</value>
+  </data>
+  <data name="label148.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label148.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label149.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label149.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label149.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label149.Text" xml:space="preserve">
+    <value>First Image</value>
+  </data>
+  <data name="label152.Text" xml:space="preserve">
+    <value>Number of images</value>
+  </data>
+  <data name="button_Weather_pictures.Text" xml:space="preserve">
+    <value>Image progress</value>
+  </data>
+  <data name="tabPage_UVindex.Text" xml:space="preserve">
+    <value>UV Index</value>
+  </data>
+  <data name="tabPage_AirQuality.Text" xml:space="preserve">
+    <value>Air Quality</value>
+  </data>
+  <data name="tabPage_Humidity.Text" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="tabPage_Sunrise.Text" xml:space="preserve">
+    <value>Sunrise</value>
+  </data>
+  <data name="tabPage_WindForce.Text" xml:space="preserve">
+    <value>Wind force</value>
+  </data>
+  <data name="tabPage_Altitude.Text" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="tabPage_AirPressure.Text" xml:space="preserve">
+    <value>Air pressure</value>
+  </data>
+  <data name="tabPage_Status.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
   <data name="groupBox_Lock.Text" xml:space="preserve">
     <value>Lock</value>
   </data>
@@ -3948,6 +3630,324 @@
   </data>
   <data name="label657.Text" xml:space="preserve">
     <value>Image</value>
+  </data>
+  <data name="tabPage_Battery.Text" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="checkBox_Battery_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Battery_scaleLinear_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="radioButton_Battery_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton_Battery_scaleLinear_image.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="radioButton_Battery_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButton_Battery_scaleLinear_color.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBox_Battery_scaleLinear_flatness.Items" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="comboBox_Battery_scaleLinear_flatness.Items1" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="label294.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 41</value>
+  </data>
+  <data name="label294.Text" xml:space="preserve">
+    <value>Line ending</value>
+  </data>
+  <data name="label294.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="label718.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 13</value>
+  </data>
+  <data name="label718.Text" xml:space="preserve">
+    <value>Start coordinates</value>
+  </data>
+  <data name="label721.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 110</value>
+  </data>
+  <data name="label721.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="label722.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 110</value>
+  </data>
+  <data name="label722.Text" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="label723.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 110</value>
+  </data>
+  <data name="label723.Text" xml:space="preserve">
+    <value>Pointer image</value>
+  </data>
+  <data name="label724.Text" xml:space="preserve">
+    <value>Background image</value>
+  </data>
+  <data name="button_Battery_scaleLinear.Text" xml:space="preserve">
+    <value>Line progress</value>
+  </data>
+  <data name="checkBox_Battery_scaleCircle_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Battery_scaleCircle_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="radioButton_Battery_scaleCircle_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton_Battery_scaleCircle_image.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="radioButton_Battery_scaleCircle_color.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButton_Battery_scaleCircle_color.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="comboBox_Battery_scaleCircle_flatness.Items" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="comboBox_Battery_scaleCircle_flatness.Items1" xml:space="preserve">
+    <value>Triangle</value>
+  </data>
+  <data name="comboBox_Battery_scaleCircle_flatness.Items2" xml:space="preserve">
+    <value>Flat</value>
+  </data>
+  <data name="label725.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="label725.Text" xml:space="preserve">
+    <value>Center coordinates</value>
+  </data>
+  <data name="label728.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 110</value>
+  </data>
+  <data name="label728.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="label729.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label729.Text" xml:space="preserve">
+    <value>Radius</value>
+  </data>
+  <data name="label730.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 110</value>
+  </data>
+  <data name="label730.Text" xml:space="preserve">
+    <value>End angle</value>
+  </data>
+  <data name="label731.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 110</value>
+  </data>
+  <data name="label731.Text" xml:space="preserve">
+    <value>Start angle</value>
+  </data>
+  <data name="label732.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 110</value>
+  </data>
+  <data name="label732.Text" xml:space="preserve">
+    <value>Line ending</value>
+  </data>
+  <data name="label732.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="label734.Text" xml:space="preserve">
+    <value>Background image</value>
+  </data>
+  <data name="button_Battery_scaleCircle.Text" xml:space="preserve">
+    <value>Circle progress</value>
+  </data>
+  <data name="checkBox_Battery_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Battery_hand_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="label672.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
+  </data>
+  <data name="label672.Text" xml:space="preserve">
+    <value>End angle</value>
+  </data>
+  <data name="label673.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 110</value>
+  </data>
+  <data name="label673.Text" xml:space="preserve">
+    <value>Start angle</value>
+  </data>
+  <data name="label674.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label674.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label674.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="label674.Text" xml:space="preserve">
+    <value>Rotation point offset</value>
+  </data>
+  <data name="label677.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label677.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label677.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 13</value>
+  </data>
+  <data name="label677.Text" xml:space="preserve">
+    <value>Rotation center coordinates</value>
+  </data>
+  <data name="label678.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label678.Text" xml:space="preserve">
+    <value>Pointer image</value>
+  </data>
+  <data name="label679.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label679.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label679.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
+  </data>
+  <data name="label679.Text" xml:space="preserve">
+    <value>Center image coordinates</value>
+  </data>
+  <data name="label684.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label684.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label684.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="label684.Text" xml:space="preserve">
+    <value>Center image</value>
+  </data>
+  <data name="label702.Text" xml:space="preserve">
+    <value>Background image coordinates</value>
+  </data>
+  <data name="label705.Text" xml:space="preserve">
+    <value>Background image</value>
+  </data>
+  <data name="button_Battery_hand.Text" xml:space="preserve">
+    <value>Pointer</value>
+  </data>
+  <data name="checkBox_Battery_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Battery_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="comboBox_Battery_alignment.Items" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="comboBox_Battery_alignment.Items1" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="comboBox_Battery_alignment.Items2" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="checkBox_Battery_add_zero.Text" xml:space="preserve">
+    <value>Add leading zeros</value>
+  </data>
+  <data name="label685.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label685.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label686.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label686.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 167</value>
+  </data>
+  <data name="label686.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="label686.Text" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="label687.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="label687.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="label688.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label688.Text" xml:space="preserve">
+    <value>First Image</value>
+  </data>
+  <data name="label689.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="label689.Text" xml:space="preserve">
+    <value>Icon coordinates</value>
+  </data>
+  <data name="label690.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="label690.Text" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="label691.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label691.Text" xml:space="preserve">
+    <value>Spacing</value>
+  </data>
+  <data name="label701.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 106</value>
+  </data>
+  <data name="label701.Text" xml:space="preserve">
+    <value>Error image</value>
+  </data>
+  <data name="button_Battery_text.Text" xml:space="preserve">
+    <value>Numerical values</value>
+  </data>
+  <data name="checkBox_Battery_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="checkBox_Battery_pictures_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="label696.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label696.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label697.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label697.Text" xml:space="preserve">
+    <value>First Image</value>
+  </data>
+  <data name="label700.Text" xml:space="preserve">
+    <value>Number of images</value>
+  </data>
+  <data name="button_Battery_pictures.Text" xml:space="preserve">
+    <value>Image progress</value>
   </data>
   <data name="label284.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
@@ -7487,165 +7487,47 @@
   <data name="button_Battery_pictures_AOD.Text" xml:space="preserve">
     <value>Image progress</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Unpack/pack</value>
-  </data>
   <data name="tabPage_Show.Text" xml:space="preserve">
     <value>Browse</value>
   </data>
-  <data name="tabPage_Edit.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Converting</value>
-  </data>
-  <data name="tabPage_Settings.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="tabPage_About.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="button_SetWeather.Text" xml:space="preserve">
+  <data name="userControl_text_weather1.ButtonText" xml:space="preserve">
     <value>Weather</value>
   </data>
-  <data name="numericUpDown_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 32</value>
+  <data name="userControl_Set12.ButtonText" xml:space="preserve">
+    <value>Values 12</value>
   </data>
-  <data name="numericUpDown_WeatherSet_MinTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>376, 32</value>
+  <data name="userControl_Set11.ButtonText" xml:space="preserve">
+    <value>Values 11</value>
   </data>
-  <data name="label288.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
+  <data name="userControl_Set10.ButtonText" xml:space="preserve">
+    <value>Values 10</value>
   </data>
-  <data name="label288.Text" xml:space="preserve">
-    <value>Weather icon</value>
+  <data name="userControl_Set9.ButtonText" xml:space="preserve">
+    <value>Values 9</value>
   </data>
-  <data name="label299.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="userControl_Set8.ButtonText" xml:space="preserve">
+    <value>Values 8</value>
   </data>
-  <data name="label299.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 34</value>
+  <data name="userControl_Set7.ButtonText" xml:space="preserve">
+    <value>Values 7</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label299.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="userControl_Set6.ButtonText" xml:space="preserve">
+    <value>Values 6</value>
   </data>
-  <data name="label299.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 13</value>
+  <data name="userControl_Set5.ButtonText" xml:space="preserve">
+    <value>Values 5</value>
   </data>
-  <data name="label299.Text" xml:space="preserve">
-    <value>Minimum temperature</value>
+  <data name="userControl_Set4.ButtonText" xml:space="preserve">
+    <value>Values 4</value>
   </data>
-  <data name="comboBox_WeatherSet_Icon.Items" xml:space="preserve">
-    <value>Cloudy</value>
+  <data name="userControl_Set3.ButtonText" xml:space="preserve">
+    <value>Values 3</value>
   </data>
-  <data name="comboBox_WeatherSet_Icon.Items1" xml:space="preserve">
-    <value>Chance of rain</value>
+  <data name="userControl_Set2.ButtonText" xml:space="preserve">
+    <value>Values 2</value>
   </data>
-  <data name="comboBox_WeatherSet_Icon.Items2" xml:space="preserve">
-    <value>Chance of snow</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items3" xml:space="preserve">
-    <value>Sunny</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items4" xml:space="preserve">
-    <value>Overcast</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items5" xml:space="preserve">
-    <value>Light rain</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items6" xml:space="preserve">
-    <value>Light snow</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items7" xml:space="preserve">
-    <value>Moderate rain</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items8" xml:space="preserve">
-    <value>Moderate snow</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items9" xml:space="preserve">
-    <value>Heavy snowfall</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items10" xml:space="preserve">
-    <value>Heavy rain</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items11" xml:space="preserve">
-    <value>Sandstorm</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items12" xml:space="preserve">
-    <value>Sleet</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items13" xml:space="preserve">
-    <value>Fog</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items14" xml:space="preserve">
-    <value>Haze</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items15" xml:space="preserve">
-    <value>Thunderstorm</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items16" xml:space="preserve">
-    <value>Snowstorm</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items17" xml:space="preserve">
-    <value>Dusty</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items18" xml:space="preserve">
-    <value>Extreme rain</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items19" xml:space="preserve">
-    <value>Rain with hail</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items20" xml:space="preserve">
-    <value>Heavy rain with hail</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items21" xml:space="preserve">
-    <value>Rainstorm</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items22" xml:space="preserve">
-    <value>Dust storm</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items23" xml:space="preserve">
-    <value>Severe sandstorm</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items24" xml:space="preserve">
-    <value>Torrential rain</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items25" xml:space="preserve">
-    <value>Unknown weather</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items26" xml:space="preserve">
-    <value>Cloudy night</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items27" xml:space="preserve">
-    <value>Rainy night</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items28" xml:space="preserve">
-    <value>Clear night</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 4</value>
-  </data>
-  <data name="numericUpDown_WeatherSet_MaxTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>376, 6</value>
-  </data>
-  <data name="checkBox_WeatherSet_Temp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 17</value>
-  </data>
-  <data name="checkBox_WeatherSet_Temp.Text" xml:space="preserve">
-    <value>Current temperature</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 7</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 17</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Text" xml:space="preserve">
-    <value>Maximum temperature</value>
+  <data name="userControl_Set1.ButtonText" xml:space="preserve">
+    <value>Values 1</value>
   </data>
   <data name="button_JsonPreview_Random.Text" xml:space="preserve">
     <value>Random value</value>
@@ -7655,726 +7537,6 @@
   </data>
   <data name="button_JsonPreview_Write.Text" xml:space="preserve">
     <value>Save Preview values</value>
-  </data>
-  <data name="label101.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label101.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set10.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set10.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set10.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label262.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label262.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label263.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label263.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label264.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label264.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label265.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label265.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label266.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label266.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label267.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label267.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label268.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label268.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label269.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label269.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set10.Text" xml:space="preserve">
-    <value>Values 10</value>
-  </data>
-  <data name="label99.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label99.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set9.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set9.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set9.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label254.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label254.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label255.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label255.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label256.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label256.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label257.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label257.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label258.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label258.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label259.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label259.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label260.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label260.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label261.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label261.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set9.Text" xml:space="preserve">
-    <value>Values 9</value>
-  </data>
-  <data name="label97.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label97.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set8.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set8.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set8.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label246.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label246.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label247.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label247.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label248.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label248.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label249.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label249.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label250.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label250.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label251.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label251.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label252.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label252.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label253.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label253.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set8.Text" xml:space="preserve">
-    <value>Values 8</value>
-  </data>
-  <data name="label95.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label95.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set7.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set7.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set7.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label91.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label91.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label92.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label92.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label240.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label240.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label241.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label241.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label242.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label242.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label243.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label243.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label244.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label244.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label245.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label245.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set7.Text" xml:space="preserve">
-    <value>Values 7</value>
-  </data>
-  <data name="label93.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label93.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set6.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set6.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set6.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label83.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label83.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label84.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label84.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label85.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label85.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label86.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label86.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label87.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label87.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label88.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label88.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label89.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label89.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label90.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label90.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set6.Text" xml:space="preserve">
-    <value>Values 6</value>
-  </data>
-  <data name="label81.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label81.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set5.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set5.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set5.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label232.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label232.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label233.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label233.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label234.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label234.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label235.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label235.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label236.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label236.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label237.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label237.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label238.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label238.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label239.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label239.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set5.Text" xml:space="preserve">
-    <value>Values 5</value>
-  </data>
-  <data name="label79.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label79.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set4.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set4.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set4.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label224.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label224.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label225.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label225.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label226.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label226.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label227.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label227.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label228.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label228.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label229.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label229.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label230.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label230.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label231.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label231.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set4.Text" xml:space="preserve">
-    <value>Values 4</value>
-  </data>
-  <data name="label77.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label77.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set3.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set3.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set3.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label213.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label213.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label214.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label214.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label218.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label218.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label219.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label219.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label220.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label220.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label221.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label221.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label222.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label222.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label223.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label223.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set3.Text" xml:space="preserve">
-    <value>Values 3</value>
-  </data>
-  <data name="label75.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label75.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set2.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set2.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set2.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label47.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label47.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label48.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label48.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label49.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label49.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label50.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label51.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label52.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label52.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label53.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label54.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set2.Text" xml:space="preserve">
-    <value>Values 2</value>
-  </data>
-  <data name="label74.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="label74.Text" xml:space="preserve">
-    <value>Stand up</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set1.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
-  <data name="checkBox_Lock_Set1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="checkBox_Lock_Set1.Text" xml:space="preserve">
-    <value>Lock</value>
-  </data>
-  <data name="checkBox_Alarm_Set1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 18</value>
-  </data>
-  <data name="checkBox_Alarm_Set1.Text" xml:space="preserve">
-    <value>Alarm Clock</value>
-  </data>
-  <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label46.Text" xml:space="preserve">
-    <value>Steps goal</value>
-  </data>
-  <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="label45.Text" xml:space="preserve">
-    <value>Steps</value>
-  </data>
-  <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="label44.Text" xml:space="preserve">
-    <value>Heart rate</value>
-  </data>
-  <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="label43.Text" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="label42.Text" xml:space="preserve">
-    <value>Calories</value>
-  </data>
-  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="label41.Text" xml:space="preserve">
-    <value>Battery</value>
-  </data>
-  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label40.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="label36.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="button_Set1.Text" xml:space="preserve">
-    <value>Values 1</value>
   </data>
   <data name="Number.HeaderText" xml:space="preserve">
     <value>#</value>
@@ -8412,6 +7574,9 @@
   <data name="label4.Text" xml:space="preserve">
     <value>JSON with images:</value>
   </data>
+  <data name="tabPage_Edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
   <data name="button_RandomPreview.Text" xml:space="preserve">
     <value>Random preview</value>
   </data>
@@ -8426,6 +7591,9 @@
   </data>
   <data name="button_OpenDir.Text" xml:space="preserve">
     <value>Open Folder</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Converting</value>
   </data>
   <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 13</value>
@@ -8477,6 +7645,18 @@
   </data>
   <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
     <value>Custom size</value>
+  </data>
+  <data name="tabPage_Settings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 213</value>
+  </data>
+  <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="label355.Text" xml:space="preserve">
+    <value>GIF animation speed</value>
   </data>
   <data name="checkBox_ShowIn12hourFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 17</value>
@@ -8554,7 +7734,7 @@
     <value>Do nothing</value>
   </data>
   <data name="radioButton_Settings_Open_Download.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 17</value>
+    <value>174, 17</value>
   </data>
   <data name="radioButton_Settings_Open_Download.Text" xml:space="preserve">
     <value>Load Preview.States (if it exists)</value>
@@ -8607,6 +7787,9 @@
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>Let me choose</value>
   </data>
+  <data name="tabPage_About.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 13</value>
   </data>
@@ -8657,47 +7840,6 @@
   </data>
   <data name="label406.Text" xml:space="preserve">
     <value>Version:</value>
-  </data>
-  <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 39</value>
-  </data>
-  <data name="label483.Text" xml:space="preserve">
-    <value>Preview animation speed
-(higher speed - smoother animation,
-but more system load)</value>
-  </data>
-  <data name="button_pack_unpack.Text" xml:space="preserve">
-    <value>Browse</value>
-  </data>
-  <data name="button_unpack.Text" xml:space="preserve">
-    <value>Unpack .bin</value>
-  </data>
-  <data name="button_pack.Text" xml:space="preserve">
-    <value>Pack .bin</value>
-  </data>
-  <data name="button_zip.Text" xml:space="preserve">
-    <value>Compress .bin</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Path to the packer</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 13</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Command for extracting the watchface</value>
-  </data>
-  <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 13</value>
-  </data>
-  <data name="label355.Text" xml:space="preserve">
-    <value>GIF animation speed</value>
-  </data>
-  <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 213</value>
   </data>
   <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 120</value>

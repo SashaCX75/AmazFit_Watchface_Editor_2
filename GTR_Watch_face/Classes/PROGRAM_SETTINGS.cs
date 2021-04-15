@@ -1,6 +1,6 @@
 ﻿namespace AmazFit_Watchface_2
 {
-    class PROGRAM_SETTINGS
+    public class PROGRAM_SETTINGS
     {
         public bool Settings_Unpack_Dialog = true;
         public bool Settings_Unpack_Save = false;
@@ -18,8 +18,10 @@
         public bool Settings_Open_Download = true;
         public bool Settings_Open_DoNotning = false;
 
-        public bool Model_GTR47 = true;
-        public bool Model_GTS = false;
+        public bool Model_GTR2 = true;
+        public bool Model_GTR2e = false;
+        public bool Model_GTS2 = false;
+        public bool Model_TRex_pro = false;
 
         public bool ShowBorder = false;
         public bool Crop = true;
@@ -41,7 +43,8 @@
         public string pack_unpack_dir { get; set; }
         public string unpack_command_GTR_2 = "--gtr2 47 --file";
         public string unpack_command_GTS_2 = "--gts2 --file";
-
+        public string unpack_command_TRex_pro = "--trexpro --file";
+        public string unpack_command = "--gtr2 47 --file";
         public string language { get; set; }
 
         public int Splitter_Pos = 0;

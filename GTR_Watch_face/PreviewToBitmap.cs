@@ -48,6 +48,10 @@ namespace AmazFit_Watchface_2
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts_2.png");
             }
+            if (radioButton_TRex_pro.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+            }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
             gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
@@ -331,36 +335,46 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region активности
-            Panel panel_pictures = panel_Battery_pictures;
-            Panel panel_text = panel_Battery_text;
-            Panel panel_hand = panel_Battery_hand;
-            Panel panel_scaleCircle = panel_Battery_scaleCircle;
-            Panel panel_scaleLinear = panel_Battery_scaleLinear;
+            Panel panel_pictures;
+            Panel panel_text;
+            Panel panel_hand;
+            Panel panel_scaleCircle;
+            Panel panel_scaleLinear;
+
+            UserControl_pictures userPanel_pictures;
+            UserControl_text userPanel_text;
+            UserControl_hand userPanel_hand;
+            UserControl_scaleCircle userPanel_scaleCircle;
+            UserControl_scaleLinear userPanel_scaleLinear;
+
+
             CheckBox checkBox_Use = null;
 
             #region зараяд
+            userPanel_pictures = userControl_pictures_Battery;
+            userPanel_text = userControl_text_Battery;
+            userPanel_hand = userControl_hand_Battery;
+            userPanel_scaleCircle = userControl_scaleCircle_Battery;
+            userPanel_scaleLinear = userControl_scaleLinear_Battery;
             // зараяд картинками
-            //CheckBox checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
-                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
 
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
-                    //int offSet = (int)Math.Ceiling(count * Watch_Face_Preview_Set.Battery / 100f);
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
                     int offSet = (int)(count * Watch_Face_Preview_Set.Battery / 100f);
                     //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
                     if (imageIndex < ListImagesFullName.Count)
                     {
@@ -371,34 +385,29 @@ namespace AmazFit_Watchface_2
             }
 
             // зараяд круговой шкалой
-            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
-                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
-                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
-                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
-                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
                 float width = (float)numericUpDown_width.Value;
                 int radius = (int)numericUpDown_radius.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int imageBackground = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
                 float StartAngle = (float)numericUpDown_startAngle.Value - 90;
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
                 float position = (float)Watch_Face_Preview_Set.Battery / 100f;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
@@ -415,37 +424,31 @@ namespace AmazFit_Watchface_2
             }
 
             // зараяд линейной шкалой
-            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
-                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
-                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
-                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int pointerIndex = comboBox_pointer.SelectedIndex;
-                int backgroundIndex = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
                 float position = Watch_Face_Preview_Set.Battery / 100f;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
 
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
                     {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea); 
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                     }
                 }
                 else
@@ -455,37 +458,35 @@ namespace AmazFit_Watchface_2
             }
 
             // зараяд надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_text.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
                 //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
 
-                if (comboBox_image.SelectedIndex >= 0)
+                if (imageIndex >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //int imageIndex = comboBox_image.SelectedIndex;
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
                     bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Battery;
-                    int separator_index = comboBox_separator.SelectedIndex;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
                     Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+                        spasing, alignment, value, addZero, 5, separator_index, BBorder);
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (unit >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[unit]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -493,28 +494,27 @@ namespace AmazFit_Watchface_2
             }
 
             // зараяд стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_hand.checkBox_hand_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
 
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    if (imageBackground >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
                             (int)numericUpDownY_background.Value, src.Width, src.Height));
                     }
@@ -523,16 +523,16 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int offsetX = (int)numericUpDown_offsetX.Value;
                     int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
+                    //int image_index = comboBox_image.SelectedIndex;
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
                     float angle = startAngle + Watch_Face_Preview_Set.Battery * (endAngle - startAngle) / 100;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    if (imageCentr >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
                     }
@@ -541,21 +541,21 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region шаги
-            panel_pictures = panel_Steps_pictures;
-            panel_text = panel_Steps_text;
-            panel_hand = panel_Steps_hand;
-            panel_scaleCircle = panel_Steps_scaleCircle;
-            panel_scaleLinear = panel_Steps_scaleLinear;
+            userPanel_pictures = userControl_pictures_Steps;
+            userPanel_text = userControl_text_Steps;
+            userPanel_hand = userControl_hand_Steps;
+            userPanel_scaleCircle = userControl_scaleCircle_Steps;
+            userPanel_scaleLinear = userControl_scaleLinear_Steps;
             // шаги картинками
-            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
-                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
 
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
@@ -566,7 +566,7 @@ namespace AmazFit_Watchface_2
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
                     if (imageIndex < ListImagesFullName.Count)
                     {
@@ -577,35 +577,35 @@ namespace AmazFit_Watchface_2
             }
 
             // шаги круговой шкалой
-            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
-                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
-                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
-                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+                //int image = userPanel_scaleCircle.comboBoxGetImage();
+                //string color = userPanel_scaleCircle.comboBoxGetColorString();
+                //int flatness = userPanel_scaleCircle.comboBoxGetFlatness();
+                //int background = userPanel_scaleCircle.comboBoxGetImageBackground();
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
                 float width = (float)numericUpDown_width.Value;
                 int radius = (int)numericUpDown_radius.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int imageBackground = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
                 float StartAngle = (float)numericUpDown_startAngle.Value - 90;
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
                 float position = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
@@ -622,32 +622,32 @@ namespace AmazFit_Watchface_2
             }
 
             // шаги линейной шкалой
-            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
-                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
-                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int pointerIndex = comboBox_pointer.SelectedIndex;
-                int backgroundIndex = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
                 float position = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
 
                 if (radioButton_image.Checked)
                 {
@@ -663,37 +663,39 @@ namespace AmazFit_Watchface_2
             }
 
             // шаги надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (userPanel_text.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2]; icon
+                //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3]; unit
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
                 //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
 
-                if (comboBox_image.SelectedIndex >= 0)
+                if (imageIndex >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //int imageIndex = comboBox_image.SelectedIndex;
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
                     bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Activity.Steps;
-                    int separator_index = comboBox_separator.SelectedIndex;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
                     Draw_dagital_text(gPanel, imageIndex, x, y,
                         spasing, alignment, value, addZero, 5, separator_index, BBorder);
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (unit >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[unit]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -701,28 +703,28 @@ namespace AmazFit_Watchface_2
             }
 
             // шаги стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (userPanel_hand.checkBox_hand_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
 
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    if (imageBackground >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
                             (int)numericUpDownY_background.Value, src.Width, src.Height));
                     }
@@ -731,7 +733,7 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int offsetX = (int)numericUpDown_offsetX.Value;
                     int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
+                    //int image_index = comboBox_image.SelectedIndex;
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
@@ -740,9 +742,9 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    if (imageCentr >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
                     }
@@ -751,21 +753,21 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region калории
-            panel_pictures = panel_Calories_pictures;
-            panel_text = panel_Calories_text;
-            panel_hand = panel_Calories_hand;
-            panel_scaleCircle = panel_Calories_scaleCircle;
-            panel_scaleLinear = panel_Calories_scaleLinear;
+            userPanel_pictures = userControl_pictures_Calories;
+            userPanel_text = userControl_text_Calories;
+            userPanel_hand = userControl_hand_Calories;
+            userPanel_scaleCircle = userControl_scaleCircle_Calories;
+            userPanel_scaleLinear = userControl_scaleLinear_Calories;
             // калории картинками
-            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
-                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
 
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
@@ -775,8 +777,7 @@ namespace AmazFit_Watchface_2
                     //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
-                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
                     if (imageIndex < ListImagesFullName.Count)
                     {
@@ -787,35 +788,35 @@ namespace AmazFit_Watchface_2
             }
 
             // калории круговой шкалой
-            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
-                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
-                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
-                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+                //int image = userPanel_scaleCircle.comboBoxGetImage();
+                //string color = userPanel_scaleCircle.comboBoxGetColorString();
+                //int flatness = userPanel_scaleCircle.comboBoxGetFlatness();
+                //int background = userPanel_scaleCircle.comboBoxGetImageBackground();
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
                 float width = (float)numericUpDown_width.Value;
                 int radius = (int)numericUpDown_radius.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int imageBackground = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
                 float StartAngle = (float)numericUpDown_startAngle.Value - 90;
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
                 float position = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
@@ -832,32 +833,32 @@ namespace AmazFit_Watchface_2
             }
 
             // калории линейной шкалой
-            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
-                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
-                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int pointerIndex = comboBox_pointer.SelectedIndex;
-                int backgroundIndex = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
                 float position = (float)Watch_Face_Preview_Set.Activity.Calories / 300f;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
 
                 if (radioButton_image.Checked)
                 {
@@ -873,37 +874,39 @@ namespace AmazFit_Watchface_2
             }
 
             // калории надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (userPanel_text.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2]; icon
+                //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3]; unit
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
                 //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
 
-                if (comboBox_image.SelectedIndex >= 0)
+                if (imageIndex >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //int imageIndex = comboBox_image.SelectedIndex;
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
                     bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Activity.Calories;
-                    int separator_index = comboBox_separator.SelectedIndex;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
                     Draw_dagital_text(gPanel, imageIndex, x, y,
                         spasing, alignment, value, addZero, 4, separator_index, BBorder);
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (unit >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[unit]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -911,28 +914,28 @@ namespace AmazFit_Watchface_2
             }
 
             // калории стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (userPanel_hand.checkBox_hand_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
 
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    if (imageBackground >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
                             (int)numericUpDownY_background.Value, src.Width, src.Height));
                     }
@@ -941,7 +944,7 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int offsetX = (int)numericUpDown_offsetX.Value;
                     int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
+                    //int image_index = comboBox_image.SelectedIndex;
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
@@ -949,9 +952,9 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Activity.Calories > 300) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    if (imageCentr >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
                     }
@@ -960,21 +963,21 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region пульс
-            panel_pictures = panel_HeartRate_pictures;
-            panel_text = panel_HeartRate_text;
-            panel_hand = panel_HeartRate_hand;
-            panel_scaleCircle = panel_HeartRate_scaleCircle;
-            panel_scaleLinear = panel_HeartRate_scaleLinear;
+            userPanel_pictures = userControl_pictures_HeartRate;
+            userPanel_text = userControl_text_HeartRate;
+            userPanel_hand = userControl_hand_HeartRate;
+            userPanel_scaleCircle = userControl_scaleCircle_HeartRate;
+            userPanel_scaleLinear = userControl_scaleLinear_HeartRate;
             // пульс картинками
-            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
-                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
 
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
@@ -985,8 +988,7 @@ namespace AmazFit_Watchface_2
                     //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
-                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
                     if (imageIndex < ListImagesFullName.Count)
                     {
@@ -997,35 +999,35 @@ namespace AmazFit_Watchface_2
             }
 
             // пульс круговой шкалой
-            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
-                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
-                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
-                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+                //int image = userPanel_scaleCircle.comboBoxGetImage();
+                //string color = userPanel_scaleCircle.comboBoxGetColorString();
+                //int flatness = userPanel_scaleCircle.comboBoxGetFlatness();
+                //int background = userPanel_scaleCircle.comboBoxGetImageBackground();
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
                 float width = (float)numericUpDown_width.Value;
                 int radius = (int)numericUpDown_radius.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int imageBackground = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
                 float StartAngle = (float)numericUpDown_startAngle.Value - 90;
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
-                Color color = comboBox_color.BackColor;
-                float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 200f;
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 180f;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
@@ -1042,32 +1044,32 @@ namespace AmazFit_Watchface_2
             }
 
             // пульс линейной шкалой
-            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
-                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
-                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int pointerIndex = comboBox_pointer.SelectedIndex;
-                int backgroundIndex = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
-                Color color = comboBox_color.BackColor;
-                float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 200f;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.HeartRate / 180f;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
 
                 if (radioButton_image.Checked)
                 {
@@ -1083,37 +1085,39 @@ namespace AmazFit_Watchface_2
             }
 
             // пульс надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (userPanel_text.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2]; icon
+                //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3]; unit
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
                 //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
 
-                if (comboBox_image.SelectedIndex >= 0)
+                if (imageIndex >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //int imageIndex = comboBox_image.SelectedIndex;
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
                     bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Activity.HeartRate;
-                    int separator_index = comboBox_separator.SelectedIndex;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
                     Draw_dagital_text(gPanel, imageIndex, x, y,
                         spasing, alignment, value, addZero, 3, separator_index, BBorder);
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (unit >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[unit]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1121,28 +1125,28 @@ namespace AmazFit_Watchface_2
             }
 
             // пульс стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (userPanel_hand.checkBox_hand_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
 
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    if (imageBackground >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
                             (int)numericUpDownY_background.Value, src.Width, src.Height));
                     }
@@ -1151,17 +1155,20 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int offsetX = (int)numericUpDown_offsetX.Value;
                     int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
+                    //int image_index = comboBox_image.SelectedIndex;
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
-
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.HeartRate * (endAngle - startAngle) / 200f;
-                    if (Watch_Face_Preview_Set.Activity.HeartRate > 200) angle = endAngle;
+                    //TODO определить пределы изменения пульса
+                    //float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 200f;
+                    float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 179f;
+                    float angle = startAngle + position * (endAngle - startAngle);
+                    if (position < 0) angle = startAngle;
+                    if (position > 1) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    if (imageCentr >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
                     }
@@ -1170,32 +1177,31 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region PAI
-            panel_pictures = panel_PAI_pictures;
-            panel_text = panel_PAI_text;
-            panel_hand = panel_PAI_hand;
-            panel_scaleCircle = panel_PAI_scaleCircle;
-            panel_scaleLinear = panel_PAI_scaleLinear;
+            userPanel_pictures = userControl_pictures_PAI;
+            userPanel_text = userControl_text_PAI;
+            userPanel_hand = userControl_hand_PAI;
+            userPanel_scaleCircle = userControl_scaleCircle_PAI;
+            userPanel_scaleLinear = userControl_scaleLinear_PAI;
             // PAI картинками
-            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_pictures.Controls[0];
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
-                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
 
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
                     //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
-                    int offSet = (int)((count+1f) * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.PAI / 100f);
                     //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
-                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
                     if (imageIndex < ListImagesFullName.Count)
                     {
@@ -1206,35 +1212,35 @@ namespace AmazFit_Watchface_2
             }
 
             // PAI круговой шкалой
-            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
-                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
-                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
-                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+                //int image = userPanel_scaleCircle.comboBoxGetImage();
+                //string color = userPanel_scaleCircle.comboBoxGetColorString();
+                //int flatness = userPanel_scaleCircle.comboBoxGetFlatness();
+                //int background = userPanel_scaleCircle.comboBoxGetImageBackground();
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
                 float width = (float)numericUpDown_width.Value;
                 int radius = (int)numericUpDown_radius.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int imageBackground = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
                 float StartAngle = (float)numericUpDown_startAngle.Value - 90;
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
                 float position = (float)Watch_Face_Preview_Set.Activity.PAI / 100f;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
@@ -1251,32 +1257,32 @@ namespace AmazFit_Watchface_2
             }
 
             // PAI линейной шкалой
-            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
-                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
-                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int pointerIndex = comboBox_pointer.SelectedIndex;
-                int backgroundIndex = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
                 float position = (float)Watch_Face_Preview_Set.Activity.PAI / 100f;
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
 
                 if (radioButton_image.Checked)
                 {
@@ -1292,37 +1298,39 @@ namespace AmazFit_Watchface_2
             }
 
             // PAI надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (userPanel_text.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2]; icon
+                //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3]; unit
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
                 //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
 
-                if (comboBox_image.SelectedIndex >= 0)
+                if (imageIndex >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //int imageIndex = comboBox_image.SelectedIndex;
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
                     bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Activity.PAI;
-                    int separator_index = comboBox_separator.SelectedIndex;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
                     Draw_dagital_text(gPanel, imageIndex, x, y,
                         spasing, alignment, value, addZero, 3, separator_index, BBorder);
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (unit >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[unit]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1330,28 +1338,28 @@ namespace AmazFit_Watchface_2
             }
 
             // PAI стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_hand.Controls[0];
+            if (userPanel_hand.checkBox_hand_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
 
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    if (imageBackground >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
                             (int)numericUpDownY_background.Value, src.Width, src.Height));
                     }
@@ -1360,7 +1368,7 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int offsetX = (int)numericUpDown_offsetX.Value;
                     int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
+                    //int image_index = comboBox_image.SelectedIndex;
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
@@ -1368,9 +1376,9 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Activity.PAI > 100) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    if (imageCentr >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
                     }
@@ -1379,215 +1387,52 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region путь
-            panel_pictures = panel_Distance_pictures;
-            panel_text = panel_Distance_text;
-            panel_hand = panel_Distance_hand;
-            panel_scaleCircle = panel_Distance_scaleCircle;
-            panel_scaleLinear = panel_Distance_scaleLinear;
-            // путь картинками
-            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
-                    NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
-
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int count = (int)numericUpDown_count.Value;
-                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Distance / 10000f);
-                    int offSet = (int)((count-1f) * Watch_Face_Preview_Set.Activity.Distance / 10000f);
-                    //offSet--;
-                    if (offSet < 0) offSet = 0;
-                    if (offSet >= count) offSet = (int)(count - 1);
-                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    int imageIndex = comboBox_image.SelectedIndex + offSet;
-
-                    if (imageIndex < ListImagesFullName.Count)
-                    {
-                        src = OpenFileStream(ListImagesFullName[imageIndex]);
-                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                    }
-                }
-            }
-
-            // путь круговой шкалой
-            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
-                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
-                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
-                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
-                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
-
-                int x = (int)numericUpDownX.Value;
-                int y = (int)numericUpDownY.Value;
-                float width = (float)numericUpDown_width.Value;
-                int radius = (int)numericUpDown_radius.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int imageBackground = comboBox_background.SelectedIndex;
-                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
-                float EndAngle = (float)(numericUpDown_endAngle.Value -
-                    numericUpDown_startAngle.Value);
-                Color color = comboBox_color.BackColor;
-                float position = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
-                if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
-                if (radioButton_image.Checked)
-                {
-                    if (imageIndex >= 0)
-                    {
-                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                         imageIndex, imageBackground, showProgressArea);
-                    }
-                }
-                else
-                {
-                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
-                        color, imageBackground, showProgressArea);
-                }
-            }
-
-            // путь линейной шкалой
-            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
-                //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
-                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
-                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
-
-                int x = (int)numericUpDownX.Value;
-                int y = (int)numericUpDownY.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int pointerIndex = comboBox_pointer.SelectedIndex;
-                int backgroundIndex = comboBox_background.SelectedIndex;
-                int length = (int)numericUpDown_length.Value;
-                int width = (int)numericUpDown_width.Value;
-                Color color = comboBox_color.BackColor;
-                float position = (float)Watch_Face_Preview_Set.Activity.Distance / 10000f;
-                if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
-
-                if (radioButton_image.Checked)
-                {
-                    if (imageIndex >= 0)
-                    {
-                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
-                    }
-                }
-                else
-                {
-                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
-                }
-            }
+            userPanel_text = userControl_text_Distance;
 
             // путь надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
+            //checkBox_Use = (CheckBox)panel_text.Controls[0];
+            if (userPanel_text.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
+                //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2]; icon
+                //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3]; unit
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
                 //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[11];
-                ComboBox comboBox_DecimalPoint = (ComboBox)panel_text.Controls[12];
+                //ComboBox comboBox_DecimalPoint = (ComboBox)panel_text.Controls[12];
 
-                if (comboBox_image.SelectedIndex >= 0)
+                if (imageIndex >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //int imageIndex = comboBox_image.SelectedIndex;
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
                     bool addZero = checkBox_add_zero.Checked;
                     double value = Watch_Face_Preview_Set.Activity.Distance / 1000d;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    int decimalPoint_index = comboBox_DecimalPoint.SelectedIndex;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    int decimalPoint_index = userPanel_text.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
+
                     Draw_dagital_text(gPanel, imageIndex, x, y,
                         spasing, alignment, value, addZero, 4, separator_index,
                         decimalPoint_index, 2, BBorder);
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (unit >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[unit]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
             }
 
-            // путь стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
-                {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
-
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
-                            (int)numericUpDownY_background.Value, src.Width, src.Height));
-                    }
-
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int offsetX = (int)numericUpDown_offsetX.Value;
-                    int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
-                    float startAngle = (float)(numericUpDown_startAngle.Value);
-                    float endAngle = (float)(numericUpDown_endAngle.Value);
-
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Distance * (endAngle - startAngle) / 10000f;
-                    if (Watch_Face_Preview_Set.Activity.Distance > 10000) angle = endAngle;
-                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
-                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
-                    }
-                }
-            }
             #endregion
 
             #region погода
@@ -3854,6 +3699,10 @@ namespace AmazFit_Watchface_2
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
                 mask.Dispose();
@@ -3894,6 +3743,14 @@ namespace AmazFit_Watchface_2
                     pen.StartCap = LineCap.Triangle;
                     break;
                 case 2:
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                    break;
+                case 90:
+                    pen.EndCap = LineCap.Triangle;
+                    pen.StartCap = LineCap.Triangle;
+                    break;
+                case 180:
                     pen.EndCap = LineCap.Flat;
                     pen.StartCap = LineCap.Flat;
                     break;
@@ -3941,13 +3798,15 @@ namespace AmazFit_Watchface_2
                 // подсвечивание шкалы заливкой
                 HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
                 pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                int s = Math.Sign(endAngle);
+                //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
                 myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
                 pen.Brush = myHatchBrush;
                 //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
-                int s = Math.Sign(valueAngle);
                 graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
-                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
 
                 // подсвечивание внешней и внутреней дуги на шкале
                 using (Pen pen1 = new Pen(Color.White, 1))
@@ -4006,6 +3865,14 @@ namespace AmazFit_Watchface_2
                     pen.EndCap = LineCap.Flat;
                     pen.StartCap = LineCap.Flat;
                     break;
+                case 90:
+                    pen.EndCap = LineCap.Triangle;
+                    pen.StartCap = LineCap.Triangle;
+                    break;
+                case 180:
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                    break;
                 default:
                     pen.EndCap = LineCap.Round;
                     pen.StartCap = LineCap.Round;
@@ -4038,11 +3905,11 @@ namespace AmazFit_Watchface_2
                 //pen.Width = width;
                 //pen.Color = Color.Black;
 
-                //gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth, 
+                //gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth,
                 //    startAngle, valueAngle);
 
                 int s = Math.Sign(valueAngle);
-                graphics.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth,
+                gPanel.DrawArc(pen, (int)(width / 2f), (int)(width / 2f), CircleWidth, CircleWidth,
                     (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
 
 
@@ -4064,13 +3931,15 @@ namespace AmazFit_Watchface_2
                 // подсвечивание шкалы заливкой
                 HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
                 pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
+                int s = Math.Sign(endAngle);
+                graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
                 myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
                 pen.Brush = myHatchBrush;
                 //graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth, startAngle, endAngle);
-                int s = Math.Sign(valueAngle);
                 graphics.DrawArc(pen, arcX, arcY, CircleWidth, CircleWidth,
-                    (float)(startAngle - 0.007 * s * width), (float)(valueAngle + 0.015 * s * width));
+                    (float)(startAngle - 0.007 * s * width), (float)(endAngle + 0.015 * s * width));
 
                 // подсвечивание внешней и внутреней дуги на шкале
                 using (Pen pen1 = new Pen(Color.White, 1))
@@ -4350,7 +4219,7 @@ namespace AmazFit_Watchface_2
                 int x1 = (int)(x + width / 2f);
                 //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
                 int length1 = length - width; 
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     x1 = x;
                     length1 = length;
@@ -4370,7 +4239,7 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(color, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     pen.EndCap = LineCap.Flat;
                     pen.StartCap = LineCap.Flat;
@@ -4399,7 +4268,7 @@ namespace AmazFit_Watchface_2
             {
                 int x1 = x - width / 2;
                 int length1 = length + width;
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     x1 = x;
                     length1 = length;
@@ -4418,7 +4287,7 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(color, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     pen.EndCap = LineCap.Flat;
                     pen.StartCap = LineCap.Flat;
@@ -4464,13 +4333,13 @@ namespace AmazFit_Watchface_2
             int lineCap, int pointerIndex, int backgroundIndex, bool showProgressArea)
         {
             Bitmap src = new Bitmap(1, 1);
-
+            //TODO проверить длинну шкалы для плоского и круглого окончания
             if (length > 0)
             {
                 int x1 = (int)(x + width / 2f);
                 //int x1 = (int)Math.Round(x + width / 2d, MidpointRounding.AwayFromZero);
                 int length1 = length - width;
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     x1 = x;
                     length1 = length;
@@ -4491,7 +4360,7 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(Color.Black, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     pen.EndCap = LineCap.Flat;
                     pen.StartCap = LineCap.Flat;
@@ -4545,7 +4414,7 @@ namespace AmazFit_Watchface_2
             {
                 int x1 = x - width / 2;
                 int length1 = length + width;
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     x1 = x;
                     length1 = length;
@@ -4565,7 +4434,7 @@ namespace AmazFit_Watchface_2
                 Pen pen = new Pen(Color.Black, width);
                 pen.EndCap = LineCap.Round;
                 pen.StartCap = LineCap.Round;
-                if (lineCap == 1)
+                if (lineCap == 1 || lineCap == 180)
                 {
                     pen.EndCap = LineCap.Flat;
                     pen.StartCap = LineCap.Flat;
@@ -4770,6 +4639,13 @@ namespace AmazFit_Watchface_2
                 while (data_numberS.IndexOf(decimalSeparator) > data_numberS.Length - decCount - 1)
                 {
                     data_numberS = data_numberS + "0";
+                }
+            }
+            if (addZero)
+            {
+                while (data_numberS.Length <= value_lenght)
+                {
+                    data_numberS = "0" + data_numberS;
                 }
             }
             int DateLenghtReal = 0;

@@ -25,10 +25,9 @@ namespace AmazFit_Watchface_2
         WATCH_FACE_PREWIEV_TwoDigits Watch_Face_Preview_TwoDigits;
         WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set;
         List<string> ListImages = new List<string>(); // перечень имен файлов с картинками
-        List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
+        public static List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
         public bool PreviewView; // включает прорисовку предпросмотра
         bool Settings_Load; // включать при обновлении настроек для выключения перерисовки
-        bool MotiomAnimation_Update = false; // включать при обновлении параметров анимации
         bool JSON_Modified = false; // JSON файл был изменен
         string FileName; // Запоминает имя для диалогов
         string FullFileDir; // Запоминает папку для диалогов
@@ -36,7 +35,7 @@ namespace AmazFit_Watchface_2
         string StartFileNameBin; // имя файла из параметров запуска
         float currentDPI; // масштаб экрана
         Form_Preview formPreview;
-        PROGRAM_SETTINGS Program_Settings;
+        public static PROGRAM_SETTINGS Program_Settings;
 
         Widgets WidgetsTemp; // временная переменная для хранения виджетов
 
@@ -137,9 +136,7 @@ namespace AmazFit_Watchface_2
             //    MessageBox.Show(currentDPI.ToString());
             //}
             currentDPI = tabControl1.Height / 670f;
-            tabControl1.TabPages[0].Parent = null;
             tabControl1.TabPages[2].Parent = null;
-            tabControl1.TabPages[4].Parent = null;
 #if DEBUG
             tabControl1.SelectTab(1);
             tabControl_EditParameters.SelectTab(3);
@@ -259,7 +256,6 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("* Form1_Load ");
 
             //Logger.WriteLine("Form1_Load");
-            helpProvider1.HelpNamespace = Application.StartupPath + Properties.FormStrings.File_ReadMy;
             
             string subPath = Application.StartupPath + @"\Tools\main.exe";
             Logger.WriteLine("Set textBox.Text");
@@ -274,19 +270,28 @@ namespace AmazFit_Watchface_2
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
             PreviewView = false;
-            textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
             Logger.WriteLine("Set Model");
-            if (Program_Settings.Model_GTS)
-            {
-                radioButton_GTS2.Checked = Program_Settings.Model_GTS;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS_2;
-            }
-            else
+            if (Program_Settings.Model_GTR2)
             {
                 radioButton_GTR2.Checked = true;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR_2;
+                Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
             }
-            
+            else if (Program_Settings.Model_GTR2e)
+            {
+                radioButton_GTR2e.Checked = true;
+                Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+            }
+            else if (Program_Settings.Model_GTS2)
+            {
+                radioButton_GTS2.Checked = true;
+                Program_Settings.unpack_command = Program_Settings.unpack_command_GTS_2;
+            }
+            else if (Program_Settings.Model_TRex_pro)
+            {
+                radioButton_TRex_pro.Checked = true;
+                Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
+            }
+
             Logger.WriteLine("Set checkBox");
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
@@ -309,51 +314,51 @@ namespace AmazFit_Watchface_2
             comboBox_Month_alignment_AOD.SelectedIndex = 0;
             comboBox_Year_alignment_AOD.SelectedIndex = 0;
 
-            comboBox_Battery_alignment.SelectedIndex = 0;
-            comboBox_Battery_scaleCircle_flatness.SelectedIndex = 0;
-            comboBox_Battery_scaleLinear_flatness.SelectedIndex = 0;
+            //comboBox_Battery_alignment.SelectedIndex = 0;
+            //comboBox_Battery_scaleCircle_flatness.SelectedIndex = 0;
+            //comboBox_Battery_scaleLinear_flatness.SelectedIndex = 0;
 
-            comboBox_Battery_alignment_AOD.SelectedIndex = 0;
-            comboBox_Battery_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            comboBox_Battery_scaleLinear_flatness_AOD.SelectedIndex = 0;
+            //comboBox_Battery_alignment_AOD.SelectedIndex = 0;
+            //comboBox_Battery_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            //comboBox_Battery_scaleLinear_flatness_AOD.SelectedIndex = 0;
 
-            comboBox_Steps_alignment.SelectedIndex = 0;
-            comboBox_Steps_scaleCircle_flatness.SelectedIndex = 0;
-            comboBox_Steps_scaleLinear_flatness.SelectedIndex = 0;
+            //comboBox_Steps_alignment.SelectedIndex = 0;
+            //comboBox_Steps_scaleCircle_flatness.SelectedIndex = 0;
+            //comboBox_Steps_scaleLinear_flatness.SelectedIndex = 0;
 
-            comboBox_Steps_alignment_AOD.SelectedIndex = 0;
-            comboBox_Steps_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            comboBox_Steps_scaleLinear_flatness_AOD.SelectedIndex = 0;
+            //comboBox_Steps_alignment_AOD.SelectedIndex = 0;
+            //comboBox_Steps_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            //comboBox_Steps_scaleLinear_flatness_AOD.SelectedIndex = 0;
 
-            comboBox_Calories_alignment.SelectedIndex = 0;
-            comboBox_Calories_scaleCircle_flatness.SelectedIndex = 0;
-            comboBox_Calories_scaleLinear_flatness.SelectedIndex = 0;
+            //comboBox_Calories_alignment.SelectedIndex = 0;
+            //comboBox_Calories_scaleCircle_flatness.SelectedIndex = 0;
+            //comboBox_Calories_scaleLinear_flatness.SelectedIndex = 0;
 
-            comboBox_Calories_alignment_AOD.SelectedIndex = 0;
-            comboBox_Calories_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            comboBox_Calories_scaleLinear_flatness_AOD.SelectedIndex = 0;
+            //comboBox_Calories_alignment_AOD.SelectedIndex = 0;
+            //comboBox_Calories_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            //comboBox_Calories_scaleLinear_flatness_AOD.SelectedIndex = 0;
 
-            comboBox_HeartRate_alignment_AOD.SelectedIndex = 0;
-            comboBox_HeartRate_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            comboBox_HeartRate_scaleLinear_flatness_AOD.SelectedIndex = 0;
+            //comboBox_HeartRate_alignment_AOD.SelectedIndex = 0;
+            //comboBox_HeartRate_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            //comboBox_HeartRate_scaleLinear_flatness_AOD.SelectedIndex = 0;
 
-            comboBox_HeartRate_alignment.SelectedIndex = 0;
-            comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
-            comboBox_HeartRate_scaleLinear_flatness.SelectedIndex = 0;
+            //comboBox_HeartRate_alignment.SelectedIndex = 0;
+            //comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
+            //comboBox_HeartRate_scaleLinear_flatness.SelectedIndex = 0;
 
-            comboBox_PAI_alignment.SelectedIndex = 0;
-            comboBox_PAI_scaleCircle_flatness.SelectedIndex = 0;
-            comboBox_PAI_scaleLinear_flatness.SelectedIndex = 0;
+            //comboBox_PAI_alignment.SelectedIndex = 0;
+            //comboBox_PAI_scaleCircle_flatness.SelectedIndex = 0;
+            //comboBox_PAI_scaleLinear_flatness.SelectedIndex = 0;
 
-            comboBox_PAI_alignment_AOD.SelectedIndex = 0;
-            comboBox_PAI_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            comboBox_PAI_scaleLinear_flatness_AOD.SelectedIndex = 0;
+            //comboBox_PAI_alignment_AOD.SelectedIndex = 0;
+            //comboBox_PAI_scaleCircle_flatness_AOD.SelectedIndex = 0;
+            //comboBox_PAI_scaleLinear_flatness_AOD.SelectedIndex = 0;
 
-            comboBox_Distance_alignment.SelectedIndex = 0;
-            comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
-            comboBox_Distance_scaleLinear_flatness.SelectedIndex = 0;
+            //comboBox_Distance_alignment.SelectedIndex = 0;
+            //comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
+            //comboBox_Distance_scaleLinear_flatness.SelectedIndex = 0;
 
-            comboBox_Distance_alignment_AOD.SelectedIndex = 0;
+            //comboBox_Distance_alignment_AOD.SelectedIndex = 0;
 
             comboBox_Weather_alignment.SelectedIndex = 0;
             comboBox_Weather_alignmentMin.SelectedIndex = 0;
@@ -394,7 +399,6 @@ namespace AmazFit_Watchface_2
             radioButton_Settings_Unpack_Replace.Checked = Program_Settings.Settings_Unpack_Replace;
             radioButton_Settings_Unpack_Save.Checked = Program_Settings.Settings_Unpack_Save;
             numericUpDown_Gif_Speed.Value = (decimal)Program_Settings.Gif_Speed;
-            comboBox_Animation_Preview_Speed.SelectedIndex = Program_Settings.Animation_Preview_Speed;
 
             checkBox_Shortcuts_Area.Checked = Program_Settings.Shortcuts_Area;
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
@@ -411,7 +415,7 @@ namespace AmazFit_Watchface_2
 
             if (Program_Settings.SaveID) checkBox_UseID.Checked = true;
 
-            SetPreferences1();
+            SetPreferences(userControl_Set1);
             PreviewView = true;
             Logger.WriteLine("* Form1_Load (end)");
         }
@@ -519,30 +523,6 @@ namespace AmazFit_Watchface_2
 #endif
         }
 
-        private void button_pack_unpack_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = textBox_pack_unpack_dir.Text;
-            openFileDialog.Filter = "";
-            openFileDialog.RestoreDirectory = true;
-            openFileDialog.Multiselect = false;
-            openFileDialog.Title = Properties.FormStrings.Dialog_Title_PackUnpack;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                Logger.WriteLine("pack_unpack_Click");
-                textBox_pack_unpack_dir.Text = openFileDialog.FileName;
-
-                Program_Settings.pack_unpack_dir = openFileDialog.FileName;
-                string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
-                {
-                    //DefaultValueHandling = DefaultValueHandling.Ignore,
-                    NullValueHandling = NullValueHandling.Ignore
-                });
-                File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
-                Logger.WriteLine("* pack_unpack_Click (end)");
-            }
-        }
 
         private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
         {
@@ -753,10 +733,10 @@ namespace AmazFit_Watchface_2
                     {
                         File.Delete(newFullName_unp);
 
-                        if (!File.Exists(textBox_pack_unpack_dir.Text))
+                        if (!File.Exists(Program_Settings.pack_unpack_dir))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
-                                textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                                Program_Settings.pack_unpack_dir + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
                                 Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
                                 Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -764,8 +744,8 @@ namespace AmazFit_Watchface_2
                         }
 
                         Logger.WriteLine("UnpackBin");
-                        startInfo.FileName = textBox_pack_unpack_dir.Text;
-                        startInfo.Arguments = textBox_unpack_command.Text + " \"" + newFullName_bin + "\"";
+                        startInfo.FileName = Program_Settings.pack_unpack_dir;
+                        startInfo.Arguments = Program_Settings.unpack_command + " \"" + newFullName_bin + "\"";
                         using (Process exeProcess = Process.Start(startInfo))
                         {
                             exeProcess.WaitForExit();//ждем 
@@ -907,10 +887,10 @@ namespace AmazFit_Watchface_2
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
 
-            if (!File.Exists(textBox_pack_unpack_dir.Text))
+            if (!File.Exists(Program_Settings.pack_unpack_dir))
             {
                 MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
-                    textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                    Program_Settings.pack_unpack_dir + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
                     Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
                     Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -997,8 +977,8 @@ namespace AmazFit_Watchface_2
                 try
                 {
                     ProcessStartInfo startInfo = new ProcessStartInfo();
-                    startInfo.FileName = textBox_pack_unpack_dir.Text;
-                    startInfo.Arguments = textBox_unpack_command.Text + " \"" + fullPath + "\"";
+                    startInfo.FileName = Program_Settings.pack_unpack_dir;
+                    startInfo.Arguments = Program_Settings.unpack_command + " \"" + fullPath + "\"";
                     using (Process exeProcess = Process.Start(startInfo))
                     {
                         exeProcess.WaitForExit();//ждем 
@@ -1114,10 +1094,10 @@ namespace AmazFit_Watchface_2
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
 
-            if (!File.Exists(textBox_pack_unpack_dir.Text))
+            if (!File.Exists(Program_Settings.pack_unpack_dir))
             {
                 MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
-                    textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                    Program_Settings.pack_unpack_dir + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
                     Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
                     Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1131,8 +1111,8 @@ namespace AmazFit_Watchface_2
                 {
                     string fullfilename = openFileDialog.FileName;
                     ProcessStartInfo startInfo = new ProcessStartInfo();
-                    startInfo.FileName = textBox_pack_unpack_dir.Text;
-                    startInfo.Arguments = textBox_unpack_command.Text + " \"" + fullfilename + "\"";
+                    startInfo.FileName = Program_Settings.pack_unpack_dir;
+                    startInfo.Arguments = Program_Settings.unpack_command + " \"" + fullfilename + "\"";
                     using (Process exeProcess = Process.Start(startInfo))
                     {
                         exeProcess.WaitForExit();//ждем 
@@ -1351,10 +1331,10 @@ namespace AmazFit_Watchface_2
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
 
 
-            if (!File.Exists(textBox_pack_unpack_dir.Text))
+            if (!File.Exists(Program_Settings.pack_unpack_dir))
             {
                 MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
-                    textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                    Program_Settings.pack_unpack_dir + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
                     Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
                     Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1368,8 +1348,8 @@ namespace AmazFit_Watchface_2
                 {
                     string fullfilename = openFileDialog.FileName;
                     ProcessStartInfo startInfo = new ProcessStartInfo();
-                    startInfo.FileName = textBox_pack_unpack_dir.Text;
-                    startInfo.Arguments = textBox_unpack_command.Text + " \"" + fullfilename + "\"";
+                    startInfo.FileName = Program_Settings.pack_unpack_dir;
+                    startInfo.Arguments = Program_Settings.unpack_command + " \"" + fullfilename + "\"";
                     using (Process exeProcess = Process.Start(startInfo))
                     {
                         exeProcess.WaitForExit();//ждем 
@@ -1387,7 +1367,7 @@ namespace AmazFit_Watchface_2
                         //Logger.WriteLine("GetFileSizeMB");
                         //double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
 
-                        startInfo.FileName = Application.StartupPath + @"\Tools\GTR2_Packer.exe"; ;
+                        startInfo.FileName = Application.StartupPath + @"\Tools\GTR2_Packer.exe"; 
                         startInfo.Arguments = "-cmp2" + " \"" + newFullName + "\"";
                         using (Process exeProcess = Process.Start(startInfo))
                         {
@@ -1845,7 +1825,8 @@ namespace AmazFit_Watchface_2
                     }
                 }
             }
-            else button_JsonPreview_Random.PerformClick();
+            else StartJsonPreview();
+
             PreviewView = true;
             PreviewImage();
             JSON_Modified = false;
@@ -1879,6 +1860,144 @@ namespace AmazFit_Watchface_2
         //    Logger.WriteLine("* ShowAllFileSize (end)");
         //}
 
+        private void StartJsonPreview()
+        {
+            Random rnd = new Random();
+            userControl_Set1.RandomValue(rnd);
+            userControl_Set2.RandomValue(rnd);
+            userControl_Set3.RandomValue(rnd);
+            userControl_Set4.RandomValue(rnd);
+            userControl_Set5.RandomValue(rnd);
+            userControl_Set6.RandomValue(rnd);
+            userControl_Set7.RandomValue(rnd);
+            userControl_Set8.RandomValue(rnd);
+            userControl_Set9.RandomValue(rnd);
+            userControl_Set10.RandomValue(rnd);
+            userControl_Set11.RandomValue(rnd);
+            userControl_Set12.RandomValue(rnd);
+
+            for(int i=1; i<13; i++)
+            {
+                DateTime date = DateTime.Now;
+                int year;
+                int month;
+                int day;
+                int weekDay;
+                int offsetDay;
+
+                switch (i)
+                {
+                    case 1:
+                        date = userControl_Set1.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 2:
+                        date = userControl_Set2.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 3:
+                        date = userControl_Set3.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 4:
+                        date = userControl_Set5.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 5:
+                        date = userControl_Set5.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 6:
+                        date = userControl_Set6.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 7:
+                        date = userControl_Set7.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 8:
+                        date = userControl_Set8.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 9:
+                        date = userControl_Set9.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 10:
+                        date = userControl_Set10.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 11:
+                        date = userControl_Set11.dateTimePicker_Date_Set.Value;
+                        break;
+                    case 12:
+                        date = userControl_Set12.dateTimePicker_Date_Set.Value;
+                        break;
+                }
+
+
+                year = date.Year;
+                month = i;
+                //int month = date.Month;
+                day = date.Day;
+                date = new DateTime(year, month, day);
+                weekDay = (int)date.DayOfWeek;
+                offsetDay = i - weekDay;
+                day = day + offsetDay;
+                while(day < 1)
+                {
+                    day = day + 7;
+                }
+                while (day > 28)
+                {
+                    day = day - 7;
+                }
+                date = new DateTime(year, month, day);
+
+                switch (i)
+                {
+                    case 1:
+                        userControl_Set1.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 2:
+                        userControl_Set2.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 3:
+                        userControl_Set3.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 4:
+                        userControl_Set4.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 5:
+                        userControl_Set5.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 6:
+                        userControl_Set6.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 7:
+                        userControl_Set7.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 8:
+                        userControl_Set8.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 9:
+                        userControl_Set9.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 10:
+                        userControl_Set10.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 11:
+                        userControl_Set11.dateTimePicker_Date_Set.Value = date;
+                        break;
+                    case 12:
+                        userControl_Set12.dateTimePicker_Date_Set.Value = date;
+                        break;
+                }
+            }
+
+            SetPreferences(userControl_Set12);
+            if (!userControl_Set1.Collapsed) SetPreferences(userControl_Set1);
+            if (!userControl_Set2.Collapsed) SetPreferences(userControl_Set2);
+            if (!userControl_Set3.Collapsed) SetPreferences(userControl_Set3);
+            if (!userControl_Set4.Collapsed) SetPreferences(userControl_Set4);
+            if (!userControl_Set5.Collapsed) SetPreferences(userControl_Set5);
+            if (!userControl_Set6.Collapsed) SetPreferences(userControl_Set6);
+            if (!userControl_Set7.Collapsed) SetPreferences(userControl_Set7);
+            if (!userControl_Set8.Collapsed) SetPreferences(userControl_Set8);
+            if (!userControl_Set9.Collapsed) SetPreferences(userControl_Set9);
+            if (!userControl_Set10.Collapsed) SetPreferences(userControl_Set10);
+            if (!userControl_Set11.Collapsed) SetPreferences(userControl_Set11);
+        }
 
         // формируем изображение для предпросмотра
         private void PreviewImage()
@@ -1895,6 +2014,10 @@ namespace AmazFit_Watchface_2
             if (radioButton_GTS2.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
 #endregion
@@ -1929,356 +2052,94 @@ namespace AmazFit_Watchface_2
         
 
 #region выбираем данные для предпросмотра
-        public void SetPreferences1()
+        
+        public void SetPreferences(UserControl_Set userControl_Set)
         {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set1.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set1.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set1.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set1.Value.DayOfWeek;
+            Dictionary<string, int> Activity = new Dictionary<string, int>();
+            Dictionary<string, int> Air = new Dictionary<string, int>();
+            Dictionary<string, bool> checkValue = new Dictionary<string, bool>();
+            userControl_Set.GetValue(out Activity, out Air, out checkValue);
+
+            int Year = Activity["Year"];
+            int Month = Activity["Month"];
+            int Day = Activity["Day"];
+            int WeekDay = Activity["WeekDay"];
+
+            int Hour = Activity["Hour"];
+            int Minute = Activity["Minute"];
+            int Second = Activity["Second"];
+
+            int Battery = Activity["Battery"];
+            int Calories = Activity["Calories"];
+            int HeartRate = Activity["HeartRate"];
+            int Distance = Activity["Distance"];
+            int Steps = Activity["Steps"];
+            int StepsGoal = Activity["StepsGoal"];
+
+            int PAI = Activity["PAI"];
+            int StandUp = Activity["StandUp"];
+            int Stress = Activity["Stress"];
+            int ActivityGoal = Activity["ActivityGoal"];
+            int FatBurning = Activity["FatBurning"];
+
+
+            int Weather_Icon = Air["Weather_Icon"];
+            int Temperature = Air["Temperature"];
+            int TemperatureMax = Air["TemperatureMax"];
+            int TemperatureMin = Air["TemperatureMin"];
+
+            int UVindex = Air["UVindex"];
+            int AirQuality = Air["AirQuality"];
+            int Humidity = Air["Humidity"];
+            int WindForce = Air["WindForce"];
+            int Altitude = Air["Altitude"];
+            int AirPressure = Air["AirPressure"];
+
+
+            bool Bluetooth = checkValue["Bluetooth"];
+            bool Alarm = checkValue["Alarm"];
+            bool Lock = checkValue["Lock"];
+            bool DND = checkValue["DND"];
+
+            bool ShowTemperature = checkValue["ShowTemperature"];
+            bool ShowTemperatureMaxMin = checkValue["ShowTemperatureMaxMin"];
+
+            Watch_Face_Preview_Set.Date.Year = Year;
+            Watch_Face_Preview_Set.Date.Month = Month;
+            Watch_Face_Preview_Set.Date.Day = Day;
+            Watch_Face_Preview_Set.Date.WeekDay = WeekDay;
             if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
 
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set1.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set1.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set1.Value.Second;
+            Watch_Face_Preview_Set.Time.Hours = Hour;
+            Watch_Face_Preview_Set.Time.Minutes = Minute;
+            Watch_Face_Preview_Set.Time.Seconds = Second;
 
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set1.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set1.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set1.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set1.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set1.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set1.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set1.Value;
+            Watch_Face_Preview_Set.Battery = Battery;
+            Watch_Face_Preview_Set.Activity.Calories = Calories;
+            Watch_Face_Preview_Set.Activity.HeartRate = HeartRate;
+            Watch_Face_Preview_Set.Activity.Distance = Distance;
+            Watch_Face_Preview_Set.Activity.Steps = Steps;
+            Watch_Face_Preview_Set.Activity.StepsGoal = StepsGoal;
+            Watch_Face_Preview_Set.Activity.PAI = PAI;
 
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set1.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set1.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set1.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set1.Checked;
+            Watch_Face_Preview_Set.Status.Bluetooth = Bluetooth;
+            Watch_Face_Preview_Set.Status.Alarm = Alarm;
+            Watch_Face_Preview_Set.Status.Lock = Lock;
+            Watch_Face_Preview_Set.Status.DoNotDisturb = DND;
 
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+            Watch_Face_Preview_Set.Weather.Temperature = Temperature;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = TemperatureMax;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = TemperatureMin;
+            //Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
+            //Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
+            Watch_Face_Preview_Set.Weather.Icon = Weather_Icon;
+
+            Watch_Face_Preview_Set.Weather.showTemperature = ShowTemperature;
+            Watch_Face_Preview_Set.Weather.showTemperatureMaxMin = ShowTemperatureMaxMin;
 
             SetDigitForPrewiev();
         }
-
-        public void SetPreferences2()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set2.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set2.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set2.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set2.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set2.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set2.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set2.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set2.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set2.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set2.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set2.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set2.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set2.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set2.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set2.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set2.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set2.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set2.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences3()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set3.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set3.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set3.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set3.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set3.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set3.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set3.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set3.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set3.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set3.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set3.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set3.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set3.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set3.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set3.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set3.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set3.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set3.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences4()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set4.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set4.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set4.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set4.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set4.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set4.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set4.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set4.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set4.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set4.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set4.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set4.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set4.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set4.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set4.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set4.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set4.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set4.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences5()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set5.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set5.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set5.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set5.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set5.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set5.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set5.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set5.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set5.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set5.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set5.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set5.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set5.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set5.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set5.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set5.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set5.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set5.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences6()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set6.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set6.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set6.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set6.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set6.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set6.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set6.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set6.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set6.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set6.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set6.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set6.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set6.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set6.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set6.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set6.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set6.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set6.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences7()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set7.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set7.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set7.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set7.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set7.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set7.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set7.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set7.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set7.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set7.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set7.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set7.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set7.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set7.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set7.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set7.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set7.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set7.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences8()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set8.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set8.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set8.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set8.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set8.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set8.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set8.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set8.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set8.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set8.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set8.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set8.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set8.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set8.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set8.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set8.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set8.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set8.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences9()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set9.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set9.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set9.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set9.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set9.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set9.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set9.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set9.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set9.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set9.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set9.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set9.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set9.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set9.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set9.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set9.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set9.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set9.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-
-        public void SetPreferences10()
-        {
-            Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set10.Value.Year;
-            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set10.Value.Month;
-            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set10.Value.Day;
-            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set10.Value.DayOfWeek;
-            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
-
-            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set10.Value.Hour;
-            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set10.Value.Minute;
-            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set10.Value.Second;
-
-            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set10.Value;
-            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set10.Value;
-            Watch_Face_Preview_Set.Activity.HeartRate = (int)numericUpDown_Pulse_Set10.Value;
-            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set10.Value;
-            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set10.Value;
-            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set10.Value;
-            Watch_Face_Preview_Set.Activity.PAI = (int)numericUpDown_PAI_Set10.Value;
-
-            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set10.Checked;
-            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set10.Checked;
-            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set10.Checked;
-            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set10.Checked;
-
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-
-            SetDigitForPrewiev();
-        }
-#endregion
+        #endregion
 
         // определяем отдельные цифры для даты и времени
         private void SetDigitForPrewiev()
@@ -2374,8 +2235,8 @@ namespace AmazFit_Watchface_2
         {
             ComboBox comboBox = (ComboBox)(sender);
             
-            PreviewImage();
             JSON_write();
+            PreviewImage();
 
             if (comboBox.Name == "comboBox_Preview_image")
             {
@@ -2403,8 +2264,8 @@ namespace AmazFit_Watchface_2
 
         private void checkBox_Click(object sender, EventArgs e)
         {
-            PreviewImage();
             JSON_write();
+            PreviewImage();
         }
 
         private void checkBox_ShowSettings_Click(object sender, EventArgs e)
@@ -2414,342 +2275,62 @@ namespace AmazFit_Watchface_2
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            PreviewImage();
             JSON_write();
-        }
-        
-
-#region сворачиваем и разварачиваем панели с предустановками
-        private void button_Set1_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = (int)(125 * currentDPI);
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            SetPreferences1();
             PreviewImage();
         }
 
-        private void button_Set2_Click(object sender, EventArgs e)
+
+
+        #region поменялись предустановки
+
+
+        private void userControl_Set_ValueChanged(object sender, EventArgs eventArgs, int setNumber)
         {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = (int)(125 * currentDPI);
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            SetPreferences2();
-            PreviewImage();
-        }
-        private void button_Set3_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = (int)(125 * currentDPI);
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            SetPreferences3();
-            PreviewImage();
-        }
-        private void button_Set4_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = (int)(125 * currentDPI);
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            SetPreferences4();
-            PreviewImage();
-        }
-        private void button_Set5_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = (int)(125 * currentDPI);
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            SetPreferences5();
-            PreviewImage();
-        }
-        private void button_Set6_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = (int)(125 * currentDPI);
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            SetPreferences6();
-            PreviewImage();
-        }
-        private void button_Set7_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = (int)(125 * currentDPI);
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            SetPreferences7();
-            PreviewImage();
-        }
-        private void button_Set8_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = (int)(125 * currentDPI);
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-            SetPreferences8();
-            PreviewImage();
-        }
-        private void button_Set9_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = (int)(125 * currentDPI);
-            panel_Set10.Height = 1;
-            SetPreferences9();
-            PreviewImage();
-        }
-        private void button_Set10_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = 1;
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = (int)(125 * currentDPI);
-            SetPreferences10();
+            switch (setNumber)
+            {
+                case 1:
+                    SetPreferences(userControl_Set1);
+                    break;
+                case 2:
+                    SetPreferences(userControl_Set2);
+                    break;
+                case 3:
+                    SetPreferences(userControl_Set3);
+                    break;
+                case 4:
+                    SetPreferences(userControl_Set4);
+                    break;
+                case 5:
+                    SetPreferences(userControl_Set5);
+                    break;
+                case 6:
+                    SetPreferences(userControl_Set6);
+                    break;
+                case 7:
+                    SetPreferences(userControl_Set7);
+                    break;
+                case 8:
+                    SetPreferences(userControl_Set8);
+                    break;
+                case 9:
+                    SetPreferences(userControl_Set9);
+                    break;
+                case 10:
+                    SetPreferences(userControl_Set10);
+                    break;
+                case 11:
+                    SetPreferences(userControl_Set11);
+                    break;
+                case 12:
+                    SetPreferences(userControl_Set12);
+                    break;
+            }
+
             PreviewImage();
         }
 
-        private void button_SetWeather_Click(object sender, EventArgs e)
-        {
-            panel_SetWeather.Height = (int)(60 * currentDPI);
-            panel_Set1.Height = 1;
-            panel_Set2.Height = 1;
-            panel_Set3.Height = 1;
-            panel_Set4.Height = 1;
-            panel_Set5.Height = 1;
-            panel_Set6.Height = 1;
-            panel_Set7.Height = 1;
-            panel_Set8.Height = 1;
-            panel_Set9.Height = 1;
-            panel_Set10.Height = 1;
-        }
-#endregion
 
-#region поменялись предустановки
-        private void dateTimePicker_Time_Set1_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences1();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set2_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences2();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set3_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences3();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set4_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences4();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set5_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences5();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set6_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences6();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set7_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences7();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set8_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences8();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set9_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences9();
-            PreviewImage();
-        }
-        private void dateTimePicker_Time_Set10_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences10();
-            PreviewImage();
-        }
-        //////////////////////////////
-        private void numericUpDown_Battery_Set1_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences1();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set2_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences2();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set3_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences3();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set4_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences4();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set5_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences5();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set6_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences6();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set7_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences7();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set8_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences8();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set9_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences9();
-            PreviewImage();
-        }
-        private void numericUpDown_Battery_Set10_ValueChanged(object sender, EventArgs e)
-        {
-            SetPreferences10();
-            PreviewImage();
-        }
-        //////////////////////////////
-        private void check_BoxBluetooth_Set1_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences1();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set2_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences2();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set3_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences3();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set4_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences4();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set5_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences5();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set6_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences6();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set7_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences7();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set8_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences8();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set9_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences9();
-            PreviewImage();
-        }
-        private void check_BoxBluetooth_Set10_CheckedChanged(object sender, EventArgs e)
-        {
-            SetPreferences10();
-            PreviewImage();
-        }
-#endregion
+        #endregion
 
         private void pictureBox_Preview_DoubleClick(object sender, EventArgs e)
         {
@@ -2781,10 +2362,14 @@ namespace AmazFit_Watchface_2
 
                 formPreview.pictureBox_Preview.Resize += (object senderResize, EventArgs eResize) =>
                 {
-                    if (Form_Preview.Model_Wath.model_gtr47 != radioButton_GTR2.Checked)
-                        Form_Preview.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-                    if (Form_Preview.Model_Wath.model_gts != radioButton_GTS2.Checked)
-                        Form_Preview.Model_Wath.model_gts = radioButton_GTS2.Checked;
+                    if (Form_Preview.Model_Wath.model_GTR2 != radioButton_GTR2.Checked)
+                        Form_Preview.Model_Wath.model_GTR2 = radioButton_GTR2.Checked;
+                    if (Form_Preview.Model_Wath.model_GTR2e != radioButton_GTR2e.Checked)
+                        Form_Preview.Model_Wath.model_GTR2e = radioButton_GTR2e.Checked;
+                    if (Form_Preview.Model_Wath.model_GTS2 != radioButton_GTS2.Checked)
+                        Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
+                    if (Form_Preview.Model_Wath.model_TRex_pro != radioButton_TRex_pro.Checked)
+                        Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
                     //Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
                     //gPanelPreviewResize.Clear(panel_Preview.BackColor);
                     //formPreview.radioButton_CheckedChanged(sender, e);
@@ -2807,6 +2392,10 @@ namespace AmazFit_Watchface_2
                     if (radioButton_GTS2.Checked)
                     {
                         bitmapPreviewResize = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_TRex_pro.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     }
                     Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
                     #endregion
@@ -2848,10 +2437,14 @@ namespace AmazFit_Watchface_2
                 };
             }
 
-            if (Form_Preview.Model_Wath.model_gtr47 != radioButton_GTR2.Checked)
-                Form_Preview.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-            if (Form_Preview.Model_Wath.model_gts != radioButton_GTS2.Checked)
-                Form_Preview.Model_Wath.model_gts = radioButton_GTS2.Checked;
+            if (Form_Preview.Model_Wath.model_GTR2 != radioButton_GTR2.Checked)
+                Form_Preview.Model_Wath.model_GTR2 = radioButton_GTR2.Checked;
+            if (Form_Preview.Model_Wath.model_GTR2e != radioButton_GTR2e.Checked)
+                Form_Preview.Model_Wath.model_GTR2e = radioButton_GTR2e.Checked;
+            if (Form_Preview.Model_Wath.model_GTS2 != radioButton_GTS2.Checked)
+                Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
+            if (Form_Preview.Model_Wath.model_TRex_pro != radioButton_TRex_pro.Checked)
+                Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
 
@@ -2860,6 +2453,10 @@ namespace AmazFit_Watchface_2
             if (radioButton_GTS2.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
             #endregion
@@ -2917,182 +2514,99 @@ namespace AmazFit_Watchface_2
                 //richTextBox_JsonText.Text = JSON_Text;
 
                 if (count == 0) return;
-                if (count > 13) count = 13;
+                if (count > 12) count = 12;
                 for (int i = 0; i < count; i++)
                 {
                     ps = JsonConvert.DeserializeObject<PREWIEV_STATES_Json>(objson[i].ToString(), new JsonSerializerSettings
                     {
-                        DefaultValueHandling = DefaultValueHandling.Ignore,
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
 
-                    int year = ps.Time.Year;
-                    int month = ps.Time.Month;
-                    int day = ps.Time.Day;
-                    int hour = ps.Time.Hour;
-                    int min = ps.Time.Minute;
-                    int sec = ps.Time.Second;
-                    int battery = ps.BatteryLevel;
-                    int calories = ps.Calories;
-                    int pulse = ps.Pulse;
-                    int distance = ps.Distance;
-                    int steps = ps.Steps;
-                    int goal = ps.Goal;
-                    bool bluetooth = ps.Bluetooth;
-                    bool alarm = ps.Alarm;
-                    bool unlocked = ps.Unlocked;
-                    bool dnd = ps.DoNotDisturb;
+                    Dictionary<string, int> Activity = new Dictionary<string, int>();
+                    Dictionary<string, int> Air = new Dictionary<string, int>();
+                    Dictionary<string, bool> checkValue = new Dictionary<string, bool>();
+
+                    Activity.Add("Year", ps.Time.Year);
+                    Activity.Add("Month", ps.Time.Month);
+                    Activity.Add("Day", ps.Time.Day);
+
+                    Activity.Add("Hour", ps.Time.Hour);
+                    Activity.Add("Minute", ps.Time.Minute);
+                    Activity.Add("Second", ps.Time.Second);
+
+                    Activity.Add("Battery", ps.BatteryLevel);
+                    Activity.Add("Calories", ps.Calories);
+                    Activity.Add("HeartRate", ps.Pulse);
+                    Activity.Add("Distance", ps.Distance);
+                    Activity.Add("Steps", ps.Steps);
+                    Activity.Add("StepsGoal", ps.Goal);
+
+                    Activity.Add("PAI", ps.PAI);
+                    Activity.Add("StandUp", ps.Stand);
+                    Activity.Add("Stress", ps.Stress);
+                    Activity.Add("ActivityGoal", ps.ActivityGoal);
+                    Activity.Add("FatBurning", ps.FatBurning);
+
+
+                    Air.Add("Weather_Icon", ps.CurrentWeather);
+                    Air.Add("Temperature", ps.CurrentTemperature);
+                    Air.Add("TemperatureMax", ps.TemperatureMax);
+                    Air.Add("TemperatureMin", ps.TemperatureMin);
+
+                    Air.Add("UVindex", ps.UVindex);
+                    Air.Add("AirQuality", ps.AirQuality);
+                    Air.Add("Humidity", ps.Humidity);
+                    Air.Add("WindForce", ps.WindForce);
+                    Air.Add("Altitude", ps.Altitude);
+                    Air.Add("AirPressure", ps.AirPressure);
+
+
+                    checkValue.Add("Bluetooth", ps.Bluetooth);
+                    checkValue.Add("Alarm", ps.Alarm);
+                    checkValue.Add("Lock", ps.Unlocked);
+                    checkValue.Add("DND", ps.DoNotDisturb);
+
+                    checkValue.Add("ShowTemperature", ps.ShowTemperature);
+                    checkValue.Add("ShowTemperatureMaxMin", ps.ShowTemperatureMaxMin);
+
                     switch (i)
                     {
                         case 0:
-                            dateTimePicker_Date_Set1.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set1.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set1.Value = battery;
-                            numericUpDown_Calories_Set1.Value = calories;
-                            numericUpDown_Pulse_Set1.Value = pulse;
-                            numericUpDown_Distance_Set1.Value = distance;
-                            numericUpDown_Steps_Set1.Value = steps;
-                            numericUpDown_Goal_Set1.Value = goal;
-                            check_BoxBluetooth_Set1.Checked = bluetooth;
-                            checkBox_Alarm_Set1.Checked = alarm;
-                            checkBox_Lock_Set1.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set1.Checked = dnd;
-                            button_Set1.PerformClick();
+                            userControl_Set1.SetValue(Activity, Air, checkValue);
                             break;
                         case 1:
-                            dateTimePicker_Date_Set2.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set2.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set2.Value = battery;
-                            numericUpDown_Calories_Set2.Value = calories;
-                            numericUpDown_Pulse_Set2.Value = pulse;
-                            numericUpDown_Distance_Set2.Value = distance;
-                            numericUpDown_Steps_Set2.Value = steps;
-                            numericUpDown_Goal_Set2.Value = goal;
-                            check_BoxBluetooth_Set2.Checked = bluetooth;
-                            checkBox_Alarm_Set2.Checked = alarm;
-                            checkBox_Lock_Set2.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set2.Checked = dnd;
-                            button_Set2.PerformClick();
+                            userControl_Set2.SetValue(Activity, Air, checkValue);
                             break;
                         case 2:
-                            dateTimePicker_Date_Set3.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set3.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set3.Value = battery;
-                            numericUpDown_Calories_Set3.Value = calories;
-                            numericUpDown_Pulse_Set3.Value = pulse;
-                            numericUpDown_Distance_Set3.Value = distance;
-                            numericUpDown_Steps_Set3.Value = steps;
-                            numericUpDown_Goal_Set3.Value = goal;
-                            check_BoxBluetooth_Set3.Checked = bluetooth;
-                            checkBox_Alarm_Set3.Checked = alarm;
-                            checkBox_Lock_Set3.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set3.Checked = dnd;
-                            button_Set3.PerformClick();
+                            userControl_Set3.SetValue(Activity, Air, checkValue);
                             break;
                         case 3:
-                            dateTimePicker_Date_Set4.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set4.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set4.Value = battery;
-                            numericUpDown_Calories_Set4.Value = calories;
-                            numericUpDown_Pulse_Set4.Value = pulse;
-                            numericUpDown_Distance_Set4.Value = distance;
-                            numericUpDown_Steps_Set4.Value = steps;
-                            numericUpDown_Goal_Set4.Value = goal;
-                            check_BoxBluetooth_Set4.Checked = bluetooth;
-                            checkBox_Alarm_Set4.Checked = alarm;
-                            checkBox_Lock_Set4.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set4.Checked = dnd;
-                            button_Set4.PerformClick();
+                            userControl_Set4.SetValue(Activity, Air, checkValue);
                             break;
                         case 4:
-                            dateTimePicker_Date_Set5.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set5.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set5.Value = battery;
-                            numericUpDown_Calories_Set5.Value = calories;
-                            numericUpDown_Pulse_Set5.Value = pulse;
-                            numericUpDown_Distance_Set5.Value = distance;
-                            numericUpDown_Steps_Set5.Value = steps;
-                            numericUpDown_Goal_Set5.Value = goal;
-                            check_BoxBluetooth_Set5.Checked = bluetooth;
-                            checkBox_Alarm_Set5.Checked = alarm;
-                            checkBox_Lock_Set5.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set5.Checked = dnd;
-                            button_Set5.PerformClick();
+                            userControl_Set5.SetValue(Activity, Air, checkValue);
                             break;
                         case 5:
-                            dateTimePicker_Date_Set6.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set6.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set6.Value = battery;
-                            numericUpDown_Calories_Set6.Value = calories;
-                            numericUpDown_Pulse_Set6.Value = pulse;
-                            numericUpDown_Distance_Set6.Value = distance;
-                            numericUpDown_Steps_Set6.Value = steps;
-                            numericUpDown_Goal_Set6.Value = goal;
-                            check_BoxBluetooth_Set6.Checked = bluetooth;
-                            checkBox_Alarm_Set6.Checked = alarm;
-                            checkBox_Lock_Set6.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set6.Checked = dnd;
-                            button_Set6.PerformClick();
+                            userControl_Set6.SetValue(Activity, Air, checkValue);
                             break;
                         case 6:
-                            dateTimePicker_Date_Set7.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set7.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set7.Value = battery;
-                            numericUpDown_Calories_Set7.Value = calories;
-                            numericUpDown_Pulse_Set7.Value = pulse;
-                            numericUpDown_Distance_Set7.Value = distance;
-                            numericUpDown_Steps_Set7.Value = steps;
-                            numericUpDown_Goal_Set7.Value = goal;
-                            check_BoxBluetooth_Set7.Checked = bluetooth;
-                            checkBox_Alarm_Set7.Checked = alarm;
-                            checkBox_Lock_Set7.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set7.Checked = dnd;
-                            button_Set7.PerformClick();
+                            userControl_Set7.SetValue(Activity, Air, checkValue);
                             break;
                         case 7:
-                            dateTimePicker_Date_Set8.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set8.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set8.Value = battery;
-                            numericUpDown_Calories_Set8.Value = calories;
-                            numericUpDown_Pulse_Set8.Value = pulse;
-                            numericUpDown_Distance_Set8.Value = distance;
-                            numericUpDown_Steps_Set8.Value = steps;
-                            numericUpDown_Goal_Set8.Value = goal;
-                            check_BoxBluetooth_Set8.Checked = bluetooth;
-                            checkBox_Alarm_Set8.Checked = alarm;
-                            checkBox_Lock_Set8.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set8.Checked = dnd;
-                            button_Set8.PerformClick();
+                            userControl_Set8.SetValue(Activity, Air, checkValue);
                             break;
                         case 8:
-                            dateTimePicker_Date_Set9.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set9.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set9.Value = battery;
-                            numericUpDown_Calories_Set9.Value = calories;
-                            numericUpDown_Pulse_Set9.Value = pulse;
-                            numericUpDown_Distance_Set9.Value = distance;
-                            numericUpDown_Steps_Set9.Value = steps;
-                            numericUpDown_Goal_Set9.Value = goal;
-                            check_BoxBluetooth_Set9.Checked = bluetooth;
-                            checkBox_Alarm_Set9.Checked = alarm;
-                            checkBox_Lock_Set9.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set9.Checked = dnd;
-                            button_Set9.PerformClick();
+                            userControl_Set9.SetValue(Activity, Air, checkValue);
                             break;
                         case 9:
-                            dateTimePicker_Date_Set10.Value = new DateTime(year, month, day, hour, min, sec);
-                            dateTimePicker_Time_Set10.Value = new DateTime(year, month, day, hour, min, sec);
-                            numericUpDown_Battery_Set10.Value = battery;
-                            numericUpDown_Calories_Set10.Value = calories;
-                            numericUpDown_Pulse_Set10.Value = pulse;
-                            numericUpDown_Distance_Set10.Value = distance;
-                            numericUpDown_Steps_Set10.Value = steps;
-                            numericUpDown_Goal_Set10.Value = goal;
-                            check_BoxBluetooth_Set10.Checked = bluetooth;
-                            checkBox_Alarm_Set10.Checked = alarm;
-                            checkBox_Lock_Set10.Checked = unlocked;
-                            checkBox_DoNotDisturb_Set10.Checked = dnd;
-                            button_Set10.PerformClick();
+                            userControl_Set10.SetValue(Activity, Air, checkValue);
+                            break;
+                        case 10:
+                            userControl_Set11.SetValue(Activity, Air, checkValue);
+                            break;
+                        case 11:
+                            userControl_Set12.SetValue(Activity, Air, checkValue);
                             break;
                     }
                 }
@@ -3128,262 +2642,101 @@ namespace AmazFit_Watchface_2
             {
                 object[] objson = new object[] { };
                 int count = 0;
-                for (int i = 0; i < 13; i++)
+                for (int i = 0; i < 12; i++)
                 {
                     PREWIEV_STATES_Json ps = new PREWIEV_STATES_Json();
                     ps.Time = new TimePreview();
+                    Dictionary<string, int> Activity = new Dictionary<string, int>();
+                    Dictionary<string, int> Air = new Dictionary<string, int>();
+                    Dictionary<string, bool> checkValue = new Dictionary<string, bool>();
                     switch (i)
                     {
                         case 0:
-                            ps.Time.Year = dateTimePicker_Date_Set1.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set1.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set1.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set1.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set1.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set1.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set1.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set1.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set1.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set1.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set1.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set1.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set1.Checked;
-                            ps.Alarm = checkBox_Alarm_Set1.Checked;
-                            ps.Unlocked = checkBox_Lock_Set1.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set1.Checked;
-
-                            if (numericUpDown_Calories_Set1.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set1.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 1:
-                            ps.Time.Year = dateTimePicker_Date_Set2.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set2.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set2.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set2.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set2.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set2.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set2.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set2.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set2.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set2.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set2.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set2.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set2.Checked;
-                            ps.Alarm = checkBox_Alarm_Set2.Checked;
-                            ps.Unlocked = checkBox_Lock_Set2.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set2.Checked;
-
-                            if (numericUpDown_Calories_Set2.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set2.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 2:
-                            ps.Time.Year = dateTimePicker_Date_Set3.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set3.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set3.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set3.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set3.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set3.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set3.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set3.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set3.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set3.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set3.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set3.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set3.Checked;
-                            ps.Alarm = checkBox_Alarm_Set3.Checked;
-                            ps.Unlocked = checkBox_Lock_Set3.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set3.Checked;
-
-                            if (numericUpDown_Calories_Set3.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set3.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 3:
-                            ps.Time.Year = dateTimePicker_Date_Set4.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set4.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set4.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set4.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set4.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set4.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set4.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set4.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set4.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set4.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set4.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set4.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set4.Checked;
-                            ps.Alarm = checkBox_Alarm_Set4.Checked;
-                            ps.Unlocked = checkBox_Lock_Set4.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set4.Checked;
-
-                            if (numericUpDown_Calories_Set4.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set4.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 4:
-                            ps.Time.Year = dateTimePicker_Date_Set5.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set5.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set5.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set5.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set5.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set5.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set5.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set5.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set5.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set5.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set5.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set5.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set5.Checked;
-                            ps.Alarm = checkBox_Alarm_Set5.Checked;
-                            ps.Unlocked = checkBox_Lock_Set5.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set5.Checked;
-
-                            if (numericUpDown_Calories_Set5.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set5.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 5:
-                            ps.Time.Year = dateTimePicker_Date_Set6.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set6.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set6.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set6.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set6.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set6.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set6.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set6.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set6.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set6.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set6.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set6.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set6.Checked;
-                            ps.Alarm = checkBox_Alarm_Set6.Checked;
-                            ps.Unlocked = checkBox_Lock_Set6.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set6.Checked;
-
-                            if (numericUpDown_Calories_Set6.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set6.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 6:
-                            ps.Time.Year = dateTimePicker_Date_Set7.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set7.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set7.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set7.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set7.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set7.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set7.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set7.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set7.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set7.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set7.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set7.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set7.Checked;
-                            ps.Alarm = checkBox_Alarm_Set7.Checked;
-                            ps.Unlocked = checkBox_Lock_Set7.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set7.Checked;
-
-                            if (numericUpDown_Calories_Set7.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set7.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 7:
-                            ps.Time.Year = dateTimePicker_Date_Set8.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set8.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set8.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set8.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set8.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set8.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set8.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set8.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set8.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set8.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set8.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set8.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set8.Checked;
-                            ps.Alarm = checkBox_Alarm_Set8.Checked;
-                            ps.Unlocked = checkBox_Lock_Set8.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set8.Checked;
-
-                            if (numericUpDown_Calories_Set8.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set8.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 8:
-                            ps.Time.Year = dateTimePicker_Date_Set9.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set9.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set9.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set9.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set9.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set9.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set9.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set9.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set9.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set9.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set9.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set9.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set9.Checked;
-                            ps.Alarm = checkBox_Alarm_Set9.Checked;
-                            ps.Unlocked = checkBox_Lock_Set9.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set9.Checked;
-
-                            if (numericUpDown_Calories_Set9.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set9.GetValue(out Activity, out Air, out checkValue);
                             break;
                         case 9:
-                            ps.Time.Year = dateTimePicker_Date_Set10.Value.Year;
-                            ps.Time.Month = dateTimePicker_Date_Set10.Value.Month;
-                            ps.Time.Day = dateTimePicker_Date_Set10.Value.Day;
-                            ps.Time.Hour = dateTimePicker_Time_Set10.Value.Hour;
-                            ps.Time.Minute = dateTimePicker_Time_Set10.Value.Minute;
-                            ps.Time.Second = dateTimePicker_Time_Set10.Value.Second;
-                            ps.BatteryLevel = (int)numericUpDown_Battery_Set10.Value;
-                            ps.Calories = (int)numericUpDown_Calories_Set10.Value;
-                            ps.Pulse = (int)numericUpDown_Pulse_Set10.Value;
-                            ps.Distance = (int)numericUpDown_Distance_Set10.Value;
-                            ps.Steps = (int)numericUpDown_Steps_Set10.Value;
-                            ps.Goal = (int)numericUpDown_Goal_Set10.Value;
-                            ps.Bluetooth = check_BoxBluetooth_Set10.Checked;
-                            ps.Alarm = checkBox_Alarm_Set10.Checked;
-                            ps.Unlocked = checkBox_Lock_Set10.Checked;
-                            ps.DoNotDisturb = checkBox_DoNotDisturb_Set10.Checked;
-
-                            if (numericUpDown_Calories_Set10.Value != 1234)
-                            {
-                                Array.Resize(ref objson, objson.Length + 1);
-                                objson[count] = ps;
-                                count++;
-                            }
+                            userControl_Set10.GetValue(out Activity, out Air, out checkValue);
                             break;
+                        case 10:
+                            userControl_Set11.GetValue(out Activity, out Air, out checkValue);
+                            break;
+                        case 11:
+                            userControl_Set12.GetValue(out Activity, out Air, out checkValue);
+                            break;
+                    }
+
+                    ps.Time.Year = Activity["Year"];
+                    ps.Time.Month = Activity["Month"];
+                    ps.Time.Day = Activity["Day"];
+
+                    ps.Time.Hour = Activity["Hour"];
+                    ps.Time.Minute = Activity["Minute"];
+                    ps.Time.Second = Activity["Second"];
+
+                    ps.BatteryLevel = Activity["Battery"];
+                    ps.Calories = Activity["Calories"];
+                    ps.Pulse = Activity["HeartRate"];
+                    ps.Distance = Activity["Distance"];
+                    ps.Steps = Activity["Steps"];
+                    ps.Goal = Activity["StepsGoal"];
+
+                    ps.PAI = Activity["PAI"];
+                    ps.Stand = Activity["StandUp"];
+                    ps.Stress = Activity["Stress"];
+                    ps.ActivityGoal = Activity["ActivityGoal"];
+                    ps.FatBurning = Activity["FatBurning"];
+
+
+                    ps.CurrentWeather = Air["Weather_Icon"];
+                    ps.CurrentTemperature = Air["Temperature"];
+                    ps.TemperatureMax = Air["TemperatureMax"];
+                    ps.TemperatureMin = Air["TemperatureMin"];
+
+                    ps.UVindex = Air["UVindex"];
+                    ps.AirQuality = Air["AirQuality"];
+                    ps.Humidity = Air["Humidity"];
+                    ps.WindForce = Air["WindForce"];
+                    ps.Altitude = Air["Altitude"];
+                    ps.AirPressure = Air["AirPressure"];
+
+
+                    ps.Bluetooth = checkValue["Bluetooth"];
+                    ps.Alarm = checkValue["Alarm"];
+                    ps.Unlocked = checkValue["Lock"];
+                    ps.DoNotDisturb = checkValue["DND"];
+
+                    ps.ShowTemperature = checkValue["ShowTemperature"];
+                    ps.ShowTemperatureMaxMin = checkValue["ShowTemperatureMaxMin"];
+
+                    if (ps.Calories != 1234)
+                    {
+                        Array.Resize(ref objson, objson.Length + 1);
+                        objson[count] = ps;
+                        count++;
                     }
                 }
 
@@ -3420,212 +2773,78 @@ namespace AmazFit_Watchface_2
         // случайные значения ностроек
         private void button_JsonPreview_Random_Click(object sender, EventArgs e)
         {
-            PreviewView = false;
-            DateTime now = DateTime.Now;
-            Random rnd = new Random();
-            for (int i = 0; i < 10; i++)
-            {
-                int year = now.Year;
-                int month = rnd.Next(0, 12)+1;
-                int day = rnd.Next(0, 28)+1;
-                int hour = rnd.Next(0, 24);
-                int min = rnd.Next(0, 60);
-                int sec = rnd.Next(0, 60);
-                int battery = rnd.Next(0, 101);
-                int calories = rnd.Next(0, 2500);
-                int pulse = rnd.Next(45, 150);
-                int distance = rnd.Next(0, 15000);
-                int steps = rnd.Next(0, 15000);
-                int goal = rnd.Next(0, 15000);
-                int pai = rnd.Next(0, 150);
-                int standUp = rnd.Next(0, 13);
-                bool bluetooth = rnd.Next(2) == 0 ? false : true;
-                bool alarm = rnd.Next(2) == 0 ? false : true;
-                bool unlocked = rnd.Next(2) == 0 ? false : true;
-                bool dnd = rnd.Next(2) == 0 ? false : true;
-                switch (i)
-                {
-                    case 0:
-                        dateTimePicker_Date_Set1.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set1.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set1.Value = battery;
-                        numericUpDown_Calories_Set1.Value = calories;
-                        numericUpDown_Pulse_Set1.Value = pulse;
-                        numericUpDown_Distance_Set1.Value = distance;
-                        numericUpDown_Steps_Set1.Value = steps;
-                        numericUpDown_Goal_Set1.Value = goal;
-                        check_BoxBluetooth_Set1.Checked = bluetooth;
-                        checkBox_Alarm_Set1.Checked = alarm;
-                        checkBox_Lock_Set1.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set1.Checked = dnd;
-                        numericUpDown_PAI_Set1.Value = pai;
-                        numericUpDown_StandUp_Set1.Value = standUp;
-                        //button_Set1.PerformClick();
-                        break;
-                    case 1:
-                        dateTimePicker_Date_Set2.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set2.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set2.Value = battery;
-                        numericUpDown_Calories_Set2.Value = calories;
-                        numericUpDown_Pulse_Set2.Value = pulse;
-                        numericUpDown_Distance_Set2.Value = distance;
-                        numericUpDown_Steps_Set2.Value = steps;
-                        numericUpDown_Goal_Set2.Value = goal;
-                        check_BoxBluetooth_Set2.Checked = bluetooth;
-                        checkBox_Alarm_Set2.Checked = alarm;
-                        checkBox_Lock_Set2.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set2.Checked = dnd;
-                        numericUpDown_PAI_Set2.Value = pai;
-                        numericUpDown_StandUp_Set2.Value = standUp;
-                        //button_Set2.PerformClick();
-                        break;
-                    case 2:
-                        dateTimePicker_Date_Set3.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set3.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set3.Value = battery;
-                        numericUpDown_Calories_Set3.Value = calories;
-                        numericUpDown_Pulse_Set3.Value = pulse;
-                        numericUpDown_Distance_Set3.Value = distance;
-                        numericUpDown_Steps_Set3.Value = steps;
-                        numericUpDown_Goal_Set3.Value = goal;
-                        check_BoxBluetooth_Set3.Checked = bluetooth;
-                        checkBox_Alarm_Set3.Checked = alarm;
-                        checkBox_Lock_Set3.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set3.Checked = dnd;
-                        numericUpDown_PAI_Set3.Value = pai;
-                        numericUpDown_StandUp_Set3.Value = standUp;
-                        //button_Set3.PerformClick();
-                        break;
-                    case 3:
-                        dateTimePicker_Date_Set4.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set4.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set4.Value = battery;
-                        numericUpDown_Calories_Set4.Value = calories;
-                        numericUpDown_Pulse_Set4.Value = pulse;
-                        numericUpDown_Distance_Set4.Value = distance;
-                        numericUpDown_Steps_Set4.Value = steps;
-                        numericUpDown_Goal_Set4.Value = goal;
-                        check_BoxBluetooth_Set4.Checked = bluetooth;
-                        checkBox_Alarm_Set4.Checked = alarm;
-                        checkBox_Lock_Set4.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set4.Checked = dnd;
-                        numericUpDown_PAI_Set4.Value = pai;
-                        numericUpDown_StandUp_Set4.Value = standUp;
-                        //button_Set4.PerformClick();
-                        break;
-                    case 4:
-                        dateTimePicker_Date_Set5.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set5.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set5.Value = battery;
-                        numericUpDown_Calories_Set5.Value = calories;
-                        numericUpDown_Pulse_Set5.Value = pulse;
-                        numericUpDown_Distance_Set5.Value = distance;
-                        numericUpDown_Steps_Set5.Value = steps;
-                        numericUpDown_Goal_Set5.Value = goal;
-                        check_BoxBluetooth_Set5.Checked = bluetooth;
-                        checkBox_Alarm_Set5.Checked = alarm;
-                        checkBox_Lock_Set5.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set5.Checked = dnd;
-                        numericUpDown_PAI_Set5.Value = pai;
-                        numericUpDown_StandUp_Set5.Value = standUp;
-                        //button_Set5.PerformClick();
-                        break;
-                    case 5:
-                        dateTimePicker_Date_Set6.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set6.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set6.Value = battery;
-                        numericUpDown_Calories_Set6.Value = calories;
-                        numericUpDown_Pulse_Set6.Value = pulse;
-                        numericUpDown_Distance_Set6.Value = distance;
-                        numericUpDown_Steps_Set6.Value = steps;
-                        numericUpDown_Goal_Set6.Value = goal;
-                        check_BoxBluetooth_Set6.Checked = bluetooth;
-                        checkBox_Alarm_Set6.Checked = alarm;
-                        checkBox_Lock_Set6.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set6.Checked = dnd;
-                        numericUpDown_PAI_Set6.Value = pai;
-                        numericUpDown_StandUp_Set6.Value = standUp;
-                        //button_Set6.PerformClick();
-                        break;
-                    case 6:
-                        dateTimePicker_Date_Set7.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set7.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set7.Value = battery;
-                        numericUpDown_Calories_Set7.Value = calories;
-                        numericUpDown_Pulse_Set7.Value = pulse;
-                        numericUpDown_Distance_Set7.Value = distance;
-                        numericUpDown_Steps_Set7.Value = steps;
-                        numericUpDown_Goal_Set7.Value = goal;
-                        check_BoxBluetooth_Set7.Checked = bluetooth;
-                        checkBox_Alarm_Set7.Checked = alarm;
-                        checkBox_Lock_Set7.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set7.Checked = dnd;
-                        numericUpDown_PAI_Set7.Value = pai;
-                        numericUpDown_StandUp_Set7.Value = standUp;
-                        //button_Set7.PerformClick();
-                        break;
-                    case 7:
-                        dateTimePicker_Date_Set8.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set8.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set8.Value = battery;
-                        numericUpDown_Calories_Set8.Value = calories;
-                        numericUpDown_Pulse_Set8.Value = pulse;
-                        numericUpDown_Distance_Set8.Value = distance;
-                        numericUpDown_Steps_Set8.Value = steps;
-                        numericUpDown_Goal_Set8.Value = goal;
-                        check_BoxBluetooth_Set8.Checked = bluetooth;
-                        checkBox_Alarm_Set8.Checked = alarm;
-                        checkBox_Lock_Set8.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set8.Checked = dnd;
-                        numericUpDown_PAI_Set8.Value = pai;
-                        numericUpDown_StandUp_Set8.Value = standUp;
-                        //button_Set8.PerformClick();
-                        break;
-                    case 8:
-                        dateTimePicker_Date_Set9.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set9.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set9.Value = battery;
-                        numericUpDown_Calories_Set9.Value = calories;
-                        numericUpDown_Pulse_Set9.Value = pulse;
-                        numericUpDown_Distance_Set9.Value = distance;
-                        numericUpDown_Steps_Set9.Value = steps;
-                        numericUpDown_Goal_Set9.Value = goal;
-                        check_BoxBluetooth_Set9.Checked = bluetooth;
-                        checkBox_Alarm_Set9.Checked = alarm;
-                        checkBox_Lock_Set9.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set9.Checked = dnd;
-                        numericUpDown_PAI_Set9.Value = pai;
-                        numericUpDown_StandUp_Set9.Value = standUp;
-                        //button_Set9.PerformClick();
-                        break;
-                    case 9:
-                        dateTimePicker_Date_Set10.Value = new DateTime(year, month, day, hour, min, sec);
-                        dateTimePicker_Time_Set10.Value = new DateTime(year, month, day, hour, min, sec);
-                        numericUpDown_Battery_Set10.Value = battery;
-                        numericUpDown_Calories_Set10.Value = calories;
-                        numericUpDown_Pulse_Set10.Value = pulse;
-                        numericUpDown_Distance_Set10.Value = distance;
-                        numericUpDown_Steps_Set10.Value = steps;
-                        numericUpDown_Goal_Set10.Value = goal;
-                        check_BoxBluetooth_Set10.Checked = bluetooth;
-                        checkBox_Alarm_Set10.Checked = alarm;
-                        checkBox_Lock_Set10.Checked = unlocked;
-                        checkBox_DoNotDisturb_Set10.Checked = dnd;
-                        numericUpDown_PAI_Set10.Value = pai;
-                        numericUpDown_StandUp_Set10.Value = standUp;
-                        //button_Set10.PerformClick();
-                        break;
-                }
-            }
+            //PreviewView = false;
+            //for (int i = 0; i < 13; i++)
+            //{
+            //    switch (i)
+            //    {
+            //        case 0:
+            //            userControl_Set1.RandomValue();
+            //            break;
+            //        case 1:
+            //            userControl_Set2.RandomValue();
+            //            break;
+            //        case 2:
+            //            userControl_Set3.RandomValue();
+            //            break;
+            //        case 3:
+            //            userControl_Set4.RandomValue();
+            //            break;
+            //        case 4:
+            //            userControl_Set5.RandomValue();
+            //            break;
+            //        case 5:
+            //            userControl_Set6.RandomValue();
+            //            break;
+            //        case 6:
+            //            userControl_Set7.RandomValue();
+            //            break;
+            //        case 7:
+            //            userControl_Set8.RandomValue();
+            //            break;
+            //        case 8:
+            //            userControl_Set9.RandomValue();
+            //            break;
+            //        case 9:
+            //            userControl_Set10.RandomValue();
+            //            break;
+            //        case 10:
+            //            userControl_Set11.RandomValue();
+            //            break;
+            //        case 11:
+            //            userControl_Set12.RandomValue();
+            //            break;
+            //    }
+            //}
 
-            numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
-            numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
-            numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
-            comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+            Random rnd = new Random();
+            userControl_Set1.RandomValue(rnd);
+            userControl_Set2.RandomValue(rnd);
+            userControl_Set3.RandomValue(rnd);
+            userControl_Set4.RandomValue(rnd);
+            userControl_Set5.RandomValue(rnd);
+            userControl_Set6.RandomValue(rnd);
+            userControl_Set7.RandomValue(rnd);
+            userControl_Set8.RandomValue(rnd);
+            userControl_Set9.RandomValue(rnd);
+            userControl_Set10.RandomValue(rnd);
+            userControl_Set11.RandomValue(rnd);
+            userControl_Set12.RandomValue(rnd);
 
             //PreviewImage();
-            button_Set10.PerformClick();
-            PreviewView = true;
+            SetPreferences(userControl_Set12);
+            if (!userControl_Set1.Collapsed) SetPreferences(userControl_Set1);
+            if (!userControl_Set2.Collapsed) SetPreferences(userControl_Set2);
+            if (!userControl_Set3.Collapsed) SetPreferences(userControl_Set3);
+            if (!userControl_Set4.Collapsed) SetPreferences(userControl_Set4);
+            if (!userControl_Set5.Collapsed) SetPreferences(userControl_Set5);
+            if (!userControl_Set6.Collapsed) SetPreferences(userControl_Set6);
+            if (!userControl_Set7.Collapsed) SetPreferences(userControl_Set7);
+            if (!userControl_Set8.Collapsed) SetPreferences(userControl_Set8);
+            if (!userControl_Set9.Collapsed) SetPreferences(userControl_Set9);
+            if (!userControl_Set10.Collapsed) SetPreferences(userControl_Set10);
+            if (!userControl_Set11.Collapsed) SetPreferences(userControl_Set11);
+            //PreviewView = true;
             PreviewImage();
         }
 
@@ -3927,34 +3146,6 @@ namespace AmazFit_Watchface_2
         }
 
 
-        private void comboBox_WeatherSet_Icon_KeyDown(object sender, KeyEventArgs e)
-        {
-            if ((e.KeyCode == Keys.Delete) || (e.KeyCode == Keys.Back))
-            {
-                comboBox_WeatherSet_Icon.Text = "";
-                comboBox_WeatherSet_Icon.SelectedIndex = -1;
-                PreviewImage();
-                //JSON_write();
-            }
-        }
-
-        private void checkBox_WeatherSet_Temp_CheckedChanged(object sender, EventArgs e)
-        {
-            numericUpDown_WeatherSet_Temp.Enabled = checkBox_WeatherSet_Temp.Checked;
-        }
-
-        private void checkBox_WeatherSet_DayTemp_CheckedChanged(object sender, EventArgs e)
-        {
-            numericUpDown_WeatherSet_MinTemp.Enabled = checkBox_WeatherSet_MaxMinTemp.Checked;
-            numericUpDown_WeatherSet_MaxTemp.Enabled = checkBox_WeatherSet_MaxMinTemp.Checked;
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //timer1.Enabled = false;
-            ////pictureBox1.Image.Save(@"C:\test.png");
-            //pictureBox1.Image = null;
-        }
 
         private void panel_Preview_DoubleClick(object sender, EventArgs e)
         {
@@ -3985,6 +3176,11 @@ namespace AmazFit_Watchface_2
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
@@ -4013,6 +3209,11 @@ namespace AmazFit_Watchface_2
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                 }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
                 Random rnd = new Random();
@@ -4020,10 +3221,7 @@ namespace AmazFit_Watchface_2
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
-                    int WeatherSet_Temp = (int)numericUpDown_WeatherSet_Temp.Value;
-                    int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-                    int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_MinTemp.Value;
-                    int WeatherSet_Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+                    WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set_temp = Watch_Face_Preview_Set;
                     for (int i = 0; i < 13; i++)
                     {
                         save = false;
@@ -4031,78 +3229,83 @@ namespace AmazFit_Watchface_2
                         {
                             case 0:
                                 //button_Set1.PerformClick();
-                                SetPreferences1();
+                                SetPreferences(userControl_Set1);
                                 save = true;
                                 break;
                             case 1:
-                                if (numericUpDown_Calories_Set2.Value != 1234)
+                                if (userControl_Set2.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set2.PerformClick();
-                                    SetPreferences2();
+                                    SetPreferences(userControl_Set2);
                                     save = true;
                                 }
                                 break;
                             case 2:
-                                if (numericUpDown_Calories_Set3.Value != 1234)
+                                if (userControl_Set3.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set3.PerformClick();
-                                    SetPreferences3();
+                                    SetPreferences(userControl_Set3);
                                     save = true;
                                 }
                                 break;
                             case 3:
-                                if (numericUpDown_Calories_Set4.Value != 1234)
+                                if (userControl_Set4.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set4.PerformClick();
-                                    SetPreferences4();
+                                    SetPreferences(userControl_Set4);
                                     save = true;
                                 }
                                 break;
                             case 4:
-                                if (numericUpDown_Calories_Set5.Value != 1234)
+                                if (userControl_Set5.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set5.PerformClick();
-                                    SetPreferences5();
+                                    SetPreferences(userControl_Set5);
                                     save = true;
                                 }
                                 break;
                             case 5:
-                                if (numericUpDown_Calories_Set6.Value != 1234)
+                                if (userControl_Set6.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set6.PerformClick();
-                                    SetPreferences6();
+                                    SetPreferences(userControl_Set6);
                                     save = true;
                                 }
                                 break;
                             case 6:
-                                if (numericUpDown_Calories_Set7.Value != 1234)
+                                if (userControl_Set7.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set7.PerformClick();
-                                    SetPreferences7();
+                                    SetPreferences(userControl_Set7);
                                     save = true;
                                 }
                                 break;
                             case 7:
-                                if (numericUpDown_Calories_Set8.Value != 1234)
+                                if (userControl_Set8.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set8.PerformClick();
-                                    SetPreferences8();
+                                    SetPreferences(userControl_Set8);
                                     save = true;
                                 }
                                 break;
                             case 8:
-                                if (numericUpDown_Calories_Set9.Value != 1234)
+                                if (userControl_Set9.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set9.PerformClick();
-                                    SetPreferences9();
+                                    SetPreferences(userControl_Set9);
                                     save = true;
                                 }
                                 break;
                             case 9:
-                                if (numericUpDown_Calories_Set10.Value != 1234)
+                                if (userControl_Set10.numericUpDown_Calories_Set.Value != 1234)
                                 {
-                                    //button_Set10.PerformClick();
-                                    SetPreferences10();
+                                    SetPreferences(userControl_Set10);
+                                    save = true;
+                                }
+                                break;
+                            case 10:
+                                if (userControl_Set11.numericUpDown_Calories_Set.Value != 1234)
+                                {
+                                    SetPreferences(userControl_Set11);
+                                    save = true;
+                                }
+                                break;
+                            case 11:
+                                if (userControl_Set12.numericUpDown_Calories_Set.Value != 1234)
+                                {
+                                    SetPreferences(userControl_Set12);
                                     save = true;
                                 }
                                 break;
@@ -4111,11 +3314,6 @@ namespace AmazFit_Watchface_2
                         if (save)
                         {
                             Logger.WriteLine("SaveGIF SetPreferences(" + i.ToString() + ")");
-
-                            numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
-                            numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
-                            numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
-                            comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
                             //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                             int link = 0;
@@ -4136,30 +3334,40 @@ namespace AmazFit_Watchface_2
 
                     Logger.WriteLine("SaveGIF_AOD");
 
-                    numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
-                    numericUpDown_WeatherSet_MaxTemp.Value = numericUpDown_WeatherSet_Temp.Value;
-                    numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
-                    comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
-
-                    //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
-                    int link_AOD = 1;
-                    PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
-                    if (checkBox_crop.Checked)
+                    if (Watch_Face.ScreenIdle != null)
                     {
-                        bitmap = ApplyMask(bitmap, mask);
-                        gPanel = Graphics.FromImage(bitmap);
-                    }
-                    // Add first image and set the animation delay to 100ms
-                    MagickImage item_AOD = new MagickImage(bitmap);
-                    //ExifProfile profile = item.GetExifProfile();
-                    collection.Add(item_AOD);
-                    //collection[collection.Count - 1].AnimationDelay = 100;
-                    collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
 
-                    numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
-                    numericUpDown_WeatherSet_MaxTemp.Value = WeatherSet_DayTemp;
-                    numericUpDown_WeatherSet_MinTemp.Value = WeatherSet_NightTemp;
-                    comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
+                        //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
+                        int link_AOD = 1;
+                        PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
+                        if (checkBox_crop.Checked)
+                        {
+                            bitmap = ApplyMask(bitmap, mask);
+                            gPanel = Graphics.FromImage(bitmap);
+                        }
+                        // Add first image and set the animation delay to 100ms
+                        MagickImage item_AOD = new MagickImage(bitmap);
+                        //ExifProfile profile = item.GetExifProfile();
+                        collection.Add(item_AOD);
+                        //collection[collection.Count - 1].AnimationDelay = 100;
+                        collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
+
+
+                        SetPreferences(userControl_Set1);
+                        PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
+                        if (checkBox_crop.Checked)
+                        {
+                            bitmap = ApplyMask(bitmap, mask);
+                            gPanel = Graphics.FromImage(bitmap);
+                        }
+                        item_AOD = new MagickImage(bitmap);
+                        //ExifProfile profile = item.GetExifProfile();
+                        collection.Add(item_AOD);
+                        //collection[collection.Count - 1].AnimationDelay = 100;
+                        collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
+                    }
+
+                    Watch_Face_Preview_Set = Watch_Face_Preview_Set_temp;
 
                     // Optionally reduce colors
                     QuantizeSettings settings = new QuantizeSettings();
@@ -4202,25 +3410,20 @@ namespace AmazFit_Watchface_2
         {
             RadioButton radioButton = sender as RadioButton;
             if (radioButton != null && !radioButton.Checked) return;
-            if (radioButton_GTR2.Checked)
+            if (radioButton_GTR2.Checked || radioButton_GTR2e.Checked)
             {
                 pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
-                
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR_2;
-
-                button_unpack.Enabled = true;
-                button_pack.Enabled = true;
-                button_zip.Enabled = true;
+                Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
             }
             else if (radioButton_GTS2.Checked)
             {
                 pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
-                
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS_2;
-
-                button_unpack.Enabled = false;
-                button_pack.Enabled = false;
-                button_zip.Enabled = false;
+                Program_Settings.unpack_command = Program_Settings.unpack_command_GTS_2;
+            }
+            else if (radioButton_TRex_pro.Checked)
+            {
+                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
+                Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
             }
 
             // изменяем размер панели для предпросмотра если она не влазит
@@ -4235,15 +3438,21 @@ namespace AmazFit_Watchface_2
 
             if ((formPreview != null) && (formPreview.Visible))
             {
-                if (Form_Preview.Model_Wath.model_gtr47 != radioButton_GTR2.Checked)
-                    Form_Preview.Model_Wath.model_gtr47 = radioButton_GTR2.Checked;
-                if (Form_Preview.Model_Wath.model_gts != radioButton_GTS2.Checked)
-                    Form_Preview.Model_Wath.model_gts = radioButton_GTS2.Checked;
+                if (Form_Preview.Model_Wath.model_GTR2 != radioButton_GTR2.Checked)
+                    Form_Preview.Model_Wath.model_GTR2 = radioButton_GTR2.Checked;
+                if (Form_Preview.Model_Wath.model_GTR2e != radioButton_GTR2e.Checked)
+                    Form_Preview.Model_Wath.model_GTR2e = radioButton_GTR2e.Checked;
+                if (Form_Preview.Model_Wath.model_GTS2 != radioButton_GTS2.Checked)
+                    Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
+                if (Form_Preview.Model_Wath.model_TRex_pro != radioButton_TRex_pro.Checked)
+                    Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
                 formPreview.radioButton_CheckedChanged(sender, e);
             }
 
-            Program_Settings.Model_GTR47 = radioButton_GTR2.Checked;
-            Program_Settings.Model_GTS = radioButton_GTS2.Checked;
+            Program_Settings.Model_GTR2 = radioButton_GTR2.Checked;
+            Program_Settings.Model_GTR2e = radioButton_GTR2e.Checked;
+            Program_Settings.Model_GTS2 = radioButton_GTS2.Checked;
+            Program_Settings.Model_TRex_pro = radioButton_TRex_pro.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -4251,9 +3460,8 @@ namespace AmazFit_Watchface_2
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
-
-            PreviewImage();
             JSON_write();
+            PreviewImage();
         }
 
         // устанавливаем заголовок окна
@@ -4270,9 +3478,17 @@ namespace AmazFit_Watchface_2
             {
                 FormName = "GTR 2 watch face editor";
             }
+            else if (radioButton_GTR2e.Checked)
+            {
+                FormName = "GTR 2e watch face editor";
+            }
             else if (radioButton_GTS2.Checked)
             {
                 FormName = "GTS 2 watch face editor";
+            }
+            else if (radioButton_TRex_pro.Checked)
+            {
+                FormName = "T-Rex Pro watch face editor";
             }
 
             if (FormNameSufix.Length == 0)
@@ -4338,8 +3554,8 @@ namespace AmazFit_Watchface_2
                 ComboBox comboBox = sender as ComboBox;
                 comboBox.Text = "";
                 comboBox.SelectedIndex = -1;
-                PreviewImage();
-                JSON_write();
+                //PreviewImage();
+                //JSON_write();
             }
         }
 
@@ -4669,24 +3885,6 @@ namespace AmazFit_Watchface_2
         private void checkBox_center_marker_CheckedChanged(object sender, EventArgs e)
         {
             Program_Settings.Shortcuts_Center_marker = checkBox_center_marker.Checked;
-            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
-            {
-                //DefaultValueHandling = DefaultValueHandling.Ignore,
-                NullValueHandling = NullValueHandling.Ignore
-            });
-            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
-        }
-        private void textBox_unpack_command_Leave(object sender, EventArgs e)
-        {
-            if (radioButton_GTR2.Checked)
-            {
-                Program_Settings.unpack_command_GTR_2 = textBox_unpack_command.Text;
-            }
-            else if (radioButton_GTS2.Checked)
-            {
-                Program_Settings.unpack_command_GTS_2 = textBox_unpack_command.Text;
-            }
-
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -5128,38 +4326,6 @@ namespace AmazFit_Watchface_2
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
 
-        private void checkBox_WeatherSet_Temp_Click(object sender, EventArgs e)
-        {
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-            PreviewImage();
-        }
-
-        private void numericUpDown_WeatherSet_Temp_ValueChanged(object sender, EventArgs e)
-        {
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-            PreviewImage();
-        }
-
-        private void comboBox_WeatherSet_Icon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Watch_Face_Preview_Set.Weather.Temperature = (int)numericUpDown_WeatherSet_Temp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMax = (int)numericUpDown_WeatherSet_MaxTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureMin = (int)numericUpDown_WeatherSet_MinTemp.Value;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = !checkBox_WeatherSet_Temp.Checked;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = !checkBox_WeatherSet_MaxMinTemp.Checked;
-            Watch_Face_Preview_Set.Weather.Icon = comboBox_WeatherSet_Icon.SelectedIndex;
-            PreviewImage();
-        }
 
         private void radioButton_MotiomAnimation_StartCoordinates_CheckedChanged(object sender, EventArgs e)
         {
@@ -5242,7 +4408,7 @@ namespace AmazFit_Watchface_2
                     row.Cells[2].Value = MouseСoordinates.Y;
 
                     // копируем данные в поля для редактирования
-                    MotiomAnimation_Update = true;
+                    //MotiomAnimation_Update = true;
                     int StartCoordinates_X = 0;
                     int StartCoordinates_Y = 0;
                     int EndCoordinates_X = 0;
@@ -5273,7 +4439,7 @@ namespace AmazFit_Watchface_2
                     //    comboBox_MotiomAnimation_Image.Text = "";
                     //}
 
-                    MotiomAnimation_Update = false;
+                    //MotiomAnimation_Update = false;
 
                     PreviewImage();
                     JSON_write();
@@ -5299,7 +4465,7 @@ namespace AmazFit_Watchface_2
                     row.Cells[4].Value = MouseСoordinates.Y;
 
                     // копируем данные в поля для редактирования
-                    MotiomAnimation_Update = true;
+                    //MotiomAnimation_Update = true;
                     int StartCoordinates_X = 0;
                     int StartCoordinates_Y = 0;
                     int EndCoordinates_X = 0;
@@ -5330,26 +4496,12 @@ namespace AmazFit_Watchface_2
                     //    comboBox_MotiomAnimation_Image.Text = "";
                     //}
 
-                    MotiomAnimation_Update = false;
+                    //MotiomAnimation_Update = false;
 
                     PreviewImage();
                     JSON_write();
                 }
             }
-        }
-        private void button_ShowAnimation_Click(object sender, EventArgs e)
-        {
-            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-            Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
-            if (radioButton_GTS2.Checked)
-            {
-                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
-            }
-            Graphics gPanel = Graphics.FromImage(bitmap);
-            int link = radioButton_ScreenNormal.Checked ? 0 : 1;
-            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, false, link);
-
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -5401,41 +4553,27 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        private void comboBox_Animation_Preview_Speed_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Settings_Load) return;
-
-            Program_Settings.Animation_Preview_Speed = comboBox_Animation_Preview_Speed.SelectedIndex;
-            //string JSON_String = JObject.FromObject(Program_Settings).ToString();
-            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
-            {
-                //DefaultValueHandling = DefaultValueHandling.Ignore,
-                NullValueHandling = NullValueHandling.Ignore
-            });
-            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
-        }
-
         private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if(e.TabPage.Name == "tabPageConverting")
-            {
-                if (radioButton_GTR2.Checked)
-                {
-                    radioButton_ConvertingInput_GTR47.Checked = true;
-                    numericUpDown_ConvertingInput_Custom.Value = 454;
-                }
-                numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
-            }
-            if (FileName != null && FullFileDir != null)
-            {
-                button_Converting.Enabled = true;
-                label486.Visible = false;
-            }
-            else
-            {
-                button_Converting.Enabled = false;
-                label486.Visible = true;
-            }
+            //if(e.TabPage.Name == "tabPageConverting")
+            //{
+            //    if (radioButton_GTR2.Checked)
+            //    {
+            //        radioButton_ConvertingInput_GTR47.Checked = true;
+            //        numericUpDown_ConvertingInput_Custom.Value = 454;
+            //    }
+            //    numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
+            //}
+            //if (FileName != null && FullFileDir != null)
+            //{
+            //    button_Converting.Enabled = true;
+            //    label486.Visible = false;
+            //}
+            //else
+            //{
+            //    button_Converting.Enabled = false;
+            //    label486.Visible = true;
+            //}
         }
 
         private void radioButton_ConvertingInput_Custom_CheckedChanged(object sender, EventArgs e)
@@ -6313,6 +5451,12 @@ namespace AmazFit_Watchface_2
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                     PreviewHeight = 323;
                 }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                    PreviewHeight = 220;
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
@@ -6330,13 +5474,27 @@ namespace AmazFit_Watchface_2
                 {
                     DialogResult ResultDialog = MessageBox.Show(Properties.FormStrings.Message_WarningPreview_Text1 +
                         Environment.NewLine + Properties.FormStrings.Message_WarningPreview_Text2,
-                        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                     if (ResultDialog == DialogResult.Yes) scale = (float)loadedImage.Height / bitmap.Height;
                 }
                 int pixelsOld = loadedImage.Width * loadedImage.Height;
                 pixelsOld = pixelsOld * 4 + 20;
                 bitmap = ResizeImage(bitmap, scale);
-                bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+                //bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+
+                MagickImage item_AOD = new MagickImage(bitmap);
+
+                QuantizeSettings settings = new QuantizeSettings();
+                settings.Colors = 256;
+                item_AOD.Quantize(settings);
+
+                // Optionally optimize the images (images should have the same size).
+
+                item_AOD.Format = MagickFormat.Png;
+                item_AOD.Write(ListImagesFullName[i]);
+
+
+
                 //string s = label_size.Text;
                 ////s = s.Trim(new char[] { '≈', 'M' });
                 //s = s.Replace("≈", "");
@@ -6366,6 +5524,12 @@ namespace AmazFit_Watchface_2
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
                     PreviewHeight = 323;
+                }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                    PreviewHeight = 220;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
@@ -6917,6 +6081,1346 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+
+        private void userControl_Set1_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set1);
+            PreviewImage();
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set2_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set2);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set3_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set3);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set4_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set4);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set5_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set5);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set6_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set6);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set7_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set7);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set8_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set8);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set9_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set9);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set10_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set10);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set11_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set11);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set12.Collapsed = true;
+        }
+
+        private void userControl_Set12_Collapse(object sender, EventArgs eventArgs, int setNumber)
+        {
+            SetPreferences(userControl_Set12);
+            PreviewImage();
+            userControl_Set1.Collapsed = true;
+            userControl_Set2.Collapsed = true;
+            userControl_Set3.Collapsed = true;
+            userControl_Set4.Collapsed = true;
+            userControl_Set5.Collapsed = true;
+            userControl_Set6.Collapsed = true;
+            userControl_Set7.Collapsed = true;
+            userControl_Set8.Collapsed = true;
+            userControl_Set9.Collapsed = true;
+            userControl_Set10.Collapsed = true;
+            userControl_Set11.Collapsed = true;
+        }
+
+        private void numericUpDown_Gif_Speed_ValueChanged_1(object sender, EventArgs e)
+        {
+            Program_Settings.Gif_Speed = (float)numericUpDown_Gif_Speed.Value;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+
+        private void userControl_ValueChanged(object sender, EventArgs eventArgs)
+        {
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void button_Hour_Click(object sender, EventArgs e)
+        {
+            if (panel_Hour.Height == 1)
+            {
+                panel_Hour.Height = (int)(215 * currentDPI);
+                //panel_Minute.Height = 1;
+                //panel_Second.Height = 1;
+            }
+            else panel_Hour.Height = 1;
+        }
+
+        private void button_Minute_Click(object sender, EventArgs e)
+        {
+            if (panel_Minute.Height == 1)
+            {
+                //panel_Hour.Height = 1;
+                panel_Minute.Height = (int)(215 * currentDPI);
+                //panel_Second.Height = 1;
+            }
+            else panel_Minute.Height = 1;
+        }
+
+        private void button_Second_Click(object sender, EventArgs e)
+        {
+            if (panel_Second.Height == 1)
+            {
+                //panel_Hour.Height = 1;
+                //panel_Minute.Height = 1;
+                panel_Second.Height = (int)(215 * currentDPI);
+            }
+            else panel_Second.Height = 1;
+        }
+
+        private void button_Hour_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Hour_hand.Height == 1)
+            {
+                panel_Hour_hand.Height = (int)(155 * currentDPI);
+                //panel_Minute_hand.Height = 1;
+                //panel_Second_hand.Height = 1;
+            }
+            else panel_Hour_hand.Height = 1;
+        }
+
+        private void button_Minute_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Minute_hand.Height == 1)
+            {
+                //panel_Hour_hand.Height = 1;
+                panel_Minute_hand.Height = (int)(155 * currentDPI);
+                //panel_Second_hand.Height = 1;
+            }
+            else panel_Minute_hand.Height = 1;
+        }
+
+        private void button_Second_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Second_hand.Height == 1)
+            {
+                //panel_Hour_hand.Height = 1;
+                //panel_Minute_hand.Height = 1;
+                panel_Second_hand.Height = (int)(155 * currentDPI);
+            }
+            else panel_Second_hand.Height = 1;
+        }
+
+        private void button_Day_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Day_text.Height == 1)
+            {
+                panel_Day_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Day_text.Height = 1;
+        }
+
+        private void button_Day_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Day_hand.Height == 1)
+            {
+                panel_Day_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_Day_hand.Height = 1;
+        }
+
+        private void button_Month_image_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_pictures.Height == 1)
+            {
+                panel_Month_pictures.Height = (int)(85 * currentDPI);
+            }
+            else panel_Month_pictures.Height = 1;
+        }
+
+        private void button_Month_text_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_text.Height == 1)
+            {
+                panel_Month_text.Height = (int)(215 * currentDPI);
+            }
+            else panel_Month_text.Height = 1;
+        }
+
+        private void button_Month_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_hand.Height == 1)
+            {
+                panel_Month_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_Month_hand.Height = 1;
+        }
+
+        private void button_DOW_image_Click(object sender, EventArgs e)
+        {
+            if (panel_DOW_image.Height == 1)
+            {
+                panel_DOW_image.Height = (int)(85 * currentDPI);
+            }
+            else panel_DOW_image.Height = 1;
+        }
+
+        private void button_DOW_hand_Click(object sender, EventArgs e)
+        {
+            if (panel_DOW_hand.Height == 1)
+            {
+                panel_DOW_hand.Height = (int)(225 * currentDPI);
+            }
+            else panel_DOW_hand.Height = 1;
+        }
+
+
+
+        private void button_Hour_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Hour_AOD.Height == 1)
+            {
+                panel_Hour_AOD.Height = (int)(215 * currentDPI);
+            }
+            else panel_Hour_AOD.Height = 1;
+
+        }
+
+        private void button_Minute_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Minute_AOD.Height == 1)
+            {
+                panel_Minute_AOD.Height = (int)(215 * currentDPI);
+            }
+            else panel_Minute_AOD.Height = 1;
+        }
+
+        private void button_Hour_hand_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Hour_hand_AOD.Height == 1)
+            {
+                panel_Hour_hand_AOD.Height = (int)(155 * currentDPI);
+            }
+            else panel_Hour_hand_AOD.Height = 1;
+        }
+
+        private void button_Minute_hand_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Minute_hand_AOD.Height == 1)
+            {
+                panel_Minute_hand_AOD.Height = (int)(155 * currentDPI);
+            }
+            else panel_Minute_hand_AOD.Height = 1;
+        }
+
+        private void button_Day_text_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Day_text_AOD.Height == 1)
+            {
+                panel_Day_text_AOD.Height = (int)(215 * currentDPI);
+            }
+            else panel_Day_text_AOD.Height = 1;
+        }
+
+        private void button_Day_hand_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Day_hand_AOD.Height == 1)
+            {
+                panel_Day_hand_AOD.Height = (int)(225 * currentDPI);
+            }
+            else panel_Day_hand_AOD.Height = 1;
+        }
+
+        private void button_Month_pictures_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_pictures_AOD.Height == 1)
+            {
+                panel_Month_pictures_AOD.Height = (int)(85 * currentDPI);
+            }
+            else panel_Month_pictures_AOD.Height = 1;
+        }
+
+        private void button_Month_text_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_text_AOD.Height == 1)
+            {
+                panel_Month_text_AOD.Height = (int)(215 * currentDPI);
+            }
+            else panel_Month_text_AOD.Height = 1;
+        }
+
+        private void button_Month_hand_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_Month_hand_AOD.Height == 1)
+            {
+                panel_Month_hand_AOD.Height = (int)(225 * currentDPI);
+            }
+            else panel_Month_hand_AOD.Height = 1;
+        }
+
+        private void button_DOW_image_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_DOW_image_AOD.Height == 1)
+            {
+                panel_DOW_image_AOD.Height = (int)(85 * currentDPI);
+            }
+            else panel_DOW_image_AOD.Height = 1;
+        }
+
+        private void button_DOW_hand_AOD_Click(object sender, EventArgs e)
+        {
+            if (panel_DOW_hand_AOD.Height == 1)
+            {
+                panel_DOW_hand_AOD.Height = (int)(225 * currentDPI);
+            }
+            else panel_DOW_hand_AOD.Height = 1;
+        }
+
+        private void radioButton_Background_image_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = radioButton_Background_image.Checked;
+            comboBox_Background_image.Enabled = b;
+            comboBox_Background_color.Enabled = !b;
+            JSON_write();
+            PreviewImage();
+        }
+
+
+        private void checkBox_Hour_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Hour_Use.Checked;
+            comboBox_Hour_image.Enabled = b;
+            comboBox_Hour_unit.Enabled = b;
+            comboBox_Hour_separator.Enabled = b;
+            numericUpDown_HourX.Enabled = b;
+            numericUpDown_HourY.Enabled = b;
+            numericUpDown_Hour_unitX.Enabled = b;
+            numericUpDown_Hour_unitY.Enabled = b;
+            comboBox_Hour_alignment.Enabled = b;
+            checkBox_Hour_add_zero.Enabled = b;
+            //comboBox_Hour_error.Enabled = b;
+            numericUpDown_Hour_spacing.Enabled = b;
+
+            label502.Enabled = b;
+            label503.Enabled = b;
+            label504.Enabled = b;
+            label505.Enabled = b;
+            label506.Enabled = b;
+            label507.Enabled = b;
+            label508.Enabled = b;
+            label509.Enabled = b;
+            label510.Enabled = b;
+            label511.Enabled = b;
+            label532.Enabled = b;
+        }
+
+        private void checkBox_Minute_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Minute_Use.Checked;
+            comboBox_Minute_image.Enabled = b;
+            comboBox_Minute_unit.Enabled = b;
+            comboBox_Minute_separator.Enabled = b;
+            numericUpDown_MinuteX.Enabled = b;
+            numericUpDown_MinuteY.Enabled = b;
+            numericUpDown_Minute_unitX.Enabled = b;
+            numericUpDown_Minute_unitY.Enabled = b;
+            comboBox_Minute_alignment.Enabled = b;
+            checkBox_Minute_add_zero.Enabled = b;
+            //comboBox_Minute_error.Enabled = b;
+            numericUpDown_Minute_spacing.Enabled = b;
+            checkBox_Minute_follow.Enabled = b;
+
+            label512.Enabled = b;
+            label513.Enabled = b;
+            label514.Enabled = b;
+            label515.Enabled = b;
+            label516.Enabled = b;
+            label517.Enabled = b;
+            label518.Enabled = b;
+            label519.Enabled = b;
+            label520.Enabled = b;
+            label521.Enabled = b;
+            label533.Enabled = b;
+
+            if (checkBox_Minute_follow.Checked)
+            {
+                numericUpDown_MinuteX.Enabled = false;
+                numericUpDown_MinuteY.Enabled = false;
+
+                label514.Enabled = false;
+                label516.Enabled = false;
+                label533.Enabled = false;
+            }
+        }
+
+        private void checkBox_Second_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Second_Use.Checked;
+            comboBox_Second_image.Enabled = b;
+            comboBox_Second_unit.Enabled = b;
+            comboBox_Second_separator.Enabled = b;
+            numericUpDown_SecondX.Enabled = b;
+            numericUpDown_SecondY.Enabled = b;
+            numericUpDown_Second_unitX.Enabled = b;
+            numericUpDown_Second_unitY.Enabled = b;
+            comboBox_Second_alignment.Enabled = b;
+            checkBox_Second_add_zero.Enabled = b;
+            //comboBox_Second_error.Enabled = b;
+            numericUpDown_Second_spacing.Enabled = b;
+            checkBox_Second_follow.Enabled = b;
+
+            label522.Enabled = b;
+            label523.Enabled = b;
+            label524.Enabled = b;
+            label525.Enabled = b;
+            label526.Enabled = b;
+            label527.Enabled = b;
+            label528.Enabled = b;
+            label529.Enabled = b;
+            label530.Enabled = b;
+            label531.Enabled = b;
+            label534.Enabled = b;
+
+            if (checkBox_Second_follow.Checked)
+            {
+                numericUpDown_SecondX.Enabled = false;
+                numericUpDown_SecondY.Enabled = false;
+
+                label524.Enabled = false;
+                label526.Enabled = false;
+                label534.Enabled = false;
+            }
+        }
+
+
+        private void checkBox_Hour_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Hour_Use_AOD.Checked;
+            comboBox_Hour_image_AOD.Enabled = b;
+            comboBox_Hour_unit_AOD.Enabled = b;
+            comboBox_Hour_separator_AOD.Enabled = b;
+            numericUpDown_HourX_AOD.Enabled = b;
+            numericUpDown_HourY_AOD.Enabled = b;
+            numericUpDown_Hour_unitX_AOD.Enabled = b;
+            numericUpDown_Hour_unitY_AOD.Enabled = b;
+            comboBox_Hour_alignment_AOD.Enabled = b;
+            checkBox_Hour_add_zero_AOD.Enabled = b;
+            numericUpDown_Hour_spacing_AOD.Enabled = b;
+
+            label317.Enabled = b;
+            label318.Enabled = b;
+            label319.Enabled = b;
+            label320.Enabled = b;
+            label321.Enabled = b;
+            label322.Enabled = b;
+            label323.Enabled = b;
+            label324.Enabled = b;
+            label325.Enabled = b;
+            label326.Enabled = b;
+            label327.Enabled = b;
+        }
+
+        private void checkBox_Minute_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Minute_Use_AOD.Checked;
+            comboBox_Minute_image_AOD.Enabled = b;
+            comboBox_Minute_unit_AOD.Enabled = b;
+            comboBox_Minute_separator_AOD.Enabled = b;
+            numericUpDown_MinuteX_AOD.Enabled = b;
+            numericUpDown_MinuteY_AOD.Enabled = b;
+            numericUpDown_Minute_unitX_AOD.Enabled = b;
+            numericUpDown_Minute_unitY_AOD.Enabled = b;
+            comboBox_Minute_alignment_AOD.Enabled = b;
+            checkBox_Minute_add_zero_AOD.Enabled = b;
+            numericUpDown_Minute_spacing_AOD.Enabled = b;
+            checkBox_Minute_follow_AOD.Enabled = b;
+
+            label306.Enabled = b;
+            label307.Enabled = b;
+            label308.Enabled = b;
+            label309.Enabled = b;
+            label310.Enabled = b;
+            label311.Enabled = b;
+            label312.Enabled = b;
+            label313.Enabled = b;
+            label314.Enabled = b;
+            label315.Enabled = b;
+            label316.Enabled = b;
+
+            if (checkBox_Minute_follow_AOD.Checked)
+            {
+                numericUpDown_MinuteX_AOD.Enabled = false;
+                numericUpDown_MinuteY_AOD.Enabled = false;
+
+                label306.Enabled = false;
+                label309.Enabled = false;
+                label311.Enabled = false;
+            }
+        }
+
+
+        private void checkBox_Hour_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Hour_hand_Use.Checked;
+            comboBox_Hour_hand_image.Enabled = b;
+            comboBox_Hour_hand_imageCentr.Enabled = b;
+            numericUpDown_Hour_handX.Enabled = b;
+            numericUpDown_Hour_handY.Enabled = b;
+            numericUpDown_Hour_handX_centr.Enabled = b;
+            numericUpDown_Hour_handY_centr.Enabled = b;
+            numericUpDown_Hour_handX_offset.Enabled = b;
+            numericUpDown_Hour_handY_offset.Enabled = b;
+
+            label536.Enabled = b;
+            label535.Enabled = b;
+            label537.Enabled = b;
+            label538.Enabled = b;
+            label539.Enabled = b;
+            label540.Enabled = b;
+            label541.Enabled = b;
+            label542.Enabled = b;
+            label543.Enabled = b;
+            label544.Enabled = b;
+            label545.Enabled = b;
+        }
+        private void checkBox_Minute_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Minute_hand_Use.Checked;
+            comboBox_Minute_hand_image.Enabled = b;
+            comboBox_Minute_hand_imageCentr.Enabled = b;
+            numericUpDown_Minute_handX.Enabled = b;
+            numericUpDown_Minute_handY.Enabled = b;
+            numericUpDown_Minute_handX_centr.Enabled = b;
+            numericUpDown_Minute_handY_centr.Enabled = b;
+            numericUpDown_Minute_handX_offset.Enabled = b;
+            numericUpDown_Minute_handY_offset.Enabled = b;
+
+            label546.Enabled = b;
+            label547.Enabled = b;
+            label548.Enabled = b;
+            label549.Enabled = b;
+            label550.Enabled = b;
+            label551.Enabled = b;
+            label552.Enabled = b;
+            label553.Enabled = b;
+            label554.Enabled = b;
+            label555.Enabled = b;
+            label556.Enabled = b;
+        }
+        private void checkBox_Second_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Second_hand_Use.Checked;
+            comboBox_Second_hand_image.Enabled = b;
+            comboBox_Second_hand_imageCentr.Enabled = b;
+            numericUpDown_Second_handX.Enabled = b;
+            numericUpDown_Second_handY.Enabled = b;
+            numericUpDown_Second_handX_centr.Enabled = b;
+            numericUpDown_Second_handY_centr.Enabled = b;
+            numericUpDown_Second_handX_offset.Enabled = b;
+            numericUpDown_Second_handY_offset.Enabled = b;
+
+            label557.Enabled = b;
+            label558.Enabled = b;
+            label559.Enabled = b;
+            label560.Enabled = b;
+            label561.Enabled = b;
+            label562.Enabled = b;
+            label563.Enabled = b;
+            label564.Enabled = b;
+            label565.Enabled = b;
+            label566.Enabled = b;
+            label567.Enabled = b;
+        }
+
+
+        private void checkBox_Hour_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Hour_hand_Use_AOD.Checked;
+            comboBox_Hour_hand_image_AOD.Enabled = b;
+            comboBox_Hour_hand_imageCentr_AOD.Enabled = b;
+            numericUpDown_Hour_handX_AOD.Enabled = b;
+            numericUpDown_Hour_handY_AOD.Enabled = b;
+            numericUpDown_Hour_handX_centr_AOD.Enabled = b;
+            numericUpDown_Hour_handY_centr_AOD.Enabled = b;
+            numericUpDown_Hour_handX_offset_AOD.Enabled = b;
+            numericUpDown_Hour_handY_offset_AOD.Enabled = b;
+
+            label350.Enabled = b;
+            label351.Enabled = b;
+            label352.Enabled = b;
+            label353.Enabled = b;
+            label354.Enabled = b;
+            label357.Enabled = b;
+            label358.Enabled = b;
+            label359.Enabled = b;
+            label360.Enabled = b;
+            label361.Enabled = b;
+            label362.Enabled = b;
+        }
+
+        private void checkBox_Minute_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Minute_hand_Use_AOD.Checked;
+            comboBox_Minute_hand_image_AOD.Enabled = b;
+            comboBox_Minute_hand_imageCentr_AOD.Enabled = b;
+            numericUpDown_Minute_handX_AOD.Enabled = b;
+            numericUpDown_Minute_handY_AOD.Enabled = b;
+            numericUpDown_Minute_handX_centr_AOD.Enabled = b;
+            numericUpDown_Minute_handY_centr_AOD.Enabled = b;
+            numericUpDown_Minute_handX_offset_AOD.Enabled = b;
+            numericUpDown_Minute_handY_offset_AOD.Enabled = b;
+
+            label339.Enabled = b;
+            label340.Enabled = b;
+            label341.Enabled = b;
+            label342.Enabled = b;
+            label343.Enabled = b;
+            label344.Enabled = b;
+            label345.Enabled = b;
+            label346.Enabled = b;
+            label347.Enabled = b;
+            label348.Enabled = b;
+            label349.Enabled = b;
+        }
+
+
+        private void checkBox_12h_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_12h_Use.Checked;
+            comboBox_AM_image.Enabled = b;
+            comboBox_PM_image.Enabled = b;
+            numericUpDown_AM_X.Enabled = b;
+            numericUpDown_AM_Y.Enabled = b;
+            numericUpDown_PM_X.Enabled = b;
+            numericUpDown_PM_Y.Enabled = b;
+
+            label568.Enabled = b;
+            label569.Enabled = b;
+            label570.Enabled = b;
+            label571.Enabled = b;
+            label572.Enabled = b;
+            label573.Enabled = b;
+            label574.Enabled = b;
+            label575.Enabled = b;
+        }
+
+        private void checkBox_12h_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_12h_Use_AOD.Checked;
+            comboBox_AM_image_AOD.Enabled = b;
+            comboBox_PM_image_AOD.Enabled = b;
+            numericUpDown_AM_X_AOD.Enabled = b;
+            numericUpDown_AM_Y_AOD.Enabled = b;
+            numericUpDown_PM_X_AOD.Enabled = b;
+            numericUpDown_PM_Y_AOD.Enabled = b;
+
+            label285.Enabled = b;
+            label286.Enabled = b;
+            label287.Enabled = b;
+            label289.Enabled = b;
+            label290.Enabled = b;
+            label291.Enabled = b;
+            label292.Enabled = b;
+            label293.Enabled = b;
+        }
+
+
+        private void checkBox_Day_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Day_Use.Checked;
+            comboBox_Day_image.Enabled = b;
+            comboBox_Day_unit.Enabled = b;
+            comboBox_Day_separator.Enabled = b;
+            numericUpDown_DayX.Enabled = b;
+            numericUpDown_DayY.Enabled = b;
+            numericUpDown_Day_unitX.Enabled = b;
+            numericUpDown_Day_unitY.Enabled = b;
+            comboBox_Day_alignment.Enabled = b;
+            checkBox_Day_add_zero.Enabled = b;
+            numericUpDown_Day_spacing.Enabled = b;
+            checkBox_Day_follow.Enabled = b;
+
+            label576.Enabled = b;
+            label577.Enabled = b;
+            label578.Enabled = b;
+            label579.Enabled = b;
+            label580.Enabled = b;
+            label581.Enabled = b;
+            label582.Enabled = b;
+            label583.Enabled = b;
+            label584.Enabled = b;
+            label585.Enabled = b;
+            label586.Enabled = b;
+
+            if (checkBox_Day_follow.Checked)
+            {
+                numericUpDown_DayX.Enabled = false;
+                numericUpDown_DayY.Enabled = false;
+
+                label576.Enabled = false;
+                label579.Enabled = false;
+                label581.Enabled = false;
+            }
+        }
+
+        private void checkBox_Day_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Day_hand_Use.Checked;
+            comboBox_Day_hand_image.Enabled = b;
+            comboBox_Day_hand_imageCentr.Enabled = b;
+            comboBox_Day_hand_imageBackground.Enabled = b;
+            numericUpDown_Day_handX.Enabled = b;
+            numericUpDown_Day_handY.Enabled = b;
+            numericUpDown_Day_handX_centr.Enabled = b;
+            numericUpDown_Day_handY_centr.Enabled = b;
+            numericUpDown_Day_handX_background.Enabled = b;
+            numericUpDown_Day_handY_background.Enabled = b;
+            numericUpDown_Day_handX_offset.Enabled = b;
+            numericUpDown_Day_handY_offset.Enabled = b;
+            numericUpDown_Day_hand_startAngle.Enabled = b;
+            numericUpDown_Day_hand_endAngle.Enabled = b;
+
+            label609.Enabled = b;
+            label610.Enabled = b;
+            label611.Enabled = b;
+            label612.Enabled = b;
+            //label613.Enabled = b;
+            //label614.Enabled = b;
+            //label615.Enabled = b;
+            //label616.Enabled = b;
+            label617.Enabled = b;
+            label618.Enabled = b;
+            label619.Enabled = b;
+            label620.Enabled = b;
+            label621.Enabled = b;
+            label622.Enabled = b;
+            label623.Enabled = b;
+            label624.Enabled = b;
+            label625.Enabled = b;
+
+            label714.Enabled = b;
+            label715.Enabled = b;
+            label716.Enabled = b;
+            label717.Enabled = b;
+        }
+
+        private void checkBox_Month_pictures_Use_CheckedChanged(object sender, EventArgs e)
+        {
+
+            bool b = checkBox_Month_pictures_Use.Checked;
+            comboBox_Month_pictures_image.Enabled = b;
+            numericUpDown_Month_picturesX.Enabled = b;
+            numericUpDown_Month_picturesY.Enabled = b;
+
+            label613.Enabled = b;
+            label614.Enabled = b;
+            label615.Enabled = b;
+            label616.Enabled = b;
+        }
+
+        private void checkBox_Month_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Month_Use.Checked;
+            comboBox_Month_image.Enabled = b;
+            comboBox_Month_unit.Enabled = b;
+            comboBox_Month_separator.Enabled = b;
+            numericUpDown_MonthX.Enabled = b;
+            numericUpDown_MonthY.Enabled = b;
+            numericUpDown_Month_unitX.Enabled = b;
+            numericUpDown_Month_unitY.Enabled = b;
+            comboBox_Month_alignment.Enabled = b;
+            checkBox_Month_add_zero.Enabled = b;
+            numericUpDown_Month_spacing.Enabled = b;
+            checkBox_Month_follow.Enabled = b;
+
+            label587.Enabled = b;
+            label588.Enabled = b;
+            label589.Enabled = b;
+            label590.Enabled = b;
+            label591.Enabled = b;
+            label592.Enabled = b;
+            label593.Enabled = b;
+            label594.Enabled = b;
+            label595.Enabled = b;
+            label596.Enabled = b;
+            label597.Enabled = b;
+
+            if (checkBox_Month_follow.Checked)
+            {
+                numericUpDown_MonthX.Enabled = false;
+                numericUpDown_MonthY.Enabled = false;
+
+                label587.Enabled = false;
+                label590.Enabled = false;
+                label592.Enabled = false;
+            }
+        }
+
+        private void checkBox_Month_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Month_hand_Use.Checked;
+            comboBox_Month_hand_image.Enabled = b;
+            comboBox_Month_hand_imageCentr.Enabled = b;
+            comboBox_Month_hand_imageBackground.Enabled = b;
+            numericUpDown_Month_handX.Enabled = b;
+            numericUpDown_Month_handY.Enabled = b;
+            numericUpDown_Month_handX_centr.Enabled = b;
+            numericUpDown_Month_handY_centr.Enabled = b;
+            numericUpDown_Month_handX_background.Enabled = b;
+            numericUpDown_Month_handY_background.Enabled = b;
+            numericUpDown_Month_handX_offset.Enabled = b;
+            numericUpDown_Month_handY_offset.Enabled = b;
+            numericUpDown_Month_hand_startAngle.Enabled = b;
+            numericUpDown_Month_hand_endAngle.Enabled = b;
+
+            label626.Enabled = b;
+            label627.Enabled = b;
+            label628.Enabled = b;
+            label629.Enabled = b;
+            label630.Enabled = b;
+            label631.Enabled = b;
+            label632.Enabled = b;
+            label633.Enabled = b;
+            label634.Enabled = b;
+            label635.Enabled = b;
+            label636.Enabled = b;
+            label637.Enabled = b;
+            label638.Enabled = b;
+
+            label706.Enabled = b;
+            label707.Enabled = b;
+            label708.Enabled = b;
+            label709.Enabled = b;
+        }
+
+        private void checkBox_Year_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Year_text_Use.Checked;
+            comboBox_Year_image.Enabled = b;
+            comboBox_Year_unit.Enabled = b;
+            comboBox_Year_separator.Enabled = b;
+            numericUpDown_YearX.Enabled = b;
+            numericUpDown_YearY.Enabled = b;
+            numericUpDown_Year_unitX.Enabled = b;
+            numericUpDown_Year_unitY.Enabled = b;
+            comboBox_Year_alignment.Enabled = b;
+            checkBox_Year_add_zero.Enabled = b;
+            numericUpDown_Year_spacing.Enabled = b;
+
+            label598.Enabled = b;
+            label599.Enabled = b;
+            label600.Enabled = b;
+            label601.Enabled = b;
+            label602.Enabled = b;
+            label603.Enabled = b;
+            label604.Enabled = b;
+            label605.Enabled = b;
+            label606.Enabled = b;
+            label607.Enabled = b;
+            label608.Enabled = b;
+        }
+
+        private void checkBox_DOW_pictures_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_DOW_pictures_Use.Checked;
+            comboBox_DOW_pictures_image.Enabled = b;
+            numericUpDown_DOW_picturesX.Enabled = b;
+            numericUpDown_DOW_picturesY.Enabled = b;
+
+            label639.Enabled = b;
+            label640.Enabled = b;
+            label641.Enabled = b;
+            label642.Enabled = b;
+        }
+
+        private void checkBox_DOW_hand_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_DOW_hand_Use.Checked;
+            comboBox_DOW_hand_image.Enabled = b;
+            comboBox_DOW_hand_imageCentr.Enabled = b;
+            comboBox_DOW_hand_imageBackground.Enabled = b;
+            numericUpDown_DOW_handX.Enabled = b;
+            numericUpDown_DOW_handY.Enabled = b;
+            numericUpDown_DOW_handX_centr.Enabled = b;
+            numericUpDown_DOW_handY_centr.Enabled = b;
+            numericUpDown_DOW_handX_background.Enabled = b;
+            numericUpDown_DOW_handY_background.Enabled = b;
+            numericUpDown_DOW_handX_offset.Enabled = b;
+            numericUpDown_DOW_handY_offset.Enabled = b;
+            numericUpDown_DOW_hand_startAngle.Enabled = b;
+            numericUpDown_DOW_hand_endAngle.Enabled = b;
+
+            label643.Enabled = b;
+            label644.Enabled = b;
+            label645.Enabled = b;
+            label646.Enabled = b;
+            label647.Enabled = b;
+            label648.Enabled = b;
+            label649.Enabled = b;
+            label650.Enabled = b;
+            label651.Enabled = b;
+            label652.Enabled = b;
+            label653.Enabled = b;
+            label654.Enabled = b;
+            label655.Enabled = b;
+
+            label710.Enabled = b;
+            label711.Enabled = b;
+            label712.Enabled = b;
+            label713.Enabled = b;
+        }
+
+
+
+
+        private void checkBox_Day_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Day_Use_AOD.Checked;
+            comboBox_Day_image_AOD.Enabled = b;
+            comboBox_Day_unit_AOD.Enabled = b;
+            comboBox_Day_separator_AOD.Enabled = b;
+            numericUpDown_DayX_AOD.Enabled = b;
+            numericUpDown_DayY_AOD.Enabled = b;
+            numericUpDown_Day_unitX_AOD.Enabled = b;
+            numericUpDown_Day_unitY_AOD.Enabled = b;
+            comboBox_Day_alignment_AOD.Enabled = b;
+            checkBox_Day_add_zero_AOD.Enabled = b;
+            numericUpDown_Day_spacing_AOD.Enabled = b;
+            checkBox_Day_follow_AOD.Enabled = b;
+
+            label380.Enabled = b;
+            label381.Enabled = b;
+            label382.Enabled = b;
+            label383.Enabled = b;
+            label384.Enabled = b;
+            label385.Enabled = b;
+            label386.Enabled = b;
+            label387.Enabled = b;
+            label388.Enabled = b;
+            label389.Enabled = b;
+            label390.Enabled = b;
+
+            if (checkBox_Day_follow_AOD.Checked)
+            {
+                numericUpDown_DayX_AOD.Enabled = false;
+                numericUpDown_DayY_AOD.Enabled = false;
+
+                label380.Enabled = false;
+                label388.Enabled = false;
+                label389.Enabled = false;
+            }
+        }
+
+        private void checkBox_Day_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Day_hand_Use_AOD.Checked;
+            comboBox_Day_hand_image_AOD.Enabled = b;
+            comboBox_Day_hand_imageCentr_AOD.Enabled = b;
+            comboBox_Day_hand_imageBackground_AOD.Enabled = b;
+            numericUpDown_Day_handX_AOD.Enabled = b;
+            numericUpDown_Day_handY_AOD.Enabled = b;
+            numericUpDown_Day_handX_centr_AOD.Enabled = b;
+            numericUpDown_Day_handY_centr_AOD.Enabled = b;
+            numericUpDown_Day_handX_background_AOD.Enabled = b;
+            numericUpDown_Day_handY_background_AOD.Enabled = b;
+            numericUpDown_Day_handX_offset_AOD.Enabled = b;
+            numericUpDown_Day_handY_offset_AOD.Enabled = b;
+            numericUpDown_Day_hand_startAngle_AOD.Enabled = b;
+            numericUpDown_Day_hand_endAngle_AOD.Enabled = b;
+
+            label363.Enabled = b;
+            label364.Enabled = b;
+            label365.Enabled = b;
+            label366.Enabled = b;
+            label367.Enabled = b;
+            label368.Enabled = b;
+            label369.Enabled = b;
+            label370.Enabled = b;
+            label371.Enabled = b;
+            label372.Enabled = b;
+            label373.Enabled = b;
+            label374.Enabled = b;
+            label375.Enabled = b;
+            label376.Enabled = b;
+            label377.Enabled = b;
+            label378.Enabled = b;
+            label379.Enabled = b;
+
+            label714.Enabled = b;
+            label715.Enabled = b;
+            label716.Enabled = b;
+            label717.Enabled = b;
+        }
+
+        private void checkBox_Month_pictures_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Month_pictures_Use_AOD.Checked;
+            comboBox_Month_pictures_image_AOD.Enabled = b;
+            numericUpDown_Month_picturesX_AOD.Enabled = b;
+            numericUpDown_Month_picturesY_AOD.Enabled = b;
+
+            label428.Enabled = b;
+            label429.Enabled = b;
+            label430.Enabled = b;
+            label431.Enabled = b;
+        }
+
+        private void checkBox_Month_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Month_Use_AOD.Checked;
+            comboBox_Month_image_AOD.Enabled = b;
+            comboBox_Month_unit_AOD.Enabled = b;
+            comboBox_Month_separator_AOD.Enabled = b;
+            numericUpDown_MonthX_AOD.Enabled = b;
+            numericUpDown_MonthY_AOD.Enabled = b;
+            numericUpDown_Month_unitX_AOD.Enabled = b;
+            numericUpDown_Month_unitY_AOD.Enabled = b;
+            comboBox_Month_alignment_AOD.Enabled = b;
+            checkBox_Month_add_zero_AOD.Enabled = b;
+            numericUpDown_Month_spacing_AOD.Enabled = b;
+            checkBox_Month_follow_AOD.Enabled = b;
+
+            label417.Enabled = b;
+            label418.Enabled = b;
+            label419.Enabled = b;
+            label420.Enabled = b;
+            label421.Enabled = b;
+            label422.Enabled = b;
+            label423.Enabled = b;
+            label424.Enabled = b;
+            label425.Enabled = b;
+            label426.Enabled = b;
+            label427.Enabled = b;
+
+            if (checkBox_Month_follow_AOD.Checked)
+            {
+                numericUpDown_MonthX_AOD.Enabled = false;
+                numericUpDown_MonthY_AOD.Enabled = false;
+
+                label417.Enabled = false;
+                label425.Enabled = false;
+                label426.Enabled = false;
+            }
+        }
+
+        private void checkBox_Month_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Month_hand_Use_AOD.Checked;
+            comboBox_Month_hand_image_AOD.Enabled = b;
+            comboBox_Month_hand_imageCentr_AOD.Enabled = b;
+            comboBox_Month_hand_imageBackground_AOD.Enabled = b;
+            numericUpDown_Month_handX_AOD.Enabled = b;
+            numericUpDown_Month_handY_AOD.Enabled = b;
+            numericUpDown_Month_handX_centr_AOD.Enabled = b;
+            numericUpDown_Month_handY_centr_AOD.Enabled = b;
+            numericUpDown_Month_handX_background_AOD.Enabled = b;
+            numericUpDown_Month_handY_background_AOD.Enabled = b;
+            numericUpDown_Month_handX_offset_AOD.Enabled = b;
+            numericUpDown_Month_handY_offset_AOD.Enabled = b;
+            numericUpDown_Month_hand_startAngle_AOD.Enabled = b;
+            numericUpDown_Month_hand_endAngle_AOD.Enabled = b;
+
+            label391.Enabled = b;
+            label392.Enabled = b;
+            label393.Enabled = b;
+            label394.Enabled = b;
+            label395.Enabled = b;
+            label396.Enabled = b;
+            label397.Enabled = b;
+            label398.Enabled = b;
+            label399.Enabled = b;
+            label400.Enabled = b;
+            label401.Enabled = b;
+            label402.Enabled = b;
+            label403.Enabled = b;
+            label404.Enabled = b;
+            label405.Enabled = b;
+            label411.Enabled = b;
+            label416.Enabled = b;
+        }
+
+        private void checkBox_Year_text_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Year_text_Use_AOD.Checked;
+            comboBox_Year_image_AOD.Enabled = b;
+            comboBox_Year_unit_AOD.Enabled = b;
+            comboBox_Year_separator_AOD.Enabled = b;
+            numericUpDown_YearX_AOD.Enabled = b;
+            numericUpDown_YearY_AOD.Enabled = b;
+            numericUpDown_Year_unitX_AOD.Enabled = b;
+            numericUpDown_Year_unitY_AOD.Enabled = b;
+            comboBox_Year_alignment_AOD.Enabled = b;
+            checkBox_Year_add_zero_AOD.Enabled = b;
+            numericUpDown_Year_spacing_AOD.Enabled = b;
+
+            label432.Enabled = b;
+            label433.Enabled = b;
+            label434.Enabled = b;
+            label435.Enabled = b;
+            label436.Enabled = b;
+            label437.Enabled = b;
+            label438.Enabled = b;
+            label439.Enabled = b;
+            label440.Enabled = b;
+            label441.Enabled = b;
+            label442.Enabled = b;
+        }
+
+        private void checkBox_DOW_pictures_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_DOW_pictures_Use_AOD.Checked;
+            comboBox_DOW_pictures_image_AOD.Enabled = b;
+            numericUpDown_DOW_picturesX_AOD.Enabled = b;
+            numericUpDown_DOW_picturesY_AOD.Enabled = b;
+
+            label460.Enabled = b;
+            label461.Enabled = b;
+            label462.Enabled = b;
+            label463.Enabled = b;
+        }
+
+        private void checkBox_DOW_hand_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_DOW_hand_Use_AOD.Checked;
+            comboBox_DOW_hand_image_AOD.Enabled = b;
+            comboBox_DOW_hand_imageCentr_AOD.Enabled = b;
+            comboBox_DOW_hand_imageBackground_AOD.Enabled = b;
+            numericUpDown_DOW_handX_AOD.Enabled = b;
+            numericUpDown_DOW_handY_AOD.Enabled = b;
+            numericUpDown_DOW_handX_centr_AOD.Enabled = b;
+            numericUpDown_DOW_handY_centr_AOD.Enabled = b;
+            numericUpDown_DOW_handX_background_AOD.Enabled = b;
+            numericUpDown_DOW_handY_background_AOD.Enabled = b;
+            numericUpDown_DOW_handX_offset_AOD.Enabled = b;
+            numericUpDown_DOW_handY_offset_AOD.Enabled = b;
+            numericUpDown_DOW_hand_startAngle_AOD.Enabled = b;
+            numericUpDown_DOW_hand_endAngle_AOD.Enabled = b;
+
+            label443.Enabled = b;
+            label444.Enabled = b;
+            label445.Enabled = b;
+            label446.Enabled = b;
+            label447.Enabled = b;
+            label448.Enabled = b;
+            label449.Enabled = b;
+            label450.Enabled = b;
+            label451.Enabled = b;
+            label452.Enabled = b;
+            label453.Enabled = b;
+            label454.Enabled = b;
+            label455.Enabled = b;
+            label456.Enabled = b;
+            label457.Enabled = b;
+            label458.Enabled = b;
+            label459.Enabled = b;
+        }
+
+
+        private void checkBox_Status_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+
+            bool b = checkBox.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+            }
+        }
+
+        private void checkBox_Weather_textMax_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+            CheckBox checkBox_follow = (CheckBox)controlCollection[12];
+
+            bool b = checkBox.Checked;
+            bool b2 = !checkBox_follow.Checked;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b && (i == 4 || i == 5 || i == 13 || i == 20 || i == 21)) controlCollection[i].Enabled = b2;
+            }
+        }
+        private void checkBox_Weather_textMax_Use_AOD_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            Control control = checkBox.Parent;
+            Control.ControlCollection controlCollection = control.Controls;
+            CheckBox checkBox_follow = (CheckBox)controlCollection[12];
+
+            bool b = checkBox.Checked;
+            bool b2 = !checkBox_follow.Checked;
+            for (int i = 1; i < controlCollection.Count - 1; i++)
+            {
+                controlCollection[i].Enabled = b;
+                if (b && (i == 4 || i == 5 || i == 13 || i == 20 || i == 21)) controlCollection[i].Enabled = b2;
+            }
+        }
+
+        
+
+
+
 
 
 
