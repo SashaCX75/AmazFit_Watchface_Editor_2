@@ -9,6 +9,7 @@
         public WeatherSet Weather { get; set; }
         public StatusSet Status { get; set; }
         public int Battery { get; set; }
+        public int SetNumber { get; set; }
     }
 
     public class DateSet

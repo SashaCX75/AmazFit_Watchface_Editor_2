@@ -36,6 +36,12 @@ namespace AmazFit_Watchface_2
             numericUpDown_imageY.Enabled = b;
         }
 
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImageError()
+        {
+            return comboBox_imageError.SelectedIndex;
+        }
+
         /// <summary>Устанавливает надпись на кнопке</summary>
         [Localizable(true)]
         public string ButtonText

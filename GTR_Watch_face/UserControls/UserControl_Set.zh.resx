@@ -260,9 +260,6 @@
   <data name="groupBox_Air.Text" xml:space="preserve">
     <value>天气</value>
   </data>
-  <data name="groupBox_Activity.Text" xml:space="preserve">
-    <value>活动</value>
-  </data>
   <data name="checkBox_DND_Set.Text" xml:space="preserve">
     <value>勿扰</value>
   </data>
@@ -355,6 +352,9 @@
   </data>
   <data name="label01.Text" xml:space="preserve">
     <value>日期</value>
+  </data>
+  <data name="groupBox_Activity.Text" xml:space="preserve">
+    <value>活动</value>
   </data>
   <data name="button_Set.Text" xml:space="preserve">
     <value>预设值</value>

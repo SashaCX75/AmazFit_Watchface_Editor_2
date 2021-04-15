@@ -334,12 +334,6 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region активности
-            Panel panel_pictures;
-            Panel panel_text;
-            Panel panel_hand;
-            Panel panel_scaleCircle;
-            Panel panel_scaleLinear;
-            CheckBox checkBox_Use;
 
             UserControl_pictures userPanel_pictures;
             UserControl_text userPanel_text;
@@ -1391,25 +1385,213 @@ namespace AmazFit_Watchface_2
             }
             #endregion
 
-            #region погода
-            panel_pictures = panel_Weather_pictures_AOD;
-            panel_text = panel_Weather_text_AOD;
-            panel_hand = panel_Weather_hand_AOD;
-            panel_scaleCircle = panel_Weather_scaleCircle_AOD;
-            panel_scaleLinear = panel_Weather_scaleLinear_AOD;
+            #region StandUp
+            userPanel_pictures = userControl_pictures_StandUp_AOD;
+            userPanel_text = userControl_text_StandUp_AOD;
+            userPanel_hand = userControl_hand_StandUp_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_StandUp_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_StandUp_AOD;
+            // StandUp картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
 
-            Panel panel_text_min = panel_Weather_textMin_AOD;
-            Panel panel_text_max = panel_Weather_textMax_AOD;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.StandUp / 12f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // StandUp круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.StandUp / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // StandUp линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.StandUp / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // StandUp надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.StandUp;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // StandUp стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.StandUp * (endAngle - startAngle) / 12f;
+                    if (Watch_Face_Preview_Set.Activity.StandUp > 12) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region погода
+
+            UserControl_pictures_weather userPanel_pictures_weather = userControl_pictures_weather_AOD;
+            UserControl_text_weather userPanel_text_weather_Current = userControl_text_weather_Current_AOD;
+            UserControl_text_weather userPanel_text_weather_Min = userControl_text_weather_Min_AOD;
+            UserControl_text_weather userPanel_text_weather_Max = userControl_text_weather_Max_AOD;
+            userPanel_hand = userControl_hand_Weather_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_Weather_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_Weather_AOD;
 
             // погода картинками
-            checkBox_Use = (CheckBox)panel_pictures.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_pictures_weather.checkBox_pictures_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                if (userPanel_pictures_weather.comboBoxGetSelectedIndexImage() >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_pictures.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_pictures.Controls[3];
+                    NumericUpDown numericUpDownX = userPanel_pictures_weather.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures_weather.numericUpDown_picturesY;
                     //NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
 
                     int x = (int)numericUpDownX.Value;
@@ -1419,7 +1601,7 @@ namespace AmazFit_Watchface_2
                     if (offSet < 0) offSet = 25;
                     //if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    int imageIndex = comboBox_image.SelectedIndex + offSet;
+                    int imageIndex = userPanel_pictures_weather.comboBoxGetSelectedIndexImage() + offSet;
 
                     if (imageIndex < ListImagesFullName.Count)
                     {
@@ -1430,35 +1612,34 @@ namespace AmazFit_Watchface_2
             }
 
             // погода круговой шкалой
-            checkBox_Use = (CheckBox)panel_scaleCircle.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleCircle.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleCircle.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleCircle.Controls[8];
-                NumericUpDown numericUpDown_radius = (NumericUpDown)panel_scaleCircle.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleCircle.Controls[10];
-                NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_scaleCircle.Controls[11];
-                NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_scaleCircle.Controls[12];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
                 float width = (float)numericUpDown_width.Value;
                 int radius = (int)numericUpDown_radius.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int imageBackground = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
                 float StartAngle = (float)numericUpDown_startAngle.Value - 90;
                 float EndAngle = (float)(numericUpDown_endAngle.Value -
                     numericUpDown_startAngle.Value);
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
                 float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
                 if (radioButton_image.Checked)
                 {
                     if (imageIndex >= 0)
@@ -1475,32 +1656,31 @@ namespace AmazFit_Watchface_2
             }
 
             // погода линейной шкалой
-            checkBox_Use = (CheckBox)panel_scaleLinear.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
             {
-                RadioButton radioButton_image = (RadioButton)panel_scaleLinear.Controls[1];
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
                 //RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
-                ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
-                ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
-                ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
-                ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_scaleLinear.Controls[7];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_scaleLinear.Controls[8];
-                NumericUpDown numericUpDown_length = (NumericUpDown)panel_scaleLinear.Controls[9];
-                NumericUpDown numericUpDown_width = (NumericUpDown)panel_scaleLinear.Controls[10];
-                ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
 
                 int x = (int)numericUpDownX.Value;
                 int y = (int)numericUpDownY.Value;
-                int imageIndex = comboBox_image.SelectedIndex;
-                int pointerIndex = comboBox_pointer.SelectedIndex;
-                int backgroundIndex = comboBox_background.SelectedIndex;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
                 int length = (int)numericUpDown_length.Value;
                 int width = (int)numericUpDown_width.Value;
-                Color color = comboBox_color.BackColor;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
                 float position = (float)((Watch_Face_Preview_Set.Weather.Temperature + 25) / 60f);
                 if (position > 1) position = 1;
-                int lineCap = comboBox_flatness.SelectedIndex;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
 
                 if (radioButton_image.Checked)
                 {
@@ -1514,37 +1694,34 @@ namespace AmazFit_Watchface_2
                     DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
                 }
             }
-            
-            // погода надписью
-            checkBox_Use = (CheckBox)panel_text.Controls[0];
-            if (checkBox_Use.Checked)
-            {
-                ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text.Controls[9];
-                //CheckBox checkBox_add_zero = (CheckBox)panel_text.Controls[10];
-                ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
-                //ComboBox comboBox_separatorF = (ComboBox)panel_text.Controls[11];
-                ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
 
-                if (comboBox_image.SelectedIndex >= 0)
+            // погода надписью
+            if (userPanel_text_weather_Current.checkBox_Use.Checked)
+            {
+                if (userPanel_text_weather_Current.comboBoxGetSelectedIndexImage() >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                    //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                    NumericUpDown numericUpDownX = userPanel_text_weather_Current.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = userPanel_text_weather_Current.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = userPanel_text_weather_Current.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = userPanel_text_weather_Current.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                    NumericUpDown numericUpDown_spacing = userPanel_text_weather_Current.numericUpDown_spacing;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                    int imageIndex = userPanel_text_weather_Current.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text_weather_Current.comboBoxGetSelectedIndexAlignment();
                     //bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.Temperature;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    int imageError_index = comboBox_imageError.SelectedIndex;
-                    int imageMinus_index = comboBox_imageMinus.SelectedIndex;
+                    int separator_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexUnit();
+                    int imageError_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageError();
+                    int imageMinus_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
                     if (!Watch_Face_Preview_Set.Weather.TemperatureNoData)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
@@ -1556,9 +1733,9 @@ namespace AmazFit_Watchface_2
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                     }
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (userPanel_text_weather_Current.comboBoxGetSelectedIndexIcon() >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[userPanel_text_weather_Current.comboBoxGetSelectedIndexIcon()]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1568,36 +1745,33 @@ namespace AmazFit_Watchface_2
             // минимальная температура надписью
             int Temperature_offsetX = -1;
             int Temperature_offsetY = -1;
-            checkBox_Use = (CheckBox)panel_text_min.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_text_weather_Min.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text_min.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text_min.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text_min.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text_min.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text_min.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_min.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_min.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text_min.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_min.Controls[9];
-                //CheckBox checkBox_add_zero = (CheckBox)panel_text_min.Controls[10];
-                ComboBox comboBox_imageError = (ComboBox)panel_text_min.Controls[10];
-                //ComboBox comboBox_separatorF = (ComboBox)panel_text_min.Controls[11];
-                ComboBox comboBox_imageMinus = (ComboBox)panel_text_min.Controls[11];
-
-                if (comboBox_image.SelectedIndex >= 0)
+                if (userPanel_text_weather_Min.comboBoxGetSelectedIndexImage() >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                    //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                    NumericUpDown numericUpDownX = userPanel_text_weather_Min.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = userPanel_text_weather_Min.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = userPanel_text_weather_Min.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = userPanel_text_weather_Min.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                    NumericUpDown numericUpDown_spacing = userPanel_text_weather_Min.numericUpDown_spacing;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                    int imageIndex = userPanel_text_weather_Min.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     Temperature_offsetY = y;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text_weather_Min.comboBoxGetSelectedIndexAlignment();
                     //bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.TemperatureMin;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    int imageError_index = comboBox_imageError.SelectedIndex;
-                    int imageMinus_index = comboBox_imageMinus.SelectedIndex;
+                    int separator_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexUnit();
+                    int imageError_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageError();
+                    int imageMinus_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
                     if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
@@ -1609,9 +1783,9 @@ namespace AmazFit_Watchface_2
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                     }
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (userPanel_text_weather_Min.comboBoxGetSelectedIndexIcon() >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[userPanel_text_weather_Min.comboBoxGetSelectedIndexIcon()]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1619,36 +1793,33 @@ namespace AmazFit_Watchface_2
             }
 
             // максимальная температура надписью
-            checkBox_Use = (CheckBox)panel_text_max.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_text_weather_Max.checkBox_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_text_max.Controls[1];
-                ComboBox comboBox_unit = (ComboBox)panel_text_max.Controls[2];
-                ComboBox comboBox_separator = (ComboBox)panel_text_max.Controls[3];
-                NumericUpDown numericUpDownX = (NumericUpDown)panel_text_max.Controls[4];
-                NumericUpDown numericUpDownY = (NumericUpDown)panel_text_max.Controls[5];
-                NumericUpDown numericUpDown_unitX = (NumericUpDown)panel_text_max.Controls[6];
-                NumericUpDown numericUpDown_unitY = (NumericUpDown)panel_text_max.Controls[7];
-                ComboBox comboBox_alignment = (ComboBox)panel_text_max.Controls[8];
-                NumericUpDown numericUpDown_spacing = (NumericUpDown)panel_text_max.Controls[9];
-                //CheckBox checkBox_add_zero = (CheckBox)panel_text_max.Controls[10];
-                ComboBox comboBox_imageError = (ComboBox)panel_text_max.Controls[10];
-                //ComboBox comboBox_separatorF = (ComboBox)panel_text_max.Controls[11];
-                ComboBox comboBox_imageMinus = (ComboBox)panel_text_max.Controls[11];
-                CheckBox checkBox_follow = (CheckBox)panel_text_max.Controls[12];
-
-                if (comboBox_image.SelectedIndex >= 0)
+                if (userPanel_text_weather_Max.comboBoxGetSelectedIndexImage() >= 0)
                 {
-                    int imageIndex = comboBox_image.SelectedIndex;
+                    //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                    //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                    NumericUpDown numericUpDownX = userPanel_text_weather_Max.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = userPanel_text_weather_Max.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = userPanel_text_weather_Max.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = userPanel_text_weather_Max.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                    NumericUpDown numericUpDown_spacing = userPanel_text_weather_Max.numericUpDown_spacing;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+                    CheckBox checkBox_follow = userPanel_text_weather_Max.checkBox_addZero;
+
+                    int imageIndex = userPanel_text_weather_Max.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
-                    int alignment = comboBox_alignment.SelectedIndex;
+                    int alignment = userPanel_text_weather_Max.comboBoxGetSelectedIndexAlignment();
                     //bool addZero = checkBox_add_zero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.TemperatureMax;
-                    int separator_index = comboBox_separator.SelectedIndex;
-                    int imageError_index = comboBox_imageError.SelectedIndex;
-                    int imageMinus_index = comboBox_imageMinus.SelectedIndex;
+                    int separator_index = userPanel_text_weather_Max.comboBoxGetSelectedIndexUnit();
+                    int imageError_index = userPanel_text_weather_Max.comboBoxGetSelectedIndexImageError();
+                    int imageMinus_index = userPanel_text_weather_Max.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
 
                     if (checkBox_follow.Checked && Temperature_offsetX > -1)
                     {
@@ -1668,9 +1839,9 @@ namespace AmazFit_Watchface_2
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                     }
 
-                    if (comboBox_unit.SelectedIndex >= 0)
+                    if (userPanel_text_weather_Max.comboBoxGetSelectedIndexIcon() >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_unit.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[userPanel_text_weather_Max.comboBoxGetSelectedIndexIcon()]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
@@ -1678,28 +1849,26 @@ namespace AmazFit_Watchface_2
             }
 
             // погода стрелкой
-            checkBox_Use = (CheckBox)panel_hand.Controls[0];
-            if (checkBox_Use.Checked)
+            if (userPanel_hand.checkBox_hand_Use.Checked)
             {
-                ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
-                if (comboBox_image.SelectedIndex >= 0)
+                if (userPanel_hand.comboBoxGetSelectedIndexHandImage() >= 0)
                 {
-                    NumericUpDown numericUpDownX = (NumericUpDown)panel_hand.Controls[2];
-                    NumericUpDown numericUpDownY = (NumericUpDown)panel_hand.Controls[3];
-                    NumericUpDown numericUpDown_offsetX = (NumericUpDown)panel_hand.Controls[4];
-                    NumericUpDown numericUpDown_offsetY = (NumericUpDown)panel_hand.Controls[5];
-                    ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
-                    NumericUpDown numericUpDownX_centr = (NumericUpDown)panel_hand.Controls[7];
-                    NumericUpDown numericUpDownY_centr = (NumericUpDown)panel_hand.Controls[8];
-                    NumericUpDown numericUpDown_startAngle = (NumericUpDown)panel_hand.Controls[9];
-                    NumericUpDown numericUpDown_endAngle = (NumericUpDown)panel_hand.Controls[10];
-                    ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
-                    NumericUpDown numericUpDownX_background = (NumericUpDown)panel_hand.Controls[12];
-                    NumericUpDown numericUpDownY_background = (NumericUpDown)panel_hand.Controls[13];
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    //ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    //ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
 
-                    if (comboBox_imageBackground.SelectedIndex >= 0)
+                    if (userPanel_hand.comboBoxGetSelectedIndexHandImageBackground() >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageBackground.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[userPanel_hand.comboBoxGetSelectedIndexHandImageBackground()]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
                             (int)numericUpDownY_background.Value, src.Width, src.Height));
                     }
@@ -1708,7 +1877,7 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int offsetX = (int)numericUpDown_offsetX.Value;
                     int offsetY = (int)numericUpDown_offsetY.Value;
-                    int image_index = comboBox_image.SelectedIndex;
+                    int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
                     float startAngle = (float)(numericUpDown_startAngle.Value);
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
@@ -1717,15 +1886,1724 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.Temperature > 35) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
-                    if (comboBox_imageCentr.SelectedIndex >= 0)
+                    if (userPanel_hand.comboBoxGetSelectedIndexHandImageCentr() >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[comboBox_imageCentr.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[userPanel_hand.comboBoxGetSelectedIndexHandImageCentr()]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
                             (int)numericUpDownY_centr.Value, src.Width, src.Height));
                     }
                 }
             }
+            #endregion
 
+            #region UVindex
+            userPanel_pictures = userControl_pictures_UVindex_AOD;
+            userPanel_text = userControl_text_UVindex_AOD;
+            userPanel_hand = userControl_hand_UVindex_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_UVindex_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_UVindex_AOD;
+            // UVindex картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // UVindex круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.UVindex / 10f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // UVindex линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.UVindex / 10f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // UVindex надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.UVindex;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // UVindex стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Weather.UVindex * (endAngle - startAngle) / 10f;
+                    if (Watch_Face_Preview_Set.Weather.UVindex > 10) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region AirQuality
+            userPanel_pictures = userControl_pictures_AirQuality_AOD;
+            userPanel_text = userControl_text_AirQuality_AOD;
+            userPanel_hand = userControl_hand_AirQuality_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_AirQuality_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_AirQuality_AOD;
+            // AirQuality картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.AirQuality / 502f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // AirQuality круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.AirQuality / 503f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // AirQuality линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.AirQuality / 502f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // AirQuality надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.AirQuality;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // AirQuality стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Weather.AirQuality * (endAngle - startAngle) / 502f;
+                    if (Watch_Face_Preview_Set.Weather.AirQuality > 502) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region Humidity
+            userPanel_pictures = userControl_pictures_Humidity_AOD;
+            userPanel_text = userControl_text_Humidity_AOD;
+            userPanel_hand = userControl_hand_Humidity_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_Humidity_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_Humidity_AOD;
+            // Humidity картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.Humidity / 100f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // Humidity круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.Humidity / 100f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // Humidity линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.Humidity / 100f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // Humidity надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.Humidity;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // Humidity стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Weather.Humidity * (endAngle - startAngle) / 100f;
+                    if (Watch_Face_Preview_Set.Weather.Humidity > 100) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region WindForce
+            userPanel_pictures = userControl_pictures_WindForce_AOD;
+            userPanel_text = userControl_text_WindForce_AOD;
+            userPanel_hand = userControl_hand_WindForce_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_WindForce_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_WindForce_AOD;
+            // WindForce картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.WindForce / 12f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // WindForce круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.WindForce / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // WindForce линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Weather.WindForce / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // WindForce надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.WindForce;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // WindForce стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Weather.WindForce * (endAngle - startAngle) / 12f;
+                    if (Watch_Face_Preview_Set.Weather.WindForce > 12) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region Altitude
+            userPanel_pictures = userControl_pictures_Altitude_AOD;
+            userPanel_text = userControl_text_Altitude_AOD;
+            userPanel_hand = userControl_hand_Altitude_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_Altitude_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_Altitude_AOD;
+            // Altitude картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * (Watch_Face_Preview_Set.Weather.Altitude + 1000) / 10000f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // Altitude круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)(Watch_Face_Preview_Set.Weather.Altitude + 1000) / 10000f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // Altitude линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)(Watch_Face_Preview_Set.Weather.Altitude + 1000) / 10000f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // Altitude надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.Altitude;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // Altitude стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + (Watch_Face_Preview_Set.Weather.Altitude + 1000) * (endAngle - startAngle) / 10000f;
+                    if (Watch_Face_Preview_Set.Weather.Altitude > 9000) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region AirPressure
+            userPanel_pictures = userControl_pictures_AirPressure_AOD;
+            userPanel_text = userControl_text_AirPressure_AOD;
+            userPanel_hand = userControl_hand_AirPressure_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_AirPressure_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_AirPressure_AOD;
+            // AirPressure картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * (Watch_Face_Preview_Set.Weather.AirPressure - 200) / 1000f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // AirPressure круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)(Watch_Face_Preview_Set.Weather.AirPressure - 170) / 1000f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // AirPressure линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)(Watch_Face_Preview_Set.Weather.AirPressure - 200) / 1000f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // AirPressure надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Weather.AirPressure;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 4, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // AirPressure стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + (Watch_Face_Preview_Set.Weather.AirPressure - 200) * (endAngle - startAngle) / 1000f;
+                    if (Watch_Face_Preview_Set.Weather.AirPressure > 1200) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region Stress
+            userPanel_pictures = userControl_pictures_Stress_AOD;
+            userPanel_text = userControl_text_Stress_AOD;
+            userPanel_hand = userControl_hand_Stress_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_Stress_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_Stress_AOD;
+            // Stress картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.Stress / 12f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // Stress круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.Stress / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // Stress линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.Stress / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // Stress надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.Stress;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // Stress стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Stress * (endAngle - startAngle) / 12f;
+                    if (Watch_Face_Preview_Set.Activity.Stress > 12) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region ActivityGoal
+            userPanel_pictures = userControl_pictures_ActivityGoal_AOD;
+            userPanel_text = userControl_text_ActivityGoal_AOD;
+            userPanel_hand = userControl_hand_ActivityGoal_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_ActivityGoal_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_ActivityGoal_AOD;
+            // ActivityGoal картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.ActivityGoal / 12f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // ActivityGoal круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.ActivityGoal / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // ActivityGoal линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.ActivityGoal / 12f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // ActivityGoal надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.ActivityGoal;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 4, separator_index, BBorder, 17);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // ActivityGoal стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.ActivityGoal * (endAngle - startAngle) / 12f;
+                    if (Watch_Face_Preview_Set.Activity.ActivityGoal > 12) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region FatBurning
+            userPanel_pictures = userControl_pictures_FatBurning_AOD;
+            userPanel_text = userControl_text_FatBurning_AOD;
+            userPanel_hand = userControl_hand_FatBurning_AOD;
+            userPanel_scaleCircle = userControl_scaleCircle_FatBurning_AOD;
+            userPanel_scaleLinear = userControl_scaleLinear_FatBurning_AOD;
+            // FatBurning картинками
+            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                if (userPanel_pictures.comboBoxGetImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = userPanel_pictures.numericUpDown_pictures_count;
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int count = (int)numericUpDown_count.Value;
+                    //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                    int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.FatBurning / 30f);
+                    //offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // FatBurning круговой шкалой
+            if (userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                float width = (float)numericUpDown_width.Value;
+                int radius = (int)numericUpDown_radius.Value;
+                int imageIndex = userPanel_scaleCircle.comboBoxGetSelectedIndexImage();
+                int imageBackground = userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground();
+                float StartAngle = (float)numericUpDown_startAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_endAngle.Value -
+                    numericUpDown_startAngle.Value);
+                Color color = userPanel_scaleCircle.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.FatBurning / 30f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleCircle.comboBoxGetFlatness();
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleCircle_image(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                         imageIndex, imageBackground, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleCircle(gPanel, x, y, radius, width, lineCap, StartAngle, EndAngle, position,
+                        color, imageBackground, showProgressArea);
+                }
+            }
+
+            // FatBurning линейной шкалой
+            if (userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleLinear.Controls[11];
+
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int imageIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImage();
+                int pointerIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer();
+                int backgroundIndex = userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground();
+                int length = (int)numericUpDown_length.Value;
+                int width = (int)numericUpDown_width.Value;
+                Color color = userPanel_scaleLinear.comboBoxGetColor();
+                float position = (float)Watch_Face_Preview_Set.Activity.FatBurning / 30f;
+                if (position > 1) position = 1;
+                int lineCap = userPanel_scaleLinear.comboBoxGetFlatness();
+
+                if (radioButton_image.Checked)
+                {
+                    if (imageIndex >= 0)
+                    {
+                        DrawScaleLinearPointer_image(gPanel, x, y, length, width, position, imageIndex, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                    }
+                }
+                else
+                {
+                    DrawScaleLinearPointer(gPanel, x, y, length, width, position, color, lineCap, pointerIndex, backgroundIndex, showProgressArea);
+                }
+            }
+
+            // FatBurning надписью
+            if (userPanel_text.checkBox_Use.Checked)
+            {
+                int imageIndex = userPanel_text.comboBoxGetSelectedIndexImage();
+                int unit = userPanel_text.comboBoxGetSelectedIndexIcon();
+                NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                CheckBox checkBox_add_zero = userPanel_text.checkBox_addZero;
+
+                if (imageIndex >= 0)
+                {
+                    //int imageIndex = comboBox_image.SelectedIndex;
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int spasing = (int)numericUpDown_spacing.Value;
+                    int alignment = userPanel_text.comboBoxGetSelectedIndexAlignment();
+                    bool addZero = checkBox_add_zero.Checked;
+                    int value = Watch_Face_Preview_Set.Activity.FatBurning;
+                    int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
+                    Draw_dagital_text(gPanel, imageIndex, x, y,
+                        spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                    if (unit >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[unit]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_unitX.Value,
+                            (int)numericUpDown_unitY.Value, src.Width, src.Height));
+                    }
+                }
+            }
+
+            // FatBurning стрелкой
+            if (userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                int image_index = userPanel_hand.comboBoxGetSelectedIndexHandImage();
+                if (image_index >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetSelectedIndexHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetSelectedIndexHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (imageBackground >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageBackground]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_background.Value,
+                            (int)numericUpDownY_background.Value, src.Width, src.Height));
+                    }
+
+                    int x = (int)numericUpDownX.Value;
+                    int y = (int)numericUpDownY.Value;
+                    int offsetX = (int)numericUpDown_offsetX.Value;
+                    int offsetY = (int)numericUpDown_offsetY.Value;
+                    //int image_index = comboBox_image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_startAngle.Value);
+                    float endAngle = (float)(numericUpDown_endAngle.Value);
+
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.FatBurning * (endAngle - startAngle) / 30f;
+                    if (Watch_Face_Preview_Set.Activity.FatBurning > 30) angle = endAngle;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                    if (imageCentr >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageCentr]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDownX_centr.Value,
+                            (int)numericUpDownY_centr.Value, src.Width, src.Height));
+                    }
+                }
+            }
             #endregion
 
 

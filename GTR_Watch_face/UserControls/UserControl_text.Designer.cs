@@ -454,7 +454,6 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.ComboBox comboBox_icon;
         private System.Windows.Forms.ComboBox comboBox_unit;
         private System.Windows.Forms.ComboBox comboBox_alignment;
-        private System.Windows.Forms.ComboBox comboBox_imageError;
         private System.Windows.Forms.ComboBox comboBox_imageDecimalPoint;
         private System.Windows.Forms.Label label04;
         private System.Windows.Forms.Label label01;
@@ -486,5 +485,6 @@ namespace AmazFit_Watchface_2
         internal System.Windows.Forms.NumericUpDown numericUpDown_imageX;
         internal System.Windows.Forms.NumericUpDown numericUpDown_imageY;
         public System.Windows.Forms.CheckBox checkBox_addZero;
+        internal System.Windows.Forms.ComboBox comboBox_imageError;
     }
 }

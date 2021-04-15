@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.richTextBox_JsonText = new System.Windows.Forms.RichTextBox();
             this.treeView_JsonTree = new System.Windows.Forms.TreeView();
@@ -419,232 +419,17 @@
             this.tabPage_Activity = new System.Windows.Forms.TabPage();
             this.tabControl_SystemActivity = new System.Windows.Forms.TabControl();
             this.tabPage_Steps = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Steps = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Steps = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Steps = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Steps = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Steps = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Calories = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Calories = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Calories = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Calories = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Calories = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Calories = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_HeartRate = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_HeartRate = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_HeartRate = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_HeartRate = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_HeartRate = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_HeartRate = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_PAI = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_PAI = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_PAI = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_PAI = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_PAI = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_PAI = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Distance = new System.Windows.Forms.TabPage();
-            this.userControl_text_Distance = new AmazFit_Watchface_2.UserControl_text();
             this.tabPage_StandUp = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_StandUp = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_StandUp = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_StandUp = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_StandUp = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_StandUp = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Stress = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Stress = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Stress = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Stress = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Stress = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Stress = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_ActivityGoal = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_ActivityGoal = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_ActivityGoal = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_ActivityGoal = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_FatBurning = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_FatBurning = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_FatBurning = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_FatBurning = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_FatBurning = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_FatBurning = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Air = new System.Windows.Forms.TabPage();
             this.tabControl_SystemWeather = new System.Windows.Forms.TabControl();
             this.tabPage_Weather = new System.Windows.Forms.TabPage();
-            this.panel_Weather_icon = new System.Windows.Forms.Panel();
-            this.panel_Weather_scaleLinear = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_scaleLinear_Use = new System.Windows.Forms.CheckBox();
-            this.radioButton_Weather_scaleLinear_image = new System.Windows.Forms.RadioButton();
-            this.radioButtonWeather_scaleLinear_color = new System.Windows.Forms.RadioButton();
-            this.comboBox_Weather_scaleLinear_image = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleLinear_color = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleLinear_image_pointer = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleLinear_image_background = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_scaleLinearX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleLinearY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleLinear_length = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleLinear_width = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_scaleLinear_flatness = new System.Windows.Forms.ComboBox();
-            this.label103 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label295 = new System.Windows.Forms.Label();
-            this.button_Weather_scaleLinear = new System.Windows.Forms.Button();
-            this.panel_Weather_scaleCircle = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_scaleCircle_Use = new System.Windows.Forms.CheckBox();
-            this.radioButton_Weather_scaleCircle_image = new System.Windows.Forms.RadioButton();
-            this.radioButton_Weather_scaleCircle_color = new System.Windows.Forms.RadioButton();
-            this.comboBox_Weather_scaleCircle_image = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleCircle_color = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleCircle_flatness = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleCircle_image_background = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_scaleCircleX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircleY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_radius = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_width = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_startAngle = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_endAngle = new System.Windows.Forms.NumericUpDown();
-            this.label110 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
-            this.button_Weather_scaleCircle = new System.Windows.Forms.Button();
-            this.panel_Weather_hand = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_hand_Use = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_hand_image = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_handX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handX_offset = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY_offset = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_hand_imageCentr = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_handX_centr = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY_centr = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_hand_startAngle = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_hand_endAngle = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_hand_imageBackground = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_handX_background = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY_background = new System.Windows.Forms.NumericUpDown();
-            this.label119 = new System.Windows.Forms.Label();
-            this.label120 = new System.Windows.Forms.Label();
-            this.label121 = new System.Windows.Forms.Label();
-            this.label122 = new System.Windows.Forms.Label();
-            this.label123 = new System.Windows.Forms.Label();
-            this.label124 = new System.Windows.Forms.Label();
-            this.label125 = new System.Windows.Forms.Label();
-            this.label126 = new System.Windows.Forms.Label();
-            this.label127 = new System.Windows.Forms.Label();
-            this.label128 = new System.Windows.Forms.Label();
-            this.label129 = new System.Windows.Forms.Label();
-            this.label130 = new System.Windows.Forms.Label();
-            this.label131 = new System.Windows.Forms.Label();
-            this.label132 = new System.Windows.Forms.Label();
-            this.label133 = new System.Windows.Forms.Label();
-            this.label134 = new System.Windows.Forms.Label();
-            this.label135 = new System.Windows.Forms.Label();
-            this.button_Weather_hand = new System.Windows.Forms.Button();
-            this.panel_Weather_textMax = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_UseMax = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_imageMax = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_iconMax = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_unitFMax = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WeatherXMax = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WeatherYMax = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconXMax = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconYMax = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_alignmentMax = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_spacingMax = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_imageErrorMax = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_imageMinusMax = new System.Windows.Forms.ComboBox();
-            this.checkBox_Weather_followMax = new System.Windows.Forms.CheckBox();
-            this.label154 = new System.Windows.Forms.Label();
-            this.label156 = new System.Windows.Forms.Label();
-            this.label157 = new System.Windows.Forms.Label();
-            this.label158 = new System.Windows.Forms.Label();
-            this.label159 = new System.Windows.Forms.Label();
-            this.label160 = new System.Windows.Forms.Label();
-            this.label161 = new System.Windows.Forms.Label();
-            this.label162 = new System.Windows.Forms.Label();
-            this.label163 = new System.Windows.Forms.Label();
-            this.label164 = new System.Windows.Forms.Label();
-            this.label165 = new System.Windows.Forms.Label();
-            this.label166 = new System.Windows.Forms.Label();
-            this.label180 = new System.Windows.Forms.Label();
-            this.button_Weather_textMax = new System.Windows.Forms.Button();
-            this.panel_Weather_textMin = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_UseMin = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_imageMin = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_iconMin = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_unitFMin = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WeatherXMin = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WeatherYMin = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconXMin = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconYMin = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_alignmentMin = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_spacingMin = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_imageErrorMin = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_imageMinusMin = new System.Windows.Forms.ComboBox();
-            this.label167 = new System.Windows.Forms.Label();
-            this.label169 = new System.Windows.Forms.Label();
-            this.label170 = new System.Windows.Forms.Label();
-            this.label171 = new System.Windows.Forms.Label();
-            this.label172 = new System.Windows.Forms.Label();
-            this.label173 = new System.Windows.Forms.Label();
-            this.label174 = new System.Windows.Forms.Label();
-            this.label175 = new System.Windows.Forms.Label();
-            this.label176 = new System.Windows.Forms.Label();
-            this.label177 = new System.Windows.Forms.Label();
-            this.label178 = new System.Windows.Forms.Label();
-            this.label179 = new System.Windows.Forms.Label();
-            this.label181 = new System.Windows.Forms.Label();
-            this.button_Weather_textMin = new System.Windows.Forms.Button();
-            this.panel_Weather_text = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_Use = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_image = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_icon = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_unitF = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WeatherX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WeatherY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconY = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_alignment = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_spacing = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_imageError = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_imageMinus = new System.Windows.Forms.ComboBox();
-            this.label136 = new System.Windows.Forms.Label();
-            this.label138 = new System.Windows.Forms.Label();
-            this.label139 = new System.Windows.Forms.Label();
-            this.label140 = new System.Windows.Forms.Label();
-            this.label141 = new System.Windows.Forms.Label();
-            this.label142 = new System.Windows.Forms.Label();
-            this.label143 = new System.Windows.Forms.Label();
-            this.label144 = new System.Windows.Forms.Label();
-            this.label145 = new System.Windows.Forms.Label();
-            this.label146 = new System.Windows.Forms.Label();
-            this.label147 = new System.Windows.Forms.Label();
-            this.label153 = new System.Windows.Forms.Label();
-            this.label182 = new System.Windows.Forms.Label();
-            this.button_Weather_text = new System.Windows.Forms.Button();
-            this.panel_Weather_pictures = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_pictures_Use = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_pictures_image = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_picturesX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_picturesY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_pictures_count = new System.Windows.Forms.NumericUpDown();
-            this.label148 = new System.Windows.Forms.Label();
-            this.label149 = new System.Windows.Forms.Label();
-            this.label150 = new System.Windows.Forms.Label();
-            this.label151 = new System.Windows.Forms.Label();
-            this.label152 = new System.Windows.Forms.Label();
-            this.button_Weather_pictures = new System.Windows.Forms.Button();
             this.tabPage_UVindex = new System.Windows.Forms.TabPage();
             this.tabPage_AirQuality = new System.Windows.Forms.TabPage();
             this.tabPage_Humidity = new System.Windows.Forms.TabPage();
@@ -692,11 +477,6 @@
             this.label658 = new System.Windows.Forms.Label();
             this.label659 = new System.Windows.Forms.Label();
             this.tabPage_Battery = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Battery = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Battery = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Battery = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Battery = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Battery = new AmazFit_Watchface_2.UserControl_pictures();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabControl_EditParameters_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Background_AOD = new System.Windows.Forms.TabPage();
@@ -1033,239 +813,17 @@
             this.tabPage_Activity_AOD = new System.Windows.Forms.TabPage();
             this.tabControl_SystemActivity_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Steps_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Steps_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Steps_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Steps_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Calories_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Calories_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Calories_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Calories_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_HeartRate_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_PAI_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_PAI_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_PAI_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_PAI_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Distance_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_text_Distance_AOD = new AmazFit_Watchface_2.UserControl_text();
             this.tabPage_StandUp_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_StandUp_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_StandUp_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_StandUp_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Stress_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Stress_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Stress_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Stress_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_ActivityGoal_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_FatBurning_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Air_AOD = new System.Windows.Forms.TabPage();
             this.tabControl_SystemWeather_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Weather_AOD = new System.Windows.Forms.TabPage();
-            this.panel_Weather_icon_AOD = new System.Windows.Forms.Panel();
-            this.panel_Weather_scaleLinear_AOD = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_scaleLinear_Use_AOD = new System.Windows.Forms.CheckBox();
-            this.radioButton_Weather_scaleLinear_image_AOD = new System.Windows.Forms.RadioButton();
-            this.radioButtonWeather_scaleLinear_color_AOD = new System.Windows.Forms.RadioButton();
-            this.comboBox_Weather_scaleLinear_image_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleLinear_color_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleLinear_image_background_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_scaleLinearX_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleLinearY_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleLinear_length_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleLinear_width_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_scaleLinear_flatness_AOD = new System.Windows.Forms.ComboBox();
-            this.label304 = new System.Windows.Forms.Label();
-            this.label1102 = new System.Windows.Forms.Label();
-            this.label1103 = new System.Windows.Forms.Label();
-            this.label1104 = new System.Windows.Forms.Label();
-            this.label1105 = new System.Windows.Forms.Label();
-            this.label1106 = new System.Windows.Forms.Label();
-            this.label1107 = new System.Windows.Forms.Label();
-            this.label1108 = new System.Windows.Forms.Label();
-            this.button_Copy_Weather_scaleLinear_AOD = new System.Windows.Forms.Button();
-            this.button_Weather_scaleLinear_AOD = new System.Windows.Forms.Button();
-            this.panel_Weather_scaleCircle_AOD = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_scaleCircle_Use_AOD = new System.Windows.Forms.CheckBox();
-            this.radioButton_Weather_scaleCircle_image_AOD = new System.Windows.Forms.RadioButton();
-            this.radioButton_Weather_scaleCircle_color_AOD = new System.Windows.Forms.RadioButton();
-            this.comboBox_Weather_scaleCircle_image_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleCircle_color_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleCircle_flatness_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_scaleCircle_image_background_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_scaleCircleX_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircleY_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_radius_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_width_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_startAngle_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_scaleCircle_endAngle_AOD = new System.Windows.Forms.NumericUpDown();
-            this.label1109 = new System.Windows.Forms.Label();
-            this.label1110 = new System.Windows.Forms.Label();
-            this.label1111 = new System.Windows.Forms.Label();
-            this.label1112 = new System.Windows.Forms.Label();
-            this.label1113 = new System.Windows.Forms.Label();
-            this.label1114 = new System.Windows.Forms.Label();
-            this.label1115 = new System.Windows.Forms.Label();
-            this.label1116 = new System.Windows.Forms.Label();
-            this.label1117 = new System.Windows.Forms.Label();
-            this.button_Copy_Weather_scaleCircle_AOD = new System.Windows.Forms.Button();
-            this.button_Weather_scaleCircle_AOD = new System.Windows.Forms.Button();
-            this.panel_Weather_hand_AOD = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_hand_Use_AOD = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_hand_image_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_handX_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handX_offset_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY_offset_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_hand_imageCentr_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_handX_centr_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY_centr_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_hand_startAngle_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_hand_endAngle_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_hand_imageBackground_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_handX_background_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_handY_background_AOD = new System.Windows.Forms.NumericUpDown();
-            this.label1118 = new System.Windows.Forms.Label();
-            this.label1119 = new System.Windows.Forms.Label();
-            this.label1120 = new System.Windows.Forms.Label();
-            this.label1121 = new System.Windows.Forms.Label();
-            this.label1122 = new System.Windows.Forms.Label();
-            this.label1123 = new System.Windows.Forms.Label();
-            this.label1124 = new System.Windows.Forms.Label();
-            this.label1125 = new System.Windows.Forms.Label();
-            this.label1126 = new System.Windows.Forms.Label();
-            this.label1127 = new System.Windows.Forms.Label();
-            this.label1128 = new System.Windows.Forms.Label();
-            this.label1129 = new System.Windows.Forms.Label();
-            this.label1130 = new System.Windows.Forms.Label();
-            this.label1131 = new System.Windows.Forms.Label();
-            this.label1132 = new System.Windows.Forms.Label();
-            this.label1133 = new System.Windows.Forms.Label();
-            this.label1134 = new System.Windows.Forms.Label();
-            this.button_Copy_Weather_hand_AOD = new System.Windows.Forms.Button();
-            this.button_Weather_hand_AOD = new System.Windows.Forms.Button();
-            this.panel_Weather_textMax_AOD = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_UseMax_AOD = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_imageMax_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_iconMax_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_unitFMax_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WeatherXMax_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WeatherYMax_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconXMax_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconYMax_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_alignmentMax_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_spacingMax_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_imageErrorMax_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_imageMinusMax_AOD = new System.Windows.Forms.ComboBox();
-            this.checkBox_Weather_followMax_AOD = new System.Windows.Forms.CheckBox();
-            this.label1135 = new System.Windows.Forms.Label();
-            this.label1136 = new System.Windows.Forms.Label();
-            this.label1137 = new System.Windows.Forms.Label();
-            this.label1138 = new System.Windows.Forms.Label();
-            this.label1139 = new System.Windows.Forms.Label();
-            this.label1140 = new System.Windows.Forms.Label();
-            this.label1141 = new System.Windows.Forms.Label();
-            this.label1142 = new System.Windows.Forms.Label();
-            this.label1143 = new System.Windows.Forms.Label();
-            this.label1144 = new System.Windows.Forms.Label();
-            this.label1145 = new System.Windows.Forms.Label();
-            this.label1146 = new System.Windows.Forms.Label();
-            this.label1147 = new System.Windows.Forms.Label();
-            this.button_Copy_Weather_textMax_AOD = new System.Windows.Forms.Button();
-            this.button_Weather_textMax_AOD = new System.Windows.Forms.Button();
-            this.panel_Weather_textMin_AOD = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_UseMin_AOD = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_imageMin_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_iconMin_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_unitFMin_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WeatherXMin_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WeatherYMin_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconXMin_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconYMin_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_alignmentMin_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_spacingMin_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_imageErrorMin_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_imageMinusMin_AOD = new System.Windows.Forms.ComboBox();
-            this.label1148 = new System.Windows.Forms.Label();
-            this.label1149 = new System.Windows.Forms.Label();
-            this.label1150 = new System.Windows.Forms.Label();
-            this.label1151 = new System.Windows.Forms.Label();
-            this.label1152 = new System.Windows.Forms.Label();
-            this.label1153 = new System.Windows.Forms.Label();
-            this.label1154 = new System.Windows.Forms.Label();
-            this.label1155 = new System.Windows.Forms.Label();
-            this.label1156 = new System.Windows.Forms.Label();
-            this.label1157 = new System.Windows.Forms.Label();
-            this.label1158 = new System.Windows.Forms.Label();
-            this.label1159 = new System.Windows.Forms.Label();
-            this.label1160 = new System.Windows.Forms.Label();
-            this.button_Copy_Weather_textMin_AOD = new System.Windows.Forms.Button();
-            this.button_Weather_textMin_AOD = new System.Windows.Forms.Button();
-            this.panel_Weather_text_AOD = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_Use_AOD = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_image_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_icon_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_unitF_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WeatherX_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WeatherY_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconX_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_iconY_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_alignment_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_spacing_AOD = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_Weather_imageError_AOD = new System.Windows.Forms.ComboBox();
-            this.comboBox_Weather_imageMinus_AOD = new System.Windows.Forms.ComboBox();
-            this.label1161 = new System.Windows.Forms.Label();
-            this.label1162 = new System.Windows.Forms.Label();
-            this.label1163 = new System.Windows.Forms.Label();
-            this.label1164 = new System.Windows.Forms.Label();
-            this.label1165 = new System.Windows.Forms.Label();
-            this.label1166 = new System.Windows.Forms.Label();
-            this.label1167 = new System.Windows.Forms.Label();
-            this.label1168 = new System.Windows.Forms.Label();
-            this.label1169 = new System.Windows.Forms.Label();
-            this.label1170 = new System.Windows.Forms.Label();
-            this.label1171 = new System.Windows.Forms.Label();
-            this.label1172 = new System.Windows.Forms.Label();
-            this.label1173 = new System.Windows.Forms.Label();
-            this.button_Copy_Weather_text_AOD = new System.Windows.Forms.Button();
-            this.button_Weather_text_AOD = new System.Windows.Forms.Button();
-            this.panel_Weather_pictures_AOD = new System.Windows.Forms.Panel();
-            this.checkBox_Weather_pictures_Use_AOD = new System.Windows.Forms.CheckBox();
-            this.comboBox_Weather_pictures_image_AOD = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_Weather_picturesX_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_picturesY_AOD = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Weather_pictures_count_AOD = new System.Windows.Forms.NumericUpDown();
-            this.label1174 = new System.Windows.Forms.Label();
-            this.label1175 = new System.Windows.Forms.Label();
-            this.label1176 = new System.Windows.Forms.Label();
-            this.label1177 = new System.Windows.Forms.Label();
-            this.label1178 = new System.Windows.Forms.Label();
-            this.button_Copy_Weather_pictures_AOD = new System.Windows.Forms.Button();
-            this.button_Weather_pictures_AOD = new System.Windows.Forms.Button();
             this.tabPage_UVindex_AOD = new System.Windows.Forms.TabPage();
             this.tabPage_AirQuality_AOD = new System.Windows.Forms.TabPage();
             this.tabPage_Humidity_AOD = new System.Windows.Forms.TabPage();
@@ -1276,27 +834,10 @@
             this.tabPage_System_AOD = new System.Windows.Forms.TabPage();
             this.tabControl_System_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Battery_AOD = new System.Windows.Forms.TabPage();
-            this.userControl_scaleLinear_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Battery_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Battery_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Battery_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Show = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel_set = new System.Windows.Forms.Panel();
-            this.userControl_Set12 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set11 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set10 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set9 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set8 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set7 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set6 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set5 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set4 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set3 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set2 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set1 = new AmazFit_Watchface_2.UserControl_Set();
             this.panel_PreviewStates = new System.Windows.Forms.Panel();
             this.button_JsonPreview_Random = new System.Windows.Forms.Button();
             this.button_JsonPreview_Read = new System.Windows.Forms.Button();
@@ -1422,6 +963,186 @@
             this.toolTip_Weather = new System.Windows.Forms.ToolTip(this.components);
             this.radioButton_GTR2e = new System.Windows.Forms.RadioButton();
             this.radioButton_TRex_pro = new System.Windows.Forms.RadioButton();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.userControl_Set12 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set11 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set10 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set9 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set8 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set7 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set6 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set5 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set4 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set3 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set2 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set1 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_scaleLinear_Steps = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Steps = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Steps = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Steps = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Steps = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Calories = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Calories = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Calories = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Calories = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Calories = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_HeartRate = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_HeartRate = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_HeartRate = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_HeartRate = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_HeartRate = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_PAI = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_PAI = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_PAI = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_PAI = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_PAI = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_text_Distance = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_scaleLinear_StandUp = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_StandUp = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_StandUp = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_StandUp = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_StandUp = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Stress = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Stress = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Stress = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Stress = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Stress = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_ActivityGoal = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_ActivityGoal = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_ActivityGoal = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_FatBurning = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_FatBurning = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_FatBurning = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_FatBurning = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_FatBurning = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Weather = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Weather = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Weather = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_weather_Max = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Min = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Current = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_pictures_weather = new AmazFit_Watchface_2.UserControl_pictures_weather();
+            this.userControl_scaleLinear_UVindex = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_UVindex = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_UVindex = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_UVindex = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_UVindex = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_AirQuality = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirQuality = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirQuality = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirQuality = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirQuality = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Humidity = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Humidity = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Humidity = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Humidity = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Humidity = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_WindForce = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_WindForce = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_WindForce = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_WindForce = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_WindForce = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Altitude = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Altitude = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Altitude = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Altitude = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Altitude = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_AirPressure = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirPressure = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirPressure = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirPressure = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirPressure = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Battery = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Battery = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Battery = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Battery = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Battery = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Steps_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Steps_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Steps_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Calories_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Calories_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Calories_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_PAI_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_PAI_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_PAI_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_text_Distance_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_scaleLinear_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_StandUp_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_StandUp_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_StandUp_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Stress_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Stress_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Stress_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Weather_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Weather_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Weather_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_weather_Max_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Min_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Current_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_pictures_weather_AOD = new AmazFit_Watchface_2.UserControl_pictures_weather();
+            this.userControl_scaleLinear_UVindex_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_UVindex_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_UVindex_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_UVindex_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_UVindex_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Humidity_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Humidity_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Humidity_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Humidity_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Humidity_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_WindForce_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_WindForce_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_WindForce_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_WindForce_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_WindForce_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Altitude_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Altitude_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Altitude_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Altitude_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Altitude_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_scaleLinear_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Battery_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Battery_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Battery_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -1559,51 +1280,12 @@
             this.tabPage_Air.SuspendLayout();
             this.tabControl_SystemWeather.SuspendLayout();
             this.tabPage_Weather.SuspendLayout();
-            this.panel_Weather_scaleLinear.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_length)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_width)).BeginInit();
-            this.panel_Weather_scaleCircle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_radius)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_width)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_startAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_endAngle)).BeginInit();
-            this.panel_Weather_hand.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_offset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_offset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_centr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_centr)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_startAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_endAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_background)).BeginInit();
-            this.panel_Weather_textMax.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMax)).BeginInit();
-            this.panel_Weather_textMin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMin)).BeginInit();
-            this.panel_Weather_text.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacing)).BeginInit();
-            this.panel_Weather_pictures.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_pictures_count)).BeginInit();
+            this.tabPage_UVindex.SuspendLayout();
+            this.tabPage_AirQuality.SuspendLayout();
+            this.tabPage_Humidity.SuspendLayout();
+            this.tabPage_WindForce.SuspendLayout();
+            this.tabPage_Altitude.SuspendLayout();
+            this.tabPage_AirPressure.SuspendLayout();
             this.tabPage_System.SuspendLayout();
             this.tabControl_System.SuspendLayout();
             this.tabPage_Status.SuspendLayout();
@@ -1734,51 +1416,12 @@
             this.tabPage_Air_AOD.SuspendLayout();
             this.tabControl_SystemWeather_AOD.SuspendLayout();
             this.tabPage_Weather_AOD.SuspendLayout();
-            this.panel_Weather_scaleLinear_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearX_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearY_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_length_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_width_AOD)).BeginInit();
-            this.panel_Weather_scaleCircle_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleX_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleY_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_radius_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_width_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_startAngle_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_endAngle_AOD)).BeginInit();
-            this.panel_Weather_hand_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_offset_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_offset_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_centr_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_centr_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_startAngle_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_endAngle_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_background_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_background_AOD)).BeginInit();
-            this.panel_Weather_textMax_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMax_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMax_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMax_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMax_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMax_AOD)).BeginInit();
-            this.panel_Weather_textMin_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMin_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMin_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMin_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMin_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMin_AOD)).BeginInit();
-            this.panel_Weather_text_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherX_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherY_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconX_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconY_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacing_AOD)).BeginInit();
-            this.panel_Weather_pictures_AOD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesX_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesY_AOD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_pictures_count_AOD)).BeginInit();
+            this.tabPage_UVindex_AOD.SuspendLayout();
+            this.tabPage_AirQuality_AOD.SuspendLayout();
+            this.tabPage_Humidity_AOD.SuspendLayout();
+            this.tabPage_WindForce_AOD.SuspendLayout();
+            this.tabPage_Altitude_AOD.SuspendLayout();
+            this.tabPage_AirPressure_AOD.SuspendLayout();
             this.tabPage_System_AOD.SuspendLayout();
             this.tabControl_System_AOD.SuspendLayout();
             this.tabPage_Battery_AOD.SuspendLayout();
@@ -1808,6 +1451,7 @@
             this.contextMenuStrip_XY_InAnimationTable.SuspendLayout();
             this.contextMenuStrip_XY_InTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -5758,50 +5402,6 @@
             this.tabPage_Steps.Controls.Add(this.userControl_pictures_Steps);
             this.tabPage_Steps.Name = "tabPage_Steps";
             // 
-            // userControl_scaleLinear_Steps
-            // 
-            this.userControl_scaleLinear_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Steps, "userControl_scaleLinear_Steps");
-            this.userControl_scaleLinear_Steps.Collapsed = true;
-            this.userControl_scaleLinear_Steps.Name = "userControl_scaleLinear_Steps";
-            this.userControl_scaleLinear_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Steps
-            // 
-            this.userControl_scaleCircle_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Steps, "userControl_scaleCircle_Steps");
-            this.userControl_scaleCircle_Steps.Collapsed = true;
-            this.userControl_scaleCircle_Steps.Name = "userControl_scaleCircle_Steps";
-            this.userControl_scaleCircle_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Steps
-            // 
-            this.userControl_hand_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Steps, "userControl_hand_Steps");
-            this.userControl_hand_Steps.Collapsed = true;
-            this.userControl_hand_Steps.Name = "userControl_hand_Steps";
-            this.userControl_hand_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Steps
-            // 
-            this.userControl_text_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_text_Steps, "userControl_text_Steps");
-            this.userControl_text_Steps.Collapsed = true;
-            this.userControl_text_Steps.ImageError = true;
-            this.userControl_text_Steps.Name = "userControl_text_Steps";
-            this.userControl_text_Steps.OptionalSymbol = false;
-            this.userControl_text_Steps.PaddingZero_follow = true;
-            this.userControl_text_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Steps
-            // 
-            this.userControl_pictures_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Steps, "userControl_pictures_Steps");
-            this.userControl_pictures_Steps.Collapsed = true;
-            this.userControl_pictures_Steps.ImagesCount = 10;
-            this.userControl_pictures_Steps.Name = "userControl_pictures_Steps";
-            this.userControl_pictures_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
             // tabPage_Calories
             // 
             resources.ApplyResources(this.tabPage_Calories, "tabPage_Calories");
@@ -5812,50 +5412,6 @@
             this.tabPage_Calories.Controls.Add(this.userControl_text_Calories);
             this.tabPage_Calories.Controls.Add(this.userControl_pictures_Calories);
             this.tabPage_Calories.Name = "tabPage_Calories";
-            // 
-            // userControl_scaleLinear_Calories
-            // 
-            this.userControl_scaleLinear_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Calories, "userControl_scaleLinear_Calories");
-            this.userControl_scaleLinear_Calories.Collapsed = true;
-            this.userControl_scaleLinear_Calories.Name = "userControl_scaleLinear_Calories";
-            this.userControl_scaleLinear_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Calories
-            // 
-            this.userControl_scaleCircle_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Calories, "userControl_scaleCircle_Calories");
-            this.userControl_scaleCircle_Calories.Collapsed = true;
-            this.userControl_scaleCircle_Calories.Name = "userControl_scaleCircle_Calories";
-            this.userControl_scaleCircle_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Calories
-            // 
-            this.userControl_hand_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Calories, "userControl_hand_Calories");
-            this.userControl_hand_Calories.Collapsed = true;
-            this.userControl_hand_Calories.Name = "userControl_hand_Calories";
-            this.userControl_hand_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Calories
-            // 
-            this.userControl_text_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_text_Calories, "userControl_text_Calories");
-            this.userControl_text_Calories.Collapsed = true;
-            this.userControl_text_Calories.ImageError = true;
-            this.userControl_text_Calories.Name = "userControl_text_Calories";
-            this.userControl_text_Calories.OptionalSymbol = false;
-            this.userControl_text_Calories.PaddingZero_follow = true;
-            this.userControl_text_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Calories
-            // 
-            this.userControl_pictures_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Calories, "userControl_pictures_Calories");
-            this.userControl_pictures_Calories.Collapsed = true;
-            this.userControl_pictures_Calories.ImagesCount = 10;
-            this.userControl_pictures_Calories.Name = "userControl_pictures_Calories";
-            this.userControl_pictures_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_HeartRate
             // 
@@ -5868,50 +5424,6 @@
             this.tabPage_HeartRate.Controls.Add(this.userControl_pictures_HeartRate);
             this.tabPage_HeartRate.Name = "tabPage_HeartRate";
             // 
-            // userControl_scaleLinear_HeartRate
-            // 
-            this.userControl_scaleLinear_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_HeartRate, "userControl_scaleLinear_HeartRate");
-            this.userControl_scaleLinear_HeartRate.Collapsed = true;
-            this.userControl_scaleLinear_HeartRate.Name = "userControl_scaleLinear_HeartRate";
-            this.userControl_scaleLinear_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_HeartRate
-            // 
-            this.userControl_scaleCircle_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_HeartRate, "userControl_scaleCircle_HeartRate");
-            this.userControl_scaleCircle_HeartRate.Collapsed = true;
-            this.userControl_scaleCircle_HeartRate.Name = "userControl_scaleCircle_HeartRate";
-            this.userControl_scaleCircle_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_HeartRate
-            // 
-            this.userControl_hand_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_hand_HeartRate, "userControl_hand_HeartRate");
-            this.userControl_hand_HeartRate.Collapsed = true;
-            this.userControl_hand_HeartRate.Name = "userControl_hand_HeartRate";
-            this.userControl_hand_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_HeartRate
-            // 
-            this.userControl_text_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_text_HeartRate, "userControl_text_HeartRate");
-            this.userControl_text_HeartRate.Collapsed = true;
-            this.userControl_text_HeartRate.ImageError = true;
-            this.userControl_text_HeartRate.Name = "userControl_text_HeartRate";
-            this.userControl_text_HeartRate.OptionalSymbol = false;
-            this.userControl_text_HeartRate.PaddingZero_follow = true;
-            this.userControl_text_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_HeartRate
-            // 
-            this.userControl_pictures_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_HeartRate, "userControl_pictures_HeartRate");
-            this.userControl_pictures_HeartRate.Collapsed = true;
-            this.userControl_pictures_HeartRate.ImagesCount = 6;
-            this.userControl_pictures_HeartRate.Name = "userControl_pictures_HeartRate";
-            this.userControl_pictures_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
             // tabPage_PAI
             // 
             resources.ApplyResources(this.tabPage_PAI, "tabPage_PAI");
@@ -5923,67 +5435,12 @@
             this.tabPage_PAI.Controls.Add(this.userControl_pictures_PAI);
             this.tabPage_PAI.Name = "tabPage_PAI";
             // 
-            // userControl_scaleLinear_PAI
-            // 
-            this.userControl_scaleLinear_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_PAI, "userControl_scaleLinear_PAI");
-            this.userControl_scaleLinear_PAI.Collapsed = true;
-            this.userControl_scaleLinear_PAI.Name = "userControl_scaleLinear_PAI";
-            this.userControl_scaleLinear_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_PAI
-            // 
-            this.userControl_scaleCircle_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_PAI, "userControl_scaleCircle_PAI");
-            this.userControl_scaleCircle_PAI.Collapsed = true;
-            this.userControl_scaleCircle_PAI.Name = "userControl_scaleCircle_PAI";
-            this.userControl_scaleCircle_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_PAI
-            // 
-            this.userControl_hand_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_hand_PAI, "userControl_hand_PAI");
-            this.userControl_hand_PAI.Collapsed = true;
-            this.userControl_hand_PAI.Name = "userControl_hand_PAI";
-            this.userControl_hand_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_PAI
-            // 
-            this.userControl_text_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_text_PAI, "userControl_text_PAI");
-            this.userControl_text_PAI.Collapsed = true;
-            this.userControl_text_PAI.ImageError = true;
-            this.userControl_text_PAI.Name = "userControl_text_PAI";
-            this.userControl_text_PAI.OptionalSymbol = false;
-            this.userControl_text_PAI.PaddingZero_follow = true;
-            this.userControl_text_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_PAI
-            // 
-            this.userControl_pictures_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_PAI, "userControl_pictures_PAI");
-            this.userControl_pictures_PAI.Collapsed = true;
-            this.userControl_pictures_PAI.ImagesCount = 10;
-            this.userControl_pictures_PAI.Name = "userControl_pictures_PAI";
-            this.userControl_pictures_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
             // tabPage_Distance
             // 
             resources.ApplyResources(this.tabPage_Distance, "tabPage_Distance");
             this.tabPage_Distance.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_Distance.Controls.Add(this.userControl_text_Distance);
             this.tabPage_Distance.Name = "tabPage_Distance";
-            // 
-            // userControl_text_Distance
-            // 
-            this.userControl_text_Distance.AOD = false;
-            resources.ApplyResources(this.userControl_text_Distance, "userControl_text_Distance");
-            this.userControl_text_Distance.Collapsed = false;
-            this.userControl_text_Distance.ImageError = true;
-            this.userControl_text_Distance.Name = "userControl_text_Distance";
-            this.userControl_text_Distance.OptionalSymbol = true;
-            this.userControl_text_Distance.PaddingZero_follow = true;
-            this.userControl_text_Distance.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_StandUp
             // 
@@ -5996,45 +5453,6 @@
             this.tabPage_StandUp.Controls.Add(this.userControl_pictures_StandUp);
             this.tabPage_StandUp.Name = "tabPage_StandUp";
             // 
-            // userControl_scaleLinear_StandUp
-            // 
-            this.userControl_scaleLinear_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_StandUp, "userControl_scaleLinear_StandUp");
-            this.userControl_scaleLinear_StandUp.Collapsed = true;
-            this.userControl_scaleLinear_StandUp.Name = "userControl_scaleLinear_StandUp";
-            // 
-            // userControl_scaleCircle_StandUp
-            // 
-            this.userControl_scaleCircle_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_StandUp, "userControl_scaleCircle_StandUp");
-            this.userControl_scaleCircle_StandUp.Collapsed = true;
-            this.userControl_scaleCircle_StandUp.Name = "userControl_scaleCircle_StandUp";
-            // 
-            // userControl_hand_StandUp
-            // 
-            this.userControl_hand_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_hand_StandUp, "userControl_hand_StandUp");
-            this.userControl_hand_StandUp.Collapsed = true;
-            this.userControl_hand_StandUp.Name = "userControl_hand_StandUp";
-            // 
-            // userControl_text_StandUp
-            // 
-            this.userControl_text_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_text_StandUp, "userControl_text_StandUp");
-            this.userControl_text_StandUp.Collapsed = true;
-            this.userControl_text_StandUp.ImageError = true;
-            this.userControl_text_StandUp.Name = "userControl_text_StandUp";
-            this.userControl_text_StandUp.OptionalSymbol = false;
-            this.userControl_text_StandUp.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_StandUp
-            // 
-            this.userControl_pictures_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_StandUp, "userControl_pictures_StandUp");
-            this.userControl_pictures_StandUp.Collapsed = true;
-            this.userControl_pictures_StandUp.ImagesCount = 10;
-            this.userControl_pictures_StandUp.Name = "userControl_pictures_StandUp";
-            // 
             // tabPage_Stress
             // 
             resources.ApplyResources(this.tabPage_Stress, "tabPage_Stress");
@@ -6045,45 +5463,6 @@
             this.tabPage_Stress.Controls.Add(this.userControl_text_Stress);
             this.tabPage_Stress.Controls.Add(this.userControl_pictures_Stress);
             this.tabPage_Stress.Name = "tabPage_Stress";
-            // 
-            // userControl_scaleLinear_Stress
-            // 
-            this.userControl_scaleLinear_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Stress, "userControl_scaleLinear_Stress");
-            this.userControl_scaleLinear_Stress.Collapsed = true;
-            this.userControl_scaleLinear_Stress.Name = "userControl_scaleLinear_Stress";
-            // 
-            // userControl_scaleCircle_Stress
-            // 
-            this.userControl_scaleCircle_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Stress, "userControl_scaleCircle_Stress");
-            this.userControl_scaleCircle_Stress.Collapsed = true;
-            this.userControl_scaleCircle_Stress.Name = "userControl_scaleCircle_Stress";
-            // 
-            // userControl_hand_Stress
-            // 
-            this.userControl_hand_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Stress, "userControl_hand_Stress");
-            this.userControl_hand_Stress.Collapsed = true;
-            this.userControl_hand_Stress.Name = "userControl_hand_Stress";
-            // 
-            // userControl_text_Stress
-            // 
-            this.userControl_text_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_text_Stress, "userControl_text_Stress");
-            this.userControl_text_Stress.Collapsed = true;
-            this.userControl_text_Stress.ImageError = true;
-            this.userControl_text_Stress.Name = "userControl_text_Stress";
-            this.userControl_text_Stress.OptionalSymbol = false;
-            this.userControl_text_Stress.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_Stress
-            // 
-            this.userControl_pictures_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Stress, "userControl_pictures_Stress");
-            this.userControl_pictures_Stress.Collapsed = true;
-            this.userControl_pictures_Stress.ImagesCount = 10;
-            this.userControl_pictures_Stress.Name = "userControl_pictures_Stress";
             // 
             // tabPage_ActivityGoal
             // 
@@ -6096,45 +5475,6 @@
             this.tabPage_ActivityGoal.Controls.Add(this.userControl_pictures_ActivityGoal);
             this.tabPage_ActivityGoal.Name = "tabPage_ActivityGoal";
             // 
-            // userControl_scaleLinear_ActivityGoal
-            // 
-            this.userControl_scaleLinear_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal, "userControl_scaleLinear_ActivityGoal");
-            this.userControl_scaleLinear_ActivityGoal.Collapsed = true;
-            this.userControl_scaleLinear_ActivityGoal.Name = "userControl_scaleLinear_ActivityGoal";
-            // 
-            // userControl_scaleCircle_ActivityGoal
-            // 
-            this.userControl_scaleCircle_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal, "userControl_scaleCircle_ActivityGoal");
-            this.userControl_scaleCircle_ActivityGoal.Collapsed = true;
-            this.userControl_scaleCircle_ActivityGoal.Name = "userControl_scaleCircle_ActivityGoal";
-            // 
-            // userControl_hand_ActivityGoal
-            // 
-            this.userControl_hand_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_hand_ActivityGoal, "userControl_hand_ActivityGoal");
-            this.userControl_hand_ActivityGoal.Collapsed = true;
-            this.userControl_hand_ActivityGoal.Name = "userControl_hand_ActivityGoal";
-            // 
-            // userControl_text_ActivityGoal
-            // 
-            this.userControl_text_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_text_ActivityGoal, "userControl_text_ActivityGoal");
-            this.userControl_text_ActivityGoal.Collapsed = true;
-            this.userControl_text_ActivityGoal.ImageError = true;
-            this.userControl_text_ActivityGoal.Name = "userControl_text_ActivityGoal";
-            this.userControl_text_ActivityGoal.OptionalSymbol = false;
-            this.userControl_text_ActivityGoal.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_ActivityGoal
-            // 
-            this.userControl_pictures_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_ActivityGoal, "userControl_pictures_ActivityGoal");
-            this.userControl_pictures_ActivityGoal.Collapsed = true;
-            this.userControl_pictures_ActivityGoal.ImagesCount = 10;
-            this.userControl_pictures_ActivityGoal.Name = "userControl_pictures_ActivityGoal";
-            // 
             // tabPage_FatBurning
             // 
             resources.ApplyResources(this.tabPage_FatBurning, "tabPage_FatBurning");
@@ -6145,45 +5485,6 @@
             this.tabPage_FatBurning.Controls.Add(this.userControl_text_FatBurning);
             this.tabPage_FatBurning.Controls.Add(this.userControl_pictures_FatBurning);
             this.tabPage_FatBurning.Name = "tabPage_FatBurning";
-            // 
-            // userControl_scaleLinear_FatBurning
-            // 
-            this.userControl_scaleLinear_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_FatBurning, "userControl_scaleLinear_FatBurning");
-            this.userControl_scaleLinear_FatBurning.Collapsed = true;
-            this.userControl_scaleLinear_FatBurning.Name = "userControl_scaleLinear_FatBurning";
-            // 
-            // userControl_scaleCircle_FatBurning
-            // 
-            this.userControl_scaleCircle_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_FatBurning, "userControl_scaleCircle_FatBurning");
-            this.userControl_scaleCircle_FatBurning.Collapsed = true;
-            this.userControl_scaleCircle_FatBurning.Name = "userControl_scaleCircle_FatBurning";
-            // 
-            // userControl_hand_FatBurning
-            // 
-            this.userControl_hand_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_hand_FatBurning, "userControl_hand_FatBurning");
-            this.userControl_hand_FatBurning.Collapsed = true;
-            this.userControl_hand_FatBurning.Name = "userControl_hand_FatBurning";
-            // 
-            // userControl_text_FatBurning
-            // 
-            this.userControl_text_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_text_FatBurning, "userControl_text_FatBurning");
-            this.userControl_text_FatBurning.Collapsed = true;
-            this.userControl_text_FatBurning.ImageError = true;
-            this.userControl_text_FatBurning.Name = "userControl_text_FatBurning";
-            this.userControl_text_FatBurning.OptionalSymbol = false;
-            this.userControl_text_FatBurning.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_FatBurning
-            // 
-            this.userControl_pictures_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_FatBurning, "userControl_pictures_FatBurning");
-            this.userControl_pictures_FatBurning.Collapsed = true;
-            this.userControl_pictures_FatBurning.ImagesCount = 10;
-            this.userControl_pictures_FatBurning.Name = "userControl_pictures_FatBurning";
             // 
             // tabPage_Air
             // 
@@ -6210,1865 +5511,47 @@
             // 
             resources.ApplyResources(this.tabPage_Weather, "tabPage_Weather");
             this.tabPage_Weather.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_icon);
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_scaleLinear);
-            this.tabPage_Weather.Controls.Add(this.button_Weather_scaleLinear);
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_scaleCircle);
-            this.tabPage_Weather.Controls.Add(this.button_Weather_scaleCircle);
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_hand);
-            this.tabPage_Weather.Controls.Add(this.button_Weather_hand);
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_textMax);
-            this.tabPage_Weather.Controls.Add(this.button_Weather_textMax);
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_textMin);
-            this.tabPage_Weather.Controls.Add(this.button_Weather_textMin);
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_text);
-            this.tabPage_Weather.Controls.Add(this.button_Weather_text);
-            this.tabPage_Weather.Controls.Add(this.panel_Weather_pictures);
-            this.tabPage_Weather.Controls.Add(this.button_Weather_pictures);
+            this.tabPage_Weather.Controls.Add(this.userControl_scaleLinear_Weather);
+            this.tabPage_Weather.Controls.Add(this.userControl_scaleCircle_Weather);
+            this.tabPage_Weather.Controls.Add(this.userControl_hand_Weather);
+            this.tabPage_Weather.Controls.Add(this.userControl_text_weather_Max);
+            this.tabPage_Weather.Controls.Add(this.userControl_text_weather_Min);
+            this.tabPage_Weather.Controls.Add(this.userControl_text_weather_Current);
+            this.tabPage_Weather.Controls.Add(this.userControl_pictures_weather);
             this.tabPage_Weather.Name = "tabPage_Weather";
-            // 
-            // panel_Weather_icon
-            // 
-            resources.ApplyResources(this.panel_Weather_icon, "panel_Weather_icon");
-            this.panel_Weather_icon.Name = "panel_Weather_icon";
-            // 
-            // panel_Weather_scaleLinear
-            // 
-            this.panel_Weather_scaleLinear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_scaleLinear.Controls.Add(this.checkBox_Weather_scaleLinear_Use);
-            this.panel_Weather_scaleLinear.Controls.Add(this.radioButton_Weather_scaleLinear_image);
-            this.panel_Weather_scaleLinear.Controls.Add(this.radioButtonWeather_scaleLinear_color);
-            this.panel_Weather_scaleLinear.Controls.Add(this.comboBox_Weather_scaleLinear_image);
-            this.panel_Weather_scaleLinear.Controls.Add(this.comboBox_Weather_scaleLinear_color);
-            this.panel_Weather_scaleLinear.Controls.Add(this.comboBox_Weather_scaleLinear_image_pointer);
-            this.panel_Weather_scaleLinear.Controls.Add(this.comboBox_Weather_scaleLinear_image_background);
-            this.panel_Weather_scaleLinear.Controls.Add(this.numericUpDown_Weather_scaleLinearX);
-            this.panel_Weather_scaleLinear.Controls.Add(this.numericUpDown_Weather_scaleLinearY);
-            this.panel_Weather_scaleLinear.Controls.Add(this.numericUpDown_Weather_scaleLinear_length);
-            this.panel_Weather_scaleLinear.Controls.Add(this.numericUpDown_Weather_scaleLinear_width);
-            this.panel_Weather_scaleLinear.Controls.Add(this.comboBox_Weather_scaleLinear_flatness);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label103);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label104);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label105);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label106);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label107);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label108);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label109);
-            this.panel_Weather_scaleLinear.Controls.Add(this.label295);
-            resources.ApplyResources(this.panel_Weather_scaleLinear, "panel_Weather_scaleLinear");
-            this.panel_Weather_scaleLinear.Name = "panel_Weather_scaleLinear";
-            // 
-            // checkBox_Weather_scaleLinear_Use
-            // 
-            resources.ApplyResources(this.checkBox_Weather_scaleLinear_Use, "checkBox_Weather_scaleLinear_Use");
-            this.checkBox_Weather_scaleLinear_Use.Name = "checkBox_Weather_scaleLinear_Use";
-            this.checkBox_Weather_scaleLinear_Use.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_scaleLinear_Use.CheckedChanged += new System.EventHandler(this.checkBox_scaleLinear_Use_CheckedChanged);
-            this.checkBox_Weather_scaleLinear_Use.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // radioButton_Weather_scaleLinear_image
-            // 
-            resources.ApplyResources(this.radioButton_Weather_scaleLinear_image, "radioButton_Weather_scaleLinear_image");
-            this.radioButton_Weather_scaleLinear_image.Checked = true;
-            this.radioButton_Weather_scaleLinear_image.Name = "radioButton_Weather_scaleLinear_image";
-            this.radioButton_Weather_scaleLinear_image.TabStop = true;
-            this.radioButton_Weather_scaleLinear_image.UseVisualStyleBackColor = true;
-            this.radioButton_Weather_scaleLinear_image.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
-            // 
-            // radioButtonWeather_scaleLinear_color
-            // 
-            resources.ApplyResources(this.radioButtonWeather_scaleLinear_color, "radioButtonWeather_scaleLinear_color");
-            this.radioButtonWeather_scaleLinear_color.Name = "radioButtonWeather_scaleLinear_color";
-            this.radioButtonWeather_scaleLinear_color.TabStop = true;
-            this.radioButtonWeather_scaleLinear_color.UseVisualStyleBackColor = true;
-            // 
-            // comboBox_Weather_scaleLinear_image
-            // 
-            this.comboBox_Weather_scaleLinear_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleLinear_image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image, "comboBox_Weather_scaleLinear_image");
-            this.comboBox_Weather_scaleLinear_image.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_image.Name = "comboBox_Weather_scaleLinear_image";
-            this.comboBox_Weather_scaleLinear_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleLinear_image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleLinear_image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleLinear_image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleLinear_image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleLinear_color
-            // 
-            this.comboBox_Weather_scaleLinear_color.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox_Weather_scaleLinear_color.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_color, "comboBox_Weather_scaleLinear_color");
-            this.comboBox_Weather_scaleLinear_color.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_color.Name = "comboBox_Weather_scaleLinear_color";
-            this.comboBox_Weather_scaleLinear_color.Click += new System.EventHandler(this.comboBox_color_Click);
-            this.comboBox_Weather_scaleLinear_color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleLinear_image_pointer
-            // 
-            this.comboBox_Weather_scaleLinear_image_pointer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleLinear_image_pointer.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_pointer, "comboBox_Weather_scaleLinear_image_pointer");
-            this.comboBox_Weather_scaleLinear_image_pointer.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_image_pointer.Name = "comboBox_Weather_scaleLinear_image_pointer";
-            this.comboBox_Weather_scaleLinear_image_pointer.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleLinear_image_pointer.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleLinear_image_pointer.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleLinear_image_pointer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleLinear_image_pointer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleLinear_image_background
-            // 
-            this.comboBox_Weather_scaleLinear_image_background.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleLinear_image_background.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_background, "comboBox_Weather_scaleLinear_image_background");
-            this.comboBox_Weather_scaleLinear_image_background.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_image_background.Name = "comboBox_Weather_scaleLinear_image_background";
-            this.comboBox_Weather_scaleLinear_image_background.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleLinear_image_background.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleLinear_image_background.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleLinear_image_background.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleLinear_image_background.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_scaleLinearX
-            // 
-            this.numericUpDown_Weather_scaleLinearX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinearX, "numericUpDown_Weather_scaleLinearX");
-            this.numericUpDown_Weather_scaleLinearX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinearX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinearX.Name = "numericUpDown_Weather_scaleLinearX";
-            this.numericUpDown_Weather_scaleLinearX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleLinearX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleLinearY
-            // 
-            this.numericUpDown_Weather_scaleLinearY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinearY, "numericUpDown_Weather_scaleLinearY");
-            this.numericUpDown_Weather_scaleLinearY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinearY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinearY.Name = "numericUpDown_Weather_scaleLinearY";
-            this.numericUpDown_Weather_scaleLinearY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleLinearY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleLinear_length
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinear_length, "numericUpDown_Weather_scaleLinear_length");
-            this.numericUpDown_Weather_scaleLinear_length.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_length.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinear_length.Name = "numericUpDown_Weather_scaleLinear_length";
-            this.numericUpDown_Weather_scaleLinear_length.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_length.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleLinear_width
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinear_width, "numericUpDown_Weather_scaleLinear_width");
-            this.numericUpDown_Weather_scaleLinear_width.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_width.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinear_width.Name = "numericUpDown_Weather_scaleLinear_width";
-            this.numericUpDown_Weather_scaleLinear_width.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_scaleLinear_flatness
-            // 
-            this.comboBox_Weather_scaleLinear_flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_flatness, "comboBox_Weather_scaleLinear_flatness");
-            this.comboBox_Weather_scaleLinear_flatness.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_flatness.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_scaleLinear_flatness.Items"),
-            resources.GetString("comboBox_Weather_scaleLinear_flatness.Items1")});
-            this.comboBox_Weather_scaleLinear_flatness.Name = "comboBox_Weather_scaleLinear_flatness";
-            this.comboBox_Weather_scaleLinear_flatness.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // label103
-            // 
-            resources.ApplyResources(this.label103, "label103");
-            this.label103.Name = "label103";
-            // 
-            // label104
-            // 
-            resources.ApplyResources(this.label104, "label104");
-            this.label104.Name = "label104";
-            // 
-            // label105
-            // 
-            resources.ApplyResources(this.label105, "label105");
-            this.label105.Name = "label105";
-            // 
-            // label106
-            // 
-            resources.ApplyResources(this.label106, "label106");
-            this.label106.Name = "label106";
-            // 
-            // label107
-            // 
-            resources.ApplyResources(this.label107, "label107");
-            this.label107.Name = "label107";
-            // 
-            // label108
-            // 
-            resources.ApplyResources(this.label108, "label108");
-            this.label108.Name = "label108";
-            // 
-            // label109
-            // 
-            resources.ApplyResources(this.label109, "label109");
-            this.label109.Name = "label109";
-            // 
-            // label295
-            // 
-            resources.ApplyResources(this.label295, "label295");
-            this.label295.Name = "label295";
-            // 
-            // button_Weather_scaleLinear
-            // 
-            resources.ApplyResources(this.button_Weather_scaleLinear, "button_Weather_scaleLinear");
-            this.button_Weather_scaleLinear.Name = "button_Weather_scaleLinear";
-            this.button_Weather_scaleLinear.UseVisualStyleBackColor = true;
-            this.button_Weather_scaleLinear.Click += new System.EventHandler(this.button_Weather_scaleLinear_Click);
-            // 
-            // panel_Weather_scaleCircle
-            // 
-            this.panel_Weather_scaleCircle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_scaleCircle.Controls.Add(this.checkBox_Weather_scaleCircle_Use);
-            this.panel_Weather_scaleCircle.Controls.Add(this.radioButton_Weather_scaleCircle_image);
-            this.panel_Weather_scaleCircle.Controls.Add(this.radioButton_Weather_scaleCircle_color);
-            this.panel_Weather_scaleCircle.Controls.Add(this.comboBox_Weather_scaleCircle_image);
-            this.panel_Weather_scaleCircle.Controls.Add(this.comboBox_Weather_scaleCircle_color);
-            this.panel_Weather_scaleCircle.Controls.Add(this.comboBox_Weather_scaleCircle_flatness);
-            this.panel_Weather_scaleCircle.Controls.Add(this.comboBox_Weather_scaleCircle_image_background);
-            this.panel_Weather_scaleCircle.Controls.Add(this.numericUpDown_Weather_scaleCircleX);
-            this.panel_Weather_scaleCircle.Controls.Add(this.numericUpDown_Weather_scaleCircleY);
-            this.panel_Weather_scaleCircle.Controls.Add(this.numericUpDown_Weather_scaleCircle_radius);
-            this.panel_Weather_scaleCircle.Controls.Add(this.numericUpDown_Weather_scaleCircle_width);
-            this.panel_Weather_scaleCircle.Controls.Add(this.numericUpDown_Weather_scaleCircle_startAngle);
-            this.panel_Weather_scaleCircle.Controls.Add(this.numericUpDown_Weather_scaleCircle_endAngle);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label110);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label111);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label112);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label113);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label114);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label115);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label116);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label117);
-            this.panel_Weather_scaleCircle.Controls.Add(this.label118);
-            resources.ApplyResources(this.panel_Weather_scaleCircle, "panel_Weather_scaleCircle");
-            this.panel_Weather_scaleCircle.Name = "panel_Weather_scaleCircle";
-            // 
-            // checkBox_Weather_scaleCircle_Use
-            // 
-            resources.ApplyResources(this.checkBox_Weather_scaleCircle_Use, "checkBox_Weather_scaleCircle_Use");
-            this.checkBox_Weather_scaleCircle_Use.Name = "checkBox_Weather_scaleCircle_Use";
-            this.checkBox_Weather_scaleCircle_Use.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_scaleCircle_Use.CheckedChanged += new System.EventHandler(this.checkBox_scaleCircle_Use_CheckedChanged);
-            this.checkBox_Weather_scaleCircle_Use.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // radioButton_Weather_scaleCircle_image
-            // 
-            resources.ApplyResources(this.radioButton_Weather_scaleCircle_image, "radioButton_Weather_scaleCircle_image");
-            this.radioButton_Weather_scaleCircle_image.Checked = true;
-            this.radioButton_Weather_scaleCircle_image.Name = "radioButton_Weather_scaleCircle_image";
-            this.radioButton_Weather_scaleCircle_image.TabStop = true;
-            this.radioButton_Weather_scaleCircle_image.UseVisualStyleBackColor = true;
-            this.radioButton_Weather_scaleCircle_image.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
-            // 
-            // radioButton_Weather_scaleCircle_color
-            // 
-            resources.ApplyResources(this.radioButton_Weather_scaleCircle_color, "radioButton_Weather_scaleCircle_color");
-            this.radioButton_Weather_scaleCircle_color.Name = "radioButton_Weather_scaleCircle_color";
-            this.radioButton_Weather_scaleCircle_color.TabStop = true;
-            this.radioButton_Weather_scaleCircle_color.UseVisualStyleBackColor = true;
-            // 
-            // comboBox_Weather_scaleCircle_image
-            // 
-            this.comboBox_Weather_scaleCircle_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleCircle_image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_image, "comboBox_Weather_scaleCircle_image");
-            this.comboBox_Weather_scaleCircle_image.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_image.Name = "comboBox_Weather_scaleCircle_image";
-            this.comboBox_Weather_scaleCircle_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleCircle_image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleCircle_image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleCircle_image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleCircle_image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleCircle_color
-            // 
-            this.comboBox_Weather_scaleCircle_color.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox_Weather_scaleCircle_color.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_color, "comboBox_Weather_scaleCircle_color");
-            this.comboBox_Weather_scaleCircle_color.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_color.Name = "comboBox_Weather_scaleCircle_color";
-            this.comboBox_Weather_scaleCircle_color.Click += new System.EventHandler(this.comboBox_color_Click);
-            this.comboBox_Weather_scaleCircle_color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleCircle_flatness
-            // 
-            this.comboBox_Weather_scaleCircle_flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_flatness, "comboBox_Weather_scaleCircle_flatness");
-            this.comboBox_Weather_scaleCircle_flatness.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_flatness.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_scaleCircle_flatness.Items"),
-            resources.GetString("comboBox_Weather_scaleCircle_flatness.Items1"),
-            resources.GetString("comboBox_Weather_scaleCircle_flatness.Items2")});
-            this.comboBox_Weather_scaleCircle_flatness.Name = "comboBox_Weather_scaleCircle_flatness";
-            this.comboBox_Weather_scaleCircle_flatness.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // comboBox_Weather_scaleCircle_image_background
-            // 
-            this.comboBox_Weather_scaleCircle_image_background.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleCircle_image_background.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_image_background, "comboBox_Weather_scaleCircle_image_background");
-            this.comboBox_Weather_scaleCircle_image_background.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_image_background.Name = "comboBox_Weather_scaleCircle_image_background";
-            this.comboBox_Weather_scaleCircle_image_background.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleCircle_image_background.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleCircle_image_background.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleCircle_image_background.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleCircle_image_background.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_scaleCircleX
-            // 
-            this.numericUpDown_Weather_scaleCircleX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircleX, "numericUpDown_Weather_scaleCircleX");
-            this.numericUpDown_Weather_scaleCircleX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircleX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircleX.Name = "numericUpDown_Weather_scaleCircleX";
-            this.numericUpDown_Weather_scaleCircleX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleCircleX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleCircleY
-            // 
-            this.numericUpDown_Weather_scaleCircleY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircleY, "numericUpDown_Weather_scaleCircleY");
-            this.numericUpDown_Weather_scaleCircleY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircleY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircleY.Name = "numericUpDown_Weather_scaleCircleY";
-            this.numericUpDown_Weather_scaleCircleY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleCircleY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleCircle_radius
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_radius, "numericUpDown_Weather_scaleCircle_radius");
-            this.numericUpDown_Weather_scaleCircle_radius.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_radius.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_radius.Name = "numericUpDown_Weather_scaleCircle_radius";
-            this.numericUpDown_Weather_scaleCircle_radius.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_radius.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleCircle_width
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_width, "numericUpDown_Weather_scaleCircle_width");
-            this.numericUpDown_Weather_scaleCircle_width.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_width.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_width.Name = "numericUpDown_Weather_scaleCircle_width";
-            this.numericUpDown_Weather_scaleCircle_width.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleCircle_startAngle
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_startAngle, "numericUpDown_Weather_scaleCircle_startAngle");
-            this.numericUpDown_Weather_scaleCircle_startAngle.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_startAngle.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_startAngle.Name = "numericUpDown_Weather_scaleCircle_startAngle";
-            this.numericUpDown_Weather_scaleCircle_startAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleCircle_endAngle
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_endAngle, "numericUpDown_Weather_scaleCircle_endAngle");
-            this.numericUpDown_Weather_scaleCircle_endAngle.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_endAngle.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_endAngle.Name = "numericUpDown_Weather_scaleCircle_endAngle";
-            this.numericUpDown_Weather_scaleCircle_endAngle.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_endAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label110
-            // 
-            resources.ApplyResources(this.label110, "label110");
-            this.label110.Name = "label110";
-            // 
-            // label111
-            // 
-            resources.ApplyResources(this.label111, "label111");
-            this.label111.Name = "label111";
-            // 
-            // label112
-            // 
-            resources.ApplyResources(this.label112, "label112");
-            this.label112.Name = "label112";
-            // 
-            // label113
-            // 
-            resources.ApplyResources(this.label113, "label113");
-            this.label113.Name = "label113";
-            // 
-            // label114
-            // 
-            resources.ApplyResources(this.label114, "label114");
-            this.label114.Name = "label114";
-            // 
-            // label115
-            // 
-            resources.ApplyResources(this.label115, "label115");
-            this.label115.Name = "label115";
-            // 
-            // label116
-            // 
-            resources.ApplyResources(this.label116, "label116");
-            this.label116.Name = "label116";
-            // 
-            // label117
-            // 
-            resources.ApplyResources(this.label117, "label117");
-            this.label117.Name = "label117";
-            // 
-            // label118
-            // 
-            resources.ApplyResources(this.label118, "label118");
-            this.label118.Name = "label118";
-            // 
-            // button_Weather_scaleCircle
-            // 
-            resources.ApplyResources(this.button_Weather_scaleCircle, "button_Weather_scaleCircle");
-            this.button_Weather_scaleCircle.Name = "button_Weather_scaleCircle";
-            this.button_Weather_scaleCircle.UseVisualStyleBackColor = true;
-            this.button_Weather_scaleCircle.Click += new System.EventHandler(this.button_Weather_scaleCircle_Click);
-            // 
-            // panel_Weather_hand
-            // 
-            this.panel_Weather_hand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_hand.Controls.Add(this.checkBox_Weather_hand_Use);
-            this.panel_Weather_hand.Controls.Add(this.comboBox_Weather_hand_image);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handX);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handY);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handX_offset);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handY_offset);
-            this.panel_Weather_hand.Controls.Add(this.comboBox_Weather_hand_imageCentr);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handX_centr);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handY_centr);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_hand_startAngle);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_hand_endAngle);
-            this.panel_Weather_hand.Controls.Add(this.comboBox_Weather_hand_imageBackground);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handX_background);
-            this.panel_Weather_hand.Controls.Add(this.numericUpDown_Weather_handY_background);
-            this.panel_Weather_hand.Controls.Add(this.label119);
-            this.panel_Weather_hand.Controls.Add(this.label120);
-            this.panel_Weather_hand.Controls.Add(this.label121);
-            this.panel_Weather_hand.Controls.Add(this.label122);
-            this.panel_Weather_hand.Controls.Add(this.label123);
-            this.panel_Weather_hand.Controls.Add(this.label124);
-            this.panel_Weather_hand.Controls.Add(this.label125);
-            this.panel_Weather_hand.Controls.Add(this.label126);
-            this.panel_Weather_hand.Controls.Add(this.label127);
-            this.panel_Weather_hand.Controls.Add(this.label128);
-            this.panel_Weather_hand.Controls.Add(this.label129);
-            this.panel_Weather_hand.Controls.Add(this.label130);
-            this.panel_Weather_hand.Controls.Add(this.label131);
-            this.panel_Weather_hand.Controls.Add(this.label132);
-            this.panel_Weather_hand.Controls.Add(this.label133);
-            this.panel_Weather_hand.Controls.Add(this.label134);
-            this.panel_Weather_hand.Controls.Add(this.label135);
-            resources.ApplyResources(this.panel_Weather_hand, "panel_Weather_hand");
-            this.panel_Weather_hand.Name = "panel_Weather_hand";
-            // 
-            // checkBox_Weather_hand_Use
-            // 
-            resources.ApplyResources(this.checkBox_Weather_hand_Use, "checkBox_Weather_hand_Use");
-            this.checkBox_Weather_hand_Use.Name = "checkBox_Weather_hand_Use";
-            this.checkBox_Weather_hand_Use.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_hand_Use.CheckedChanged += new System.EventHandler(this.checkBox_hand_Use_CheckedChanged);
-            this.checkBox_Weather_hand_Use.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_hand_image
-            // 
-            this.comboBox_Weather_hand_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_hand_image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_hand_image, "comboBox_Weather_hand_image");
-            this.comboBox_Weather_hand_image.FormattingEnabled = true;
-            this.comboBox_Weather_hand_image.Name = "comboBox_Weather_hand_image";
-            this.comboBox_Weather_hand_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_hand_image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_hand_image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_hand_image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_hand_image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_handX
-            // 
-            this.numericUpDown_Weather_handX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_handX, "numericUpDown_Weather_handX");
-            this.numericUpDown_Weather_handX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX.Name = "numericUpDown_Weather_handX";
-            this.numericUpDown_Weather_handX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handY
-            // 
-            this.numericUpDown_Weather_handY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_handY, "numericUpDown_Weather_handY");
-            this.numericUpDown_Weather_handY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY.Name = "numericUpDown_Weather_handY";
-            this.numericUpDown_Weather_handY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handX_offset
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_handX_offset, "numericUpDown_Weather_handX_offset");
-            this.numericUpDown_Weather_handX_offset.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX_offset.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX_offset.Name = "numericUpDown_Weather_handX_offset";
-            this.numericUpDown_Weather_handX_offset.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_handY_offset
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_handY_offset, "numericUpDown_Weather_handY_offset");
-            this.numericUpDown_Weather_handY_offset.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY_offset.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY_offset.Name = "numericUpDown_Weather_handY_offset";
-            this.numericUpDown_Weather_handY_offset.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_hand_imageCentr
-            // 
-            this.comboBox_Weather_hand_imageCentr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_hand_imageCentr.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_hand_imageCentr, "comboBox_Weather_hand_imageCentr");
-            this.comboBox_Weather_hand_imageCentr.FormattingEnabled = true;
-            this.comboBox_Weather_hand_imageCentr.Name = "comboBox_Weather_hand_imageCentr";
-            this.comboBox_Weather_hand_imageCentr.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_hand_imageCentr.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_hand_imageCentr.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_hand_imageCentr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_hand_imageCentr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_handX_centr
-            // 
-            this.numericUpDown_Weather_handX_centr.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_handX_centr, "numericUpDown_Weather_handX_centr");
-            this.numericUpDown_Weather_handX_centr.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX_centr.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX_centr.Name = "numericUpDown_Weather_handX_centr";
-            this.numericUpDown_Weather_handX_centr.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handX_centr.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handY_centr
-            // 
-            this.numericUpDown_Weather_handY_centr.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_handY_centr, "numericUpDown_Weather_handY_centr");
-            this.numericUpDown_Weather_handY_centr.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY_centr.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY_centr.Name = "numericUpDown_Weather_handY_centr";
-            this.numericUpDown_Weather_handY_centr.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handY_centr.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_hand_startAngle
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_hand_startAngle, "numericUpDown_Weather_hand_startAngle");
-            this.numericUpDown_Weather_hand_startAngle.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_hand_startAngle.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_hand_startAngle.Name = "numericUpDown_Weather_hand_startAngle";
-            this.numericUpDown_Weather_hand_startAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_hand_endAngle
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_hand_endAngle, "numericUpDown_Weather_hand_endAngle");
-            this.numericUpDown_Weather_hand_endAngle.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_hand_endAngle.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_hand_endAngle.Name = "numericUpDown_Weather_hand_endAngle";
-            this.numericUpDown_Weather_hand_endAngle.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_hand_endAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_hand_imageBackground
-            // 
-            this.comboBox_Weather_hand_imageBackground.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_hand_imageBackground.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_hand_imageBackground, "comboBox_Weather_hand_imageBackground");
-            this.comboBox_Weather_hand_imageBackground.FormattingEnabled = true;
-            this.comboBox_Weather_hand_imageBackground.Name = "comboBox_Weather_hand_imageBackground";
-            this.comboBox_Weather_hand_imageBackground.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_hand_imageBackground.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_hand_imageBackground.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_hand_imageBackground.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_hand_imageBackground.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_handX_background
-            // 
-            this.numericUpDown_Weather_handX_background.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_handX_background, "numericUpDown_Weather_handX_background");
-            this.numericUpDown_Weather_handX_background.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX_background.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX_background.Name = "numericUpDown_Weather_handX_background";
-            this.numericUpDown_Weather_handX_background.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handX_background.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handY_background
-            // 
-            this.numericUpDown_Weather_handY_background.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_handY_background, "numericUpDown_Weather_handY_background");
-            this.numericUpDown_Weather_handY_background.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY_background.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY_background.Name = "numericUpDown_Weather_handY_background";
-            this.numericUpDown_Weather_handY_background.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handY_background.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // label119
-            // 
-            resources.ApplyResources(this.label119, "label119");
-            this.label119.Name = "label119";
-            // 
-            // label120
-            // 
-            resources.ApplyResources(this.label120, "label120");
-            this.label120.Name = "label120";
-            // 
-            // label121
-            // 
-            resources.ApplyResources(this.label121, "label121");
-            this.label121.Name = "label121";
-            // 
-            // label122
-            // 
-            resources.ApplyResources(this.label122, "label122");
-            this.label122.Name = "label122";
-            // 
-            // label123
-            // 
-            resources.ApplyResources(this.label123, "label123");
-            this.label123.Name = "label123";
-            // 
-            // label124
-            // 
-            resources.ApplyResources(this.label124, "label124");
-            this.label124.Name = "label124";
-            // 
-            // label125
-            // 
-            resources.ApplyResources(this.label125, "label125");
-            this.label125.Name = "label125";
-            // 
-            // label126
-            // 
-            resources.ApplyResources(this.label126, "label126");
-            this.label126.Name = "label126";
-            // 
-            // label127
-            // 
-            resources.ApplyResources(this.label127, "label127");
-            this.label127.Name = "label127";
-            // 
-            // label128
-            // 
-            resources.ApplyResources(this.label128, "label128");
-            this.label128.Name = "label128";
-            // 
-            // label129
-            // 
-            resources.ApplyResources(this.label129, "label129");
-            this.label129.Name = "label129";
-            // 
-            // label130
-            // 
-            resources.ApplyResources(this.label130, "label130");
-            this.label130.Name = "label130";
-            // 
-            // label131
-            // 
-            resources.ApplyResources(this.label131, "label131");
-            this.label131.Name = "label131";
-            // 
-            // label132
-            // 
-            resources.ApplyResources(this.label132, "label132");
-            this.label132.Name = "label132";
-            // 
-            // label133
-            // 
-            resources.ApplyResources(this.label133, "label133");
-            this.label133.Name = "label133";
-            // 
-            // label134
-            // 
-            resources.ApplyResources(this.label134, "label134");
-            this.label134.Name = "label134";
-            // 
-            // label135
-            // 
-            resources.ApplyResources(this.label135, "label135");
-            this.label135.Name = "label135";
-            // 
-            // button_Weather_hand
-            // 
-            resources.ApplyResources(this.button_Weather_hand, "button_Weather_hand");
-            this.button_Weather_hand.Name = "button_Weather_hand";
-            this.button_Weather_hand.UseVisualStyleBackColor = true;
-            this.button_Weather_hand.Click += new System.EventHandler(this.button_Weather_hand_Click);
-            // 
-            // panel_Weather_textMax
-            // 
-            this.panel_Weather_textMax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_textMax.Controls.Add(this.checkBox_Weather_UseMax);
-            this.panel_Weather_textMax.Controls.Add(this.comboBox_Weather_imageMax);
-            this.panel_Weather_textMax.Controls.Add(this.comboBox_Weather_iconMax);
-            this.panel_Weather_textMax.Controls.Add(this.comboBox_Weather_unitFMax);
-            this.panel_Weather_textMax.Controls.Add(this.numericUpDown_WeatherXMax);
-            this.panel_Weather_textMax.Controls.Add(this.numericUpDown_WeatherYMax);
-            this.panel_Weather_textMax.Controls.Add(this.numericUpDown_Weather_iconXMax);
-            this.panel_Weather_textMax.Controls.Add(this.numericUpDown_Weather_iconYMax);
-            this.panel_Weather_textMax.Controls.Add(this.comboBox_Weather_alignmentMax);
-            this.panel_Weather_textMax.Controls.Add(this.numericUpDown_Weather_spacingMax);
-            this.panel_Weather_textMax.Controls.Add(this.comboBox_Weather_imageErrorMax);
-            this.panel_Weather_textMax.Controls.Add(this.comboBox_Weather_imageMinusMax);
-            this.panel_Weather_textMax.Controls.Add(this.checkBox_Weather_followMax);
-            this.panel_Weather_textMax.Controls.Add(this.label154);
-            this.panel_Weather_textMax.Controls.Add(this.label156);
-            this.panel_Weather_textMax.Controls.Add(this.label157);
-            this.panel_Weather_textMax.Controls.Add(this.label158);
-            this.panel_Weather_textMax.Controls.Add(this.label159);
-            this.panel_Weather_textMax.Controls.Add(this.label160);
-            this.panel_Weather_textMax.Controls.Add(this.label161);
-            this.panel_Weather_textMax.Controls.Add(this.label162);
-            this.panel_Weather_textMax.Controls.Add(this.label163);
-            this.panel_Weather_textMax.Controls.Add(this.label164);
-            this.panel_Weather_textMax.Controls.Add(this.label165);
-            this.panel_Weather_textMax.Controls.Add(this.label166);
-            this.panel_Weather_textMax.Controls.Add(this.label180);
-            resources.ApplyResources(this.panel_Weather_textMax, "panel_Weather_textMax");
-            this.panel_Weather_textMax.Name = "panel_Weather_textMax";
-            // 
-            // checkBox_Weather_UseMax
-            // 
-            resources.ApplyResources(this.checkBox_Weather_UseMax, "checkBox_Weather_UseMax");
-            this.checkBox_Weather_UseMax.Name = "checkBox_Weather_UseMax";
-            this.checkBox_Weather_UseMax.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_UseMax.CheckedChanged += new System.EventHandler(this.checkBox_Weather_textMax_Use_CheckedChanged);
-            this.checkBox_Weather_UseMax.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_imageMax
-            // 
-            this.comboBox_Weather_imageMax.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMax.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMax, "comboBox_Weather_imageMax");
-            this.comboBox_Weather_imageMax.FormattingEnabled = true;
-            this.comboBox_Weather_imageMax.Name = "comboBox_Weather_imageMax";
-            this.comboBox_Weather_imageMax.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMax.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMax.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMax.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_iconMax
-            // 
-            this.comboBox_Weather_iconMax.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_iconMax.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_iconMax, "comboBox_Weather_iconMax");
-            this.comboBox_Weather_iconMax.FormattingEnabled = true;
-            this.comboBox_Weather_iconMax.Name = "comboBox_Weather_iconMax";
-            this.comboBox_Weather_iconMax.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_iconMax.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_iconMax.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_iconMax.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_iconMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_unitFMax
-            // 
-            this.comboBox_Weather_unitFMax.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_unitFMax.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_unitFMax, "comboBox_Weather_unitFMax");
-            this.comboBox_Weather_unitFMax.FormattingEnabled = true;
-            this.comboBox_Weather_unitFMax.Name = "comboBox_Weather_unitFMax";
-            this.comboBox_Weather_unitFMax.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_unitFMax.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_unitFMax.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_unitFMax.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_unitFMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WeatherXMax
-            // 
-            this.numericUpDown_WeatherXMax.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WeatherXMax, "numericUpDown_WeatherXMax");
-            this.numericUpDown_WeatherXMax.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherXMax.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherXMax.Name = "numericUpDown_WeatherXMax";
-            this.numericUpDown_WeatherXMax.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherXMax.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WeatherYMax
-            // 
-            this.numericUpDown_WeatherYMax.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WeatherYMax, "numericUpDown_WeatherYMax");
-            this.numericUpDown_WeatherYMax.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherYMax.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherYMax.Name = "numericUpDown_WeatherYMax";
-            this.numericUpDown_WeatherYMax.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherYMax.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconXMax
-            // 
-            this.numericUpDown_Weather_iconXMax.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_iconXMax, "numericUpDown_Weather_iconXMax");
-            this.numericUpDown_Weather_iconXMax.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconXMax.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconXMax.Name = "numericUpDown_Weather_iconXMax";
-            this.numericUpDown_Weather_iconXMax.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconXMax.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconYMax
-            // 
-            this.numericUpDown_Weather_iconYMax.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_iconYMax, "numericUpDown_Weather_iconYMax");
-            this.numericUpDown_Weather_iconYMax.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconYMax.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconYMax.Name = "numericUpDown_Weather_iconYMax";
-            this.numericUpDown_Weather_iconYMax.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconYMax.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_Weather_alignmentMax
-            // 
-            this.comboBox_Weather_alignmentMax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_alignmentMax, "comboBox_Weather_alignmentMax");
-            this.comboBox_Weather_alignmentMax.FormattingEnabled = true;
-            this.comboBox_Weather_alignmentMax.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_alignmentMax.Items"),
-            resources.GetString("comboBox_Weather_alignmentMax.Items1"),
-            resources.GetString("comboBox_Weather_alignmentMax.Items2")});
-            this.comboBox_Weather_alignmentMax.Name = "comboBox_Weather_alignmentMax";
-            this.comboBox_Weather_alignmentMax.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // numericUpDown_Weather_spacingMax
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_spacingMax, "numericUpDown_Weather_spacingMax");
-            this.numericUpDown_Weather_spacingMax.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_spacingMax.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_spacingMax.Name = "numericUpDown_Weather_spacingMax";
-            this.numericUpDown_Weather_spacingMax.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_imageErrorMax
-            // 
-            this.comboBox_Weather_imageErrorMax.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageErrorMax.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageErrorMax, "comboBox_Weather_imageErrorMax");
-            this.comboBox_Weather_imageErrorMax.FormattingEnabled = true;
-            this.comboBox_Weather_imageErrorMax.Name = "comboBox_Weather_imageErrorMax";
-            this.comboBox_Weather_imageErrorMax.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageErrorMax.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageErrorMax.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageErrorMax.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageErrorMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_imageMinusMax
-            // 
-            this.comboBox_Weather_imageMinusMax.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMinusMax.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMinusMax, "comboBox_Weather_imageMinusMax");
-            this.comboBox_Weather_imageMinusMax.FormattingEnabled = true;
-            this.comboBox_Weather_imageMinusMax.Name = "comboBox_Weather_imageMinusMax";
-            this.comboBox_Weather_imageMinusMax.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMinusMax.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMinusMax.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMinusMax.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMinusMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // checkBox_Weather_followMax
-            // 
-            resources.ApplyResources(this.checkBox_Weather_followMax, "checkBox_Weather_followMax");
-            this.checkBox_Weather_followMax.Name = "checkBox_Weather_followMax";
-            this.checkBox_Weather_followMax.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_followMax.CheckedChanged += new System.EventHandler(this.checkBox_Weather_followMax_CheckedChanged);
-            this.checkBox_Weather_followMax.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // label154
-            // 
-            resources.ApplyResources(this.label154, "label154");
-            this.label154.Name = "label154";
-            // 
-            // label156
-            // 
-            resources.ApplyResources(this.label156, "label156");
-            this.label156.Name = "label156";
-            // 
-            // label157
-            // 
-            resources.ApplyResources(this.label157, "label157");
-            this.label157.Name = "label157";
-            // 
-            // label158
-            // 
-            resources.ApplyResources(this.label158, "label158");
-            this.label158.Name = "label158";
-            // 
-            // label159
-            // 
-            resources.ApplyResources(this.label159, "label159");
-            this.label159.Name = "label159";
-            // 
-            // label160
-            // 
-            resources.ApplyResources(this.label160, "label160");
-            this.label160.Name = "label160";
-            // 
-            // label161
-            // 
-            resources.ApplyResources(this.label161, "label161");
-            this.label161.Name = "label161";
-            // 
-            // label162
-            // 
-            resources.ApplyResources(this.label162, "label162");
-            this.label162.Name = "label162";
-            // 
-            // label163
-            // 
-            resources.ApplyResources(this.label163, "label163");
-            this.label163.Name = "label163";
-            // 
-            // label164
-            // 
-            resources.ApplyResources(this.label164, "label164");
-            this.label164.Name = "label164";
-            // 
-            // label165
-            // 
-            resources.ApplyResources(this.label165, "label165");
-            this.label165.Name = "label165";
-            // 
-            // label166
-            // 
-            resources.ApplyResources(this.label166, "label166");
-            this.label166.Name = "label166";
-            // 
-            // label180
-            // 
-            resources.ApplyResources(this.label180, "label180");
-            this.label180.Name = "label180";
-            // 
-            // button_Weather_textMax
-            // 
-            resources.ApplyResources(this.button_Weather_textMax, "button_Weather_textMax");
-            this.button_Weather_textMax.Name = "button_Weather_textMax";
-            this.button_Weather_textMax.UseVisualStyleBackColor = true;
-            this.button_Weather_textMax.Click += new System.EventHandler(this.button_Weather_textMax_Click);
-            // 
-            // panel_Weather_textMin
-            // 
-            this.panel_Weather_textMin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_textMin.Controls.Add(this.checkBox_Weather_UseMin);
-            this.panel_Weather_textMin.Controls.Add(this.comboBox_Weather_imageMin);
-            this.panel_Weather_textMin.Controls.Add(this.comboBox_Weather_iconMin);
-            this.panel_Weather_textMin.Controls.Add(this.comboBox_Weather_unitFMin);
-            this.panel_Weather_textMin.Controls.Add(this.numericUpDown_WeatherXMin);
-            this.panel_Weather_textMin.Controls.Add(this.numericUpDown_WeatherYMin);
-            this.panel_Weather_textMin.Controls.Add(this.numericUpDown_Weather_iconXMin);
-            this.panel_Weather_textMin.Controls.Add(this.numericUpDown_Weather_iconYMin);
-            this.panel_Weather_textMin.Controls.Add(this.comboBox_Weather_alignmentMin);
-            this.panel_Weather_textMin.Controls.Add(this.numericUpDown_Weather_spacingMin);
-            this.panel_Weather_textMin.Controls.Add(this.comboBox_Weather_imageErrorMin);
-            this.panel_Weather_textMin.Controls.Add(this.comboBox_Weather_imageMinusMin);
-            this.panel_Weather_textMin.Controls.Add(this.label167);
-            this.panel_Weather_textMin.Controls.Add(this.label169);
-            this.panel_Weather_textMin.Controls.Add(this.label170);
-            this.panel_Weather_textMin.Controls.Add(this.label171);
-            this.panel_Weather_textMin.Controls.Add(this.label172);
-            this.panel_Weather_textMin.Controls.Add(this.label173);
-            this.panel_Weather_textMin.Controls.Add(this.label174);
-            this.panel_Weather_textMin.Controls.Add(this.label175);
-            this.panel_Weather_textMin.Controls.Add(this.label176);
-            this.panel_Weather_textMin.Controls.Add(this.label177);
-            this.panel_Weather_textMin.Controls.Add(this.label178);
-            this.panel_Weather_textMin.Controls.Add(this.label179);
-            this.panel_Weather_textMin.Controls.Add(this.label181);
-            resources.ApplyResources(this.panel_Weather_textMin, "panel_Weather_textMin");
-            this.panel_Weather_textMin.Name = "panel_Weather_textMin";
-            // 
-            // checkBox_Weather_UseMin
-            // 
-            resources.ApplyResources(this.checkBox_Weather_UseMin, "checkBox_Weather_UseMin");
-            this.checkBox_Weather_UseMin.Name = "checkBox_Weather_UseMin";
-            this.checkBox_Weather_UseMin.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_UseMin.CheckedChanged += new System.EventHandler(this.checkBox_text_Use_CheckedChanged);
-            this.checkBox_Weather_UseMin.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_imageMin
-            // 
-            this.comboBox_Weather_imageMin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMin.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMin, "comboBox_Weather_imageMin");
-            this.comboBox_Weather_imageMin.FormattingEnabled = true;
-            this.comboBox_Weather_imageMin.Name = "comboBox_Weather_imageMin";
-            this.comboBox_Weather_imageMin.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMin.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMin.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_iconMin
-            // 
-            this.comboBox_Weather_iconMin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_iconMin.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_iconMin, "comboBox_Weather_iconMin");
-            this.comboBox_Weather_iconMin.FormattingEnabled = true;
-            this.comboBox_Weather_iconMin.Name = "comboBox_Weather_iconMin";
-            this.comboBox_Weather_iconMin.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_iconMin.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_iconMin.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_iconMin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_iconMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_unitFMin
-            // 
-            this.comboBox_Weather_unitFMin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_unitFMin.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_unitFMin, "comboBox_Weather_unitFMin");
-            this.comboBox_Weather_unitFMin.FormattingEnabled = true;
-            this.comboBox_Weather_unitFMin.Name = "comboBox_Weather_unitFMin";
-            this.comboBox_Weather_unitFMin.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_unitFMin.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_unitFMin.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_unitFMin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_unitFMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WeatherXMin
-            // 
-            this.numericUpDown_WeatherXMin.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WeatherXMin, "numericUpDown_WeatherXMin");
-            this.numericUpDown_WeatherXMin.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherXMin.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherXMin.Name = "numericUpDown_WeatherXMin";
-            this.numericUpDown_WeatherXMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherXMin.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WeatherYMin
-            // 
-            this.numericUpDown_WeatherYMin.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WeatherYMin, "numericUpDown_WeatherYMin");
-            this.numericUpDown_WeatherYMin.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherYMin.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherYMin.Name = "numericUpDown_WeatherYMin";
-            this.numericUpDown_WeatherYMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherYMin.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconXMin
-            // 
-            this.numericUpDown_Weather_iconXMin.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_iconXMin, "numericUpDown_Weather_iconXMin");
-            this.numericUpDown_Weather_iconXMin.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconXMin.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconXMin.Name = "numericUpDown_Weather_iconXMin";
-            this.numericUpDown_Weather_iconXMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconXMin.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconYMin
-            // 
-            this.numericUpDown_Weather_iconYMin.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_iconYMin, "numericUpDown_Weather_iconYMin");
-            this.numericUpDown_Weather_iconYMin.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconYMin.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconYMin.Name = "numericUpDown_Weather_iconYMin";
-            this.numericUpDown_Weather_iconYMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconYMin.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_Weather_alignmentMin
-            // 
-            this.comboBox_Weather_alignmentMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_alignmentMin, "comboBox_Weather_alignmentMin");
-            this.comboBox_Weather_alignmentMin.FormattingEnabled = true;
-            this.comboBox_Weather_alignmentMin.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_alignmentMin.Items"),
-            resources.GetString("comboBox_Weather_alignmentMin.Items1"),
-            resources.GetString("comboBox_Weather_alignmentMin.Items2")});
-            this.comboBox_Weather_alignmentMin.Name = "comboBox_Weather_alignmentMin";
-            this.comboBox_Weather_alignmentMin.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // numericUpDown_Weather_spacingMin
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_spacingMin, "numericUpDown_Weather_spacingMin");
-            this.numericUpDown_Weather_spacingMin.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_spacingMin.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_spacingMin.Name = "numericUpDown_Weather_spacingMin";
-            this.numericUpDown_Weather_spacingMin.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_imageErrorMin
-            // 
-            this.comboBox_Weather_imageErrorMin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageErrorMin.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageErrorMin, "comboBox_Weather_imageErrorMin");
-            this.comboBox_Weather_imageErrorMin.FormattingEnabled = true;
-            this.comboBox_Weather_imageErrorMin.Name = "comboBox_Weather_imageErrorMin";
-            this.comboBox_Weather_imageErrorMin.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageErrorMin.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageErrorMin.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageErrorMin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageErrorMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_imageMinusMin
-            // 
-            this.comboBox_Weather_imageMinusMin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMinusMin.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMinusMin, "comboBox_Weather_imageMinusMin");
-            this.comboBox_Weather_imageMinusMin.FormattingEnabled = true;
-            this.comboBox_Weather_imageMinusMin.Name = "comboBox_Weather_imageMinusMin";
-            this.comboBox_Weather_imageMinusMin.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMinusMin.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMinusMin.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMinusMin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMinusMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label167
-            // 
-            resources.ApplyResources(this.label167, "label167");
-            this.label167.Name = "label167";
-            // 
-            // label169
-            // 
-            resources.ApplyResources(this.label169, "label169");
-            this.label169.Name = "label169";
-            // 
-            // label170
-            // 
-            resources.ApplyResources(this.label170, "label170");
-            this.label170.Name = "label170";
-            // 
-            // label171
-            // 
-            resources.ApplyResources(this.label171, "label171");
-            this.label171.Name = "label171";
-            // 
-            // label172
-            // 
-            resources.ApplyResources(this.label172, "label172");
-            this.label172.Name = "label172";
-            // 
-            // label173
-            // 
-            resources.ApplyResources(this.label173, "label173");
-            this.label173.Name = "label173";
-            // 
-            // label174
-            // 
-            resources.ApplyResources(this.label174, "label174");
-            this.label174.Name = "label174";
-            // 
-            // label175
-            // 
-            resources.ApplyResources(this.label175, "label175");
-            this.label175.Name = "label175";
-            // 
-            // label176
-            // 
-            resources.ApplyResources(this.label176, "label176");
-            this.label176.Name = "label176";
-            // 
-            // label177
-            // 
-            resources.ApplyResources(this.label177, "label177");
-            this.label177.Name = "label177";
-            // 
-            // label178
-            // 
-            resources.ApplyResources(this.label178, "label178");
-            this.label178.Name = "label178";
-            // 
-            // label179
-            // 
-            resources.ApplyResources(this.label179, "label179");
-            this.label179.Name = "label179";
-            // 
-            // label181
-            // 
-            resources.ApplyResources(this.label181, "label181");
-            this.label181.Name = "label181";
-            // 
-            // button_Weather_textMin
-            // 
-            resources.ApplyResources(this.button_Weather_textMin, "button_Weather_textMin");
-            this.button_Weather_textMin.Name = "button_Weather_textMin";
-            this.button_Weather_textMin.UseVisualStyleBackColor = true;
-            this.button_Weather_textMin.Click += new System.EventHandler(this.button_Weather_textMin_Click);
-            // 
-            // panel_Weather_text
-            // 
-            this.panel_Weather_text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_text.Controls.Add(this.checkBox_Weather_Use);
-            this.panel_Weather_text.Controls.Add(this.comboBox_Weather_image);
-            this.panel_Weather_text.Controls.Add(this.comboBox_Weather_icon);
-            this.panel_Weather_text.Controls.Add(this.comboBox_Weather_unitF);
-            this.panel_Weather_text.Controls.Add(this.numericUpDown_WeatherX);
-            this.panel_Weather_text.Controls.Add(this.numericUpDown_WeatherY);
-            this.panel_Weather_text.Controls.Add(this.numericUpDown_Weather_iconX);
-            this.panel_Weather_text.Controls.Add(this.numericUpDown_Weather_iconY);
-            this.panel_Weather_text.Controls.Add(this.comboBox_Weather_alignment);
-            this.panel_Weather_text.Controls.Add(this.numericUpDown_Weather_spacing);
-            this.panel_Weather_text.Controls.Add(this.comboBox_Weather_imageError);
-            this.panel_Weather_text.Controls.Add(this.comboBox_Weather_imageMinus);
-            this.panel_Weather_text.Controls.Add(this.label136);
-            this.panel_Weather_text.Controls.Add(this.label138);
-            this.panel_Weather_text.Controls.Add(this.label139);
-            this.panel_Weather_text.Controls.Add(this.label140);
-            this.panel_Weather_text.Controls.Add(this.label141);
-            this.panel_Weather_text.Controls.Add(this.label142);
-            this.panel_Weather_text.Controls.Add(this.label143);
-            this.panel_Weather_text.Controls.Add(this.label144);
-            this.panel_Weather_text.Controls.Add(this.label145);
-            this.panel_Weather_text.Controls.Add(this.label146);
-            this.panel_Weather_text.Controls.Add(this.label147);
-            this.panel_Weather_text.Controls.Add(this.label153);
-            this.panel_Weather_text.Controls.Add(this.label182);
-            resources.ApplyResources(this.panel_Weather_text, "panel_Weather_text");
-            this.panel_Weather_text.Name = "panel_Weather_text";
-            // 
-            // checkBox_Weather_Use
-            // 
-            resources.ApplyResources(this.checkBox_Weather_Use, "checkBox_Weather_Use");
-            this.checkBox_Weather_Use.Name = "checkBox_Weather_Use";
-            this.checkBox_Weather_Use.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_Use.CheckedChanged += new System.EventHandler(this.checkBox_text_Use_CheckedChanged);
-            this.checkBox_Weather_Use.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_image
-            // 
-            this.comboBox_Weather_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_image, "comboBox_Weather_image");
-            this.comboBox_Weather_image.FormattingEnabled = true;
-            this.comboBox_Weather_image.Name = "comboBox_Weather_image";
-            this.comboBox_Weather_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_icon
-            // 
-            this.comboBox_Weather_icon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_icon.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_icon, "comboBox_Weather_icon");
-            this.comboBox_Weather_icon.FormattingEnabled = true;
-            this.comboBox_Weather_icon.Name = "comboBox_Weather_icon";
-            this.comboBox_Weather_icon.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_icon.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_icon.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_icon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_icon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_unitF
-            // 
-            this.comboBox_Weather_unitF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_unitF.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_unitF, "comboBox_Weather_unitF");
-            this.comboBox_Weather_unitF.FormattingEnabled = true;
-            this.comboBox_Weather_unitF.Name = "comboBox_Weather_unitF";
-            this.comboBox_Weather_unitF.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_unitF.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_unitF.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_unitF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_unitF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WeatherX
-            // 
-            this.numericUpDown_WeatherX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WeatherX, "numericUpDown_WeatherX");
-            this.numericUpDown_WeatherX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherX.Name = "numericUpDown_WeatherX";
-            this.numericUpDown_WeatherX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WeatherY
-            // 
-            this.numericUpDown_WeatherY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WeatherY, "numericUpDown_WeatherY");
-            this.numericUpDown_WeatherY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherY.Name = "numericUpDown_WeatherY";
-            this.numericUpDown_WeatherY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconX
-            // 
-            this.numericUpDown_Weather_iconX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_iconX, "numericUpDown_Weather_iconX");
-            this.numericUpDown_Weather_iconX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconX.Name = "numericUpDown_Weather_iconX";
-            this.numericUpDown_Weather_iconX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconY
-            // 
-            this.numericUpDown_Weather_iconY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_iconY, "numericUpDown_Weather_iconY");
-            this.numericUpDown_Weather_iconY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconY.Name = "numericUpDown_Weather_iconY";
-            this.numericUpDown_Weather_iconY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_Weather_alignment
-            // 
-            this.comboBox_Weather_alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_alignment, "comboBox_Weather_alignment");
-            this.comboBox_Weather_alignment.FormattingEnabled = true;
-            this.comboBox_Weather_alignment.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_alignment.Items"),
-            resources.GetString("comboBox_Weather_alignment.Items1"),
-            resources.GetString("comboBox_Weather_alignment.Items2")});
-            this.comboBox_Weather_alignment.Name = "comboBox_Weather_alignment";
-            this.comboBox_Weather_alignment.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // numericUpDown_Weather_spacing
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_spacing, "numericUpDown_Weather_spacing");
-            this.numericUpDown_Weather_spacing.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_spacing.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_spacing.Name = "numericUpDown_Weather_spacing";
-            this.numericUpDown_Weather_spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_imageError
-            // 
-            this.comboBox_Weather_imageError.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageError.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageError, "comboBox_Weather_imageError");
-            this.comboBox_Weather_imageError.FormattingEnabled = true;
-            this.comboBox_Weather_imageError.Name = "comboBox_Weather_imageError";
-            this.comboBox_Weather_imageError.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageError.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageError.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageError.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageError.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_imageMinus
-            // 
-            this.comboBox_Weather_imageMinus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMinus.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMinus, "comboBox_Weather_imageMinus");
-            this.comboBox_Weather_imageMinus.FormattingEnabled = true;
-            this.comboBox_Weather_imageMinus.Name = "comboBox_Weather_imageMinus";
-            this.comboBox_Weather_imageMinus.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMinus.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMinus.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMinus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMinus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label136
-            // 
-            resources.ApplyResources(this.label136, "label136");
-            this.label136.Name = "label136";
-            // 
-            // label138
-            // 
-            resources.ApplyResources(this.label138, "label138");
-            this.label138.Name = "label138";
-            // 
-            // label139
-            // 
-            resources.ApplyResources(this.label139, "label139");
-            this.label139.Name = "label139";
-            // 
-            // label140
-            // 
-            resources.ApplyResources(this.label140, "label140");
-            this.label140.Name = "label140";
-            // 
-            // label141
-            // 
-            resources.ApplyResources(this.label141, "label141");
-            this.label141.Name = "label141";
-            // 
-            // label142
-            // 
-            resources.ApplyResources(this.label142, "label142");
-            this.label142.Name = "label142";
-            // 
-            // label143
-            // 
-            resources.ApplyResources(this.label143, "label143");
-            this.label143.Name = "label143";
-            // 
-            // label144
-            // 
-            resources.ApplyResources(this.label144, "label144");
-            this.label144.Name = "label144";
-            // 
-            // label145
-            // 
-            resources.ApplyResources(this.label145, "label145");
-            this.label145.Name = "label145";
-            // 
-            // label146
-            // 
-            resources.ApplyResources(this.label146, "label146");
-            this.label146.Name = "label146";
-            // 
-            // label147
-            // 
-            resources.ApplyResources(this.label147, "label147");
-            this.label147.Name = "label147";
-            // 
-            // label153
-            // 
-            resources.ApplyResources(this.label153, "label153");
-            this.label153.Name = "label153";
-            // 
-            // label182
-            // 
-            resources.ApplyResources(this.label182, "label182");
-            this.label182.Name = "label182";
-            // 
-            // button_Weather_text
-            // 
-            resources.ApplyResources(this.button_Weather_text, "button_Weather_text");
-            this.button_Weather_text.Name = "button_Weather_text";
-            this.button_Weather_text.UseVisualStyleBackColor = true;
-            this.button_Weather_text.Click += new System.EventHandler(this.button_Weather_text_Click);
-            // 
-            // panel_Weather_pictures
-            // 
-            this.panel_Weather_pictures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_pictures.Controls.Add(this.checkBox_Weather_pictures_Use);
-            this.panel_Weather_pictures.Controls.Add(this.comboBox_Weather_pictures_image);
-            this.panel_Weather_pictures.Controls.Add(this.numericUpDown_Weather_picturesX);
-            this.panel_Weather_pictures.Controls.Add(this.numericUpDown_Weather_picturesY);
-            this.panel_Weather_pictures.Controls.Add(this.numericUpDown_Weather_pictures_count);
-            this.panel_Weather_pictures.Controls.Add(this.label148);
-            this.panel_Weather_pictures.Controls.Add(this.label149);
-            this.panel_Weather_pictures.Controls.Add(this.label150);
-            this.panel_Weather_pictures.Controls.Add(this.label151);
-            this.panel_Weather_pictures.Controls.Add(this.label152);
-            resources.ApplyResources(this.panel_Weather_pictures, "panel_Weather_pictures");
-            this.panel_Weather_pictures.Name = "panel_Weather_pictures";
-            // 
-            // checkBox_Weather_pictures_Use
-            // 
-            resources.ApplyResources(this.checkBox_Weather_pictures_Use, "checkBox_Weather_pictures_Use");
-            this.checkBox_Weather_pictures_Use.Name = "checkBox_Weather_pictures_Use";
-            this.checkBox_Weather_pictures_Use.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_pictures_Use.CheckedChanged += new System.EventHandler(this.checkBox_pictures_Use_CheckedChanged);
-            this.checkBox_Weather_pictures_Use.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_pictures_image
-            // 
-            this.comboBox_Weather_pictures_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_pictures_image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_pictures_image, "comboBox_Weather_pictures_image");
-            this.comboBox_Weather_pictures_image.FormattingEnabled = true;
-            this.comboBox_Weather_pictures_image.Name = "comboBox_Weather_pictures_image";
-            this.toolTip_Weather.SetToolTip(this.comboBox_Weather_pictures_image, resources.GetString("comboBox_Weather_pictures_image.ToolTip"));
-            this.comboBox_Weather_pictures_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_pictures_image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_pictures_image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_pictures_image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_pictures_image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_picturesX
-            // 
-            this.numericUpDown_Weather_picturesX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_picturesX, "numericUpDown_Weather_picturesX");
-            this.numericUpDown_Weather_picturesX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_picturesX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_picturesX.Name = "numericUpDown_Weather_picturesX";
-            this.numericUpDown_Weather_picturesX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_picturesX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_picturesY
-            // 
-            this.numericUpDown_Weather_picturesY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_picturesY, "numericUpDown_Weather_picturesY");
-            this.numericUpDown_Weather_picturesY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_picturesY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_picturesY.Name = "numericUpDown_Weather_picturesY";
-            this.numericUpDown_Weather_picturesY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_picturesY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_pictures_count
-            // 
-            this.numericUpDown_Weather_pictures_count.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_pictures_count, "numericUpDown_Weather_pictures_count");
-            this.numericUpDown_Weather_pictures_count.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_pictures_count.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_pictures_count.Name = "numericUpDown_Weather_pictures_count";
-            this.numericUpDown_Weather_pictures_count.Value = new decimal(new int[] {
-            29,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_pictures_count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label148
-            // 
-            resources.ApplyResources(this.label148, "label148");
-            this.label148.Name = "label148";
-            // 
-            // label149
-            // 
-            resources.ApplyResources(this.label149, "label149");
-            this.label149.Name = "label149";
-            // 
-            // label150
-            // 
-            resources.ApplyResources(this.label150, "label150");
-            this.label150.Name = "label150";
-            // 
-            // label151
-            // 
-            resources.ApplyResources(this.label151, "label151");
-            this.label151.Name = "label151";
-            // 
-            // label152
-            // 
-            resources.ApplyResources(this.label152, "label152");
-            this.label152.Name = "label152";
-            // 
-            // button_Weather_pictures
-            // 
-            resources.ApplyResources(this.button_Weather_pictures, "button_Weather_pictures");
-            this.button_Weather_pictures.Name = "button_Weather_pictures";
-            this.button_Weather_pictures.UseVisualStyleBackColor = true;
-            this.button_Weather_pictures.Click += new System.EventHandler(this.button_Weather_pictures_Click);
             // 
             // tabPage_UVindex
             // 
             resources.ApplyResources(this.tabPage_UVindex, "tabPage_UVindex");
+            this.tabPage_UVindex.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_UVindex.Controls.Add(this.userControl_scaleLinear_UVindex);
+            this.tabPage_UVindex.Controls.Add(this.userControl_scaleCircle_UVindex);
+            this.tabPage_UVindex.Controls.Add(this.userControl_hand_UVindex);
+            this.tabPage_UVindex.Controls.Add(this.userControl_text_UVindex);
+            this.tabPage_UVindex.Controls.Add(this.userControl_pictures_UVindex);
             this.tabPage_UVindex.Name = "tabPage_UVindex";
-            this.tabPage_UVindex.UseVisualStyleBackColor = true;
             // 
             // tabPage_AirQuality
             // 
             resources.ApplyResources(this.tabPage_AirQuality, "tabPage_AirQuality");
+            this.tabPage_AirQuality.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_AirQuality.Controls.Add(this.userControl_scaleLinear_AirQuality);
+            this.tabPage_AirQuality.Controls.Add(this.userControl_scaleCircle_AirQuality);
+            this.tabPage_AirQuality.Controls.Add(this.userControl_hand_AirQuality);
+            this.tabPage_AirQuality.Controls.Add(this.userControl_text_AirQuality);
+            this.tabPage_AirQuality.Controls.Add(this.userControl_pictures_AirQuality);
             this.tabPage_AirQuality.Name = "tabPage_AirQuality";
-            this.tabPage_AirQuality.UseVisualStyleBackColor = true;
             // 
             // tabPage_Humidity
             // 
             resources.ApplyResources(this.tabPage_Humidity, "tabPage_Humidity");
+            this.tabPage_Humidity.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Humidity.Controls.Add(this.userControl_scaleLinear_Humidity);
+            this.tabPage_Humidity.Controls.Add(this.userControl_scaleCircle_Humidity);
+            this.tabPage_Humidity.Controls.Add(this.userControl_hand_Humidity);
+            this.tabPage_Humidity.Controls.Add(this.userControl_text_Humidity);
+            this.tabPage_Humidity.Controls.Add(this.userControl_pictures_Humidity);
             this.tabPage_Humidity.Name = "tabPage_Humidity";
-            this.tabPage_Humidity.UseVisualStyleBackColor = true;
             // 
             // tabPage_Sunrise
             // 
@@ -8079,20 +5562,35 @@
             // tabPage_WindForce
             // 
             resources.ApplyResources(this.tabPage_WindForce, "tabPage_WindForce");
+            this.tabPage_WindForce.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_WindForce.Controls.Add(this.userControl_scaleLinear_WindForce);
+            this.tabPage_WindForce.Controls.Add(this.userControl_scaleCircle_WindForce);
+            this.tabPage_WindForce.Controls.Add(this.userControl_hand_WindForce);
+            this.tabPage_WindForce.Controls.Add(this.userControl_text_WindForce);
+            this.tabPage_WindForce.Controls.Add(this.userControl_pictures_WindForce);
             this.tabPage_WindForce.Name = "tabPage_WindForce";
-            this.tabPage_WindForce.UseVisualStyleBackColor = true;
             // 
             // tabPage_Altitude
             // 
             resources.ApplyResources(this.tabPage_Altitude, "tabPage_Altitude");
+            this.tabPage_Altitude.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Altitude.Controls.Add(this.userControl_scaleLinear_Altitude);
+            this.tabPage_Altitude.Controls.Add(this.userControl_scaleCircle_Altitude);
+            this.tabPage_Altitude.Controls.Add(this.userControl_hand_Altitude);
+            this.tabPage_Altitude.Controls.Add(this.userControl_text_Altitude);
+            this.tabPage_Altitude.Controls.Add(this.userControl_pictures_Altitude);
             this.tabPage_Altitude.Name = "tabPage_Altitude";
-            this.tabPage_Altitude.UseVisualStyleBackColor = true;
             // 
             // tabPage_AirPressure
             // 
             resources.ApplyResources(this.tabPage_AirPressure, "tabPage_AirPressure");
+            this.tabPage_AirPressure.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_AirPressure.Controls.Add(this.userControl_scaleLinear_AirPressure);
+            this.tabPage_AirPressure.Controls.Add(this.userControl_scaleCircle_AirPressure);
+            this.tabPage_AirPressure.Controls.Add(this.userControl_hand_AirPressure);
+            this.tabPage_AirPressure.Controls.Add(this.userControl_text_AirPressure);
+            this.tabPage_AirPressure.Controls.Add(this.userControl_pictures_AirPressure);
             this.tabPage_AirPressure.Name = "tabPage_AirPressure";
-            this.tabPage_AirPressure.UseVisualStyleBackColor = true;
             // 
             // tabPage_System
             // 
@@ -8497,50 +5995,6 @@
             this.tabPage_Battery.Controls.Add(this.userControl_text_Battery);
             this.tabPage_Battery.Controls.Add(this.userControl_pictures_Battery);
             this.tabPage_Battery.Name = "tabPage_Battery";
-            // 
-            // userControl_scaleLinear_Battery
-            // 
-            this.userControl_scaleLinear_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Battery, "userControl_scaleLinear_Battery");
-            this.userControl_scaleLinear_Battery.Collapsed = true;
-            this.userControl_scaleLinear_Battery.Name = "userControl_scaleLinear_Battery";
-            this.userControl_scaleLinear_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Battery
-            // 
-            this.userControl_scaleCircle_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Battery, "userControl_scaleCircle_Battery");
-            this.userControl_scaleCircle_Battery.Collapsed = true;
-            this.userControl_scaleCircle_Battery.Name = "userControl_scaleCircle_Battery";
-            this.userControl_scaleCircle_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Battery
-            // 
-            this.userControl_hand_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Battery, "userControl_hand_Battery");
-            this.userControl_hand_Battery.Collapsed = true;
-            this.userControl_hand_Battery.Name = "userControl_hand_Battery";
-            this.userControl_hand_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Battery
-            // 
-            this.userControl_text_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_text_Battery, "userControl_text_Battery");
-            this.userControl_text_Battery.Collapsed = true;
-            this.userControl_text_Battery.ImageError = true;
-            this.userControl_text_Battery.Name = "userControl_text_Battery";
-            this.userControl_text_Battery.OptionalSymbol = false;
-            this.userControl_text_Battery.PaddingZero_follow = true;
-            this.userControl_text_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Battery
-            // 
-            this.userControl_pictures_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Battery, "userControl_pictures_Battery");
-            this.userControl_pictures_Battery.Collapsed = true;
-            this.userControl_pictures_Battery.ImagesCount = 10;
-            this.userControl_pictures_Battery.Name = "userControl_pictures_Battery";
-            this.userControl_pictures_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // imageList1
             // 
@@ -11971,55 +9425,6 @@
             this.tabPage_Steps_AOD.Controls.Add(this.userControl_pictures_Steps_AOD);
             this.tabPage_Steps_AOD.Name = "tabPage_Steps_AOD";
             // 
-            // userControl_scaleLinear_Steps_AOD
-            // 
-            this.userControl_scaleLinear_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Steps_AOD, "userControl_scaleLinear_Steps_AOD");
-            this.userControl_scaleLinear_Steps_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Steps_AOD.Name = "userControl_scaleLinear_Steps_AOD";
-            this.userControl_scaleLinear_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Steps_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Steps_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Steps_AOD
-            // 
-            this.userControl_scaleCircle_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Steps_AOD, "userControl_scaleCircle_Steps_AOD");
-            this.userControl_scaleCircle_Steps_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Steps_AOD.Name = "userControl_scaleCircle_Steps_AOD";
-            this.userControl_scaleCircle_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Steps_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Steps_AOD_Copy);
-            // 
-            // userControl_hand_Steps_AOD
-            // 
-            this.userControl_hand_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Steps_AOD, "userControl_hand_Steps_AOD");
-            this.userControl_hand_Steps_AOD.Collapsed = true;
-            this.userControl_hand_Steps_AOD.Name = "userControl_hand_Steps_AOD";
-            this.userControl_hand_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Steps_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Steps_AOD_Copy);
-            // 
-            // userControl_text_Steps_AOD
-            // 
-            this.userControl_text_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Steps_AOD, "userControl_text_Steps_AOD");
-            this.userControl_text_Steps_AOD.Collapsed = true;
-            this.userControl_text_Steps_AOD.ImageError = true;
-            this.userControl_text_Steps_AOD.Name = "userControl_text_Steps_AOD";
-            this.userControl_text_Steps_AOD.OptionalSymbol = false;
-            this.userControl_text_Steps_AOD.PaddingZero_follow = true;
-            this.userControl_text_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Steps_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Steps_AOD_Copy);
-            // 
-            // userControl_pictures_Steps_AOD
-            // 
-            this.userControl_pictures_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Steps_AOD, "userControl_pictures_Steps_AOD");
-            this.userControl_pictures_Steps_AOD.Collapsed = true;
-            this.userControl_pictures_Steps_AOD.ImagesCount = 10;
-            this.userControl_pictures_Steps_AOD.Name = "userControl_pictures_Steps_AOD";
-            this.userControl_pictures_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Steps_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Steps_AOD_Copy);
-            // 
             // tabPage_Calories_AOD
             // 
             resources.ApplyResources(this.tabPage_Calories_AOD, "tabPage_Calories_AOD");
@@ -12030,55 +9435,6 @@
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_text_Calories_AOD);
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_pictures_Calories_AOD);
             this.tabPage_Calories_AOD.Name = "tabPage_Calories_AOD";
-            // 
-            // userControl_scaleLinear_Calories_AOD
-            // 
-            this.userControl_scaleLinear_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Calories_AOD, "userControl_scaleLinear_Calories_AOD");
-            this.userControl_scaleLinear_Calories_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Calories_AOD.Name = "userControl_scaleLinear_Calories_AOD";
-            this.userControl_scaleLinear_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Calories_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Calories_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Calories_AOD
-            // 
-            this.userControl_scaleCircle_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Calories_AOD, "userControl_scaleCircle_Calories_AOD");
-            this.userControl_scaleCircle_Calories_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Calories_AOD.Name = "userControl_scaleCircle_Calories_AOD";
-            this.userControl_scaleCircle_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Calories_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Calories_AOD_Copy);
-            // 
-            // userControl_hand_Calories_AOD
-            // 
-            this.userControl_hand_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Calories_AOD, "userControl_hand_Calories_AOD");
-            this.userControl_hand_Calories_AOD.Collapsed = true;
-            this.userControl_hand_Calories_AOD.Name = "userControl_hand_Calories_AOD";
-            this.userControl_hand_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Calories_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Calories_AOD_Copy);
-            // 
-            // userControl_text_Calories_AOD
-            // 
-            this.userControl_text_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Calories_AOD, "userControl_text_Calories_AOD");
-            this.userControl_text_Calories_AOD.Collapsed = true;
-            this.userControl_text_Calories_AOD.ImageError = true;
-            this.userControl_text_Calories_AOD.Name = "userControl_text_Calories_AOD";
-            this.userControl_text_Calories_AOD.OptionalSymbol = false;
-            this.userControl_text_Calories_AOD.PaddingZero_follow = true;
-            this.userControl_text_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Calories_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Calories_AOD_Copy);
-            // 
-            // userControl_pictures_Calories_AOD
-            // 
-            this.userControl_pictures_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Calories_AOD, "userControl_pictures_Calories_AOD");
-            this.userControl_pictures_Calories_AOD.Collapsed = true;
-            this.userControl_pictures_Calories_AOD.ImagesCount = 10;
-            this.userControl_pictures_Calories_AOD.Name = "userControl_pictures_Calories_AOD";
-            this.userControl_pictures_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Calories_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Calories_AOD_Copy);
             // 
             // tabPage_HeartRate_AOD
             // 
@@ -12091,55 +9447,6 @@
             this.tabPage_HeartRate_AOD.Controls.Add(this.userControl_pictures_HeartRate_AOD);
             this.tabPage_HeartRate_AOD.Name = "tabPage_HeartRate_AOD";
             // 
-            // userControl_scaleLinear_HeartRate_AOD
-            // 
-            this.userControl_scaleLinear_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_HeartRate_AOD, "userControl_scaleLinear_HeartRate_AOD");
-            this.userControl_scaleLinear_HeartRate_AOD.Collapsed = true;
-            this.userControl_scaleLinear_HeartRate_AOD.Name = "userControl_scaleLinear_HeartRate_AOD";
-            this.userControl_scaleLinear_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_HeartRate_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_HeartRate_AOD_Copy);
-            // 
-            // userControl_scaleCircle_HeartRate_AOD
-            // 
-            this.userControl_scaleCircle_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_HeartRate_AOD, "userControl_scaleCircle_HeartRate_AOD");
-            this.userControl_scaleCircle_HeartRate_AOD.Collapsed = true;
-            this.userControl_scaleCircle_HeartRate_AOD.Name = "userControl_scaleCircle_HeartRate_AOD";
-            this.userControl_scaleCircle_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_HeartRate_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_HeartRate_AOD_Copy);
-            // 
-            // userControl_hand_HeartRate_AOD
-            // 
-            this.userControl_hand_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_HeartRate_AOD, "userControl_hand_HeartRate_AOD");
-            this.userControl_hand_HeartRate_AOD.Collapsed = true;
-            this.userControl_hand_HeartRate_AOD.Name = "userControl_hand_HeartRate_AOD";
-            this.userControl_hand_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_HeartRate_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_HeartRate_AOD_Copy);
-            // 
-            // userControl_text_HeartRate_AOD
-            // 
-            this.userControl_text_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_HeartRate_AOD, "userControl_text_HeartRate_AOD");
-            this.userControl_text_HeartRate_AOD.Collapsed = true;
-            this.userControl_text_HeartRate_AOD.ImageError = true;
-            this.userControl_text_HeartRate_AOD.Name = "userControl_text_HeartRate_AOD";
-            this.userControl_text_HeartRate_AOD.OptionalSymbol = false;
-            this.userControl_text_HeartRate_AOD.PaddingZero_follow = true;
-            this.userControl_text_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_HeartRate_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_HeartRate_AOD_Copy);
-            // 
-            // userControl_pictures_HeartRate_AOD
-            // 
-            this.userControl_pictures_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_HeartRate_AOD, "userControl_pictures_HeartRate_AOD");
-            this.userControl_pictures_HeartRate_AOD.Collapsed = true;
-            this.userControl_pictures_HeartRate_AOD.ImagesCount = 6;
-            this.userControl_pictures_HeartRate_AOD.Name = "userControl_pictures_HeartRate_AOD";
-            this.userControl_pictures_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_HeartRate_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_HeartRate_AOD_Copy);
-            // 
             // tabPage_PAI_AOD
             // 
             resources.ApplyResources(this.tabPage_PAI_AOD, "tabPage_PAI_AOD");
@@ -12151,73 +9458,12 @@
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_pictures_PAI_AOD);
             this.tabPage_PAI_AOD.Name = "tabPage_PAI_AOD";
             // 
-            // userControl_scaleLinear_PAI_AOD
-            // 
-            this.userControl_scaleLinear_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_PAI_AOD, "userControl_scaleLinear_PAI_AOD");
-            this.userControl_scaleLinear_PAI_AOD.Collapsed = true;
-            this.userControl_scaleLinear_PAI_AOD.Name = "userControl_scaleLinear_PAI_AOD";
-            this.userControl_scaleLinear_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_PAI_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_PAI_AOD_Copy);
-            // 
-            // userControl_scaleCircle_PAI_AOD
-            // 
-            this.userControl_scaleCircle_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_PAI_AOD, "userControl_scaleCircle_PAI_AOD");
-            this.userControl_scaleCircle_PAI_AOD.Collapsed = true;
-            this.userControl_scaleCircle_PAI_AOD.Name = "userControl_scaleCircle_PAI_AOD";
-            this.userControl_scaleCircle_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_PAI_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_PAI_AOD_Copy);
-            // 
-            // userControl_hand_PAI_AOD
-            // 
-            this.userControl_hand_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_PAI_AOD, "userControl_hand_PAI_AOD");
-            this.userControl_hand_PAI_AOD.Collapsed = true;
-            this.userControl_hand_PAI_AOD.Name = "userControl_hand_PAI_AOD";
-            this.userControl_hand_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_PAI_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_PAI_AOD_Copy);
-            // 
-            // userControl_text_PAI_AOD
-            // 
-            this.userControl_text_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_PAI_AOD, "userControl_text_PAI_AOD");
-            this.userControl_text_PAI_AOD.Collapsed = true;
-            this.userControl_text_PAI_AOD.ImageError = true;
-            this.userControl_text_PAI_AOD.Name = "userControl_text_PAI_AOD";
-            this.userControl_text_PAI_AOD.OptionalSymbol = false;
-            this.userControl_text_PAI_AOD.PaddingZero_follow = true;
-            this.userControl_text_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_PAI_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_PAI_AOD_Copy);
-            // 
-            // userControl_pictures_PAI_AOD
-            // 
-            this.userControl_pictures_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_PAI_AOD, "userControl_pictures_PAI_AOD");
-            this.userControl_pictures_PAI_AOD.Collapsed = true;
-            this.userControl_pictures_PAI_AOD.ImagesCount = 10;
-            this.userControl_pictures_PAI_AOD.Name = "userControl_pictures_PAI_AOD";
-            this.userControl_pictures_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_PAI_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_PAI_AOD_Copy);
-            // 
             // tabPage_Distance_AOD
             // 
             resources.ApplyResources(this.tabPage_Distance_AOD, "tabPage_Distance_AOD");
             this.tabPage_Distance_AOD.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_Distance_AOD.Controls.Add(this.userControl_text_Distance_AOD);
             this.tabPage_Distance_AOD.Name = "tabPage_Distance_AOD";
-            // 
-            // userControl_text_Distance_AOD
-            // 
-            this.userControl_text_Distance_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Distance_AOD, "userControl_text_Distance_AOD");
-            this.userControl_text_Distance_AOD.Collapsed = false;
-            this.userControl_text_Distance_AOD.ImageError = true;
-            this.userControl_text_Distance_AOD.Name = "userControl_text_Distance_AOD";
-            this.userControl_text_Distance_AOD.OptionalSymbol = true;
-            this.userControl_text_Distance_AOD.PaddingZero_follow = true;
-            this.userControl_text_Distance_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Distance_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Distance_AOD_Copy);
             // 
             // tabPage_StandUp_AOD
             // 
@@ -12230,45 +9476,6 @@
             this.tabPage_StandUp_AOD.Controls.Add(this.userControl_pictures_StandUp_AOD);
             this.tabPage_StandUp_AOD.Name = "tabPage_StandUp_AOD";
             // 
-            // userControl_scaleLinear_StandUp_AOD
-            // 
-            this.userControl_scaleLinear_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_StandUp_AOD, "userControl_scaleLinear_StandUp_AOD");
-            this.userControl_scaleLinear_StandUp_AOD.Collapsed = true;
-            this.userControl_scaleLinear_StandUp_AOD.Name = "userControl_scaleLinear_StandUp_AOD";
-            // 
-            // userControl_scaleCircle_StandUp_AOD
-            // 
-            this.userControl_scaleCircle_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_StandUp_AOD, "userControl_scaleCircle_StandUp_AOD");
-            this.userControl_scaleCircle_StandUp_AOD.Collapsed = true;
-            this.userControl_scaleCircle_StandUp_AOD.Name = "userControl_scaleCircle_StandUp_AOD";
-            // 
-            // userControl_hand_StandUp_AOD
-            // 
-            this.userControl_hand_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_StandUp_AOD, "userControl_hand_StandUp_AOD");
-            this.userControl_hand_StandUp_AOD.Collapsed = true;
-            this.userControl_hand_StandUp_AOD.Name = "userControl_hand_StandUp_AOD";
-            // 
-            // userControl_text_StandUp_AOD
-            // 
-            this.userControl_text_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_StandUp_AOD, "userControl_text_StandUp_AOD");
-            this.userControl_text_StandUp_AOD.Collapsed = true;
-            this.userControl_text_StandUp_AOD.ImageError = true;
-            this.userControl_text_StandUp_AOD.Name = "userControl_text_StandUp_AOD";
-            this.userControl_text_StandUp_AOD.OptionalSymbol = false;
-            this.userControl_text_StandUp_AOD.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_StandUp_AOD
-            // 
-            this.userControl_pictures_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_StandUp_AOD, "userControl_pictures_StandUp_AOD");
-            this.userControl_pictures_StandUp_AOD.Collapsed = true;
-            this.userControl_pictures_StandUp_AOD.ImagesCount = 10;
-            this.userControl_pictures_StandUp_AOD.Name = "userControl_pictures_StandUp_AOD";
-            // 
             // tabPage_Stress_AOD
             // 
             resources.ApplyResources(this.tabPage_Stress_AOD, "tabPage_Stress_AOD");
@@ -12279,45 +9486,6 @@
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_text_Stress_AOD);
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_pictures_Stress_AOD);
             this.tabPage_Stress_AOD.Name = "tabPage_Stress_AOD";
-            // 
-            // userControl_scaleLinear_Stress_AOD
-            // 
-            this.userControl_scaleLinear_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Stress_AOD, "userControl_scaleLinear_Stress_AOD");
-            this.userControl_scaleLinear_Stress_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Stress_AOD.Name = "userControl_scaleLinear_Stress_AOD";
-            // 
-            // userControl_scaleCircle_Stress_AOD
-            // 
-            this.userControl_scaleCircle_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Stress_AOD, "userControl_scaleCircle_Stress_AOD");
-            this.userControl_scaleCircle_Stress_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Stress_AOD.Name = "userControl_scaleCircle_Stress_AOD";
-            // 
-            // userControl_hand_Stress_AOD
-            // 
-            this.userControl_hand_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Stress_AOD, "userControl_hand_Stress_AOD");
-            this.userControl_hand_Stress_AOD.Collapsed = true;
-            this.userControl_hand_Stress_AOD.Name = "userControl_hand_Stress_AOD";
-            // 
-            // userControl_text_Stress_AOD
-            // 
-            this.userControl_text_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Stress_AOD, "userControl_text_Stress_AOD");
-            this.userControl_text_Stress_AOD.Collapsed = true;
-            this.userControl_text_Stress_AOD.ImageError = true;
-            this.userControl_text_Stress_AOD.Name = "userControl_text_Stress_AOD";
-            this.userControl_text_Stress_AOD.OptionalSymbol = false;
-            this.userControl_text_Stress_AOD.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_Stress_AOD
-            // 
-            this.userControl_pictures_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Stress_AOD, "userControl_pictures_Stress_AOD");
-            this.userControl_pictures_Stress_AOD.Collapsed = true;
-            this.userControl_pictures_Stress_AOD.ImagesCount = 10;
-            this.userControl_pictures_Stress_AOD.Name = "userControl_pictures_Stress_AOD";
             // 
             // tabPage_ActivityGoal_AOD
             // 
@@ -12330,45 +9498,6 @@
             this.tabPage_ActivityGoal_AOD.Controls.Add(this.userControl_pictures_ActivityGoal_AOD);
             this.tabPage_ActivityGoal_AOD.Name = "tabPage_ActivityGoal_AOD";
             // 
-            // userControl_scaleLinear_ActivityGoal_AOD
-            // 
-            this.userControl_scaleLinear_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal_AOD, "userControl_scaleLinear_ActivityGoal_AOD");
-            this.userControl_scaleLinear_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_scaleLinear_ActivityGoal_AOD.Name = "userControl_scaleLinear_ActivityGoal_AOD";
-            // 
-            // userControl_scaleCircle_ActivityGoal_AOD
-            // 
-            this.userControl_scaleCircle_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal_AOD, "userControl_scaleCircle_ActivityGoal_AOD");
-            this.userControl_scaleCircle_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_scaleCircle_ActivityGoal_AOD.Name = "userControl_scaleCircle_ActivityGoal_AOD";
-            // 
-            // userControl_hand_ActivityGoal_AOD
-            // 
-            this.userControl_hand_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_ActivityGoal_AOD, "userControl_hand_ActivityGoal_AOD");
-            this.userControl_hand_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_hand_ActivityGoal_AOD.Name = "userControl_hand_ActivityGoal_AOD";
-            // 
-            // userControl_text_ActivityGoal_AOD
-            // 
-            this.userControl_text_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_ActivityGoal_AOD, "userControl_text_ActivityGoal_AOD");
-            this.userControl_text_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_text_ActivityGoal_AOD.ImageError = true;
-            this.userControl_text_ActivityGoal_AOD.Name = "userControl_text_ActivityGoal_AOD";
-            this.userControl_text_ActivityGoal_AOD.OptionalSymbol = false;
-            this.userControl_text_ActivityGoal_AOD.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_ActivityGoal_AOD
-            // 
-            this.userControl_pictures_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_ActivityGoal_AOD, "userControl_pictures_ActivityGoal_AOD");
-            this.userControl_pictures_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_pictures_ActivityGoal_AOD.ImagesCount = 10;
-            this.userControl_pictures_ActivityGoal_AOD.Name = "userControl_pictures_ActivityGoal_AOD";
-            // 
             // tabPage_FatBurning_AOD
             // 
             resources.ApplyResources(this.tabPage_FatBurning_AOD, "tabPage_FatBurning_AOD");
@@ -12379,45 +9508,6 @@
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_text_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_pictures_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Name = "tabPage_FatBurning_AOD";
-            // 
-            // userControl_scaleLinear_FatBurning_AOD
-            // 
-            this.userControl_scaleLinear_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_FatBurning_AOD, "userControl_scaleLinear_FatBurning_AOD");
-            this.userControl_scaleLinear_FatBurning_AOD.Collapsed = true;
-            this.userControl_scaleLinear_FatBurning_AOD.Name = "userControl_scaleLinear_FatBurning_AOD";
-            // 
-            // userControl_scaleCircle_FatBurning_AOD
-            // 
-            this.userControl_scaleCircle_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_FatBurning_AOD, "userControl_scaleCircle_FatBurning_AOD");
-            this.userControl_scaleCircle_FatBurning_AOD.Collapsed = true;
-            this.userControl_scaleCircle_FatBurning_AOD.Name = "userControl_scaleCircle_FatBurning_AOD";
-            // 
-            // userControl_hand_FatBurning_AOD
-            // 
-            this.userControl_hand_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_FatBurning_AOD, "userControl_hand_FatBurning_AOD");
-            this.userControl_hand_FatBurning_AOD.Collapsed = true;
-            this.userControl_hand_FatBurning_AOD.Name = "userControl_hand_FatBurning_AOD";
-            // 
-            // userControl_text_FatBurning_AOD
-            // 
-            this.userControl_text_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_FatBurning_AOD, "userControl_text_FatBurning_AOD");
-            this.userControl_text_FatBurning_AOD.Collapsed = true;
-            this.userControl_text_FatBurning_AOD.ImageError = true;
-            this.userControl_text_FatBurning_AOD.Name = "userControl_text_FatBurning_AOD";
-            this.userControl_text_FatBurning_AOD.OptionalSymbol = false;
-            this.userControl_text_FatBurning_AOD.PaddingZero_follow = true;
-            // 
-            // userControl_pictures_FatBurning_AOD
-            // 
-            this.userControl_pictures_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_FatBurning_AOD, "userControl_pictures_FatBurning_AOD");
-            this.userControl_pictures_FatBurning_AOD.Collapsed = true;
-            this.userControl_pictures_FatBurning_AOD.ImagesCount = 10;
-            this.userControl_pictures_FatBurning_AOD.Name = "userControl_pictures_FatBurning_AOD";
             // 
             // tabPage_Air_AOD
             // 
@@ -12444,1921 +9534,47 @@
             // 
             resources.ApplyResources(this.tabPage_Weather_AOD, "tabPage_Weather_AOD");
             this.tabPage_Weather_AOD.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_icon_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_scaleLinear_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.button_Weather_scaleLinear_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_scaleCircle_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.button_Weather_scaleCircle_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_hand_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.button_Weather_hand_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_textMax_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.button_Weather_textMax_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_textMin_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.button_Weather_textMin_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_text_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.button_Weather_text_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.panel_Weather_pictures_AOD);
-            this.tabPage_Weather_AOD.Controls.Add(this.button_Weather_pictures_AOD);
+            this.tabPage_Weather_AOD.Controls.Add(this.userControl_scaleLinear_Weather_AOD);
+            this.tabPage_Weather_AOD.Controls.Add(this.userControl_scaleCircle_Weather_AOD);
+            this.tabPage_Weather_AOD.Controls.Add(this.userControl_hand_Weather_AOD);
+            this.tabPage_Weather_AOD.Controls.Add(this.userControl_text_weather_Max_AOD);
+            this.tabPage_Weather_AOD.Controls.Add(this.userControl_text_weather_Min_AOD);
+            this.tabPage_Weather_AOD.Controls.Add(this.userControl_text_weather_Current_AOD);
+            this.tabPage_Weather_AOD.Controls.Add(this.userControl_pictures_weather_AOD);
             this.tabPage_Weather_AOD.Name = "tabPage_Weather_AOD";
-            // 
-            // panel_Weather_icon_AOD
-            // 
-            resources.ApplyResources(this.panel_Weather_icon_AOD, "panel_Weather_icon_AOD");
-            this.panel_Weather_icon_AOD.Name = "panel_Weather_icon_AOD";
-            // 
-            // panel_Weather_scaleLinear_AOD
-            // 
-            this.panel_Weather_scaleLinear_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.checkBox_Weather_scaleLinear_Use_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.radioButton_Weather_scaleLinear_image_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.radioButtonWeather_scaleLinear_color_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_image_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_color_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_image_pointer_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_image_background_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinearX_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinearY_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinear_length_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.numericUpDown_Weather_scaleLinear_width_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.comboBox_Weather_scaleLinear_flatness_AOD);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label304);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1102);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1103);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1104);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1105);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1106);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1107);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.label1108);
-            this.panel_Weather_scaleLinear_AOD.Controls.Add(this.button_Copy_Weather_scaleLinear_AOD);
-            resources.ApplyResources(this.panel_Weather_scaleLinear_AOD, "panel_Weather_scaleLinear_AOD");
-            this.panel_Weather_scaleLinear_AOD.Name = "panel_Weather_scaleLinear_AOD";
-            // 
-            // checkBox_Weather_scaleLinear_Use_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_scaleLinear_Use_AOD, "checkBox_Weather_scaleLinear_Use_AOD");
-            this.checkBox_Weather_scaleLinear_Use_AOD.Name = "checkBox_Weather_scaleLinear_Use_AOD";
-            this.checkBox_Weather_scaleLinear_Use_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_scaleLinear_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_scaleLinear_Use_AOD_CheckedChanged);
-            this.checkBox_Weather_scaleLinear_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // radioButton_Weather_scaleLinear_image_AOD
-            // 
-            resources.ApplyResources(this.radioButton_Weather_scaleLinear_image_AOD, "radioButton_Weather_scaleLinear_image_AOD");
-            this.radioButton_Weather_scaleLinear_image_AOD.Checked = true;
-            this.radioButton_Weather_scaleLinear_image_AOD.Name = "radioButton_Weather_scaleLinear_image_AOD";
-            this.radioButton_Weather_scaleLinear_image_AOD.TabStop = true;
-            this.radioButton_Weather_scaleLinear_image_AOD.UseVisualStyleBackColor = true;
-            this.radioButton_Weather_scaleLinear_image_AOD.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
-            // 
-            // radioButtonWeather_scaleLinear_color_AOD
-            // 
-            resources.ApplyResources(this.radioButtonWeather_scaleLinear_color_AOD, "radioButtonWeather_scaleLinear_color_AOD");
-            this.radioButtonWeather_scaleLinear_color_AOD.Name = "radioButtonWeather_scaleLinear_color_AOD";
-            this.radioButtonWeather_scaleLinear_color_AOD.TabStop = true;
-            this.radioButtonWeather_scaleLinear_color_AOD.UseVisualStyleBackColor = true;
-            // 
-            // comboBox_Weather_scaleLinear_image_AOD
-            // 
-            this.comboBox_Weather_scaleLinear_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleLinear_image_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_AOD, "comboBox_Weather_scaleLinear_image_AOD");
-            this.comboBox_Weather_scaleLinear_image_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_image_AOD.Name = "comboBox_Weather_scaleLinear_image_AOD";
-            this.comboBox_Weather_scaleLinear_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleLinear_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleLinear_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleLinear_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleLinear_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleLinear_color_AOD
-            // 
-            this.comboBox_Weather_scaleLinear_color_AOD.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox_Weather_scaleLinear_color_AOD.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_color_AOD, "comboBox_Weather_scaleLinear_color_AOD");
-            this.comboBox_Weather_scaleLinear_color_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_color_AOD.Name = "comboBox_Weather_scaleLinear_color_AOD";
-            this.comboBox_Weather_scaleLinear_color_AOD.Click += new System.EventHandler(this.comboBox_color_Click);
-            this.comboBox_Weather_scaleLinear_color_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleLinear_image_pointer_AOD
-            // 
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_pointer_AOD, "comboBox_Weather_scaleLinear_image_pointer_AOD");
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.Name = "comboBox_Weather_scaleLinear_image_pointer_AOD";
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleLinear_image_pointer_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleLinear_image_background_AOD
-            // 
-            this.comboBox_Weather_scaleLinear_image_background_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleLinear_image_background_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_image_background_AOD, "comboBox_Weather_scaleLinear_image_background_AOD");
-            this.comboBox_Weather_scaleLinear_image_background_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_image_background_AOD.Name = "comboBox_Weather_scaleLinear_image_background_AOD";
-            this.comboBox_Weather_scaleLinear_image_background_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleLinear_image_background_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleLinear_image_background_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleLinear_image_background_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleLinear_image_background_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_scaleLinearX_AOD
-            // 
-            this.numericUpDown_Weather_scaleLinearX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinearX_AOD, "numericUpDown_Weather_scaleLinearX_AOD");
-            this.numericUpDown_Weather_scaleLinearX_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinearX_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinearX_AOD.Name = "numericUpDown_Weather_scaleLinearX_AOD";
-            this.numericUpDown_Weather_scaleLinearX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleLinearX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleLinearY_AOD
-            // 
-            this.numericUpDown_Weather_scaleLinearY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinearY_AOD, "numericUpDown_Weather_scaleLinearY_AOD");
-            this.numericUpDown_Weather_scaleLinearY_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinearY_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinearY_AOD.Name = "numericUpDown_Weather_scaleLinearY_AOD";
-            this.numericUpDown_Weather_scaleLinearY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleLinearY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleLinear_length_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinear_length_AOD, "numericUpDown_Weather_scaleLinear_length_AOD");
-            this.numericUpDown_Weather_scaleLinear_length_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_length_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinear_length_AOD.Name = "numericUpDown_Weather_scaleLinear_length_AOD";
-            this.numericUpDown_Weather_scaleLinear_length_AOD.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_length_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleLinear_width_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleLinear_width_AOD, "numericUpDown_Weather_scaleLinear_width_AOD");
-            this.numericUpDown_Weather_scaleLinear_width_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_width_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleLinear_width_AOD.Name = "numericUpDown_Weather_scaleLinear_width_AOD";
-            this.numericUpDown_Weather_scaleLinear_width_AOD.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleLinear_width_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_scaleLinear_flatness_AOD
-            // 
-            this.comboBox_Weather_scaleLinear_flatness_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_scaleLinear_flatness_AOD, "comboBox_Weather_scaleLinear_flatness_AOD");
-            this.comboBox_Weather_scaleLinear_flatness_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleLinear_flatness_AOD.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_scaleLinear_flatness_AOD.Items"),
-            resources.GetString("comboBox_Weather_scaleLinear_flatness_AOD.Items1")});
-            this.comboBox_Weather_scaleLinear_flatness_AOD.Name = "comboBox_Weather_scaleLinear_flatness_AOD";
-            this.comboBox_Weather_scaleLinear_flatness_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // label304
-            // 
-            resources.ApplyResources(this.label304, "label304");
-            this.label304.Name = "label304";
-            // 
-            // label1102
-            // 
-            resources.ApplyResources(this.label1102, "label1102");
-            this.label1102.Name = "label1102";
-            // 
-            // label1103
-            // 
-            resources.ApplyResources(this.label1103, "label1103");
-            this.label1103.Name = "label1103";
-            // 
-            // label1104
-            // 
-            resources.ApplyResources(this.label1104, "label1104");
-            this.label1104.Name = "label1104";
-            // 
-            // label1105
-            // 
-            resources.ApplyResources(this.label1105, "label1105");
-            this.label1105.Name = "label1105";
-            // 
-            // label1106
-            // 
-            resources.ApplyResources(this.label1106, "label1106");
-            this.label1106.Name = "label1106";
-            // 
-            // label1107
-            // 
-            resources.ApplyResources(this.label1107, "label1107");
-            this.label1107.Name = "label1107";
-            // 
-            // label1108
-            // 
-            resources.ApplyResources(this.label1108, "label1108");
-            this.label1108.Name = "label1108";
-            // 
-            // button_Copy_Weather_scaleLinear_AOD
-            // 
-            resources.ApplyResources(this.button_Copy_Weather_scaleLinear_AOD, "button_Copy_Weather_scaleLinear_AOD");
-            this.button_Copy_Weather_scaleLinear_AOD.Name = "button_Copy_Weather_scaleLinear_AOD";
-            this.button_Copy_Weather_scaleLinear_AOD.UseVisualStyleBackColor = true;
-            this.button_Copy_Weather_scaleLinear_AOD.Click += new System.EventHandler(this.button_Copy_Weather_scaleLinear_AOD_Click);
-            // 
-            // button_Weather_scaleLinear_AOD
-            // 
-            resources.ApplyResources(this.button_Weather_scaleLinear_AOD, "button_Weather_scaleLinear_AOD");
-            this.button_Weather_scaleLinear_AOD.Name = "button_Weather_scaleLinear_AOD";
-            this.button_Weather_scaleLinear_AOD.UseVisualStyleBackColor = true;
-            this.button_Weather_scaleLinear_AOD.Click += new System.EventHandler(this.button_Weather_scaleLinear_AOD_Click);
-            // 
-            // panel_Weather_scaleCircle_AOD
-            // 
-            this.panel_Weather_scaleCircle_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.checkBox_Weather_scaleCircle_Use_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.radioButton_Weather_scaleCircle_image_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.radioButton_Weather_scaleCircle_color_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_image_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_color_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_flatness_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.comboBox_Weather_scaleCircle_image_background_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircleX_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircleY_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_radius_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_width_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_startAngle_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.numericUpDown_Weather_scaleCircle_endAngle_AOD);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1109);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1110);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1111);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1112);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1113);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1114);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1115);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1116);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.label1117);
-            this.panel_Weather_scaleCircle_AOD.Controls.Add(this.button_Copy_Weather_scaleCircle_AOD);
-            resources.ApplyResources(this.panel_Weather_scaleCircle_AOD, "panel_Weather_scaleCircle_AOD");
-            this.panel_Weather_scaleCircle_AOD.Name = "panel_Weather_scaleCircle_AOD";
-            // 
-            // checkBox_Weather_scaleCircle_Use_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_scaleCircle_Use_AOD, "checkBox_Weather_scaleCircle_Use_AOD");
-            this.checkBox_Weather_scaleCircle_Use_AOD.Name = "checkBox_Weather_scaleCircle_Use_AOD";
-            this.checkBox_Weather_scaleCircle_Use_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_scaleCircle_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_scaleCircle_Use_AOD_CheckedChanged);
-            this.checkBox_Weather_scaleCircle_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // radioButton_Weather_scaleCircle_image_AOD
-            // 
-            resources.ApplyResources(this.radioButton_Weather_scaleCircle_image_AOD, "radioButton_Weather_scaleCircle_image_AOD");
-            this.radioButton_Weather_scaleCircle_image_AOD.Checked = true;
-            this.radioButton_Weather_scaleCircle_image_AOD.Name = "radioButton_Weather_scaleCircle_image_AOD";
-            this.radioButton_Weather_scaleCircle_image_AOD.TabStop = true;
-            this.radioButton_Weather_scaleCircle_image_AOD.UseVisualStyleBackColor = true;
-            this.radioButton_Weather_scaleCircle_image_AOD.CheckedChanged += new System.EventHandler(this.radioButton_image_color_CheckedChanged);
-            // 
-            // radioButton_Weather_scaleCircle_color_AOD
-            // 
-            resources.ApplyResources(this.radioButton_Weather_scaleCircle_color_AOD, "radioButton_Weather_scaleCircle_color_AOD");
-            this.radioButton_Weather_scaleCircle_color_AOD.Name = "radioButton_Weather_scaleCircle_color_AOD";
-            this.radioButton_Weather_scaleCircle_color_AOD.TabStop = true;
-            this.radioButton_Weather_scaleCircle_color_AOD.UseVisualStyleBackColor = true;
-            // 
-            // comboBox_Weather_scaleCircle_image_AOD
-            // 
-            this.comboBox_Weather_scaleCircle_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleCircle_image_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_image_AOD, "comboBox_Weather_scaleCircle_image_AOD");
-            this.comboBox_Weather_scaleCircle_image_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_image_AOD.Name = "comboBox_Weather_scaleCircle_image_AOD";
-            this.comboBox_Weather_scaleCircle_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleCircle_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleCircle_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleCircle_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleCircle_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleCircle_color_AOD
-            // 
-            this.comboBox_Weather_scaleCircle_color_AOD.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox_Weather_scaleCircle_color_AOD.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_color_AOD, "comboBox_Weather_scaleCircle_color_AOD");
-            this.comboBox_Weather_scaleCircle_color_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_color_AOD.Name = "comboBox_Weather_scaleCircle_color_AOD";
-            this.comboBox_Weather_scaleCircle_color_AOD.Click += new System.EventHandler(this.comboBox_color_Click);
-            this.comboBox_Weather_scaleCircle_color_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_scaleCircle_flatness_AOD
-            // 
-            this.comboBox_Weather_scaleCircle_flatness_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_flatness_AOD, "comboBox_Weather_scaleCircle_flatness_AOD");
-            this.comboBox_Weather_scaleCircle_flatness_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_flatness_AOD.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_scaleCircle_flatness_AOD.Items"),
-            resources.GetString("comboBox_Weather_scaleCircle_flatness_AOD.Items1"),
-            resources.GetString("comboBox_Weather_scaleCircle_flatness_AOD.Items2")});
-            this.comboBox_Weather_scaleCircle_flatness_AOD.Name = "comboBox_Weather_scaleCircle_flatness_AOD";
-            this.comboBox_Weather_scaleCircle_flatness_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // comboBox_Weather_scaleCircle_image_background_AOD
-            // 
-            this.comboBox_Weather_scaleCircle_image_background_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_scaleCircle_image_background_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_scaleCircle_image_background_AOD, "comboBox_Weather_scaleCircle_image_background_AOD");
-            this.comboBox_Weather_scaleCircle_image_background_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_scaleCircle_image_background_AOD.Name = "comboBox_Weather_scaleCircle_image_background_AOD";
-            this.comboBox_Weather_scaleCircle_image_background_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_scaleCircle_image_background_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_scaleCircle_image_background_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_scaleCircle_image_background_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_scaleCircle_image_background_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_scaleCircleX_AOD
-            // 
-            this.numericUpDown_Weather_scaleCircleX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircleX_AOD, "numericUpDown_Weather_scaleCircleX_AOD");
-            this.numericUpDown_Weather_scaleCircleX_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircleX_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircleX_AOD.Name = "numericUpDown_Weather_scaleCircleX_AOD";
-            this.numericUpDown_Weather_scaleCircleX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleCircleX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleCircleY_AOD
-            // 
-            this.numericUpDown_Weather_scaleCircleY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircleY_AOD, "numericUpDown_Weather_scaleCircleY_AOD");
-            this.numericUpDown_Weather_scaleCircleY_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircleY_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircleY_AOD.Name = "numericUpDown_Weather_scaleCircleY_AOD";
-            this.numericUpDown_Weather_scaleCircleY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_scaleCircleY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_scaleCircle_radius_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_radius_AOD, "numericUpDown_Weather_scaleCircle_radius_AOD");
-            this.numericUpDown_Weather_scaleCircle_radius_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_radius_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_radius_AOD.Name = "numericUpDown_Weather_scaleCircle_radius_AOD";
-            this.numericUpDown_Weather_scaleCircle_radius_AOD.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_radius_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleCircle_width_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_width_AOD, "numericUpDown_Weather_scaleCircle_width_AOD");
-            this.numericUpDown_Weather_scaleCircle_width_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_width_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_width_AOD.Name = "numericUpDown_Weather_scaleCircle_width_AOD";
-            this.numericUpDown_Weather_scaleCircle_width_AOD.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_width_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleCircle_startAngle_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_startAngle_AOD, "numericUpDown_Weather_scaleCircle_startAngle_AOD");
-            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.Name = "numericUpDown_Weather_scaleCircle_startAngle_AOD";
-            this.numericUpDown_Weather_scaleCircle_startAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_scaleCircle_endAngle_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_scaleCircle_endAngle_AOD, "numericUpDown_Weather_scaleCircle_endAngle_AOD");
-            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Name = "numericUpDown_Weather_scaleCircle_endAngle_AOD";
-            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_scaleCircle_endAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label1109
-            // 
-            resources.ApplyResources(this.label1109, "label1109");
-            this.label1109.Name = "label1109";
-            // 
-            // label1110
-            // 
-            resources.ApplyResources(this.label1110, "label1110");
-            this.label1110.Name = "label1110";
-            // 
-            // label1111
-            // 
-            resources.ApplyResources(this.label1111, "label1111");
-            this.label1111.Name = "label1111";
-            // 
-            // label1112
-            // 
-            resources.ApplyResources(this.label1112, "label1112");
-            this.label1112.Name = "label1112";
-            // 
-            // label1113
-            // 
-            resources.ApplyResources(this.label1113, "label1113");
-            this.label1113.Name = "label1113";
-            // 
-            // label1114
-            // 
-            resources.ApplyResources(this.label1114, "label1114");
-            this.label1114.Name = "label1114";
-            // 
-            // label1115
-            // 
-            resources.ApplyResources(this.label1115, "label1115");
-            this.label1115.Name = "label1115";
-            // 
-            // label1116
-            // 
-            resources.ApplyResources(this.label1116, "label1116");
-            this.label1116.Name = "label1116";
-            // 
-            // label1117
-            // 
-            resources.ApplyResources(this.label1117, "label1117");
-            this.label1117.Name = "label1117";
-            // 
-            // button_Copy_Weather_scaleCircle_AOD
-            // 
-            resources.ApplyResources(this.button_Copy_Weather_scaleCircle_AOD, "button_Copy_Weather_scaleCircle_AOD");
-            this.button_Copy_Weather_scaleCircle_AOD.Name = "button_Copy_Weather_scaleCircle_AOD";
-            this.button_Copy_Weather_scaleCircle_AOD.UseVisualStyleBackColor = true;
-            this.button_Copy_Weather_scaleCircle_AOD.Click += new System.EventHandler(this.button_Copy_Weather_scaleCircle_AOD_Click);
-            // 
-            // button_Weather_scaleCircle_AOD
-            // 
-            resources.ApplyResources(this.button_Weather_scaleCircle_AOD, "button_Weather_scaleCircle_AOD");
-            this.button_Weather_scaleCircle_AOD.Name = "button_Weather_scaleCircle_AOD";
-            this.button_Weather_scaleCircle_AOD.UseVisualStyleBackColor = true;
-            this.button_Weather_scaleCircle_AOD.Click += new System.EventHandler(this.button_Weather_scaleCircle_AOD_Click);
-            // 
-            // panel_Weather_hand_AOD
-            // 
-            this.panel_Weather_hand_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_hand_AOD.Controls.Add(this.checkBox_Weather_hand_Use_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox_Weather_hand_image_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_offset_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_offset_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox_Weather_hand_imageCentr_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_centr_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_centr_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_hand_startAngle_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_hand_endAngle_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.comboBox_Weather_hand_imageBackground_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handX_background_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.numericUpDown_Weather_handY_background_AOD);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1118);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1119);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1120);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1121);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1122);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1123);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1124);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1125);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1126);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1127);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1128);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1129);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1130);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1131);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1132);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1133);
-            this.panel_Weather_hand_AOD.Controls.Add(this.label1134);
-            this.panel_Weather_hand_AOD.Controls.Add(this.button_Copy_Weather_hand_AOD);
-            resources.ApplyResources(this.panel_Weather_hand_AOD, "panel_Weather_hand_AOD");
-            this.panel_Weather_hand_AOD.Name = "panel_Weather_hand_AOD";
-            // 
-            // checkBox_Weather_hand_Use_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_hand_Use_AOD, "checkBox_Weather_hand_Use_AOD");
-            this.checkBox_Weather_hand_Use_AOD.Name = "checkBox_Weather_hand_Use_AOD";
-            this.checkBox_Weather_hand_Use_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_hand_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_hand_Use_AOD_CheckedChanged);
-            this.checkBox_Weather_hand_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_hand_image_AOD
-            // 
-            this.comboBox_Weather_hand_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_hand_image_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_hand_image_AOD, "comboBox_Weather_hand_image_AOD");
-            this.comboBox_Weather_hand_image_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_hand_image_AOD.Name = "comboBox_Weather_hand_image_AOD";
-            this.comboBox_Weather_hand_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_hand_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_hand_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_hand_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_hand_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_handX_AOD
-            // 
-            this.numericUpDown_Weather_handX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_handX_AOD, "numericUpDown_Weather_handX_AOD");
-            this.numericUpDown_Weather_handX_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX_AOD.Name = "numericUpDown_Weather_handX_AOD";
-            this.numericUpDown_Weather_handX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handY_AOD
-            // 
-            this.numericUpDown_Weather_handY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_handY_AOD, "numericUpDown_Weather_handY_AOD");
-            this.numericUpDown_Weather_handY_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY_AOD.Name = "numericUpDown_Weather_handY_AOD";
-            this.numericUpDown_Weather_handY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handX_offset_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_handX_offset_AOD, "numericUpDown_Weather_handX_offset_AOD");
-            this.numericUpDown_Weather_handX_offset_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX_offset_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX_offset_AOD.Name = "numericUpDown_Weather_handX_offset_AOD";
-            this.numericUpDown_Weather_handX_offset_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_handY_offset_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_handY_offset_AOD, "numericUpDown_Weather_handY_offset_AOD");
-            this.numericUpDown_Weather_handY_offset_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY_offset_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY_offset_AOD.Name = "numericUpDown_Weather_handY_offset_AOD";
-            this.numericUpDown_Weather_handY_offset_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_hand_imageCentr_AOD
-            // 
-            this.comboBox_Weather_hand_imageCentr_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_hand_imageCentr_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_hand_imageCentr_AOD, "comboBox_Weather_hand_imageCentr_AOD");
-            this.comboBox_Weather_hand_imageCentr_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_hand_imageCentr_AOD.Name = "comboBox_Weather_hand_imageCentr_AOD";
-            this.comboBox_Weather_hand_imageCentr_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_hand_imageCentr_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_hand_imageCentr_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_hand_imageCentr_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_hand_imageCentr_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_handX_centr_AOD
-            // 
-            this.numericUpDown_Weather_handX_centr_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_handX_centr_AOD, "numericUpDown_Weather_handX_centr_AOD");
-            this.numericUpDown_Weather_handX_centr_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX_centr_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX_centr_AOD.Name = "numericUpDown_Weather_handX_centr_AOD";
-            this.numericUpDown_Weather_handX_centr_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handX_centr_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handY_centr_AOD
-            // 
-            this.numericUpDown_Weather_handY_centr_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_handY_centr_AOD, "numericUpDown_Weather_handY_centr_AOD");
-            this.numericUpDown_Weather_handY_centr_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY_centr_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY_centr_AOD.Name = "numericUpDown_Weather_handY_centr_AOD";
-            this.numericUpDown_Weather_handY_centr_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handY_centr_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_hand_startAngle_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_hand_startAngle_AOD, "numericUpDown_Weather_hand_startAngle_AOD");
-            this.numericUpDown_Weather_hand_startAngle_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_hand_startAngle_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_hand_startAngle_AOD.Name = "numericUpDown_Weather_hand_startAngle_AOD";
-            this.numericUpDown_Weather_hand_startAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // numericUpDown_Weather_hand_endAngle_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_hand_endAngle_AOD, "numericUpDown_Weather_hand_endAngle_AOD");
-            this.numericUpDown_Weather_hand_endAngle_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_hand_endAngle_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_hand_endAngle_AOD.Name = "numericUpDown_Weather_hand_endAngle_AOD";
-            this.numericUpDown_Weather_hand_endAngle_AOD.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_hand_endAngle_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_hand_imageBackground_AOD
-            // 
-            this.comboBox_Weather_hand_imageBackground_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_hand_imageBackground_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_hand_imageBackground_AOD, "comboBox_Weather_hand_imageBackground_AOD");
-            this.comboBox_Weather_hand_imageBackground_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_hand_imageBackground_AOD.Name = "comboBox_Weather_hand_imageBackground_AOD";
-            this.comboBox_Weather_hand_imageBackground_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_hand_imageBackground_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_hand_imageBackground_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_hand_imageBackground_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_hand_imageBackground_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_handX_background_AOD
-            // 
-            this.numericUpDown_Weather_handX_background_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_handX_background_AOD, "numericUpDown_Weather_handX_background_AOD");
-            this.numericUpDown_Weather_handX_background_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handX_background_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handX_background_AOD.Name = "numericUpDown_Weather_handX_background_AOD";
-            this.numericUpDown_Weather_handX_background_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handX_background_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_handY_background_AOD
-            // 
-            this.numericUpDown_Weather_handY_background_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_handY_background_AOD, "numericUpDown_Weather_handY_background_AOD");
-            this.numericUpDown_Weather_handY_background_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_handY_background_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_handY_background_AOD.Name = "numericUpDown_Weather_handY_background_AOD";
-            this.numericUpDown_Weather_handY_background_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_handY_background_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // label1118
-            // 
-            resources.ApplyResources(this.label1118, "label1118");
-            this.label1118.Name = "label1118";
-            // 
-            // label1119
-            // 
-            resources.ApplyResources(this.label1119, "label1119");
-            this.label1119.Name = "label1119";
-            // 
-            // label1120
-            // 
-            resources.ApplyResources(this.label1120, "label1120");
-            this.label1120.Name = "label1120";
-            // 
-            // label1121
-            // 
-            resources.ApplyResources(this.label1121, "label1121");
-            this.label1121.Name = "label1121";
-            // 
-            // label1122
-            // 
-            resources.ApplyResources(this.label1122, "label1122");
-            this.label1122.Name = "label1122";
-            // 
-            // label1123
-            // 
-            resources.ApplyResources(this.label1123, "label1123");
-            this.label1123.Name = "label1123";
-            // 
-            // label1124
-            // 
-            resources.ApplyResources(this.label1124, "label1124");
-            this.label1124.Name = "label1124";
-            // 
-            // label1125
-            // 
-            resources.ApplyResources(this.label1125, "label1125");
-            this.label1125.Name = "label1125";
-            // 
-            // label1126
-            // 
-            resources.ApplyResources(this.label1126, "label1126");
-            this.label1126.Name = "label1126";
-            // 
-            // label1127
-            // 
-            resources.ApplyResources(this.label1127, "label1127");
-            this.label1127.Name = "label1127";
-            // 
-            // label1128
-            // 
-            resources.ApplyResources(this.label1128, "label1128");
-            this.label1128.Name = "label1128";
-            // 
-            // label1129
-            // 
-            resources.ApplyResources(this.label1129, "label1129");
-            this.label1129.Name = "label1129";
-            // 
-            // label1130
-            // 
-            resources.ApplyResources(this.label1130, "label1130");
-            this.label1130.Name = "label1130";
-            // 
-            // label1131
-            // 
-            resources.ApplyResources(this.label1131, "label1131");
-            this.label1131.Name = "label1131";
-            // 
-            // label1132
-            // 
-            resources.ApplyResources(this.label1132, "label1132");
-            this.label1132.Name = "label1132";
-            // 
-            // label1133
-            // 
-            resources.ApplyResources(this.label1133, "label1133");
-            this.label1133.Name = "label1133";
-            // 
-            // label1134
-            // 
-            resources.ApplyResources(this.label1134, "label1134");
-            this.label1134.Name = "label1134";
-            // 
-            // button_Copy_Weather_hand_AOD
-            // 
-            resources.ApplyResources(this.button_Copy_Weather_hand_AOD, "button_Copy_Weather_hand_AOD");
-            this.button_Copy_Weather_hand_AOD.Name = "button_Copy_Weather_hand_AOD";
-            this.button_Copy_Weather_hand_AOD.UseVisualStyleBackColor = true;
-            this.button_Copy_Weather_hand_AOD.Click += new System.EventHandler(this.button_Copy_Weather_hand_AOD_Click);
-            // 
-            // button_Weather_hand_AOD
-            // 
-            resources.ApplyResources(this.button_Weather_hand_AOD, "button_Weather_hand_AOD");
-            this.button_Weather_hand_AOD.Name = "button_Weather_hand_AOD";
-            this.button_Weather_hand_AOD.UseVisualStyleBackColor = true;
-            this.button_Weather_hand_AOD.Click += new System.EventHandler(this.button_Weather_hand_AOD_Click);
-            // 
-            // panel_Weather_textMax_AOD
-            // 
-            this.panel_Weather_textMax_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_textMax_AOD.Controls.Add(this.checkBox_Weather_UseMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_imageMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_iconMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_unitFMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_WeatherXMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_WeatherYMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_Weather_iconXMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_Weather_iconYMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_alignmentMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.numericUpDown_Weather_spacingMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_imageErrorMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.comboBox_Weather_imageMinusMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.checkBox_Weather_followMax_AOD);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1135);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1136);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1137);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1138);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1139);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1140);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1141);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1142);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1143);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1144);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1145);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1146);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.label1147);
-            this.panel_Weather_textMax_AOD.Controls.Add(this.button_Copy_Weather_textMax_AOD);
-            resources.ApplyResources(this.panel_Weather_textMax_AOD, "panel_Weather_textMax_AOD");
-            this.panel_Weather_textMax_AOD.Name = "panel_Weather_textMax_AOD";
-            // 
-            // checkBox_Weather_UseMax_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_UseMax_AOD, "checkBox_Weather_UseMax_AOD");
-            this.checkBox_Weather_UseMax_AOD.Name = "checkBox_Weather_UseMax_AOD";
-            this.checkBox_Weather_UseMax_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_UseMax_AOD.CheckedChanged += new System.EventHandler(this.checkBox_Weather_textMax_Use_AOD_CheckedChanged);
-            this.checkBox_Weather_UseMax_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_imageMax_AOD
-            // 
-            this.comboBox_Weather_imageMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMax_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMax_AOD, "comboBox_Weather_imageMax_AOD");
-            this.comboBox_Weather_imageMax_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageMax_AOD.Name = "comboBox_Weather_imageMax_AOD";
-            this.comboBox_Weather_imageMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_iconMax_AOD
-            // 
-            this.comboBox_Weather_iconMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_iconMax_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_iconMax_AOD, "comboBox_Weather_iconMax_AOD");
-            this.comboBox_Weather_iconMax_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_iconMax_AOD.Name = "comboBox_Weather_iconMax_AOD";
-            this.comboBox_Weather_iconMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_iconMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_iconMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_iconMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_iconMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_unitFMax_AOD
-            // 
-            this.comboBox_Weather_unitFMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_unitFMax_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_unitFMax_AOD, "comboBox_Weather_unitFMax_AOD");
-            this.comboBox_Weather_unitFMax_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_unitFMax_AOD.Name = "comboBox_Weather_unitFMax_AOD";
-            this.comboBox_Weather_unitFMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_unitFMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_unitFMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_unitFMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_unitFMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WeatherXMax_AOD
-            // 
-            this.numericUpDown_WeatherXMax_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WeatherXMax_AOD, "numericUpDown_WeatherXMax_AOD");
-            this.numericUpDown_WeatherXMax_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherXMax_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherXMax_AOD.Name = "numericUpDown_WeatherXMax_AOD";
-            this.numericUpDown_WeatherXMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherXMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WeatherYMax_AOD
-            // 
-            this.numericUpDown_WeatherYMax_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WeatherYMax_AOD, "numericUpDown_WeatherYMax_AOD");
-            this.numericUpDown_WeatherYMax_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherYMax_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherYMax_AOD.Name = "numericUpDown_WeatherYMax_AOD";
-            this.numericUpDown_WeatherYMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherYMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconXMax_AOD
-            // 
-            this.numericUpDown_Weather_iconXMax_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_iconXMax_AOD, "numericUpDown_Weather_iconXMax_AOD");
-            this.numericUpDown_Weather_iconXMax_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconXMax_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconXMax_AOD.Name = "numericUpDown_Weather_iconXMax_AOD";
-            this.numericUpDown_Weather_iconXMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconXMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconYMax_AOD
-            // 
-            this.numericUpDown_Weather_iconYMax_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_iconYMax_AOD, "numericUpDown_Weather_iconYMax_AOD");
-            this.numericUpDown_Weather_iconYMax_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconYMax_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconYMax_AOD.Name = "numericUpDown_Weather_iconYMax_AOD";
-            this.numericUpDown_Weather_iconYMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconYMax_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_Weather_alignmentMax_AOD
-            // 
-            this.comboBox_Weather_alignmentMax_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_alignmentMax_AOD, "comboBox_Weather_alignmentMax_AOD");
-            this.comboBox_Weather_alignmentMax_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_alignmentMax_AOD.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_alignmentMax_AOD.Items"),
-            resources.GetString("comboBox_Weather_alignmentMax_AOD.Items1"),
-            resources.GetString("comboBox_Weather_alignmentMax_AOD.Items2")});
-            this.comboBox_Weather_alignmentMax_AOD.Name = "comboBox_Weather_alignmentMax_AOD";
-            this.comboBox_Weather_alignmentMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // numericUpDown_Weather_spacingMax_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_spacingMax_AOD, "numericUpDown_Weather_spacingMax_AOD");
-            this.numericUpDown_Weather_spacingMax_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_spacingMax_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_spacingMax_AOD.Name = "numericUpDown_Weather_spacingMax_AOD";
-            this.numericUpDown_Weather_spacingMax_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_imageErrorMax_AOD
-            // 
-            this.comboBox_Weather_imageErrorMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageErrorMax_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageErrorMax_AOD, "comboBox_Weather_imageErrorMax_AOD");
-            this.comboBox_Weather_imageErrorMax_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageErrorMax_AOD.Name = "comboBox_Weather_imageErrorMax_AOD";
-            this.comboBox_Weather_imageErrorMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageErrorMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageErrorMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageErrorMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageErrorMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_imageMinusMax_AOD
-            // 
-            this.comboBox_Weather_imageMinusMax_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMinusMax_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMinusMax_AOD, "comboBox_Weather_imageMinusMax_AOD");
-            this.comboBox_Weather_imageMinusMax_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageMinusMax_AOD.Name = "comboBox_Weather_imageMinusMax_AOD";
-            this.comboBox_Weather_imageMinusMax_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMinusMax_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMinusMax_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMinusMax_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMinusMax_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // checkBox_Weather_followMax_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_followMax_AOD, "checkBox_Weather_followMax_AOD");
-            this.checkBox_Weather_followMax_AOD.Name = "checkBox_Weather_followMax_AOD";
-            this.checkBox_Weather_followMax_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_followMax_AOD.CheckedChanged += new System.EventHandler(this.checkBox_Weather_followMax_AOD_CheckedChanged);
-            this.checkBox_Weather_followMax_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // label1135
-            // 
-            resources.ApplyResources(this.label1135, "label1135");
-            this.label1135.Name = "label1135";
-            // 
-            // label1136
-            // 
-            resources.ApplyResources(this.label1136, "label1136");
-            this.label1136.Name = "label1136";
-            // 
-            // label1137
-            // 
-            resources.ApplyResources(this.label1137, "label1137");
-            this.label1137.Name = "label1137";
-            // 
-            // label1138
-            // 
-            resources.ApplyResources(this.label1138, "label1138");
-            this.label1138.Name = "label1138";
-            // 
-            // label1139
-            // 
-            resources.ApplyResources(this.label1139, "label1139");
-            this.label1139.Name = "label1139";
-            // 
-            // label1140
-            // 
-            resources.ApplyResources(this.label1140, "label1140");
-            this.label1140.Name = "label1140";
-            // 
-            // label1141
-            // 
-            resources.ApplyResources(this.label1141, "label1141");
-            this.label1141.Name = "label1141";
-            // 
-            // label1142
-            // 
-            resources.ApplyResources(this.label1142, "label1142");
-            this.label1142.Name = "label1142";
-            // 
-            // label1143
-            // 
-            resources.ApplyResources(this.label1143, "label1143");
-            this.label1143.Name = "label1143";
-            // 
-            // label1144
-            // 
-            resources.ApplyResources(this.label1144, "label1144");
-            this.label1144.Name = "label1144";
-            // 
-            // label1145
-            // 
-            resources.ApplyResources(this.label1145, "label1145");
-            this.label1145.Name = "label1145";
-            // 
-            // label1146
-            // 
-            resources.ApplyResources(this.label1146, "label1146");
-            this.label1146.Name = "label1146";
-            // 
-            // label1147
-            // 
-            resources.ApplyResources(this.label1147, "label1147");
-            this.label1147.Name = "label1147";
-            // 
-            // button_Copy_Weather_textMax_AOD
-            // 
-            resources.ApplyResources(this.button_Copy_Weather_textMax_AOD, "button_Copy_Weather_textMax_AOD");
-            this.button_Copy_Weather_textMax_AOD.Name = "button_Copy_Weather_textMax_AOD";
-            this.button_Copy_Weather_textMax_AOD.UseVisualStyleBackColor = true;
-            this.button_Copy_Weather_textMax_AOD.Click += new System.EventHandler(this.button_Copy_Weather_textMax_AOD_Click);
-            // 
-            // button_Weather_textMax_AOD
-            // 
-            resources.ApplyResources(this.button_Weather_textMax_AOD, "button_Weather_textMax_AOD");
-            this.button_Weather_textMax_AOD.Name = "button_Weather_textMax_AOD";
-            this.button_Weather_textMax_AOD.UseVisualStyleBackColor = true;
-            this.button_Weather_textMax_AOD.Click += new System.EventHandler(this.button_Weather_textMax_AOD_Click);
-            // 
-            // panel_Weather_textMin_AOD
-            // 
-            this.panel_Weather_textMin_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_textMin_AOD.Controls.Add(this.checkBox_Weather_UseMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_imageMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_iconMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_unitFMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_WeatherXMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_WeatherYMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_Weather_iconXMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_Weather_iconYMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_alignmentMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.numericUpDown_Weather_spacingMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_imageErrorMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.comboBox_Weather_imageMinusMin_AOD);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1148);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1149);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1150);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1151);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1152);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1153);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1154);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1155);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1156);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1157);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1158);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1159);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.label1160);
-            this.panel_Weather_textMin_AOD.Controls.Add(this.button_Copy_Weather_textMin_AOD);
-            resources.ApplyResources(this.panel_Weather_textMin_AOD, "panel_Weather_textMin_AOD");
-            this.panel_Weather_textMin_AOD.Name = "panel_Weather_textMin_AOD";
-            // 
-            // checkBox_Weather_UseMin_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_UseMin_AOD, "checkBox_Weather_UseMin_AOD");
-            this.checkBox_Weather_UseMin_AOD.Name = "checkBox_Weather_UseMin_AOD";
-            this.checkBox_Weather_UseMin_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_UseMin_AOD.CheckedChanged += new System.EventHandler(this.checkBox_text_Use_AOD_CheckedChanged);
-            this.checkBox_Weather_UseMin_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_imageMin_AOD
-            // 
-            this.comboBox_Weather_imageMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMin_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMin_AOD, "comboBox_Weather_imageMin_AOD");
-            this.comboBox_Weather_imageMin_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageMin_AOD.Name = "comboBox_Weather_imageMin_AOD";
-            this.comboBox_Weather_imageMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_iconMin_AOD
-            // 
-            this.comboBox_Weather_iconMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_iconMin_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_iconMin_AOD, "comboBox_Weather_iconMin_AOD");
-            this.comboBox_Weather_iconMin_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_iconMin_AOD.Name = "comboBox_Weather_iconMin_AOD";
-            this.comboBox_Weather_iconMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_iconMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_iconMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_iconMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_iconMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_unitFMin_AOD
-            // 
-            this.comboBox_Weather_unitFMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_unitFMin_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_unitFMin_AOD, "comboBox_Weather_unitFMin_AOD");
-            this.comboBox_Weather_unitFMin_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_unitFMin_AOD.Name = "comboBox_Weather_unitFMin_AOD";
-            this.comboBox_Weather_unitFMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_unitFMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_unitFMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_unitFMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_unitFMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WeatherXMin_AOD
-            // 
-            this.numericUpDown_WeatherXMin_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WeatherXMin_AOD, "numericUpDown_WeatherXMin_AOD");
-            this.numericUpDown_WeatherXMin_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherXMin_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherXMin_AOD.Name = "numericUpDown_WeatherXMin_AOD";
-            this.numericUpDown_WeatherXMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherXMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WeatherYMin_AOD
-            // 
-            this.numericUpDown_WeatherYMin_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WeatherYMin_AOD, "numericUpDown_WeatherYMin_AOD");
-            this.numericUpDown_WeatherYMin_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherYMin_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherYMin_AOD.Name = "numericUpDown_WeatherYMin_AOD";
-            this.numericUpDown_WeatherYMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherYMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconXMin_AOD
-            // 
-            this.numericUpDown_Weather_iconXMin_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_iconXMin_AOD, "numericUpDown_Weather_iconXMin_AOD");
-            this.numericUpDown_Weather_iconXMin_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconXMin_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconXMin_AOD.Name = "numericUpDown_Weather_iconXMin_AOD";
-            this.numericUpDown_Weather_iconXMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconXMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconYMin_AOD
-            // 
-            this.numericUpDown_Weather_iconYMin_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_iconYMin_AOD, "numericUpDown_Weather_iconYMin_AOD");
-            this.numericUpDown_Weather_iconYMin_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconYMin_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconYMin_AOD.Name = "numericUpDown_Weather_iconYMin_AOD";
-            this.numericUpDown_Weather_iconYMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconYMin_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_Weather_alignmentMin_AOD
-            // 
-            this.comboBox_Weather_alignmentMin_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_alignmentMin_AOD, "comboBox_Weather_alignmentMin_AOD");
-            this.comboBox_Weather_alignmentMin_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_alignmentMin_AOD.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_alignmentMin_AOD.Items"),
-            resources.GetString("comboBox_Weather_alignmentMin_AOD.Items1"),
-            resources.GetString("comboBox_Weather_alignmentMin_AOD.Items2")});
-            this.comboBox_Weather_alignmentMin_AOD.Name = "comboBox_Weather_alignmentMin_AOD";
-            this.comboBox_Weather_alignmentMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // numericUpDown_Weather_spacingMin_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_spacingMin_AOD, "numericUpDown_Weather_spacingMin_AOD");
-            this.numericUpDown_Weather_spacingMin_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_spacingMin_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_spacingMin_AOD.Name = "numericUpDown_Weather_spacingMin_AOD";
-            this.numericUpDown_Weather_spacingMin_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_imageErrorMin_AOD
-            // 
-            this.comboBox_Weather_imageErrorMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageErrorMin_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageErrorMin_AOD, "comboBox_Weather_imageErrorMin_AOD");
-            this.comboBox_Weather_imageErrorMin_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageErrorMin_AOD.Name = "comboBox_Weather_imageErrorMin_AOD";
-            this.comboBox_Weather_imageErrorMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageErrorMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageErrorMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageErrorMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageErrorMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_imageMinusMin_AOD
-            // 
-            this.comboBox_Weather_imageMinusMin_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMinusMin_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMinusMin_AOD, "comboBox_Weather_imageMinusMin_AOD");
-            this.comboBox_Weather_imageMinusMin_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageMinusMin_AOD.Name = "comboBox_Weather_imageMinusMin_AOD";
-            this.comboBox_Weather_imageMinusMin_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMinusMin_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMinusMin_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMinusMin_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMinusMin_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label1148
-            // 
-            resources.ApplyResources(this.label1148, "label1148");
-            this.label1148.Name = "label1148";
-            // 
-            // label1149
-            // 
-            resources.ApplyResources(this.label1149, "label1149");
-            this.label1149.Name = "label1149";
-            // 
-            // label1150
-            // 
-            resources.ApplyResources(this.label1150, "label1150");
-            this.label1150.Name = "label1150";
-            // 
-            // label1151
-            // 
-            resources.ApplyResources(this.label1151, "label1151");
-            this.label1151.Name = "label1151";
-            // 
-            // label1152
-            // 
-            resources.ApplyResources(this.label1152, "label1152");
-            this.label1152.Name = "label1152";
-            // 
-            // label1153
-            // 
-            resources.ApplyResources(this.label1153, "label1153");
-            this.label1153.Name = "label1153";
-            // 
-            // label1154
-            // 
-            resources.ApplyResources(this.label1154, "label1154");
-            this.label1154.Name = "label1154";
-            // 
-            // label1155
-            // 
-            resources.ApplyResources(this.label1155, "label1155");
-            this.label1155.Name = "label1155";
-            // 
-            // label1156
-            // 
-            resources.ApplyResources(this.label1156, "label1156");
-            this.label1156.Name = "label1156";
-            // 
-            // label1157
-            // 
-            resources.ApplyResources(this.label1157, "label1157");
-            this.label1157.Name = "label1157";
-            // 
-            // label1158
-            // 
-            resources.ApplyResources(this.label1158, "label1158");
-            this.label1158.Name = "label1158";
-            // 
-            // label1159
-            // 
-            resources.ApplyResources(this.label1159, "label1159");
-            this.label1159.Name = "label1159";
-            // 
-            // label1160
-            // 
-            resources.ApplyResources(this.label1160, "label1160");
-            this.label1160.Name = "label1160";
-            // 
-            // button_Copy_Weather_textMin_AOD
-            // 
-            resources.ApplyResources(this.button_Copy_Weather_textMin_AOD, "button_Copy_Weather_textMin_AOD");
-            this.button_Copy_Weather_textMin_AOD.Name = "button_Copy_Weather_textMin_AOD";
-            this.button_Copy_Weather_textMin_AOD.UseVisualStyleBackColor = true;
-            this.button_Copy_Weather_textMin_AOD.Click += new System.EventHandler(this.button_Copy_Weather_textMin_AOD_Click);
-            // 
-            // button_Weather_textMin_AOD
-            // 
-            resources.ApplyResources(this.button_Weather_textMin_AOD, "button_Weather_textMin_AOD");
-            this.button_Weather_textMin_AOD.Name = "button_Weather_textMin_AOD";
-            this.button_Weather_textMin_AOD.UseVisualStyleBackColor = true;
-            this.button_Weather_textMin_AOD.Click += new System.EventHandler(this.button_Weather_textMin_AOD_Click);
-            // 
-            // panel_Weather_text_AOD
-            // 
-            this.panel_Weather_text_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_text_AOD.Controls.Add(this.checkBox_Weather_Use_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_image_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_icon_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_unitF_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_WeatherX_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_WeatherY_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_Weather_iconX_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_Weather_iconY_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_alignment_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.numericUpDown_Weather_spacing_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_imageError_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.comboBox_Weather_imageMinus_AOD);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1161);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1162);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1163);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1164);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1165);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1166);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1167);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1168);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1169);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1170);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1171);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1172);
-            this.panel_Weather_text_AOD.Controls.Add(this.label1173);
-            this.panel_Weather_text_AOD.Controls.Add(this.button_Copy_Weather_text_AOD);
-            resources.ApplyResources(this.panel_Weather_text_AOD, "panel_Weather_text_AOD");
-            this.panel_Weather_text_AOD.Name = "panel_Weather_text_AOD";
-            // 
-            // checkBox_Weather_Use_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_Use_AOD, "checkBox_Weather_Use_AOD");
-            this.checkBox_Weather_Use_AOD.Name = "checkBox_Weather_Use_AOD";
-            this.checkBox_Weather_Use_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_text_Use_AOD_CheckedChanged);
-            this.checkBox_Weather_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_image_AOD
-            // 
-            this.comboBox_Weather_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_image_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_image_AOD, "comboBox_Weather_image_AOD");
-            this.comboBox_Weather_image_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_image_AOD.Name = "comboBox_Weather_image_AOD";
-            this.comboBox_Weather_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_icon_AOD
-            // 
-            this.comboBox_Weather_icon_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_icon_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_icon_AOD, "comboBox_Weather_icon_AOD");
-            this.comboBox_Weather_icon_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_icon_AOD.Name = "comboBox_Weather_icon_AOD";
-            this.comboBox_Weather_icon_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_icon_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_icon_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_icon_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_icon_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_unitF_AOD
-            // 
-            this.comboBox_Weather_unitF_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_unitF_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_unitF_AOD, "comboBox_Weather_unitF_AOD");
-            this.comboBox_Weather_unitF_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_unitF_AOD.Name = "comboBox_Weather_unitF_AOD";
-            this.comboBox_Weather_unitF_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_unitF_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_unitF_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_unitF_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_unitF_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WeatherX_AOD
-            // 
-            this.numericUpDown_WeatherX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WeatherX_AOD, "numericUpDown_WeatherX_AOD");
-            this.numericUpDown_WeatherX_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherX_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherX_AOD.Name = "numericUpDown_WeatherX_AOD";
-            this.numericUpDown_WeatherX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WeatherY_AOD
-            // 
-            this.numericUpDown_WeatherY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WeatherY_AOD, "numericUpDown_WeatherY_AOD");
-            this.numericUpDown_WeatherY_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherY_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherY_AOD.Name = "numericUpDown_WeatherY_AOD";
-            this.numericUpDown_WeatherY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeatherY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconX_AOD
-            // 
-            this.numericUpDown_Weather_iconX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_iconX_AOD, "numericUpDown_Weather_iconX_AOD");
-            this.numericUpDown_Weather_iconX_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconX_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconX_AOD.Name = "numericUpDown_Weather_iconX_AOD";
-            this.numericUpDown_Weather_iconX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_iconY_AOD
-            // 
-            this.numericUpDown_Weather_iconY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_iconY_AOD, "numericUpDown_Weather_iconY_AOD");
-            this.numericUpDown_Weather_iconY_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_iconY_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_iconY_AOD.Name = "numericUpDown_Weather_iconY_AOD";
-            this.numericUpDown_Weather_iconY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_iconY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_Weather_alignment_AOD
-            // 
-            this.comboBox_Weather_alignment_AOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_Weather_alignment_AOD, "comboBox_Weather_alignment_AOD");
-            this.comboBox_Weather_alignment_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_alignment_AOD.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Weather_alignment_AOD.Items"),
-            resources.GetString("comboBox_Weather_alignment_AOD.Items1"),
-            resources.GetString("comboBox_Weather_alignment_AOD.Items2")});
-            this.comboBox_Weather_alignment_AOD.Name = "comboBox_Weather_alignment_AOD";
-            this.comboBox_Weather_alignment_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // numericUpDown_Weather_spacing_AOD
-            // 
-            resources.ApplyResources(this.numericUpDown_Weather_spacing_AOD, "numericUpDown_Weather_spacing_AOD");
-            this.numericUpDown_Weather_spacing_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_spacing_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_spacing_AOD.Name = "numericUpDown_Weather_spacing_AOD";
-            this.numericUpDown_Weather_spacing_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // comboBox_Weather_imageError_AOD
-            // 
-            this.comboBox_Weather_imageError_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageError_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageError_AOD, "comboBox_Weather_imageError_AOD");
-            this.comboBox_Weather_imageError_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageError_AOD.Name = "comboBox_Weather_imageError_AOD";
-            this.comboBox_Weather_imageError_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageError_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageError_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageError_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageError_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // comboBox_Weather_imageMinus_AOD
-            // 
-            this.comboBox_Weather_imageMinus_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_imageMinus_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_imageMinus_AOD, "comboBox_Weather_imageMinus_AOD");
-            this.comboBox_Weather_imageMinus_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_imageMinus_AOD.Name = "comboBox_Weather_imageMinus_AOD";
-            this.comboBox_Weather_imageMinus_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_imageMinus_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_imageMinus_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_imageMinus_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_imageMinus_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label1161
-            // 
-            resources.ApplyResources(this.label1161, "label1161");
-            this.label1161.Name = "label1161";
-            // 
-            // label1162
-            // 
-            resources.ApplyResources(this.label1162, "label1162");
-            this.label1162.Name = "label1162";
-            // 
-            // label1163
-            // 
-            resources.ApplyResources(this.label1163, "label1163");
-            this.label1163.Name = "label1163";
-            // 
-            // label1164
-            // 
-            resources.ApplyResources(this.label1164, "label1164");
-            this.label1164.Name = "label1164";
-            // 
-            // label1165
-            // 
-            resources.ApplyResources(this.label1165, "label1165");
-            this.label1165.Name = "label1165";
-            // 
-            // label1166
-            // 
-            resources.ApplyResources(this.label1166, "label1166");
-            this.label1166.Name = "label1166";
-            // 
-            // label1167
-            // 
-            resources.ApplyResources(this.label1167, "label1167");
-            this.label1167.Name = "label1167";
-            // 
-            // label1168
-            // 
-            resources.ApplyResources(this.label1168, "label1168");
-            this.label1168.Name = "label1168";
-            // 
-            // label1169
-            // 
-            resources.ApplyResources(this.label1169, "label1169");
-            this.label1169.Name = "label1169";
-            // 
-            // label1170
-            // 
-            resources.ApplyResources(this.label1170, "label1170");
-            this.label1170.Name = "label1170";
-            // 
-            // label1171
-            // 
-            resources.ApplyResources(this.label1171, "label1171");
-            this.label1171.Name = "label1171";
-            // 
-            // label1172
-            // 
-            resources.ApplyResources(this.label1172, "label1172");
-            this.label1172.Name = "label1172";
-            // 
-            // label1173
-            // 
-            resources.ApplyResources(this.label1173, "label1173");
-            this.label1173.Name = "label1173";
-            // 
-            // button_Copy_Weather_text_AOD
-            // 
-            resources.ApplyResources(this.button_Copy_Weather_text_AOD, "button_Copy_Weather_text_AOD");
-            this.button_Copy_Weather_text_AOD.Name = "button_Copy_Weather_text_AOD";
-            this.button_Copy_Weather_text_AOD.UseVisualStyleBackColor = true;
-            this.button_Copy_Weather_text_AOD.Click += new System.EventHandler(this.button_Copy_Weather_text_AOD_Click);
-            // 
-            // button_Weather_text_AOD
-            // 
-            resources.ApplyResources(this.button_Weather_text_AOD, "button_Weather_text_AOD");
-            this.button_Weather_text_AOD.Name = "button_Weather_text_AOD";
-            this.button_Weather_text_AOD.UseVisualStyleBackColor = true;
-            this.button_Weather_text_AOD.Click += new System.EventHandler(this.button_Weather_text_AOD_Click);
-            // 
-            // panel_Weather_pictures_AOD
-            // 
-            this.panel_Weather_pictures_AOD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Weather_pictures_AOD.Controls.Add(this.checkBox_Weather_pictures_Use_AOD);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.comboBox_Weather_pictures_image_AOD);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown_Weather_picturesX_AOD);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown_Weather_picturesY_AOD);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.numericUpDown_Weather_pictures_count_AOD);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.label1174);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.label1175);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.label1176);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.label1177);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.label1178);
-            this.panel_Weather_pictures_AOD.Controls.Add(this.button_Copy_Weather_pictures_AOD);
-            resources.ApplyResources(this.panel_Weather_pictures_AOD, "panel_Weather_pictures_AOD");
-            this.panel_Weather_pictures_AOD.Name = "panel_Weather_pictures_AOD";
-            // 
-            // checkBox_Weather_pictures_Use_AOD
-            // 
-            resources.ApplyResources(this.checkBox_Weather_pictures_Use_AOD, "checkBox_Weather_pictures_Use_AOD");
-            this.checkBox_Weather_pictures_Use_AOD.Name = "checkBox_Weather_pictures_Use_AOD";
-            this.checkBox_Weather_pictures_Use_AOD.UseVisualStyleBackColor = true;
-            this.checkBox_Weather_pictures_Use_AOD.CheckedChanged += new System.EventHandler(this.checkBox_pictures_Use_AOD_CheckedChanged);
-            this.checkBox_Weather_pictures_Use_AOD.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // comboBox_Weather_pictures_image_AOD
-            // 
-            this.comboBox_Weather_pictures_image_AOD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Weather_pictures_image_AOD.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_pictures_image_AOD, "comboBox_Weather_pictures_image_AOD");
-            this.comboBox_Weather_pictures_image_AOD.FormattingEnabled = true;
-            this.comboBox_Weather_pictures_image_AOD.Name = "comboBox_Weather_pictures_image_AOD";
-            this.toolTip_Weather.SetToolTip(this.comboBox_Weather_pictures_image_AOD, resources.GetString("comboBox_Weather_pictures_image_AOD.ToolTip"));
-            this.comboBox_Weather_pictures_image_AOD.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Weather_pictures_image_AOD.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Weather_pictures_image_AOD.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Weather_pictures_image_AOD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Weather_pictures_image_AOD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_Weather_picturesX_AOD
-            // 
-            this.numericUpDown_Weather_picturesX_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_picturesX_AOD, "numericUpDown_Weather_picturesX_AOD");
-            this.numericUpDown_Weather_picturesX_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_picturesX_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_picturesX_AOD.Name = "numericUpDown_Weather_picturesX_AOD";
-            this.numericUpDown_Weather_picturesX_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_picturesX_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_picturesY_AOD
-            // 
-            this.numericUpDown_Weather_picturesY_AOD.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_Weather_picturesY_AOD, "numericUpDown_Weather_picturesY_AOD");
-            this.numericUpDown_Weather_picturesY_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_picturesY_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_picturesY_AOD.Name = "numericUpDown_Weather_picturesY_AOD";
-            this.numericUpDown_Weather_picturesY_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_picturesY_AOD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_Weather_pictures_count_AOD
-            // 
-            this.numericUpDown_Weather_pictures_count_AOD.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_Weather_pictures_count_AOD, "numericUpDown_Weather_pictures_count_AOD");
-            this.numericUpDown_Weather_pictures_count_AOD.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_pictures_count_AOD.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Weather_pictures_count_AOD.Name = "numericUpDown_Weather_pictures_count_AOD";
-            this.numericUpDown_Weather_pictures_count_AOD.Value = new decimal(new int[] {
-            29,
-            0,
-            0,
-            0});
-            this.numericUpDown_Weather_pictures_count_AOD.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label1174
-            // 
-            resources.ApplyResources(this.label1174, "label1174");
-            this.label1174.Name = "label1174";
-            // 
-            // label1175
-            // 
-            resources.ApplyResources(this.label1175, "label1175");
-            this.label1175.Name = "label1175";
-            // 
-            // label1176
-            // 
-            resources.ApplyResources(this.label1176, "label1176");
-            this.label1176.Name = "label1176";
-            // 
-            // label1177
-            // 
-            resources.ApplyResources(this.label1177, "label1177");
-            this.label1177.Name = "label1177";
-            // 
-            // label1178
-            // 
-            resources.ApplyResources(this.label1178, "label1178");
-            this.label1178.Name = "label1178";
-            // 
-            // button_Copy_Weather_pictures_AOD
-            // 
-            resources.ApplyResources(this.button_Copy_Weather_pictures_AOD, "button_Copy_Weather_pictures_AOD");
-            this.button_Copy_Weather_pictures_AOD.Name = "button_Copy_Weather_pictures_AOD";
-            this.button_Copy_Weather_pictures_AOD.UseVisualStyleBackColor = true;
-            this.button_Copy_Weather_pictures_AOD.Click += new System.EventHandler(this.button_Copy_Weather_pictures_AOD_Click);
-            // 
-            // button_Weather_pictures_AOD
-            // 
-            resources.ApplyResources(this.button_Weather_pictures_AOD, "button_Weather_pictures_AOD");
-            this.button_Weather_pictures_AOD.Name = "button_Weather_pictures_AOD";
-            this.button_Weather_pictures_AOD.UseVisualStyleBackColor = true;
-            this.button_Weather_pictures_AOD.Click += new System.EventHandler(this.button_Weather_pictures_AOD_Click);
             // 
             // tabPage_UVindex_AOD
             // 
             resources.ApplyResources(this.tabPage_UVindex_AOD, "tabPage_UVindex_AOD");
+            this.tabPage_UVindex_AOD.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_UVindex_AOD.Controls.Add(this.userControl_scaleLinear_UVindex_AOD);
+            this.tabPage_UVindex_AOD.Controls.Add(this.userControl_scaleCircle_UVindex_AOD);
+            this.tabPage_UVindex_AOD.Controls.Add(this.userControl_hand_UVindex_AOD);
+            this.tabPage_UVindex_AOD.Controls.Add(this.userControl_text_UVindex_AOD);
+            this.tabPage_UVindex_AOD.Controls.Add(this.userControl_pictures_UVindex_AOD);
             this.tabPage_UVindex_AOD.Name = "tabPage_UVindex_AOD";
-            this.tabPage_UVindex_AOD.UseVisualStyleBackColor = true;
             // 
             // tabPage_AirQuality_AOD
             // 
             resources.ApplyResources(this.tabPage_AirQuality_AOD, "tabPage_AirQuality_AOD");
+            this.tabPage_AirQuality_AOD.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_scaleLinear_AirQuality_AOD);
+            this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_scaleCircle_AirQuality_AOD);
+            this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_hand_AirQuality_AOD);
+            this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_text_AirQuality_AOD);
+            this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_pictures_AirQuality_AOD);
             this.tabPage_AirQuality_AOD.Name = "tabPage_AirQuality_AOD";
-            this.tabPage_AirQuality_AOD.UseVisualStyleBackColor = true;
             // 
             // tabPage_Humidity_AOD
             // 
             resources.ApplyResources(this.tabPage_Humidity_AOD, "tabPage_Humidity_AOD");
+            this.tabPage_Humidity_AOD.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Humidity_AOD.Controls.Add(this.userControl_scaleLinear_Humidity_AOD);
+            this.tabPage_Humidity_AOD.Controls.Add(this.userControl_scaleCircle_Humidity_AOD);
+            this.tabPage_Humidity_AOD.Controls.Add(this.userControl_hand_Humidity_AOD);
+            this.tabPage_Humidity_AOD.Controls.Add(this.userControl_text_Humidity_AOD);
+            this.tabPage_Humidity_AOD.Controls.Add(this.userControl_pictures_Humidity_AOD);
             this.tabPage_Humidity_AOD.Name = "tabPage_Humidity_AOD";
-            this.tabPage_Humidity_AOD.UseVisualStyleBackColor = true;
             // 
             // tabPage_Sunrise_AOD
             // 
@@ -14369,20 +9585,35 @@
             // tabPage_WindForce_AOD
             // 
             resources.ApplyResources(this.tabPage_WindForce_AOD, "tabPage_WindForce_AOD");
+            this.tabPage_WindForce_AOD.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_WindForce_AOD.Controls.Add(this.userControl_scaleLinear_WindForce_AOD);
+            this.tabPage_WindForce_AOD.Controls.Add(this.userControl_scaleCircle_WindForce_AOD);
+            this.tabPage_WindForce_AOD.Controls.Add(this.userControl_hand_WindForce_AOD);
+            this.tabPage_WindForce_AOD.Controls.Add(this.userControl_text_WindForce_AOD);
+            this.tabPage_WindForce_AOD.Controls.Add(this.userControl_pictures_WindForce_AOD);
             this.tabPage_WindForce_AOD.Name = "tabPage_WindForce_AOD";
-            this.tabPage_WindForce_AOD.UseVisualStyleBackColor = true;
             // 
             // tabPage_Altitude_AOD
             // 
             resources.ApplyResources(this.tabPage_Altitude_AOD, "tabPage_Altitude_AOD");
+            this.tabPage_Altitude_AOD.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Altitude_AOD.Controls.Add(this.userControl_scaleLinear_Altitude_AOD);
+            this.tabPage_Altitude_AOD.Controls.Add(this.userControl_scaleCircle_Altitude_AOD);
+            this.tabPage_Altitude_AOD.Controls.Add(this.userControl_hand_Altitude_AOD);
+            this.tabPage_Altitude_AOD.Controls.Add(this.userControl_text_Altitude_AOD);
+            this.tabPage_Altitude_AOD.Controls.Add(this.userControl_pictures_Altitude_AOD);
             this.tabPage_Altitude_AOD.Name = "tabPage_Altitude_AOD";
-            this.tabPage_Altitude_AOD.UseVisualStyleBackColor = true;
             // 
             // tabPage_AirPressure_AOD
             // 
             resources.ApplyResources(this.tabPage_AirPressure_AOD, "tabPage_AirPressure_AOD");
+            this.tabPage_AirPressure_AOD.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_scaleLinear_AirPressure_AOD);
+            this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_scaleCircle_AirPressure_AOD);
+            this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_hand_AirPressure_AOD);
+            this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_text_AirPressure_AOD);
+            this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_pictures_AirPressure_AOD);
             this.tabPage_AirPressure_AOD.Name = "tabPage_AirPressure_AOD";
-            this.tabPage_AirPressure_AOD.UseVisualStyleBackColor = true;
             // 
             // tabPage_System_AOD
             // 
@@ -14408,50 +9639,6 @@
             this.tabPage_Battery_AOD.Controls.Add(this.userControl_text_Battery_AOD);
             this.tabPage_Battery_AOD.Controls.Add(this.userControl_pictures_Battery_AOD);
             this.tabPage_Battery_AOD.Name = "tabPage_Battery_AOD";
-            // 
-            // userControl_scaleLinear_Battery_AOD
-            // 
-            this.userControl_scaleLinear_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Battery_AOD, "userControl_scaleLinear_Battery_AOD");
-            this.userControl_scaleLinear_Battery_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Battery_AOD.Name = "userControl_scaleLinear_Battery_AOD";
-            this.userControl_scaleLinear_Battery_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Battery_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Battery_AOD
-            // 
-            this.userControl_scaleCircle_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Battery_AOD, "userControl_scaleCircle_Battery_AOD");
-            this.userControl_scaleCircle_Battery_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Battery_AOD.Name = "userControl_scaleCircle_Battery_AOD";
-            this.userControl_scaleCircle_Battery_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Battery_AOD_Copy);
-            // 
-            // userControl_hand_Battery_AOD
-            // 
-            this.userControl_hand_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Battery_AOD, "userControl_hand_Battery_AOD");
-            this.userControl_hand_Battery_AOD.Collapsed = true;
-            this.userControl_hand_Battery_AOD.Name = "userControl_hand_Battery_AOD";
-            this.userControl_hand_Battery_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Battery_AOD_Copy);
-            // 
-            // userControl_text_Battery_AOD
-            // 
-            this.userControl_text_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_text_Battery_AOD, "userControl_text_Battery_AOD");
-            this.userControl_text_Battery_AOD.Collapsed = true;
-            this.userControl_text_Battery_AOD.ImageError = true;
-            this.userControl_text_Battery_AOD.Name = "userControl_text_Battery_AOD";
-            this.userControl_text_Battery_AOD.OptionalSymbol = false;
-            this.userControl_text_Battery_AOD.PaddingZero_follow = true;
-            this.userControl_text_Battery_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Battery_AOD_Copy);
-            // 
-            // userControl_pictures_Battery_AOD
-            // 
-            this.userControl_pictures_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Battery_AOD, "userControl_pictures_Battery_AOD");
-            this.userControl_pictures_Battery_AOD.Collapsed = true;
-            this.userControl_pictures_Battery_AOD.ImagesCount = 10;
-            this.userControl_pictures_Battery_AOD.Name = "userControl_pictures_Battery_AOD";
-            this.userControl_pictures_Battery_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Battery_AOD_Copy);
             // 
             // tabControl1
             // 
@@ -14501,114 +9688,6 @@
             resources.ApplyResources(this.panel_set, "panel_set");
             this.panel_set.Name = "panel_set";
             // 
-            // userControl_Set12
-            // 
-            resources.ApplyResources(this.userControl_Set12, "userControl_Set12");
-            this.userControl_Set12.Collapsed = true;
-            this.userControl_Set12.Name = "userControl_Set12";
-            this.userControl_Set12.SetNumber = 12;
-            this.userControl_Set12.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set12_Collapse);
-            this.userControl_Set12.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set11
-            // 
-            resources.ApplyResources(this.userControl_Set11, "userControl_Set11");
-            this.userControl_Set11.Collapsed = true;
-            this.userControl_Set11.Name = "userControl_Set11";
-            this.userControl_Set11.SetNumber = 11;
-            this.userControl_Set11.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set11_Collapse);
-            this.userControl_Set11.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set10
-            // 
-            resources.ApplyResources(this.userControl_Set10, "userControl_Set10");
-            this.userControl_Set10.Collapsed = true;
-            this.userControl_Set10.Name = "userControl_Set10";
-            this.userControl_Set10.SetNumber = 10;
-            this.userControl_Set10.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set10_Collapse);
-            this.userControl_Set10.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set9
-            // 
-            resources.ApplyResources(this.userControl_Set9, "userControl_Set9");
-            this.userControl_Set9.Collapsed = true;
-            this.userControl_Set9.Name = "userControl_Set9";
-            this.userControl_Set9.SetNumber = 9;
-            this.userControl_Set9.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set9_Collapse);
-            this.userControl_Set9.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set8
-            // 
-            resources.ApplyResources(this.userControl_Set8, "userControl_Set8");
-            this.userControl_Set8.Collapsed = true;
-            this.userControl_Set8.Name = "userControl_Set8";
-            this.userControl_Set8.SetNumber = 8;
-            this.userControl_Set8.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set8_Collapse);
-            this.userControl_Set8.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set7
-            // 
-            resources.ApplyResources(this.userControl_Set7, "userControl_Set7");
-            this.userControl_Set7.Collapsed = true;
-            this.userControl_Set7.Name = "userControl_Set7";
-            this.userControl_Set7.SetNumber = 7;
-            this.userControl_Set7.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set7_Collapse);
-            this.userControl_Set7.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set6
-            // 
-            resources.ApplyResources(this.userControl_Set6, "userControl_Set6");
-            this.userControl_Set6.Collapsed = true;
-            this.userControl_Set6.Name = "userControl_Set6";
-            this.userControl_Set6.SetNumber = 6;
-            this.userControl_Set6.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set6_Collapse);
-            this.userControl_Set6.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set5
-            // 
-            resources.ApplyResources(this.userControl_Set5, "userControl_Set5");
-            this.userControl_Set5.Collapsed = true;
-            this.userControl_Set5.Name = "userControl_Set5";
-            this.userControl_Set5.SetNumber = 5;
-            this.userControl_Set5.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set5_Collapse);
-            this.userControl_Set5.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set4
-            // 
-            resources.ApplyResources(this.userControl_Set4, "userControl_Set4");
-            this.userControl_Set4.Collapsed = true;
-            this.userControl_Set4.Name = "userControl_Set4";
-            this.userControl_Set4.SetNumber = 4;
-            this.userControl_Set4.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set4_Collapse);
-            this.userControl_Set4.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set3
-            // 
-            resources.ApplyResources(this.userControl_Set3, "userControl_Set3");
-            this.userControl_Set3.Collapsed = true;
-            this.userControl_Set3.Name = "userControl_Set3";
-            this.userControl_Set3.SetNumber = 3;
-            this.userControl_Set3.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set3_Collapse);
-            this.userControl_Set3.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set2
-            // 
-            resources.ApplyResources(this.userControl_Set2, "userControl_Set2");
-            this.userControl_Set2.Collapsed = true;
-            this.userControl_Set2.Name = "userControl_Set2";
-            this.userControl_Set2.SetNumber = 2;
-            this.userControl_Set2.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set2_Collapse);
-            this.userControl_Set2.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set1
-            // 
-            resources.ApplyResources(this.userControl_Set1, "userControl_Set1");
-            this.userControl_Set1.Collapsed = true;
-            this.userControl_Set1.Name = "userControl_Set1";
-            this.userControl_Set1.SetNumber = 1;
-            this.userControl_Set1.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set1_Collapse);
-            this.userControl_Set1.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
             // panel_PreviewStates
             // 
             this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Random);
@@ -14656,8 +9735,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -14679,11 +9758,11 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -15583,10 +10662,1681 @@
             this.radioButton_TRex_pro.UseVisualStyleBackColor = true;
             this.radioButton_TRex_pro.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
+            // progressBar1
+            // 
+            resources.ApplyResources(this.progressBar1, "progressBar1");
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Step = 1;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // userControl_Set12
+            // 
+            resources.ApplyResources(this.userControl_Set12, "userControl_Set12");
+            this.userControl_Set12.Collapsed = true;
+            this.userControl_Set12.Name = "userControl_Set12";
+            this.userControl_Set12.SetNumber = 12;
+            this.userControl_Set12.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set12_Collapse);
+            this.userControl_Set12.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set11
+            // 
+            resources.ApplyResources(this.userControl_Set11, "userControl_Set11");
+            this.userControl_Set11.Collapsed = true;
+            this.userControl_Set11.Name = "userControl_Set11";
+            this.userControl_Set11.SetNumber = 11;
+            this.userControl_Set11.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set11_Collapse);
+            this.userControl_Set11.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set10
+            // 
+            resources.ApplyResources(this.userControl_Set10, "userControl_Set10");
+            this.userControl_Set10.Collapsed = true;
+            this.userControl_Set10.Name = "userControl_Set10";
+            this.userControl_Set10.SetNumber = 10;
+            this.userControl_Set10.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set10_Collapse);
+            this.userControl_Set10.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set9
+            // 
+            resources.ApplyResources(this.userControl_Set9, "userControl_Set9");
+            this.userControl_Set9.Collapsed = true;
+            this.userControl_Set9.Name = "userControl_Set9";
+            this.userControl_Set9.SetNumber = 9;
+            this.userControl_Set9.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set9_Collapse);
+            this.userControl_Set9.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set8
+            // 
+            resources.ApplyResources(this.userControl_Set8, "userControl_Set8");
+            this.userControl_Set8.Collapsed = true;
+            this.userControl_Set8.Name = "userControl_Set8";
+            this.userControl_Set8.SetNumber = 8;
+            this.userControl_Set8.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set8_Collapse);
+            this.userControl_Set8.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set7
+            // 
+            resources.ApplyResources(this.userControl_Set7, "userControl_Set7");
+            this.userControl_Set7.Collapsed = true;
+            this.userControl_Set7.Name = "userControl_Set7";
+            this.userControl_Set7.SetNumber = 7;
+            this.userControl_Set7.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set7_Collapse);
+            this.userControl_Set7.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set6
+            // 
+            resources.ApplyResources(this.userControl_Set6, "userControl_Set6");
+            this.userControl_Set6.Collapsed = true;
+            this.userControl_Set6.Name = "userControl_Set6";
+            this.userControl_Set6.SetNumber = 6;
+            this.userControl_Set6.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set6_Collapse);
+            this.userControl_Set6.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set5
+            // 
+            resources.ApplyResources(this.userControl_Set5, "userControl_Set5");
+            this.userControl_Set5.Collapsed = true;
+            this.userControl_Set5.Name = "userControl_Set5";
+            this.userControl_Set5.SetNumber = 5;
+            this.userControl_Set5.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set5_Collapse);
+            this.userControl_Set5.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set4
+            // 
+            resources.ApplyResources(this.userControl_Set4, "userControl_Set4");
+            this.userControl_Set4.Collapsed = true;
+            this.userControl_Set4.Name = "userControl_Set4";
+            this.userControl_Set4.SetNumber = 4;
+            this.userControl_Set4.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set4_Collapse);
+            this.userControl_Set4.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set3
+            // 
+            resources.ApplyResources(this.userControl_Set3, "userControl_Set3");
+            this.userControl_Set3.Collapsed = true;
+            this.userControl_Set3.Name = "userControl_Set3";
+            this.userControl_Set3.SetNumber = 3;
+            this.userControl_Set3.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set3_Collapse);
+            this.userControl_Set3.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set2
+            // 
+            resources.ApplyResources(this.userControl_Set2, "userControl_Set2");
+            this.userControl_Set2.Collapsed = true;
+            this.userControl_Set2.Name = "userControl_Set2";
+            this.userControl_Set2.SetNumber = 2;
+            this.userControl_Set2.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set2_Collapse);
+            this.userControl_Set2.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set1
+            // 
+            resources.ApplyResources(this.userControl_Set1, "userControl_Set1");
+            this.userControl_Set1.Collapsed = true;
+            this.userControl_Set1.Name = "userControl_Set1";
+            this.userControl_Set1.SetNumber = 1;
+            this.userControl_Set1.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set1_Collapse);
+            this.userControl_Set1.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_scaleLinear_Steps
+            // 
+            this.userControl_scaleLinear_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Steps, "userControl_scaleLinear_Steps");
+            this.userControl_scaleLinear_Steps.Collapsed = true;
+            this.userControl_scaleLinear_Steps.Name = "userControl_scaleLinear_Steps";
+            this.userControl_scaleLinear_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Steps
+            // 
+            this.userControl_scaleCircle_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Steps, "userControl_scaleCircle_Steps");
+            this.userControl_scaleCircle_Steps.Collapsed = true;
+            this.userControl_scaleCircle_Steps.Name = "userControl_scaleCircle_Steps";
+            this.userControl_scaleCircle_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Steps
+            // 
+            this.userControl_hand_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Steps, "userControl_hand_Steps");
+            this.userControl_hand_Steps.Collapsed = true;
+            this.userControl_hand_Steps.Name = "userControl_hand_Steps";
+            this.userControl_hand_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Steps
+            // 
+            this.userControl_text_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_text_Steps, "userControl_text_Steps");
+            this.userControl_text_Steps.Collapsed = true;
+            this.userControl_text_Steps.ImageError = true;
+            this.userControl_text_Steps.Name = "userControl_text_Steps";
+            this.userControl_text_Steps.OptionalSymbol = false;
+            this.userControl_text_Steps.PaddingZero_follow = true;
+            this.userControl_text_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Steps
+            // 
+            this.userControl_pictures_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Steps, "userControl_pictures_Steps");
+            this.userControl_pictures_Steps.Collapsed = true;
+            this.userControl_pictures_Steps.ImagesCount = 10;
+            this.userControl_pictures_Steps.Name = "userControl_pictures_Steps";
+            this.userControl_pictures_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Calories
+            // 
+            this.userControl_scaleLinear_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Calories, "userControl_scaleLinear_Calories");
+            this.userControl_scaleLinear_Calories.Collapsed = true;
+            this.userControl_scaleLinear_Calories.Name = "userControl_scaleLinear_Calories";
+            this.userControl_scaleLinear_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Calories
+            // 
+            this.userControl_scaleCircle_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Calories, "userControl_scaleCircle_Calories");
+            this.userControl_scaleCircle_Calories.Collapsed = true;
+            this.userControl_scaleCircle_Calories.Name = "userControl_scaleCircle_Calories";
+            this.userControl_scaleCircle_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Calories
+            // 
+            this.userControl_hand_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Calories, "userControl_hand_Calories");
+            this.userControl_hand_Calories.Collapsed = true;
+            this.userControl_hand_Calories.Name = "userControl_hand_Calories";
+            this.userControl_hand_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Calories
+            // 
+            this.userControl_text_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_text_Calories, "userControl_text_Calories");
+            this.userControl_text_Calories.Collapsed = true;
+            this.userControl_text_Calories.ImageError = true;
+            this.userControl_text_Calories.Name = "userControl_text_Calories";
+            this.userControl_text_Calories.OptionalSymbol = false;
+            this.userControl_text_Calories.PaddingZero_follow = true;
+            this.userControl_text_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Calories
+            // 
+            this.userControl_pictures_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Calories, "userControl_pictures_Calories");
+            this.userControl_pictures_Calories.Collapsed = true;
+            this.userControl_pictures_Calories.ImagesCount = 10;
+            this.userControl_pictures_Calories.Name = "userControl_pictures_Calories";
+            this.userControl_pictures_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_HeartRate
+            // 
+            this.userControl_scaleLinear_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_HeartRate, "userControl_scaleLinear_HeartRate");
+            this.userControl_scaleLinear_HeartRate.Collapsed = true;
+            this.userControl_scaleLinear_HeartRate.Name = "userControl_scaleLinear_HeartRate";
+            this.userControl_scaleLinear_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_HeartRate
+            // 
+            this.userControl_scaleCircle_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_HeartRate, "userControl_scaleCircle_HeartRate");
+            this.userControl_scaleCircle_HeartRate.Collapsed = true;
+            this.userControl_scaleCircle_HeartRate.Name = "userControl_scaleCircle_HeartRate";
+            this.userControl_scaleCircle_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_HeartRate
+            // 
+            this.userControl_hand_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_hand_HeartRate, "userControl_hand_HeartRate");
+            this.userControl_hand_HeartRate.Collapsed = true;
+            this.userControl_hand_HeartRate.Name = "userControl_hand_HeartRate";
+            this.userControl_hand_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_HeartRate
+            // 
+            this.userControl_text_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_text_HeartRate, "userControl_text_HeartRate");
+            this.userControl_text_HeartRate.Collapsed = true;
+            this.userControl_text_HeartRate.ImageError = true;
+            this.userControl_text_HeartRate.Name = "userControl_text_HeartRate";
+            this.userControl_text_HeartRate.OptionalSymbol = false;
+            this.userControl_text_HeartRate.PaddingZero_follow = true;
+            this.userControl_text_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_HeartRate
+            // 
+            this.userControl_pictures_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_HeartRate, "userControl_pictures_HeartRate");
+            this.userControl_pictures_HeartRate.Collapsed = true;
+            this.userControl_pictures_HeartRate.ImagesCount = 6;
+            this.userControl_pictures_HeartRate.Name = "userControl_pictures_HeartRate";
+            this.userControl_pictures_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_PAI
+            // 
+            this.userControl_scaleLinear_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_PAI, "userControl_scaleLinear_PAI");
+            this.userControl_scaleLinear_PAI.Collapsed = true;
+            this.userControl_scaleLinear_PAI.Name = "userControl_scaleLinear_PAI";
+            this.userControl_scaleLinear_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_PAI
+            // 
+            this.userControl_scaleCircle_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_PAI, "userControl_scaleCircle_PAI");
+            this.userControl_scaleCircle_PAI.Collapsed = true;
+            this.userControl_scaleCircle_PAI.Name = "userControl_scaleCircle_PAI";
+            this.userControl_scaleCircle_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_PAI
+            // 
+            this.userControl_hand_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_hand_PAI, "userControl_hand_PAI");
+            this.userControl_hand_PAI.Collapsed = true;
+            this.userControl_hand_PAI.Name = "userControl_hand_PAI";
+            this.userControl_hand_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_PAI
+            // 
+            this.userControl_text_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_text_PAI, "userControl_text_PAI");
+            this.userControl_text_PAI.Collapsed = true;
+            this.userControl_text_PAI.ImageError = true;
+            this.userControl_text_PAI.Name = "userControl_text_PAI";
+            this.userControl_text_PAI.OptionalSymbol = false;
+            this.userControl_text_PAI.PaddingZero_follow = true;
+            this.userControl_text_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_PAI
+            // 
+            this.userControl_pictures_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_PAI, "userControl_pictures_PAI");
+            this.userControl_pictures_PAI.Collapsed = true;
+            this.userControl_pictures_PAI.ImagesCount = 10;
+            this.userControl_pictures_PAI.Name = "userControl_pictures_PAI";
+            this.userControl_pictures_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Distance
+            // 
+            this.userControl_text_Distance.AOD = false;
+            resources.ApplyResources(this.userControl_text_Distance, "userControl_text_Distance");
+            this.userControl_text_Distance.Collapsed = true;
+            this.userControl_text_Distance.ImageError = true;
+            this.userControl_text_Distance.Name = "userControl_text_Distance";
+            this.userControl_text_Distance.OptionalSymbol = true;
+            this.userControl_text_Distance.PaddingZero_follow = true;
+            this.userControl_text_Distance.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_StandUp
+            // 
+            this.userControl_scaleLinear_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_StandUp, "userControl_scaleLinear_StandUp");
+            this.userControl_scaleLinear_StandUp.Collapsed = true;
+            this.userControl_scaleLinear_StandUp.Name = "userControl_scaleLinear_StandUp";
+            this.userControl_scaleLinear_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_StandUp
+            // 
+            this.userControl_scaleCircle_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_StandUp, "userControl_scaleCircle_StandUp");
+            this.userControl_scaleCircle_StandUp.Collapsed = true;
+            this.userControl_scaleCircle_StandUp.Name = "userControl_scaleCircle_StandUp";
+            this.userControl_scaleCircle_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_StandUp
+            // 
+            this.userControl_hand_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_hand_StandUp, "userControl_hand_StandUp");
+            this.userControl_hand_StandUp.Collapsed = true;
+            this.userControl_hand_StandUp.Name = "userControl_hand_StandUp";
+            this.userControl_hand_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_StandUp
+            // 
+            this.userControl_text_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_text_StandUp, "userControl_text_StandUp");
+            this.userControl_text_StandUp.Collapsed = true;
+            this.userControl_text_StandUp.ImageError = true;
+            this.userControl_text_StandUp.Name = "userControl_text_StandUp";
+            this.userControl_text_StandUp.OptionalSymbol = false;
+            this.userControl_text_StandUp.PaddingZero_follow = true;
+            this.userControl_text_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_StandUp
+            // 
+            this.userControl_pictures_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_StandUp, "userControl_pictures_StandUp");
+            this.userControl_pictures_StandUp.Collapsed = true;
+            this.userControl_pictures_StandUp.ImagesCount = 10;
+            this.userControl_pictures_StandUp.Name = "userControl_pictures_StandUp";
+            this.userControl_pictures_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Stress
+            // 
+            this.userControl_scaleLinear_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Stress, "userControl_scaleLinear_Stress");
+            this.userControl_scaleLinear_Stress.Collapsed = true;
+            this.userControl_scaleLinear_Stress.Name = "userControl_scaleLinear_Stress";
+            this.userControl_scaleLinear_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Stress
+            // 
+            this.userControl_scaleCircle_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Stress, "userControl_scaleCircle_Stress");
+            this.userControl_scaleCircle_Stress.Collapsed = true;
+            this.userControl_scaleCircle_Stress.Name = "userControl_scaleCircle_Stress";
+            this.userControl_scaleCircle_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Stress
+            // 
+            this.userControl_hand_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Stress, "userControl_hand_Stress");
+            this.userControl_hand_Stress.Collapsed = true;
+            this.userControl_hand_Stress.Name = "userControl_hand_Stress";
+            this.userControl_hand_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Stress
+            // 
+            this.userControl_text_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_text_Stress, "userControl_text_Stress");
+            this.userControl_text_Stress.Collapsed = true;
+            this.userControl_text_Stress.ImageError = true;
+            this.userControl_text_Stress.Name = "userControl_text_Stress";
+            this.userControl_text_Stress.OptionalSymbol = false;
+            this.userControl_text_Stress.PaddingZero_follow = true;
+            this.userControl_text_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Stress
+            // 
+            this.userControl_pictures_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Stress, "userControl_pictures_Stress");
+            this.userControl_pictures_Stress.Collapsed = true;
+            this.userControl_pictures_Stress.ImagesCount = 10;
+            this.userControl_pictures_Stress.Name = "userControl_pictures_Stress";
+            this.userControl_pictures_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_ActivityGoal
+            // 
+            this.userControl_scaleLinear_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal, "userControl_scaleLinear_ActivityGoal");
+            this.userControl_scaleLinear_ActivityGoal.Collapsed = true;
+            this.userControl_scaleLinear_ActivityGoal.Name = "userControl_scaleLinear_ActivityGoal";
+            this.userControl_scaleLinear_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_ActivityGoal
+            // 
+            this.userControl_scaleCircle_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal, "userControl_scaleCircle_ActivityGoal");
+            this.userControl_scaleCircle_ActivityGoal.Collapsed = true;
+            this.userControl_scaleCircle_ActivityGoal.Name = "userControl_scaleCircle_ActivityGoal";
+            this.userControl_scaleCircle_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_ActivityGoal
+            // 
+            this.userControl_hand_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_hand_ActivityGoal, "userControl_hand_ActivityGoal");
+            this.userControl_hand_ActivityGoal.Collapsed = true;
+            this.userControl_hand_ActivityGoal.Name = "userControl_hand_ActivityGoal";
+            this.userControl_hand_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_ActivityGoal
+            // 
+            this.userControl_text_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_text_ActivityGoal, "userControl_text_ActivityGoal");
+            this.userControl_text_ActivityGoal.Collapsed = true;
+            this.userControl_text_ActivityGoal.ImageError = true;
+            this.userControl_text_ActivityGoal.Name = "userControl_text_ActivityGoal";
+            this.userControl_text_ActivityGoal.OptionalSymbol = false;
+            this.userControl_text_ActivityGoal.PaddingZero_follow = true;
+            this.userControl_text_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_ActivityGoal
+            // 
+            this.userControl_pictures_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_ActivityGoal, "userControl_pictures_ActivityGoal");
+            this.userControl_pictures_ActivityGoal.Collapsed = true;
+            this.userControl_pictures_ActivityGoal.ImagesCount = 10;
+            this.userControl_pictures_ActivityGoal.Name = "userControl_pictures_ActivityGoal";
+            this.userControl_pictures_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_FatBurning
+            // 
+            this.userControl_scaleLinear_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_FatBurning, "userControl_scaleLinear_FatBurning");
+            this.userControl_scaleLinear_FatBurning.Collapsed = true;
+            this.userControl_scaleLinear_FatBurning.Name = "userControl_scaleLinear_FatBurning";
+            this.userControl_scaleLinear_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_FatBurning
+            // 
+            this.userControl_scaleCircle_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_FatBurning, "userControl_scaleCircle_FatBurning");
+            this.userControl_scaleCircle_FatBurning.Collapsed = true;
+            this.userControl_scaleCircle_FatBurning.Name = "userControl_scaleCircle_FatBurning";
+            this.userControl_scaleCircle_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_FatBurning
+            // 
+            this.userControl_hand_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_hand_FatBurning, "userControl_hand_FatBurning");
+            this.userControl_hand_FatBurning.Collapsed = true;
+            this.userControl_hand_FatBurning.Name = "userControl_hand_FatBurning";
+            this.userControl_hand_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_FatBurning
+            // 
+            this.userControl_text_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_text_FatBurning, "userControl_text_FatBurning");
+            this.userControl_text_FatBurning.Collapsed = true;
+            this.userControl_text_FatBurning.ImageError = true;
+            this.userControl_text_FatBurning.Name = "userControl_text_FatBurning";
+            this.userControl_text_FatBurning.OptionalSymbol = false;
+            this.userControl_text_FatBurning.PaddingZero_follow = true;
+            this.userControl_text_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_FatBurning
+            // 
+            this.userControl_pictures_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_FatBurning, "userControl_pictures_FatBurning");
+            this.userControl_pictures_FatBurning.Collapsed = true;
+            this.userControl_pictures_FatBurning.ImagesCount = 10;
+            this.userControl_pictures_FatBurning.Name = "userControl_pictures_FatBurning";
+            this.userControl_pictures_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Weather
+            // 
+            this.userControl_scaleLinear_Weather.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Weather, "userControl_scaleLinear_Weather");
+            this.userControl_scaleLinear_Weather.Collapsed = true;
+            this.userControl_scaleLinear_Weather.Name = "userControl_scaleLinear_Weather";
+            this.userControl_scaleLinear_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Weather
+            // 
+            this.userControl_scaleCircle_Weather.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Weather, "userControl_scaleCircle_Weather");
+            this.userControl_scaleCircle_Weather.Collapsed = true;
+            this.userControl_scaleCircle_Weather.Name = "userControl_scaleCircle_Weather";
+            this.userControl_scaleCircle_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Weather
+            // 
+            this.userControl_hand_Weather.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Weather, "userControl_hand_Weather");
+            this.userControl_hand_Weather.Collapsed = true;
+            this.userControl_hand_Weather.Name = "userControl_hand_Weather";
+            this.userControl_hand_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_weather_Max
+            // 
+            this.userControl_text_weather_Max.AOD = false;
+            resources.ApplyResources(this.userControl_text_weather_Max, "userControl_text_weather_Max");
+            this.userControl_text_weather_Max.Collapsed = true;
+            this.userControl_text_weather_Max.ImageError = true;
+            this.userControl_text_weather_Max.Name = "userControl_text_weather_Max";
+            this.userControl_text_weather_Max.OptionalSymbol = true;
+            this.userControl_text_weather_Max.PaddingZero_follow = true;
+            this.userControl_text_weather_Max.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_weather_Min
+            // 
+            this.userControl_text_weather_Min.AOD = false;
+            resources.ApplyResources(this.userControl_text_weather_Min, "userControl_text_weather_Min");
+            this.userControl_text_weather_Min.Collapsed = true;
+            this.userControl_text_weather_Min.ImageError = true;
+            this.userControl_text_weather_Min.Name = "userControl_text_weather_Min";
+            this.userControl_text_weather_Min.OptionalSymbol = true;
+            this.userControl_text_weather_Min.PaddingZero_follow = false;
+            this.userControl_text_weather_Min.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_weather_Current
+            // 
+            this.userControl_text_weather_Current.AOD = false;
+            resources.ApplyResources(this.userControl_text_weather_Current, "userControl_text_weather_Current");
+            this.userControl_text_weather_Current.Collapsed = true;
+            this.userControl_text_weather_Current.ImageError = true;
+            this.userControl_text_weather_Current.Name = "userControl_text_weather_Current";
+            this.userControl_text_weather_Current.OptionalSymbol = true;
+            this.userControl_text_weather_Current.PaddingZero_follow = false;
+            this.userControl_text_weather_Current.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_weather
+            // 
+            this.userControl_pictures_weather.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_weather, "userControl_pictures_weather");
+            this.userControl_pictures_weather.Collapsed = true;
+            this.userControl_pictures_weather.ImagesCount = 29;
+            this.userControl_pictures_weather.Name = "userControl_pictures_weather";
+            this.userControl_pictures_weather.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_UVindex
+            // 
+            this.userControl_scaleLinear_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_UVindex, "userControl_scaleLinear_UVindex");
+            this.userControl_scaleLinear_UVindex.Collapsed = true;
+            this.userControl_scaleLinear_UVindex.Name = "userControl_scaleLinear_UVindex";
+            this.userControl_scaleLinear_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_UVindex
+            // 
+            this.userControl_scaleCircle_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_UVindex, "userControl_scaleCircle_UVindex");
+            this.userControl_scaleCircle_UVindex.Collapsed = true;
+            this.userControl_scaleCircle_UVindex.Name = "userControl_scaleCircle_UVindex";
+            this.userControl_scaleCircle_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_UVindex
+            // 
+            this.userControl_hand_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_hand_UVindex, "userControl_hand_UVindex");
+            this.userControl_hand_UVindex.Collapsed = true;
+            this.userControl_hand_UVindex.Name = "userControl_hand_UVindex";
+            this.userControl_hand_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_UVindex
+            // 
+            this.userControl_text_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_text_UVindex, "userControl_text_UVindex");
+            this.userControl_text_UVindex.Collapsed = true;
+            this.userControl_text_UVindex.ImageError = true;
+            this.userControl_text_UVindex.Name = "userControl_text_UVindex";
+            this.userControl_text_UVindex.OptionalSymbol = false;
+            this.userControl_text_UVindex.PaddingZero_follow = true;
+            this.userControl_text_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_UVindex
+            // 
+            this.userControl_pictures_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_UVindex, "userControl_pictures_UVindex");
+            this.userControl_pictures_UVindex.Collapsed = true;
+            this.userControl_pictures_UVindex.ImagesCount = 10;
+            this.userControl_pictures_UVindex.Name = "userControl_pictures_UVindex";
+            this.userControl_pictures_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_AirQuality
+            // 
+            this.userControl_scaleLinear_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_AirQuality, "userControl_scaleLinear_AirQuality");
+            this.userControl_scaleLinear_AirQuality.Collapsed = true;
+            this.userControl_scaleLinear_AirQuality.Name = "userControl_scaleLinear_AirQuality";
+            this.userControl_scaleLinear_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_AirQuality
+            // 
+            this.userControl_scaleCircle_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_AirQuality, "userControl_scaleCircle_AirQuality");
+            this.userControl_scaleCircle_AirQuality.Collapsed = true;
+            this.userControl_scaleCircle_AirQuality.Name = "userControl_scaleCircle_AirQuality";
+            this.userControl_scaleCircle_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_AirQuality
+            // 
+            this.userControl_hand_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_hand_AirQuality, "userControl_hand_AirQuality");
+            this.userControl_hand_AirQuality.Collapsed = true;
+            this.userControl_hand_AirQuality.Name = "userControl_hand_AirQuality";
+            this.userControl_hand_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_AirQuality
+            // 
+            this.userControl_text_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_text_AirQuality, "userControl_text_AirQuality");
+            this.userControl_text_AirQuality.Collapsed = true;
+            this.userControl_text_AirQuality.ImageError = true;
+            this.userControl_text_AirQuality.Name = "userControl_text_AirQuality";
+            this.userControl_text_AirQuality.OptionalSymbol = false;
+            this.userControl_text_AirQuality.PaddingZero_follow = true;
+            this.userControl_text_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_AirQuality
+            // 
+            this.userControl_pictures_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_AirQuality, "userControl_pictures_AirQuality");
+            this.userControl_pictures_AirQuality.Collapsed = true;
+            this.userControl_pictures_AirQuality.ImagesCount = 10;
+            this.userControl_pictures_AirQuality.Name = "userControl_pictures_AirQuality";
+            this.userControl_pictures_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Humidity
+            // 
+            this.userControl_scaleLinear_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Humidity, "userControl_scaleLinear_Humidity");
+            this.userControl_scaleLinear_Humidity.Collapsed = true;
+            this.userControl_scaleLinear_Humidity.Name = "userControl_scaleLinear_Humidity";
+            this.userControl_scaleLinear_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Humidity
+            // 
+            this.userControl_scaleCircle_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Humidity, "userControl_scaleCircle_Humidity");
+            this.userControl_scaleCircle_Humidity.Collapsed = true;
+            this.userControl_scaleCircle_Humidity.Name = "userControl_scaleCircle_Humidity";
+            this.userControl_scaleCircle_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Humidity
+            // 
+            this.userControl_hand_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Humidity, "userControl_hand_Humidity");
+            this.userControl_hand_Humidity.Collapsed = true;
+            this.userControl_hand_Humidity.Name = "userControl_hand_Humidity";
+            this.userControl_hand_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Humidity
+            // 
+            this.userControl_text_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_text_Humidity, "userControl_text_Humidity");
+            this.userControl_text_Humidity.Collapsed = true;
+            this.userControl_text_Humidity.ImageError = true;
+            this.userControl_text_Humidity.Name = "userControl_text_Humidity";
+            this.userControl_text_Humidity.OptionalSymbol = false;
+            this.userControl_text_Humidity.PaddingZero_follow = true;
+            this.userControl_text_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Humidity
+            // 
+            this.userControl_pictures_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Humidity, "userControl_pictures_Humidity");
+            this.userControl_pictures_Humidity.Collapsed = true;
+            this.userControl_pictures_Humidity.ImagesCount = 10;
+            this.userControl_pictures_Humidity.Name = "userControl_pictures_Humidity";
+            this.userControl_pictures_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_WindForce
+            // 
+            this.userControl_scaleLinear_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_WindForce, "userControl_scaleLinear_WindForce");
+            this.userControl_scaleLinear_WindForce.Collapsed = true;
+            this.userControl_scaleLinear_WindForce.Name = "userControl_scaleLinear_WindForce";
+            this.userControl_scaleLinear_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_WindForce
+            // 
+            this.userControl_scaleCircle_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_WindForce, "userControl_scaleCircle_WindForce");
+            this.userControl_scaleCircle_WindForce.Collapsed = true;
+            this.userControl_scaleCircle_WindForce.Name = "userControl_scaleCircle_WindForce";
+            this.userControl_scaleCircle_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_WindForce
+            // 
+            this.userControl_hand_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_hand_WindForce, "userControl_hand_WindForce");
+            this.userControl_hand_WindForce.Collapsed = true;
+            this.userControl_hand_WindForce.Name = "userControl_hand_WindForce";
+            this.userControl_hand_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_WindForce
+            // 
+            this.userControl_text_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_text_WindForce, "userControl_text_WindForce");
+            this.userControl_text_WindForce.Collapsed = true;
+            this.userControl_text_WindForce.ImageError = true;
+            this.userControl_text_WindForce.Name = "userControl_text_WindForce";
+            this.userControl_text_WindForce.OptionalSymbol = false;
+            this.userControl_text_WindForce.PaddingZero_follow = true;
+            this.userControl_text_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_WindForce
+            // 
+            this.userControl_pictures_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_WindForce, "userControl_pictures_WindForce");
+            this.userControl_pictures_WindForce.Collapsed = true;
+            this.userControl_pictures_WindForce.ImagesCount = 10;
+            this.userControl_pictures_WindForce.Name = "userControl_pictures_WindForce";
+            this.userControl_pictures_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Altitude
+            // 
+            this.userControl_scaleLinear_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Altitude, "userControl_scaleLinear_Altitude");
+            this.userControl_scaleLinear_Altitude.Collapsed = true;
+            this.userControl_scaleLinear_Altitude.Name = "userControl_scaleLinear_Altitude";
+            this.userControl_scaleLinear_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Altitude
+            // 
+            this.userControl_scaleCircle_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Altitude, "userControl_scaleCircle_Altitude");
+            this.userControl_scaleCircle_Altitude.Collapsed = true;
+            this.userControl_scaleCircle_Altitude.Name = "userControl_scaleCircle_Altitude";
+            this.userControl_scaleCircle_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Altitude
+            // 
+            this.userControl_hand_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Altitude, "userControl_hand_Altitude");
+            this.userControl_hand_Altitude.Collapsed = true;
+            this.userControl_hand_Altitude.Name = "userControl_hand_Altitude";
+            this.userControl_hand_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Altitude
+            // 
+            this.userControl_text_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_text_Altitude, "userControl_text_Altitude");
+            this.userControl_text_Altitude.Collapsed = true;
+            this.userControl_text_Altitude.ImageError = true;
+            this.userControl_text_Altitude.Name = "userControl_text_Altitude";
+            this.userControl_text_Altitude.OptionalSymbol = false;
+            this.userControl_text_Altitude.PaddingZero_follow = true;
+            this.userControl_text_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Altitude
+            // 
+            this.userControl_pictures_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Altitude, "userControl_pictures_Altitude");
+            this.userControl_pictures_Altitude.Collapsed = true;
+            this.userControl_pictures_Altitude.ImagesCount = 10;
+            this.userControl_pictures_Altitude.Name = "userControl_pictures_Altitude";
+            this.userControl_pictures_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_AirPressure
+            // 
+            this.userControl_scaleLinear_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_AirPressure, "userControl_scaleLinear_AirPressure");
+            this.userControl_scaleLinear_AirPressure.Collapsed = true;
+            this.userControl_scaleLinear_AirPressure.Name = "userControl_scaleLinear_AirPressure";
+            this.userControl_scaleLinear_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_AirPressure
+            // 
+            this.userControl_scaleCircle_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_AirPressure, "userControl_scaleCircle_AirPressure");
+            this.userControl_scaleCircle_AirPressure.Collapsed = true;
+            this.userControl_scaleCircle_AirPressure.Name = "userControl_scaleCircle_AirPressure";
+            this.userControl_scaleCircle_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_AirPressure
+            // 
+            this.userControl_hand_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_hand_AirPressure, "userControl_hand_AirPressure");
+            this.userControl_hand_AirPressure.Collapsed = true;
+            this.userControl_hand_AirPressure.Name = "userControl_hand_AirPressure";
+            this.userControl_hand_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_AirPressure
+            // 
+            this.userControl_text_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_text_AirPressure, "userControl_text_AirPressure");
+            this.userControl_text_AirPressure.Collapsed = true;
+            this.userControl_text_AirPressure.ImageError = true;
+            this.userControl_text_AirPressure.Name = "userControl_text_AirPressure";
+            this.userControl_text_AirPressure.OptionalSymbol = false;
+            this.userControl_text_AirPressure.PaddingZero_follow = true;
+            this.userControl_text_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_AirPressure
+            // 
+            this.userControl_pictures_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_AirPressure, "userControl_pictures_AirPressure");
+            this.userControl_pictures_AirPressure.Collapsed = true;
+            this.userControl_pictures_AirPressure.ImagesCount = 10;
+            this.userControl_pictures_AirPressure.Name = "userControl_pictures_AirPressure";
+            this.userControl_pictures_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Battery
+            // 
+            this.userControl_scaleLinear_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Battery, "userControl_scaleLinear_Battery");
+            this.userControl_scaleLinear_Battery.Collapsed = true;
+            this.userControl_scaleLinear_Battery.Name = "userControl_scaleLinear_Battery";
+            this.userControl_scaleLinear_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Battery
+            // 
+            this.userControl_scaleCircle_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Battery, "userControl_scaleCircle_Battery");
+            this.userControl_scaleCircle_Battery.Collapsed = true;
+            this.userControl_scaleCircle_Battery.Name = "userControl_scaleCircle_Battery";
+            this.userControl_scaleCircle_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Battery
+            // 
+            this.userControl_hand_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Battery, "userControl_hand_Battery");
+            this.userControl_hand_Battery.Collapsed = true;
+            this.userControl_hand_Battery.Name = "userControl_hand_Battery";
+            this.userControl_hand_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Battery
+            // 
+            this.userControl_text_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_text_Battery, "userControl_text_Battery");
+            this.userControl_text_Battery.Collapsed = true;
+            this.userControl_text_Battery.ImageError = true;
+            this.userControl_text_Battery.Name = "userControl_text_Battery";
+            this.userControl_text_Battery.OptionalSymbol = false;
+            this.userControl_text_Battery.PaddingZero_follow = true;
+            this.userControl_text_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Battery
+            // 
+            this.userControl_pictures_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Battery, "userControl_pictures_Battery");
+            this.userControl_pictures_Battery.Collapsed = true;
+            this.userControl_pictures_Battery.ImagesCount = 10;
+            this.userControl_pictures_Battery.Name = "userControl_pictures_Battery";
+            this.userControl_pictures_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Steps_AOD
+            // 
+            this.userControl_scaleLinear_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Steps_AOD, "userControl_scaleLinear_Steps_AOD");
+            this.userControl_scaleLinear_Steps_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Steps_AOD.Name = "userControl_scaleLinear_Steps_AOD";
+            this.userControl_scaleLinear_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Steps_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Steps_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Steps_AOD
+            // 
+            this.userControl_scaleCircle_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Steps_AOD, "userControl_scaleCircle_Steps_AOD");
+            this.userControl_scaleCircle_Steps_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Steps_AOD.Name = "userControl_scaleCircle_Steps_AOD";
+            this.userControl_scaleCircle_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Steps_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Steps_AOD_Copy);
+            // 
+            // userControl_hand_Steps_AOD
+            // 
+            this.userControl_hand_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Steps_AOD, "userControl_hand_Steps_AOD");
+            this.userControl_hand_Steps_AOD.Collapsed = true;
+            this.userControl_hand_Steps_AOD.Name = "userControl_hand_Steps_AOD";
+            this.userControl_hand_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Steps_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Steps_AOD_Copy);
+            // 
+            // userControl_text_Steps_AOD
+            // 
+            this.userControl_text_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Steps_AOD, "userControl_text_Steps_AOD");
+            this.userControl_text_Steps_AOD.Collapsed = true;
+            this.userControl_text_Steps_AOD.ImageError = true;
+            this.userControl_text_Steps_AOD.Name = "userControl_text_Steps_AOD";
+            this.userControl_text_Steps_AOD.OptionalSymbol = false;
+            this.userControl_text_Steps_AOD.PaddingZero_follow = true;
+            this.userControl_text_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Steps_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Steps_AOD_Copy);
+            // 
+            // userControl_pictures_Steps_AOD
+            // 
+            this.userControl_pictures_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Steps_AOD, "userControl_pictures_Steps_AOD");
+            this.userControl_pictures_Steps_AOD.Collapsed = true;
+            this.userControl_pictures_Steps_AOD.ImagesCount = 10;
+            this.userControl_pictures_Steps_AOD.Name = "userControl_pictures_Steps_AOD";
+            this.userControl_pictures_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Steps_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Steps_AOD_Copy);
+            // 
+            // userControl_scaleLinear_Calories_AOD
+            // 
+            this.userControl_scaleLinear_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Calories_AOD, "userControl_scaleLinear_Calories_AOD");
+            this.userControl_scaleLinear_Calories_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Calories_AOD.Name = "userControl_scaleLinear_Calories_AOD";
+            this.userControl_scaleLinear_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Calories_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Calories_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Calories_AOD
+            // 
+            this.userControl_scaleCircle_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Calories_AOD, "userControl_scaleCircle_Calories_AOD");
+            this.userControl_scaleCircle_Calories_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Calories_AOD.Name = "userControl_scaleCircle_Calories_AOD";
+            this.userControl_scaleCircle_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Calories_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Calories_AOD_Copy);
+            // 
+            // userControl_hand_Calories_AOD
+            // 
+            this.userControl_hand_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Calories_AOD, "userControl_hand_Calories_AOD");
+            this.userControl_hand_Calories_AOD.Collapsed = true;
+            this.userControl_hand_Calories_AOD.Name = "userControl_hand_Calories_AOD";
+            this.userControl_hand_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Calories_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Calories_AOD_Copy);
+            // 
+            // userControl_text_Calories_AOD
+            // 
+            this.userControl_text_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Calories_AOD, "userControl_text_Calories_AOD");
+            this.userControl_text_Calories_AOD.Collapsed = true;
+            this.userControl_text_Calories_AOD.ImageError = true;
+            this.userControl_text_Calories_AOD.Name = "userControl_text_Calories_AOD";
+            this.userControl_text_Calories_AOD.OptionalSymbol = false;
+            this.userControl_text_Calories_AOD.PaddingZero_follow = true;
+            this.userControl_text_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Calories_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Calories_AOD_Copy);
+            // 
+            // userControl_pictures_Calories_AOD
+            // 
+            this.userControl_pictures_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Calories_AOD, "userControl_pictures_Calories_AOD");
+            this.userControl_pictures_Calories_AOD.Collapsed = true;
+            this.userControl_pictures_Calories_AOD.ImagesCount = 10;
+            this.userControl_pictures_Calories_AOD.Name = "userControl_pictures_Calories_AOD";
+            this.userControl_pictures_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Calories_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Calories_AOD_Copy);
+            // 
+            // userControl_scaleLinear_HeartRate_AOD
+            // 
+            this.userControl_scaleLinear_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_HeartRate_AOD, "userControl_scaleLinear_HeartRate_AOD");
+            this.userControl_scaleLinear_HeartRate_AOD.Collapsed = true;
+            this.userControl_scaleLinear_HeartRate_AOD.Name = "userControl_scaleLinear_HeartRate_AOD";
+            this.userControl_scaleLinear_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_HeartRate_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_HeartRate_AOD_Copy);
+            // 
+            // userControl_scaleCircle_HeartRate_AOD
+            // 
+            this.userControl_scaleCircle_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_HeartRate_AOD, "userControl_scaleCircle_HeartRate_AOD");
+            this.userControl_scaleCircle_HeartRate_AOD.Collapsed = true;
+            this.userControl_scaleCircle_HeartRate_AOD.Name = "userControl_scaleCircle_HeartRate_AOD";
+            this.userControl_scaleCircle_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_HeartRate_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_HeartRate_AOD_Copy);
+            // 
+            // userControl_hand_HeartRate_AOD
+            // 
+            this.userControl_hand_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_HeartRate_AOD, "userControl_hand_HeartRate_AOD");
+            this.userControl_hand_HeartRate_AOD.Collapsed = true;
+            this.userControl_hand_HeartRate_AOD.Name = "userControl_hand_HeartRate_AOD";
+            this.userControl_hand_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_HeartRate_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_HeartRate_AOD_Copy);
+            // 
+            // userControl_text_HeartRate_AOD
+            // 
+            this.userControl_text_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_HeartRate_AOD, "userControl_text_HeartRate_AOD");
+            this.userControl_text_HeartRate_AOD.Collapsed = true;
+            this.userControl_text_HeartRate_AOD.ImageError = true;
+            this.userControl_text_HeartRate_AOD.Name = "userControl_text_HeartRate_AOD";
+            this.userControl_text_HeartRate_AOD.OptionalSymbol = false;
+            this.userControl_text_HeartRate_AOD.PaddingZero_follow = true;
+            this.userControl_text_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_HeartRate_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_HeartRate_AOD_Copy);
+            // 
+            // userControl_pictures_HeartRate_AOD
+            // 
+            this.userControl_pictures_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_HeartRate_AOD, "userControl_pictures_HeartRate_AOD");
+            this.userControl_pictures_HeartRate_AOD.Collapsed = true;
+            this.userControl_pictures_HeartRate_AOD.ImagesCount = 6;
+            this.userControl_pictures_HeartRate_AOD.Name = "userControl_pictures_HeartRate_AOD";
+            this.userControl_pictures_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_HeartRate_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_HeartRate_AOD_Copy);
+            // 
+            // userControl_scaleLinear_PAI_AOD
+            // 
+            this.userControl_scaleLinear_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_PAI_AOD, "userControl_scaleLinear_PAI_AOD");
+            this.userControl_scaleLinear_PAI_AOD.Collapsed = true;
+            this.userControl_scaleLinear_PAI_AOD.Name = "userControl_scaleLinear_PAI_AOD";
+            this.userControl_scaleLinear_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_PAI_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_PAI_AOD_Copy);
+            // 
+            // userControl_scaleCircle_PAI_AOD
+            // 
+            this.userControl_scaleCircle_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_PAI_AOD, "userControl_scaleCircle_PAI_AOD");
+            this.userControl_scaleCircle_PAI_AOD.Collapsed = true;
+            this.userControl_scaleCircle_PAI_AOD.Name = "userControl_scaleCircle_PAI_AOD";
+            this.userControl_scaleCircle_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_PAI_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_PAI_AOD_Copy);
+            // 
+            // userControl_hand_PAI_AOD
+            // 
+            this.userControl_hand_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_PAI_AOD, "userControl_hand_PAI_AOD");
+            this.userControl_hand_PAI_AOD.Collapsed = true;
+            this.userControl_hand_PAI_AOD.Name = "userControl_hand_PAI_AOD";
+            this.userControl_hand_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_PAI_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_PAI_AOD_Copy);
+            // 
+            // userControl_text_PAI_AOD
+            // 
+            this.userControl_text_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_PAI_AOD, "userControl_text_PAI_AOD");
+            this.userControl_text_PAI_AOD.Collapsed = true;
+            this.userControl_text_PAI_AOD.ImageError = true;
+            this.userControl_text_PAI_AOD.Name = "userControl_text_PAI_AOD";
+            this.userControl_text_PAI_AOD.OptionalSymbol = false;
+            this.userControl_text_PAI_AOD.PaddingZero_follow = true;
+            this.userControl_text_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_PAI_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_PAI_AOD_Copy);
+            // 
+            // userControl_pictures_PAI_AOD
+            // 
+            this.userControl_pictures_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_PAI_AOD, "userControl_pictures_PAI_AOD");
+            this.userControl_pictures_PAI_AOD.Collapsed = true;
+            this.userControl_pictures_PAI_AOD.ImagesCount = 10;
+            this.userControl_pictures_PAI_AOD.Name = "userControl_pictures_PAI_AOD";
+            this.userControl_pictures_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_PAI_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_PAI_AOD_Copy);
+            // 
+            // userControl_text_Distance_AOD
+            // 
+            this.userControl_text_Distance_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Distance_AOD, "userControl_text_Distance_AOD");
+            this.userControl_text_Distance_AOD.Collapsed = true;
+            this.userControl_text_Distance_AOD.ImageError = true;
+            this.userControl_text_Distance_AOD.Name = "userControl_text_Distance_AOD";
+            this.userControl_text_Distance_AOD.OptionalSymbol = true;
+            this.userControl_text_Distance_AOD.PaddingZero_follow = true;
+            this.userControl_text_Distance_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Distance_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Distance_AOD_Copy);
+            // 
+            // userControl_scaleLinear_StandUp_AOD
+            // 
+            this.userControl_scaleLinear_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_StandUp_AOD, "userControl_scaleLinear_StandUp_AOD");
+            this.userControl_scaleLinear_StandUp_AOD.Collapsed = true;
+            this.userControl_scaleLinear_StandUp_AOD.Name = "userControl_scaleLinear_StandUp_AOD";
+            this.userControl_scaleLinear_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_StandUp_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_StandUp_AOD_Copy);
+            // 
+            // userControl_scaleCircle_StandUp_AOD
+            // 
+            this.userControl_scaleCircle_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_StandUp_AOD, "userControl_scaleCircle_StandUp_AOD");
+            this.userControl_scaleCircle_StandUp_AOD.Collapsed = true;
+            this.userControl_scaleCircle_StandUp_AOD.Name = "userControl_scaleCircle_StandUp_AOD";
+            this.userControl_scaleCircle_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_StandUp_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_StandUp_AOD_Copy);
+            // 
+            // userControl_hand_StandUp_AOD
+            // 
+            this.userControl_hand_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_StandUp_AOD, "userControl_hand_StandUp_AOD");
+            this.userControl_hand_StandUp_AOD.Collapsed = true;
+            this.userControl_hand_StandUp_AOD.Name = "userControl_hand_StandUp_AOD";
+            this.userControl_hand_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_StandUp_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_StandUp_AOD_Copy);
+            // 
+            // userControl_text_StandUp_AOD
+            // 
+            this.userControl_text_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_StandUp_AOD, "userControl_text_StandUp_AOD");
+            this.userControl_text_StandUp_AOD.Collapsed = true;
+            this.userControl_text_StandUp_AOD.ImageError = true;
+            this.userControl_text_StandUp_AOD.Name = "userControl_text_StandUp_AOD";
+            this.userControl_text_StandUp_AOD.OptionalSymbol = false;
+            this.userControl_text_StandUp_AOD.PaddingZero_follow = true;
+            this.userControl_text_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_StandUp_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_StandUp_AOD_Copy);
+            // 
+            // userControl_pictures_StandUp_AOD
+            // 
+            this.userControl_pictures_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_StandUp_AOD, "userControl_pictures_StandUp_AOD");
+            this.userControl_pictures_StandUp_AOD.Collapsed = true;
+            this.userControl_pictures_StandUp_AOD.ImagesCount = 10;
+            this.userControl_pictures_StandUp_AOD.Name = "userControl_pictures_StandUp_AOD";
+            this.userControl_pictures_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_StandUp_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_StandUp_AOD_Copy);
+            // 
+            // userControl_scaleLinear_Stress_AOD
+            // 
+            this.userControl_scaleLinear_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Stress_AOD, "userControl_scaleLinear_Stress_AOD");
+            this.userControl_scaleLinear_Stress_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Stress_AOD.Name = "userControl_scaleLinear_Stress_AOD";
+            this.userControl_scaleLinear_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Stress_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Stress_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Stress_AOD
+            // 
+            this.userControl_scaleCircle_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Stress_AOD, "userControl_scaleCircle_Stress_AOD");
+            this.userControl_scaleCircle_Stress_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Stress_AOD.Name = "userControl_scaleCircle_Stress_AOD";
+            this.userControl_scaleCircle_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Stress_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Stress_AOD_Copy);
+            // 
+            // userControl_hand_Stress_AOD
+            // 
+            this.userControl_hand_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Stress_AOD, "userControl_hand_Stress_AOD");
+            this.userControl_hand_Stress_AOD.Collapsed = true;
+            this.userControl_hand_Stress_AOD.Name = "userControl_hand_Stress_AOD";
+            this.userControl_hand_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Stress_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Stress_AOD_Copy);
+            // 
+            // userControl_text_Stress_AOD
+            // 
+            this.userControl_text_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Stress_AOD, "userControl_text_Stress_AOD");
+            this.userControl_text_Stress_AOD.Collapsed = true;
+            this.userControl_text_Stress_AOD.ImageError = true;
+            this.userControl_text_Stress_AOD.Name = "userControl_text_Stress_AOD";
+            this.userControl_text_Stress_AOD.OptionalSymbol = false;
+            this.userControl_text_Stress_AOD.PaddingZero_follow = true;
+            this.userControl_text_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Stress_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Stress_AOD_Copy);
+            // 
+            // userControl_pictures_Stress_AOD
+            // 
+            this.userControl_pictures_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Stress_AOD, "userControl_pictures_Stress_AOD");
+            this.userControl_pictures_Stress_AOD.Collapsed = true;
+            this.userControl_pictures_Stress_AOD.ImagesCount = 10;
+            this.userControl_pictures_Stress_AOD.Name = "userControl_pictures_Stress_AOD";
+            this.userControl_pictures_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Stress_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Stress_AOD_Copy);
+            // 
+            // userControl_scaleLinear_ActivityGoal_AOD
+            // 
+            this.userControl_scaleLinear_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal_AOD, "userControl_scaleLinear_ActivityGoal_AOD");
+            this.userControl_scaleLinear_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_scaleLinear_ActivityGoal_AOD.Name = "userControl_scaleLinear_ActivityGoal_AOD";
+            this.userControl_scaleLinear_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_ActivityGoal_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_scaleCircle_ActivityGoal_AOD
+            // 
+            this.userControl_scaleCircle_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal_AOD, "userControl_scaleCircle_ActivityGoal_AOD");
+            this.userControl_scaleCircle_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_scaleCircle_ActivityGoal_AOD.Name = "userControl_scaleCircle_ActivityGoal_AOD";
+            this.userControl_scaleCircle_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_ActivityGoal_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_hand_ActivityGoal_AOD
+            // 
+            this.userControl_hand_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_ActivityGoal_AOD, "userControl_hand_ActivityGoal_AOD");
+            this.userControl_hand_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_hand_ActivityGoal_AOD.Name = "userControl_hand_ActivityGoal_AOD";
+            this.userControl_hand_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_ActivityGoal_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_text_ActivityGoal_AOD
+            // 
+            this.userControl_text_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_ActivityGoal_AOD, "userControl_text_ActivityGoal_AOD");
+            this.userControl_text_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_text_ActivityGoal_AOD.ImageError = true;
+            this.userControl_text_ActivityGoal_AOD.Name = "userControl_text_ActivityGoal_AOD";
+            this.userControl_text_ActivityGoal_AOD.OptionalSymbol = false;
+            this.userControl_text_ActivityGoal_AOD.PaddingZero_follow = true;
+            this.userControl_text_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_ActivityGoal_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_pictures_ActivityGoal_AOD
+            // 
+            this.userControl_pictures_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_ActivityGoal_AOD, "userControl_pictures_ActivityGoal_AOD");
+            this.userControl_pictures_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_pictures_ActivityGoal_AOD.ImagesCount = 10;
+            this.userControl_pictures_ActivityGoal_AOD.Name = "userControl_pictures_ActivityGoal_AOD";
+            this.userControl_pictures_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_ActivityGoal_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_scaleLinear_FatBurning_AOD
+            // 
+            this.userControl_scaleLinear_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_FatBurning_AOD, "userControl_scaleLinear_FatBurning_AOD");
+            this.userControl_scaleLinear_FatBurning_AOD.Collapsed = true;
+            this.userControl_scaleLinear_FatBurning_AOD.Name = "userControl_scaleLinear_FatBurning_AOD";
+            this.userControl_scaleLinear_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_FatBurning_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_FatBurning_AOD_Copy);
+            // 
+            // userControl_scaleCircle_FatBurning_AOD
+            // 
+            this.userControl_scaleCircle_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_FatBurning_AOD, "userControl_scaleCircle_FatBurning_AOD");
+            this.userControl_scaleCircle_FatBurning_AOD.Collapsed = true;
+            this.userControl_scaleCircle_FatBurning_AOD.Name = "userControl_scaleCircle_FatBurning_AOD";
+            this.userControl_scaleCircle_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_FatBurning_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_FatBurning_AOD_Copy);
+            // 
+            // userControl_hand_FatBurning_AOD
+            // 
+            this.userControl_hand_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_FatBurning_AOD, "userControl_hand_FatBurning_AOD");
+            this.userControl_hand_FatBurning_AOD.Collapsed = true;
+            this.userControl_hand_FatBurning_AOD.Name = "userControl_hand_FatBurning_AOD";
+            this.userControl_hand_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_FatBurning_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_FatBurning_AOD_Copy);
+            // 
+            // userControl_text_FatBurning_AOD
+            // 
+            this.userControl_text_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_FatBurning_AOD, "userControl_text_FatBurning_AOD");
+            this.userControl_text_FatBurning_AOD.Collapsed = true;
+            this.userControl_text_FatBurning_AOD.ImageError = true;
+            this.userControl_text_FatBurning_AOD.Name = "userControl_text_FatBurning_AOD";
+            this.userControl_text_FatBurning_AOD.OptionalSymbol = false;
+            this.userControl_text_FatBurning_AOD.PaddingZero_follow = true;
+            this.userControl_text_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_FatBurning_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_FatBurning_AOD_Copy);
+            // 
+            // userControl_pictures_FatBurning_AOD
+            // 
+            this.userControl_pictures_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_FatBurning_AOD, "userControl_pictures_FatBurning_AOD");
+            this.userControl_pictures_FatBurning_AOD.Collapsed = true;
+            this.userControl_pictures_FatBurning_AOD.ImagesCount = 10;
+            this.userControl_pictures_FatBurning_AOD.Name = "userControl_pictures_FatBurning_AOD";
+            this.userControl_pictures_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_FatBurning_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_FatBurning_AOD_Copy);
+            // 
+            // userControl_scaleLinear_Weather_AOD
+            // 
+            this.userControl_scaleLinear_Weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Weather_AOD, "userControl_scaleLinear_Weather_AOD");
+            this.userControl_scaleLinear_Weather_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Weather_AOD.Name = "userControl_scaleLinear_Weather_AOD";
+            this.userControl_scaleLinear_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Weather_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Weather_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Weather_AOD
+            // 
+            this.userControl_scaleCircle_Weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Weather_AOD, "userControl_scaleCircle_Weather_AOD");
+            this.userControl_scaleCircle_Weather_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Weather_AOD.Name = "userControl_scaleCircle_Weather_AOD";
+            this.userControl_scaleCircle_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Weather_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Weather_AOD_Copy);
+            // 
+            // userControl_hand_Weather_AOD
+            // 
+            this.userControl_hand_Weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Weather_AOD, "userControl_hand_Weather_AOD");
+            this.userControl_hand_Weather_AOD.Collapsed = true;
+            this.userControl_hand_Weather_AOD.Name = "userControl_hand_Weather_AOD";
+            this.userControl_hand_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Weather_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Weather_AOD_Copy);
+            // 
+            // userControl_text_weather_Max_AOD
+            // 
+            this.userControl_text_weather_Max_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_weather_Max_AOD, "userControl_text_weather_Max_AOD");
+            this.userControl_text_weather_Max_AOD.Collapsed = true;
+            this.userControl_text_weather_Max_AOD.ImageError = true;
+            this.userControl_text_weather_Max_AOD.Name = "userControl_text_weather_Max_AOD";
+            this.userControl_text_weather_Max_AOD.OptionalSymbol = true;
+            this.userControl_text_weather_Max_AOD.PaddingZero_follow = true;
+            this.userControl_text_weather_Max_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_weather_Max_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WeatherMax_AOD_Copy);
+            // 
+            // userControl_text_weather_Min_AOD
+            // 
+            this.userControl_text_weather_Min_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_weather_Min_AOD, "userControl_text_weather_Min_AOD");
+            this.userControl_text_weather_Min_AOD.Collapsed = true;
+            this.userControl_text_weather_Min_AOD.ImageError = true;
+            this.userControl_text_weather_Min_AOD.Name = "userControl_text_weather_Min_AOD";
+            this.userControl_text_weather_Min_AOD.OptionalSymbol = true;
+            this.userControl_text_weather_Min_AOD.PaddingZero_follow = false;
+            this.userControl_text_weather_Min_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_weather_Min_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WeatherMin_AOD_Copy);
+            // 
+            // userControl_text_weather_Current_AOD
+            // 
+            this.userControl_text_weather_Current_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_weather_Current_AOD, "userControl_text_weather_Current_AOD");
+            this.userControl_text_weather_Current_AOD.Collapsed = true;
+            this.userControl_text_weather_Current_AOD.ImageError = true;
+            this.userControl_text_weather_Current_AOD.Name = "userControl_text_weather_Current_AOD";
+            this.userControl_text_weather_Current_AOD.OptionalSymbol = true;
+            this.userControl_text_weather_Current_AOD.PaddingZero_follow = false;
+            this.userControl_text_weather_Current_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_weather_Current_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Weather_AOD_Copy);
+            // 
+            // userControl_pictures_weather_AOD
+            // 
+            this.userControl_pictures_weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_weather_AOD, "userControl_pictures_weather_AOD");
+            this.userControl_pictures_weather_AOD.Collapsed = true;
+            this.userControl_pictures_weather_AOD.ImagesCount = 29;
+            this.userControl_pictures_weather_AOD.Name = "userControl_pictures_weather_AOD";
+            this.userControl_pictures_weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_weather_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Weather_AOD_Copy);
+            // 
+            // userControl_scaleLinear_UVindex_AOD
+            // 
+            this.userControl_scaleLinear_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_UVindex_AOD, "userControl_scaleLinear_UVindex_AOD");
+            this.userControl_scaleLinear_UVindex_AOD.Collapsed = true;
+            this.userControl_scaleLinear_UVindex_AOD.Name = "userControl_scaleLinear_UVindex_AOD";
+            this.userControl_scaleLinear_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_UVindex_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_UVindex_AOD_Copy);
+            // 
+            // userControl_scaleCircle_UVindex_AOD
+            // 
+            this.userControl_scaleCircle_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_UVindex_AOD, "userControl_scaleCircle_UVindex_AOD");
+            this.userControl_scaleCircle_UVindex_AOD.Collapsed = true;
+            this.userControl_scaleCircle_UVindex_AOD.Name = "userControl_scaleCircle_UVindex_AOD";
+            this.userControl_scaleCircle_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_UVindex_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_UVindex_AOD_Copy);
+            // 
+            // userControl_hand_UVindex_AOD
+            // 
+            this.userControl_hand_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_UVindex_AOD, "userControl_hand_UVindex_AOD");
+            this.userControl_hand_UVindex_AOD.Collapsed = true;
+            this.userControl_hand_UVindex_AOD.Name = "userControl_hand_UVindex_AOD";
+            this.userControl_hand_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_UVindex_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_UVindex_AOD_Copy);
+            // 
+            // userControl_text_UVindex_AOD
+            // 
+            this.userControl_text_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_UVindex_AOD, "userControl_text_UVindex_AOD");
+            this.userControl_text_UVindex_AOD.Collapsed = true;
+            this.userControl_text_UVindex_AOD.ImageError = true;
+            this.userControl_text_UVindex_AOD.Name = "userControl_text_UVindex_AOD";
+            this.userControl_text_UVindex_AOD.OptionalSymbol = false;
+            this.userControl_text_UVindex_AOD.PaddingZero_follow = true;
+            this.userControl_text_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_UVindex_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_UVindex_AOD_Copy);
+            // 
+            // userControl_pictures_UVindex_AOD
+            // 
+            this.userControl_pictures_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_UVindex_AOD, "userControl_pictures_UVindex_AOD");
+            this.userControl_pictures_UVindex_AOD.Collapsed = true;
+            this.userControl_pictures_UVindex_AOD.ImagesCount = 10;
+            this.userControl_pictures_UVindex_AOD.Name = "userControl_pictures_UVindex_AOD";
+            this.userControl_pictures_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_UVindex_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_UVindex_AOD_Copy);
+            // 
+            // userControl_scaleLinear_AirQuality_AOD
+            // 
+            this.userControl_scaleLinear_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_AirQuality_AOD, "userControl_scaleLinear_AirQuality_AOD");
+            this.userControl_scaleLinear_AirQuality_AOD.Collapsed = true;
+            this.userControl_scaleLinear_AirQuality_AOD.Name = "userControl_scaleLinear_AirQuality_AOD";
+            this.userControl_scaleLinear_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_AirQuality_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_AirQuality_AOD_Copy);
+            // 
+            // userControl_scaleCircle_AirQuality_AOD
+            // 
+            this.userControl_scaleCircle_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_AirQuality_AOD, "userControl_scaleCircle_AirQuality_AOD");
+            this.userControl_scaleCircle_AirQuality_AOD.Collapsed = true;
+            this.userControl_scaleCircle_AirQuality_AOD.Name = "userControl_scaleCircle_AirQuality_AOD";
+            this.userControl_scaleCircle_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_AirQuality_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_AirQuality_AOD_Copy);
+            // 
+            // userControl_hand_AirQuality_AOD
+            // 
+            this.userControl_hand_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_AirQuality_AOD, "userControl_hand_AirQuality_AOD");
+            this.userControl_hand_AirQuality_AOD.Collapsed = true;
+            this.userControl_hand_AirQuality_AOD.Name = "userControl_hand_AirQuality_AOD";
+            this.userControl_hand_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_AirQuality_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_AirQuality_AOD_Copy);
+            // 
+            // userControl_text_AirQuality_AOD
+            // 
+            this.userControl_text_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_AirQuality_AOD, "userControl_text_AirQuality_AOD");
+            this.userControl_text_AirQuality_AOD.Collapsed = true;
+            this.userControl_text_AirQuality_AOD.ImageError = true;
+            this.userControl_text_AirQuality_AOD.Name = "userControl_text_AirQuality_AOD";
+            this.userControl_text_AirQuality_AOD.OptionalSymbol = false;
+            this.userControl_text_AirQuality_AOD.PaddingZero_follow = true;
+            this.userControl_text_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_AirQuality_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_AirQuality_AOD_Copy);
+            // 
+            // userControl_pictures_AirQuality_AOD
+            // 
+            this.userControl_pictures_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_AirQuality_AOD, "userControl_pictures_AirQuality_AOD");
+            this.userControl_pictures_AirQuality_AOD.Collapsed = true;
+            this.userControl_pictures_AirQuality_AOD.ImagesCount = 10;
+            this.userControl_pictures_AirQuality_AOD.Name = "userControl_pictures_AirQuality_AOD";
+            this.userControl_pictures_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_AirQuality_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_AirQuality_AOD_Copy);
+            // 
+            // userControl_scaleLinear_Humidity_AOD
+            // 
+            this.userControl_scaleLinear_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Humidity_AOD, "userControl_scaleLinear_Humidity_AOD");
+            this.userControl_scaleLinear_Humidity_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Humidity_AOD.Name = "userControl_scaleLinear_Humidity_AOD";
+            this.userControl_scaleLinear_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Humidity_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Humidity_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Humidity_AOD
+            // 
+            this.userControl_scaleCircle_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Humidity_AOD, "userControl_scaleCircle_Humidity_AOD");
+            this.userControl_scaleCircle_Humidity_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Humidity_AOD.Name = "userControl_scaleCircle_Humidity_AOD";
+            this.userControl_scaleCircle_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Humidity_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Humidity_AOD_Copy);
+            // 
+            // userControl_hand_Humidity_AOD
+            // 
+            this.userControl_hand_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Humidity_AOD, "userControl_hand_Humidity_AOD");
+            this.userControl_hand_Humidity_AOD.Collapsed = true;
+            this.userControl_hand_Humidity_AOD.Name = "userControl_hand_Humidity_AOD";
+            this.userControl_hand_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Humidity_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Humidity_AOD_Copy);
+            // 
+            // userControl_text_Humidity_AOD
+            // 
+            this.userControl_text_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Humidity_AOD, "userControl_text_Humidity_AOD");
+            this.userControl_text_Humidity_AOD.Collapsed = true;
+            this.userControl_text_Humidity_AOD.ImageError = true;
+            this.userControl_text_Humidity_AOD.Name = "userControl_text_Humidity_AOD";
+            this.userControl_text_Humidity_AOD.OptionalSymbol = false;
+            this.userControl_text_Humidity_AOD.PaddingZero_follow = true;
+            this.userControl_text_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Humidity_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Humidity_AOD_Copy);
+            // 
+            // userControl_pictures_Humidity_AOD
+            // 
+            this.userControl_pictures_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Humidity_AOD, "userControl_pictures_Humidity_AOD");
+            this.userControl_pictures_Humidity_AOD.Collapsed = true;
+            this.userControl_pictures_Humidity_AOD.ImagesCount = 10;
+            this.userControl_pictures_Humidity_AOD.Name = "userControl_pictures_Humidity_AOD";
+            this.userControl_pictures_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Humidity_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Humidity_AOD_Copy);
+            // 
+            // userControl_scaleLinear_WindForce_AOD
+            // 
+            this.userControl_scaleLinear_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_WindForce_AOD, "userControl_scaleLinear_WindForce_AOD");
+            this.userControl_scaleLinear_WindForce_AOD.Collapsed = true;
+            this.userControl_scaleLinear_WindForce_AOD.Name = "userControl_scaleLinear_WindForce_AOD";
+            this.userControl_scaleLinear_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_WindForce_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_WindForce_AOD_Copy);
+            // 
+            // userControl_scaleCircle_WindForce_AOD
+            // 
+            this.userControl_scaleCircle_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_WindForce_AOD, "userControl_scaleCircle_WindForce_AOD");
+            this.userControl_scaleCircle_WindForce_AOD.Collapsed = true;
+            this.userControl_scaleCircle_WindForce_AOD.Name = "userControl_scaleCircle_WindForce_AOD";
+            this.userControl_scaleCircle_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_WindForce_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_WindForce_AOD_Copy);
+            // 
+            // userControl_hand_WindForce_AOD
+            // 
+            this.userControl_hand_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_WindForce_AOD, "userControl_hand_WindForce_AOD");
+            this.userControl_hand_WindForce_AOD.Collapsed = true;
+            this.userControl_hand_WindForce_AOD.Name = "userControl_hand_WindForce_AOD";
+            this.userControl_hand_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_WindForce_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_WindForce_AOD_Copy);
+            // 
+            // userControl_text_WindForce_AOD
+            // 
+            this.userControl_text_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_WindForce_AOD, "userControl_text_WindForce_AOD");
+            this.userControl_text_WindForce_AOD.Collapsed = true;
+            this.userControl_text_WindForce_AOD.ImageError = true;
+            this.userControl_text_WindForce_AOD.Name = "userControl_text_WindForce_AOD";
+            this.userControl_text_WindForce_AOD.OptionalSymbol = false;
+            this.userControl_text_WindForce_AOD.PaddingZero_follow = true;
+            this.userControl_text_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_WindForce_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WindForce_AOD_Copy);
+            // 
+            // userControl_pictures_WindForce_AOD
+            // 
+            this.userControl_pictures_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_WindForce_AOD, "userControl_pictures_WindForce_AOD");
+            this.userControl_pictures_WindForce_AOD.Collapsed = true;
+            this.userControl_pictures_WindForce_AOD.ImagesCount = 10;
+            this.userControl_pictures_WindForce_AOD.Name = "userControl_pictures_WindForce_AOD";
+            this.userControl_pictures_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_WindForce_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_WindForce_AOD_Copy);
+            // 
+            // userControl_scaleLinear_Altitude_AOD
+            // 
+            this.userControl_scaleLinear_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Altitude_AOD, "userControl_scaleLinear_Altitude_AOD");
+            this.userControl_scaleLinear_Altitude_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Altitude_AOD.Name = "userControl_scaleLinear_Altitude_AOD";
+            this.userControl_scaleLinear_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Altitude_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Altitude_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Altitude_AOD
+            // 
+            this.userControl_scaleCircle_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Altitude_AOD, "userControl_scaleCircle_Altitude_AOD");
+            this.userControl_scaleCircle_Altitude_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Altitude_AOD.Name = "userControl_scaleCircle_Altitude_AOD";
+            this.userControl_scaleCircle_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Altitude_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Altitude_AOD_Copy);
+            // 
+            // userControl_hand_Altitude_AOD
+            // 
+            this.userControl_hand_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Altitude_AOD, "userControl_hand_Altitude_AOD");
+            this.userControl_hand_Altitude_AOD.Collapsed = true;
+            this.userControl_hand_Altitude_AOD.Name = "userControl_hand_Altitude_AOD";
+            this.userControl_hand_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Altitude_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Altitude_AOD_Copy);
+            // 
+            // userControl_text_Altitude_AOD
+            // 
+            this.userControl_text_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Altitude_AOD, "userControl_text_Altitude_AOD");
+            this.userControl_text_Altitude_AOD.Collapsed = true;
+            this.userControl_text_Altitude_AOD.ImageError = true;
+            this.userControl_text_Altitude_AOD.Name = "userControl_text_Altitude_AOD";
+            this.userControl_text_Altitude_AOD.OptionalSymbol = false;
+            this.userControl_text_Altitude_AOD.PaddingZero_follow = true;
+            this.userControl_text_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Altitude_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Altitude_AOD_Copy);
+            // 
+            // userControl_pictures_Altitude_AOD
+            // 
+            this.userControl_pictures_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Altitude_AOD, "userControl_pictures_Altitude_AOD");
+            this.userControl_pictures_Altitude_AOD.Collapsed = true;
+            this.userControl_pictures_Altitude_AOD.ImagesCount = 10;
+            this.userControl_pictures_Altitude_AOD.Name = "userControl_pictures_Altitude_AOD";
+            this.userControl_pictures_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Altitude_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Altitude_AOD_Copy);
+            // 
+            // userControl_scaleLinear_AirPressure_AOD
+            // 
+            this.userControl_scaleLinear_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_AirPressure_AOD, "userControl_scaleLinear_AirPressure_AOD");
+            this.userControl_scaleLinear_AirPressure_AOD.Collapsed = true;
+            this.userControl_scaleLinear_AirPressure_AOD.Name = "userControl_scaleLinear_AirPressure_AOD";
+            this.userControl_scaleLinear_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_AirPressure_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_AirPressure_AOD_Copy);
+            // 
+            // userControl_scaleCircle_AirPressure_AOD
+            // 
+            this.userControl_scaleCircle_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_AirPressure_AOD, "userControl_scaleCircle_AirPressure_AOD");
+            this.userControl_scaleCircle_AirPressure_AOD.Collapsed = true;
+            this.userControl_scaleCircle_AirPressure_AOD.Name = "userControl_scaleCircle_AirPressure_AOD";
+            this.userControl_scaleCircle_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_AirPressure_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_AirPressure_AOD_Copy);
+            // 
+            // userControl_hand_AirPressure_AOD
+            // 
+            this.userControl_hand_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_AirPressure_AOD, "userControl_hand_AirPressure_AOD");
+            this.userControl_hand_AirPressure_AOD.Collapsed = true;
+            this.userControl_hand_AirPressure_AOD.Name = "userControl_hand_AirPressure_AOD";
+            this.userControl_hand_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_AirPressure_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_AirPressure_AOD_Copy);
+            // 
+            // userControl_text_AirPressure_AOD
+            // 
+            this.userControl_text_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_AirPressure_AOD, "userControl_text_AirPressure_AOD");
+            this.userControl_text_AirPressure_AOD.Collapsed = true;
+            this.userControl_text_AirPressure_AOD.ImageError = true;
+            this.userControl_text_AirPressure_AOD.Name = "userControl_text_AirPressure_AOD";
+            this.userControl_text_AirPressure_AOD.OptionalSymbol = false;
+            this.userControl_text_AirPressure_AOD.PaddingZero_follow = true;
+            this.userControl_text_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_AirPressure_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_AirPressure_AOD_Copy);
+            // 
+            // userControl_pictures_AirPressure_AOD
+            // 
+            this.userControl_pictures_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_AirPressure_AOD, "userControl_pictures_AirPressure_AOD");
+            this.userControl_pictures_AirPressure_AOD.Collapsed = true;
+            this.userControl_pictures_AirPressure_AOD.ImagesCount = 10;
+            this.userControl_pictures_AirPressure_AOD.Name = "userControl_pictures_AirPressure_AOD";
+            this.userControl_pictures_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_AirPressure_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_AirPressure_AOD_Copy);
+            // 
+            // userControl_scaleLinear_Battery_AOD
+            // 
+            this.userControl_scaleLinear_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Battery_AOD, "userControl_scaleLinear_Battery_AOD");
+            this.userControl_scaleLinear_Battery_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Battery_AOD.Name = "userControl_scaleLinear_Battery_AOD";
+            this.userControl_scaleLinear_Battery_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Battery_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Battery_AOD
+            // 
+            this.userControl_scaleCircle_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Battery_AOD, "userControl_scaleCircle_Battery_AOD");
+            this.userControl_scaleCircle_Battery_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Battery_AOD.Name = "userControl_scaleCircle_Battery_AOD";
+            this.userControl_scaleCircle_Battery_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Battery_AOD_Copy);
+            // 
+            // userControl_hand_Battery_AOD
+            // 
+            this.userControl_hand_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Battery_AOD, "userControl_hand_Battery_AOD");
+            this.userControl_hand_Battery_AOD.Collapsed = true;
+            this.userControl_hand_Battery_AOD.Name = "userControl_hand_Battery_AOD";
+            this.userControl_hand_Battery_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Battery_AOD_Copy);
+            // 
+            // userControl_text_Battery_AOD
+            // 
+            this.userControl_text_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_text_Battery_AOD, "userControl_text_Battery_AOD");
+            this.userControl_text_Battery_AOD.Collapsed = true;
+            this.userControl_text_Battery_AOD.ImageError = true;
+            this.userControl_text_Battery_AOD.Name = "userControl_text_Battery_AOD";
+            this.userControl_text_Battery_AOD.OptionalSymbol = false;
+            this.userControl_text_Battery_AOD.PaddingZero_follow = true;
+            this.userControl_text_Battery_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Battery_AOD_Copy);
+            // 
+            // userControl_pictures_Battery_AOD
+            // 
+            this.userControl_pictures_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Battery_AOD, "userControl_pictures_Battery_AOD");
+            this.userControl_pictures_Battery_AOD.Collapsed = true;
+            this.userControl_pictures_Battery_AOD.ImagesCount = 10;
+            this.userControl_pictures_Battery_AOD.Name = "userControl_pictures_Battery_AOD";
+            this.userControl_pictures_Battery_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Battery_AOD_Copy);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.radioButton_TRex_pro);
             this.Controls.Add(this.radioButton_GTR2e);
             this.Controls.Add(this.checkBox_center_marker);
@@ -15782,58 +12532,19 @@
             this.tabPage_Air.ResumeLayout(false);
             this.tabControl_SystemWeather.ResumeLayout(false);
             this.tabPage_Weather.ResumeLayout(false);
-            this.panel_Weather_scaleLinear.ResumeLayout(false);
-            this.panel_Weather_scaleLinear.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_length)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_width)).EndInit();
-            this.panel_Weather_scaleCircle.ResumeLayout(false);
-            this.panel_Weather_scaleCircle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_radius)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_width)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_startAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_endAngle)).EndInit();
-            this.panel_Weather_hand.ResumeLayout(false);
-            this.panel_Weather_hand.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_offset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_offset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_centr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_centr)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_startAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_endAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_background)).EndInit();
-            this.panel_Weather_textMax.ResumeLayout(false);
-            this.panel_Weather_textMax.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMax)).EndInit();
-            this.panel_Weather_textMin.ResumeLayout(false);
-            this.panel_Weather_textMin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMin)).EndInit();
-            this.panel_Weather_text.ResumeLayout(false);
-            this.panel_Weather_text.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacing)).EndInit();
-            this.panel_Weather_pictures.ResumeLayout(false);
-            this.panel_Weather_pictures.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_pictures_count)).EndInit();
+            this.tabPage_Weather.PerformLayout();
+            this.tabPage_UVindex.ResumeLayout(false);
+            this.tabPage_UVindex.PerformLayout();
+            this.tabPage_AirQuality.ResumeLayout(false);
+            this.tabPage_AirQuality.PerformLayout();
+            this.tabPage_Humidity.ResumeLayout(false);
+            this.tabPage_Humidity.PerformLayout();
+            this.tabPage_WindForce.ResumeLayout(false);
+            this.tabPage_WindForce.PerformLayout();
+            this.tabPage_Altitude.ResumeLayout(false);
+            this.tabPage_Altitude.PerformLayout();
+            this.tabPage_AirPressure.ResumeLayout(false);
+            this.tabPage_AirPressure.PerformLayout();
             this.tabPage_System.ResumeLayout(false);
             this.tabControl_System.ResumeLayout(false);
             this.tabPage_Status.ResumeLayout(false);
@@ -15992,58 +12703,19 @@
             this.tabPage_Air_AOD.ResumeLayout(false);
             this.tabControl_SystemWeather_AOD.ResumeLayout(false);
             this.tabPage_Weather_AOD.ResumeLayout(false);
-            this.panel_Weather_scaleLinear_AOD.ResumeLayout(false);
-            this.panel_Weather_scaleLinear_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearX_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinearY_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_length_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleLinear_width_AOD)).EndInit();
-            this.panel_Weather_scaleCircle_AOD.ResumeLayout(false);
-            this.panel_Weather_scaleCircle_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleX_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircleY_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_radius_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_width_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_startAngle_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_scaleCircle_endAngle_AOD)).EndInit();
-            this.panel_Weather_hand_AOD.ResumeLayout(false);
-            this.panel_Weather_hand_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_offset_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_offset_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_centr_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_centr_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_startAngle_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_hand_endAngle_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handX_background_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_handY_background_AOD)).EndInit();
-            this.panel_Weather_textMax_AOD.ResumeLayout(false);
-            this.panel_Weather_textMax_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMax_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMax_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMax_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMax_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMax_AOD)).EndInit();
-            this.panel_Weather_textMin_AOD.ResumeLayout(false);
-            this.panel_Weather_textMin_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherXMin_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherYMin_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconXMin_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconYMin_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacingMin_AOD)).EndInit();
-            this.panel_Weather_text_AOD.ResumeLayout(false);
-            this.panel_Weather_text_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherX_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherY_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconX_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_iconY_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_spacing_AOD)).EndInit();
-            this.panel_Weather_pictures_AOD.ResumeLayout(false);
-            this.panel_Weather_pictures_AOD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesX_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_picturesY_AOD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_pictures_count_AOD)).EndInit();
+            this.tabPage_Weather_AOD.PerformLayout();
+            this.tabPage_UVindex_AOD.ResumeLayout(false);
+            this.tabPage_UVindex_AOD.PerformLayout();
+            this.tabPage_AirQuality_AOD.ResumeLayout(false);
+            this.tabPage_AirQuality_AOD.PerformLayout();
+            this.tabPage_Humidity_AOD.ResumeLayout(false);
+            this.tabPage_Humidity_AOD.PerformLayout();
+            this.tabPage_WindForce_AOD.ResumeLayout(false);
+            this.tabPage_WindForce_AOD.PerformLayout();
+            this.tabPage_Altitude_AOD.ResumeLayout(false);
+            this.tabPage_Altitude_AOD.PerformLayout();
+            this.tabPage_AirPressure_AOD.ResumeLayout(false);
+            this.tabPage_AirPressure_AOD.PerformLayout();
             this.tabPage_System_AOD.ResumeLayout(false);
             this.tabControl_System_AOD.ResumeLayout(false);
             this.tabPage_Battery_AOD.ResumeLayout(false);
@@ -16087,6 +12759,7 @@
             this.contextMenuStrip_XY_InAnimationTable.ResumeLayout(false);
             this.contextMenuStrip_XY_InTable.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -16658,178 +13331,6 @@
         private System.Windows.Forms.RadioButton radioButton_ScreenIdle;
         private System.Windows.Forms.RadioButton radioButton_ScreenNormal;
         private System.Windows.Forms.Button button_RandomPreview;
-        private System.Windows.Forms.Panel panel_Weather_icon;
-        private System.Windows.Forms.Panel panel_Weather_scaleLinear;
-        private System.Windows.Forms.CheckBox checkBox_Weather_scaleLinear_Use;
-        private System.Windows.Forms.RadioButton radioButton_Weather_scaleLinear_image;
-        private System.Windows.Forms.RadioButton radioButtonWeather_scaleLinear_color;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_color;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_pointer;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_background;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinearX;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinearY;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinear_length;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinear_width;
-        private System.Windows.Forms.Label label103;
-        private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.Label label109;
-        private System.Windows.Forms.Button button_Weather_scaleLinear;
-        private System.Windows.Forms.Panel panel_Weather_scaleCircle;
-        private System.Windows.Forms.CheckBox checkBox_Weather_scaleCircle_Use;
-        private System.Windows.Forms.RadioButton radioButton_Weather_scaleCircle_image;
-        private System.Windows.Forms.RadioButton radioButton_Weather_scaleCircle_color;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_image;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_color;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_flatness;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_image_background;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircleX;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircleY;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_radius;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_width;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_startAngle;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_endAngle;
-        private System.Windows.Forms.Label label110;
-        private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.Label label113;
-        private System.Windows.Forms.Label label114;
-        private System.Windows.Forms.Label label115;
-        private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.Label label117;
-        private System.Windows.Forms.Label label118;
-        private System.Windows.Forms.Button button_Weather_scaleCircle;
-        private System.Windows.Forms.Panel panel_Weather_hand;
-        private System.Windows.Forms.CheckBox checkBox_Weather_hand_Use;
-        private System.Windows.Forms.ComboBox comboBox_Weather_hand_image;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_offset;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_offset;
-        private System.Windows.Forms.ComboBox comboBox_Weather_hand_imageCentr;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_centr;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_centr;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_hand_startAngle;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_hand_endAngle;
-        private System.Windows.Forms.ComboBox comboBox_Weather_hand_imageBackground;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_background;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_background;
-        private System.Windows.Forms.Label label119;
-        private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.Label label121;
-        private System.Windows.Forms.Label label122;
-        private System.Windows.Forms.Label label123;
-        private System.Windows.Forms.Label label124;
-        private System.Windows.Forms.Label label125;
-        private System.Windows.Forms.Label label126;
-        private System.Windows.Forms.Label label127;
-        private System.Windows.Forms.Label label128;
-        private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.Label label130;
-        private System.Windows.Forms.Label label131;
-        private System.Windows.Forms.Label label132;
-        private System.Windows.Forms.Label label133;
-        private System.Windows.Forms.Label label134;
-        private System.Windows.Forms.Label label135;
-        private System.Windows.Forms.Button button_Weather_hand;
-        private System.Windows.Forms.Panel panel_Weather_text;
-        private System.Windows.Forms.ComboBox comboBox_Weather_unitF;
-        private System.Windows.Forms.Label label153;
-        private System.Windows.Forms.CheckBox checkBox_Weather_Use;
-        private System.Windows.Forms.ComboBox comboBox_Weather_image;
-        private System.Windows.Forms.ComboBox comboBox_Weather_icon;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherX;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherY;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconX;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconY;
-        private System.Windows.Forms.ComboBox comboBox_Weather_alignment;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacing;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageError;
-        private System.Windows.Forms.Label label136;
-        private System.Windows.Forms.Label label138;
-        private System.Windows.Forms.Label label139;
-        private System.Windows.Forms.Label label140;
-        private System.Windows.Forms.Label label141;
-        private System.Windows.Forms.Label label142;
-        private System.Windows.Forms.Label label143;
-        private System.Windows.Forms.Label label144;
-        private System.Windows.Forms.Label label145;
-        private System.Windows.Forms.Label label146;
-        private System.Windows.Forms.Label label147;
-        private System.Windows.Forms.Button button_Weather_text;
-        private System.Windows.Forms.Panel panel_Weather_pictures;
-        private System.Windows.Forms.CheckBox checkBox_Weather_pictures_Use;
-        private System.Windows.Forms.ComboBox comboBox_Weather_pictures_image;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_picturesX;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_picturesY;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_pictures_count;
-        private System.Windows.Forms.Label label148;
-        private System.Windows.Forms.Label label149;
-        private System.Windows.Forms.Label label150;
-        private System.Windows.Forms.Label label151;
-        private System.Windows.Forms.Label label152;
-        private System.Windows.Forms.Button button_Weather_pictures;
-        private System.Windows.Forms.Panel panel_Weather_textMin;
-        private System.Windows.Forms.CheckBox checkBox_Weather_UseMin;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMin;
-        private System.Windows.Forms.ComboBox comboBox_Weather_iconMin;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherXMin;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherYMin;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconXMin;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconYMin;
-        private System.Windows.Forms.ComboBox comboBox_Weather_alignmentMin;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacingMin;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageErrorMin;
-        private System.Windows.Forms.ComboBox comboBox_Weather_unitFMin;
-        private System.Windows.Forms.Label label167;
-        private System.Windows.Forms.Label label169;
-        private System.Windows.Forms.Label label170;
-        private System.Windows.Forms.Label label171;
-        private System.Windows.Forms.Label label172;
-        private System.Windows.Forms.Label label173;
-        private System.Windows.Forms.Label label174;
-        private System.Windows.Forms.Label label175;
-        private System.Windows.Forms.Label label176;
-        private System.Windows.Forms.Label label177;
-        private System.Windows.Forms.Label label178;
-        private System.Windows.Forms.Label label179;
-        private System.Windows.Forms.Button button_Weather_textMin;
-        private System.Windows.Forms.Panel panel_Weather_textMax;
-        private System.Windows.Forms.CheckBox checkBox_Weather_UseMax;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMax;
-        private System.Windows.Forms.ComboBox comboBox_Weather_iconMax;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherXMax;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherYMax;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconXMax;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconYMax;
-        private System.Windows.Forms.ComboBox comboBox_Weather_alignmentMax;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacingMax;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageErrorMax;
-        private System.Windows.Forms.ComboBox comboBox_Weather_unitFMax;
-        private System.Windows.Forms.Label label154;
-        private System.Windows.Forms.Label label156;
-        private System.Windows.Forms.Label label157;
-        private System.Windows.Forms.Label label158;
-        private System.Windows.Forms.Label label159;
-        private System.Windows.Forms.Label label160;
-        private System.Windows.Forms.Label label161;
-        private System.Windows.Forms.Label label162;
-        private System.Windows.Forms.Label label163;
-        private System.Windows.Forms.Label label164;
-        private System.Windows.Forms.Label label165;
-        private System.Windows.Forms.Label label166;
-        private System.Windows.Forms.Button button_Weather_textMax;
-        private System.Windows.Forms.CheckBox checkBox_Weather_followMax;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinusMax;
-        private System.Windows.Forms.Label label180;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinusMin;
-        private System.Windows.Forms.Label label181;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinus;
-        private System.Windows.Forms.Label label182;
         private System.Windows.Forms.CheckBox checkBox_SaveID;
         private System.Windows.Forms.Button button_GenerateID;
         private System.Windows.Forms.TextBox textBox_WatchfaceID;
@@ -17167,178 +13668,6 @@
         private System.Windows.Forms.TabPage tabPage_Air_AOD;
         private System.Windows.Forms.TabControl tabControl_SystemWeather_AOD;
         private System.Windows.Forms.TabPage tabPage_Weather_AOD;
-        private System.Windows.Forms.Panel panel_Weather_icon_AOD;
-        private System.Windows.Forms.Panel panel_Weather_scaleLinear_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_scaleLinear_Use_AOD;
-        private System.Windows.Forms.RadioButton radioButton_Weather_scaleLinear_image_AOD;
-        private System.Windows.Forms.RadioButton radioButtonWeather_scaleLinear_color_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_color_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_pointer_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_image_background_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinearX_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinearY_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinear_length_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleLinear_width_AOD;
-        private System.Windows.Forms.Label label1102;
-        private System.Windows.Forms.Label label1103;
-        private System.Windows.Forms.Label label1104;
-        private System.Windows.Forms.Label label1105;
-        private System.Windows.Forms.Label label1106;
-        private System.Windows.Forms.Label label1107;
-        private System.Windows.Forms.Label label1108;
-        private System.Windows.Forms.Button button_Weather_scaleLinear_AOD;
-        private System.Windows.Forms.Panel panel_Weather_scaleCircle_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_scaleCircle_Use_AOD;
-        private System.Windows.Forms.RadioButton radioButton_Weather_scaleCircle_image_AOD;
-        private System.Windows.Forms.RadioButton radioButton_Weather_scaleCircle_color_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_image_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_color_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_flatness_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleCircle_image_background_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircleX_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircleY_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_radius_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_width_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_startAngle_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_scaleCircle_endAngle_AOD;
-        private System.Windows.Forms.Label label1109;
-        private System.Windows.Forms.Label label1110;
-        private System.Windows.Forms.Label label1111;
-        private System.Windows.Forms.Label label1112;
-        private System.Windows.Forms.Label label1113;
-        private System.Windows.Forms.Label label1114;
-        private System.Windows.Forms.Label label1115;
-        private System.Windows.Forms.Label label1116;
-        private System.Windows.Forms.Label label1117;
-        private System.Windows.Forms.Button button_Weather_scaleCircle_AOD;
-        private System.Windows.Forms.Panel panel_Weather_hand_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_hand_Use_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_hand_image_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_offset_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_offset_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_hand_imageCentr_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_centr_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_centr_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_hand_startAngle_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_hand_endAngle_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_hand_imageBackground_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handX_background_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_handY_background_AOD;
-        private System.Windows.Forms.Label label1118;
-        private System.Windows.Forms.Label label1119;
-        private System.Windows.Forms.Label label1120;
-        private System.Windows.Forms.Label label1121;
-        private System.Windows.Forms.Label label1122;
-        private System.Windows.Forms.Label label1123;
-        private System.Windows.Forms.Label label1124;
-        private System.Windows.Forms.Label label1125;
-        private System.Windows.Forms.Label label1126;
-        private System.Windows.Forms.Label label1127;
-        private System.Windows.Forms.Label label1128;
-        private System.Windows.Forms.Label label1129;
-        private System.Windows.Forms.Label label1130;
-        private System.Windows.Forms.Label label1131;
-        private System.Windows.Forms.Label label1132;
-        private System.Windows.Forms.Label label1133;
-        private System.Windows.Forms.Label label1134;
-        private System.Windows.Forms.Button button_Weather_hand_AOD;
-        private System.Windows.Forms.Panel panel_Weather_textMax_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_UseMax_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMax_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_iconMax_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_unitFMax_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherXMax_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherYMax_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconXMax_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconYMax_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_alignmentMax_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacingMax_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageErrorMax_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinusMax_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_followMax_AOD;
-        private System.Windows.Forms.Label label1135;
-        private System.Windows.Forms.Label label1136;
-        private System.Windows.Forms.Label label1137;
-        private System.Windows.Forms.Label label1138;
-        private System.Windows.Forms.Label label1139;
-        private System.Windows.Forms.Label label1140;
-        private System.Windows.Forms.Label label1141;
-        private System.Windows.Forms.Label label1142;
-        private System.Windows.Forms.Label label1143;
-        private System.Windows.Forms.Label label1144;
-        private System.Windows.Forms.Label label1145;
-        private System.Windows.Forms.Label label1146;
-        private System.Windows.Forms.Label label1147;
-        private System.Windows.Forms.Button button_Weather_textMax_AOD;
-        private System.Windows.Forms.Panel panel_Weather_textMin_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_UseMin_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMin_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_iconMin_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_unitFMin_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherXMin_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherYMin_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconXMin_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconYMin_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_alignmentMin_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacingMin_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageErrorMin_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinusMin_AOD;
-        private System.Windows.Forms.Label label1148;
-        private System.Windows.Forms.Label label1149;
-        private System.Windows.Forms.Label label1150;
-        private System.Windows.Forms.Label label1151;
-        private System.Windows.Forms.Label label1152;
-        private System.Windows.Forms.Label label1153;
-        private System.Windows.Forms.Label label1154;
-        private System.Windows.Forms.Label label1155;
-        private System.Windows.Forms.Label label1156;
-        private System.Windows.Forms.Label label1157;
-        private System.Windows.Forms.Label label1158;
-        private System.Windows.Forms.Label label1159;
-        private System.Windows.Forms.Label label1160;
-        private System.Windows.Forms.Button button_Weather_textMin_AOD;
-        private System.Windows.Forms.Panel panel_Weather_text_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_Use_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_image_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_icon_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_unitF_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherX_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherY_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconX_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_iconY_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_alignment_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_spacing_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageError_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_imageMinus_AOD;
-        private System.Windows.Forms.Label label1161;
-        private System.Windows.Forms.Label label1162;
-        private System.Windows.Forms.Label label1163;
-        private System.Windows.Forms.Label label1164;
-        private System.Windows.Forms.Label label1165;
-        private System.Windows.Forms.Label label1166;
-        private System.Windows.Forms.Label label1167;
-        private System.Windows.Forms.Label label1168;
-        private System.Windows.Forms.Label label1169;
-        private System.Windows.Forms.Label label1170;
-        private System.Windows.Forms.Label label1171;
-        private System.Windows.Forms.Label label1172;
-        private System.Windows.Forms.Label label1173;
-        private System.Windows.Forms.Button button_Weather_text_AOD;
-        private System.Windows.Forms.Panel panel_Weather_pictures_AOD;
-        private System.Windows.Forms.CheckBox checkBox_Weather_pictures_Use_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_pictures_image_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_picturesX_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_picturesY_AOD;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Weather_pictures_count_AOD;
-        private System.Windows.Forms.Label label1174;
-        private System.Windows.Forms.Label label1175;
-        private System.Windows.Forms.Label label1176;
-        private System.Windows.Forms.Label label1177;
-        private System.Windows.Forms.Label label1178;
-        private System.Windows.Forms.Button button_Weather_pictures_AOD;
         private System.Windows.Forms.TabPage tabPage_UVindex_AOD;
         private System.Windows.Forms.TabPage tabPage_AirQuality_AOD;
         private System.Windows.Forms.TabPage tabPage_Humidity_AOD;
@@ -17363,17 +13692,6 @@
         private System.Windows.Forms.Button button_Copy_Hour_AOD;
         private System.Windows.Forms.Button button_Copy_Minute_hand_AOD;
         private System.Windows.Forms.Button button_Copy_Hour_hand_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_flatness;
-        private System.Windows.Forms.Label label295;
-        private System.Windows.Forms.Button button_Copy_Weather_scaleLinear_AOD;
-        private System.Windows.Forms.ComboBox comboBox_Weather_scaleLinear_flatness_AOD;
-        private System.Windows.Forms.Label label304;
-        private System.Windows.Forms.Button button_Copy_Weather_scaleCircle_AOD;
-        private System.Windows.Forms.Button button_Copy_Weather_hand_AOD;
-        private System.Windows.Forms.Button button_Copy_Weather_textMax_AOD;
-        private System.Windows.Forms.Button button_Copy_Weather_textMin_AOD;
-        private System.Windows.Forms.Button button_Copy_Weather_text_AOD;
-        private System.Windows.Forms.Button button_Copy_Weather_pictures_AOD;
         private UserControl_Set userControl_Set12;
         private UserControl_Set userControl_Set11;
         private UserControl_Set userControl_Set10;
@@ -17483,6 +13801,82 @@
         private UserControl_hand userControl_hand_FatBurning_AOD;
         private UserControl_text userControl_text_FatBurning_AOD;
         private UserControl_pictures userControl_pictures_FatBurning_AOD;
+        private UserControl_text_weather userControl_text_weather_Max_AOD;
+        private UserControl_text_weather userControl_text_weather_Min_AOD;
+        private UserControl_text_weather userControl_text_weather_Current_AOD;
+        private UserControl_scaleLinear userControl_scaleLinear_Weather_AOD;
+        private UserControl_scaleCircle userControl_scaleCircle_Weather_AOD;
+        private UserControl_hand userControl_hand_Weather_AOD;
+        private UserControl_pictures_weather userControl_pictures_weather_AOD;
+        private UserControl_scaleLinear userControl_scaleLinear_Weather;
+        private UserControl_scaleCircle userControl_scaleCircle_Weather;
+        private UserControl_hand userControl_hand_Weather;
+        private UserControl_text_weather userControl_text_weather_Max;
+        private UserControl_text_weather userControl_text_weather_Min;
+        private UserControl_text_weather userControl_text_weather_Current;
+        private UserControl_pictures_weather userControl_pictures_weather;
+        private UserControl_scaleLinear userControl_scaleLinear_UVindex;
+        private UserControl_scaleCircle userControl_scaleCircle_UVindex;
+        private UserControl_hand userControl_hand_UVindex;
+        private UserControl_text userControl_text_UVindex;
+        private UserControl_pictures userControl_pictures_UVindex;
+        private UserControl_scaleLinear userControl_scaleLinear_UVindex_AOD;
+        private UserControl_scaleCircle userControl_scaleCircle_UVindex_AOD;
+        private UserControl_hand userControl_hand_UVindex_AOD;
+        private UserControl_text userControl_text_UVindex_AOD;
+        private UserControl_pictures userControl_pictures_UVindex_AOD;
+        private UserControl_scaleLinear userControl_scaleLinear_AirQuality;
+        private UserControl_scaleCircle userControl_scaleCircle_AirQuality;
+        private UserControl_hand userControl_hand_AirQuality;
+        private UserControl_text userControl_text_AirQuality;
+        private UserControl_pictures userControl_pictures_AirQuality;
+        private UserControl_scaleLinear userControl_scaleLinear_AirQuality_AOD;
+        private UserControl_scaleCircle userControl_scaleCircle_AirQuality_AOD;
+        private UserControl_hand userControl_hand_AirQuality_AOD;
+        private UserControl_text userControl_text_AirQuality_AOD;
+        private UserControl_pictures userControl_pictures_AirQuality_AOD;
+        private UserControl_scaleLinear userControl_scaleLinear_Humidity;
+        private UserControl_scaleCircle userControl_scaleCircle_Humidity;
+        private UserControl_hand userControl_hand_Humidity;
+        private UserControl_text userControl_text_Humidity;
+        private UserControl_pictures userControl_pictures_Humidity;
+        private UserControl_scaleLinear userControl_scaleLinear_Humidity_AOD;
+        private UserControl_scaleCircle userControl_scaleCircle_Humidity_AOD;
+        private UserControl_hand userControl_hand_Humidity_AOD;
+        private UserControl_text userControl_text_Humidity_AOD;
+        private UserControl_pictures userControl_pictures_Humidity_AOD;
+        private UserControl_scaleLinear userControl_scaleLinear_WindForce;
+        private UserControl_scaleCircle userControl_scaleCircle_WindForce;
+        private UserControl_hand userControl_hand_WindForce;
+        private UserControl_text userControl_text_WindForce;
+        private UserControl_pictures userControl_pictures_WindForce;
+        private UserControl_scaleLinear userControl_scaleLinear_WindForce_AOD;
+        private UserControl_scaleCircle userControl_scaleCircle_WindForce_AOD;
+        private UserControl_hand userControl_hand_WindForce_AOD;
+        private UserControl_text userControl_text_WindForce_AOD;
+        private UserControl_pictures userControl_pictures_WindForce_AOD;
+        private UserControl_scaleLinear userControl_scaleLinear_Altitude;
+        private UserControl_scaleCircle userControl_scaleCircle_Altitude;
+        private UserControl_hand userControl_hand_Altitude;
+        private UserControl_text userControl_text_Altitude;
+        private UserControl_pictures userControl_pictures_Altitude;
+        private UserControl_scaleLinear userControl_scaleLinear_Altitude_AOD;
+        private UserControl_scaleCircle userControl_scaleCircle_Altitude_AOD;
+        private UserControl_hand userControl_hand_Altitude_AOD;
+        private UserControl_text userControl_text_Altitude_AOD;
+        private UserControl_pictures userControl_pictures_Altitude_AOD;
+        private UserControl_scaleLinear userControl_scaleLinear_AirPressure;
+        private UserControl_scaleCircle userControl_scaleCircle_AirPressure;
+        private UserControl_hand userControl_hand_AirPressure;
+        private UserControl_text userControl_text_AirPressure;
+        private UserControl_pictures userControl_pictures_AirPressure;
+        private UserControl_scaleLinear userControl_scaleLinear_AirPressure_AOD;
+        private UserControl_scaleCircle userControl_scaleCircle_AirPressure_AOD;
+        private UserControl_hand userControl_hand_AirPressure_AOD;
+        private UserControl_text userControl_text_AirPressure_AOD;
+        private UserControl_pictures userControl_pictures_AirPressure_AOD;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

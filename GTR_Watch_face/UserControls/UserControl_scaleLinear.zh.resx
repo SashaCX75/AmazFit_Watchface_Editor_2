@@ -136,36 +136,6 @@
   <data name="radioButton_scaleLinear_color.Text" xml:space="preserve">
     <value>颜色</value>
   </data>
-  <data name="comboBox_scaleLinear_flatness.Items" xml:space="preserve">
-    <value>圆</value>
-  </data>
-  <data name="comboBox_scaleLinear_flatness.Items1" xml:space="preserve">
-    <value>平底</value>
-  </data>
-  <data name="label02.Text" xml:space="preserve">
-    <value>结束线</value>
-  </data>
-  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>开始坐标</value>
-  </data>
-  <data name="label06.Text" xml:space="preserve">
-    <value>宽度</value>
-  </data>
-  <data name="label05.Text" xml:space="preserve">
-    <value>长度</value>
-  </data>
-  <data name="label07.Text" xml:space="preserve">
-    <value>指针图像</value>
-  </data>
-  <data name="label08.Text" xml:space="preserve">
-    <value>背景图像</value>
-  </data>
-  <data name="button_Copy_scaleLinear.Text" xml:space="preserve">
-    <value>从主屏幕复制</value>
-  </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -259,6 +229,36 @@
         xrTrBLnaVtvFoxj1DmPM8xof3g/DN+7Bx9ERjHnfYtQzhKEXz/HsiQPXGo9AvHAYlQdLWjPlgqARBDNd
         5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="comboBox_scaleLinear_flatness.Items" xml:space="preserve">
+    <value>圆</value>
+  </data>
+  <data name="comboBox_scaleLinear_flatness.Items1" xml:space="preserve">
+    <value>平底</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>结束线</value>
+  </data>
+  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>开始坐标</value>
+  </data>
+  <data name="label06.Text" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="label05.Text" xml:space="preserve">
+    <value>长度</value>
+  </data>
+  <data name="label07.Text" xml:space="preserve">
+    <value>指针图像</value>
+  </data>
+  <data name="label08.Text" xml:space="preserve">
+    <value>背景图像</value>
+  </data>
+  <data name="button_Copy_scaleLinear.Text" xml:space="preserve">
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_scaleLinear.Text" xml:space="preserve">
     <value>线性刻度</value>
