@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label22.Text" xml:space="preserve">
+    <value>最高温度</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="numericUpDown_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 50</value>
@@ -216,19 +219,6 @@
   </data>
   <data name="checkBox_WeatherSet_Temp.Text" xml:space="preserve">
     <value>当前温度</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="checkBox_WeatherSet_MaxMinTemp.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 25</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Text" xml:space="preserve">
-    <value>最高温度</value>
   </data>
   <data name="label21.Text" xml:space="preserve">
     <value>最低温度</value>

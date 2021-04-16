@@ -60,10 +60,13 @@ namespace AmazFit_Watchface_2
             // 
             resources.ApplyResources(this.button_text, "button_text");
             // 
+            // checkBox_follow
+            // 
+            resources.ApplyResources(this.checkBox_follow, "checkBox_follow");
+            // 
             // checkBox_addZero
             // 
             resources.ApplyResources(this.checkBox_addZero, "checkBox_addZero");
-            this.checkBox_addZero.CheckedChanged += new System.EventHandler(this.checkBox_addZero_CheckedChanged);
             // 
             // UserControl_text_weather
             // 

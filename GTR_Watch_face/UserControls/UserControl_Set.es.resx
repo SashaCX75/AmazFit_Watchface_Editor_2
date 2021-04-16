@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Temperatura máxima</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="numericUpDown_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
     <value>125, 50</value>
@@ -214,19 +217,6 @@
   <data name="checkBox_WeatherSet_Temp.Text" xml:space="preserve">
     <value>Temperatura actual</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="checkBox_WeatherSet_MaxMinTemp.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 25</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 17</value>
-  </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Text" xml:space="preserve">
-    <value>Temperatura máxima</value>
-  </data>
   <data name="label21.Text" xml:space="preserve">
     <value>Temperatura mínima</value>
   </data>
@@ -254,9 +244,6 @@
   <data name="groupBox_Air.Text" xml:space="preserve">
     <value>Tiempo</value>
   </data>
-  <data name="groupBox_Activity.Text" xml:space="preserve">
-    <value>Actividad</value>
-  </data>
   <data name="checkBox_DND_Set.Text" xml:space="preserve">
     <value>DND</value>
   </data>
@@ -275,6 +262,7 @@
   <data name="label13.Text" xml:space="preserve">
     <value>Quema de grasa</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -343,6 +331,9 @@
   </data>
   <data name="label01.Text" xml:space="preserve">
     <value>Fecha</value>
+  </data>
+  <data name="groupBox_Activity.Text" xml:space="preserve">
+    <value>Actividad</value>
   </data>
   <data name="button_Set.Text" xml:space="preserve">
     <value>Valores</value>

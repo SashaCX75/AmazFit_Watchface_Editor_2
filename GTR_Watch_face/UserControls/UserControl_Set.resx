@@ -117,19 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;groupBox_Activity.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="comboBox_WeatherSet_Icon.Items11" xml:space="preserve">
     <value>Песчаная буря</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_WindForce.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;button_Set.Name" xml:space="preserve">
+    <value>button_Set</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label19.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
   <data name="label08.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -142,6 +136,9 @@
   </data>
   <data name="&gt;&gt;label05.Name" xml:space="preserve">
     <value>label05</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeatherSet_MinTemp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
     <value>Высота</value>
@@ -162,11 +159,11 @@
   <data name="label03.Text" xml:space="preserve">
     <value>Батарея</value>
   </data>
+  <data name="label02.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 16</value>
+  </data>
   <data name="&gt;&gt;numericUpDown_Stress_Set.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_WeatherSet_MaxMinTemp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityGoal_Set.Name" xml:space="preserve">
     <value>numericUpDown_ActivityGoal_Set</value>
@@ -192,8 +189,8 @@
   <data name="&gt;&gt;label04.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>groupBox_Activity</value>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Goal_Set.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -208,7 +205,7 @@
     <value>83, 104</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_Temp.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;numericUpDown_PAI_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
@@ -225,13 +222,10 @@
   <data name="comboBox_WeatherSet_Icon.Items28" xml:space="preserve">
     <value>Солнечно ночью</value>
   </data>
-  <data name="button_Set.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
     <value>380, 73</value>
   </data>
-  <data name="&gt;&gt;label05.Type" xml:space="preserve">
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDown_PAI_Set.ZOrder" xml:space="preserve">
@@ -241,7 +235,7 @@
     <value>56</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_MaxTemp.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="checkBox_Lock_Set.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -252,8 +246,8 @@
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 28</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Качество воздуха</value>
+  <data name="button_Set.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="numericUp_UVindex_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 104</value>
@@ -285,6 +279,9 @@
   <data name="&gt;&gt;numericUpDown_AirPressure_Set.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
     <value>187, 115</value>
   </data>
@@ -293,12 +290,6 @@
   </data>
   <data name="&gt;&gt;label20.Name" xml:space="preserve">
     <value>label20</value>
-  </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="label05.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="checkBox_Lock_Set.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -330,8 +321,8 @@
   <data name="&gt;&gt;button_Set.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label09.ZOrder" xml:space="preserve">
-    <value>21</value>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_MinTemp.Parent" xml:space="preserve">
     <value>groupBox_Air</value>
@@ -366,9 +357,6 @@
   <data name="&gt;&gt;groupBox_Activity.Name" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
   <data name="numericUpDown_PAI_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 131</value>
   </data>
@@ -377,6 +365,9 @@
   </data>
   <data name="&gt;&gt;checkBox_WeatherSet_Temp.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items26" xml:space="preserve">
+    <value>Облачно ночью</value>
   </data>
   <data name="&gt;&gt;checkBox_DND_Set.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -403,25 +394,19 @@
     <value>13</value>
   </data>
   <data name="&gt;&gt;numericUp_UVindex_Set.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="dateTimePicker_Date_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 20</value>
   </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>УФ индекс</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Stress_Set.Name" xml:space="preserve">
-    <value>numericUpDown_Stress_Set</value>
-  </data>
   <data name="&gt;&gt;numericUpDown_StandUp_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
-  <data name="comboBox_WeatherSet_Icon.Items6" xml:space="preserve">
-    <value>Слабый снег</value>
+  <data name="button_Set.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;numericUpDown_WindForce.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;checkBox_Lock_Set.Name" xml:space="preserve">
     <value>checkBox_Lock_Set</value>
@@ -429,11 +414,11 @@
   <data name="&gt;&gt;dateTimePicker_Date_Set.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label05.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label02.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;numericUpDown_Goal_Set.Parent" xml:space="preserve">
+    <value>groupBox_Activity</value>
   </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
@@ -444,14 +429,11 @@
   <data name="&gt;&gt;label10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;button_Set.Name" xml:space="preserve">
-    <value>button_Set</value>
-  </data>
-  <data name="checkBox_Alarm_Set.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
+  <data name="&gt;&gt;numericUpDown_Stress_Set.Name" xml:space="preserve">
+    <value>numericUpDown_Stress_Set</value>
   </data>
   <data name="&gt;&gt;checkBox_WeatherSet_Temp.Name" xml:space="preserve">
     <value>checkBox_WeatherSet_Temp</value>
@@ -459,8 +441,8 @@
   <data name="numericUpDown_WeatherSet_Temp.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 20</value>
   </data>
-  <data name="numericUpDown_HeartRate_Set.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
+  <data name="&gt;&gt;checkBox_Lock_Set.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label01.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -486,6 +468,9 @@
   <data name="numericUp_UVindex_Set.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Максимальная температура</value>
+  </data>
   <data name="&gt;&gt;numericUpDown_StandUp_Set.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
@@ -495,23 +480,14 @@
   <data name="&gt;&gt;dateTimePicker_Date_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
-  <data name="&gt;&gt;label01.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
   <data name="&gt;&gt;label11.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_Set.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
   </data>
   <data name="&gt;&gt;label17.Name" xml:space="preserve">
     <value>label17</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_MinTemp.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>groupBox_Activity</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Stress_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
@@ -528,14 +504,14 @@
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 13</value>
   </data>
-  <data name="checkBox_Bluetooth_Set.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
+    <value>groupBox_Activity</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Stress_Set.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;comboBox_WeatherSet_Icon.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;label01.ZOrder" xml:space="preserve">
+    <value>29</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FatBurning_Set.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -552,14 +528,14 @@
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 73</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_Altitude_Set.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label07.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
-    <value>groupBox_Air</value>
+  <data name="label05.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Calories_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
@@ -572,6 +548,9 @@
   </data>
   <data name="button_Set.Text" xml:space="preserve">
     <value>Набор параметров</value>
+  </data>
+  <data name="&gt;&gt;comboBox_WeatherSet_Icon.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="numericUpDown_Stress_Set.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -594,8 +573,8 @@
   <data name="numericUpDown_Stress_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>187, 131</value>
   </data>
-  <data name="label08.Text" xml:space="preserve">
-    <value>Цель шагов</value>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
@@ -636,17 +615,14 @@
   <data name="&gt;&gt;numericUpDown_WindForce.Name" xml:space="preserve">
     <value>numericUpDown_WindForce</value>
   </data>
-  <data name="numericUpDown_Battery_Set.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
   </data>
-  <data name="numericUpDown_Humidity_Set.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
+  <data name="&gt;&gt;label09.Parent" xml:space="preserve">
+    <value>groupBox_Activity</value>
   </data>
   <data name="&gt;&gt;numericUpDown_AirPressure_Set.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 52</value>
@@ -672,23 +648,20 @@
   <data name="numericUp_UVindex_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
   </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 17</value>
+  <data name="numericUpDown_Battery_Set.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 32</value>
   </data>
   <data name="&gt;&gt;label03.Name" xml:space="preserve">
     <value>label03</value>
   </data>
   <data name="&gt;&gt;numericUpDown_AirQuality_Set.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>Влажность</value>
+    <value>5</value>
   </data>
   <data name="groupBox_Air.Size" type="System.Drawing.Size, System.Drawing">
     <value>450, 133</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Humidity_Set.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -705,14 +678,14 @@
   <data name="&gt;&gt;numericUpDown_Steps_Set.Name" xml:space="preserve">
     <value>numericUpDown_Steps_Set</value>
   </data>
-  <data name="numericUpDown_FatBurning_Set.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 131</value>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="numericUpDown_AirQuality_Set.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
+  <data name="&gt;&gt;dateTimePicker_Time_Set.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;checkBox_Lock_Set.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
   </data>
   <data name="label16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -741,8 +714,8 @@
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 25</value>
+  <data name="checkBox_Bluetooth_Set.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label02.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -753,29 +726,26 @@
   <data name="numericUpDown_AirPressure_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>387, 104</value>
   </data>
+  <data name="comboBox_WeatherSet_Icon.Items6" xml:space="preserve">
+    <value>Слабый снег</value>
+  </data>
   <data name="&gt;&gt;label18.Name" xml:space="preserve">
     <value>label18</value>
   </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Steps_Set.Parent" xml:space="preserve">
-    <value>groupBox_Activity</value>
+  <data name="numericUpDown_AirQuality_Set.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityGoal_Set.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
-    <value>groupBox_Activity</value>
+  <data name="groupBox_Activity.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="numericUpDown_WeatherSet_MaxTemp.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 24</value>
   </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items12" xml:space="preserve">
-    <value>Мокрый снег</value>
+  <data name="numericUpDown_Battery_Set.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
   </data>
   <data name="&gt;&gt;label09.Name" xml:space="preserve">
     <value>label09</value>
@@ -798,14 +768,11 @@
   <data name="label05.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_Battery_Set.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
   <data name="&gt;&gt;label03.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 13</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Distance_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
@@ -816,8 +783,8 @@
   <data name="&gt;&gt;numericUpDown_ActivityGoal_Set.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;label19.Name" xml:space="preserve">
-    <value>label19</value>
+  <data name="&gt;&gt;numericUpDown_Distance_Set.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label01.Text" xml:space="preserve">
     <value>Дата</value>
@@ -855,14 +822,11 @@
   <data name="label07.Text" xml:space="preserve">
     <value>Шаги</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker_Time_Set.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>groupBox_Air</value>
   </data>
-  <data name="label07.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeatherSet_MinTemp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>groupBox_Activity</value>
   </data>
   <data name="label19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -870,17 +834,14 @@
   <data name="label06.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDown_AirQuality_Set.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
   <data name="&gt;&gt;label08.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label08.Location" type="System.Drawing.Point, System.Drawing">
     <value>348, 65</value>
   </data>
-  <data name="label05.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 65</value>
+  <data name="label03.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 16</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items14" xml:space="preserve">
     <value>Дымка</value>
@@ -900,8 +861,8 @@
   <data name="&gt;&gt;numericUpDown_Battery_Set.Name" xml:space="preserve">
     <value>numericUpDown_Battery_Set</value>
   </data>
-  <data name="numericUpDown_StandUp_Set.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 131</value>
+  <data name="comboBox_WeatherSet_Icon.Items12" xml:space="preserve">
+    <value>Мокрый снег</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>20</value>
@@ -917,9 +878,6 @@
   </data>
   <data name="numericUpDown_FatBurning_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
-  </data>
-  <data name="label07.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 13</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -954,8 +912,8 @@
   <data name="&gt;&gt;comboBox_WeatherSet_Icon.Name" xml:space="preserve">
     <value>comboBox_WeatherSet_Icon</value>
   </data>
-  <data name="checkBox_Bluetooth_Set.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 18</value>
+  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
   </data>
   <data name="label06.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -966,8 +924,8 @@
   <data name="&gt;&gt;numericUpDown_Goal_Set.Name" xml:space="preserve">
     <value>numericUpDown_Goal_Set</value>
   </data>
-  <data name="&gt;&gt;label19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_Temp.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -978,8 +936,8 @@
   <data name="&gt;&gt;checkBox_Bluetooth_Set.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label02.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 16</value>
+  <data name="numericUpDown_FatBurning_Set.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 131</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Активность</value>
@@ -1008,17 +966,17 @@
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="numericUpDown_WeatherSet_MinTemp.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="&gt;&gt;label09.ZOrder" xml:space="preserve">
+    <value>21</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items22" xml:space="preserve">
     <value>Пыльная буря</value>
   </data>
-  <data name="&gt;&gt;label09.Parent" xml:space="preserve">
-    <value>groupBox_Activity</value>
-  </data>
   <data name="label21.Text" xml:space="preserve">
     <value>Минимальная температура</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -1035,14 +993,17 @@
   <data name="label07.Location" type="System.Drawing.Point, System.Drawing">
     <value>231, 65</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_Distance_Set.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;groupBox_Activity.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_WeatherSet_MinTemp.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;checkBox_WeatherSet_Temp.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Altitude_Set.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label08.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1053,20 +1014,26 @@
   <data name="label06.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 65</value>
   </data>
-  <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Качество воздуха</value>
   </data>
-  <data name="label14.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 13</value>
   </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Set.Parent" xml:space="preserve">
+    <value>groupBox_Activity</value>
+  </data>
   <data name="comboBox_WeatherSet_Icon.Items25" xml:space="preserve">
     <value>Неизвестная погода</value>
   </data>
-  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="label05.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 65</value>
   </data>
   <data name="numericUpDown_Altitude_Set.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
@@ -1077,11 +1044,14 @@
   <data name="&gt;&gt;label04.Name" xml:space="preserve">
     <value>label04</value>
   </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
   <data name="numericUpDown_Calories_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>358, 32</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_Distance_Set.Name" xml:space="preserve">
-    <value>numericUpDown_Distance_Set</value>
+  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
   </data>
   <data name="&gt;&gt;groupBox_Air.Name" xml:space="preserve">
     <value>groupBox_Air</value>
@@ -1097,6 +1067,9 @@
   </data>
   <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>
+  </data>
+  <data name="label08.Text" xml:space="preserve">
+    <value>Цель шагов</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -1116,8 +1089,11 @@
   <data name="&gt;&gt;groupBox_Air.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Text" xml:space="preserve">
-    <value>Максимальная температура</value>
+  <data name="numericUpDown_Humidity_Set.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="checkBox_Bluetooth_Set.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
   </data>
   <data name="&gt;&gt;groupBox_Air.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1127,6 +1103,9 @@
   </data>
   <data name="checkBox_DND_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 34</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="numericUpDown_WeatherSet_MinTemp.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 50</value>
@@ -1152,23 +1131,14 @@
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
-  <data name="&gt;&gt;label07.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Влажность</value>
   </data>
-  <data name="comboBox_WeatherSet_Icon.Items26" xml:space="preserve">
-    <value>Облачно ночью</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Steps_Set.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label02.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;numericUpDown_AirPressure_Set.Name" xml:space="preserve">
     <value>numericUpDown_AirPressure_Set</value>
-  </data>
-  <data name="label04.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 16</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 22</value>
@@ -1179,11 +1149,14 @@
   <data name="label04.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>groupBox_Air</value>
+  </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="checkBox_DND_Set.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="checkBox_Alarm_Set.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
   </data>
   <data name="checkBox_Lock_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 18</value>
@@ -1215,6 +1188,12 @@
   <data name="checkBox_DND_Set.Text" xml:space="preserve">
     <value>Не беспокоить</value>
   </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
   <data name="label08.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
@@ -1227,20 +1206,20 @@
   <data name="label03.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 430</value>
+  </data>
   <data name="groupBox_Air.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 215</value>
   </data>
   <data name="&gt;&gt;checkBox_Bluetooth_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
-  <data name="numericUpDown_HeartRate_Set.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
+  <data name="numericUpDown_StandUp_Set.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 131</value>
   </data>
   <data name="numericUpDown_Steps_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
-  </data>
-  <data name="numericUpDown_Stress_Set.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
@@ -1251,11 +1230,14 @@
   <data name="numericUpDown_ActivityGoal_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
   </data>
-  <data name="&gt;&gt;checkBox_Alarm_Set.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label07.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label19.Parent" xml:space="preserve">
     <value>groupBox_Air</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AirQuality_Set.Name" xml:space="preserve">
+    <value>numericUpDown_AirQuality_Set</value>
   </data>
   <data name="label04.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1265,9 +1247,6 @@
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl_Set</value>
-  </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
   </data>
   <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1302,14 +1281,14 @@
   <data name="&gt;&gt;checkBox_Alarm_Set.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_AirQuality_Set.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
   </data>
-  <data name="&gt;&gt;checkBox_Alarm_Set.Name" xml:space="preserve">
-    <value>checkBox_Alarm_Set</value>
+  <data name="label15.Text" xml:space="preserve">
+    <value>УФ индекс</value>
   </data>
-  <data name="checkBox_WeatherSet_MaxMinTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 25</value>
+  <data name="numericUpDown_Stress_Set.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
   </data>
   <data name="label07.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1320,20 +1299,17 @@
   <data name="checkBox_Bluetooth_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 162</value>
   </data>
-  <data name="groupBox_Activity.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="&gt;&gt;numericUpDown_HeartRate_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
   </data>
   <data name="checkBox_WeatherSet_Temp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDown_Battery_Set.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 32</value>
+  <data name="&gt;&gt;numericUpDown_Altitude_Set.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1344,8 +1320,11 @@
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="label03.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 16</value>
+  <data name="&gt;&gt;numericUpDown_Steps_Set.Parent" xml:space="preserve">
+    <value>groupBox_Activity</value>
+  </data>
+  <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Разминка</value>
@@ -1380,8 +1359,8 @@
   <data name="&gt;&gt;numericUpDown_ActivityGoal_Set.Parent" xml:space="preserve">
     <value>groupBox_Activity</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 430</value>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 13</value>
   </data>
   <data name="label01.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1389,8 +1368,8 @@
   <data name="label02.Text" xml:space="preserve">
     <value>Время</value>
   </data>
-  <data name="&gt;&gt;numericUp_UVindex_Set.Name" xml:space="preserve">
-    <value>numericUp_UVindex_Set</value>
+  <data name="&gt;&gt;numericUpDown_Steps_Set.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label20.TabIndex" type="System.Int32, mscorlib">
     <value>87</value>
@@ -1419,6 +1398,9 @@
   <data name="&gt;&gt;label20.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;numericUp_UVindex_Set.Name" xml:space="preserve">
+    <value>numericUp_UVindex_Set</value>
+  </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 73</value>
   </data>
@@ -1428,8 +1410,8 @@
   <data name="numericUpDown_FatBurning_Set.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_AirQuality_Set.Name" xml:space="preserve">
-    <value>numericUpDown_AirQuality_Set</value>
+  <data name="&gt;&gt;numericUpDown_AirQuality_Set.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label03.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1437,23 +1419,23 @@
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
     <value>78, 74</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_HeartRate_Set.Name" xml:space="preserve">
-    <value>numericUpDown_HeartRate_Set</value>
-  </data>
   <data name="&gt;&gt;numericUpDown_Calories_Set.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="label21.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_Goal_Set.Parent" xml:space="preserve">
-    <value>groupBox_Activity</value>
+  <data name="numericUpDown_HeartRate_Set.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
   </data>
   <data name="&gt;&gt;checkBox_DND_Set.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label04.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 16</value>
+  </data>
+  <data name="numericUpDown_HeartRate_Set.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
   </data>
   <data name="&gt;&gt;label21.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1461,14 +1443,14 @@
   <data name="&gt;&gt;numericUp_UVindex_Set.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox_WeatherSet_MaxMinTemp.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <data name="label02.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
   <data name="dateTimePicker_Time_Set.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Alarm_Set.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Humidity_Set.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1485,8 +1467,11 @@
   <data name="button_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="comboBox_WeatherSet_Icon.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;numericUpDown_Distance_Set.Name" xml:space="preserve">
+    <value>numericUpDown_Distance_Set</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_HeartRate_Set.Name" xml:space="preserve">
+    <value>numericUpDown_HeartRate_Set</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_Temp.Name" xml:space="preserve">
     <value>numericUpDown_WeatherSet_Temp</value>
@@ -1502,6 +1487,9 @@
   </data>
   <data name="numericUpDown_AirPressure_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
+  </data>
+  <data name="label07.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
   </data>
   <data name="checkBox_Alarm_Set.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
@@ -1521,11 +1509,17 @@
   <data name="numericUpDown_PAI_Set.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_PAI_Set.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 26</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 28</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Alarm_Set.Name" xml:space="preserve">
+    <value>checkBox_Alarm_Set</value>
   </data>
   <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1539,11 +1533,17 @@
   <data name="&gt;&gt;groupBox_Air.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox_WeatherSet_MaxMinTemp.Parent" xml:space="preserve">
-    <value>groupBox_Air</value>
-  </data>
   <data name="button_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>450, 23</value>
+  </data>
+  <data name="checkBox_DND_Set.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_PAI_Set.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 73</value>
@@ -1554,6 +1554,9 @@
   <data name="label14.Text" xml:space="preserve">
     <value>Иконка погоды</value>
   </data>
+  <data name="numericUpDown_AirQuality_Set.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 28</value>
   </data>
@@ -1563,8 +1566,8 @@
   <data name="label09.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 115</value>
   </data>
-  <data name="&gt;&gt;checkBox_WeatherSet_MaxMinTemp.Name" xml:space="preserve">
-    <value>checkBox_WeatherSet_MaxMinTemp</value>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="numericUpDown_PAI_Set.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>

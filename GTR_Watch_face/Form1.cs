@@ -144,10 +144,20 @@ namespace AmazFit_Watchface_2
 
 #if !DEBUG
 
-            tabControl_SystemWeather.TabPages[4].Parent = null;
+            //tabControl_SystemWeather.TabPages[4].Parent = null;
+            tabControl_SystemActivity.TabPages["tabPage_Stress"].Parent = null;
+            tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
+            tabControl_SystemWeather.TabPages["tabPage_AirQuality"].Parent = null;
+            tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
+            tabControl_SystemWeather.TabPages["tabPage_Altitude"].Parent = null;
 
 
-            tabControl_SystemWeather_AOD.TabPages[4].Parent = null;
+            //tabControl_SystemWeather_AOD.TabPages[4].Parent = null;
+            tabControl_SystemActivity_AOD.TabPages["tabPage_Stress_AOD"].Parent = null;
+            tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages["tabPage_AirQuality_AOD"].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages["tabPage_Altitude_AOD"].Parent = null;
 
 #endif
 
@@ -2001,33 +2011,52 @@ namespace AmazFit_Watchface_2
             int Steps = Activity["Steps"];
             int StepsGoal = Activity["StepsGoal"];
 
-            int PAI = Activity["PAI"];
-            int StandUp = Activity["StandUp"];
-            int Stress = Activity["Stress"];
-            int ActivityGoal = Activity["ActivityGoal"];
-            int FatBurning = Activity["FatBurning"];
+            int PAI;
+            Activity.TryGetValue("PAI", out PAI);
+            int StandUp;
+            Activity.TryGetValue("StandUp", out StandUp);
+            int Stress;
+            Activity.TryGetValue("Stress", out Stress);
+            int ActivityGoal;
+            Activity.TryGetValue("ActivityGoal", out ActivityGoal);
+            int FatBurning;
+            Activity.TryGetValue("FatBurning", out FatBurning);
 
 
-            int Weather_Icon = Air["Weather_Icon"];
-            int Temperature = Air["Temperature"];
-            int TemperatureMax = Air["TemperatureMax"];
-            int TemperatureMin = Air["TemperatureMin"];
+            int Weather_Icon;
+            Air.TryGetValue("Weather_Icon", out Weather_Icon);
+            int Temperature;
+            Air.TryGetValue("Temperature", out Temperature);
+            int TemperatureMax;
+            Air.TryGetValue("TemperatureMax", out TemperatureMax);
+            int TemperatureMin;
+            Air.TryGetValue("TemperatureMin", out TemperatureMin);
 
-            int UVindex = Air["UVindex"];
-            int AirQuality = Air["AirQuality"];
-            int Humidity = Air["Humidity"];
-            int WindForce = Air["WindForce"];
-            int Altitude = Air["Altitude"];
-            int AirPressure = Air["AirPressure"];
+            int UVindex;
+            Air.TryGetValue("UVindex", out UVindex);
+            int AirQuality;
+            Air.TryGetValue("AirQuality", out AirQuality);
+            int Humidity;
+            Air.TryGetValue("Humidity", out Humidity);
+            int WindForce;
+            Air.TryGetValue("WindForce", out WindForce);
+            int Altitude;
+            Air.TryGetValue("Altitude", out Altitude);
+            int AirPressure;
+            Air.TryGetValue("AirPressure", out AirPressure);
 
 
-            bool Bluetooth = checkValue["Bluetooth"];
-            bool Alarm = checkValue["Alarm"];
-            bool Lock = checkValue["Lock"];
-            bool DND = checkValue["DND"];
+            bool Bluetooth;
+            checkValue.TryGetValue("Bluetooth", out Bluetooth);
+            bool Alarm;
+            checkValue.TryGetValue("Alarm", out Alarm);
+            bool Lock;
+            checkValue.TryGetValue("Lock", out Lock);
+            bool DND;
+            checkValue.TryGetValue("DND", out DND);
 
-            bool ShowTemperature = checkValue["ShowTemperature"];
-            bool ShowTemperatureMaxMin = checkValue["ShowTemperatureMaxMin"];
+            bool ShowTemperature;
+            checkValue.TryGetValue("ShowTemperature", out ShowTemperature);
 
             Watch_Face_Preview_Set.Date.Year = Year;
             Watch_Face_Preview_Set.Date.Month = Month;
@@ -2064,7 +2093,6 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Weather.Icon = Weather_Icon;
 
             Watch_Face_Preview_Set.Weather.showTemperature = ShowTemperature;
-            Watch_Face_Preview_Set.Weather.showTemperatureMaxMin = ShowTemperatureMaxMin;
 
             Watch_Face_Preview_Set.Weather.UVindex = UVindex;
             Watch_Face_Preview_Set.Weather.AirQuality = AirQuality;
@@ -2505,7 +2533,6 @@ namespace AmazFit_Watchface_2
                     checkValue.Add("DND", ps.DoNotDisturb);
 
                     checkValue.Add("ShowTemperature", ps.ShowTemperature);
-                    checkValue.Add("ShowTemperatureMaxMin", ps.ShowTemperatureMaxMin);
 
                     switch (i)
                     {
@@ -2706,7 +2733,6 @@ namespace AmazFit_Watchface_2
                     ps.DoNotDisturb = checkValue["DND"];
 
                     ps.ShowTemperature = checkValue["ShowTemperature"];
-                    ps.ShowTemperatureMaxMin = checkValue["ShowTemperatureMaxMin"];
 
                     if (ps.Calories != 1234)
                     {

@@ -54,6 +54,7 @@ namespace AmazFit_Watchface_2
             this.checkBox_addZero = new System.Windows.Forms.CheckBox();
             this.comboBox_imageError = new System.Windows.Forms.ComboBox();
             this.comboBox_imageDecimalPoint = new System.Windows.Forms.ComboBox();
+            this.checkBox_follow = new System.Windows.Forms.CheckBox();
             this.label02 = new System.Windows.Forms.Label();
             this.label08 = new System.Windows.Forms.Label();
             this.label04 = new System.Windows.Forms.Label();
@@ -101,6 +102,7 @@ namespace AmazFit_Watchface_2
             this.panel_text.Controls.Add(this.checkBox_addZero);
             this.panel_text.Controls.Add(this.comboBox_imageError);
             this.panel_text.Controls.Add(this.comboBox_imageDecimalPoint);
+            this.panel_text.Controls.Add(this.checkBox_follow);
             this.panel_text.Controls.Add(this.label02);
             this.panel_text.Controls.Add(this.label08);
             this.panel_text.Controls.Add(this.label04);
@@ -356,6 +358,14 @@ namespace AmazFit_Watchface_2
             this.comboBox_imageDecimalPoint.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
             this.comboBox_imageDecimalPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
+            // checkBox_follow
+            // 
+            resources.ApplyResources(this.checkBox_follow, "checkBox_follow");
+            this.checkBox_follow.Name = "checkBox_follow";
+            this.checkBox_follow.UseVisualStyleBackColor = true;
+            this.checkBox_follow.CheckedChanged += new System.EventHandler(this.checkBox_follow_CheckedChanged);
+            this.checkBox_follow.Click += new System.EventHandler(this.checkBox_Click);
+            // 
             // label02
             // 
             resources.ApplyResources(this.label02, "label02");
@@ -484,7 +494,8 @@ namespace AmazFit_Watchface_2
         protected System.Windows.Forms.Button button_text;
         internal System.Windows.Forms.NumericUpDown numericUpDown_imageX;
         internal System.Windows.Forms.NumericUpDown numericUpDown_imageY;
-        public System.Windows.Forms.CheckBox checkBox_addZero;
         internal System.Windows.Forms.ComboBox comboBox_imageError;
+        public System.Windows.Forms.CheckBox checkBox_follow;
+        public System.Windows.Forms.CheckBox checkBox_addZero;
     }
 }

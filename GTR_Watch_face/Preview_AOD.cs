@@ -1711,13 +1711,14 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDown_spacing = userPanel_text_weather_Current.numericUpDown_spacing;
                     //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
                     //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+                    CheckBox checkBox_addZero = userPanel_text_weather_Max.checkBox_addZero;
 
                     int imageIndex = userPanel_text_weather_Current.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int alignment = userPanel_text_weather_Current.comboBoxGetSelectedIndexAlignment();
-                    //bool addZero = checkBox_add_zero.Checked;
+                    bool addZero = checkBox_addZero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.Temperature;
                     int separator_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageError();
@@ -1725,7 +1726,7 @@ namespace AmazFit_Watchface_2
                     if (!Watch_Face_Preview_Set.Weather.TemperatureNoData)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else
                     {
@@ -1760,6 +1761,7 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDown_spacing = userPanel_text_weather_Min.numericUpDown_spacing;
                     //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
                     //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+                    CheckBox checkBox_addZero = userPanel_text_weather_Max.checkBox_addZero;
 
                     int imageIndex = userPanel_text_weather_Min.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
@@ -1767,7 +1769,7 @@ namespace AmazFit_Watchface_2
                     Temperature_offsetY = y;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int alignment = userPanel_text_weather_Min.comboBoxGetSelectedIndexAlignment();
-                    //bool addZero = checkBox_add_zero.Checked;
+                    bool addZero = checkBox_addZero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.TemperatureMin;
                     int separator_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageError();
@@ -1775,7 +1777,7 @@ namespace AmazFit_Watchface_2
                     if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else
                     {
@@ -1808,14 +1810,15 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDown_spacing = userPanel_text_weather_Max.numericUpDown_spacing;
                     //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
                     //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
-                    CheckBox checkBox_follow = userPanel_text_weather_Max.checkBox_addZero;
+                    CheckBox checkBox_addZero = userPanel_text_weather_Max.checkBox_addZero;
+                    CheckBox checkBox_follow = userPanel_text_weather_Max.checkBox_follow;
 
                     int imageIndex = userPanel_text_weather_Max.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int alignment = userPanel_text_weather_Max.comboBoxGetSelectedIndexAlignment();
-                    //bool addZero = checkBox_add_zero.Checked;
+                    bool addZero = checkBox_addZero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.TemperatureMax;
                     int separator_index = userPanel_text_weather_Max.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Max.comboBoxGetSelectedIndexImageError();
@@ -1831,7 +1834,7 @@ namespace AmazFit_Watchface_2
                     if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else
                     {

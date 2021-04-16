@@ -474,7 +474,7 @@ namespace AmazFit_Watchface_2
                     int value = Watch_Face_Preview_Set.Battery;
                     int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
                     Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, value, addZero, 5, separator_index, BBorder);
+                        spasing, alignment, value, addZero, 3, separator_index, BBorder);
 
                     if (unit >= 0)
                     {
@@ -1152,8 +1152,8 @@ namespace AmazFit_Watchface_2
                     float endAngle = (float)(numericUpDown_endAngle.Value);
                     //TODO определить пределы изменения пульса
                     //float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 200f;
-                    float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 181f;
-                    float angle = startAngle + position * (endAngle - startAngle);
+                    float position = (Watch_Face_Preview_Set.Activity.HeartRate) / 180f;
+                    float angle = (int)(startAngle + position * (endAngle - startAngle));
                     if (position < 0) angle = startAngle;
                     if (position > 1) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
@@ -1753,13 +1753,14 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDown_spacing = userPanel_text_weather_Current.numericUpDown_spacing;
                     //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
                     //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+                    CheckBox checkBox_addZero = userPanel_text_weather_Max.checkBox_addZero;
 
                     int imageIndex = userPanel_text_weather_Current.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int alignment = userPanel_text_weather_Current.comboBoxGetSelectedIndexAlignment();
-                    //bool addZero = checkBox_add_zero.Checked;
+                    bool addZero = checkBox_addZero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.Temperature;
                     int separator_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageError();
@@ -1767,7 +1768,7 @@ namespace AmazFit_Watchface_2
                     if (!Watch_Face_Preview_Set.Weather.TemperatureNoData)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder); 
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder); 
                     }
                     else
                     {
@@ -1802,6 +1803,7 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDown_spacing = userPanel_text_weather_Min.numericUpDown_spacing;
                     //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
                     //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+                    CheckBox checkBox_addZero = userPanel_text_weather_Max.checkBox_addZero;
 
                     int imageIndex = userPanel_text_weather_Min.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
@@ -1809,7 +1811,7 @@ namespace AmazFit_Watchface_2
                     Temperature_offsetY = y;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int alignment = userPanel_text_weather_Min.comboBoxGetSelectedIndexAlignment();
-                    //bool addZero = checkBox_add_zero.Checked;
+                    bool addZero = checkBox_addZero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.TemperatureMin;
                     int separator_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageError();
@@ -1817,7 +1819,7 @@ namespace AmazFit_Watchface_2
                     if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else
                     {
@@ -1850,14 +1852,15 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDown_spacing = userPanel_text_weather_Max.numericUpDown_spacing;
                     //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
                     //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
-                    CheckBox checkBox_follow = userPanel_text_weather_Max.checkBox_addZero;
+                    CheckBox checkBox_addZero = userPanel_text_weather_Max.checkBox_addZero;
+                    CheckBox checkBox_follow = userPanel_text_weather_Max.checkBox_follow;
 
                     int imageIndex = userPanel_text_weather_Max.comboBoxGetSelectedIndexImage();
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int alignment = userPanel_text_weather_Max.comboBoxGetSelectedIndexAlignment();
-                    //bool addZero = checkBox_add_zero.Checked;
+                    bool addZero = checkBox_addZero.Checked;
                     int value = Watch_Face_Preview_Set.Weather.TemperatureMax;
                     int separator_index = userPanel_text_weather_Max.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Max.comboBoxGetSelectedIndexImageError();
@@ -1873,7 +1876,7 @@ namespace AmazFit_Watchface_2
                     if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else
                     {
@@ -4831,6 +4834,7 @@ namespace AmazFit_Watchface_2
                     i = image_index + _number;
                     if (i < ListImagesFullName.Count)
                     {
+                        string s = ListImagesFullName[i];
                         src = OpenFileStream(ListImagesFullName[i]);
                         graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + src.Width + spacing;
@@ -5032,11 +5036,12 @@ namespace AmazFit_Watchface_2
         /// <param name="spacing">Величина отступа</param>
         /// <param name="alignment">Выравнивание</param>
         /// <param name="value">Отображаемая величина</param>
+        /// <param name="addZero">Отображать начальные нули</param>
         /// <param name="image_minus_index">Символ "-"</param>
         /// <param name="separator_index">Символ разделителя (единиц измерения)</param>
         /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
         private int Draw_weather_text(Graphics graphics, int image_index, int x, int y, int spacing,
-            int alignment, int value, int image_minus_index, int separator_index, bool BBorder)
+            int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder)
         {
             int result = 0;
             Logger.WriteLine("* Draw_weather_text");
@@ -5044,14 +5049,35 @@ namespace AmazFit_Watchface_2
             int _number;
             int i;
             string value_S = value.ToString();
-            //if (addZero)
-            //{
-            //    while (value_S.Length < value_lenght)
-            //    {
-            //        value_S = "0" + value_S;
-            //    }
-            //}
+            if (addZero)
+            {
+                //while (value_S.Length < value_lenght)
+                while (value_S.Length < 2)
+                {
+                    value_S = "0" + value_S;
+                }
+            }
             char[] CH = value_S.ToCharArray();
+
+            src = OpenFileStream(ListImagesFullName[image_index]);
+            int widthD = src.Width;
+            int height = src.Height;
+            int widthM = 0;
+            int widthCF = 0;
+            if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[image_minus_index]);
+                widthM = src.Width;
+            }
+            if (separator_index >= 0 && separator_index < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[separator_index]);
+                widthCF = src.Width;
+            }
+
+            int DateLenght = widthD * 3 + widthM + widthCF +1;
+            if (spacing > 0) DateLenght = DateLenght + spacing * 4;
+
             int DateLenghtReal = 0;
             Logger.WriteLine("DateLenght");
             foreach (char ch in CH)
@@ -5072,28 +5098,26 @@ namespace AmazFit_Watchface_2
                 {
                     if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
                     {
-                        src = OpenFileStream(ListImagesFullName[image_minus_index]);
-                        DateLenghtReal = DateLenghtReal + src.Width + spacing;
-                        //src.Dispose(); 
+                        DateLenghtReal = DateLenghtReal + widthM + spacing;
                     }
                 }
+            }
+            if (separator_index >= 0 && separator_index < ListImagesFullName.Count)
+            {
+                DateLenghtReal = DateLenghtReal + widthCF + spacing;
             }
 
             DateLenghtReal = DateLenghtReal - spacing;
 
-            src = OpenFileStream(ListImagesFullName[image_index]);
-            int width = src.Width;
-            int height = src.Height;
-            int DateLenght = width * 3;
-            if (spacing > 0) DateLenght = DateLenght + spacing * 2;
-            if (radioButton_GTS2.Checked)
-            {
-                if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
-                {
-                    src = OpenFileStream(ListImagesFullName[image_minus_index]);
-                    DateLenght = DateLenght + src.Width + Math.Abs(spacing);
-                } 
-            }
+            
+            //if (radioButton_GTS2.Checked)
+            //{
+            //    if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
+            //    {
+            //        src = OpenFileStream(ListImagesFullName[image_minus_index]);
+            //        DateLenght = DateLenght + src.Width + Math.Abs(spacing);
+            //    } 
+            //}
 
             int PointX = 0;
             int PointY = y;

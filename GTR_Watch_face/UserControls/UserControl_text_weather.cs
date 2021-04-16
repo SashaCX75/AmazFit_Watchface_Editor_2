@@ -15,26 +15,6 @@ namespace AmazFit_Watchface_2
             InitializeComponent();
         }
 
-        private void checkBox_addZero_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = !checkBox_addZero.Checked;
-            label02.Enabled = b;
-            label1084.Enabled = b;
-            label1085.Enabled = b;
-            numericUpDown_imageX.Enabled = b;
-            numericUpDown_imageY.Enabled = b;
-        }
-
-        protected override void checkBox_Use_CheckedChanged(object sender, EventArgs e)
-        {
-            base.checkBox_Use_CheckedChanged(sender, e);
-            bool b = !checkBox_addZero.Checked;
-            label02.Enabled = b;
-            label1084.Enabled = b;
-            label1085.Enabled = b;
-            numericUpDown_imageX.Enabled = b;
-            numericUpDown_imageY.Enabled = b;
-        }
 
         /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
         internal int comboBoxGetSelectedIndexImageError()

@@ -652,6 +652,36 @@
   <data name="&gt;&gt;comboBox_imageDecimalPoint.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="checkBox_follow.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkBox_follow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_follow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 151</value>
+  </data>
+  <data name="checkBox_follow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 30</value>
+  </data>
+  <data name="checkBox_follow.TabIndex" type="System.Int32, mscorlib">
+    <value>151</value>
+  </data>
+  <data name="checkBox_follow.Text" xml:space="preserve">
+    <value>Следовать за</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Name" xml:space="preserve">
+    <value>checkBox_follow</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="label02.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -686,7 +716,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="label08.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -722,7 +752,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="label04.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -758,7 +788,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label04.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="label01.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -791,7 +821,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label01.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label05.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -827,7 +857,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label05.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="label09.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -860,7 +890,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label09.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="label03.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -896,7 +926,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label03.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="label1083.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -929,7 +959,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label1083.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="label1084.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -962,7 +992,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label1084.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="label1085.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -995,7 +1025,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label1085.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="label1086.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1028,7 +1058,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label1086.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="label06.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1064,7 +1094,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="label07.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1100,7 +1130,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label07.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="button_Copy_text.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1127,7 +1157,7 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;button_Copy_text.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="panel_text.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

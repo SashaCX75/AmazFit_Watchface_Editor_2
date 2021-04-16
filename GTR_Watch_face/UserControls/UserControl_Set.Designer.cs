@@ -31,6 +31,7 @@ namespace AmazFit_Watchface_2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Set));
             this.groupBox_Air = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.numericUpDown_AirPressure_Set = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Altitude_Set = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_WindForce = new System.Windows.Forms.NumericUpDown();
@@ -42,7 +43,6 @@ namespace AmazFit_Watchface_2
             this.comboBox_WeatherSet_Icon = new System.Windows.Forms.ComboBox();
             this.numericUpDown_WeatherSet_MaxTemp = new System.Windows.Forms.NumericUpDown();
             this.checkBox_WeatherSet_Temp = new System.Windows.Forms.CheckBox();
-            this.checkBox_WeatherSet_MaxMinTemp = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -110,6 +110,7 @@ namespace AmazFit_Watchface_2
             // groupBox_Air
             // 
             resources.ApplyResources(this.groupBox_Air, "groupBox_Air");
+            this.groupBox_Air.Controls.Add(this.label22);
             this.groupBox_Air.Controls.Add(this.numericUpDown_AirPressure_Set);
             this.groupBox_Air.Controls.Add(this.numericUpDown_Altitude_Set);
             this.groupBox_Air.Controls.Add(this.numericUpDown_WindForce);
@@ -121,7 +122,6 @@ namespace AmazFit_Watchface_2
             this.groupBox_Air.Controls.Add(this.comboBox_WeatherSet_Icon);
             this.groupBox_Air.Controls.Add(this.numericUpDown_WeatherSet_MaxTemp);
             this.groupBox_Air.Controls.Add(this.checkBox_WeatherSet_Temp);
-            this.groupBox_Air.Controls.Add(this.checkBox_WeatherSet_MaxMinTemp);
             this.groupBox_Air.Controls.Add(this.label21);
             this.groupBox_Air.Controls.Add(this.label20);
             this.groupBox_Air.Controls.Add(this.label19);
@@ -133,6 +133,11 @@ namespace AmazFit_Watchface_2
             this.groupBox_Air.Name = "groupBox_Air";
             this.groupBox_Air.TabStop = false;
             this.groupBox_Air.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
             // 
             // numericUpDown_AirPressure_Set
             // 
@@ -331,16 +336,6 @@ namespace AmazFit_Watchface_2
             this.checkBox_WeatherSet_Temp.UseVisualStyleBackColor = true;
             this.checkBox_WeatherSet_Temp.CheckedChanged += new System.EventHandler(this.checkBox_WeatherSet_Temp_CheckedChanged);
             this.checkBox_WeatherSet_Temp.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // checkBox_WeatherSet_MaxMinTemp
-            // 
-            resources.ApplyResources(this.checkBox_WeatherSet_MaxMinTemp, "checkBox_WeatherSet_MaxMinTemp");
-            this.checkBox_WeatherSet_MaxMinTemp.Checked = true;
-            this.checkBox_WeatherSet_MaxMinTemp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_WeatherSet_MaxMinTemp.Name = "checkBox_WeatherSet_MaxMinTemp";
-            this.checkBox_WeatherSet_MaxMinTemp.UseVisualStyleBackColor = true;
-            this.checkBox_WeatherSet_MaxMinTemp.CheckedChanged += new System.EventHandler(this.checkBox_WeatherSet_MaxMinTemp_CheckedChanged);
-            this.checkBox_WeatherSet_MaxMinTemp.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // label21
             // 
@@ -784,6 +779,6 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_Temp;
         public System.Windows.Forms.DateTimePicker dateTimePicker_Date_Set;
         private System.Windows.Forms.CheckBox checkBox_WeatherSet_Temp;
-        private System.Windows.Forms.CheckBox checkBox_WeatherSet_MaxMinTemp;
+        private System.Windows.Forms.Label label22;
     }
 }
