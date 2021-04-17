@@ -4400,7 +4400,7 @@ namespace AmazFit_Watchface_2
                 int length1 = length + width;
                 if (lineCap == 0)
                 {
-                    x1 = x;
+                    x1 = x-1;
                     length1 = length;
                 }
                 int position1 = (int)Math.Round(length1 * position);
@@ -4508,7 +4508,7 @@ namespace AmazFit_Watchface_2
                 if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
                 {
                     src = OpenFileStream(ListImagesFullName[pointerIndex]);
-                    int x3 = x2 - width / 2;
+                    int x3 = x2 - width / 2+1;
                     graphics.DrawImage(src, new Rectangle(x3, y1 - src.Height/2, src.Width, src.Height));
                 }
 
@@ -4529,7 +4529,7 @@ namespace AmazFit_Watchface_2
                 int length1 = length + width;
                 if (lineCap == 1 || lineCap == 180)
                 {
-                    x1 = x;
+                    x1 = x-1;
                     length1 = length;
                 }
                 int position1 = (int)Math.Round(length1 * position);
@@ -4556,7 +4556,7 @@ namespace AmazFit_Watchface_2
                 if (pointerIndex >= 0 && pointerIndex < ListImagesFullName.Count)
                 {
                     src = OpenFileStream(ListImagesFullName[pointerIndex]);
-                    int x3 = x2 - src.Width / 2;
+                    int x3 = x2 - src.Width / 2+1;
                     graphics.DrawImage(src, new Rectangle(x3, y, src.Width, src.Height));
                 }
 

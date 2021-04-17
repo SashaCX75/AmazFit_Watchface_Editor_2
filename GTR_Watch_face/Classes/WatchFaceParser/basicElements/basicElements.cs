@@ -85,7 +85,7 @@ namespace AmazFit_Watchface_2
 
     public class ImageCoord
     {
-        /// <summary>Координатыа</summary>
+        /// <summary>Координаты</summary>
         public Coordinates Coordinates { get; set; }
 
         /// <summary>Номер изображения</summary>
