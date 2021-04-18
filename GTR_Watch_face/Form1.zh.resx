@@ -4753,19 +4753,19 @@
     <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Day_hand_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Day_text_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_DOW_hand_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_DOW_image_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Hour_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Hour_hand_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
@@ -4774,19 +4774,19 @@
     <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Minute_hand_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Month_hand_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Month_pictures_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Month_text_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_Copy_Year_text_AOD.Text" xml:space="preserve">
-    <value>复制到新屏幕</value>
+    <value>从主屏幕复制</value>
   </data>
   <data name="button_CreatePreview.Text" xml:space="preserve">
     <value>创建预览</value>
@@ -4801,7 +4801,7 @@
     <value>数字</value>
   </data>
   <data name="button_Day_text_AOD.Text" xml:space="preserve">
-    <value>数值</value>
+    <value>数字</value>
   </data>
   <data name="button_DOW_hand.Text" xml:space="preserve">
     <value>指针</value>
@@ -4810,7 +4810,7 @@
     <value>指针</value>
   </data>
   <data name="button_DOW_image.Text" xml:space="preserve">
-    <value>图像进度</value>
+    <value>图像</value>
   </data>
   <data name="button_DOW_image_AOD.Text" xml:space="preserve">
     <value>图像</value>
@@ -4864,16 +4864,16 @@
     <value>指针</value>
   </data>
   <data name="button_Month_pictures.Text" xml:space="preserve">
-    <value>图像进度</value>
+    <value>图像</value>
   </data>
   <data name="button_Month_pictures_AOD.Text" xml:space="preserve">
-    <value>图像进度</value>
+    <value>图像</value>
   </data>
   <data name="button_Month_text.Text" xml:space="preserve">
     <value>数字</value>
   </data>
   <data name="button_Month_text_AOD.Text" xml:space="preserve">
-    <value>数值</value>
+    <value>数字</value>
   </data>
   <data name="button_OpenDir.Text" xml:space="preserve">
     <value>打开文件夹</value>
@@ -4915,7 +4915,7 @@
     <value>数字</value>
   </data>
   <data name="button_Year_text_AOD.Text" xml:space="preserve">
-    <value>数值</value>
+    <value>数字</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
     <value>解压压缩的bin</value>
@@ -5017,7 +5017,7 @@
     <value>跟随小时</value>
   </data>
   <data name="checkBox_Minute_follow_AOD.Text" xml:space="preserve">
-    <value>跟随分钟</value>
+    <value>跟随时钟</value>
   </data>
   <data name="checkBox_Minute_hand_Use.Text" xml:space="preserve">
     <value>启用</value>
@@ -6073,7 +6073,7 @@
     <value>风力</value>
   </data>
   <data name="tabPage_WindForce_AOD.Text" xml:space="preserve">
-    <value>风</value>
+    <value>风力</value>
   </data>
   <data name="tabPage_Year.Text" xml:space="preserve">
     <value>年</value>
