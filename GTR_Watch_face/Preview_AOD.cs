@@ -1723,7 +1723,7 @@ namespace AmazFit_Watchface_2
                     int separator_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageError();
                     int imageMinus_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
-                    if (!Watch_Face_Preview_Set.Weather.TemperatureNoData)
+                    if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
                                         spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
@@ -1774,7 +1774,7 @@ namespace AmazFit_Watchface_2
                     int separator_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageError();
                     int imageMinus_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
-                    if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
+                    if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
                                         spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
@@ -1831,7 +1831,7 @@ namespace AmazFit_Watchface_2
                         y = Temperature_offsetY;
                     }
 
-                    if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
+                    if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
                                         spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);

@@ -69,6 +69,7 @@ namespace AmazFit_Watchface_2
             // 
             // panel_pictures
             // 
+            resources.ApplyResources(this.panel_pictures, "panel_pictures");
             this.panel_pictures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_pictures.Controls.Add(this.checkBox_pictures_Use);
             this.panel_pictures.Controls.Add(this.comboBox_pictures_image);
@@ -81,7 +82,6 @@ namespace AmazFit_Watchface_2
             this.panel_pictures.Controls.Add(this.label04);
             this.panel_pictures.Controls.Add(this.label05);
             this.panel_pictures.Controls.Add(this.button_Copy_pictures);
-            resources.ApplyResources(this.panel_pictures, "panel_pictures");
             this.panel_pictures.Name = "panel_pictures";
             // 
             // checkBox_pictures_Use
@@ -94,9 +94,9 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_pictures_image
             // 
+            resources.ApplyResources(this.comboBox_pictures_image, "comboBox_pictures_image");
             this.comboBox_pictures_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_pictures_image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_pictures_image, "comboBox_pictures_image");
             this.comboBox_pictures_image.FormattingEnabled = true;
             this.comboBox_pictures_image.Name = "comboBox_pictures_image";
             this.comboBox_pictures_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_DrawItem);
@@ -107,8 +107,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_picturesX
             // 
-            this.numericUpDown_picturesX.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_picturesX, "numericUpDown_picturesX");
+            this.numericUpDown_picturesX.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_picturesX.Maximum = new decimal(new int[] {
             999,
             0,
@@ -125,13 +125,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_X
             // 
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуХToolStripMenuItem,
             this.копироватьToolStripMenuItemX,
             this.вставитьToolStripMenuItemX});
             this.contextMenuStrip_X.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // вставитьКоординатуХToolStripMenuItem
@@ -154,8 +154,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_picturesY
             // 
-            this.numericUpDown_picturesY.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_picturesY, "numericUpDown_picturesY");
+            this.numericUpDown_picturesY.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_picturesY.Maximum = new decimal(new int[] {
             999,
             0,
@@ -172,13 +172,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_Y
             // 
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуYToolStripMenuItem,
             this.копироватьToolStripMenuItemY,
             this.вставитьToolStripMenuItemY});
             this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
             // 
             // вставитьКоординатуYToolStripMenuItem

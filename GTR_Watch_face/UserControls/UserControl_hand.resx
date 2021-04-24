@@ -162,8 +162,8 @@
   <data name="&gt;&gt;label01.Parent" xml:space="preserve">
     <value>panel_hand</value>
   </data>
-  <data name="button_hand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 24</value>
   </data>
   <data name="numericUpDown_handY_centr.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -183,8 +183,8 @@
   <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;button_hand.Name" xml:space="preserve">
-    <value>button_hand</value>
+  <data name="label01.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;numericUpDown_hand_startAngle.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -308,8 +308,8 @@
   <data name="&gt;&gt;comboBox_hand_imageBackground.Name" xml:space="preserve">
     <value>comboBox_hand_imageBackground</value>
   </data>
-  <data name="numericUpDown_hand_startAngle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="button_hand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="&gt;&gt;numericUpDown_hand_startAngle.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -344,11 +344,11 @@
   <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
   </data>
+  <data name="checkBox_hand_Use.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
   <data name="&gt;&gt;numericUpDown_handY_background.ZOrder" xml:space="preserve">
     <value>13</value>
-  </data>
-  <data name="label07.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label04.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -482,8 +482,8 @@
   <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_handX_offset.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
+    <value>panel_hand</value>
   </data>
   <data name="label11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -569,6 +569,9 @@
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;button_hand.Name" xml:space="preserve">
+    <value>button_hand</value>
+  </data>
   <data name="label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomLeft</value>
   </data>
@@ -636,9 +639,6 @@
   </data>
   <data name="label02.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Вставить</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip_X.Name" xml:space="preserve">
     <value>contextMenuStrip_X</value>
@@ -711,8 +711,8 @@
   <data name="&gt;&gt;label13.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вставить координату Х</value>
+  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Вставить</value>
   </data>
   <data name="numericUpDown_handX.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -734,6 +734,9 @@
         uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="&gt;&gt;label04.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label03.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomLeft</value>
   </data>
@@ -752,8 +755,8 @@
   <data name="label08.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 88</value>
   </data>
-  <data name="button_hand.Text" xml:space="preserve">
-    <value>Стрелочный указатель</value>
+  <data name="&gt;&gt;numericUpDown_handX_offset.Name" xml:space="preserve">
+    <value>numericUpDown_handX_offset</value>
   </data>
   <data name="label10.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -824,8 +827,8 @@
   <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 26</value>
   </data>
-  <data name="button_hand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 23</value>
+  <data name="label02.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
   </data>
   <data name="comboBox_hand_imageCentr.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -916,17 +919,11 @@
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>122</value>
   </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>27</value>
+  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
   </data>
   <data name="label05.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 60</value>
-  </data>
-  <data name="&gt;&gt;label08.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label04.Name" xml:space="preserve">
-    <value>label04</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>29</value>
@@ -946,8 +943,8 @@
   <data name="numericUpDown_handX_offset.TabIndex" type="System.Int32, mscorlib">
     <value>115</value>
   </data>
-  <data name="numericUpDown_handX_background.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставить координату Х</value>
   </data>
   <data name="label09.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
@@ -963,6 +960,9 @@
   </data>
   <data name="comboBox_hand_image.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
+  </data>
+  <data name="button_hand.Text" xml:space="preserve">
+    <value>Стрелочный указатель</value>
   </data>
   <data name="&gt;&gt;numericUpDown_handY.Name" xml:space="preserve">
     <value>numericUpDown_handY</value>
@@ -985,9 +985,6 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl_hand</value>
   </data>
-  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
-    <value>panel_hand</value>
-  </data>
   <data name="numericUpDown_handY_background.TabIndex" type="System.Int32, mscorlib">
     <value>127</value>
   </data>
@@ -1000,8 +997,8 @@
   <data name="label17.Text" xml:space="preserve">
     <value>Y:</value>
   </data>
-  <data name="checkBox_hand_Use.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>27</value>
   </data>
   <data name="numericUpDown_handY_offset.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1035,6 +1032,12 @@
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_handX_offset.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="button_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 23</value>
   </data>
   <data name="label11.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1075,7 +1078,7 @@
   <data name="label04.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;label04.Type" xml:space="preserve">
+  <data name="&gt;&gt;label08.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDown_handX_centr.Parent" xml:space="preserve">
@@ -1114,8 +1117,8 @@
   <data name="label15.Text" xml:space="preserve">
     <value>Координаты фонового изображения</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_handX_offset.Name" xml:space="preserve">
-    <value>numericUpDown_handX_offset</value>
+  <data name="label07.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;numericUpDown_hand_startAngle.Parent" xml:space="preserve">
     <value>panel_hand</value>
@@ -1141,8 +1144,8 @@
   <data name="label09.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 24</value>
+  <data name="numericUpDown_handX_background.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
   <data name="&gt;&gt;comboBox_hand_image.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1201,6 +1204,9 @@
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="numericUpDown_hand_startAngle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 151</value>
   </data>
@@ -1233,9 +1239,6 @@
   </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
-  </data>
-  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
   </data>
   <data name="numericUpDown_hand_endAngle.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
@@ -1270,9 +1273,6 @@
   <data name="numericUpDown_handY_offset.Location" type="System.Drawing.Point, System.Drawing">
     <value>369, 58</value>
   </data>
-  <data name="label02.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomLeft</value>
-  </data>
   <data name="label12.Text" xml:space="preserve">
     <value>X:</value>
   </data>
@@ -1306,8 +1306,8 @@
   <data name="label09.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 88</value>
   </data>
-  <data name="label01.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;label04.Name" xml:space="preserve">
+    <value>label04</value>
   </data>
   <data name="&gt;&gt;numericUpDown_handX_offset.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

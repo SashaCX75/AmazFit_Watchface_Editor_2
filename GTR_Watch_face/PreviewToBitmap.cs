@@ -553,14 +553,16 @@ namespace AmazFit_Watchface_2
                     int y = (int)numericUpDownY.Value;
                     int count = (int)numericUpDown_count.Value;
                     //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
-                    int offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
+                    int offSet = (int)((count-1) * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
                     //offSet--;
                     if (offSet < 0) offSet = 0;
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
                     int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+                    if (Watch_Face_Preview_Set.Activity.Steps < Watch_Face_Preview_Set.Activity.StepsGoal / 100f)
+                        offSet = -1;
 
-                    if (imageIndex < ListImagesFullName.Count)
+                    if (offSet >= 0 && imageIndex < ListImagesFullName.Count)
                     {
                         src = OpenFileStream(ListImagesFullName[imageIndex]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1765,12 +1767,12 @@ namespace AmazFit_Watchface_2
                     int separator_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageError();
                     int imageMinus_index = userPanel_text_weather_Current.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
-                    if (!Watch_Face_Preview_Set.Weather.TemperatureNoData)
+                    if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder); 
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1816,7 +1818,7 @@ namespace AmazFit_Watchface_2
                     int separator_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexUnit();
                     int imageError_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageError();
                     int imageMinus_index = userPanel_text_weather_Min.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
-                    if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
+                    if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
                                         spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
@@ -1873,7 +1875,7 @@ namespace AmazFit_Watchface_2
                         y = Temperature_offsetY;
                     }
 
-                    if (!Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData)
+                    if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
                                         spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
@@ -3790,24 +3792,35 @@ namespace AmazFit_Watchface_2
                 centerX = 174;
                 centerY = 221;
             }
+            if (radioButton_TRex_pro.Checked)
+            {
+                centerX = 180;
+                centerY = 180;
+            }
 
-            if ((numericUpDown_Hour_handX.Value != centerX) ||
-                (numericUpDown_Hour_handY.Value != centerY)) AnalogClockOffSet = true;
-            if ((numericUpDown_Minute_handX.Value != centerX) ||
-                (numericUpDown_Minute_handY.Value != centerY)) AnalogClockOffSet = true;
-            if ((numericUpDown_Second_handX.Value != centerX) ||
-                (numericUpDown_Second_handY.Value != centerY)) AnalogClockOffSet = true;
+            int Hour_X = (int)numericUpDown_Hour_handX.Value;
+            int Hour_Y = (int)numericUpDown_Hour_handY.Value;
+            int Minute_X = (int)numericUpDown_Minute_handX.Value;
+            int Minute_Y = (int)numericUpDown_Minute_handY.Value;
+            int Second_X = (int)numericUpDown_Second_handX.Value;
+            int Second_Y = (int)numericUpDown_Second_handY.Value;
+
+            if (Hour_X == 0) Hour_X = centerX;
+            if (Minute_X == 0) Minute_X = centerX;
+            if (Second_X == 0) Second_X = centerX;
+
+            if (Hour_Y == 0) Hour_Y = centerY;
+            if (Minute_Y == 0) Minute_Y = centerY;
+            if (Second_Y == 0) Second_Y = centerY;
+
+            if ((Hour_X != centerX) || (Hour_Y != centerY)) AnalogClockOffSet = true;
+            if ((Minute_X != centerX) || (Minute_Y != centerY)) AnalogClockOffSet = true;
+            if ((Second_X != centerX) || (Second_Y != centerY)) AnalogClockOffSet = true;
 
             if (AnalogClockOffSet)
             {
-                int offsetX_Hour = (int)numericUpDown_Hour_handX.Value;
-                int offsetY_Hour = (int)numericUpDown_Hour_handY.Value;
-                int offsetX_Min = (int)numericUpDown_Minute_handX.Value;
-                int offsetY_Min = (int)numericUpDown_Minute_handY.Value;
-
-
-                if ((offsetX_Hour != centerX || offsetY_Hour != centerY) && 
-                    ((offsetX_Min != centerX || offsetY_Min != centerY))) AnalogClockOffSet = false;
+                if ((Hour_X != centerX || Hour_Y != centerY) && 
+                    ((Minute_X != centerX || Minute_Y != centerY))) AnalogClockOffSet = false;
             }
 
             // секунды
@@ -5076,7 +5089,10 @@ namespace AmazFit_Watchface_2
             }
 
             int DateLenght = widthD * 3 + widthM + widthCF +1;
-            if (spacing > 0) DateLenght = DateLenght + spacing * 4;
+            if (alignment == 2) DateLenght = DateLenght - widthCF;
+            if (spacing > 0) DateLenght = DateLenght + spacing + spacing;
+            if (widthM > 0) DateLenght = DateLenght + spacing;
+            if (widthCF > 0 && alignment != 2) DateLenght = DateLenght + spacing;
 
             int DateLenghtReal = 0;
             Logger.WriteLine("DateLenght");
@@ -5205,6 +5221,21 @@ namespace AmazFit_Watchface_2
         /// <param name="center_marker">Отображать маркер на точке вращения</param>
         public void DrawAnalogClock(Graphics graphics, int x, int y, int offsetX, int offsetY, int image_index, float angle, bool showCentrHend)
         {
+            int centerX = 227;
+            int centerY = 227;
+            if (radioButton_GTS2.Checked)
+            {
+                centerX = 174;
+                centerY = 221;
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                centerX = 180;
+                centerY = 180;
+            }
+            if (x == 0) x = centerX;
+            if (y == 0) y = centerY;
+
             Logger.WriteLine("* DrawAnalogClock");
             Bitmap src = OpenFileStream(ListImagesFullName[image_index]);
             graphics.TranslateTransform(x, y);

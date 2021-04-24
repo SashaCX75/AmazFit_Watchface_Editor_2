@@ -244,6 +244,9 @@
   <data name="groupBox_Air.Text" xml:space="preserve">
     <value>Tiempo</value>
   </data>
+  <data name="groupBox_Activity.Text" xml:space="preserve">
+    <value>Actividad</value>
+  </data>
   <data name="checkBox_DND_Set.Text" xml:space="preserve">
     <value>DND</value>
   </data>
@@ -283,6 +286,15 @@
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>Stress</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 115</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Ponerlo de pie</value>
   </data>
   <data name="label08.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 13</value>
@@ -331,9 +343,6 @@
   </data>
   <data name="label01.Text" xml:space="preserve">
     <value>Fecha</value>
-  </data>
-  <data name="groupBox_Activity.Text" xml:space="preserve">
-    <value>Actividad</value>
   </data>
   <data name="button_Set.Text" xml:space="preserve">
     <value>Valores</value>

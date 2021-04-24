@@ -307,6 +307,20 @@ namespace AmazFit_Watchface_2
             userControl_text_Distance.Collapsed = false;
             userControl_text_Distance_AOD.Collapsed = false;
 
+            tabPage_Background.ImageIndex = 0;
+            tabPage_Time.ImageIndex = 1;
+            tabPage_Date.ImageIndex = 2;
+            tabPage_Activity.ImageIndex = 3;
+            tabPage_Air.ImageIndex = 4;
+            tabPage_System.ImageIndex = 5;
+
+            tabPage_Background_AOD.ImageIndex = 0;
+            tabPage_Time_AOD.ImageIndex = 1;
+            tabPage_Date_AOD.ImageIndex = 2;
+            tabPage_Activity_AOD.ImageIndex = 3;
+            tabPage_Air_AOD.ImageIndex = 4;
+            tabPage_System_AOD.ImageIndex = 5;
+
 
 
             label_version.Text = "v " +
@@ -350,6 +364,7 @@ namespace AmazFit_Watchface_2
 
             if (Program_Settings.SaveID) checkBox_UseID.Checked = true;
 
+            StartJsonPreview();
             SetPreferences(userControl_Set1);
             PreviewView = true;
             Logger.WriteLine("* Form1_Load (end)");
@@ -2775,50 +2790,6 @@ namespace AmazFit_Watchface_2
         // случайные значения ностроек
         private void button_JsonPreview_Random_Click(object sender, EventArgs e)
         {
-            //PreviewView = false;
-            //for (int i = 0; i < 13; i++)
-            //{
-            //    switch (i)
-            //    {
-            //        case 0:
-            //            userControl_Set1.RandomValue();
-            //            break;
-            //        case 1:
-            //            userControl_Set2.RandomValue();
-            //            break;
-            //        case 2:
-            //            userControl_Set3.RandomValue();
-            //            break;
-            //        case 3:
-            //            userControl_Set4.RandomValue();
-            //            break;
-            //        case 4:
-            //            userControl_Set5.RandomValue();
-            //            break;
-            //        case 5:
-            //            userControl_Set6.RandomValue();
-            //            break;
-            //        case 6:
-            //            userControl_Set7.RandomValue();
-            //            break;
-            //        case 7:
-            //            userControl_Set8.RandomValue();
-            //            break;
-            //        case 8:
-            //            userControl_Set9.RandomValue();
-            //            break;
-            //        case 9:
-            //            userControl_Set10.RandomValue();
-            //            break;
-            //        case 10:
-            //            userControl_Set11.RandomValue();
-            //            break;
-            //        case 11:
-            //            userControl_Set12.RandomValue();
-            //            break;
-            //    }
-            //}
-
             Random rnd = new Random();
             userControl_Set1.RandomValue(rnd);
             userControl_Set2.RandomValue(rnd);
@@ -7497,10 +7468,7 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Weather.TemperatureMin = temperatureMin;
             Watch_Face_Preview_Set.Weather.TemperatureMax = temperatureMax;
             Watch_Face_Preview_Set.Weather.Icon = temperatureIcon;
-            Watch_Face_Preview_Set.Weather.TemperatureNoData = false;
-            Watch_Face_Preview_Set.Weather.TemperatureMinMaxNoData = false;
-
-
+            Watch_Face_Preview_Set.Weather.showTemperature = false;
             PreviewImage();
 
         }

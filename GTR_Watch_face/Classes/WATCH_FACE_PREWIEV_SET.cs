@@ -47,8 +47,8 @@
         public int TemperatureMin { get; set; }
         public int TemperatureMax { get; set; }
         public int Icon { get; set; }
-        public bool TemperatureNoData { get; set; }
-        public bool TemperatureMinMaxNoData { get; set; }
+        //public bool TemperatureNoData { get; set; }
+        //public bool TemperatureMinMaxNoData { get; set; }
         public int UVindex { get; set; }
         public int AirQuality { get; set; }
         public int Humidity { get; set; }
