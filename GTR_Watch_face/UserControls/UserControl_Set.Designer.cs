@@ -31,6 +31,7 @@ namespace AmazFit_Watchface_2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Set));
             this.groupBox_Air = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.numericUpDown_AirPressure_Set = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Altitude_Set = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_WindForce = new System.Windows.Forms.NumericUpDown();
@@ -42,7 +43,6 @@ namespace AmazFit_Watchface_2
             this.comboBox_WeatherSet_Icon = new System.Windows.Forms.ComboBox();
             this.numericUpDown_WeatherSet_MaxTemp = new System.Windows.Forms.NumericUpDown();
             this.checkBox_WeatherSet_Temp = new System.Windows.Forms.CheckBox();
-            this.checkBox_WeatherSet_MaxMinTemp = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -109,6 +109,8 @@ namespace AmazFit_Watchface_2
             // 
             // groupBox_Air
             // 
+            resources.ApplyResources(this.groupBox_Air, "groupBox_Air");
+            this.groupBox_Air.Controls.Add(this.label22);
             this.groupBox_Air.Controls.Add(this.numericUpDown_AirPressure_Set);
             this.groupBox_Air.Controls.Add(this.numericUpDown_Altitude_Set);
             this.groupBox_Air.Controls.Add(this.numericUpDown_WindForce);
@@ -120,7 +122,6 @@ namespace AmazFit_Watchface_2
             this.groupBox_Air.Controls.Add(this.comboBox_WeatherSet_Icon);
             this.groupBox_Air.Controls.Add(this.numericUpDown_WeatherSet_MaxTemp);
             this.groupBox_Air.Controls.Add(this.checkBox_WeatherSet_Temp);
-            this.groupBox_Air.Controls.Add(this.checkBox_WeatherSet_MaxMinTemp);
             this.groupBox_Air.Controls.Add(this.label21);
             this.groupBox_Air.Controls.Add(this.label20);
             this.groupBox_Air.Controls.Add(this.label19);
@@ -129,10 +130,14 @@ namespace AmazFit_Watchface_2
             this.groupBox_Air.Controls.Add(this.label16);
             this.groupBox_Air.Controls.Add(this.label15);
             this.groupBox_Air.Controls.Add(this.label14);
-            resources.ApplyResources(this.groupBox_Air, "groupBox_Air");
             this.groupBox_Air.Name = "groupBox_Air";
             this.groupBox_Air.TabStop = false;
             this.groupBox_Air.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
             // 
             // numericUpDown_AirPressure_Set
             // 
@@ -264,6 +269,7 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_WeatherSet_Icon
             // 
+            resources.ApplyResources(this.comboBox_WeatherSet_Icon, "comboBox_WeatherSet_Icon");
             this.comboBox_WeatherSet_Icon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_WeatherSet_Icon.DropDownWidth = 135;
             this.comboBox_WeatherSet_Icon.FormattingEnabled = true;
@@ -297,7 +303,6 @@ namespace AmazFit_Watchface_2
             resources.GetString("comboBox_WeatherSet_Icon.Items26"),
             resources.GetString("comboBox_WeatherSet_Icon.Items27"),
             resources.GetString("comboBox_WeatherSet_Icon.Items28")});
-            resources.ApplyResources(this.comboBox_WeatherSet_Icon, "comboBox_WeatherSet_Icon");
             this.comboBox_WeatherSet_Icon.Name = "comboBox_WeatherSet_Icon";
             this.comboBox_WeatherSet_Icon.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
@@ -331,16 +336,6 @@ namespace AmazFit_Watchface_2
             this.checkBox_WeatherSet_Temp.UseVisualStyleBackColor = true;
             this.checkBox_WeatherSet_Temp.CheckedChanged += new System.EventHandler(this.checkBox_WeatherSet_Temp_CheckedChanged);
             this.checkBox_WeatherSet_Temp.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // checkBox_WeatherSet_MaxMinTemp
-            // 
-            this.checkBox_WeatherSet_MaxMinTemp.Checked = true;
-            this.checkBox_WeatherSet_MaxMinTemp.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_WeatherSet_MaxMinTemp, "checkBox_WeatherSet_MaxMinTemp");
-            this.checkBox_WeatherSet_MaxMinTemp.Name = "checkBox_WeatherSet_MaxMinTemp";
-            this.checkBox_WeatherSet_MaxMinTemp.UseVisualStyleBackColor = true;
-            this.checkBox_WeatherSet_MaxMinTemp.CheckedChanged += new System.EventHandler(this.checkBox_WeatherSet_MaxMinTemp_CheckedChanged);
-            this.checkBox_WeatherSet_MaxMinTemp.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // label21
             // 
@@ -384,6 +379,7 @@ namespace AmazFit_Watchface_2
             // 
             // groupBox_Activity
             // 
+            resources.ApplyResources(this.groupBox_Activity, "groupBox_Activity");
             this.groupBox_Activity.Controls.Add(this.checkBox_DND_Set);
             this.groupBox_Activity.Controls.Add(this.checkBox_Lock_Set);
             this.groupBox_Activity.Controls.Add(this.checkBox_Alarm_Set);
@@ -414,16 +410,15 @@ namespace AmazFit_Watchface_2
             this.groupBox_Activity.Controls.Add(this.label03);
             this.groupBox_Activity.Controls.Add(this.label02);
             this.groupBox_Activity.Controls.Add(this.label01);
-            resources.ApplyResources(this.groupBox_Activity, "groupBox_Activity");
             this.groupBox_Activity.Name = "groupBox_Activity";
             this.groupBox_Activity.TabStop = false;
             this.groupBox_Activity.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // checkBox_DND_Set
             // 
+            resources.ApplyResources(this.checkBox_DND_Set, "checkBox_DND_Set");
             this.checkBox_DND_Set.Checked = true;
             this.checkBox_DND_Set.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DND_Set, "checkBox_DND_Set");
             this.checkBox_DND_Set.Name = "checkBox_DND_Set";
             this.checkBox_DND_Set.UseVisualStyleBackColor = true;
             this.checkBox_DND_Set.Click += new System.EventHandler(this.checkBox_Click);
@@ -608,8 +603,8 @@ namespace AmazFit_Watchface_2
             // 
             // dateTimePicker_Time_Set
             // 
-            this.dateTimePicker_Time_Set.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set, "dateTimePicker_Time_Set");
+            this.dateTimePicker_Time_Set.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker_Time_Set.Name = "dateTimePicker_Time_Set";
             this.dateTimePicker_Time_Set.ShowUpDown = true;
             this.dateTimePicker_Time_Set.Value = new System.DateTime(2021, 3, 22, 21, 10, 35, 0);
@@ -617,8 +612,8 @@ namespace AmazFit_Watchface_2
             // 
             // dateTimePicker_Date_Set
             // 
-            this.dateTimePicker_Date_Set.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set, "dateTimePicker_Date_Set");
+            this.dateTimePicker_Date_Set.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_Date_Set.Name = "dateTimePicker_Date_Set";
             this.dateTimePicker_Date_Set.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
@@ -784,6 +779,6 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_Temp;
         public System.Windows.Forms.DateTimePicker dateTimePicker_Date_Set;
         private System.Windows.Forms.CheckBox checkBox_WeatherSet_Temp;
-        private System.Windows.Forms.CheckBox checkBox_WeatherSet_MaxMinTemp;
+        private System.Windows.Forms.Label label22;
     }
 }

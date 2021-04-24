@@ -233,4 +233,7 @@
   <data name="label03.Text" xml:space="preserve">
     <value>图像数量</value>
   </data>
+  <data name="button_Copy_pictures.Text" xml:space="preserve">
+    <value>从主屏幕复制</value>
+  </data>
 </root>

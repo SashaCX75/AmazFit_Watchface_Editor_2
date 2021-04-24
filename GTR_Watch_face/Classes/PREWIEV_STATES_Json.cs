@@ -32,7 +32,7 @@
         public bool Alarm { get; set; }
         public bool DoNotDisturb { get; set; }
         public bool ShowTemperature = true;
-        public bool ShowTemperatureMaxMin = true;
+        //public bool ShowTemperatureMaxMin = true;
 
         //public bool ScreenIdle { get; set; }
 

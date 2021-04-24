@@ -17,7 +17,8 @@ namespace AmazFit_Watchface_2
         private bool AODmode;
         private bool ImageError_mode;
         private bool OptionalSymbol_mode;
-        private bool PaddingZero_follow_mode;
+        private bool PaddingZero;
+        private bool Follow_mode;
         public UserControl_text()
         {
             InitializeComponent();
@@ -218,16 +219,44 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Отображение чекбокса добавления нулей в начале</summary>
-        public bool PaddingZero_follow
+        public bool Padding_zero
         {
             get
             {
-                return PaddingZero_follow_mode;
+                return PaddingZero;
             }
             set
             {
-                PaddingZero_follow_mode = value;
-                checkBox_addZero.Visible = PaddingZero_follow_mode;
+                PaddingZero = value;
+                checkBox_addZero.Visible = PaddingZero;
+            }
+        }
+
+        /// <summary>Отображение чекбокса следовать за</summary>
+        public bool Follow
+        {
+            get
+            {
+                return Follow_mode;
+            }
+            set
+            {
+                Follow_mode = value;
+                checkBox_follow.Visible = Follow_mode;
+            }
+        }
+
+        /// <summary>Устанавливает надпись "Следовать за ..."</summary>
+        [Localizable(true)]
+        public string FollowText
+        {
+            get
+            {
+                return checkBox_follow.Text;
+            }
+            set
+            {
+                checkBox_follow.Text = value;
             }
         }
 
@@ -586,8 +615,23 @@ namespace AmazFit_Watchface_2
             {
                 controlCollection[i].Enabled = b;
             }
+
+            b = !checkBox_follow.Checked;
+            label02.Enabled = b;
+            label1084.Enabled = b;
+            label1085.Enabled = b;
+            numericUpDown_imageX.Enabled = b;
+            numericUpDown_imageY.Enabled = b;
         }
 
-        
+        private void checkBox_follow_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = !checkBox_follow.Checked;
+            label02.Enabled = b;
+            label1084.Enabled = b;
+            label1085.Enabled = b;
+            numericUpDown_imageX.Enabled = b;
+            numericUpDown_imageY.Enabled = b;
+        }
     }
 }

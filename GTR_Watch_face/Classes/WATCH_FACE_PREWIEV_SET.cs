@@ -9,6 +9,7 @@
         public WeatherSet Weather { get; set; }
         public StatusSet Status { get; set; }
         public int Battery { get; set; }
+        public int SetNumber { get; set; }
     }
 
     public class DateSet
@@ -46,8 +47,8 @@
         public int TemperatureMin { get; set; }
         public int TemperatureMax { get; set; }
         public int Icon { get; set; }
-        public bool TemperatureNoData { get; set; }
-        public bool TemperatureMinMaxNoData { get; set; }
+        //public bool TemperatureNoData { get; set; }
+        //public bool TemperatureMinMaxNoData { get; set; }
         public int UVindex { get; set; }
         public int AirQuality { get; set; }
         public int Humidity { get; set; }
@@ -55,7 +56,7 @@
         public int Altitude { get; set; }
         public int AirPressure { get; set; }
         public bool showTemperature { get; set; }
-        public bool showTemperatureMaxMin { get; set; }
+        //public bool showTemperatureMaxMin { get; set; }
     }
 
     public class StatusSet

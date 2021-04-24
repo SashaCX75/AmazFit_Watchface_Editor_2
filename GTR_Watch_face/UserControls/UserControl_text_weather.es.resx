@@ -123,7 +123,4 @@
   <data name="label07.Text" xml:space="preserve">
     <value>" - " Símbolo</value>
   </data>
-  <data name="checkBox_addZero.Text" xml:space="preserve">
-    <value>Temperatura minima siguiente</value>
-  </data>
 </root>

@@ -143,32 +143,22 @@ namespace AmazFit_Watchface_2
 #endif
 
 #if !DEBUG
-            tabControl_SystemActivity.TabPages[5].Parent = null;
-            tabControl_SystemActivity.TabPages[5].Parent = null;
-            tabControl_SystemActivity.TabPages[5].Parent = null;
-            tabControl_SystemActivity.TabPages[5].Parent = null;
 
-            tabControl_SystemWeather.TabPages[1].Parent = null;
-            tabControl_SystemWeather.TabPages[1].Parent = null;
-            tabControl_SystemWeather.TabPages[1].Parent = null;
-            tabControl_SystemWeather.TabPages[1].Parent = null;
-            tabControl_SystemWeather.TabPages[1].Parent = null;
-            tabControl_SystemWeather.TabPages[1].Parent = null;
-            tabControl_SystemWeather.TabPages[1].Parent = null;
+            //tabControl_SystemWeather.TabPages[4].Parent = null;
+            tabControl_SystemActivity.TabPages["tabPage_Stress"].Parent = null;
+            tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
+            tabControl_SystemWeather.TabPages["tabPage_AirQuality"].Parent = null;
+            tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
+            tabControl_SystemWeather.TabPages["tabPage_Altitude"].Parent = null;
 
 
-            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
-            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
-            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
-            tabControl_SystemActivity_AOD.TabPages[5].Parent = null;
+            //tabControl_SystemWeather_AOD.TabPages[4].Parent = null;
+            tabControl_SystemActivity_AOD.TabPages["tabPage_Stress_AOD"].Parent = null;
+            tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages["tabPage_AirQuality_AOD"].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
+            tabControl_SystemWeather_AOD.TabPages["tabPage_Altitude_AOD"].Parent = null;
 
-            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages[1].Parent = null;
 #endif
 
             splitContainer_EditParameters.Panel1Collapsed = false;
@@ -314,63 +304,22 @@ namespace AmazFit_Watchface_2
             comboBox_Month_alignment_AOD.SelectedIndex = 0;
             comboBox_Year_alignment_AOD.SelectedIndex = 0;
 
-            //comboBox_Battery_alignment.SelectedIndex = 0;
-            //comboBox_Battery_scaleCircle_flatness.SelectedIndex = 0;
-            //comboBox_Battery_scaleLinear_flatness.SelectedIndex = 0;
+            userControl_text_Distance.Collapsed = false;
+            userControl_text_Distance_AOD.Collapsed = false;
 
-            //comboBox_Battery_alignment_AOD.SelectedIndex = 0;
-            //comboBox_Battery_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            //comboBox_Battery_scaleLinear_flatness_AOD.SelectedIndex = 0;
+            tabPage_Background.ImageIndex = 0;
+            tabPage_Time.ImageIndex = 1;
+            tabPage_Date.ImageIndex = 2;
+            tabPage_Activity.ImageIndex = 3;
+            tabPage_Air.ImageIndex = 4;
+            tabPage_System.ImageIndex = 5;
 
-            //comboBox_Steps_alignment.SelectedIndex = 0;
-            //comboBox_Steps_scaleCircle_flatness.SelectedIndex = 0;
-            //comboBox_Steps_scaleLinear_flatness.SelectedIndex = 0;
-
-            //comboBox_Steps_alignment_AOD.SelectedIndex = 0;
-            //comboBox_Steps_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            //comboBox_Steps_scaleLinear_flatness_AOD.SelectedIndex = 0;
-
-            //comboBox_Calories_alignment.SelectedIndex = 0;
-            //comboBox_Calories_scaleCircle_flatness.SelectedIndex = 0;
-            //comboBox_Calories_scaleLinear_flatness.SelectedIndex = 0;
-
-            //comboBox_Calories_alignment_AOD.SelectedIndex = 0;
-            //comboBox_Calories_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            //comboBox_Calories_scaleLinear_flatness_AOD.SelectedIndex = 0;
-
-            //comboBox_HeartRate_alignment_AOD.SelectedIndex = 0;
-            //comboBox_HeartRate_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            //comboBox_HeartRate_scaleLinear_flatness_AOD.SelectedIndex = 0;
-
-            //comboBox_HeartRate_alignment.SelectedIndex = 0;
-            //comboBox_HeartRate_scaleCircle_flatness.SelectedIndex = 0;
-            //comboBox_HeartRate_scaleLinear_flatness.SelectedIndex = 0;
-
-            //comboBox_PAI_alignment.SelectedIndex = 0;
-            //comboBox_PAI_scaleCircle_flatness.SelectedIndex = 0;
-            //comboBox_PAI_scaleLinear_flatness.SelectedIndex = 0;
-
-            //comboBox_PAI_alignment_AOD.SelectedIndex = 0;
-            //comboBox_PAI_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            //comboBox_PAI_scaleLinear_flatness_AOD.SelectedIndex = 0;
-
-            //comboBox_Distance_alignment.SelectedIndex = 0;
-            //comboBox_Distance_scaleCircle_flatness.SelectedIndex = 0;
-            //comboBox_Distance_scaleLinear_flatness.SelectedIndex = 0;
-
-            //comboBox_Distance_alignment_AOD.SelectedIndex = 0;
-
-            comboBox_Weather_alignment.SelectedIndex = 0;
-            comboBox_Weather_alignmentMin.SelectedIndex = 0;
-            comboBox_Weather_alignmentMax.SelectedIndex = 0;
-            comboBox_Weather_scaleCircle_flatness.SelectedIndex = 0;
-            comboBox_Weather_scaleLinear_flatness.SelectedIndex = 0;
-
-            comboBox_Weather_alignment_AOD.SelectedIndex = 0;
-            comboBox_Weather_alignmentMin_AOD.SelectedIndex = 0;
-            comboBox_Weather_alignmentMax_AOD.SelectedIndex = 0;
-            comboBox_Weather_scaleCircle_flatness_AOD.SelectedIndex = 0;
-            comboBox_Weather_scaleLinear_flatness_AOD.SelectedIndex = 0;
+            tabPage_Background_AOD.ImageIndex = 0;
+            tabPage_Time_AOD.ImageIndex = 1;
+            tabPage_Date_AOD.ImageIndex = 2;
+            tabPage_Activity_AOD.ImageIndex = 3;
+            tabPage_Air_AOD.ImageIndex = 4;
+            tabPage_System_AOD.ImageIndex = 5;
 
 
 
@@ -415,6 +364,7 @@ namespace AmazFit_Watchface_2
 
             if (Program_Settings.SaveID) checkBox_UseID.Checked = true;
 
+            StartJsonPreview();
             SetPreferences(userControl_Set1);
             PreviewView = true;
             Logger.WriteLine("* Form1_Load (end)");
@@ -2076,33 +2026,52 @@ namespace AmazFit_Watchface_2
             int Steps = Activity["Steps"];
             int StepsGoal = Activity["StepsGoal"];
 
-            int PAI = Activity["PAI"];
-            int StandUp = Activity["StandUp"];
-            int Stress = Activity["Stress"];
-            int ActivityGoal = Activity["ActivityGoal"];
-            int FatBurning = Activity["FatBurning"];
+            int PAI;
+            Activity.TryGetValue("PAI", out PAI);
+            int StandUp;
+            Activity.TryGetValue("StandUp", out StandUp);
+            int Stress;
+            Activity.TryGetValue("Stress", out Stress);
+            int ActivityGoal;
+            Activity.TryGetValue("ActivityGoal", out ActivityGoal);
+            int FatBurning;
+            Activity.TryGetValue("FatBurning", out FatBurning);
 
 
-            int Weather_Icon = Air["Weather_Icon"];
-            int Temperature = Air["Temperature"];
-            int TemperatureMax = Air["TemperatureMax"];
-            int TemperatureMin = Air["TemperatureMin"];
+            int Weather_Icon;
+            Air.TryGetValue("Weather_Icon", out Weather_Icon);
+            int Temperature;
+            Air.TryGetValue("Temperature", out Temperature);
+            int TemperatureMax;
+            Air.TryGetValue("TemperatureMax", out TemperatureMax);
+            int TemperatureMin;
+            Air.TryGetValue("TemperatureMin", out TemperatureMin);
 
-            int UVindex = Air["UVindex"];
-            int AirQuality = Air["AirQuality"];
-            int Humidity = Air["Humidity"];
-            int WindForce = Air["WindForce"];
-            int Altitude = Air["Altitude"];
-            int AirPressure = Air["AirPressure"];
+            int UVindex;
+            Air.TryGetValue("UVindex", out UVindex);
+            int AirQuality;
+            Air.TryGetValue("AirQuality", out AirQuality);
+            int Humidity;
+            Air.TryGetValue("Humidity", out Humidity);
+            int WindForce;
+            Air.TryGetValue("WindForce", out WindForce);
+            int Altitude;
+            Air.TryGetValue("Altitude", out Altitude);
+            int AirPressure;
+            Air.TryGetValue("AirPressure", out AirPressure);
 
 
-            bool Bluetooth = checkValue["Bluetooth"];
-            bool Alarm = checkValue["Alarm"];
-            bool Lock = checkValue["Lock"];
-            bool DND = checkValue["DND"];
+            bool Bluetooth;
+            checkValue.TryGetValue("Bluetooth", out Bluetooth);
+            bool Alarm;
+            checkValue.TryGetValue("Alarm", out Alarm);
+            bool Lock;
+            checkValue.TryGetValue("Lock", out Lock);
+            bool DND;
+            checkValue.TryGetValue("DND", out DND);
 
-            bool ShowTemperature = checkValue["ShowTemperature"];
-            bool ShowTemperatureMaxMin = checkValue["ShowTemperatureMaxMin"];
+            bool ShowTemperature;
+            checkValue.TryGetValue("ShowTemperature", out ShowTemperature);
 
             Watch_Face_Preview_Set.Date.Year = Year;
             Watch_Face_Preview_Set.Date.Month = Month;
@@ -2121,6 +2090,10 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Activity.Steps = Steps;
             Watch_Face_Preview_Set.Activity.StepsGoal = StepsGoal;
             Watch_Face_Preview_Set.Activity.PAI = PAI;
+            Watch_Face_Preview_Set.Activity.StandUp = StandUp;
+            Watch_Face_Preview_Set.Activity.Stress = Stress;
+            Watch_Face_Preview_Set.Activity.ActivityGoal = ActivityGoal;
+            Watch_Face_Preview_Set.Activity.FatBurning = FatBurning;
 
             Watch_Face_Preview_Set.Status.Bluetooth = Bluetooth;
             Watch_Face_Preview_Set.Status.Alarm = Alarm;
@@ -2135,7 +2108,14 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Weather.Icon = Weather_Icon;
 
             Watch_Face_Preview_Set.Weather.showTemperature = ShowTemperature;
-            Watch_Face_Preview_Set.Weather.showTemperatureMaxMin = ShowTemperatureMaxMin;
+
+            Watch_Face_Preview_Set.Weather.UVindex = UVindex;
+            Watch_Face_Preview_Set.Weather.AirQuality = AirQuality;
+            Watch_Face_Preview_Set.Weather.Humidity = Humidity;
+            Watch_Face_Preview_Set.Weather.WindForce = WindForce;
+            Watch_Face_Preview_Set.Weather.Altitude = Altitude;
+            Watch_Face_Preview_Set.Weather.AirPressure = AirPressure;
+            Watch_Face_Preview_Set.SetNumber = userControl_Set.SetNumber;
 
             SetDigitForPrewiev();
         }
@@ -2568,7 +2548,6 @@ namespace AmazFit_Watchface_2
                     checkValue.Add("DND", ps.DoNotDisturb);
 
                     checkValue.Add("ShowTemperature", ps.ShowTemperature);
-                    checkValue.Add("ShowTemperatureMaxMin", ps.ShowTemperatureMaxMin);
 
                     switch (i)
                     {
@@ -2611,6 +2590,45 @@ namespace AmazFit_Watchface_2
                     }
                 }
 
+                switch (count)
+                {
+                    case 1:
+                        SetPreferences(userControl_Set1);
+                        break;
+                    case 2:
+                        SetPreferences(userControl_Set2);
+                        break;
+                    case 3:
+                        SetPreferences(userControl_Set3);
+                        break;
+                    case 4:
+                        SetPreferences(userControl_Set4);
+                        break;
+                    case 5:
+                        SetPreferences(userControl_Set5);
+                        break;
+                    case 6:
+                        SetPreferences(userControl_Set6);
+                        break;
+                    case 7:
+                        SetPreferences(userControl_Set7);
+                        break;
+                    case 8:
+                        SetPreferences(userControl_Set8);
+                        break;
+                    case 9:
+                        SetPreferences(userControl_Set9);
+                        break;
+                    case 10:
+                        SetPreferences(userControl_Set10);
+                        break;
+                    case 11:
+                        SetPreferences(userControl_Set11);
+                        break;
+                    case 12:
+                        SetPreferences(userControl_Set12);
+                        break;
+                }
             }
             catch (Exception)
             {
@@ -2730,7 +2748,6 @@ namespace AmazFit_Watchface_2
                     ps.DoNotDisturb = checkValue["DND"];
 
                     ps.ShowTemperature = checkValue["ShowTemperature"];
-                    ps.ShowTemperatureMaxMin = checkValue["ShowTemperatureMaxMin"];
 
                     if (ps.Calories != 1234)
                     {
@@ -2773,50 +2790,6 @@ namespace AmazFit_Watchface_2
         // случайные значения ностроек
         private void button_JsonPreview_Random_Click(object sender, EventArgs e)
         {
-            //PreviewView = false;
-            //for (int i = 0; i < 13; i++)
-            //{
-            //    switch (i)
-            //    {
-            //        case 0:
-            //            userControl_Set1.RandomValue();
-            //            break;
-            //        case 1:
-            //            userControl_Set2.RandomValue();
-            //            break;
-            //        case 2:
-            //            userControl_Set3.RandomValue();
-            //            break;
-            //        case 3:
-            //            userControl_Set4.RandomValue();
-            //            break;
-            //        case 4:
-            //            userControl_Set5.RandomValue();
-            //            break;
-            //        case 5:
-            //            userControl_Set6.RandomValue();
-            //            break;
-            //        case 6:
-            //            userControl_Set7.RandomValue();
-            //            break;
-            //        case 7:
-            //            userControl_Set8.RandomValue();
-            //            break;
-            //        case 8:
-            //            userControl_Set9.RandomValue();
-            //            break;
-            //        case 9:
-            //            userControl_Set10.RandomValue();
-            //            break;
-            //        case 10:
-            //            userControl_Set11.RandomValue();
-            //            break;
-            //        case 11:
-            //            userControl_Set12.RandomValue();
-            //            break;
-            //    }
-            //}
-
             Random rnd = new Random();
             userControl_Set1.RandomValue(rnd);
             userControl_Set2.RandomValue(rnd);
@@ -3218,10 +3191,10 @@ namespace AmazFit_Watchface_2
                 bool save = false;
                 Random rnd = new Random();
                 PreviewView = false;
+                int SetNumber = Watch_Face_Preview_Set.SetNumber;
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
-                    WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set_temp = Watch_Face_Preview_Set;
                     for (int i = 0; i < 13; i++)
                     {
                         save = false;
@@ -3367,7 +3340,6 @@ namespace AmazFit_Watchface_2
                         collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
                     }
 
-                    Watch_Face_Preview_Set = Watch_Face_Preview_Set_temp;
 
                     // Optionally reduce colors
                     QuantizeSettings settings = new QuantizeSettings();
@@ -3380,6 +3352,48 @@ namespace AmazFit_Watchface_2
 
                     // Save gif
                     collection.Write(saveFileDialog.FileName);
+                }
+                switch (SetNumber)
+                {
+                    case 1:
+                        SetPreferences(userControl_Set1);
+                        break;
+                    case 2:
+                        SetPreferences(userControl_Set2);
+                        break;
+                    case 3:
+                        SetPreferences(userControl_Set3);
+                        break;
+                    case 4:
+                        SetPreferences(userControl_Set4);
+                        break;
+                    case 5:
+                        SetPreferences(userControl_Set5);
+                        break;
+                    case 6:
+                        SetPreferences(userControl_Set6);
+                        break;
+                    case 7:
+                        SetPreferences(userControl_Set7);
+                        break;
+                    case 8:
+                        SetPreferences(userControl_Set8);
+                        break;
+                    case 9:
+                        SetPreferences(userControl_Set9);
+                        break;
+                    case 10:
+                        SetPreferences(userControl_Set10);
+                        break;
+                    case 11:
+                        SetPreferences(userControl_Set11);
+                        break;
+                    case 12:
+                        SetPreferences(userControl_Set12);
+                        break;
+                    default:
+                        SetPreferences(userControl_Set12);
+                        break;
                 }
                 PreviewView = true;
                 mask.Dispose();
@@ -6097,6 +6111,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 1;
         }
 
         private void userControl_Set2_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6114,6 +6129,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 2;
         }
 
         private void userControl_Set3_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6131,6 +6147,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 3;
         }
 
         private void userControl_Set4_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6148,6 +6165,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 4;
         }
 
         private void userControl_Set5_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6165,6 +6183,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 5;
         }
 
         private void userControl_Set6_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6182,6 +6201,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 6;
         }
 
         private void userControl_Set7_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6199,6 +6219,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 7;
         }
 
         private void userControl_Set8_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6216,6 +6237,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 8;
         }
 
         private void userControl_Set9_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6233,6 +6255,7 @@ namespace AmazFit_Watchface_2
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 9;
         }
 
         private void userControl_Set10_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6250,6 +6273,7 @@ namespace AmazFit_Watchface_2
             userControl_Set9.Collapsed = true;
             userControl_Set11.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 10;
         }
 
         private void userControl_Set11_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6267,6 +6291,7 @@ namespace AmazFit_Watchface_2
             userControl_Set9.Collapsed = true;
             userControl_Set10.Collapsed = true;
             userControl_Set12.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 11;
         }
 
         private void userControl_Set12_Collapse(object sender, EventArgs eventArgs, int setNumber)
@@ -6284,6 +6309,7 @@ namespace AmazFit_Watchface_2
             userControl_Set9.Collapsed = true;
             userControl_Set10.Collapsed = true;
             userControl_Set11.Collapsed = true;
+            Watch_Face_Preview_Set.SetNumber = 12;
         }
 
         private void numericUpDown_Gif_Speed_ValueChanged_1(object sender, EventArgs e)
@@ -7386,38 +7412,1255 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        private void checkBox_Weather_textMax_Use_CheckedChanged(object sender, EventArgs e)
+        private void button_RandomPreview_Click(object sender, EventArgs e)
         {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-            CheckBox checkBox_follow = (CheckBox)controlCollection[12];
+            DateTime now = DateTime.Now;
+            Random rnd = new Random();
+            int year = now.Year;
+            int month = rnd.Next(0, 12) + 1;
+            int day = rnd.Next(0, 28) + 1;
+            int weekDay = rnd.Next(0, 7) + 1;
+            int hour = rnd.Next(0, 24);
+            int min = rnd.Next(0, 60);
+            int sec = rnd.Next(0, 60);
+            int battery = rnd.Next(0, 101);
+            int calories = rnd.Next(0, 2500);
+            int pulse = rnd.Next(45, 150);
+            int distance = rnd.Next(0, 15000);
+            int steps = rnd.Next(0, 15000);
+            int goal = rnd.Next(0, 15000);
+            int pai = rnd.Next(0, 150);
+            int standUp = rnd.Next(0, 13);
+            bool bluetooth = rnd.Next(2) == 0 ? false : true;
+            bool alarm = rnd.Next(2) == 0 ? false : true;
+            bool unlocked = rnd.Next(2) == 0 ? false : true;
+            bool dnd = rnd.Next(2) == 0 ? false : true;
 
-            bool b = checkBox.Checked;
-            bool b2 = !checkBox_follow.Checked;
-            for (int i = 1; i < controlCollection.Count; i++)
-            {
-                controlCollection[i].Enabled = b;
-                if (b && (i == 4 || i == 5 || i == 13 || i == 20 || i == 21)) controlCollection[i].Enabled = b2;
-            }
+            int temperature = rnd.Next(-25, 35);
+            int temperatureMin = rnd.Next(-25, 35);
+            int temperatureMax = rnd.Next(-25, 35);
+            int temperatureIcon = rnd.Next(0, 29);
+
+            Watch_Face_Preview_Set.Date.Year = year;
+            Watch_Face_Preview_Set.Date.Month = month;
+            Watch_Face_Preview_Set.Date.Day = day;
+            Watch_Face_Preview_Set.Date.WeekDay = weekDay;
+
+            Watch_Face_Preview_Set.Time.Hours = hour;
+            Watch_Face_Preview_Set.Time.Minutes = min;
+            Watch_Face_Preview_Set.Time.Seconds = sec;
+
+            Watch_Face_Preview_Set.Battery = battery;
+            Watch_Face_Preview_Set.Activity.Calories = calories;
+            Watch_Face_Preview_Set.Activity.HeartRate = pulse;
+            Watch_Face_Preview_Set.Activity.Distance = distance;
+            Watch_Face_Preview_Set.Activity.Steps = steps;
+            Watch_Face_Preview_Set.Activity.StepsGoal = goal;
+            Watch_Face_Preview_Set.Activity.PAI = pai;
+            Watch_Face_Preview_Set.Activity.StandUp = standUp;
+
+            Watch_Face_Preview_Set.Status.Bluetooth = bluetooth;
+            Watch_Face_Preview_Set.Status.Alarm = alarm;
+            Watch_Face_Preview_Set.Status.Lock = unlocked;
+            Watch_Face_Preview_Set.Status.DoNotDisturb = dnd;
+
+            Watch_Face_Preview_Set.Weather.Temperature = temperature;
+            Watch_Face_Preview_Set.Weather.TemperatureMin = temperatureMin;
+            Watch_Face_Preview_Set.Weather.TemperatureMax = temperatureMax;
+            Watch_Face_Preview_Set.Weather.Icon = temperatureIcon;
+            Watch_Face_Preview_Set.Weather.showTemperature = false;
+            PreviewImage();
+
         }
-        private void checkBox_Weather_textMax_Use_AOD_CheckedChanged(object sender, EventArgs e)
+
+        #region copy AOD
+
+        private void button_Capy_ScreenNormal_Click(object sender, EventArgs e)
         {
-            CheckBox checkBox = sender as CheckBox;
-            Control control = checkBox.Parent;
-            Control.ControlCollection controlCollection = control.Controls;
-            CheckBox checkBox_follow = (CheckBox)controlCollection[12];
+            PreviewView = false;
 
-            bool b = checkBox.Checked;
-            bool b2 = !checkBox_follow.Checked;
-            for (int i = 1; i < controlCollection.Count - 1; i++)
-            {
-                controlCollection[i].Enabled = b;
-                if (b && (i == 4 || i == 5 || i == 13 || i == 20 || i == 21)) controlCollection[i].Enabled = b2;
-            }
+            Copy_Hour_AOD();
+            Copy_Minute_AOD();
+            Copy_AM_PM_AOD();
+            Copy_Hour_hand_AOD();
+            Copy_Minute_hand_AOD();
+
+            Copy_Day_text_AOD();
+            Copy_Day_hand_AOD();
+            Copy_Month_pictures_AOD();
+            Copy_Month_text_AOD();
+            Copy_Month_hand_AOD();
+            Copy_Year_text_AOD();
+            Copy_DOW_image_AOD();
+            Copy_DOW_hand_AOD();
+
+
+            Copy_pictures_AOD(userControl_pictures_Battery, userControl_pictures_Battery_AOD);
+            Copy_text_AOD(userControl_text_Battery, userControl_text_Battery_AOD);
+            Copy_hand_AOD(userControl_hand_Battery, userControl_hand_Battery_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Battery, userControl_scaleCircle_Battery_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Battery, userControl_scaleLinear_Battery_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_Steps, userControl_pictures_Steps_AOD);
+            Copy_text_AOD(userControl_text_Steps, userControl_text_Steps_AOD);
+            Copy_hand_AOD(userControl_hand_Steps, userControl_hand_Steps_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Steps, userControl_scaleCircle_Steps_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Steps, userControl_scaleLinear_Steps_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_Calories, userControl_pictures_Calories_AOD);
+            Copy_text_AOD(userControl_text_Calories, userControl_text_Calories_AOD);
+            Copy_hand_AOD(userControl_hand_Calories, userControl_hand_Calories_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Calories, userControl_scaleCircle_Calories_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Calories, userControl_scaleLinear_Calories_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_HeartRate, userControl_pictures_HeartRate_AOD);
+            Copy_text_AOD(userControl_text_HeartRate, userControl_text_HeartRate_AOD);
+            Copy_hand_AOD(userControl_hand_HeartRate, userControl_hand_HeartRate_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_HeartRate, userControl_scaleCircle_HeartRate_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_HeartRate, userControl_scaleLinear_HeartRate_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_PAI, userControl_pictures_PAI_AOD);
+            Copy_text_AOD(userControl_text_PAI, userControl_text_PAI_AOD);
+            Copy_hand_AOD(userControl_hand_PAI, userControl_hand_PAI_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_PAI, userControl_scaleCircle_PAI_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_PAI, userControl_scaleLinear_PAI_AOD);
+
+            Copy_text_AOD(userControl_text_Distance, userControl_text_Distance_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_StandUp, userControl_pictures_StandUp_AOD);
+            Copy_text_AOD(userControl_text_StandUp, userControl_text_StandUp_AOD);
+            Copy_hand_AOD(userControl_hand_StandUp, userControl_hand_StandUp_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_StandUp, userControl_scaleCircle_StandUp_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_StandUp, userControl_scaleLinear_StandUp_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_weather, userControl_pictures_weather_AOD);
+            Copy_text_AOD(userControl_text_weather_Current, userControl_text_weather_Current_AOD);
+            Copy_text_AOD(userControl_text_weather_Min, userControl_text_weather_Min_AOD);
+            Copy_text_AOD(userControl_text_weather_Max_AOD, userControl_text_weather_Max_AOD);
+            Copy_hand_AOD(userControl_hand_Weather, userControl_hand_Weather_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Weather, userControl_scaleCircle_Weather_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Weather, userControl_scaleLinear_Weather_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_UVindex, userControl_pictures_UVindex_AOD);
+            Copy_text_AOD(userControl_text_UVindex, userControl_text_UVindex_AOD);
+            Copy_hand_AOD(userControl_hand_UVindex, userControl_hand_UVindex_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_UVindex, userControl_scaleCircle_UVindex_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_UVindex, userControl_scaleLinear_UVindex_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_AirQuality, userControl_pictures_AirQuality_AOD);
+            Copy_text_AOD(userControl_text_AirQuality, userControl_text_AirQuality_AOD);
+            Copy_hand_AOD(userControl_hand_AirQuality, userControl_hand_AirQuality_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_AirQuality, userControl_scaleCircle_AirQuality_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_AirQuality, userControl_scaleLinear_AirQuality_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_Humidity, userControl_pictures_Humidity_AOD);
+            Copy_text_AOD(userControl_text_Humidity, userControl_text_Humidity_AOD);
+            Copy_hand_AOD(userControl_hand_Humidity, userControl_hand_Humidity_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Humidity, userControl_scaleCircle_Humidity_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Humidity, userControl_scaleLinear_Humidity_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_WindForce, userControl_pictures_WindForce_AOD);
+            Copy_text_AOD(userControl_text_WindForce, userControl_text_WindForce_AOD);
+            Copy_hand_AOD(userControl_hand_WindForce, userControl_hand_WindForce_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_WindForce, userControl_scaleCircle_WindForce_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_WindForce, userControl_scaleLinear_WindForce_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_Altitude, userControl_pictures_Altitude_AOD);
+            Copy_text_AOD(userControl_text_Altitude, userControl_text_Altitude_AOD);
+            Copy_hand_AOD(userControl_hand_Altitude, userControl_hand_Altitude_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Altitude, userControl_scaleCircle_Altitude_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Altitude, userControl_scaleLinear_Altitude_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_AirPressure, userControl_pictures_AirPressure_AOD);
+            Copy_text_AOD(userControl_text_AirPressure, userControl_text_AirPressure_AOD);
+            Copy_hand_AOD(userControl_hand_AirPressure, userControl_hand_AirPressure_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_AirPressure, userControl_scaleCircle_AirPressure_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_AirPressure, userControl_scaleLinear_AirPressure_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_Stress, userControl_pictures_Stress_AOD);
+            Copy_text_AOD(userControl_text_Stress, userControl_text_Stress_AOD);
+            Copy_hand_AOD(userControl_hand_Stress, userControl_hand_Stress_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Stress, userControl_scaleCircle_Stress_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Stress, userControl_scaleLinear_Stress_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_ActivityGoal, userControl_pictures_ActivityGoal_AOD);
+            Copy_text_AOD(userControl_text_ActivityGoal, userControl_text_ActivityGoal_AOD);
+            Copy_hand_AOD(userControl_hand_ActivityGoal, userControl_hand_ActivityGoal_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_ActivityGoal, userControl_scaleCircle_ActivityGoal_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_ActivityGoal, userControl_scaleLinear_ActivityGoal_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_FatBurning, userControl_pictures_FatBurning_AOD);
+            Copy_text_AOD(userControl_text_FatBurning, userControl_text_FatBurning_AOD);
+            Copy_hand_AOD(userControl_hand_FatBurning, userControl_hand_FatBurning_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_FatBurning, userControl_scaleCircle_FatBurning_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_FatBurning, userControl_scaleLinear_FatBurning_AOD);
+
+
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
         }
 
-        
+
+        private void Copy_pictures_AOD(UserControl_pictures userControl_pictures, UserControl_pictures userControl_pictures_AOD)
+        {
+            userControl_pictures_AOD.checkBox_pictures_Use.Checked = userControl_pictures.checkBox_pictures_Use.Checked;
+            userControl_pictures_AOD.comboBoxSetImage(userControl_pictures.comboBoxGetImage());
+            userControl_pictures_AOD.numericUpDown_picturesX.Value = userControl_pictures.numericUpDown_picturesX.Value;
+            userControl_pictures_AOD.numericUpDown_picturesY.Value = userControl_pictures.numericUpDown_picturesY.Value;
+            userControl_pictures_AOD.numericUpDown_pictures_count.Value = userControl_pictures.numericUpDown_pictures_count.Value;
+        }
+        private void Copy_text_AOD(UserControl_text userControl_text, UserControl_text userControl_text_AOD)
+        {
+            userControl_text_AOD.checkBox_Use.Checked = userControl_text.checkBox_Use.Checked;
+            userControl_text_AOD.comboBoxSetImage(userControl_text.comboBoxGetImage());
+            userControl_text_AOD.comboBoxSetIcon(userControl_text.comboBoxGetIcon());
+            userControl_text_AOD.comboBoxSetUnit(userControl_text.comboBoxGetUnit());
+            userControl_text_AOD.numericUpDown_imageX.Value = userControl_text.numericUpDown_imageX.Value;
+            userControl_text_AOD.numericUpDown_imageY.Value = userControl_text.numericUpDown_imageY.Value;
+            userControl_text_AOD.numericUpDown_iconX.Value = userControl_text.numericUpDown_iconX.Value;
+            userControl_text_AOD.numericUpDown_iconY.Value = userControl_text.numericUpDown_iconY.Value;
+            userControl_text_AOD.comboBoxSetAlignment(userControl_text.comboBoxGetAlignment());
+            userControl_text_AOD.numericUpDown_spacing.Value = userControl_text.numericUpDown_spacing.Value;
+            userControl_text_AOD.checkBox_addZero.Checked = userControl_text.checkBox_addZero.Checked;
+            userControl_text_AOD.comboBoxSetImageError(userControl_text.comboBoxGetImageError());
+            userControl_text_AOD.comboBoxSetImageDecimalPointOrMinus(userControl_text.comboBoxGetImageDecimalPointOrMinus());
+
+        }
+        private void Copy_hand_AOD(UserControl_hand userControl_hand, UserControl_hand userControl_hand_AOD)
+        {
+            userControl_hand_AOD.checkBox_hand_Use.Checked = userControl_hand.checkBox_hand_Use.Checked;
+            userControl_hand_AOD.comboBoxSetHandImage(userControl_hand.comboBoxGetHandImage());
+            userControl_hand_AOD.numericUpDown_handX.Value = userControl_hand.numericUpDown_handX.Value;
+            userControl_hand_AOD.numericUpDown_handY.Value = userControl_hand.numericUpDown_handY.Value;
+            userControl_hand_AOD.numericUpDown_handX_offset.Value = userControl_hand.numericUpDown_handX_offset.Value;
+            userControl_hand_AOD.numericUpDown_handY_offset.Value = userControl_hand.numericUpDown_handY_offset.Value;
+            userControl_hand_AOD.comboBoxSetHandImageCentr(userControl_hand.comboBoxGetHandImageCentr());
+            userControl_hand_AOD.numericUpDown_handX_centr.Value = userControl_hand.numericUpDown_handX_centr.Value;
+            userControl_hand_AOD.numericUpDown_handY_centr.Value = userControl_hand.numericUpDown_handY_centr.Value;
+            userControl_hand_AOD.numericUpDown_hand_startAngle.Value = userControl_hand.numericUpDown_hand_startAngle.Value;
+            userControl_hand_AOD.numericUpDown_hand_endAngle.Value = userControl_hand.numericUpDown_hand_endAngle.Value;
+            userControl_hand_AOD.comboBoxSetHandImageBackground(userControl_hand.comboBoxGetHandImageBackground());
+            userControl_hand_AOD.numericUpDown_handX_background.Value = userControl_hand.numericUpDown_handX_background.Value;
+            userControl_hand_AOD.numericUpDown_handY_background.Value = userControl_hand.numericUpDown_handY_background.Value;
+
+        }
+        private void Copy_scaleCircle_AOD(UserControl_scaleCircle userControl_scaleCircle, UserControl_scaleCircle userControl_scaleCircle_AOD)
+        {
+            userControl_scaleCircle_AOD.checkBox_scaleCircle_Use.Checked = userControl_scaleCircle.checkBox_scaleCircle_Use.Checked;
+            userControl_scaleCircle_AOD.radioButton_scaleCircle_image.Checked = userControl_scaleCircle.radioButton_scaleCircle_image.Checked;
+            userControl_scaleCircle_AOD.radioButton_scaleCircle_color.Checked = userControl_scaleCircle.radioButton_scaleCircle_color.Checked;
+            userControl_scaleCircle_AOD.comboBoxSetImage(userControl_scaleCircle.comboBoxGetImage());
+            userControl_scaleCircle_AOD.comboBoxSetColorString(userControl_scaleCircle.comboBoxGetColorString());
+            userControl_scaleCircle_AOD.comboBoxSetFlatness(userControl_scaleCircle.comboBoxGetFlatness());
+            userControl_scaleCircle_AOD.comboBoxSetImageBackground(userControl_scaleCircle.comboBoxGetImageBackground());
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircleX.Value = userControl_scaleCircle.numericUpDown_scaleCircleX.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircleY.Value = userControl_scaleCircle.numericUpDown_scaleCircleY.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_radius.Value = userControl_scaleCircle.numericUpDown_scaleCircle_radius.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_width.Value = userControl_scaleCircle.numericUpDown_scaleCircle_width.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_startAngle.Value = userControl_scaleCircle.numericUpDown_scaleCircle_startAngle.Value;
+            userControl_scaleCircle_AOD.numericUpDown_scaleCircle_endAngle.Value = userControl_scaleCircle.numericUpDown_scaleCircle_endAngle.Value;
+        }
+        private void Copy_scaleLinear_AOD(UserControl_scaleLinear userControl_scaleLinear, UserControl_scaleLinear userControl_scaleLinear_AOD)
+        {
+            userControl_scaleLinear_AOD.checkBox_scaleLinear_Use.Checked = userControl_scaleLinear.checkBox_scaleLinear_Use.Checked;
+            userControl_scaleLinear_AOD.radioButton_scaleLinear_image.Checked = userControl_scaleLinear.radioButton_scaleLinear_image.Checked;
+            userControl_scaleLinear_AOD.radioButton_scaleLinear_color.Checked = userControl_scaleLinear.radioButton_scaleLinear_color.Checked;
+            userControl_scaleLinear_AOD.comboBoxSetImage(userControl_scaleLinear.comboBoxGetImage());
+            userControl_scaleLinear_AOD.comboBoxSetColorString(userControl_scaleLinear.comboBoxGetColorString());
+            userControl_scaleLinear_AOD.comboBoxSetImagePointer(userControl_scaleLinear.comboBoxGetImagePointer());
+            userControl_scaleLinear_AOD.comboBoxSetImageBackground(userControl_scaleLinear.comboBoxGetImageBackground());
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinearX.Value = userControl_scaleLinear.numericUpDown_scaleLinearX.Value;
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinearY.Value = userControl_scaleLinear.numericUpDown_scaleLinearY.Value;
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinear_length.Value = userControl_scaleLinear.numericUpDown_scaleLinear_length.Value;
+            userControl_scaleLinear_AOD.numericUpDown_scaleLinear_width.Value = userControl_scaleLinear.numericUpDown_scaleLinear_width.Value;
+            userControl_scaleLinear_AOD.comboBoxSetFlatness(userControl_scaleLinear.comboBoxGetFlatness());
+        }
+
+        private void button_Copy_Hour_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Hour_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Hour_AOD()
+        {
+            checkBox_Hour_Use_AOD.Checked = checkBox_Hour_Use.Checked;
+            comboBox_Hour_image_AOD.SelectedItem = comboBox_Hour_image.SelectedItem;
+            comboBox_Hour_unit_AOD.SelectedItem = comboBox_Hour_unit.SelectedItem;
+            comboBox_Hour_separator_AOD.SelectedItem = comboBox_Hour_separator.SelectedItem;
+            numericUpDown_HourX_AOD.Value = numericUpDown_HourX.Value;
+            numericUpDown_HourY_AOD.Value = numericUpDown_HourY.Value;
+            numericUpDown_Hour_unitX_AOD.Value = numericUpDown_Hour_unitX.Value;
+            numericUpDown_Hour_unitY_AOD.Value = numericUpDown_Hour_unitY.Value;
+            comboBox_Hour_alignment_AOD.SelectedItem = comboBox_Hour_alignment.SelectedItem;
+            checkBox_Hour_add_zero_AOD.Checked = checkBox_Hour_add_zero.Checked;
+            numericUpDown_Hour_spacing_AOD.Value = numericUpDown_Hour_spacing.Value;
+        }
+
+        private void button_Copy_Minute_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Minute_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Minute_AOD()
+        {
+            checkBox_Minute_Use_AOD.Checked = checkBox_Minute_Use.Checked;
+            comboBox_Minute_image_AOD.SelectedItem = comboBox_Minute_image.SelectedItem;
+            comboBox_Minute_unit_AOD.SelectedItem = comboBox_Minute_unit.SelectedItem;
+            comboBox_Minute_separator_AOD.SelectedItem = comboBox_Minute_separator.SelectedItem;
+            numericUpDown_MinuteX_AOD.Value = numericUpDown_MinuteX.Value;
+            numericUpDown_MinuteY_AOD.Value = numericUpDown_MinuteY.Value;
+            numericUpDown_Minute_unitX_AOD.Value = numericUpDown_Minute_unitX.Value;
+            numericUpDown_Minute_unitY_AOD.Value = numericUpDown_Minute_unitY.Value;
+            comboBox_Minute_alignment_AOD.SelectedItem = comboBox_Minute_alignment.SelectedItem;
+            checkBox_Minute_add_zero_AOD.Checked = checkBox_Minute_add_zero.Checked;
+            numericUpDown_Minute_spacing_AOD.Value = numericUpDown_Minute_spacing.Value;
+            checkBox_Minute_follow_AOD.Checked = checkBox_Minute_follow.Checked;
+        }
+
+        private void button_Copy_AM_PM_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_AM_PM_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_AM_PM_AOD()
+        {
+            checkBox_12h_Use_AOD.Checked = checkBox_12h_Use.Checked;
+            comboBox_AM_image_AOD.SelectedItem = comboBox_AM_image.SelectedItem;
+            comboBox_PM_image_AOD.SelectedItem = comboBox_PM_image.SelectedItem;
+            numericUpDown_AM_X_AOD.Value = numericUpDown_AM_X.Value;
+            numericUpDown_AM_Y_AOD.Value = numericUpDown_AM_Y.Value;
+            numericUpDown_PM_X_AOD.Value = numericUpDown_PM_X.Value;
+            numericUpDown_PM_Y_AOD.Value = numericUpDown_PM_Y.Value;
+        }
+
+        private void button_Copy_Hour_hand_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Hour_hand_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Hour_hand_AOD()
+        {
+            checkBox_Hour_hand_Use_AOD.Checked = checkBox_Hour_hand_Use.Checked;
+            comboBox_Hour_hand_image_AOD.SelectedItem = comboBox_Hour_hand_image.SelectedItem;
+            comboBox_Hour_hand_imageCentr_AOD.SelectedItem = comboBox_Hour_hand_imageCentr.SelectedItem;
+            numericUpDown_Hour_handX_AOD.Value = numericUpDown_Hour_handX.Value;
+            numericUpDown_Hour_handY_AOD.Value = numericUpDown_Hour_handY.Value;
+            numericUpDown_Hour_handX_centr_AOD.Value = numericUpDown_Hour_handX_centr.Value;
+            numericUpDown_Hour_handY_centr_AOD.Value = numericUpDown_Hour_handY_centr.Value;
+            numericUpDown_Hour_handX_offset_AOD.Value = numericUpDown_Hour_handX_offset.Value;
+            numericUpDown_Hour_handY_offset_AOD.Value = numericUpDown_Hour_handY_offset.Value;
+        }
+
+        private void button_Copy_Minute_hand_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Minute_hand_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Minute_hand_AOD()
+        {
+            checkBox_Minute_hand_Use_AOD.Checked = checkBox_Minute_hand_Use.Checked;
+            comboBox_Minute_hand_image_AOD.SelectedItem = comboBox_Minute_hand_image.SelectedItem;
+            comboBox_Minute_hand_imageCentr_AOD.SelectedItem = comboBox_Minute_hand_imageCentr.SelectedItem;
+            numericUpDown_Minute_handX_AOD.Value = numericUpDown_Minute_handX.Value;
+            numericUpDown_Minute_handY_AOD.Value = numericUpDown_Minute_handY.Value;
+            numericUpDown_Minute_handX_centr_AOD.Value = numericUpDown_Minute_handX_centr.Value;
+            numericUpDown_Minute_handY_centr_AOD.Value = numericUpDown_Minute_handY_centr.Value;
+            numericUpDown_Minute_handX_offset_AOD.Value = numericUpDown_Minute_handX_offset.Value;
+            numericUpDown_Minute_handY_offset_AOD.Value = numericUpDown_Minute_handY_offset.Value;
+        }
+
+        private void button_Copy_Day_text_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Day_text_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Day_text_AOD()
+        {
+            checkBox_Day_Use_AOD.Checked = checkBox_Day_Use.Checked;
+            comboBox_Day_image_AOD.SelectedIndex = comboBox_Day_image.SelectedIndex;
+            comboBox_Day_unit_AOD.SelectedIndex = comboBox_Day_unit.SelectedIndex;
+            comboBox_Day_separator_AOD.SelectedIndex = comboBox_Day_separator.SelectedIndex;
+            numericUpDown_DayX_AOD.Value = numericUpDown_DayX.Value;
+            numericUpDown_DayY_AOD.Value = numericUpDown_DayY.Value;
+            numericUpDown_Day_unitX_AOD.Value = numericUpDown_Day_unitX.Value;
+            numericUpDown_Day_unitY_AOD.Value = numericUpDown_Day_unitY.Value;
+            comboBox_Day_alignment_AOD.SelectedIndex = comboBox_Day_alignment.SelectedIndex;
+            checkBox_Day_add_zero_AOD.Checked = checkBox_Day_add_zero.Checked;
+            numericUpDown_Day_spacing_AOD.Value = numericUpDown_Day_spacing.Value;
+            checkBox_Day_follow_AOD.Checked = checkBox_Day_follow.Checked;
+        }
+
+        private void button_Copy_Day_hand_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Day_hand_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Day_hand_AOD()
+        {
+            checkBox_Day_hand_Use_AOD.Checked = checkBox_Day_hand_Use.Checked;
+            comboBox_Day_hand_image_AOD.SelectedIndex = comboBox_Day_hand_image.SelectedIndex;
+            comboBox_Day_hand_imageCentr_AOD.SelectedIndex = comboBox_Day_hand_imageCentr.SelectedIndex;
+            comboBox_Day_hand_imageBackground_AOD.SelectedIndex = comboBox_Day_hand_imageBackground.SelectedIndex;
+            numericUpDown_Day_handX_AOD.Value = numericUpDown_Day_handX.Value;
+            numericUpDown_Day_handY_AOD.Value = numericUpDown_Day_handY.Value;
+            numericUpDown_Day_handX_centr_AOD.Value = numericUpDown_Day_handX_centr.Value;
+            numericUpDown_Day_handY_centr_AOD.Value = numericUpDown_Day_handY_centr.Value;
+            numericUpDown_Day_handX_background_AOD.Value = numericUpDown_Day_handX_background.Value;
+            numericUpDown_Day_handY_background_AOD.Value = numericUpDown_Day_handY_background.Value;
+            numericUpDown_Day_handX_offset_AOD.Value = numericUpDown_Day_handX_offset.Value;
+            numericUpDown_Day_handY_offset_AOD.Value = numericUpDown_Day_handY_offset.Value;
+            numericUpDown_Day_hand_startAngle_AOD.Value = numericUpDown_Day_hand_startAngle.Value;
+            numericUpDown_Day_hand_endAngle_AOD.Value = numericUpDown_Day_hand_endAngle.Value;
+        }
+
+        private void button_Copy_Month_pictures_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Month_pictures_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Month_pictures_AOD()
+        {
+            checkBox_Month_pictures_Use_AOD.Checked = checkBox_Month_pictures_Use.Checked;
+            comboBox_Month_pictures_image_AOD.SelectedIndex = comboBox_Month_pictures_image.SelectedIndex;
+            numericUpDown_Month_picturesX_AOD.Value = numericUpDown_Month_picturesX.Value;
+            numericUpDown_Month_picturesY_AOD.Value = numericUpDown_Month_picturesY.Value;
+        }
+
+        private void button_Copy_Month_text_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Month_text_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Month_text_AOD()
+        {
+            checkBox_Month_Use_AOD.Checked = checkBox_Month_Use.Checked;
+            comboBox_Month_image_AOD.SelectedIndex = comboBox_Month_image.SelectedIndex;
+            comboBox_Month_unit_AOD.SelectedIndex = comboBox_Month_unit.SelectedIndex;
+            comboBox_Month_separator_AOD.SelectedIndex = comboBox_Month_separator.SelectedIndex;
+            numericUpDown_MonthX_AOD.Value = numericUpDown_MonthX.Value;
+            numericUpDown_MonthY_AOD.Value = numericUpDown_MonthY.Value;
+            numericUpDown_Month_unitX_AOD.Value = numericUpDown_Month_unitX.Value;
+            numericUpDown_Month_unitY_AOD.Value = numericUpDown_Month_unitY.Value;
+            comboBox_Month_alignment_AOD.SelectedIndex = comboBox_Month_alignment.SelectedIndex;
+            checkBox_Month_add_zero_AOD.Checked = checkBox_Month_add_zero.Checked;
+            numericUpDown_Month_spacing_AOD.Value = numericUpDown_Month_spacing.Value;
+            checkBox_Month_follow_AOD.Checked = checkBox_Month_follow.Checked;
+        }
+
+        private void button_Copy_Month_hand_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Month_hand_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Month_hand_AOD()
+        {
+            checkBox_Month_hand_Use_AOD.Checked = checkBox_Month_hand_Use.Checked;
+            comboBox_Month_hand_image_AOD.SelectedIndex = comboBox_Month_hand_image.SelectedIndex;
+            comboBox_Month_hand_imageCentr_AOD.SelectedIndex = comboBox_Month_hand_imageCentr.SelectedIndex;
+            comboBox_Month_hand_imageBackground_AOD.SelectedIndex = comboBox_Month_hand_imageBackground.SelectedIndex;
+            numericUpDown_Month_handX_AOD.Value = numericUpDown_Month_handX.Value;
+            numericUpDown_Month_handY_AOD.Value = numericUpDown_Month_handY.Value;
+            numericUpDown_Month_handX_centr_AOD.Value = numericUpDown_Month_handX_centr.Value;
+            numericUpDown_Month_handY_centr_AOD.Value = numericUpDown_Month_handY_centr.Value;
+            numericUpDown_Month_handX_background_AOD.Value = numericUpDown_Month_handX_background.Value;
+            numericUpDown_Month_handY_background_AOD.Value = numericUpDown_Month_handY_background.Value;
+            numericUpDown_Month_handX_offset_AOD.Value = numericUpDown_Month_handX_offset.Value;
+            numericUpDown_Month_handY_offset_AOD.Value = numericUpDown_Month_handY_offset.Value;
+            numericUpDown_Month_hand_startAngle_AOD.Value = numericUpDown_Month_hand_startAngle.Value;
+            numericUpDown_Month_hand_endAngle_AOD.Value = numericUpDown_Month_hand_endAngle.Value;
+        }
+
+        private void button_Copy_Year_text_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_Year_text_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_Year_text_AOD()
+        {
+            checkBox_Year_text_Use_AOD.Checked = checkBox_Year_text_Use.Checked;
+            comboBox_Year_image_AOD.SelectedIndex = comboBox_Year_image.SelectedIndex;
+            comboBox_Year_unit_AOD.SelectedIndex = comboBox_Year_unit.SelectedIndex;
+            comboBox_Year_separator_AOD.SelectedIndex = comboBox_Year_separator.SelectedIndex;
+            numericUpDown_YearX_AOD.Value = numericUpDown_YearX.Value;
+            numericUpDown_YearY_AOD.Value = numericUpDown_YearY.Value;
+            numericUpDown_Year_unitX_AOD.Value = numericUpDown_Year_unitX.Value;
+            numericUpDown_Year_unitY_AOD.Value = numericUpDown_Year_unitY.Value;
+            comboBox_Year_alignment_AOD.SelectedIndex = comboBox_Year_alignment.SelectedIndex;
+            checkBox_Year_add_zero_AOD.Checked = checkBox_Year_add_zero.Checked;
+            numericUpDown_Year_spacing_AOD.Value = numericUpDown_Year_spacing.Value;
+        }
+
+        private void button_Copy_DOW_image_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_DOW_image_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_DOW_image_AOD()
+        {
+            checkBox_DOW_pictures_Use_AOD.Checked = checkBox_DOW_pictures_Use.Checked;
+            comboBox_DOW_pictures_image_AOD.SelectedIndex = comboBox_DOW_pictures_image.SelectedIndex;
+            numericUpDown_DOW_picturesX_AOD.Value = numericUpDown_DOW_picturesX.Value;
+            numericUpDown_DOW_picturesY_AOD.Value = numericUpDown_DOW_picturesY.Value;
+        }
+
+        private void button_Copy_DOW_hand_AOD_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            Copy_DOW_hand_AOD();
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void Copy_DOW_hand_AOD()
+        {
+            checkBox_DOW_hand_Use_AOD.Checked = checkBox_DOW_hand_Use.Checked;
+            comboBox_DOW_hand_image_AOD.SelectedIndex = comboBox_DOW_hand_image.SelectedIndex;
+            comboBox_DOW_hand_imageCentr_AOD.SelectedIndex = comboBox_DOW_hand_imageCentr.SelectedIndex;
+            comboBox_DOW_hand_imageBackground_AOD.SelectedIndex = comboBox_DOW_hand_imageBackground.SelectedIndex;
+            numericUpDown_DOW_handX_AOD.Value = numericUpDown_DOW_handX.Value;
+            numericUpDown_DOW_handY_AOD.Value = numericUpDown_DOW_handY.Value;
+            numericUpDown_DOW_handX_centr_AOD.Value = numericUpDown_DOW_handX_centr.Value;
+            numericUpDown_DOW_handY_centr_AOD.Value = numericUpDown_DOW_handY_centr.Value;
+            numericUpDown_DOW_handX_background_AOD.Value = numericUpDown_DOW_handX_background.Value;
+            numericUpDown_DOW_handY_background_AOD.Value = numericUpDown_DOW_handY_background.Value;
+            numericUpDown_DOW_handX_offset_AOD.Value = numericUpDown_DOW_handX_offset.Value;
+            numericUpDown_DOW_handY_offset_AOD.Value = numericUpDown_DOW_handY_offset.Value;
+            numericUpDown_DOW_hand_startAngle_AOD.Value = numericUpDown_DOW_hand_startAngle.Value;
+            numericUpDown_DOW_hand_endAngle_AOD.Value = numericUpDown_DOW_hand_endAngle.Value;
+        }
+
+        private void userControl_pictures_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_Battery, userControl_pictures_Battery_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Battery, userControl_text_Battery_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Battery, userControl_hand_Battery_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Battery, userControl_scaleCircle_Battery_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Battery, userControl_scaleLinear_Battery_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_Steps, userControl_pictures_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Steps, userControl_text_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Steps, userControl_hand_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Steps, userControl_scaleCircle_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Steps, userControl_scaleLinear_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_Calories, userControl_pictures_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Calories, userControl_text_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Calories, userControl_hand_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Calories, userControl_scaleCircle_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Calories, userControl_scaleLinear_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_HeartRate, userControl_pictures_HeartRate_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_HeartRate, userControl_text_HeartRate_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_HeartRate, userControl_hand_HeartRate_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_HeartRate, userControl_scaleCircle_HeartRate_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_HeartRate, userControl_scaleLinear_HeartRate_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_PAI, userControl_pictures_PAI_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_PAI, userControl_text_PAI_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_PAI, userControl_hand_PAI_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_PAI, userControl_scaleCircle_PAI_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_PAI, userControl_scaleLinear_PAI_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_text_Distance_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Distance, userControl_text_Distance_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_StandUp, userControl_pictures_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_StandUp, userControl_text_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_StandUp, userControl_hand_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_StandUp, userControl_scaleCircle_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_StandUp, userControl_scaleLinear_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_Weather_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_weather, userControl_pictures_weather_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Weather_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_weather_Current, userControl_text_weather_Current_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_WeatherMin_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_weather_Min, userControl_text_weather_Min_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_WeatherMax_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_weather_Max_AOD, userControl_text_weather_Max_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Weather_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Weather, userControl_hand_Weather_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Weather_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Weather, userControl_scaleCircle_Weather_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Weather_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Weather, userControl_scaleLinear_Weather_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_UVindex, userControl_pictures_UVindex_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_UVindex, userControl_text_UVindex_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_UVindex, userControl_hand_UVindex_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_UVindex, userControl_scaleCircle_UVindex_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_UVindex, userControl_scaleLinear_UVindex_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_AirQuality, userControl_pictures_AirQuality_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_AirQuality, userControl_text_AirQuality_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_AirQuality, userControl_hand_AirQuality_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_AirQuality, userControl_scaleCircle_AirQuality_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_AirQuality, userControl_scaleLinear_AirQuality_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_Humidity, userControl_pictures_Humidity_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Humidity, userControl_text_Humidity_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Humidity, userControl_hand_Humidity_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Humidity, userControl_scaleCircle_Humidity_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Humidity, userControl_scaleLinear_Humidity_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_WindForce, userControl_pictures_WindForce_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_WindForce, userControl_text_WindForce_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_WindForce, userControl_hand_WindForce_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_WindForce, userControl_scaleCircle_WindForce_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_WindForce, userControl_scaleLinear_WindForce_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_Altitude, userControl_pictures_Altitude_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Altitude, userControl_text_Altitude_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Altitude, userControl_hand_Altitude_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Altitude, userControl_scaleCircle_Altitude_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Altitude, userControl_scaleLinear_Altitude_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_AirPressure, userControl_pictures_AirPressure_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_AirPressure, userControl_text_AirPressure_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_AirPressure, userControl_hand_AirPressure_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_AirPressure, userControl_scaleCircle_AirPressure_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_AirPressure, userControl_scaleLinear_AirPressure_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_Stress, userControl_pictures_Stress_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Stress, userControl_text_Stress_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Stress, userControl_hand_Stress_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Stress, userControl_scaleCircle_Stress_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Stress, userControl_scaleLinear_Stress_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_ActivityGoal, userControl_pictures_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_ActivityGoal, userControl_text_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_ActivityGoal, userControl_hand_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_ActivityGoal, userControl_scaleCircle_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_ActivityGoal, userControl_scaleLinear_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_FatBurning, userControl_pictures_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_FatBurning, userControl_text_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_FatBurning, userControl_hand_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_FatBurning, userControl_scaleCircle_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_FatBurning, userControl_scaleLinear_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+
+
+
+        #endregion
+
+
+
+
+
+
+
+
+
+
 
 
 

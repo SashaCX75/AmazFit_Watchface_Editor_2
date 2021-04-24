@@ -131,13 +131,16 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label1085.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="&gt;&gt;label07.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1084.Parent" xml:space="preserve">
     <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Name" xml:space="preserve">
+    <value>checkBox_follow</value>
   </data>
   <data name="&gt;&gt;label08.Name" xml:space="preserve">
     <value>label08</value>
@@ -146,22 +149,19 @@
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl_text_weather</value>
   </data>
-  <data name="checkBox_addZero.Text" xml:space="preserve">
-    <value>Следовать за минимальной температурой</value>
-  </data>
   <data name="&gt;&gt;label02.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox_addZero.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="checkBox_follow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 151</value>
   </data>
   <data name="&gt;&gt;label07.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
     <value>panel_text</value>
@@ -172,14 +172,14 @@
   <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
     <value>265, 179</value>
   </data>
-  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 30</value>
+  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
+    <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label06.Name" xml:space="preserve">
     <value>label06</value>
   </data>
   <data name="&gt;&gt;label1084.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="label07.Text" xml:space="preserve">
     <value>Символ "-"</value>
@@ -188,7 +188,7 @@
     <value>button_text</value>
   </data>
   <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;label02.Name" xml:space="preserve">
     <value>label02</value>
@@ -211,6 +211,15 @@
   <data name="&gt;&gt;label02.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
+  <data name="&gt;&gt;checkBox_addZero.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label08.Text" xml:space="preserve">
     <value>Символ "°"</value>
   </data>
@@ -229,6 +238,9 @@
   <data name="&gt;&gt;label06.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
+  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 30</value>
+  </data>
   <data name="&gt;&gt;button_text.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -236,7 +248,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

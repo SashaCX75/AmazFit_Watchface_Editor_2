@@ -123,7 +123,4 @@
   <data name="label07.Text" xml:space="preserve">
     <value>"-" 符号</value>
   </data>
-  <data name="checkBox_addZero.Text" xml:space="preserve">
-    <value>跟随最低温度</value>
-  </data>
 </root>

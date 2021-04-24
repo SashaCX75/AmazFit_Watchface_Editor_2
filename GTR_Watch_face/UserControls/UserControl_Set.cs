@@ -219,7 +219,6 @@ namespace AmazFit_Watchface_2
             checkValue.Add("DND", checkBox_DND_Set.Checked);
 
             checkValue.Add("ShowTemperature", checkBox_WeatherSet_Temp.Checked);
-            checkValue.Add("ShowTemperatureMaxMin", checkBox_WeatherSet_MaxMinTemp.Checked);
 
         }
 
@@ -303,8 +302,6 @@ namespace AmazFit_Watchface_2
 
             bool showTemperature;
             checkValue.TryGetValue("ShowTemperature", out showTemperature);
-            bool showTemperatureMaxMin;
-            checkValue.TryGetValue("ShowTemperatureMaxMin", out showTemperatureMaxMin);
 
             try
             {
@@ -346,7 +343,6 @@ namespace AmazFit_Watchface_2
                 checkBox_DND_Set.Checked = DND;
 
                 checkBox_WeatherSet_Temp.Checked = showTemperature;
-                checkBox_WeatherSet_MaxMinTemp.Checked = showTemperatureMaxMin;
             }
             finally
             {
@@ -389,38 +385,33 @@ namespace AmazFit_Watchface_2
             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 29);
             numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
             numericUpDown_WeatherSet_MaxTemp.Value = rnd.Next(-25, 35) + 1;
-            numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+            numericUpDown_WeatherSet_MinTemp.Value = numericUpDown_WeatherSet_MaxTemp.Value - rnd.Next(3, 10);
 
 
             numericUp_UVindex_Set.Value = rnd.Next(0, 13);
             numericUpDown_AirQuality_Set.Value = rnd.Next(0, 650);
-            numericUpDown_Humidity_Set.Value = rnd.Next(0, 101);
+            numericUpDown_Humidity_Set.Value = rnd.Next(0, 100);
             numericUpDown_WindForce.Value = rnd.Next(0, 13);
-            numericUpDown_Altitude_Set.Value = rnd.Next(0, 13);
-            numericUpDown_AirPressure_Set.Value = rnd.Next(0, 13);
+            numericUpDown_Altitude_Set.Value = rnd.Next(0, 100);
+            numericUpDown_AirPressure_Set.Value = rnd.Next(800, 1200);
 
             checkBox_Bluetooth_Set.Checked = rnd.Next(2) == 0 ? false : true;
             checkBox_Alarm_Set.Checked = rnd.Next(2) == 0 ? false : true;
             checkBox_Lock_Set.Checked = rnd.Next(2) == 0 ? false : true;
             checkBox_DND_Set.Checked = rnd.Next(2) == 0 ? false : true;
 
-            checkBox_WeatherSet_Temp.Checked = rnd.Next(2) == 0 ? false : true;
-            checkBox_WeatherSet_MaxMinTemp.Checked = rnd.Next(2) == 0 ? false : true;
+            checkBox_WeatherSet_Temp.Checked = rnd.Next(7) == 0 ? false : true;
 
             setValue = false;
         }
 
         private void checkBox_WeatherSet_Temp_CheckedChanged(object sender, EventArgs e)
         {
-            numericUpDown_WeatherSet_Temp.Enabled = checkBox_WeatherSet_Temp.Checked;
-        }
-
-        private void checkBox_WeatherSet_MaxMinTemp_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_WeatherSet_MaxMinTemp.Checked;
+            bool b = checkBox_WeatherSet_Temp.Checked;
+            numericUpDown_WeatherSet_Temp.Enabled = b;
             numericUpDown_WeatherSet_MaxTemp.Enabled = b;
             numericUpDown_WeatherSet_MinTemp.Enabled = b;
-            //label21.Enabled = b;
         }
+
     }
 }
