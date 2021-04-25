@@ -143,6 +143,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Classes\PROGRAM_SETTINGS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\FormStrings.fr.Designer.cs">
+      <DependentUpon>FormStrings.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\FormStrings.it.Designer.cs">
+      <DependentUpon>FormStrings.it.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\FormStrings.zh.Designer.cs">
       <DependentUpon>FormStrings.zh.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -232,6 +242,9 @@
     <EmbeddedResource Include="Form1.es.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.fr.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -262,6 +275,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPreview.resx">
       <DependentUpon>FormPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.it.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.it.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\FormStrings.zh.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -295,6 +316,9 @@
     <EmbeddedResource Include="UserControls\UserControl_hand.es.resx">
       <DependentUpon>UserControl_hand.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_hand.fr.resx">
+      <DependentUpon>UserControl_hand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_hand.zh.resx">
       <DependentUpon>UserControl_hand.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +326,9 @@
       <DependentUpon>UserControl_icon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_icon.es.resx">
+      <DependentUpon>UserControl_icon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_icon.fr.resx">
       <DependentUpon>UserControl_icon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_icon.resx">
@@ -314,6 +341,9 @@
       <DependentUpon>UserControl_pictures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_pictures.es.resx">
+      <DependentUpon>UserControl_pictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_pictures.fr.resx">
       <DependentUpon>UserControl_pictures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_pictures.zh.resx">
@@ -337,6 +367,9 @@
     <EmbeddedResource Include="UserControls\UserControl_scaleCircle.es.resx">
       <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_scaleCircle.fr.resx">
+      <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleCircle.zh.resx">
       <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,6 +377,9 @@
       <DependentUpon>UserControl_scaleLinear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleLinear.es.resx">
+      <DependentUpon>UserControl_scaleLinear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_scaleLinear.fr.resx">
       <DependentUpon>UserControl_scaleLinear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleLinear.zh.resx">
@@ -355,6 +391,9 @@
     <EmbeddedResource Include="UserControls\UserControl_Set.es.resx">
       <DependentUpon>UserControl_Set.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_Set.fr.resx">
+      <DependentUpon>UserControl_Set.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Set.resx">
       <DependentUpon>UserControl_Set.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +403,12 @@
     <EmbeddedResource Include="UserControls\UserControl_Set.zh.resx">
       <DependentUpon>UserControl_Set.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont.en.resx">
+      <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont.fr.resx">
+      <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont.resx">
       <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +416,9 @@
       <DependentUpon>UserControl_text.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text.es.resx">
+      <DependentUpon>UserControl_text.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_text.fr.resx">
       <DependentUpon>UserControl_text.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text.resx">
@@ -392,6 +440,9 @@
       <DependentUpon>UserControl_text_weather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text_weather.es.resx">
+      <DependentUpon>UserControl_text_weather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_text_weather.fr.resx">
       <DependentUpon>UserControl_text_weather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text_weather.resx">

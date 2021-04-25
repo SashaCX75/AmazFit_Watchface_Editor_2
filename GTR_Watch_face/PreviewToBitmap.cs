@@ -1628,12 +1628,14 @@ namespace AmazFit_Watchface_2
             userPanel_hand = userControl_hand_Weather;
             userPanel_scaleCircle = userControl_scaleCircle_Weather;
             userPanel_scaleLinear = userControl_scaleLinear_Weather;
+            bool AvailabilityIcon = false;
 
             // погода картинками
             if (userPanel_pictures_weather.checkBox_pictures_Use.Checked)
             {
                 if (userPanel_pictures_weather.comboBoxGetSelectedIndexImage() >= 0)
                 {
+                    AvailabilityIcon = true;
                     NumericUpDown numericUpDownX = userPanel_pictures_weather.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = userPanel_pictures_weather.numericUpDown_picturesY;
                     //NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
@@ -1770,7 +1772,8 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
                     else if (imageError_index >= 0)
                     {
@@ -1821,9 +1824,10 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1878,9 +1882,10 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -5053,8 +5058,9 @@ namespace AmazFit_Watchface_2
         /// <param name="image_minus_index">Символ "-"</param>
         /// <param name="separator_index">Символ разделителя (единиц измерения)</param>
         /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        /// <param name="AvailabilityIcon">Наличие иконки погоды</param>
         private int Draw_weather_text(Graphics graphics, int image_index, int x, int y, int spacing,
-            int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder)
+            int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder, bool AvailabilityIcon)
         {
             int result = 0;
             Logger.WriteLine("* Draw_weather_text");
@@ -5089,10 +5095,10 @@ namespace AmazFit_Watchface_2
             }
 
             int DateLenght = widthD * 3 + widthM + widthCF +1;
-            if (alignment == 2) DateLenght = DateLenght - widthCF;
-            if (spacing > 0) DateLenght = DateLenght + spacing + spacing;
-            if (widthM > 0) DateLenght = DateLenght + spacing;
-            if (widthCF > 0 && alignment != 2) DateLenght = DateLenght + spacing;
+            if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - widthCF;
+            if (spacing > 0) DateLenght = DateLenght + 4*spacing;
+            if (widthM == 0) DateLenght = DateLenght - spacing;
+            if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - spacing;
 
             int DateLenghtReal = 0;
             Logger.WriteLine("DateLenght");
