@@ -218,4 +218,46 @@
   <data name="button_SystemFont.Text" xml:space="preserve">
     <value>System font</value>
   </data>
+  <data name="checkBox_SystemFont_addZero.Text" xml:space="preserve">
+    <value>Add leading zero</value>
+  </data>
+  <data name="checkBox_SystemFont_unit.Text" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="checkBox_SystemFont_Use.Text" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="label03.Text" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="label04.Text" xml:space="preserve">
+    <value>Spacing</value>
+  </data>
+  <data name="label07.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste coordinate Y</value>
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste coordinate X</value>
+  </data>
+  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
 </root>

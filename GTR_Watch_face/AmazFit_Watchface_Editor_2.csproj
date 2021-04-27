@@ -245,6 +245,9 @@
     <EmbeddedResource Include="Form1.fr.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.it.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -319,6 +322,9 @@
     <EmbeddedResource Include="UserControls\UserControl_hand.fr.resx">
       <DependentUpon>UserControl_hand.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_hand.it.resx">
+      <DependentUpon>UserControl_hand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_hand.zh.resx">
       <DependentUpon>UserControl_hand.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +335,9 @@
       <DependentUpon>UserControl_icon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_icon.fr.resx">
+      <DependentUpon>UserControl_icon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_icon.it.resx">
       <DependentUpon>UserControl_icon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_icon.resx">
@@ -344,6 +353,9 @@
       <DependentUpon>UserControl_pictures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_pictures.fr.resx">
+      <DependentUpon>UserControl_pictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_pictures.it.resx">
       <DependentUpon>UserControl_pictures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_pictures.zh.resx">
@@ -370,6 +382,9 @@
     <EmbeddedResource Include="UserControls\UserControl_scaleCircle.fr.resx">
       <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_scaleCircle.it.resx">
+      <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleCircle.zh.resx">
       <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +397,9 @@
     <EmbeddedResource Include="UserControls\UserControl_scaleLinear.fr.resx">
       <DependentUpon>UserControl_scaleLinear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_scaleLinear.it.resx">
+      <DependentUpon>UserControl_scaleLinear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleLinear.zh.resx">
       <DependentUpon>UserControl_scaleLinear.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +410,9 @@
       <DependentUpon>UserControl_Set.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Set.fr.resx">
+      <DependentUpon>UserControl_Set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_Set.it.resx">
       <DependentUpon>UserControl_Set.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Set.resx">
@@ -409,6 +430,9 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont.fr.resx">
       <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont.it.resx">
+      <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont.resx">
       <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
     </EmbeddedResource>
@@ -421,11 +445,15 @@
     <EmbeddedResource Include="UserControls\UserControl_text.fr.resx">
       <DependentUpon>UserControl_text.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_text.it.resx">
+      <DependentUpon>UserControl_text.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text.resx">
       <DependentUpon>UserControl_text.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_hand.resx">
       <DependentUpon>UserControl_hand.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleCircle.resx">
       <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
@@ -443,6 +471,9 @@
       <DependentUpon>UserControl_text_weather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text_weather.fr.resx">
+      <DependentUpon>UserControl_text_weather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_text_weather.it.resx">
       <DependentUpon>UserControl_text_weather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text_weather.resx">

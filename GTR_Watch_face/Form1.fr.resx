@@ -139,7 +139,7 @@
     <value>Afficher la zone de raccourci</value>
   </data>
   <data name="checkBox_crop.Text" xml:space="preserve">
-    <value>Recardre l'image pour l'adapter à l'écran (peut ralentir le programme)</value>
+    <value>Recadre l'image pour l'adapter à l'écran (peut ralentir le programme)</value>
   </data>
   <data name="checkBox_border.Text" xml:space="preserve">
     <value>Encadrer les objets alignés</value>
@@ -264,6 +264,12 @@
   </data>
   <data name="radioButton_Background_image.Text" xml:space="preserve">
     <value>Image</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Apperçu:</value>
   </data>
   <data name="tabPage_Background.Text" xml:space="preserve">
     <value>Arrière-plan</value>
@@ -434,8 +440,27 @@
   <data name="checkBox_Second_Use.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label522.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label522.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label522.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label522.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label523.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label523.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label523.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label523.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -467,6 +492,15 @@
   <data name="comboBox_Second_alignment.Items2" xml:space="preserve">
     <value>Centre</value>
   </data>
+  <data name="label530.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label530.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label530.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label530.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
@@ -494,8 +528,26 @@
   <data name="checkBox_Minute_Use.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
+  <data name="label512.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label512.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label512.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label512.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label513.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label513.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label513.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label513.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -527,6 +579,15 @@
   <data name="comboBox_Minute_alignment.Items2" xml:space="preserve">
     <value>Centre</value>
   </data>
+  <data name="label520.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label520.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label520.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label520.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
@@ -554,8 +615,26 @@
   <data name="checkBox_Hour_Use.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
+  <data name="label502.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label502.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label502.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label502.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label511.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label511.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label511.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label511.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -581,6 +660,15 @@
   <data name="comboBox_Hour_alignment.Items2" xml:space="preserve">
     <value>Centre</value>
   </data>
+  <data name="label507.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label507.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label507.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label507.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
@@ -605,8 +693,26 @@
   <data name="label561.Text" xml:space="preserve">
     <value>Aiguille des secondes</value>
   </data>
+  <data name="label562.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label562.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label562.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label562.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label567.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label567.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label567.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label567.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -629,8 +735,26 @@
   <data name="label550.Text" xml:space="preserve">
     <value>Aiguille des minutes</value>
   </data>
+  <data name="label551.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label551.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label551.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label551.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label556.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label556.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label556.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label556.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -653,8 +777,26 @@
   <data name="label536.Text" xml:space="preserve">
     <value>Aiguille des heures</value>
   </data>
+  <data name="label537.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label537.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label537.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label537.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label542.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label542.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label542.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label542.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -689,8 +831,26 @@
   <data name="label617.Text" xml:space="preserve">
     <value>Image indicateur</value>
   </data>
+  <data name="label618.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label618.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label618.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label618.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label623.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label623.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label623.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label623.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -698,11 +858,32 @@
   <data name="label624.Text" xml:space="preserve">
     <value>Angle de début</value>
   </data>
+  <data name="label625.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
+  </data>
   <data name="label625.Text" xml:space="preserve">
     <value>Angle de fin</value>
   </data>
+  <data name="label714.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label714.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 178</value>
+  </data>
+  <data name="label714.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
   <data name="label714.Text" xml:space="preserve">
     <value>Coordonnées image de fond</value>
+  </data>
+  <data name="label717.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label717.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 178</value>
+  </data>
+  <data name="label717.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
   </data>
   <data name="label717.Text" xml:space="preserve">
     <value>Image de fond</value>
@@ -731,6 +912,15 @@
   <data name="checkBox_Day_add_zero.Text" xml:space="preserve">
     <value>Ajouter les zéros </value>
   </data>
+  <data name="label585.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label585.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label585.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label585.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
@@ -743,8 +933,26 @@
   <data name="comboBox_Day_alignment.Items2" xml:space="preserve">
     <value>Centre</value>
   </data>
+  <data name="label577.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label577.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label577.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label577.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label578.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label578.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label578.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label578.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -773,8 +981,26 @@
   <data name="tabPage_Day.Text" xml:space="preserve">
     <value>Jour</value>
   </data>
+  <data name="label706.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label706.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 178</value>
+  </data>
+  <data name="label706.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
   <data name="label706.Text" xml:space="preserve">
     <value>Coordonnées image de fond</value>
+  </data>
+  <data name="label709.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label709.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 178</value>
+  </data>
+  <data name="label709.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
   </data>
   <data name="label709.Text" xml:space="preserve">
     <value>Image de fond</value>
@@ -784,6 +1010,9 @@
   </data>
   <data name="checkBox_Month_hand_Use.Text" xml:space="preserve">
     <value>Activer</value>
+  </data>
+  <data name="label626.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
   </data>
   <data name="label626.Text" xml:space="preserve">
     <value>Angle de fin</value>
@@ -800,8 +1029,26 @@
   <data name="label632.Text" xml:space="preserve">
     <value>Image indicateur</value>
   </data>
+  <data name="label633.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label633.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label633.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label633.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label638.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label638.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label638.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label638.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -830,6 +1077,15 @@
   <data name="checkBox_Month_add_zero.Text" xml:space="preserve">
     <value>Ajouter les zéros </value>
   </data>
+  <data name="label596.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label596.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label596.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label596.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
@@ -842,8 +1098,26 @@
   <data name="comboBox_Month_alignment.Items2" xml:space="preserve">
     <value>Centre</value>
   </data>
+  <data name="label588.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label588.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label588.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label588.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label589.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label589.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label589.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label589.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -881,6 +1155,15 @@
   <data name="checkBox_Month_pictures_Use.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
+  <data name="label614.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label614.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label614.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label614.Text" xml:space="preserve">
     <value>Première image</value>
   </data>
@@ -914,6 +1197,15 @@
   <data name="checkBox_Year_add_zero.Text" xml:space="preserve">
     <value>Année sur 2 digits</value>
   </data>
+  <data name="label607.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label607.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label607.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label607.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
@@ -926,8 +1218,26 @@
   <data name="comboBox_Year_alignment.Items2" xml:space="preserve">
     <value>Centre</value>
   </data>
+  <data name="label599.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label599.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label599.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label599.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label600.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label600.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label600.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label600.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -950,8 +1260,26 @@
   <data name="tabPage_Year.Text" xml:space="preserve">
     <value>Année</value>
   </data>
+  <data name="label710.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label710.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 178</value>
+  </data>
+  <data name="label710.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
   <data name="label710.Text" xml:space="preserve">
     <value>Coordonnées image de fond</value>
+  </data>
+  <data name="label713.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label713.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 178</value>
+  </data>
+  <data name="label713.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
   </data>
   <data name="label713.Text" xml:space="preserve">
     <value>Image de fond</value>
@@ -961,6 +1289,9 @@
   </data>
   <data name="checkBox_DOW_hand_Use.Text" xml:space="preserve">
     <value>Activer</value>
+  </data>
+  <data name="label643.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
   </data>
   <data name="label643.Text" xml:space="preserve">
     <value>Angle de fin</value>
@@ -977,8 +1308,26 @@
   <data name="label649.Text" xml:space="preserve">
     <value>Image indicateur</value>
   </data>
+  <data name="label650.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label650.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label650.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label650.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label655.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label655.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label655.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label655.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -997,6 +1346,15 @@
   </data>
   <data name="label639.Text" xml:space="preserve">
     <value>Coordonnées</value>
+  </data>
+  <data name="label640.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label640.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label640.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
   </data>
   <data name="label640.Text" xml:space="preserve">
     <value>Première image</value>
@@ -1165,7 +1523,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAARwBEQEcAREBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAATQBEQE0AREBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1289,8 +1647,26 @@
   <data name="label306.Text" xml:space="preserve">
     <value>Coordonnées</value>
   </data>
+  <data name="label307.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label307.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label307.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label307.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label308.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label308.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label308.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label308.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -1306,6 +1682,15 @@
   </data>
   <data name="label314.Text" xml:space="preserve">
     <value>Alignement</value>
+  </data>
+  <data name="label315.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label315.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label315.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
   </data>
   <data name="label315.Text" xml:space="preserve">
     <value>Unité</value>
@@ -1346,8 +1731,26 @@
   <data name="label317.Text" xml:space="preserve">
     <value>Coordonnées</value>
   </data>
+  <data name="label318.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label318.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label318.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label318.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label319.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label319.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label319.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label319.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -1363,6 +1766,15 @@
   </data>
   <data name="label325.Text" xml:space="preserve">
     <value>Alignement</value>
+  </data>
+  <data name="label326.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label326.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label326.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
   </data>
   <data name="label326.Text" xml:space="preserve">
     <value>Unité</value>
@@ -1395,10 +1807,28 @@
     <value>Coordonnées centre de rotation</value>
   </data>
   <data name="label343.Text" xml:space="preserve">
-    <value>Minutes</value>
+    <value>Aiguille des minutes</value>
+  </data>
+  <data name="label344.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label344.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label344.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
   </data>
   <data name="label344.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label349.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label349.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label349.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label349.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -1422,10 +1852,28 @@
     <value>Coordonnées centre de rotation</value>
   </data>
   <data name="label354.Text" xml:space="preserve">
-    <value>Heures</value>
+    <value>Aiguille des heures</value>
+  </data>
+  <data name="label357.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label357.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label357.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
   </data>
   <data name="label357.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label362.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label362.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label362.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label362.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -1448,8 +1896,26 @@
   <data name="checkBox_Day_hand_Use_AOD.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
+  <data name="label363.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label363.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 178</value>
+  </data>
+  <data name="label363.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
   <data name="label363.Text" xml:space="preserve">
     <value>Coordonnées image de fond</value>
+  </data>
+  <data name="label366.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 178</value>
+  </data>
+  <data name="label366.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
   </data>
   <data name="label366.Text" xml:space="preserve">
     <value>Image de fond</value>
@@ -1463,14 +1929,35 @@
   <data name="label371.Text" xml:space="preserve">
     <value>Image indicateur</value>
   </data>
+  <data name="label372.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label372.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label372.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label372.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label377.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label377.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label377.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label377.Text" xml:space="preserve">
     <value>Image centrale</value>
   </data>
   <data name="label378.Text" xml:space="preserve">
     <value>Angle de début</value>
+  </data>
+  <data name="label379.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
   </data>
   <data name="label379.Text" xml:space="preserve">
     <value>Angle de fin</value>
@@ -1517,11 +2004,38 @@
   <data name="label381.Text" xml:space="preserve">
     <value>Séparateur</value>
   </data>
+  <data name="label382.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label382.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label382.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label382.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
+  <data name="label383.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label383.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label383.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label383.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label384.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label384.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label384.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label384.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -1553,17 +2067,38 @@
   <data name="checkBox_Month_hand_Use_AOD.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
+  <data name="label391.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label391.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 178</value>
+  </data>
+  <data name="label391.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
   <data name="label391.Text" xml:space="preserve">
     <value>Coordonnées image de fond</value>
+  </data>
+  <data name="label394.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label394.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 178</value>
+  </data>
+  <data name="label394.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
   </data>
   <data name="label394.Text" xml:space="preserve">
     <value>Image de fond</value>
   </data>
+  <data name="label395.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
+  </data>
   <data name="label395.Text" xml:space="preserve">
-    <value>Angle de début</value>
+    <value>Angle de fin</value>
   </data>
   <data name="label396.Text" xml:space="preserve">
-    <value>Angle de fin</value>
+    <value>Angle de début</value>
   </data>
   <data name="label397.Text" xml:space="preserve">
     <value>Décalage centre de rotation</value>
@@ -1574,8 +2109,26 @@
   <data name="label401.Text" xml:space="preserve">
     <value>Image indicateur</value>
   </data>
+  <data name="label402.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label402.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label402.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label402.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label416.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label416.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label416.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label416.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -1622,11 +2175,38 @@
   <data name="label418.Text" xml:space="preserve">
     <value>Séparateur</value>
   </data>
+  <data name="label419.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label419.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label419.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
   <data name="label419.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
+  <data name="label420.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label420.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label420.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label420.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label421.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label421.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label421.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label421.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -1660,6 +2240,15 @@
   </data>
   <data name="label428.Text" xml:space="preserve">
     <value>Coordonnées</value>
+  </data>
+  <data name="label429.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label429.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label429.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
   </data>
   <data name="label429.Text" xml:space="preserve">
     <value>Première image</value>
@@ -1706,11 +2295,32 @@
   <data name="label433.Text" xml:space="preserve">
     <value>Séparateur</value>
   </data>
+  <data name="label434.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
   <data name="label434.Text" xml:space="preserve">
     <value>Unité</value>
   </data>
+  <data name="label435.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label435.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label435.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="label435.Text" xml:space="preserve">
     <value>Première image</value>
+  </data>
+  <data name="label436.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label436.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label436.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="label436.Text" xml:space="preserve">
     <value>Coordonnées des unités</value>
@@ -1742,17 +2352,38 @@
   <data name="checkBox_DOW_hand_Use_AOD.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
+  <data name="label443.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label443.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 178</value>
+  </data>
+  <data name="label443.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
   <data name="label443.Text" xml:space="preserve">
     <value>Coordonnées image de fond</value>
+  </data>
+  <data name="label446.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label446.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 178</value>
+  </data>
+  <data name="label446.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
   </data>
   <data name="label446.Text" xml:space="preserve">
     <value>Image de fond</value>
   </data>
+  <data name="label447.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 110</value>
+  </data>
   <data name="label447.Text" xml:space="preserve">
-    <value>Angle de début</value>
+    <value>Angle de fin</value>
   </data>
   <data name="label448.Text" xml:space="preserve">
-    <value>Angle de fin</value>
+    <value>Angle de début</value>
   </data>
   <data name="label449.Text" xml:space="preserve">
     <value>Décalage centre de rotation</value>
@@ -1763,8 +2394,26 @@
   <data name="label453.Text" xml:space="preserve">
     <value>Image indicateur</value>
   </data>
+  <data name="label454.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label454.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 110</value>
+  </data>
+  <data name="label454.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
   <data name="label454.Text" xml:space="preserve">
     <value>Coordonnées image centrale</value>
+  </data>
+  <data name="label459.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label459.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 110</value>
+  </data>
+  <data name="label459.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="label459.Text" xml:space="preserve">
     <value>Image centrale</value>
@@ -1786,6 +2435,15 @@
   </data>
   <data name="label460.Text" xml:space="preserve">
     <value>Coordonnées</value>
+  </data>
+  <data name="label461.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label461.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label461.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
   </data>
   <data name="label461.Text" xml:space="preserve">
     <value>Première image</value>
@@ -1931,6 +2589,9 @@
   <data name="tabPageConverting.Text" xml:space="preserve">
     <value>Conversion</value>
   </data>
+  <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 286</value>
+  </data>
   <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 13</value>
   </data>
@@ -1972,6 +2633,9 @@
   </data>
   <data name="checkBox_JsonWarnings.Text" xml:space="preserve">
     <value>Afficher un avertissement lors de la sauvegarde du fichier JSON</value>
+  </data>
+  <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 289</value>
   </data>
   <data name="label356.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>
@@ -2103,7 +2767,7 @@
     <value>Outil pour compresser / décompresser les fichiers bin :</value>
   </data>
   <data name="label409.Text" xml:space="preserve">
-    <value>Ce programme est un éditeur graphique de fichiers de paramètre .json pour Hamazfit GTR2, GTS2 et T-Rex Pro. Il utilise des logiciels tiers qui permettent d'exploiter les fichiers bin.</value>
+    <value>Ce programme est un éditeur graphique de fichiers de paramètre .json pour Amazfit GTR2, GTS2 et T-Rex Pro. Il utilise des logiciels tiers qui permettent d'exploiter les fichiers bin.</value>
   </data>
   <data name="label407.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 13</value>

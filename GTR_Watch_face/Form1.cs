@@ -85,6 +85,14 @@ namespace AmazFit_Watchface_2
                     {
                         Program_Settings.language = "Español";
                     }
+                    if (language == "fr")
+                    {
+                        Program_Settings.language = "French";
+                    }
+                    if (language == "it")
+                    {
+                        Program_Settings.language = "Italiano";
+                    }
                     if (language == "zh")
                     {
                         Program_Settings.language = "Chinese/简体中文";

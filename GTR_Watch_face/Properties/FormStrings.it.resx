@@ -121,10 +121,10 @@
     <value>Seleziona immagine</value>
   </data>
   <data name="Dialog_Title_Pack" xml:space="preserve">
-    <value>Seleziona file impostazioni</value>
+    <value>Seleziona file JSON</value>
   </data>
   <data name="Dialog_Title_PackUnpack" xml:space="preserve">
-    <value>Percorso programma compilazione</value>
+    <value>Percorso programma di compilazione file</value>
   </data>
   <data name="Dialog_Title_PreviewStates" xml:space="preserve">
     <value>Seleziona file impostazioni anteprima </value>
@@ -136,13 +136,7 @@
     <value>Salva anteprima</value>
   </data>
   <data name="Dialog_Title_Unpack" xml:space="preserve">
-    <value>Seleziona file watch face</value>
-  </data>
-  <data name="File_ReadMy" xml:space="preserve">
-    <value>\Manual\readme_en.chm</value>
-  </data>
-  <data name="File_ReadMy_Start" xml:space="preserve">
-    <value>quick_guide.htm</value>
+    <value>Seleziona watchface</value>
   </data>
   <data name="FilterBin" xml:space="preserve">
     <value>File binario (*.bin)|*.bin</value>
@@ -163,28 +157,28 @@
     <value>Anteprima [X =</value>
   </data>
   <data name="Message_bigFile_Caption" xml:space="preserve">
-    <value>Dimensione file eccessiva</value>
+    <value>Dimensione del file eccessiva</value>
   </data>
   <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
-    <value>Attenzione! Il file decompresso è maggiore di 1.95MB.</value>
+    <value>Il file decompresso è maggiore di 1,95MB.</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
-    <value>Attenzione! Il file decompresso è maggiore di 1.5MB.</value>
+    <value>Il file decompresso è maggiore di 1,55MB.</value>
   </data>
   <data name="Message_bigFile_Text1_trex" xml:space="preserve">
-    <value>Attenzione! Il file decompresso è maggiore di 5.5MB.</value>
+    <value>Il file decompresso è maggiore di 5,5MB.</value>
   </data>
   <data name="Message_bigFile_Text2" xml:space="preserve">
-    <value>La watchface potrebbe non funzionare correttamente</value>
+    <value>La watchface potrebbe non funzionare correttamente.</value>
   </data>
   <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
-    <value>È stata create una nuova watch face.</value>
+    <value>È stata creata una nuova watchface.</value>
   </data>
   <data name="Message_CopyCoord" xml:space="preserve">
     <value>Coordinate copiate</value>
   </data>
   <data name="Message_ErrorImage_Text1" xml:space="preserve">
-    <value>Alcune immagini potrebbero causare degli errori (</value>
+    <value>Alcune immagini causano degli errori (</value>
   </data>
   <data name="Message_ErrorImage_Text2" xml:space="preserve">
     <value>Vuoi provare a risolverli?</value>
@@ -193,103 +187,106 @@
     <value>Errore</value>
   </data>
   <data name="Message_error_Image_Text1" xml:space="preserve">
-    <value>Impossibile aprire l'immagine</value>
+    <value>Non è possibile aprire l'immagine:</value>
   </data>
   <data name="Message_error_Image_Text2" xml:space="preserve">
-    <value>Non hai i permessi per leggere il file, oppure il file è danneggiato.</value>
+    <value>Non hai i permessi per leggere il file oppure il file è danneggiato.</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
     <value>File non trovato</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
-    <value>Via [</value>
+    <value>Il percorso [</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
-    <value>] allo strumento di decompilazione/compilazione è errato. </value>
+    <value>] dello strumento di compilazione/decompilazione è errato.</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
-    <value>Specifica il corretto percorso del programma di decompilazione/compilazione</value>
+    <value>Selezionare il percorso corretto per lo strumento di compilazione/decompilazione.</value>
   </data>
   <data name="Message_error_respackerPath_Text1" xml:space="preserve">
-    <value>Non sono presenti i componenti richiesti dal programma</value>
+    <value>Mancano componenti necessari per il corretto funzionamento del programma.</value>
   </data>
   <data name="Message_error_respackerPath_Text2" xml:space="preserve">
-    <value>Nessun programma di compressione trovato nel percorso</value>
+    <value>Non è stato trovato lo strumento di compressione dei file bin nel percorso [</value>
   </data>
   <data name="Message_error_respackerPath_Text3" xml:space="preserve">
-    <value>Verifica percorso del programma di compressione file bin </value>
+    <value>Verifica il percorso dello strumento di compressione dei file bin.</value>
   </data>
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
-    <value>Il percorso del programma non può contenere spazi. È consigliabile copiare il programma nella cartella principale del dsico.</value>
+    <value>Il percorso del programma non può contenere spazi. Si consiglia di posizionare il programma nella cartella principale del dsico.</value>
   </data>
   <data name="Message_GoToFile_Caption" xml:space="preserve">
     <value>Vai al file</value>
   </data>
   <data name="Message_GoToFile_Text" xml:space="preserve">
-    <value>Vuoi andare al file?</value>
+    <value>Vuoi aprire il file?</value>
   </data>
   <data name="Message_JsonError_Text" xml:space="preserve">
-    <value>File JSON non valido</value>
+    <value>File JSON non valido.</value>
   </data>
   <data name="Message_JsonReadError_Text" xml:space="preserve">
-    <value>Errore lettura file JSON</value>
+    <value>Errore di lettura file JSON.</value>
   </data>
   <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
-    <value>Download impostazioni anteprima</value>
+    <value>Carica valori</value>
   </data>
   <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
-    <value>Vuoi scaricare un file esistente con una serie di impostazioni anteprima (PreviewStates.json)?</value>
+    <value>Caricare un file esistente (PreviewStates.json) con i valori preimpostati?</value>
   </data>
   <data name="Message_openProject_Caption" xml:space="preserve">
     <value>Apertura progetto</value>
   </data>
   <data name="Message_openProject_Text" xml:space="preserve">
-    <value>Vuoi aprire un progetto decompilato?</value>
+    <value>Aprire un progetto decompresso?</value>
+  </data>
+  <data name="Message_PNGFromOne_Text" xml:space="preserve">
+    <value>I files PNG devono essere numerati a partire da 1.</value>
   </data>
   <data name="Message_PNGmissing_Text1" xml:space="preserve">
-    <value>I file PNG sono ordinati in maniera errata o manca qualche file</value>
+    <value>I file PNG non sono ordinati correttamente o manca qualche file.</value>
   </data>
   <data name="Message_PNGmissing_Text2" xml:space="preserve">
-    <value>Nomi dei ile PNG in ordine crescente</value>
+    <value>Assegna i nomi ai file PNG in ordine crescente.</value>
   </data>
   <data name="Message_Restart_Caption" xml:space="preserve">
     <value>Riavvia</value>
   </data>
   <data name="Message_Restart_Text1" xml:space="preserve">
-    <value>Per applicare le impostazioni riavvia il programma</value>
+    <value>Per applicare le impostazioni occorre riavviare il programma.</value>
   </data>
   <data name="Message_Restart_Text2" xml:space="preserve">
-    <value>Vuoi riavviare il programma?</value>
+    <value>Riavviare il programma?</value>
   </data>
   <data name="Message_SaveOnly1234_Text" xml:space="preserve">
-    <value>Per salvare i parametri preimpostati, imposta almeno il campo "Calorie" ad un valore diverso da "1234".</value>
+    <value>Per salvare i parametri occorre impostare il campo "Calorie" con un valore diverso da "1234".</value>
   </data>
   <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
     <value>Salva progetto</value>
   </data>
   <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
-    <value>Vuoi salvare le modifiche al progetto </value>
+    <value>Salvare le modifiche al progetto</value>
   </data>
   <data name="Message_Save_new_JSON" xml:space="preserve">
-    <value>Il progetto attuale non è ancora stato salvato. Vuoi salvare il progetto?</value>
+    <value>Il progetto corrente non è stato ancora salvato. Salvare il progetto?</value>
   </data>
   <data name="Message_Warning3clockHand_Text" xml:space="preserve">
-    <value>Se non si usano tutte e tre le lancette in un orologio analogico, potrebbero sorgere problemi.</value>
+    <value>Il mancato utilizzo di tutte le lancette dell'orologio analogico potrebbe causare problemi.</value>
   </data>
   <data name="Message_WarningActivityError" xml:space="preserve">
-    <value>È auspicabile indicare un'immagine per il simbolo di errore in assenza di queste attività.</value>
+    <value>Occorre utilizzare un'immagine per questo simbolo per indicare l'assenza di attività.</value>
   </data>
   <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
-    <value>Il numero di elementi per l'animazione non può essere  superiore a 4.</value>
+    <value>Il numero di elementi per l'animazione non può essere superiore a 4.</value>
   </data>
   <data name="Message_WarningAnimationLastImage" xml:space="preserve">
-    <value>L'immagine per l'animazione non deve essere l'ultima nell'elenco delle immagini.</value>
+    <value>L'immagine per l'animazione non può essere l'ultima nell'elenco delle immagini.</value>
   </data>
   <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
-    <value>Per visualizzare la carica della batteria non è consigliabile usare più di 10 immagini .</value>
+    <value>È consigliabile non utilizzare più di 10 immagini per la carica della batteria.</value>
   </data>
   <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
-    <value>Non è consigliabile usare il segnmento e l'indicatore allo stesso tempo per lo stesso tipo di valore. Questo potrebbe causare problemi !</value>
+    <value>Non è consigliabile utilizzare le immagini e l'indicatore di avanzamento per lo stesso tipo di valore. Questo potrebbe causare anomalie nella visualizzazione.</value>
   </data>
   <data name="Message_WarningConverting_Text1" xml:space="preserve">
     <value>Cartella </value>
@@ -298,40 +295,40 @@
     <value> esiste già. Vuoi sostituirlo?</value>
   </data>
   <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
-    <value>La visualizzazione della data in blocchi separati non funziona insieme alla visualizzazione della data su una riga</value>
+    <value>La visualizzazione della data in blocchi separati non funziona insieme alla visualizzazione della data su una riga.</value>
   </data>
   <data name="Message_WarningDistanceSuffix" xml:space="preserve">
-    <value>Non è consigliato impostare la distanza senza suffisso</value>
+    <value>Non è consigliabile impostare la distanza senza il suffisso.</value>
   </data>
   <data name="Message_WarningMonthName" xml:space="preserve">
-    <value>La visualizzazione del numero mese potrebbe non funzionare insieme alla visualizzazione del nome del mese.</value>
+    <value>Non è possbile visualizzare contemporaneamente il numero del mese e il nome del mese.</value>
   </data>
   <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
-    <value>Non è consigliabile usare i minuti senza l'uso delle ore per la visualizzazione dell'orario in formato numerico </value>
+    <value>Non è consigliabile utilizzare i minuti senza utilizzare le ore quando si utilizza l'orario in formato digitale.</value>
   </data>
   <data name="Message_WarningOnlySec_Text" xml:space="preserve">
-    <value>Non è consigliabile usare i secondi senza usare ore e minuti per la visualizzazione dell'orario in formato numerico </value>
+    <value>Non è consigliabile utilizzare i secondi senza utilizzare le ore e i minuti quando si utilizza l'orario in formato digitale.</value>
   </data>
   <data name="Message_WarningPreview_Text1" xml:space="preserve">
     <value>Le dimensioni delle immagini per l'anteprima differiscono da quelle standard.</value>
   </data>
   <data name="Message_WarningPreview_Text2" xml:space="preserve">
-    <value>Vuoi usare dimensioni esistenti?</value>
+    <value>Utilizzare le dimensioni esistenti?</value>
   </data>
   <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
-    <value>Per visualizzare la frequenza cardiaca si consiglia di usare 6 segmenti .</value>
+    <value>Per visualizzare la frequenza cardiaca si consiglia di utilizzare 6 elementi.</value>
   </data>
   <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
-    <value>Il nome e il percorso del file non devono contenere spazi!</value>
+    <value>Il nome e il percorso del file non devono contenere spazi.</value>
   </data>
   <data name="Message_WarningTemperature_Text" xml:space="preserve">
-    <value>La visualizzazione della temperatura attuale potrebbe non funzionare senza la visualizzazione della temperatura diurna e notturna.</value>
+    <value>La  temperatura corrente potrebbe non funzionare correttamente se non si seleziona anche la temperatura notturna e diurna.</value>
   </data>
   <data name="Message_WarningTensOnes_Text" xml:space="preserve">
-    <value>Non sono supportati valori ImageIndex differenti per decine ed unità.</value>
+    <value>I valori di ImageIndex differenti per decine ed unità non sono supportati.</value>
   </data>
   <data name="Message_WarningWeatherError" xml:space="preserve">
-    <value>Se non ci sono dati di temperatura attuali l'immagine per il simbolo di errore potrebbe essere specificata in modo errato.</value>
+    <value>Quando non viene impostata l'immagine del simbolo di errore per la temperatura corrente, potrebbero essere visualizzati dati errati.</value>
   </data>
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>Attenzione</value>

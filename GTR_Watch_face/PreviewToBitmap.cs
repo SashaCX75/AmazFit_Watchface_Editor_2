@@ -4783,6 +4783,15 @@ namespace AmazFit_Watchface_2
             int alignment, int value, bool addZero, int value_lenght, int separator_index, bool BBorder,
             int ActivityType = 0)
         {
+            while (spacing > 127)
+            {
+                spacing = spacing - 255;
+            }
+            while (spacing < -127)
+            {
+                spacing = spacing + 255;
+            }
+
             int result = 0;
             Logger.WriteLine("* Draw_dagital_text");
             var src = new Bitmap(1, 1);
@@ -4909,7 +4918,15 @@ namespace AmazFit_Watchface_2
         {
             Logger.WriteLine("* Draw_dagital_text");
             value = Math.Round(value, 2, MidpointRounding.AwayFromZero);
-            var Digit = new Bitmap(ListImagesFullName[image_index]);
+            while (spacing > 127)
+            {
+                spacing = spacing - 255;
+            } 
+            while (spacing < -127)
+            {
+                spacing = spacing + 255;
+            }
+            //var Digit = new Bitmap(ListImagesFullName[image_index]);
             //var Delimit = new Bitmap(1, 1);
             //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
             string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
@@ -4961,18 +4978,31 @@ namespace AmazFit_Watchface_2
                 }
 
             }
+            if (separator_index >= 0 && separator_index < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[separator_index]);
+                DateLenghtReal = DateLenghtReal + src.Width + spacing;
+            }
             DateLenghtReal = DateLenghtReal - spacing;
+
 
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int width_separator = 0;
-            if (decimalPoint_index >= 0)
+            int DateLenght = 4 * width ;
+            if (spacing > 0) DateLenght = DateLenght + 3 * spacing;
+            if (decimalPoint_index >= 0 && decimalPoint_index < ListImagesFullName.Count)
             {
                 src = OpenFileStream(ListImagesFullName[decimalPoint_index]);
-                width_separator = src.Width + value_lenght; 
+                DateLenght = DateLenght + src.Width;
+                if (spacing > 0) DateLenght = DateLenght +  spacing;
             }
-            int DateLenght = width * value_lenght + spacing * (value_lenght -1) + width_separator;
+            if (separator_index >= 0 && separator_index < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[separator_index]);
+                DateLenght = DateLenght + src.Width;
+                if (spacing > 0) DateLenght = DateLenght + spacing;
+            }
 
             int PointX = 0;
             int PointY = y;
@@ -5062,6 +5092,14 @@ namespace AmazFit_Watchface_2
         private int Draw_weather_text(Graphics graphics, int image_index, int x, int y, int spacing,
             int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder, bool AvailabilityIcon)
         {
+            while (spacing > 127)
+            {
+                spacing = spacing - 255;
+            }
+            while (spacing < -127)
+            {
+                spacing = spacing + 255;
+            }
             int result = 0;
             Logger.WriteLine("* Draw_weather_text");
             var src = new Bitmap(1, 1);
