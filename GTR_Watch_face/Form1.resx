@@ -592,7 +592,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_PAI.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label619.ToolTip" xml:space="preserve">
     <value />
@@ -898,7 +898,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Stress_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label342.Parent" xml:space="preserve">
     <value>panel_Minute_hand_AOD</value>
@@ -1330,7 +1330,7 @@
     <value>tabPage_Background</value>
   </data>
   <data name="&gt;&gt;userControl_hand_AirQuality.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label716.Text" xml:space="preserve">
     <value>Y:</value>
@@ -1447,7 +1447,7 @@
     <value>127, 21</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_UVindex_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panel_Month_pictures.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1606,7 +1606,7 @@
     <value>label528</value>
   </data>
   <data name="&gt;&gt;userControl_text_Distance.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_PM_Y.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
@@ -2095,7 +2095,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Weather.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkBox_Minute_Use_AOD.Parent" xml:space="preserve">
     <value>panel_Minute_AOD</value>
@@ -2359,7 +2359,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_UVindex_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabControl1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -2863,7 +2863,7 @@
     <value>24</value>
   </data>
   <data name="&gt;&gt;userControl_hand_ActivityGoal.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_text_Stress_AOD.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -2893,7 +2893,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_AirPressure.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabPage_Day_AOD.Error" xml:space="preserve">
     <value />
@@ -3016,7 +3016,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Calories_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_text_Stress_AOD.Parent" xml:space="preserve">
     <value>tabPage_Stress_AOD</value>
@@ -3076,7 +3076,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_Steps.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_hand_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3277,7 +3277,7 @@
     <value>125, 15</value>
   </data>
   <data name="&gt;&gt;userControl_Set12.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_DOW_handX_offset.Location" type="System.Drawing.Point, System.Drawing">
     <value>296, 58</value>
@@ -3634,7 +3634,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_Calories.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comboBox_Hour_image_AOD.Parent" xml:space="preserve">
     <value>panel_Hour_AOD</value>
@@ -3712,7 +3712,7 @@
     <value>numericUpDown_DOW_handY_centr_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_text_UVindex_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBox_Day_Use.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -3781,7 +3781,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_StandUp_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label656.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3910,7 +3910,7 @@
     <value>checkBox_Month_hand_Use_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_WindForce_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label708.Text" xml:space="preserve">
     <value>Y:</value>
@@ -4342,7 +4342,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_weather_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comboBox_Month_image_AOD.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -5269,7 +5269,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Battery.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label349.ToolTip" xml:space="preserve">
     <value />
@@ -5344,7 +5344,7 @@
     <value>tabPage_PAI_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Stress.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label668.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5929,7 +5929,7 @@
     <value>99</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_HeartRate.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label402.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
@@ -5953,7 +5953,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_text_weather_Current_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label363.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -6217,7 +6217,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_FatBurning_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="radioButton_GTS2.Error" xml:space="preserve">
     <value />
@@ -6298,7 +6298,7 @@
     <value>label609</value>
   </data>
   <data name="&gt;&gt;userControl_hand_StandUp_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label628.Parent" xml:space="preserve">
     <value>panel_Month_hand</value>
@@ -6421,7 +6421,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_HeartRate_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="вставитьToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
@@ -6736,7 +6736,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_hand_AirQuality_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_DOW_handY_background.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -6760,7 +6760,7 @@
     <value>tabPageConverting</value>
   </data>
   <data name="&gt;&gt;userControl_hand_HeartRate.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Second_handX.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -7369,7 +7369,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_pictures_Altitude.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7420,7 +7420,7 @@
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;userControl_hand_ActivityGoal_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Stress.Parent" xml:space="preserve">
     <value>tabPage_Stress</value>
@@ -7473,8 +7473,11 @@
   <data name="userControl_scaleLinear_FatBurning_AOD.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="comboBox_Language.Items4" xml:space="preserve">
+    <value>French</value>
+  </data>
   <data name="&gt;&gt;userControl_text_Distance_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_MonthY_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
@@ -7667,7 +7670,7 @@
     <value>17, 13</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_PAI_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label_TranslateHelp.ToolTip" xml:space="preserve">
     <value />
@@ -7961,7 +7964,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_AirQuality.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comboBox_Year_alignment_AOD.Name" xml:space="preserve">
     <value>comboBox_Year_alignment_AOD</value>
@@ -8246,13 +8249,13 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_FatBurning_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label375.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_WindForce.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_Minute_spacing_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -8426,7 +8429,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;userControl_Set6.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Day_hand_imageBackground_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -8831,7 +8834,7 @@
     <value>panel_Hour_hand_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_WindForce_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label_preview_Y.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9050,7 +9053,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_AirPressure_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label363.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -9443,7 +9446,7 @@
     <value>335, 19</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Battery.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label545.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9488,7 +9491,7 @@
     <value>panel_Minute</value>
   </data>
   <data name="&gt;&gt;userControl_text_PAI_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label581.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
@@ -9530,7 +9533,7 @@
     <value>17, 13</value>
   </data>
   <data name="&gt;&gt;userControl_hand_FatBurning.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Calories.Name" xml:space="preserve">
     <value>userControl_scaleLinear_Calories</value>
@@ -9617,7 +9620,7 @@
     <value>numericUpDown_Minute_unitX_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_hand_PAI_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="groupBox_Lock.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -9974,7 +9977,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_Set2.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Month_alignment_AOD.Items1" xml:space="preserve">
     <value>По правому краю</value>
@@ -9986,7 +9989,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_FatBurning.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBox_Hour_Use.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 6</value>
@@ -10070,7 +10073,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;userControl_hand_UVindex_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Month_handY_AOD.Name" xml:space="preserve">
     <value>numericUpDown_Month_handY_AOD</value>
@@ -10322,7 +10325,7 @@
     <value>100</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Calories.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label372.Parent" xml:space="preserve">
     <value>panel_Day_hand_AOD</value>
@@ -10349,7 +10352,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Altitude_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBox_Year_add_zero_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 30</value>
@@ -10379,7 +10382,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_FatBurning.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label661.Name" xml:space="preserve">
     <value>label661</value>
@@ -10472,7 +10475,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_text_AirQuality.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_Minute_handY_offset_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -11415,7 +11418,7 @@
     <value>279, 60</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_AirQuality_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_PM_X_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -11550,7 +11553,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_text_weather_Max.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="panel_AM_PM.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -11691,7 +11694,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_ActivityGoal_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;button_Copy_Year_text_AOD.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11781,7 +11784,7 @@
     <value />
   </data>
   <data name="label414.Text" xml:space="preserve">
-    <value>stemcell, -GAMER-</value>
+    <value>stemcell, -GAMER-, kartoris82, pulse750</value>
   </data>
   <data name="userControl_text_weather_Current_AOD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -12081,7 +12084,7 @@
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Stress_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Hour_unit.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 21</value>
@@ -12276,7 +12279,7 @@
     <value>3, 58</value>
   </data>
   <data name="&gt;&gt;userControl_text_Humidity_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBox_Day_hand_Use_AOD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -12450,7 +12453,7 @@
     <value>143</value>
   </data>
   <data name="&gt;&gt;userControl_text_Steps.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabPage_Analog_time.Error" xml:space="preserve">
     <value />
@@ -12627,7 +12630,7 @@
     <value>69, 17</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_WindForce.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label316.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -12681,7 +12684,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_pictures_Steps.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label373.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
@@ -13242,7 +13245,7 @@
     <value>panel_Month_hand_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Battery.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_MonthX_AOD.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -13512,7 +13515,7 @@
     <value>3, 28</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Humidity_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabPage_Day.Name" xml:space="preserve">
     <value>tabPage_Day</value>
@@ -13659,7 +13662,7 @@
     <value>numericUpDown_DayY_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_Set7.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;radioButton_Settings_AfterUnpack_Dialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -13689,7 +13692,7 @@
     <value>numericUpDown_Month_picturesY_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_text_AirPressure_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_AM_image.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
@@ -13971,7 +13974,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_Stress.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Year_separator_AOD.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 184</value>
@@ -14097,7 +14100,7 @@
     <value>113</value>
   </data>
   <data name="label_TranslateHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 39</value>
+    <value>152, 65</value>
   </data>
   <data name="label669.ToolTip" xml:space="preserve">
     <value />
@@ -14178,7 +14181,7 @@
     <value>Время</value>
   </data>
   <data name="&gt;&gt;userControl_text_AirQuality_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label349.Name" xml:space="preserve">
     <value>label349</value>
@@ -14352,7 +14355,7 @@
     <value>label309</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_HeartRate_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -14841,7 +14844,7 @@
     <value>Top</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_StandUp_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_DOW_handX_background_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
@@ -14940,7 +14943,7 @@
     <value>12-часовой формат</value>
   </data>
   <data name="&gt;&gt;userControl_text_HeartRate.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Day_unit.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -15027,7 +15030,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_FatBurning.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_hand_FatBurning.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -15168,7 +15171,7 @@
     <value>X:</value>
   </data>
   <data name="&gt;&gt;userControl_Set3.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_pictures_UVindex_AOD.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -18288,7 +18291,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Humidity_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabPage_System.Size" type="System.Drawing.Size, System.Drawing">
     <value>427, 209</value>
@@ -18339,7 +18342,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Stress.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label645.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -18723,7 +18726,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Steps.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabPage_PAI_AOD.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -19092,7 +19095,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_text_weather_Current.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label419.Error" xml:space="preserve">
     <value />
@@ -19128,7 +19131,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_text_Altitude_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_scaleLinear_UVindex_AOD.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -19164,7 +19167,7 @@
     <value>10</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Weather_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_text_Steps.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -19239,7 +19242,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_PAI.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label322.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -19317,7 +19320,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Calories.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label362.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 96</value>
@@ -19425,7 +19428,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_StandUp.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label319.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 30</value>
@@ -19473,7 +19476,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_StandUp_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Second_unitX.Parent" xml:space="preserve">
     <value>panel_Second</value>
@@ -19806,7 +19809,7 @@
     <value>151</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_PAI.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_text_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -20208,7 +20211,7 @@
     <value>tabPageConverting</value>
   </data>
   <data name="&gt;&gt;userControl_text_Altitude.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_pictures_HeartRate_AOD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21042,7 +21045,7 @@
     <value>tabPage_Year</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Steps_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Background_color.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21087,7 +21090,7 @@
     <value>275, 12</value>
   </data>
   <data name="&gt;&gt;userControl_text_Battery_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label636.ZOrder" xml:space="preserve">
     <value>28</value>
@@ -21176,7 +21179,7 @@
 </value>
   </data>
   <data name="&gt;&gt;userControl_hand_AirPressure_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label639.Parent" xml:space="preserve">
     <value>panel_DOW_image</value>
@@ -21680,7 +21683,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_Set8.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="button_DOW_image_AOD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -22109,7 +22112,7 @@
     <value>124</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_UVindex.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label454.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -23015,7 +23018,7 @@
     <value>label455</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Calories_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label287.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -23156,7 +23159,7 @@
     <value>label415</value>
   </data>
   <data name="&gt;&gt;userControl_Set4.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label393.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -23177,7 +23180,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Steps_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="button_Month_hand.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 51</value>
@@ -23402,7 +23405,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Battery_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label380.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
@@ -23657,7 +23660,7 @@
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;userControl_text_Battery.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 13</value>
@@ -23846,7 +23849,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Humidity.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label524.Text" xml:space="preserve">
     <value>Y:</value>
@@ -24341,7 +24344,7 @@
     <value>panel_Minute_hand_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_text_weather_Min.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabPage_UVindex.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -24551,7 +24554,7 @@
     <value>256, 22</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Humidity.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label632.Name" xml:space="preserve">
     <value>label632</value>
@@ -24686,7 +24689,7 @@
     <value>25</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_AirPressure.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label516.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
@@ -24785,7 +24788,7 @@
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_Calories_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label286.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
@@ -25123,6 +25126,9 @@
   <data name="numericUpDown_Hour_handY_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_pictures_WindForce.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="userControl_scaleLinear_HeartRate_AOD.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
@@ -25430,7 +25436,7 @@
     <value>120, 196</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Battery_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label574.Text" xml:space="preserve">
     <value>Y:</value>
@@ -26209,7 +26215,7 @@
     <value>176, 130</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_StandUp.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="radioButton_Background_color.Text" xml:space="preserve">
     <value>Цвет</value>
@@ -26418,7 +26424,9 @@
   <data name="label_TranslateHelp.Text" xml:space="preserve">
     <value>Chinese - kyle208
 English - eliasf
-Español - Relojinteligente</value>
+Español - Relojinteligente
+French - joebar78
+Italiano - arlemm</value>
   </data>
   <data name="&gt;&gt;button_Year_hand.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -26427,7 +26435,7 @@ Español - Relojinteligente</value>
     <value>userControl_text_ActivityGoal_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_UVindex_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabPage_Edit.Parent" xml:space="preserve">
     <value>tabControl1</value>
@@ -26502,66 +26510,66 @@ Español - Relojinteligente</value>
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAegBEAHsAhABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
-        AUADAAEgAwABAQEAAQgGAAEIGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
-        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
-        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
-        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
-        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
-        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
-        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
-        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
-        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
-        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
-        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
-        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
-        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
-        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
-        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
-        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
-        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
-        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
-        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
-        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
-        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
-        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
-        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
-        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
-        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
-        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
-        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
-        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8JAAH/AQ4B/zsAAW0CAAEU
-        AQcBAAFtCQABDgIAAfIBDgHwKgABDgHrBAABEAETBAAB8gHxAQAB9AMAAewBFAEAAfEoAAETCA4B9wIA
-        AfECAAETAQ4BEAIAAewBAAERAf8nAAEPAQ4H7AFtAQABEwEAAREBQwH/AREB7AH/AgAB9AH/AQ4B8SQA
-        Af8MAAH/AgAB/wEAAfEDAAH/KQABQwEOAgABvAwAAQ4B8AEAAW0JAAEOIgABDwHsAUMBAAEOBwAB8gEA
-        AQ4BAAEOAQAB8QEAAf8BAAHwAgAB9AIAARUlAAFtBgAB7wEOAQ8BAAHtBAABbQEUBAAB/wIAAf8iAAIQ
-        AZIEAAG8AwABDgEQAW0B9AIAAQ4B6gEAAe8BDgIAAf8CAAH/AQ8BAAEOIQACbQG8AwAB7wEAARIBkgEO
-        BgAB8gEAAfQBAAIOARQBAAFtAQAB6wEPAfQlAAIOAewBDgHtAQ8BDgESBwABDgHvAgAB7wFtAfECAAEQ
-        ARIkAAH/AQAB9wETAQ4CbQEOCAABbQEOAQAB7wH0AwABvAHwAf8BAAHxIwACQwUAAQ4BbQcAAewBAAEP
-        AQ4BAAESAQACDgEAAUMBAAHyNAAB7AHqAQAB8wEOAwAB/wERAfEoAAHsEgABDjsAAQcBbQFDAg8BQwFt
-        AQcEAAHxEgABEAEAAfADAAH0Ag4B/wsAAf8JAAHzAW0B6gG8BP8BvAHqAW0B8wMAAfcRAAEPAZIBDgH/
-        AgABDwHvAQ4B/wQAAf8IAAH/BgAB8wESAe8B/wHwAewCFQHsAfAB/wHvARIB8wIAAe8EAAEHAQABFQoA
-        AfIBDgHtARABAAHsAUMB7AEUBQAC/wcAAv8FAAFtAe8B8gESBBACDwESAfIB7wFtAgAB7xIAAewBFQEP
-        Ae8BDgHzAQ4B/wYAAv8HAAL/AwABBwHqAf8BEgQQAQ8BDgHsAQ8BEwH/AeoBBwEAAe8FAAEHAQAB7wsA
-        AQ4BBwEAAfcBEQH3CAAC/wcAAv8CAAFtArwBDwMQAQ8BDgHsAQAB7AEPArwBbQEAAe8TAAERAW0BEAEH
-        AQ8KAAL/BwAC/wEAAUMB/wHrAQ8CEAEPAQ4B7AEAAewCDwHrAf8BQwEAAe8GAAEHAQAB9AgAAewBAAES
-        AQAB9AEOAfMBAAHyAe8IAAL/BwAB/wEAAQ4B/wEQBA8B7AEAAewDDwEQAf8BDgEAAe8IAAEQCAAB6gIR
-        ARABAAEOAe0CDgEAAfMIAAL/CAABDgH/ARADDwEOAQABEAQPARAB/wEOAQAB7wQABPIB8wgAAe8BQwIO
-        AQABEAEOAREBDgFtCgAC/wcAAREB/wFtAQ4CDwEOAQABFQMPAQ4BbQH/AREBAAHvEQAB9AEOAQ8CAAFt
-        AQ4BEg0AAv8GAAFtArwCDgEPAQ4BAAHsAg8CDgK8AW0UAAEUAREBbQH/AbwBAAH/BgAB/wEAAf8FAAL/
-        BQABBwHqAf8BFAMOAewBFQMOARQB/wHqAQcVAAHrAQ4B7wITCAAB/wcAAv8FAAFtAe8B8gEVBg4BFQHy
-        Ae8BbQQAAeoB9AGSBQAC/wkAAQcBEAEAAW0IAAL/AQAB/wUAAv8EAAHzARMB7wH/AbwBbQIPAW0BvAH/
-        Ae8BEwHzAQAB7AIAAfQGAAEPAUMB7QoAAQ4B7wEVAW0IAAL/BwAC/wQAAfMBbQESAbwE/wG8ARIBbQHz
-        AwAB8AH3Af8CAAT3Ae8BQwHtAvcB/wcAAQ4BAAEHAREZAAEHAW0BEAIOARABbQEHCAABDgYAAfcB8AoA
-        AeoCDgHxBQABQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEBFgAD/wEAAf8BHwH/BQAB/QGX
-        AfwBDgQAAfwB8wHJAQYEAAH4AQEBgQEGBAAB8AEAAYEBBgQAAbcB/AGOBQABkwH+AcgFAAHBAfwBEQEh
-        BAAB5QHgAXMBmQQAAQwB4QETASEEAAEMAQ8BiAEjBAAB4AEfAcwBZwQAAYABfwGTAYMEAAGbAT8BgQED
-        BAAB+wH/AckBRwQAAfsB/wH8AX8GAAHwAQ8CAAHjAYcBNgFaAcABAwE/Af4B4QGHARsBTAGAAQEBPAF+
-        AeEBDwENAYYBgAEBAT4BfgHwAQ8BBgHCAgACPgH4AR8BQwFgAQABIAE/AT4B+AE/AWEBsAEAAUABPwEe
-        AeABJwEwAdgBAAGAATwBHgHhAQMBWAFsAQEBAAE8AR4B4QEHAWwBNgEBAQABPwH+AeEBHwE2ARoBAQMA
-        AfABHwELAQwEAAH4AT8BTQGGAYABAQIAAfwBPwECAcIBgAEBAQQBAAH+AR8BQwFgAcABAwGEAQAB/gGf
-        AgAB8AEPAfcB5wH+AR8WAAs=
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
+        DQAAAk1TRnQBSQFMAgEBBgEAAaABEQGkAREBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wkAAf8BDgH/OwABbQIA
+        ARQBBwEAAW0JAAEOAgAB8gEOAfAqAAEOAesEAAEQARMEAAHyAfEBAAH0AwAB7AEUAQAB8SgAARMIDgH3
+        AgAB8QIAARMBDgEQAgAB7AEAAREB/ycAAQ8BDgfsAW0BAAETAQABEQFDAf8BEQHsAf8CAAH0Af8BDgHx
+        JAAB/wwAAf8CAAH/AQAB8QMAAf8pAAFDAQ4CAAG8DAABDgHwAQABbQkAAQ4iAAEPAewBQwEAAQ4HAAHy
+        AQABDgEAAQ4BAAHxAQAB/wEAAfACAAH0AgABFSUAAW0GAAHvAQ4BDwEAAe0EAAFtARQEAAH/AgAB/yIA
+        AhABkgQAAbwDAAEOARABbQH0AgABDgHqAQAB7wEOAgAB/wIAAf8BDwEAAQ4hAAJtAbwDAAHvAQABEgGS
+        AQ4GAAHyAQAB9AEAAg4BFAEAAW0BAAHrAQ8B9CUAAg4B7AEOAe0BDwEOARIHAAEOAe8CAAHvAW0B8QIA
+        ARABEiQAAf8BAAH3ARMBDgJtAQ4IAAFtAQ4BAAHvAfQDAAG8AfAB/wEAAfEjAAJDBQABDgFtBwAB7AEA
+        AQ8BDgEAARIBAAIOAQABQwEAAfI0AAHsAeoBAAHzAQ4DAAH/AREB8SgAAewSAAEOOwABBwFtAUMCDwFD
+        AW0BBwQAAfESAAEQAQAB8AMAAfQCDgH/CwAB/wkAAfMBbQHqAbwE/wG8AeoBbQHzAwAB9xEAAQ8BkgEO
+        Af8CAAEPAe8BDgH/BAAB/wgAAf8GAAHzARIB7wH/AfAB7AIVAewB8AH/Ae8BEgHzAgAB7wQAAQcBAAEV
+        CgAB8gEOAe0BEAEAAewBQwHsARQFAAL/BwAC/wUAAW0B7wHyARIEEAIPARIB8gHvAW0CAAHvEgAB7AEV
+        AQ8B7wEOAfMBDgH/BgAC/wcAAv8DAAEHAeoB/wESBBABDwEOAewBDwETAf8B6gEHAQAB7wUAAQcBAAHv
+        CwABDgEHAQAB9wERAfcIAAL/BwAC/wIAAW0CvAEPAxABDwEOAewBAAHsAQ8CvAFtAQAB7xMAAREBbQEQ
+        AQcBDwoAAv8HAAL/AQABQwH/AesBDwIQAQ8BDgHsAQAB7AIPAesB/wFDAQAB7wYAAQcBAAH0CAAB7AEA
+        ARIBAAH0AQ4B8wEAAfIB7wgAAv8HAAH/AQABDgH/ARAEDwHsAQAB7AMPARAB/wEOAQAB7wgAARAIAAHq
+        AhEBEAEAAQ4B7QIOAQAB8wgAAv8IAAEOAf8BEAMPAQ4BAAEQBA8BEAH/AQ4BAAHvBAAE8gHzCAAB7wFD
+        Ag4BAAEQAQ4BEQEOAW0KAAL/BwABEQH/AW0BDgIPAQ4BAAEVAw8BDgFtAf8BEQEAAe8RAAH0AQ4BDwIA
+        AW0BDgESDQAC/wYAAW0CvAIOAQ8BDgEAAewCDwIOArwBbRQAARQBEQFtAf8BvAEAAf8GAAH/AQAB/wUA
+        Av8FAAEHAeoB/wEUAw4B7AEVAw4BFAH/AeoBBxUAAesBDgHvAhMIAAH/BwAC/wUAAW0B7wHyARUGDgEV
+        AfIB7wFtBAAB6gH0AZIFAAL/CQABBwEQAQABbQgAAv8BAAH/BQAC/wQAAfMBEwHvAf8BvAFtAg8BbQG8
+        Af8B7wETAfMBAAHsAgAB9AYAAQ8BQwHtCgABDgHvARUBbQgAAv8HAAL/BAAB8wFtARIBvAT/AbwBEgFt
+        AfMDAAHwAfcB/wIABPcB7wFDAe0C9wH/BwABDgEAAQcBERkAAQcBbQEQAg4BEAFtAQcIAAEOBgAB9wHw
+        CgAB6gIOAfEFAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/AQAB/wEfAf8FAAH9
+        AZcB/AEOBAAB/AHzAckBBgQAAfgBAQGBAQYEAAHwAQABgQEGBAABtwH8AY4FAAGTAf4ByAUAAcEB/AER
+        ASEEAAHlAeABcwGZBAABDAHhARMBIQQAAQwBDwGIASMEAAHgAR8BzAFnBAABgAF/AZMBgwQAAZsBPwGB
+        AQMEAAH7Af8ByQFHBAAB+wH/AfwBfwYAAfABDwIAAeMBhwE2AVoBwAEDAT8B/gHhAYcBGwFMAYABAQE8
+        AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
+        AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
+        AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
+        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
 </value>
   </data>
   <data name="label579.Location" type="System.Drawing.Point, System.Drawing">
@@ -26805,7 +26813,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_Set9.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label354.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -27060,7 +27068,7 @@ Español - Relojinteligente</value>
     <value>3, 194</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_StandUp.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label599.ToolTip" xml:space="preserve">
     <value />
@@ -27165,7 +27173,7 @@ Español - Relojinteligente</value>
     <value>11</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Stress_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Month_unitY_AOD.Name" xml:space="preserve">
     <value>numericUpDown_Month_unitY_AOD</value>
@@ -27354,7 +27362,7 @@ Español - Relojinteligente</value>
     <value>120, 17</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_HeartRate.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="panel16.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -27405,7 +27413,7 @@ Español - Relojinteligente</value>
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_text_HeartRate_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_hand_Steps.Error" xml:space="preserve">
     <value />
@@ -27792,7 +27800,7 @@ Español - Relojinteligente</value>
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Stress.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label558.Location" type="System.Drawing.Point, System.Drawing">
     <value>352, 60</value>
@@ -28185,7 +28193,7 @@ Español - Relojinteligente</value>
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Weather.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_UVindex.Parent" xml:space="preserve">
     <value>tabPage_UVindex</value>
@@ -28392,7 +28400,7 @@ Español - Relojinteligente</value>
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_Set5.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="button_Hour_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>432, 23</value>
@@ -28644,7 +28652,7 @@ Español - Relojinteligente</value>
     <value>120, 3</value>
   </data>
   <data name="&gt;&gt;userControl_text_FatBurning_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label532.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -29004,7 +29012,7 @@ Español - Relojinteligente</value>
     <value>panel_Minute_hand</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_AirQuality_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBox_Hour_add_zero_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -29049,7 +29057,7 @@ Español - Relojinteligente</value>
     <value>137</value>
   </data>
   <data name="&gt;&gt;userControl_text_AirPressure.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="panel_Minute_hand.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -29910,7 +29918,7 @@ Español - Relojinteligente</value>
     <value>193, 128</value>
   </data>
   <data name="&gt;&gt;userControl_Set1.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBox_Second_follow.Location" type="System.Drawing.Point, System.Drawing">
     <value>275, 129</value>
@@ -29946,7 +29954,7 @@ Español - Relojinteligente</value>
     <value>4</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_FatBurning_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabPage_Analog_time_AOD.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -30570,7 +30578,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_AirQuality.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_DND_image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30588,7 +30596,7 @@ Español - Relojinteligente</value>
     <value>23</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Humidity.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_weather_AOD.Name" xml:space="preserve">
     <value>userControl_pictures_weather_AOD</value>
@@ -30858,7 +30866,7 @@ Español - Relojinteligente</value>
     <value>6</value>
   </data>
   <data name="&gt;&gt;userControl_text_PAI.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panel_Month_hand_AOD.Parent" xml:space="preserve">
     <value>tabPage_Month_AOD</value>
@@ -31125,7 +31133,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_StandUp.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label521.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
@@ -31365,7 +31373,7 @@ Español - Relojinteligente</value>
     <value>120, 58</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Humidity_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabPage_FatBurning.Text" xml:space="preserve">
     <value>Жиросжигание</value>
@@ -31377,7 +31385,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_Set11.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_scaleCircle_Altitude_AOD.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -31592,7 +31600,7 @@ Español - Relojinteligente</value>
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_hand_WindForce_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_scaleLinear_WindForce.Size" type="System.Drawing.Size, System.Drawing">
     <value>413, 23</value>
@@ -31736,7 +31744,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_WindForce_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_pictures_AirQuality_AOD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -31872,6 +31880,9 @@ Español - Relojinteligente</value>
   </data>
   <data name="userControl_scaleCircle_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="userControl_pictures_WindForce_AOD.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="panel_Day_hand.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 50</value>
@@ -32105,7 +32116,7 @@ Español - Relojinteligente</value>
     <value>label648</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Weather_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label421.Text" xml:space="preserve">
     <value>Координаты единиц измерения</value>
@@ -32537,7 +32548,7 @@ Español - Relojinteligente</value>
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_text_WindForce_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label319.Text" xml:space="preserve">
     <value>Координаты единиц измерения</value>
@@ -32567,7 +32578,7 @@ Español - Relojinteligente</value>
     <value>True</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Altitude.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label667.Error" xml:space="preserve">
     <value />
@@ -32879,7 +32890,7 @@ Español - Relojinteligente</value>
     <value>panel_DOW_hand</value>
   </data>
   <data name="&gt;&gt;userControl_text_StandUp_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label556.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
@@ -33206,7 +33217,7 @@ Español - Relojinteligente</value>
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Humidity_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_scaleLinear_AirPressure.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -34001,7 +34012,7 @@ Español - Relojinteligente</value>
     <value>11</value>
   </data>
   <data name="&gt;&gt;userControl_Set10.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_Set, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Hour_handX.Name" xml:space="preserve">
     <value>numericUpDown_Hour_handX</value>
@@ -34076,7 +34087,7 @@ Español - Relojinteligente</value>
     <value>446, 381</value>
   </data>
   <data name="&gt;&gt;userControl_text_ActivityGoal.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="tabControl_EditParameters.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -34220,7 +34231,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_text_Steps_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_DOW_pictures_image.MaxDropDownItems" type="System.Int32, mscorlib">
     <value>25</value>
@@ -34655,7 +34666,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_Humidity.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label589.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -34772,7 +34783,7 @@ Español - Relojinteligente</value>
     <value>3</value>
   </data>
   <data name="&gt;&gt;userControl_text_WindForce.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_DOW_handY_centr.ToolTip" xml:space="preserve">
     <value />
@@ -34877,7 +34888,7 @@ Español - Relojinteligente</value>
     <value>176, 60</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Weather.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comboBox_Day_hand_imageBackground.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -35075,7 +35086,7 @@ Español - Relojinteligente</value>
     <value>176, 130</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_weather.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -35744,7 +35755,7 @@ Español - Relojinteligente</value>
     <value>138, 30</value>
   </data>
   <data name="&gt;&gt;userControl_hand_FatBurning_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="panel_Minute_hand.ToolTip" xml:space="preserve">
     <value />
@@ -35819,7 +35830,7 @@ Español - Relojinteligente</value>
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Steps.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label432.Error" xml:space="preserve">
     <value />
@@ -36113,7 +36124,7 @@ Español - Relojinteligente</value>
     <value>3, 3, 3, 3</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_ActivityGoal_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_Set7.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -36386,7 +36397,7 @@ Español - Relojinteligente</value>
     <value>Top</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Steps_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_scaleLinear_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -36656,7 +36667,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_text_StandUp.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="checkBox_Minute_hand_Use_AOD.Error" xml:space="preserve">
     <value />
@@ -36752,7 +36763,7 @@ Español - Relojinteligente</value>
     <value>3, 28</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Battery.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label667.Text" xml:space="preserve">
     <value>X:</value>
@@ -37001,7 +37012,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_pictures_AirPressure.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label425.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 60</value>
@@ -37163,7 +37174,7 @@ Español - Relojinteligente</value>
     <value>17, 13</value>
   </data>
   <data name="&gt;&gt;userControl_text_Calories.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label344.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 96</value>
@@ -37580,7 +37591,7 @@ Español - Relojinteligente</value>
     <value>14</value>
   </data>
   <data name="&gt;&gt;userControl_text_FatBurning.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label356.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -37694,7 +37705,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_hand_HeartRate_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_Hour_handY_offset_AOD.Error" xml:space="preserve">
     <value />
@@ -37919,7 +37930,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_WindForce.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Hour_unit_AOD.Error" xml:space="preserve">
     <value />
@@ -38009,13 +38020,13 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_hand_UVindex.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabPage_UVindex_AOD.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_text_Calories_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label631.TabIndex" type="System.Int32, mscorlib">
     <value>112</value>
@@ -38105,7 +38116,7 @@ Español - Relojinteligente</value>
     <value>3</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_AirQuality.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label368.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -38345,7 +38356,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_text_Stress_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_Set3.ToolTip" xml:space="preserve">
     <value />
@@ -38468,7 +38479,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_pictures_PAI_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label392.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -38486,7 +38497,7 @@ Español - Relojinteligente</value>
     <value>40, 20</value>
   </data>
   <data name="&gt;&gt;userControl_text_Stress.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label641.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
@@ -39263,7 +39274,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_hand_Steps_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -39683,7 +39694,7 @@ Español - Relojinteligente</value>
     <value>tabControl_SystemWeather_AOD</value>
   </data>
   <data name="label414.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 13</value>
+    <value>236, 13</value>
   </data>
   <data name="&gt;&gt;userControl_Set7.Parent" xml:space="preserve">
     <value>panel_set</value>
@@ -40091,7 +40102,7 @@ Español - Relojinteligente</value>
     <value>5, 407</value>
   </data>
   <data name="&gt;&gt;userControl_text_weather_Max_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label454.ToolTip" xml:space="preserve">
     <value />
@@ -40538,7 +40549,7 @@ Español - Relojinteligente</value>
     <value>40, 20</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_AirQuality_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_pictures_UVindex_AOD.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -41048,7 +41059,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Calories.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label322.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -41288,7 +41299,7 @@ Español - Relojinteligente</value>
     <value>Fill</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Altitude_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label504.ToolTip" xml:space="preserve">
     <value />
@@ -41306,7 +41317,7 @@ Español - Relojinteligente</value>
     <value>11</value>
   </data>
   <data name="&gt;&gt;userControl_text_Humidity.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label392.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -42049,7 +42060,7 @@ Español - Relojinteligente</value>
     <value>6</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_AirPressure_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label403.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -42292,7 +42303,7 @@ Español - Relojinteligente</value>
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Battery_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;comboBox_Day_hand_image_AOD.Name" xml:space="preserve">
     <value>comboBox_Day_hand_image_AOD</value>
@@ -42733,7 +42744,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_AirPressure_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Hour_handX_centr_AOD.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -42793,7 +42804,7 @@ Español - Relojinteligente</value>
     <value>userControl_scaleCircle_Weather_AOD</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_UVindex.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="button_pack_zip.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -42874,7 +42885,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_pictures_ActivityGoal.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_Minute_handY_AOD.Error" xml:space="preserve">
     <value />
@@ -42931,7 +42942,7 @@ Español - Relojinteligente</value>
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_ActivityGoal.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Second_handY_centr.Name" xml:space="preserve">
     <value>numericUpDown_Second_handY_centr</value>
@@ -43121,6 +43132,9 @@ Español - Relojinteligente</value>
   </data>
   <data name="userControl_text_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>432, 23</value>
+  </data>
+  <data name="comboBox_Language.Items5" xml:space="preserve">
+    <value>Italiano</value>
   </data>
   <data name="label312.Text" xml:space="preserve">
     <value>Y:</value>
@@ -43315,7 +43329,7 @@ Español - Relojinteligente</value>
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Calories_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_hand_HeartRate.Error" xml:space="preserve">
     <value />
@@ -43690,7 +43704,7 @@ Español - Relojinteligente</value>
     <value>35</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Battery_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="button_Hour_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>432, 23</value>
@@ -43945,7 +43959,7 @@ Español - Relojinteligente</value>
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_HeartRate.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_pictures_Calories_AOD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -44038,7 +44052,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_pictures_ActivityGoal_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="radioButton_Background_image.Text" xml:space="preserve">
     <value>Изображение</value>
@@ -44176,7 +44190,7 @@ Español - Relojinteligente</value>
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Altitude_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_pictures_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>432, 23</value>
@@ -44323,7 +44337,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_PAI.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label435.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -44446,7 +44460,7 @@ Español - Relojinteligente</value>
     <value>comboBox_Second_alignment</value>
   </data>
   <data name="&gt;&gt;userControl_hand_AirPressure.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label662.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -45040,7 +45054,7 @@ Español - Relojinteligente</value>
     <value>0</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_Altitude.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;button_Hour_hand.Name" xml:space="preserve">
     <value>button_Hour_hand</value>
@@ -45208,7 +45222,7 @@ Español - Relojinteligente</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_ActivityGoal.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label512.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -45304,7 +45318,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_HeartRate_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_YearX_AOD.TabIndex" type="System.Int32, mscorlib">
     <value>128</value>
@@ -45550,7 +45564,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Weather_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label564.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -45694,7 +45708,7 @@ Español - Relojinteligente</value>
     <value>False</value>
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_WindForce.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="comboBox_Hour_separator.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 184</value>
@@ -45823,7 +45837,7 @@ Español - Relojinteligente</value>
     <value>103, 167</value>
   </data>
   <data name="&gt;&gt;userControl_hand_Altitude.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_hand, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label439.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -45961,7 +45975,7 @@ Español - Relojinteligente</value>
     <value>tabControl_SystemActivity</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_PAI_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="panel6.Error" xml:space="preserve">
     <value />
@@ -46645,7 +46659,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_text_ActivityGoal_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_text_Altitude_AOD.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -46906,7 +46920,7 @@ Español - Relojinteligente</value>
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_text_UVindex.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_hand_AirQuality_AOD.Error" xml:space="preserve">
     <value />
@@ -47179,7 +47193,7 @@ Español - Relojinteligente</value>
     <value />
   </data>
   <data name="&gt;&gt;userControl_scaleCircle_UVindex.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleCircle, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="label408.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 35</value>
@@ -47356,7 +47370,7 @@ Español - Relojinteligente</value>
     <value>51</value>
   </data>
   <data name="&gt;&gt;userControl_text_weather_Min_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text_weather, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;radioButton_Settings_AfterUnpack_Download.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -47635,10 +47649,10 @@ Español - Relojinteligente</value>
     <value>userControl_scaleLinear_Weather</value>
   </data>
   <data name="&gt;&gt;userControl_scaleLinear_Stress_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_scaleLinear, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_pictures_Altitude_AOD.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label531.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

@@ -1584,12 +1584,14 @@ namespace AmazFit_Watchface_2
             userPanel_hand = userControl_hand_Weather_AOD;
             userPanel_scaleCircle = userControl_scaleCircle_Weather_AOD;
             userPanel_scaleLinear = userControl_scaleLinear_Weather_AOD;
+            bool AvailabilityIcon = false;
 
             // погода картинками
             if (userPanel_pictures_weather.checkBox_pictures_Use.Checked)
             {
                 if (userPanel_pictures_weather.comboBoxGetSelectedIndexImage() >= 0)
                 {
+                    AvailabilityIcon = true;
                     NumericUpDown numericUpDownX = userPanel_pictures_weather.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = userPanel_pictures_weather.numericUpDown_picturesY;
                     //NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
@@ -1726,9 +1728,10 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1777,9 +1780,10 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1834,9 +1838,10 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -3957,8 +3962,12 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region аналоговое время
+            bool ShowHour = true;
+            if((checkBox_Hour_Use.Checked && comboBox_Hour_image.SelectedIndex >= 0) &&
+                (checkBox_Minute_Use.Checked && comboBox_Minute_image.SelectedIndex >= 0) &&
+                (checkBox_Second_Use.Checked && comboBox_Second_image.SelectedIndex >= 0)) ShowHour = false;
             // часы
-            if (checkBox_Hour_hand_Use.Checked && comboBox_Hour_hand_image.SelectedIndex >= 0)
+            if (checkBox_Hour_hand_Use.Checked && comboBox_Hour_hand_image.SelectedIndex >= 0 && ShowHour)
             {
                 int x = (int)numericUpDown_Hour_handX.Value;
                 int y = (int)numericUpDown_Hour_handY.Value;

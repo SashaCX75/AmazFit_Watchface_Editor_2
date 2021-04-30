@@ -85,6 +85,14 @@ namespace AmazFit_Watchface_2
                     {
                         Program_Settings.language = "Español";
                     }
+                    if (language == "fr")
+                    {
+                        Program_Settings.language = "French";
+                    }
+                    if (language == "it")
+                    {
+                        Program_Settings.language = "Italiano";
+                    }
                     if (language == "zh")
                     {
                         Program_Settings.language = "Chinese/简体中文";
@@ -7437,9 +7445,10 @@ namespace AmazFit_Watchface_2
             bool dnd = rnd.Next(2) == 0 ? false : true;
 
             int temperature = rnd.Next(-25, 35);
-            int temperatureMin = rnd.Next(-25, 35);
             int temperatureMax = rnd.Next(-25, 35);
+            int temperatureMin = temperatureMax - rnd.Next(3, 10);
             int temperatureIcon = rnd.Next(0, 29);
+            bool showTemperature = rnd.Next(7) == 0 ? false : true;
 
             Watch_Face_Preview_Set.Date.Year = year;
             Watch_Face_Preview_Set.Date.Month = month;
@@ -7468,7 +7477,7 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Weather.TemperatureMin = temperatureMin;
             Watch_Face_Preview_Set.Weather.TemperatureMax = temperatureMax;
             Watch_Face_Preview_Set.Weather.Icon = temperatureIcon;
-            Watch_Face_Preview_Set.Weather.showTemperature = false;
+            Watch_Face_Preview_Set.Weather.showTemperature = showTemperature;
             PreviewImage();
 
         }

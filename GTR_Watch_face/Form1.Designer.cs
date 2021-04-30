@@ -15966,7 +15966,9 @@
             resources.GetString("comboBox_Language.Items"),
             resources.GetString("comboBox_Language.Items1"),
             resources.GetString("comboBox_Language.Items2"),
-            resources.GetString("comboBox_Language.Items3")});
+            resources.GetString("comboBox_Language.Items3"),
+            resources.GetString("comboBox_Language.Items4"),
+            resources.GetString("comboBox_Language.Items5")});
             this.comboBox_Language.Name = "comboBox_Language";
             this.toolTip_Weather.SetToolTip(this.comboBox_Language, resources.GetString("comboBox_Language.ToolTip"));
             this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);

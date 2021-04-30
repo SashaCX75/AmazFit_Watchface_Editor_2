@@ -124,7 +124,7 @@
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="numericUpDown_pictures_count.ToolTip" xml:space="preserve">
     <value />
@@ -189,7 +189,7 @@
 22. Сильный дождь
 23. Пыльная буря
 24. Сильная песчаная буря
-25. Сильная дождь
+25. Сильный дождь
 26. Неизвестная погода
 27. Облачно ночью
 28. Дождливо ночью

@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Dialog_Title_Image" xml:space="preserve">
+    <value>Sélectionner les fichiers images</value>
+  </data>
+  <data name="Dialog_Title_Pack" xml:space="preserve">
+    <value>Sélectionner un fichier de paramètres de cadran</value>
+  </data>
+  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
+    <value>Chemin vers le programme de compilation</value>
+  </data>
+  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
+    <value>Sélectionnez un fichier de paramètres d'aperçu</value>
+  </data>
+  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
+    <value>Sauver l'animation de l'apperçu</value>
+  </data>
+  <data name="Dialog_Title_SavePNG" xml:space="preserve">
+    <value>Sauver l'apperçu</value>
+  </data>
+  <data name="Dialog_Title_Unpack" xml:space="preserve">
+    <value>Sélectionner un fichier de cadran</value>
+  </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>quick_guide.htm</value>
+  </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Fichier binaire (*.bin)|*.bin</value>
+  </data>
+  <data name="FilterGif" xml:space="preserve">
+    <value>Fichiers GIF (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Fichiers Json (*.json) | *.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>Fichiers PNG (*.png)|*.png</value>
+  </data>
+  <data name="Form_Preview" xml:space="preserve">
+    <value>Apperçu</value>
+  </data>
+  <data name="Form_PreviewX" xml:space="preserve">
+    <value>Apperçu [X =</value>
+  </data>
+  <data name="Message_bigFile_Caption" xml:space="preserve">
+    <value>Fichier de grande taille</value>
+  </data>
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
+    <value>Le fichier non compressé est supérieur à 1.95Mo.</value>
+  </data>
+  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+    <value>Le fichier non compressé est supérieur à 1.5Mo.</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>Le fichier non compressé est supérieur à 5.5Mo.</value>
+  </data>
+  <data name="Message_bigFile_Text2" xml:space="preserve">
+    <value>Le cadran pourrait ne pas fonctionner.</value>
+  </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Un nouveau cadran a été créé.</value>
+  </data>
+  <data name="Message_CopyCoord" xml:space="preserve">
+    <value>Coordonnées copiées</value>
+  </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Certaines images pourraient provoquer des erreurs (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Tenter de les réparer?</value>
+  </data>
+  <data name="Message_Error_Caption" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="Message_error_Image_Text1" xml:space="preserve">
+    <value>Impossible d'ouvrir l'image:</value>
+  </data>
+  <data name="Message_error_Image_Text2" xml:space="preserve">
+    <value>. Vous n'êtes pas autorisé à lire le fichier ou l'image est endommagée.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
+    <value>Fichier non trouvé</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
+    <value>Le chemin [</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
+    <value>] vers l'utilitaire pour décompiler / compiler n'est pas valide.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
+    <value>Spécifiez le chemin d'accès correct vers l'utilitaire pour décompiler / compiler.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text1" xml:space="preserve">
+    <value>Des composants du programme sont absentts.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text2" xml:space="preserve">
+    <value>Le chemin vers l'utilitaire de compression des fichiers bin n'a pas été trouvé [</value>
+  </data>
+  <data name="Message_error_respackerPath_Text3" xml:space="preserve">
+    <value>Veuille vérifier l'utilitaire de comression des fichiers bin.</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>Le chemin du programme ne doit pas contenir d'espaces. Il est recommandé de le placer à la racine du disque.</value>
+  </data>
+  <data name="Message_GoToFile_Caption" xml:space="preserve">
+    <value>Aller au fichier</value>
+  </data>
+  <data name="Message_GoToFile_Text" xml:space="preserve">
+    <value>Aller au fichier?</value>
+  </data>
+  <data name="Message_JsonError_Text" xml:space="preserve">
+    <value>Fichier JSON non valide.</value>
+  </data>
+  <data name="Message_JsonReadError_Text" xml:space="preserve">
+    <value>Erreur lors de la lecture du fichier JSON.</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
+    <value>Charger les paramètres d'aperçu</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
+    <value>Charger un fichier existant de paramètres de prévisualisation PreviewStates.json?</value>
+  </data>
+  <data name="Message_openProject_Caption" xml:space="preserve">
+    <value>Chargement du projet</value>
+  </data>
+  <data name="Message_openProject_Text" xml:space="preserve">
+    <value>Ouvrir le projet décompilé?</value>
+  </data>
+  <data name="Message_PNGFromOne_Text" xml:space="preserve">
+    <value>La numérotation des fichiers PNG doit commencer à 1 (0001).</value>
+  </data>
+  <data name="Message_PNGmissing_Text1" xml:space="preserve">
+    <value>Les fichiers PNG ne fonctionnent pas ou certains fichiers sont manquants.</value>
+  </data>
+  <data name="Message_PNGmissing_Text2" xml:space="preserve">
+    <value>Numérotez les noms des fichiers PNG dans l'ordre croissant.</value>
+  </data>
+  <data name="Message_Restart_Caption" xml:space="preserve">
+    <value>Redémarrer</value>
+  </data>
+  <data name="Message_Restart_Text1" xml:space="preserve">
+    <value>Pour appliquer les paramètres vous devez redémarrer le programme.</value>
+  </data>
+  <data name="Message_Restart_Text2" xml:space="preserve">
+    <value>Redémarrer le programme?</value>
+  </data>
+  <data name="Message_SaveOnly1234_Text" xml:space="preserve">
+    <value>Pour enregistrer les paramètres prédéfinis, réglez au moins un champ "Calories" sur une valeur autre que "1234".</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>Sauver le projet</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>Souhaitez-vous sauver les modifications du projet</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
+    <value>Le projet actuel n'a pas été sauvé. Voulez-vous le sauver?</value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>Le projet actuel n'a pas été sauvé. Voulez-vous le sauver?</value>
+  </data>
+  <data name="Message_Warning3clockHand_Text" xml:space="preserve">
+    <value>Si vous n'utilisez pas les trois aiguilles dans un cadran analogique, des problèmes peuvent survenir.</value>
+  </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>Il est recommandé d'utiliser une image pour le symbole d'erreur dans le cas où les informations ne seraient pas disponibles</value>
+  </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>Vous ne pouvez pas utiliser plus de 4 éléments pour l'animation.</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>L'image pour l'animation ne doit pas être la dernière de la liste des images.</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>Il n'est pas recommandé d'utiliser plus de 10 images pour afficher l'état de la batterie.</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>Il n'est pas recommandé d'utiliser des segments et un indicateur en même temps pour le même type de valeurs. Cela peut provoquer des problèmes!</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Dossier</value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> existe déjà. Remplacer?</value>
+  </data>
+  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
+    <value>L'utilisation de l'affichage de la distance sans suffixe n'est pas recommandée.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>Les affichages du mois en chiffre et en lettre ne peuvent pas fonctionner ensemble.</value>
+  </data>
+  <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
+    <value>Il n'est pas recommandé d'utiliser les minutes sans utiliser les heures pour l'affichage numérique de l'heure.</value>
+  </data>
+  <data name="Message_WarningOnlySec_Text" xml:space="preserve">
+    <value>Il n'est pas recommandé d'utiliser les secondes sans utiliser les heures et les minutes pour l'affichage numérique de l'heure.</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>Les dimensions de l'image de l'apperçu sont différentes des dimensions standard</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>Utiliser les dimensions existantes?</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>Il est recommandé d'utiliser 6 segments pour afficher les pulstations.</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>Les noms des fichiers et chemins ne peuvent pas contenir d'espaces!</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>La température courante pourrait ne pas fonctionner sans afficher les températures minimale et maximale.</value>
+  </data>
+  <data name="Message_WarningTensOnes_Text" xml:space="preserve">
+    <value>Des index d'images différents pour les dizaines et untité ne sont pas supportés.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>L'image du symbole d'erreur pourrait être incorrectement renseigné s'il n'a pas de données de temperature.</value>
+  </data>
+  <data name="Message_Warning_Caption" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+</root>

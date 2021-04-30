@@ -1628,12 +1628,14 @@ namespace AmazFit_Watchface_2
             userPanel_hand = userControl_hand_Weather;
             userPanel_scaleCircle = userControl_scaleCircle_Weather;
             userPanel_scaleLinear = userControl_scaleLinear_Weather;
+            bool AvailabilityIcon = false;
 
             // погода картинками
             if (userPanel_pictures_weather.checkBox_pictures_Use.Checked)
             {
                 if (userPanel_pictures_weather.comboBoxGetSelectedIndexImage() >= 0)
                 {
+                    AvailabilityIcon = true;
                     NumericUpDown numericUpDownX = userPanel_pictures_weather.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = userPanel_pictures_weather.numericUpDown_picturesY;
                     //NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];
@@ -1770,7 +1772,8 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
                     else if (imageError_index >= 0)
                     {
@@ -1821,9 +1824,10 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1878,9 +1882,10 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face_Preview_Set.Weather.showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, 
+                                        BBorder, AvailabilityIcon);
                     }
-                    else
+                    else if (imageError_index >= 0)
                     {
                         src = OpenFileStream(ListImagesFullName[imageError_index]);
                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -4778,6 +4783,15 @@ namespace AmazFit_Watchface_2
             int alignment, int value, bool addZero, int value_lenght, int separator_index, bool BBorder,
             int ActivityType = 0)
         {
+            while (spacing > 127)
+            {
+                spacing = spacing - 255;
+            }
+            while (spacing < -127)
+            {
+                spacing = spacing + 255;
+            }
+
             int result = 0;
             Logger.WriteLine("* Draw_dagital_text");
             var src = new Bitmap(1, 1);
@@ -4904,7 +4918,15 @@ namespace AmazFit_Watchface_2
         {
             Logger.WriteLine("* Draw_dagital_text");
             value = Math.Round(value, 2, MidpointRounding.AwayFromZero);
-            var Digit = new Bitmap(ListImagesFullName[image_index]);
+            while (spacing > 127)
+            {
+                spacing = spacing - 255;
+            } 
+            while (spacing < -127)
+            {
+                spacing = spacing + 255;
+            }
+            //var Digit = new Bitmap(ListImagesFullName[image_index]);
             //var Delimit = new Bitmap(1, 1);
             //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
             string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
@@ -4956,18 +4978,31 @@ namespace AmazFit_Watchface_2
                 }
 
             }
+            if (separator_index >= 0 && separator_index < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[separator_index]);
+                DateLenghtReal = DateLenghtReal + src.Width + spacing;
+            }
             DateLenghtReal = DateLenghtReal - spacing;
+
 
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int width_separator = 0;
-            if (decimalPoint_index >= 0)
+            int DateLenght = 4 * width ;
+            if (spacing > 0) DateLenght = DateLenght + 3 * spacing;
+            if (decimalPoint_index >= 0 && decimalPoint_index < ListImagesFullName.Count)
             {
                 src = OpenFileStream(ListImagesFullName[decimalPoint_index]);
-                width_separator = src.Width + value_lenght; 
+                DateLenght = DateLenght + src.Width;
+                if (spacing > 0) DateLenght = DateLenght +  spacing;
             }
-            int DateLenght = width * value_lenght + spacing * (value_lenght -1) + width_separator;
+            if (separator_index >= 0 && separator_index < ListImagesFullName.Count)
+            {
+                src = OpenFileStream(ListImagesFullName[separator_index]);
+                DateLenght = DateLenght + src.Width;
+                if (spacing > 0) DateLenght = DateLenght + spacing;
+            }
 
             int PointX = 0;
             int PointY = y;
@@ -5053,9 +5088,18 @@ namespace AmazFit_Watchface_2
         /// <param name="image_minus_index">Символ "-"</param>
         /// <param name="separator_index">Символ разделителя (единиц измерения)</param>
         /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        /// <param name="AvailabilityIcon">Наличие иконки погоды</param>
         private int Draw_weather_text(Graphics graphics, int image_index, int x, int y, int spacing,
-            int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder)
+            int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder, bool AvailabilityIcon)
         {
+            while (spacing > 127)
+            {
+                spacing = spacing - 255;
+            }
+            while (spacing < -127)
+            {
+                spacing = spacing + 255;
+            }
             int result = 0;
             Logger.WriteLine("* Draw_weather_text");
             var src = new Bitmap(1, 1);
@@ -5089,10 +5133,10 @@ namespace AmazFit_Watchface_2
             }
 
             int DateLenght = widthD * 3 + widthM + widthCF +1;
-            if (alignment == 2) DateLenght = DateLenght - widthCF;
-            if (spacing > 0) DateLenght = DateLenght + spacing + spacing;
-            if (widthM > 0) DateLenght = DateLenght + spacing;
-            if (widthCF > 0 && alignment != 2) DateLenght = DateLenght + spacing;
+            if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - widthCF;
+            if (spacing > 0) DateLenght = DateLenght + 4*spacing;
+            if (widthM == 0) DateLenght = DateLenght - spacing;
+            if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - spacing;
 
             int DateLenghtReal = 0;
             Logger.WriteLine("DateLenght");
