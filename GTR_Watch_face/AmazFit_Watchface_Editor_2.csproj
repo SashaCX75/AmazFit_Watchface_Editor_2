@@ -367,6 +367,12 @@
     <EmbeddedResource Include="UserControls\UserControl_pictures_weather.es.resx">
       <DependentUpon>UserControl_pictures_weather.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_pictures_weather.fr.resx">
+      <DependentUpon>UserControl_pictures_weather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_pictures_weather.it.resx">
+      <DependentUpon>UserControl_pictures_weather.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_pictures_weather.resx">
       <DependentUpon>UserControl_pictures_weather.cs</DependentUpon>
     </EmbeddedResource>

@@ -216,7 +216,7 @@
     <value>Copia dalla schermata principale</value>
   </data>
   <data name="button_scaleCircle.Text" xml:space="preserve">
-    <value>Barra avanzamento circolare</value>
+    <value>Barra di avanzamento circolare</value>
   </data>
   <data name="checkBox_scaleCircle_Use.Text" xml:space="preserve">
     <value>Attiva</value>
@@ -234,7 +234,7 @@
     <value>Coordinate centro</value>
   </data>
   <data name="label02.Text" xml:space="preserve">
-    <value>Estremità barra</value>
+    <value>Estremità</value>
   </data>
   <data name="label05.Text" xml:space="preserve">
     <value>Raggio</value>

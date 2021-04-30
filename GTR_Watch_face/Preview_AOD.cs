@@ -3962,8 +3962,12 @@ namespace AmazFit_Watchface_2
             #endregion
 
             #region аналоговое время
+            bool ShowHour = true;
+            if((checkBox_Hour_Use.Checked && comboBox_Hour_image.SelectedIndex >= 0) &&
+                (checkBox_Minute_Use.Checked && comboBox_Minute_image.SelectedIndex >= 0) &&
+                (checkBox_Second_Use.Checked && comboBox_Second_image.SelectedIndex >= 0)) ShowHour = false;
             // часы
-            if (checkBox_Hour_hand_Use.Checked && comboBox_Hour_hand_image.SelectedIndex >= 0)
+            if (checkBox_Hour_hand_Use.Checked && comboBox_Hour_hand_image.SelectedIndex >= 0 && ShowHour)
             {
                 int x = (int)numericUpDown_Hour_handX.Value;
                 int y = (int)numericUpDown_Hour_handY.Value;

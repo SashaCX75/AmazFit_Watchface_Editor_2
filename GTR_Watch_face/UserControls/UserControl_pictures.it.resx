@@ -216,13 +216,13 @@
     <value>Copia dalla schermata principale</value>
   </data>
   <data name="button_pictures.Text" xml:space="preserve">
-    <value>Immagine barra avanzamento</value>
+    <value>Immagine avanzamento</value>
   </data>
   <data name="checkBox_pictures_Use.Text" xml:space="preserve">
     <value>Attiva</value>
   </data>
   <data name="label01.Text" xml:space="preserve">
-    <value>Prima immagine</value>
+    <value>Immagine iniziale</value>
   </data>
   <data name="label02.Text" xml:space="preserve">
     <value>Coordinate</value>

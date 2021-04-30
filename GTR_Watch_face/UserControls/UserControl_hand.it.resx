@@ -231,10 +231,10 @@
     <value>Spostamento dal punto di rotazione</value>
   </data>
   <data name="label08.Text" xml:space="preserve">
-    <value>Centro immagine</value>
+    <value>Immagine centro</value>
   </data>
   <data name="label09.Text" xml:space="preserve">
-    <value>Cordinate centro immagine</value>
+    <value>Cordinate immagine centro</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Angolo iniziale</value>

@@ -216,7 +216,7 @@
     <value>Copia dalla schermata principale</value>
   </data>
   <data name="button_icon.Text" xml:space="preserve">
-    <value>Immagine</value>
+    <value>Icona</value>
   </data>
   <data name="checkBox_icon_Use.Text" xml:space="preserve">
     <value>Attiva</value>

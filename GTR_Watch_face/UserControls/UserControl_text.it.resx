@@ -246,10 +246,10 @@
     <value>Spaziatura</value>
   </data>
   <data name="label04.Text" xml:space="preserve">
-    <value>Immagine</value>
+    <value>Icona</value>
   </data>
   <data name="label05.Text" xml:space="preserve">
-    <value>Coordinate immagine</value>
+    <value>Coordinate icona</value>
   </data>
   <data name="label06.Text" xml:space="preserve">
     <value>Immagine errore</value>
@@ -258,7 +258,7 @@
     <value>Separatore decimali</value>
   </data>
   <data name="label08.Text" xml:space="preserve">
-    <value>Unità</value>
+    <value>Unità di misura</value>
   </data>
   <data name="label09.Text" xml:space="preserve">
     <value>Allineamento</value>

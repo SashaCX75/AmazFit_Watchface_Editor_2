@@ -274,7 +274,7 @@
     <value>Il mancato utilizzo di tutte le lancette dell'orologio analogico potrebbe causare problemi.</value>
   </data>
   <data name="Message_WarningActivityError" xml:space="preserve">
-    <value>Occorre utilizzare un'immagine per questo simbolo per indicare l'assenza di attività.</value>
+    <value>È consigliabile utilizzare un'immagine che indichi l'assenza di attività per questo simbolo.</value>
   </data>
   <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
     <value>Il numero di elementi per l'animazione non può essere superiore a 4.</value>

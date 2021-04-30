@@ -222,7 +222,7 @@
     <value>Aggiungi zero iniziale</value>
   </data>
   <data name="checkBox_SystemFont_unit.Text" xml:space="preserve">
-    <value>Unità</value>
+    <value>Unità di misura</value>
   </data>
   <data name="checkBox_SystemFont_Use.Text" xml:space="preserve">
     <value>Attiva</value>
