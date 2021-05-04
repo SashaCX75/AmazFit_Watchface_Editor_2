@@ -2196,7 +2196,7 @@ namespace AmazFit_Watchface_2
         }
 
         // меняем цвет текста и рамки для groupBox
-        private void groupBox1_Paint(object sender, PaintEventArgs e)
+        private void groupBox_Paint(object sender, PaintEventArgs e)
         {
             GroupBox box = sender as GroupBox;
             DrawGroupBox(box, e.Graphics, Color.Black, Color.DarkGray);

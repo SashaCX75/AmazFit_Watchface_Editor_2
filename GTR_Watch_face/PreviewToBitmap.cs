@@ -5012,8 +5012,9 @@ namespace AmazFit_Watchface_2
             }
             finally
             {
-                graphics.RotateTransform(-angle);
-                graphics.TranslateTransform(-x, -y);
+                //graphics.RotateTransform(-angle);
+                //graphics.TranslateTransform(-x, -y);
+                graphics.ResetTransform();
             }
 
             Logger.WriteLine("* Draw_text (end)");

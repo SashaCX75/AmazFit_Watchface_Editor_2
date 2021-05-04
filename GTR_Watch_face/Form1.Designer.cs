@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.richTextBox_JsonText = new System.Windows.Forms.RichTextBox();
             this.treeView_JsonTree = new System.Windows.Forms.TreeView();
@@ -419,24 +419,103 @@
             this.tabPage_Activity = new System.Windows.Forms.TabPage();
             this.tabControl_SystemActivity = new System.Windows.Forms.TabControl();
             this.tabPage_Steps = new System.Windows.Forms.TabPage();
+            this.userControl_SystemFont_Steps = new AmazFit_Watchface_2.UserControl_SystemFont();
+            this.userControl_scaleLinear_Steps = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Steps = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Steps = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Steps = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Steps = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Calories = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Calories = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Calories = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Calories = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Calories = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Calories = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_HeartRate = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_HeartRate = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_HeartRate = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_HeartRate = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_HeartRate = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_HeartRate = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_PAI = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_PAI = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_PAI = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_PAI = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_PAI = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_PAI = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Distance = new System.Windows.Forms.TabPage();
+            this.userControl_text_Distance = new AmazFit_Watchface_2.UserControl_text();
             this.tabPage_StandUp = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_StandUp = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_StandUp = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_StandUp = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_StandUp = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_StandUp = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Stress = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Stress = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Stress = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Stress = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Stress = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Stress = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_ActivityGoal = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_ActivityGoal = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_ActivityGoal = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_ActivityGoal = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_FatBurning = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_FatBurning = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_FatBurning = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_FatBurning = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_FatBurning = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_FatBurning = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Air = new System.Windows.Forms.TabPage();
             this.tabControl_SystemWeather = new System.Windows.Forms.TabControl();
             this.tabPage_Weather = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Weather = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Weather = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Weather = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_weather_Max = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Min = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Current = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_pictures_weather = new AmazFit_Watchface_2.UserControl_pictures_weather();
             this.tabPage_UVindex = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_UVindex = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_UVindex = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_UVindex = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_UVindex = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_UVindex = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_AirQuality = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_AirQuality = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirQuality = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirQuality = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirQuality = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirQuality = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Humidity = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Humidity = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Humidity = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Humidity = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Humidity = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Humidity = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Sunrise = new System.Windows.Forms.TabPage();
             this.tabPage_WindForce = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_WindForce = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_WindForce = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_WindForce = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_WindForce = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_WindForce = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Altitude = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Altitude = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Altitude = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Altitude = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Altitude = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Altitude = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_AirPressure = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_AirPressure = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirPressure = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirPressure = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirPressure = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirPressure = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_System = new System.Windows.Forms.TabPage();
             this.tabControl_System = new System.Windows.Forms.TabControl();
             this.tabPage_Status = new System.Windows.Forms.TabPage();
@@ -477,6 +556,11 @@
             this.label658 = new System.Windows.Forms.Label();
             this.label659 = new System.Windows.Forms.Label();
             this.tabPage_Battery = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Battery = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Battery = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Battery = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Battery = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Battery = new AmazFit_Watchface_2.UserControl_pictures();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabControl_EditParameters_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Background_AOD = new System.Windows.Forms.TabPage();
@@ -813,31 +897,126 @@
             this.tabPage_Activity_AOD = new System.Windows.Forms.TabPage();
             this.tabControl_SystemActivity_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Steps_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Steps_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Steps_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Steps_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Calories_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Calories_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Calories_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Calories_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_HeartRate_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_PAI_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_PAI_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_PAI_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_PAI_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Distance_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_text_Distance_AOD = new AmazFit_Watchface_2.UserControl_text();
             this.tabPage_StandUp_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_StandUp_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_StandUp_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_StandUp_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Stress_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Stress_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Stress_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Stress_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_ActivityGoal_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_FatBurning_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Air_AOD = new System.Windows.Forms.TabPage();
             this.tabControl_SystemWeather_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Weather_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Weather_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Weather_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Weather_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_weather_Max_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Min_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weather_Current_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_pictures_weather_AOD = new AmazFit_Watchface_2.UserControl_pictures_weather();
             this.tabPage_UVindex_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_UVindex_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_UVindex_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_UVindex_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_UVindex_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_UVindex_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_AirQuality_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Humidity_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Humidity_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Humidity_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Humidity_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Humidity_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Humidity_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Sunrise_AOD = new System.Windows.Forms.TabPage();
             this.tabPage_WindForce_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_WindForce_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_WindForce_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_WindForce_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_WindForce_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_WindForce_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Altitude_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Altitude_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Altitude_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Altitude_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Altitude_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Altitude_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_AirPressure_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_System_AOD = new System.Windows.Forms.TabPage();
             this.tabControl_System_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Battery_AOD = new System.Windows.Forms.TabPage();
+            this.userControl_scaleLinear_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircle_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_hand_Battery_AOD = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_Battery_AOD = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_Battery_AOD = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Show = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel_set = new System.Windows.Forms.Panel();
+            this.userControl_Set12 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set11 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set10 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set9 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set8 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set7 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set6 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set5 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set4 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set3 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set2 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set1 = new AmazFit_Watchface_2.UserControl_Set();
             this.panel_PreviewStates = new System.Windows.Forms.Panel();
             this.button_JsonPreview_Random = new System.Windows.Forms.Button();
             this.button_JsonPreview_Read = new System.Windows.Forms.Button();
@@ -965,185 +1144,7 @@
             this.radioButton_TRex_pro = new System.Windows.Forms.RadioButton();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.userControl_Set12 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set11 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set10 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set9 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set8 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set7 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set6 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set5 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set4 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set3 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set2 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set1 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_SystemFont_Steps = new AmazFit_Watchface_2.UserControl_SystemFont();
-            this.userControl_scaleLinear_Steps = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Steps = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Steps = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Steps = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Steps = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Calories = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Calories = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Calories = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Calories = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Calories = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_HeartRate = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_HeartRate = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_HeartRate = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_HeartRate = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_HeartRate = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_PAI = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_PAI = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_PAI = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_PAI = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_PAI = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_text_Distance = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_scaleLinear_StandUp = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_StandUp = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_StandUp = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_StandUp = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_StandUp = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Stress = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Stress = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Stress = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Stress = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Stress = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_ActivityGoal = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_ActivityGoal = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_ActivityGoal = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_ActivityGoal = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_FatBurning = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_FatBurning = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_FatBurning = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_FatBurning = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_FatBurning = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Weather = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Weather = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Weather = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_weather_Max = new AmazFit_Watchface_2.UserControl_text_weather();
-            this.userControl_text_weather_Min = new AmazFit_Watchface_2.UserControl_text_weather();
-            this.userControl_text_weather_Current = new AmazFit_Watchface_2.UserControl_text_weather();
-            this.userControl_pictures_weather = new AmazFit_Watchface_2.UserControl_pictures_weather();
-            this.userControl_scaleLinear_UVindex = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_UVindex = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_UVindex = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_UVindex = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_UVindex = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_AirQuality = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_AirQuality = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_AirQuality = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_AirQuality = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_AirQuality = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Humidity = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Humidity = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Humidity = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Humidity = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Humidity = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_WindForce = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_WindForce = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_WindForce = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_WindForce = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_WindForce = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Altitude = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Altitude = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Altitude = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Altitude = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Altitude = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_AirPressure = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_AirPressure = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_AirPressure = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_AirPressure = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_AirPressure = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Battery = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Battery = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Battery = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Battery = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Battery = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Steps_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Steps_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Steps_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Steps_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Calories_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Calories_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Calories_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Calories_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_HeartRate_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_PAI_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_PAI_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_PAI_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_PAI_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_text_Distance_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_scaleLinear_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_StandUp_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_StandUp_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_StandUp_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_StandUp_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Stress_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Stress_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Stress_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Stress_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_FatBurning_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Weather_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Weather_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Weather_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_weather_Max_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
-            this.userControl_text_weather_Min_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
-            this.userControl_text_weather_Current_AOD = new AmazFit_Watchface_2.UserControl_text_weather();
-            this.userControl_pictures_weather_AOD = new AmazFit_Watchface_2.UserControl_pictures_weather();
-            this.userControl_scaleLinear_UVindex_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_UVindex_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_UVindex_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_UVindex_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_UVindex_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_AirQuality_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Humidity_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Humidity_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Humidity_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Humidity_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Humidity_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_WindForce_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_WindForce_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_WindForce_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_WindForce_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_WindForce_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Altitude_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Altitude_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Altitude_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Altitude_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Altitude_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_AirPressure_AOD = new AmazFit_Watchface_2.UserControl_pictures();
-            this.userControl_scaleLinear_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleLinear();
-            this.userControl_scaleCircle_Battery_AOD = new AmazFit_Watchface_2.UserControl_scaleCircle();
-            this.userControl_hand_Battery_AOD = new AmazFit_Watchface_2.UserControl_hand();
-            this.userControl_text_Battery_AOD = new AmazFit_Watchface_2.UserControl_text();
-            this.userControl_pictures_Battery_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_FontRotate1 = new AmazFit_Watchface_2.UserControl_FontRotate();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -5396,6 +5397,7 @@
             // 
             resources.ApplyResources(this.tabPage_Steps, "tabPage_Steps");
             this.tabPage_Steps.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Steps.Controls.Add(this.userControl_FontRotate1);
             this.tabPage_Steps.Controls.Add(this.userControl_SystemFont_Steps);
             this.tabPage_Steps.Controls.Add(this.userControl_scaleLinear_Steps);
             this.tabPage_Steps.Controls.Add(this.userControl_scaleCircle_Steps);
@@ -5403,6 +5405,62 @@
             this.tabPage_Steps.Controls.Add(this.userControl_text_Steps);
             this.tabPage_Steps.Controls.Add(this.userControl_pictures_Steps);
             this.tabPage_Steps.Name = "tabPage_Steps";
+            // 
+            // userControl_SystemFont_Steps
+            // 
+            this.userControl_SystemFont_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_SystemFont_Steps, "userControl_SystemFont_Steps");
+            this.userControl_SystemFont_Steps.Collapsed = true;
+            this.userControl_SystemFont_Steps.Follow = false;
+            this.userControl_SystemFont_Steps.Name = "userControl_SystemFont_Steps";
+            this.userControl_SystemFont_Steps.Padding_zero = true;
+            this.userControl_SystemFont_Steps.ShowUnit = true;
+            this.userControl_SystemFont_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleLinear_Steps
+            // 
+            this.userControl_scaleLinear_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Steps, "userControl_scaleLinear_Steps");
+            this.userControl_scaleLinear_Steps.Collapsed = true;
+            this.userControl_scaleLinear_Steps.Name = "userControl_scaleLinear_Steps";
+            this.userControl_scaleLinear_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Steps
+            // 
+            this.userControl_scaleCircle_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Steps, "userControl_scaleCircle_Steps");
+            this.userControl_scaleCircle_Steps.Collapsed = true;
+            this.userControl_scaleCircle_Steps.Name = "userControl_scaleCircle_Steps";
+            this.userControl_scaleCircle_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Steps
+            // 
+            this.userControl_hand_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Steps, "userControl_hand_Steps");
+            this.userControl_hand_Steps.Collapsed = true;
+            this.userControl_hand_Steps.Name = "userControl_hand_Steps";
+            this.userControl_hand_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Steps
+            // 
+            this.userControl_text_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_text_Steps, "userControl_text_Steps");
+            this.userControl_text_Steps.Collapsed = true;
+            this.userControl_text_Steps.Follow = false;
+            this.userControl_text_Steps.ImageError = true;
+            this.userControl_text_Steps.Name = "userControl_text_Steps";
+            this.userControl_text_Steps.OptionalSymbol = false;
+            this.userControl_text_Steps.Padding_zero = true;
+            this.userControl_text_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Steps
+            // 
+            this.userControl_pictures_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Steps, "userControl_pictures_Steps");
+            this.userControl_pictures_Steps.Collapsed = true;
+            this.userControl_pictures_Steps.ImagesCount = 10;
+            this.userControl_pictures_Steps.Name = "userControl_pictures_Steps";
+            this.userControl_pictures_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_Calories
             // 
@@ -5415,6 +5473,51 @@
             this.tabPage_Calories.Controls.Add(this.userControl_pictures_Calories);
             this.tabPage_Calories.Name = "tabPage_Calories";
             // 
+            // userControl_scaleLinear_Calories
+            // 
+            this.userControl_scaleLinear_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Calories, "userControl_scaleLinear_Calories");
+            this.userControl_scaleLinear_Calories.Collapsed = true;
+            this.userControl_scaleLinear_Calories.Name = "userControl_scaleLinear_Calories";
+            this.userControl_scaleLinear_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Calories
+            // 
+            this.userControl_scaleCircle_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Calories, "userControl_scaleCircle_Calories");
+            this.userControl_scaleCircle_Calories.Collapsed = true;
+            this.userControl_scaleCircle_Calories.Name = "userControl_scaleCircle_Calories";
+            this.userControl_scaleCircle_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Calories
+            // 
+            this.userControl_hand_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Calories, "userControl_hand_Calories");
+            this.userControl_hand_Calories.Collapsed = true;
+            this.userControl_hand_Calories.Name = "userControl_hand_Calories";
+            this.userControl_hand_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Calories
+            // 
+            this.userControl_text_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_text_Calories, "userControl_text_Calories");
+            this.userControl_text_Calories.Collapsed = true;
+            this.userControl_text_Calories.Follow = false;
+            this.userControl_text_Calories.ImageError = true;
+            this.userControl_text_Calories.Name = "userControl_text_Calories";
+            this.userControl_text_Calories.OptionalSymbol = false;
+            this.userControl_text_Calories.Padding_zero = true;
+            this.userControl_text_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Calories
+            // 
+            this.userControl_pictures_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Calories, "userControl_pictures_Calories");
+            this.userControl_pictures_Calories.Collapsed = true;
+            this.userControl_pictures_Calories.ImagesCount = 10;
+            this.userControl_pictures_Calories.Name = "userControl_pictures_Calories";
+            this.userControl_pictures_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_HeartRate
             // 
             resources.ApplyResources(this.tabPage_HeartRate, "tabPage_HeartRate");
@@ -5425,6 +5528,51 @@
             this.tabPage_HeartRate.Controls.Add(this.userControl_text_HeartRate);
             this.tabPage_HeartRate.Controls.Add(this.userControl_pictures_HeartRate);
             this.tabPage_HeartRate.Name = "tabPage_HeartRate";
+            // 
+            // userControl_scaleLinear_HeartRate
+            // 
+            this.userControl_scaleLinear_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_HeartRate, "userControl_scaleLinear_HeartRate");
+            this.userControl_scaleLinear_HeartRate.Collapsed = true;
+            this.userControl_scaleLinear_HeartRate.Name = "userControl_scaleLinear_HeartRate";
+            this.userControl_scaleLinear_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_HeartRate
+            // 
+            this.userControl_scaleCircle_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_HeartRate, "userControl_scaleCircle_HeartRate");
+            this.userControl_scaleCircle_HeartRate.Collapsed = true;
+            this.userControl_scaleCircle_HeartRate.Name = "userControl_scaleCircle_HeartRate";
+            this.userControl_scaleCircle_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_HeartRate
+            // 
+            this.userControl_hand_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_hand_HeartRate, "userControl_hand_HeartRate");
+            this.userControl_hand_HeartRate.Collapsed = true;
+            this.userControl_hand_HeartRate.Name = "userControl_hand_HeartRate";
+            this.userControl_hand_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_HeartRate
+            // 
+            this.userControl_text_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_text_HeartRate, "userControl_text_HeartRate");
+            this.userControl_text_HeartRate.Collapsed = true;
+            this.userControl_text_HeartRate.Follow = false;
+            this.userControl_text_HeartRate.ImageError = true;
+            this.userControl_text_HeartRate.Name = "userControl_text_HeartRate";
+            this.userControl_text_HeartRate.OptionalSymbol = false;
+            this.userControl_text_HeartRate.Padding_zero = true;
+            this.userControl_text_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_HeartRate
+            // 
+            this.userControl_pictures_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_HeartRate, "userControl_pictures_HeartRate");
+            this.userControl_pictures_HeartRate.Collapsed = true;
+            this.userControl_pictures_HeartRate.ImagesCount = 6;
+            this.userControl_pictures_HeartRate.Name = "userControl_pictures_HeartRate";
+            this.userControl_pictures_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_PAI
             // 
@@ -5437,12 +5585,69 @@
             this.tabPage_PAI.Controls.Add(this.userControl_pictures_PAI);
             this.tabPage_PAI.Name = "tabPage_PAI";
             // 
+            // userControl_scaleLinear_PAI
+            // 
+            this.userControl_scaleLinear_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_PAI, "userControl_scaleLinear_PAI");
+            this.userControl_scaleLinear_PAI.Collapsed = true;
+            this.userControl_scaleLinear_PAI.Name = "userControl_scaleLinear_PAI";
+            this.userControl_scaleLinear_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_PAI
+            // 
+            this.userControl_scaleCircle_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_PAI, "userControl_scaleCircle_PAI");
+            this.userControl_scaleCircle_PAI.Collapsed = true;
+            this.userControl_scaleCircle_PAI.Name = "userControl_scaleCircle_PAI";
+            this.userControl_scaleCircle_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_PAI
+            // 
+            this.userControl_hand_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_hand_PAI, "userControl_hand_PAI");
+            this.userControl_hand_PAI.Collapsed = true;
+            this.userControl_hand_PAI.Name = "userControl_hand_PAI";
+            this.userControl_hand_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_PAI
+            // 
+            this.userControl_text_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_text_PAI, "userControl_text_PAI");
+            this.userControl_text_PAI.Collapsed = true;
+            this.userControl_text_PAI.Follow = false;
+            this.userControl_text_PAI.ImageError = true;
+            this.userControl_text_PAI.Name = "userControl_text_PAI";
+            this.userControl_text_PAI.OptionalSymbol = false;
+            this.userControl_text_PAI.Padding_zero = true;
+            this.userControl_text_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_PAI
+            // 
+            this.userControl_pictures_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_PAI, "userControl_pictures_PAI");
+            this.userControl_pictures_PAI.Collapsed = true;
+            this.userControl_pictures_PAI.ImagesCount = 10;
+            this.userControl_pictures_PAI.Name = "userControl_pictures_PAI";
+            this.userControl_pictures_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_Distance
             // 
             resources.ApplyResources(this.tabPage_Distance, "tabPage_Distance");
             this.tabPage_Distance.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_Distance.Controls.Add(this.userControl_text_Distance);
             this.tabPage_Distance.Name = "tabPage_Distance";
+            // 
+            // userControl_text_Distance
+            // 
+            this.userControl_text_Distance.AOD = false;
+            resources.ApplyResources(this.userControl_text_Distance, "userControl_text_Distance");
+            this.userControl_text_Distance.Collapsed = true;
+            this.userControl_text_Distance.Follow = false;
+            this.userControl_text_Distance.ImageError = true;
+            this.userControl_text_Distance.Name = "userControl_text_Distance";
+            this.userControl_text_Distance.OptionalSymbol = true;
+            this.userControl_text_Distance.Padding_zero = true;
+            this.userControl_text_Distance.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_StandUp
             // 
@@ -5455,6 +5660,51 @@
             this.tabPage_StandUp.Controls.Add(this.userControl_pictures_StandUp);
             this.tabPage_StandUp.Name = "tabPage_StandUp";
             // 
+            // userControl_scaleLinear_StandUp
+            // 
+            this.userControl_scaleLinear_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_StandUp, "userControl_scaleLinear_StandUp");
+            this.userControl_scaleLinear_StandUp.Collapsed = true;
+            this.userControl_scaleLinear_StandUp.Name = "userControl_scaleLinear_StandUp";
+            this.userControl_scaleLinear_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_StandUp
+            // 
+            this.userControl_scaleCircle_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_StandUp, "userControl_scaleCircle_StandUp");
+            this.userControl_scaleCircle_StandUp.Collapsed = true;
+            this.userControl_scaleCircle_StandUp.Name = "userControl_scaleCircle_StandUp";
+            this.userControl_scaleCircle_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_StandUp
+            // 
+            this.userControl_hand_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_hand_StandUp, "userControl_hand_StandUp");
+            this.userControl_hand_StandUp.Collapsed = true;
+            this.userControl_hand_StandUp.Name = "userControl_hand_StandUp";
+            this.userControl_hand_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_StandUp
+            // 
+            this.userControl_text_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_text_StandUp, "userControl_text_StandUp");
+            this.userControl_text_StandUp.Collapsed = true;
+            this.userControl_text_StandUp.Follow = false;
+            this.userControl_text_StandUp.ImageError = true;
+            this.userControl_text_StandUp.Name = "userControl_text_StandUp";
+            this.userControl_text_StandUp.OptionalSymbol = false;
+            this.userControl_text_StandUp.Padding_zero = true;
+            this.userControl_text_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_StandUp
+            // 
+            this.userControl_pictures_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_StandUp, "userControl_pictures_StandUp");
+            this.userControl_pictures_StandUp.Collapsed = true;
+            this.userControl_pictures_StandUp.ImagesCount = 10;
+            this.userControl_pictures_StandUp.Name = "userControl_pictures_StandUp";
+            this.userControl_pictures_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_Stress
             // 
             resources.ApplyResources(this.tabPage_Stress, "tabPage_Stress");
@@ -5465,6 +5715,51 @@
             this.tabPage_Stress.Controls.Add(this.userControl_text_Stress);
             this.tabPage_Stress.Controls.Add(this.userControl_pictures_Stress);
             this.tabPage_Stress.Name = "tabPage_Stress";
+            // 
+            // userControl_scaleLinear_Stress
+            // 
+            this.userControl_scaleLinear_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Stress, "userControl_scaleLinear_Stress");
+            this.userControl_scaleLinear_Stress.Collapsed = true;
+            this.userControl_scaleLinear_Stress.Name = "userControl_scaleLinear_Stress";
+            this.userControl_scaleLinear_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Stress
+            // 
+            this.userControl_scaleCircle_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Stress, "userControl_scaleCircle_Stress");
+            this.userControl_scaleCircle_Stress.Collapsed = true;
+            this.userControl_scaleCircle_Stress.Name = "userControl_scaleCircle_Stress";
+            this.userControl_scaleCircle_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Stress
+            // 
+            this.userControl_hand_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Stress, "userControl_hand_Stress");
+            this.userControl_hand_Stress.Collapsed = true;
+            this.userControl_hand_Stress.Name = "userControl_hand_Stress";
+            this.userControl_hand_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Stress
+            // 
+            this.userControl_text_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_text_Stress, "userControl_text_Stress");
+            this.userControl_text_Stress.Collapsed = true;
+            this.userControl_text_Stress.Follow = false;
+            this.userControl_text_Stress.ImageError = true;
+            this.userControl_text_Stress.Name = "userControl_text_Stress";
+            this.userControl_text_Stress.OptionalSymbol = false;
+            this.userControl_text_Stress.Padding_zero = true;
+            this.userControl_text_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Stress
+            // 
+            this.userControl_pictures_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Stress, "userControl_pictures_Stress");
+            this.userControl_pictures_Stress.Collapsed = true;
+            this.userControl_pictures_Stress.ImagesCount = 10;
+            this.userControl_pictures_Stress.Name = "userControl_pictures_Stress";
+            this.userControl_pictures_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_ActivityGoal
             // 
@@ -5477,6 +5772,51 @@
             this.tabPage_ActivityGoal.Controls.Add(this.userControl_pictures_ActivityGoal);
             this.tabPage_ActivityGoal.Name = "tabPage_ActivityGoal";
             // 
+            // userControl_scaleLinear_ActivityGoal
+            // 
+            this.userControl_scaleLinear_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal, "userControl_scaleLinear_ActivityGoal");
+            this.userControl_scaleLinear_ActivityGoal.Collapsed = true;
+            this.userControl_scaleLinear_ActivityGoal.Name = "userControl_scaleLinear_ActivityGoal";
+            this.userControl_scaleLinear_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_ActivityGoal
+            // 
+            this.userControl_scaleCircle_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal, "userControl_scaleCircle_ActivityGoal");
+            this.userControl_scaleCircle_ActivityGoal.Collapsed = true;
+            this.userControl_scaleCircle_ActivityGoal.Name = "userControl_scaleCircle_ActivityGoal";
+            this.userControl_scaleCircle_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_ActivityGoal
+            // 
+            this.userControl_hand_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_hand_ActivityGoal, "userControl_hand_ActivityGoal");
+            this.userControl_hand_ActivityGoal.Collapsed = true;
+            this.userControl_hand_ActivityGoal.Name = "userControl_hand_ActivityGoal";
+            this.userControl_hand_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_ActivityGoal
+            // 
+            this.userControl_text_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_text_ActivityGoal, "userControl_text_ActivityGoal");
+            this.userControl_text_ActivityGoal.Collapsed = true;
+            this.userControl_text_ActivityGoal.Follow = false;
+            this.userControl_text_ActivityGoal.ImageError = true;
+            this.userControl_text_ActivityGoal.Name = "userControl_text_ActivityGoal";
+            this.userControl_text_ActivityGoal.OptionalSymbol = false;
+            this.userControl_text_ActivityGoal.Padding_zero = true;
+            this.userControl_text_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_ActivityGoal
+            // 
+            this.userControl_pictures_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_ActivityGoal, "userControl_pictures_ActivityGoal");
+            this.userControl_pictures_ActivityGoal.Collapsed = true;
+            this.userControl_pictures_ActivityGoal.ImagesCount = 10;
+            this.userControl_pictures_ActivityGoal.Name = "userControl_pictures_ActivityGoal";
+            this.userControl_pictures_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_FatBurning
             // 
             resources.ApplyResources(this.tabPage_FatBurning, "tabPage_FatBurning");
@@ -5487,6 +5827,51 @@
             this.tabPage_FatBurning.Controls.Add(this.userControl_text_FatBurning);
             this.tabPage_FatBurning.Controls.Add(this.userControl_pictures_FatBurning);
             this.tabPage_FatBurning.Name = "tabPage_FatBurning";
+            // 
+            // userControl_scaleLinear_FatBurning
+            // 
+            this.userControl_scaleLinear_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_FatBurning, "userControl_scaleLinear_FatBurning");
+            this.userControl_scaleLinear_FatBurning.Collapsed = true;
+            this.userControl_scaleLinear_FatBurning.Name = "userControl_scaleLinear_FatBurning";
+            this.userControl_scaleLinear_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_FatBurning
+            // 
+            this.userControl_scaleCircle_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_FatBurning, "userControl_scaleCircle_FatBurning");
+            this.userControl_scaleCircle_FatBurning.Collapsed = true;
+            this.userControl_scaleCircle_FatBurning.Name = "userControl_scaleCircle_FatBurning";
+            this.userControl_scaleCircle_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_FatBurning
+            // 
+            this.userControl_hand_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_hand_FatBurning, "userControl_hand_FatBurning");
+            this.userControl_hand_FatBurning.Collapsed = true;
+            this.userControl_hand_FatBurning.Name = "userControl_hand_FatBurning";
+            this.userControl_hand_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_FatBurning
+            // 
+            this.userControl_text_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_text_FatBurning, "userControl_text_FatBurning");
+            this.userControl_text_FatBurning.Collapsed = true;
+            this.userControl_text_FatBurning.Follow = false;
+            this.userControl_text_FatBurning.ImageError = true;
+            this.userControl_text_FatBurning.Name = "userControl_text_FatBurning";
+            this.userControl_text_FatBurning.OptionalSymbol = false;
+            this.userControl_text_FatBurning.Padding_zero = true;
+            this.userControl_text_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_FatBurning
+            // 
+            this.userControl_pictures_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_FatBurning, "userControl_pictures_FatBurning");
+            this.userControl_pictures_FatBurning.Collapsed = true;
+            this.userControl_pictures_FatBurning.ImagesCount = 10;
+            this.userControl_pictures_FatBurning.Name = "userControl_pictures_FatBurning";
+            this.userControl_pictures_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_Air
             // 
@@ -5522,6 +5907,75 @@
             this.tabPage_Weather.Controls.Add(this.userControl_pictures_weather);
             this.tabPage_Weather.Name = "tabPage_Weather";
             // 
+            // userControl_scaleLinear_Weather
+            // 
+            this.userControl_scaleLinear_Weather.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Weather, "userControl_scaleLinear_Weather");
+            this.userControl_scaleLinear_Weather.Collapsed = true;
+            this.userControl_scaleLinear_Weather.Name = "userControl_scaleLinear_Weather";
+            this.userControl_scaleLinear_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Weather
+            // 
+            this.userControl_scaleCircle_Weather.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Weather, "userControl_scaleCircle_Weather");
+            this.userControl_scaleCircle_Weather.Collapsed = true;
+            this.userControl_scaleCircle_Weather.Name = "userControl_scaleCircle_Weather";
+            this.userControl_scaleCircle_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Weather
+            // 
+            this.userControl_hand_Weather.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Weather, "userControl_hand_Weather");
+            this.userControl_hand_Weather.Collapsed = true;
+            this.userControl_hand_Weather.Name = "userControl_hand_Weather";
+            this.userControl_hand_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_weather_Max
+            // 
+            this.userControl_text_weather_Max.AOD = false;
+            resources.ApplyResources(this.userControl_text_weather_Max, "userControl_text_weather_Max");
+            this.userControl_text_weather_Max.Collapsed = true;
+            this.userControl_text_weather_Max.Follow = true;
+            this.userControl_text_weather_Max.ImageError = true;
+            this.userControl_text_weather_Max.Name = "userControl_text_weather_Max";
+            this.userControl_text_weather_Max.OptionalSymbol = true;
+            this.userControl_text_weather_Max.Padding_zero = true;
+            this.userControl_text_weather_Max.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_weather_Min
+            // 
+            this.userControl_text_weather_Min.AOD = false;
+            resources.ApplyResources(this.userControl_text_weather_Min, "userControl_text_weather_Min");
+            this.userControl_text_weather_Min.Collapsed = true;
+            this.userControl_text_weather_Min.Follow = false;
+            this.userControl_text_weather_Min.ImageError = true;
+            this.userControl_text_weather_Min.Name = "userControl_text_weather_Min";
+            this.userControl_text_weather_Min.OptionalSymbol = true;
+            this.userControl_text_weather_Min.Padding_zero = true;
+            this.userControl_text_weather_Min.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_weather_Current
+            // 
+            this.userControl_text_weather_Current.AOD = false;
+            resources.ApplyResources(this.userControl_text_weather_Current, "userControl_text_weather_Current");
+            this.userControl_text_weather_Current.Collapsed = true;
+            this.userControl_text_weather_Current.Follow = false;
+            this.userControl_text_weather_Current.ImageError = true;
+            this.userControl_text_weather_Current.Name = "userControl_text_weather_Current";
+            this.userControl_text_weather_Current.OptionalSymbol = true;
+            this.userControl_text_weather_Current.Padding_zero = true;
+            this.userControl_text_weather_Current.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_weather
+            // 
+            this.userControl_pictures_weather.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_weather, "userControl_pictures_weather");
+            this.userControl_pictures_weather.Collapsed = true;
+            this.userControl_pictures_weather.ImagesCount = 29;
+            this.userControl_pictures_weather.Name = "userControl_pictures_weather";
+            this.userControl_pictures_weather.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_UVindex
             // 
             resources.ApplyResources(this.tabPage_UVindex, "tabPage_UVindex");
@@ -5532,6 +5986,51 @@
             this.tabPage_UVindex.Controls.Add(this.userControl_text_UVindex);
             this.tabPage_UVindex.Controls.Add(this.userControl_pictures_UVindex);
             this.tabPage_UVindex.Name = "tabPage_UVindex";
+            // 
+            // userControl_scaleLinear_UVindex
+            // 
+            this.userControl_scaleLinear_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_UVindex, "userControl_scaleLinear_UVindex");
+            this.userControl_scaleLinear_UVindex.Collapsed = true;
+            this.userControl_scaleLinear_UVindex.Name = "userControl_scaleLinear_UVindex";
+            this.userControl_scaleLinear_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_UVindex
+            // 
+            this.userControl_scaleCircle_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_UVindex, "userControl_scaleCircle_UVindex");
+            this.userControl_scaleCircle_UVindex.Collapsed = true;
+            this.userControl_scaleCircle_UVindex.Name = "userControl_scaleCircle_UVindex";
+            this.userControl_scaleCircle_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_UVindex
+            // 
+            this.userControl_hand_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_hand_UVindex, "userControl_hand_UVindex");
+            this.userControl_hand_UVindex.Collapsed = true;
+            this.userControl_hand_UVindex.Name = "userControl_hand_UVindex";
+            this.userControl_hand_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_UVindex
+            // 
+            this.userControl_text_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_text_UVindex, "userControl_text_UVindex");
+            this.userControl_text_UVindex.Collapsed = true;
+            this.userControl_text_UVindex.Follow = false;
+            this.userControl_text_UVindex.ImageError = true;
+            this.userControl_text_UVindex.Name = "userControl_text_UVindex";
+            this.userControl_text_UVindex.OptionalSymbol = false;
+            this.userControl_text_UVindex.Padding_zero = true;
+            this.userControl_text_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_UVindex
+            // 
+            this.userControl_pictures_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_UVindex, "userControl_pictures_UVindex");
+            this.userControl_pictures_UVindex.Collapsed = true;
+            this.userControl_pictures_UVindex.ImagesCount = 10;
+            this.userControl_pictures_UVindex.Name = "userControl_pictures_UVindex";
+            this.userControl_pictures_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_AirQuality
             // 
@@ -5544,6 +6043,51 @@
             this.tabPage_AirQuality.Controls.Add(this.userControl_pictures_AirQuality);
             this.tabPage_AirQuality.Name = "tabPage_AirQuality";
             // 
+            // userControl_scaleLinear_AirQuality
+            // 
+            this.userControl_scaleLinear_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_AirQuality, "userControl_scaleLinear_AirQuality");
+            this.userControl_scaleLinear_AirQuality.Collapsed = true;
+            this.userControl_scaleLinear_AirQuality.Name = "userControl_scaleLinear_AirQuality";
+            this.userControl_scaleLinear_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_AirQuality
+            // 
+            this.userControl_scaleCircle_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_AirQuality, "userControl_scaleCircle_AirQuality");
+            this.userControl_scaleCircle_AirQuality.Collapsed = true;
+            this.userControl_scaleCircle_AirQuality.Name = "userControl_scaleCircle_AirQuality";
+            this.userControl_scaleCircle_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_AirQuality
+            // 
+            this.userControl_hand_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_hand_AirQuality, "userControl_hand_AirQuality");
+            this.userControl_hand_AirQuality.Collapsed = true;
+            this.userControl_hand_AirQuality.Name = "userControl_hand_AirQuality";
+            this.userControl_hand_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_AirQuality
+            // 
+            this.userControl_text_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_text_AirQuality, "userControl_text_AirQuality");
+            this.userControl_text_AirQuality.Collapsed = true;
+            this.userControl_text_AirQuality.Follow = false;
+            this.userControl_text_AirQuality.ImageError = true;
+            this.userControl_text_AirQuality.Name = "userControl_text_AirQuality";
+            this.userControl_text_AirQuality.OptionalSymbol = false;
+            this.userControl_text_AirQuality.Padding_zero = true;
+            this.userControl_text_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_AirQuality
+            // 
+            this.userControl_pictures_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_AirQuality, "userControl_pictures_AirQuality");
+            this.userControl_pictures_AirQuality.Collapsed = true;
+            this.userControl_pictures_AirQuality.ImagesCount = 10;
+            this.userControl_pictures_AirQuality.Name = "userControl_pictures_AirQuality";
+            this.userControl_pictures_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_Humidity
             // 
             resources.ApplyResources(this.tabPage_Humidity, "tabPage_Humidity");
@@ -5554,6 +6098,51 @@
             this.tabPage_Humidity.Controls.Add(this.userControl_text_Humidity);
             this.tabPage_Humidity.Controls.Add(this.userControl_pictures_Humidity);
             this.tabPage_Humidity.Name = "tabPage_Humidity";
+            // 
+            // userControl_scaleLinear_Humidity
+            // 
+            this.userControl_scaleLinear_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Humidity, "userControl_scaleLinear_Humidity");
+            this.userControl_scaleLinear_Humidity.Collapsed = true;
+            this.userControl_scaleLinear_Humidity.Name = "userControl_scaleLinear_Humidity";
+            this.userControl_scaleLinear_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Humidity
+            // 
+            this.userControl_scaleCircle_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Humidity, "userControl_scaleCircle_Humidity");
+            this.userControl_scaleCircle_Humidity.Collapsed = true;
+            this.userControl_scaleCircle_Humidity.Name = "userControl_scaleCircle_Humidity";
+            this.userControl_scaleCircle_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Humidity
+            // 
+            this.userControl_hand_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Humidity, "userControl_hand_Humidity");
+            this.userControl_hand_Humidity.Collapsed = true;
+            this.userControl_hand_Humidity.Name = "userControl_hand_Humidity";
+            this.userControl_hand_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Humidity
+            // 
+            this.userControl_text_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_text_Humidity, "userControl_text_Humidity");
+            this.userControl_text_Humidity.Collapsed = true;
+            this.userControl_text_Humidity.Follow = false;
+            this.userControl_text_Humidity.ImageError = true;
+            this.userControl_text_Humidity.Name = "userControl_text_Humidity";
+            this.userControl_text_Humidity.OptionalSymbol = false;
+            this.userControl_text_Humidity.Padding_zero = true;
+            this.userControl_text_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Humidity
+            // 
+            this.userControl_pictures_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Humidity, "userControl_pictures_Humidity");
+            this.userControl_pictures_Humidity.Collapsed = true;
+            this.userControl_pictures_Humidity.ImagesCount = 10;
+            this.userControl_pictures_Humidity.Name = "userControl_pictures_Humidity";
+            this.userControl_pictures_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_Sunrise
             // 
@@ -5572,6 +6161,51 @@
             this.tabPage_WindForce.Controls.Add(this.userControl_pictures_WindForce);
             this.tabPage_WindForce.Name = "tabPage_WindForce";
             // 
+            // userControl_scaleLinear_WindForce
+            // 
+            this.userControl_scaleLinear_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_WindForce, "userControl_scaleLinear_WindForce");
+            this.userControl_scaleLinear_WindForce.Collapsed = true;
+            this.userControl_scaleLinear_WindForce.Name = "userControl_scaleLinear_WindForce";
+            this.userControl_scaleLinear_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_WindForce
+            // 
+            this.userControl_scaleCircle_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_WindForce, "userControl_scaleCircle_WindForce");
+            this.userControl_scaleCircle_WindForce.Collapsed = true;
+            this.userControl_scaleCircle_WindForce.Name = "userControl_scaleCircle_WindForce";
+            this.userControl_scaleCircle_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_WindForce
+            // 
+            this.userControl_hand_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_hand_WindForce, "userControl_hand_WindForce");
+            this.userControl_hand_WindForce.Collapsed = true;
+            this.userControl_hand_WindForce.Name = "userControl_hand_WindForce";
+            this.userControl_hand_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_WindForce
+            // 
+            this.userControl_text_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_text_WindForce, "userControl_text_WindForce");
+            this.userControl_text_WindForce.Collapsed = true;
+            this.userControl_text_WindForce.Follow = false;
+            this.userControl_text_WindForce.ImageError = true;
+            this.userControl_text_WindForce.Name = "userControl_text_WindForce";
+            this.userControl_text_WindForce.OptionalSymbol = false;
+            this.userControl_text_WindForce.Padding_zero = true;
+            this.userControl_text_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_WindForce
+            // 
+            this.userControl_pictures_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_WindForce, "userControl_pictures_WindForce");
+            this.userControl_pictures_WindForce.Collapsed = true;
+            this.userControl_pictures_WindForce.ImagesCount = 10;
+            this.userControl_pictures_WindForce.Name = "userControl_pictures_WindForce";
+            this.userControl_pictures_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_Altitude
             // 
             resources.ApplyResources(this.tabPage_Altitude, "tabPage_Altitude");
@@ -5583,6 +6217,51 @@
             this.tabPage_Altitude.Controls.Add(this.userControl_pictures_Altitude);
             this.tabPage_Altitude.Name = "tabPage_Altitude";
             // 
+            // userControl_scaleLinear_Altitude
+            // 
+            this.userControl_scaleLinear_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Altitude, "userControl_scaleLinear_Altitude");
+            this.userControl_scaleLinear_Altitude.Collapsed = true;
+            this.userControl_scaleLinear_Altitude.Name = "userControl_scaleLinear_Altitude";
+            this.userControl_scaleLinear_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Altitude
+            // 
+            this.userControl_scaleCircle_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Altitude, "userControl_scaleCircle_Altitude");
+            this.userControl_scaleCircle_Altitude.Collapsed = true;
+            this.userControl_scaleCircle_Altitude.Name = "userControl_scaleCircle_Altitude";
+            this.userControl_scaleCircle_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Altitude
+            // 
+            this.userControl_hand_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Altitude, "userControl_hand_Altitude");
+            this.userControl_hand_Altitude.Collapsed = true;
+            this.userControl_hand_Altitude.Name = "userControl_hand_Altitude";
+            this.userControl_hand_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Altitude
+            // 
+            this.userControl_text_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_text_Altitude, "userControl_text_Altitude");
+            this.userControl_text_Altitude.Collapsed = true;
+            this.userControl_text_Altitude.Follow = false;
+            this.userControl_text_Altitude.ImageError = true;
+            this.userControl_text_Altitude.Name = "userControl_text_Altitude";
+            this.userControl_text_Altitude.OptionalSymbol = false;
+            this.userControl_text_Altitude.Padding_zero = true;
+            this.userControl_text_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Altitude
+            // 
+            this.userControl_pictures_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Altitude, "userControl_pictures_Altitude");
+            this.userControl_pictures_Altitude.Collapsed = true;
+            this.userControl_pictures_Altitude.ImagesCount = 10;
+            this.userControl_pictures_Altitude.Name = "userControl_pictures_Altitude";
+            this.userControl_pictures_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
             // tabPage_AirPressure
             // 
             resources.ApplyResources(this.tabPage_AirPressure, "tabPage_AirPressure");
@@ -5593,6 +6272,51 @@
             this.tabPage_AirPressure.Controls.Add(this.userControl_text_AirPressure);
             this.tabPage_AirPressure.Controls.Add(this.userControl_pictures_AirPressure);
             this.tabPage_AirPressure.Name = "tabPage_AirPressure";
+            // 
+            // userControl_scaleLinear_AirPressure
+            // 
+            this.userControl_scaleLinear_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_AirPressure, "userControl_scaleLinear_AirPressure");
+            this.userControl_scaleLinear_AirPressure.Collapsed = true;
+            this.userControl_scaleLinear_AirPressure.Name = "userControl_scaleLinear_AirPressure";
+            this.userControl_scaleLinear_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_AirPressure
+            // 
+            this.userControl_scaleCircle_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_AirPressure, "userControl_scaleCircle_AirPressure");
+            this.userControl_scaleCircle_AirPressure.Collapsed = true;
+            this.userControl_scaleCircle_AirPressure.Name = "userControl_scaleCircle_AirPressure";
+            this.userControl_scaleCircle_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_AirPressure
+            // 
+            this.userControl_hand_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_hand_AirPressure, "userControl_hand_AirPressure");
+            this.userControl_hand_AirPressure.Collapsed = true;
+            this.userControl_hand_AirPressure.Name = "userControl_hand_AirPressure";
+            this.userControl_hand_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_AirPressure
+            // 
+            this.userControl_text_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_text_AirPressure, "userControl_text_AirPressure");
+            this.userControl_text_AirPressure.Collapsed = true;
+            this.userControl_text_AirPressure.Follow = false;
+            this.userControl_text_AirPressure.ImageError = true;
+            this.userControl_text_AirPressure.Name = "userControl_text_AirPressure";
+            this.userControl_text_AirPressure.OptionalSymbol = false;
+            this.userControl_text_AirPressure.Padding_zero = true;
+            this.userControl_text_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_AirPressure
+            // 
+            this.userControl_pictures_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_AirPressure, "userControl_pictures_AirPressure");
+            this.userControl_pictures_AirPressure.Collapsed = true;
+            this.userControl_pictures_AirPressure.ImagesCount = 10;
+            this.userControl_pictures_AirPressure.Name = "userControl_pictures_AirPressure";
+            this.userControl_pictures_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // tabPage_System
             // 
@@ -5632,7 +6356,7 @@
             resources.ApplyResources(this.groupBox_Lock, "groupBox_Lock");
             this.groupBox_Lock.Name = "groupBox_Lock";
             this.groupBox_Lock.TabStop = false;
-            this.groupBox_Lock.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox_Lock.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // checkBox_Lock_Use
             // 
@@ -5724,7 +6448,7 @@
             resources.ApplyResources(this.groupBox_DND, "groupBox_DND");
             this.groupBox_DND.Name = "groupBox_DND";
             this.groupBox_DND.TabStop = false;
-            this.groupBox_DND.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox_DND.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // checkBox_DND_Use
             // 
@@ -5816,7 +6540,7 @@
             resources.ApplyResources(this.groupBox_Alarm, "groupBox_Alarm");
             this.groupBox_Alarm.Name = "groupBox_Alarm";
             this.groupBox_Alarm.TabStop = false;
-            this.groupBox_Alarm.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox_Alarm.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // checkBox_Alarm_Use
             // 
@@ -5908,7 +6632,7 @@
             resources.ApplyResources(this.groupBox_Bluetooth, "groupBox_Bluetooth");
             this.groupBox_Bluetooth.Name = "groupBox_Bluetooth";
             this.groupBox_Bluetooth.TabStop = false;
-            this.groupBox_Bluetooth.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox_Bluetooth.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // checkBox_Bluetooth_Use
             // 
@@ -5997,6 +6721,51 @@
             this.tabPage_Battery.Controls.Add(this.userControl_text_Battery);
             this.tabPage_Battery.Controls.Add(this.userControl_pictures_Battery);
             this.tabPage_Battery.Name = "tabPage_Battery";
+            // 
+            // userControl_scaleLinear_Battery
+            // 
+            this.userControl_scaleLinear_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Battery, "userControl_scaleLinear_Battery");
+            this.userControl_scaleLinear_Battery.Collapsed = true;
+            this.userControl_scaleLinear_Battery.Name = "userControl_scaleLinear_Battery";
+            this.userControl_scaleLinear_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_scaleCircle_Battery
+            // 
+            this.userControl_scaleCircle_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Battery, "userControl_scaleCircle_Battery");
+            this.userControl_scaleCircle_Battery.Collapsed = true;
+            this.userControl_scaleCircle_Battery.Name = "userControl_scaleCircle_Battery";
+            this.userControl_scaleCircle_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_hand_Battery
+            // 
+            this.userControl_hand_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Battery, "userControl_hand_Battery");
+            this.userControl_hand_Battery.Collapsed = true;
+            this.userControl_hand_Battery.Name = "userControl_hand_Battery";
+            this.userControl_hand_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_text_Battery
+            // 
+            this.userControl_text_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_text_Battery, "userControl_text_Battery");
+            this.userControl_text_Battery.Collapsed = true;
+            this.userControl_text_Battery.Follow = false;
+            this.userControl_text_Battery.ImageError = true;
+            this.userControl_text_Battery.Name = "userControl_text_Battery";
+            this.userControl_text_Battery.OptionalSymbol = false;
+            this.userControl_text_Battery.Padding_zero = true;
+            this.userControl_text_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // userControl_pictures_Battery
+            // 
+            this.userControl_pictures_Battery.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Battery, "userControl_pictures_Battery");
+            this.userControl_pictures_Battery.Collapsed = true;
+            this.userControl_pictures_Battery.ImagesCount = 10;
+            this.userControl_pictures_Battery.Name = "userControl_pictures_Battery";
+            this.userControl_pictures_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             // 
             // imageList1
             // 
@@ -9427,6 +10196,56 @@
             this.tabPage_Steps_AOD.Controls.Add(this.userControl_pictures_Steps_AOD);
             this.tabPage_Steps_AOD.Name = "tabPage_Steps_AOD";
             // 
+            // userControl_scaleLinear_Steps_AOD
+            // 
+            this.userControl_scaleLinear_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Steps_AOD, "userControl_scaleLinear_Steps_AOD");
+            this.userControl_scaleLinear_Steps_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Steps_AOD.Name = "userControl_scaleLinear_Steps_AOD";
+            this.userControl_scaleLinear_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Steps_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Steps_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Steps_AOD
+            // 
+            this.userControl_scaleCircle_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Steps_AOD, "userControl_scaleCircle_Steps_AOD");
+            this.userControl_scaleCircle_Steps_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Steps_AOD.Name = "userControl_scaleCircle_Steps_AOD";
+            this.userControl_scaleCircle_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Steps_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Steps_AOD_Copy);
+            // 
+            // userControl_hand_Steps_AOD
+            // 
+            this.userControl_hand_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Steps_AOD, "userControl_hand_Steps_AOD");
+            this.userControl_hand_Steps_AOD.Collapsed = true;
+            this.userControl_hand_Steps_AOD.Name = "userControl_hand_Steps_AOD";
+            this.userControl_hand_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Steps_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Steps_AOD_Copy);
+            // 
+            // userControl_text_Steps_AOD
+            // 
+            this.userControl_text_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Steps_AOD, "userControl_text_Steps_AOD");
+            this.userControl_text_Steps_AOD.Collapsed = true;
+            this.userControl_text_Steps_AOD.Follow = false;
+            this.userControl_text_Steps_AOD.ImageError = true;
+            this.userControl_text_Steps_AOD.Name = "userControl_text_Steps_AOD";
+            this.userControl_text_Steps_AOD.OptionalSymbol = false;
+            this.userControl_text_Steps_AOD.Padding_zero = true;
+            this.userControl_text_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Steps_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Steps_AOD_Copy);
+            // 
+            // userControl_pictures_Steps_AOD
+            // 
+            this.userControl_pictures_Steps_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Steps_AOD, "userControl_pictures_Steps_AOD");
+            this.userControl_pictures_Steps_AOD.Collapsed = true;
+            this.userControl_pictures_Steps_AOD.ImagesCount = 10;
+            this.userControl_pictures_Steps_AOD.Name = "userControl_pictures_Steps_AOD";
+            this.userControl_pictures_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Steps_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Steps_AOD_Copy);
+            // 
             // tabPage_Calories_AOD
             // 
             resources.ApplyResources(this.tabPage_Calories_AOD, "tabPage_Calories_AOD");
@@ -9437,6 +10256,56 @@
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_text_Calories_AOD);
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_pictures_Calories_AOD);
             this.tabPage_Calories_AOD.Name = "tabPage_Calories_AOD";
+            // 
+            // userControl_scaleLinear_Calories_AOD
+            // 
+            this.userControl_scaleLinear_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Calories_AOD, "userControl_scaleLinear_Calories_AOD");
+            this.userControl_scaleLinear_Calories_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Calories_AOD.Name = "userControl_scaleLinear_Calories_AOD";
+            this.userControl_scaleLinear_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Calories_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Calories_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Calories_AOD
+            // 
+            this.userControl_scaleCircle_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Calories_AOD, "userControl_scaleCircle_Calories_AOD");
+            this.userControl_scaleCircle_Calories_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Calories_AOD.Name = "userControl_scaleCircle_Calories_AOD";
+            this.userControl_scaleCircle_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Calories_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Calories_AOD_Copy);
+            // 
+            // userControl_hand_Calories_AOD
+            // 
+            this.userControl_hand_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Calories_AOD, "userControl_hand_Calories_AOD");
+            this.userControl_hand_Calories_AOD.Collapsed = true;
+            this.userControl_hand_Calories_AOD.Name = "userControl_hand_Calories_AOD";
+            this.userControl_hand_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Calories_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Calories_AOD_Copy);
+            // 
+            // userControl_text_Calories_AOD
+            // 
+            this.userControl_text_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Calories_AOD, "userControl_text_Calories_AOD");
+            this.userControl_text_Calories_AOD.Collapsed = true;
+            this.userControl_text_Calories_AOD.Follow = false;
+            this.userControl_text_Calories_AOD.ImageError = true;
+            this.userControl_text_Calories_AOD.Name = "userControl_text_Calories_AOD";
+            this.userControl_text_Calories_AOD.OptionalSymbol = false;
+            this.userControl_text_Calories_AOD.Padding_zero = true;
+            this.userControl_text_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Calories_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Calories_AOD_Copy);
+            // 
+            // userControl_pictures_Calories_AOD
+            // 
+            this.userControl_pictures_Calories_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Calories_AOD, "userControl_pictures_Calories_AOD");
+            this.userControl_pictures_Calories_AOD.Collapsed = true;
+            this.userControl_pictures_Calories_AOD.ImagesCount = 10;
+            this.userControl_pictures_Calories_AOD.Name = "userControl_pictures_Calories_AOD";
+            this.userControl_pictures_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Calories_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Calories_AOD_Copy);
             // 
             // tabPage_HeartRate_AOD
             // 
@@ -9449,6 +10318,56 @@
             this.tabPage_HeartRate_AOD.Controls.Add(this.userControl_pictures_HeartRate_AOD);
             this.tabPage_HeartRate_AOD.Name = "tabPage_HeartRate_AOD";
             // 
+            // userControl_scaleLinear_HeartRate_AOD
+            // 
+            this.userControl_scaleLinear_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_HeartRate_AOD, "userControl_scaleLinear_HeartRate_AOD");
+            this.userControl_scaleLinear_HeartRate_AOD.Collapsed = true;
+            this.userControl_scaleLinear_HeartRate_AOD.Name = "userControl_scaleLinear_HeartRate_AOD";
+            this.userControl_scaleLinear_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_HeartRate_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_HeartRate_AOD_Copy);
+            // 
+            // userControl_scaleCircle_HeartRate_AOD
+            // 
+            this.userControl_scaleCircle_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_HeartRate_AOD, "userControl_scaleCircle_HeartRate_AOD");
+            this.userControl_scaleCircle_HeartRate_AOD.Collapsed = true;
+            this.userControl_scaleCircle_HeartRate_AOD.Name = "userControl_scaleCircle_HeartRate_AOD";
+            this.userControl_scaleCircle_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_HeartRate_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_HeartRate_AOD_Copy);
+            // 
+            // userControl_hand_HeartRate_AOD
+            // 
+            this.userControl_hand_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_HeartRate_AOD, "userControl_hand_HeartRate_AOD");
+            this.userControl_hand_HeartRate_AOD.Collapsed = true;
+            this.userControl_hand_HeartRate_AOD.Name = "userControl_hand_HeartRate_AOD";
+            this.userControl_hand_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_HeartRate_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_HeartRate_AOD_Copy);
+            // 
+            // userControl_text_HeartRate_AOD
+            // 
+            this.userControl_text_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_HeartRate_AOD, "userControl_text_HeartRate_AOD");
+            this.userControl_text_HeartRate_AOD.Collapsed = true;
+            this.userControl_text_HeartRate_AOD.Follow = false;
+            this.userControl_text_HeartRate_AOD.ImageError = true;
+            this.userControl_text_HeartRate_AOD.Name = "userControl_text_HeartRate_AOD";
+            this.userControl_text_HeartRate_AOD.OptionalSymbol = false;
+            this.userControl_text_HeartRate_AOD.Padding_zero = true;
+            this.userControl_text_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_HeartRate_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_HeartRate_AOD_Copy);
+            // 
+            // userControl_pictures_HeartRate_AOD
+            // 
+            this.userControl_pictures_HeartRate_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_HeartRate_AOD, "userControl_pictures_HeartRate_AOD");
+            this.userControl_pictures_HeartRate_AOD.Collapsed = true;
+            this.userControl_pictures_HeartRate_AOD.ImagesCount = 6;
+            this.userControl_pictures_HeartRate_AOD.Name = "userControl_pictures_HeartRate_AOD";
+            this.userControl_pictures_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_HeartRate_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_HeartRate_AOD_Copy);
+            // 
             // tabPage_PAI_AOD
             // 
             resources.ApplyResources(this.tabPage_PAI_AOD, "tabPage_PAI_AOD");
@@ -9460,12 +10379,75 @@
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_pictures_PAI_AOD);
             this.tabPage_PAI_AOD.Name = "tabPage_PAI_AOD";
             // 
+            // userControl_scaleLinear_PAI_AOD
+            // 
+            this.userControl_scaleLinear_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_PAI_AOD, "userControl_scaleLinear_PAI_AOD");
+            this.userControl_scaleLinear_PAI_AOD.Collapsed = true;
+            this.userControl_scaleLinear_PAI_AOD.Name = "userControl_scaleLinear_PAI_AOD";
+            this.userControl_scaleLinear_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_PAI_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_PAI_AOD_Copy);
+            // 
+            // userControl_scaleCircle_PAI_AOD
+            // 
+            this.userControl_scaleCircle_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_PAI_AOD, "userControl_scaleCircle_PAI_AOD");
+            this.userControl_scaleCircle_PAI_AOD.Collapsed = true;
+            this.userControl_scaleCircle_PAI_AOD.Name = "userControl_scaleCircle_PAI_AOD";
+            this.userControl_scaleCircle_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_PAI_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_PAI_AOD_Copy);
+            // 
+            // userControl_hand_PAI_AOD
+            // 
+            this.userControl_hand_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_PAI_AOD, "userControl_hand_PAI_AOD");
+            this.userControl_hand_PAI_AOD.Collapsed = true;
+            this.userControl_hand_PAI_AOD.Name = "userControl_hand_PAI_AOD";
+            this.userControl_hand_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_PAI_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_PAI_AOD_Copy);
+            // 
+            // userControl_text_PAI_AOD
+            // 
+            this.userControl_text_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_PAI_AOD, "userControl_text_PAI_AOD");
+            this.userControl_text_PAI_AOD.Collapsed = true;
+            this.userControl_text_PAI_AOD.Follow = false;
+            this.userControl_text_PAI_AOD.ImageError = true;
+            this.userControl_text_PAI_AOD.Name = "userControl_text_PAI_AOD";
+            this.userControl_text_PAI_AOD.OptionalSymbol = false;
+            this.userControl_text_PAI_AOD.Padding_zero = true;
+            this.userControl_text_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_PAI_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_PAI_AOD_Copy);
+            // 
+            // userControl_pictures_PAI_AOD
+            // 
+            this.userControl_pictures_PAI_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_PAI_AOD, "userControl_pictures_PAI_AOD");
+            this.userControl_pictures_PAI_AOD.Collapsed = true;
+            this.userControl_pictures_PAI_AOD.ImagesCount = 10;
+            this.userControl_pictures_PAI_AOD.Name = "userControl_pictures_PAI_AOD";
+            this.userControl_pictures_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_PAI_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_PAI_AOD_Copy);
+            // 
             // tabPage_Distance_AOD
             // 
             resources.ApplyResources(this.tabPage_Distance_AOD, "tabPage_Distance_AOD");
             this.tabPage_Distance_AOD.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_Distance_AOD.Controls.Add(this.userControl_text_Distance_AOD);
             this.tabPage_Distance_AOD.Name = "tabPage_Distance_AOD";
+            // 
+            // userControl_text_Distance_AOD
+            // 
+            this.userControl_text_Distance_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Distance_AOD, "userControl_text_Distance_AOD");
+            this.userControl_text_Distance_AOD.Collapsed = true;
+            this.userControl_text_Distance_AOD.Follow = false;
+            this.userControl_text_Distance_AOD.ImageError = true;
+            this.userControl_text_Distance_AOD.Name = "userControl_text_Distance_AOD";
+            this.userControl_text_Distance_AOD.OptionalSymbol = true;
+            this.userControl_text_Distance_AOD.Padding_zero = true;
+            this.userControl_text_Distance_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Distance_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Distance_AOD_Copy);
             // 
             // tabPage_StandUp_AOD
             // 
@@ -9478,6 +10460,56 @@
             this.tabPage_StandUp_AOD.Controls.Add(this.userControl_pictures_StandUp_AOD);
             this.tabPage_StandUp_AOD.Name = "tabPage_StandUp_AOD";
             // 
+            // userControl_scaleLinear_StandUp_AOD
+            // 
+            this.userControl_scaleLinear_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_StandUp_AOD, "userControl_scaleLinear_StandUp_AOD");
+            this.userControl_scaleLinear_StandUp_AOD.Collapsed = true;
+            this.userControl_scaleLinear_StandUp_AOD.Name = "userControl_scaleLinear_StandUp_AOD";
+            this.userControl_scaleLinear_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_StandUp_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_StandUp_AOD_Copy);
+            // 
+            // userControl_scaleCircle_StandUp_AOD
+            // 
+            this.userControl_scaleCircle_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_StandUp_AOD, "userControl_scaleCircle_StandUp_AOD");
+            this.userControl_scaleCircle_StandUp_AOD.Collapsed = true;
+            this.userControl_scaleCircle_StandUp_AOD.Name = "userControl_scaleCircle_StandUp_AOD";
+            this.userControl_scaleCircle_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_StandUp_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_StandUp_AOD_Copy);
+            // 
+            // userControl_hand_StandUp_AOD
+            // 
+            this.userControl_hand_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_StandUp_AOD, "userControl_hand_StandUp_AOD");
+            this.userControl_hand_StandUp_AOD.Collapsed = true;
+            this.userControl_hand_StandUp_AOD.Name = "userControl_hand_StandUp_AOD";
+            this.userControl_hand_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_StandUp_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_StandUp_AOD_Copy);
+            // 
+            // userControl_text_StandUp_AOD
+            // 
+            this.userControl_text_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_StandUp_AOD, "userControl_text_StandUp_AOD");
+            this.userControl_text_StandUp_AOD.Collapsed = true;
+            this.userControl_text_StandUp_AOD.Follow = false;
+            this.userControl_text_StandUp_AOD.ImageError = true;
+            this.userControl_text_StandUp_AOD.Name = "userControl_text_StandUp_AOD";
+            this.userControl_text_StandUp_AOD.OptionalSymbol = false;
+            this.userControl_text_StandUp_AOD.Padding_zero = true;
+            this.userControl_text_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_StandUp_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_StandUp_AOD_Copy);
+            // 
+            // userControl_pictures_StandUp_AOD
+            // 
+            this.userControl_pictures_StandUp_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_StandUp_AOD, "userControl_pictures_StandUp_AOD");
+            this.userControl_pictures_StandUp_AOD.Collapsed = true;
+            this.userControl_pictures_StandUp_AOD.ImagesCount = 10;
+            this.userControl_pictures_StandUp_AOD.Name = "userControl_pictures_StandUp_AOD";
+            this.userControl_pictures_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_StandUp_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_StandUp_AOD_Copy);
+            // 
             // tabPage_Stress_AOD
             // 
             resources.ApplyResources(this.tabPage_Stress_AOD, "tabPage_Stress_AOD");
@@ -9488,6 +10520,56 @@
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_text_Stress_AOD);
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_pictures_Stress_AOD);
             this.tabPage_Stress_AOD.Name = "tabPage_Stress_AOD";
+            // 
+            // userControl_scaleLinear_Stress_AOD
+            // 
+            this.userControl_scaleLinear_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Stress_AOD, "userControl_scaleLinear_Stress_AOD");
+            this.userControl_scaleLinear_Stress_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Stress_AOD.Name = "userControl_scaleLinear_Stress_AOD";
+            this.userControl_scaleLinear_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Stress_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Stress_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Stress_AOD
+            // 
+            this.userControl_scaleCircle_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Stress_AOD, "userControl_scaleCircle_Stress_AOD");
+            this.userControl_scaleCircle_Stress_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Stress_AOD.Name = "userControl_scaleCircle_Stress_AOD";
+            this.userControl_scaleCircle_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Stress_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Stress_AOD_Copy);
+            // 
+            // userControl_hand_Stress_AOD
+            // 
+            this.userControl_hand_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Stress_AOD, "userControl_hand_Stress_AOD");
+            this.userControl_hand_Stress_AOD.Collapsed = true;
+            this.userControl_hand_Stress_AOD.Name = "userControl_hand_Stress_AOD";
+            this.userControl_hand_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Stress_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Stress_AOD_Copy);
+            // 
+            // userControl_text_Stress_AOD
+            // 
+            this.userControl_text_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Stress_AOD, "userControl_text_Stress_AOD");
+            this.userControl_text_Stress_AOD.Collapsed = true;
+            this.userControl_text_Stress_AOD.Follow = false;
+            this.userControl_text_Stress_AOD.ImageError = true;
+            this.userControl_text_Stress_AOD.Name = "userControl_text_Stress_AOD";
+            this.userControl_text_Stress_AOD.OptionalSymbol = false;
+            this.userControl_text_Stress_AOD.Padding_zero = true;
+            this.userControl_text_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Stress_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Stress_AOD_Copy);
+            // 
+            // userControl_pictures_Stress_AOD
+            // 
+            this.userControl_pictures_Stress_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Stress_AOD, "userControl_pictures_Stress_AOD");
+            this.userControl_pictures_Stress_AOD.Collapsed = true;
+            this.userControl_pictures_Stress_AOD.ImagesCount = 10;
+            this.userControl_pictures_Stress_AOD.Name = "userControl_pictures_Stress_AOD";
+            this.userControl_pictures_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Stress_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Stress_AOD_Copy);
             // 
             // tabPage_ActivityGoal_AOD
             // 
@@ -9500,6 +10582,56 @@
             this.tabPage_ActivityGoal_AOD.Controls.Add(this.userControl_pictures_ActivityGoal_AOD);
             this.tabPage_ActivityGoal_AOD.Name = "tabPage_ActivityGoal_AOD";
             // 
+            // userControl_scaleLinear_ActivityGoal_AOD
+            // 
+            this.userControl_scaleLinear_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal_AOD, "userControl_scaleLinear_ActivityGoal_AOD");
+            this.userControl_scaleLinear_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_scaleLinear_ActivityGoal_AOD.Name = "userControl_scaleLinear_ActivityGoal_AOD";
+            this.userControl_scaleLinear_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_ActivityGoal_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_scaleCircle_ActivityGoal_AOD
+            // 
+            this.userControl_scaleCircle_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal_AOD, "userControl_scaleCircle_ActivityGoal_AOD");
+            this.userControl_scaleCircle_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_scaleCircle_ActivityGoal_AOD.Name = "userControl_scaleCircle_ActivityGoal_AOD";
+            this.userControl_scaleCircle_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_ActivityGoal_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_hand_ActivityGoal_AOD
+            // 
+            this.userControl_hand_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_ActivityGoal_AOD, "userControl_hand_ActivityGoal_AOD");
+            this.userControl_hand_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_hand_ActivityGoal_AOD.Name = "userControl_hand_ActivityGoal_AOD";
+            this.userControl_hand_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_ActivityGoal_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_text_ActivityGoal_AOD
+            // 
+            this.userControl_text_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_ActivityGoal_AOD, "userControl_text_ActivityGoal_AOD");
+            this.userControl_text_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_text_ActivityGoal_AOD.Follow = false;
+            this.userControl_text_ActivityGoal_AOD.ImageError = true;
+            this.userControl_text_ActivityGoal_AOD.Name = "userControl_text_ActivityGoal_AOD";
+            this.userControl_text_ActivityGoal_AOD.OptionalSymbol = false;
+            this.userControl_text_ActivityGoal_AOD.Padding_zero = true;
+            this.userControl_text_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_ActivityGoal_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_ActivityGoal_AOD_Copy);
+            // 
+            // userControl_pictures_ActivityGoal_AOD
+            // 
+            this.userControl_pictures_ActivityGoal_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_ActivityGoal_AOD, "userControl_pictures_ActivityGoal_AOD");
+            this.userControl_pictures_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_pictures_ActivityGoal_AOD.ImagesCount = 10;
+            this.userControl_pictures_ActivityGoal_AOD.Name = "userControl_pictures_ActivityGoal_AOD";
+            this.userControl_pictures_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_ActivityGoal_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_ActivityGoal_AOD_Copy);
+            // 
             // tabPage_FatBurning_AOD
             // 
             resources.ApplyResources(this.tabPage_FatBurning_AOD, "tabPage_FatBurning_AOD");
@@ -9510,6 +10642,56 @@
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_text_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_pictures_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Name = "tabPage_FatBurning_AOD";
+            // 
+            // userControl_scaleLinear_FatBurning_AOD
+            // 
+            this.userControl_scaleLinear_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_FatBurning_AOD, "userControl_scaleLinear_FatBurning_AOD");
+            this.userControl_scaleLinear_FatBurning_AOD.Collapsed = true;
+            this.userControl_scaleLinear_FatBurning_AOD.Name = "userControl_scaleLinear_FatBurning_AOD";
+            this.userControl_scaleLinear_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_FatBurning_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_FatBurning_AOD_Copy);
+            // 
+            // userControl_scaleCircle_FatBurning_AOD
+            // 
+            this.userControl_scaleCircle_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_FatBurning_AOD, "userControl_scaleCircle_FatBurning_AOD");
+            this.userControl_scaleCircle_FatBurning_AOD.Collapsed = true;
+            this.userControl_scaleCircle_FatBurning_AOD.Name = "userControl_scaleCircle_FatBurning_AOD";
+            this.userControl_scaleCircle_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_FatBurning_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_FatBurning_AOD_Copy);
+            // 
+            // userControl_hand_FatBurning_AOD
+            // 
+            this.userControl_hand_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_FatBurning_AOD, "userControl_hand_FatBurning_AOD");
+            this.userControl_hand_FatBurning_AOD.Collapsed = true;
+            this.userControl_hand_FatBurning_AOD.Name = "userControl_hand_FatBurning_AOD";
+            this.userControl_hand_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_FatBurning_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_FatBurning_AOD_Copy);
+            // 
+            // userControl_text_FatBurning_AOD
+            // 
+            this.userControl_text_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_FatBurning_AOD, "userControl_text_FatBurning_AOD");
+            this.userControl_text_FatBurning_AOD.Collapsed = true;
+            this.userControl_text_FatBurning_AOD.Follow = false;
+            this.userControl_text_FatBurning_AOD.ImageError = true;
+            this.userControl_text_FatBurning_AOD.Name = "userControl_text_FatBurning_AOD";
+            this.userControl_text_FatBurning_AOD.OptionalSymbol = false;
+            this.userControl_text_FatBurning_AOD.Padding_zero = true;
+            this.userControl_text_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_FatBurning_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_FatBurning_AOD_Copy);
+            // 
+            // userControl_pictures_FatBurning_AOD
+            // 
+            this.userControl_pictures_FatBurning_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_FatBurning_AOD, "userControl_pictures_FatBurning_AOD");
+            this.userControl_pictures_FatBurning_AOD.Collapsed = true;
+            this.userControl_pictures_FatBurning_AOD.ImagesCount = 10;
+            this.userControl_pictures_FatBurning_AOD.Name = "userControl_pictures_FatBurning_AOD";
+            this.userControl_pictures_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_FatBurning_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_FatBurning_AOD_Copy);
             // 
             // tabPage_Air_AOD
             // 
@@ -9545,6 +10727,82 @@
             this.tabPage_Weather_AOD.Controls.Add(this.userControl_pictures_weather_AOD);
             this.tabPage_Weather_AOD.Name = "tabPage_Weather_AOD";
             // 
+            // userControl_scaleLinear_Weather_AOD
+            // 
+            this.userControl_scaleLinear_Weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Weather_AOD, "userControl_scaleLinear_Weather_AOD");
+            this.userControl_scaleLinear_Weather_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Weather_AOD.Name = "userControl_scaleLinear_Weather_AOD";
+            this.userControl_scaleLinear_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Weather_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Weather_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Weather_AOD
+            // 
+            this.userControl_scaleCircle_Weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Weather_AOD, "userControl_scaleCircle_Weather_AOD");
+            this.userControl_scaleCircle_Weather_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Weather_AOD.Name = "userControl_scaleCircle_Weather_AOD";
+            this.userControl_scaleCircle_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Weather_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Weather_AOD_Copy);
+            // 
+            // userControl_hand_Weather_AOD
+            // 
+            this.userControl_hand_Weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Weather_AOD, "userControl_hand_Weather_AOD");
+            this.userControl_hand_Weather_AOD.Collapsed = true;
+            this.userControl_hand_Weather_AOD.Name = "userControl_hand_Weather_AOD";
+            this.userControl_hand_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Weather_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Weather_AOD_Copy);
+            // 
+            // userControl_text_weather_Max_AOD
+            // 
+            this.userControl_text_weather_Max_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_weather_Max_AOD, "userControl_text_weather_Max_AOD");
+            this.userControl_text_weather_Max_AOD.Collapsed = true;
+            this.userControl_text_weather_Max_AOD.Follow = true;
+            this.userControl_text_weather_Max_AOD.ImageError = true;
+            this.userControl_text_weather_Max_AOD.Name = "userControl_text_weather_Max_AOD";
+            this.userControl_text_weather_Max_AOD.OptionalSymbol = true;
+            this.userControl_text_weather_Max_AOD.Padding_zero = true;
+            this.userControl_text_weather_Max_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_weather_Max_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WeatherMax_AOD_Copy);
+            // 
+            // userControl_text_weather_Min_AOD
+            // 
+            this.userControl_text_weather_Min_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_weather_Min_AOD, "userControl_text_weather_Min_AOD");
+            this.userControl_text_weather_Min_AOD.Collapsed = true;
+            this.userControl_text_weather_Min_AOD.Follow = false;
+            this.userControl_text_weather_Min_AOD.ImageError = true;
+            this.userControl_text_weather_Min_AOD.Name = "userControl_text_weather_Min_AOD";
+            this.userControl_text_weather_Min_AOD.OptionalSymbol = true;
+            this.userControl_text_weather_Min_AOD.Padding_zero = true;
+            this.userControl_text_weather_Min_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_weather_Min_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WeatherMin_AOD_Copy);
+            // 
+            // userControl_text_weather_Current_AOD
+            // 
+            this.userControl_text_weather_Current_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_weather_Current_AOD, "userControl_text_weather_Current_AOD");
+            this.userControl_text_weather_Current_AOD.Collapsed = true;
+            this.userControl_text_weather_Current_AOD.Follow = false;
+            this.userControl_text_weather_Current_AOD.ImageError = true;
+            this.userControl_text_weather_Current_AOD.Name = "userControl_text_weather_Current_AOD";
+            this.userControl_text_weather_Current_AOD.OptionalSymbol = true;
+            this.userControl_text_weather_Current_AOD.Padding_zero = true;
+            this.userControl_text_weather_Current_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_weather_Current_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Weather_AOD_Copy);
+            // 
+            // userControl_pictures_weather_AOD
+            // 
+            this.userControl_pictures_weather_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_weather_AOD, "userControl_pictures_weather_AOD");
+            this.userControl_pictures_weather_AOD.Collapsed = true;
+            this.userControl_pictures_weather_AOD.ImagesCount = 29;
+            this.userControl_pictures_weather_AOD.Name = "userControl_pictures_weather_AOD";
+            this.userControl_pictures_weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_weather_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Weather_AOD_Copy);
+            // 
             // tabPage_UVindex_AOD
             // 
             resources.ApplyResources(this.tabPage_UVindex_AOD, "tabPage_UVindex_AOD");
@@ -9555,6 +10813,56 @@
             this.tabPage_UVindex_AOD.Controls.Add(this.userControl_text_UVindex_AOD);
             this.tabPage_UVindex_AOD.Controls.Add(this.userControl_pictures_UVindex_AOD);
             this.tabPage_UVindex_AOD.Name = "tabPage_UVindex_AOD";
+            // 
+            // userControl_scaleLinear_UVindex_AOD
+            // 
+            this.userControl_scaleLinear_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_UVindex_AOD, "userControl_scaleLinear_UVindex_AOD");
+            this.userControl_scaleLinear_UVindex_AOD.Collapsed = true;
+            this.userControl_scaleLinear_UVindex_AOD.Name = "userControl_scaleLinear_UVindex_AOD";
+            this.userControl_scaleLinear_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_UVindex_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_UVindex_AOD_Copy);
+            // 
+            // userControl_scaleCircle_UVindex_AOD
+            // 
+            this.userControl_scaleCircle_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_UVindex_AOD, "userControl_scaleCircle_UVindex_AOD");
+            this.userControl_scaleCircle_UVindex_AOD.Collapsed = true;
+            this.userControl_scaleCircle_UVindex_AOD.Name = "userControl_scaleCircle_UVindex_AOD";
+            this.userControl_scaleCircle_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_UVindex_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_UVindex_AOD_Copy);
+            // 
+            // userControl_hand_UVindex_AOD
+            // 
+            this.userControl_hand_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_UVindex_AOD, "userControl_hand_UVindex_AOD");
+            this.userControl_hand_UVindex_AOD.Collapsed = true;
+            this.userControl_hand_UVindex_AOD.Name = "userControl_hand_UVindex_AOD";
+            this.userControl_hand_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_UVindex_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_UVindex_AOD_Copy);
+            // 
+            // userControl_text_UVindex_AOD
+            // 
+            this.userControl_text_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_UVindex_AOD, "userControl_text_UVindex_AOD");
+            this.userControl_text_UVindex_AOD.Collapsed = true;
+            this.userControl_text_UVindex_AOD.Follow = false;
+            this.userControl_text_UVindex_AOD.ImageError = true;
+            this.userControl_text_UVindex_AOD.Name = "userControl_text_UVindex_AOD";
+            this.userControl_text_UVindex_AOD.OptionalSymbol = false;
+            this.userControl_text_UVindex_AOD.Padding_zero = true;
+            this.userControl_text_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_UVindex_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_UVindex_AOD_Copy);
+            // 
+            // userControl_pictures_UVindex_AOD
+            // 
+            this.userControl_pictures_UVindex_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_UVindex_AOD, "userControl_pictures_UVindex_AOD");
+            this.userControl_pictures_UVindex_AOD.Collapsed = true;
+            this.userControl_pictures_UVindex_AOD.ImagesCount = 10;
+            this.userControl_pictures_UVindex_AOD.Name = "userControl_pictures_UVindex_AOD";
+            this.userControl_pictures_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_UVindex_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_UVindex_AOD_Copy);
             // 
             // tabPage_AirQuality_AOD
             // 
@@ -9567,6 +10875,56 @@
             this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_pictures_AirQuality_AOD);
             this.tabPage_AirQuality_AOD.Name = "tabPage_AirQuality_AOD";
             // 
+            // userControl_scaleLinear_AirQuality_AOD
+            // 
+            this.userControl_scaleLinear_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_AirQuality_AOD, "userControl_scaleLinear_AirQuality_AOD");
+            this.userControl_scaleLinear_AirQuality_AOD.Collapsed = true;
+            this.userControl_scaleLinear_AirQuality_AOD.Name = "userControl_scaleLinear_AirQuality_AOD";
+            this.userControl_scaleLinear_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_AirQuality_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_AirQuality_AOD_Copy);
+            // 
+            // userControl_scaleCircle_AirQuality_AOD
+            // 
+            this.userControl_scaleCircle_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_AirQuality_AOD, "userControl_scaleCircle_AirQuality_AOD");
+            this.userControl_scaleCircle_AirQuality_AOD.Collapsed = true;
+            this.userControl_scaleCircle_AirQuality_AOD.Name = "userControl_scaleCircle_AirQuality_AOD";
+            this.userControl_scaleCircle_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_AirQuality_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_AirQuality_AOD_Copy);
+            // 
+            // userControl_hand_AirQuality_AOD
+            // 
+            this.userControl_hand_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_AirQuality_AOD, "userControl_hand_AirQuality_AOD");
+            this.userControl_hand_AirQuality_AOD.Collapsed = true;
+            this.userControl_hand_AirQuality_AOD.Name = "userControl_hand_AirQuality_AOD";
+            this.userControl_hand_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_AirQuality_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_AirQuality_AOD_Copy);
+            // 
+            // userControl_text_AirQuality_AOD
+            // 
+            this.userControl_text_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_AirQuality_AOD, "userControl_text_AirQuality_AOD");
+            this.userControl_text_AirQuality_AOD.Collapsed = true;
+            this.userControl_text_AirQuality_AOD.Follow = false;
+            this.userControl_text_AirQuality_AOD.ImageError = true;
+            this.userControl_text_AirQuality_AOD.Name = "userControl_text_AirQuality_AOD";
+            this.userControl_text_AirQuality_AOD.OptionalSymbol = false;
+            this.userControl_text_AirQuality_AOD.Padding_zero = true;
+            this.userControl_text_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_AirQuality_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_AirQuality_AOD_Copy);
+            // 
+            // userControl_pictures_AirQuality_AOD
+            // 
+            this.userControl_pictures_AirQuality_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_AirQuality_AOD, "userControl_pictures_AirQuality_AOD");
+            this.userControl_pictures_AirQuality_AOD.Collapsed = true;
+            this.userControl_pictures_AirQuality_AOD.ImagesCount = 10;
+            this.userControl_pictures_AirQuality_AOD.Name = "userControl_pictures_AirQuality_AOD";
+            this.userControl_pictures_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_AirQuality_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_AirQuality_AOD_Copy);
+            // 
             // tabPage_Humidity_AOD
             // 
             resources.ApplyResources(this.tabPage_Humidity_AOD, "tabPage_Humidity_AOD");
@@ -9577,6 +10935,56 @@
             this.tabPage_Humidity_AOD.Controls.Add(this.userControl_text_Humidity_AOD);
             this.tabPage_Humidity_AOD.Controls.Add(this.userControl_pictures_Humidity_AOD);
             this.tabPage_Humidity_AOD.Name = "tabPage_Humidity_AOD";
+            // 
+            // userControl_scaleLinear_Humidity_AOD
+            // 
+            this.userControl_scaleLinear_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Humidity_AOD, "userControl_scaleLinear_Humidity_AOD");
+            this.userControl_scaleLinear_Humidity_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Humidity_AOD.Name = "userControl_scaleLinear_Humidity_AOD";
+            this.userControl_scaleLinear_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Humidity_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Humidity_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Humidity_AOD
+            // 
+            this.userControl_scaleCircle_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Humidity_AOD, "userControl_scaleCircle_Humidity_AOD");
+            this.userControl_scaleCircle_Humidity_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Humidity_AOD.Name = "userControl_scaleCircle_Humidity_AOD";
+            this.userControl_scaleCircle_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Humidity_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Humidity_AOD_Copy);
+            // 
+            // userControl_hand_Humidity_AOD
+            // 
+            this.userControl_hand_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Humidity_AOD, "userControl_hand_Humidity_AOD");
+            this.userControl_hand_Humidity_AOD.Collapsed = true;
+            this.userControl_hand_Humidity_AOD.Name = "userControl_hand_Humidity_AOD";
+            this.userControl_hand_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Humidity_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Humidity_AOD_Copy);
+            // 
+            // userControl_text_Humidity_AOD
+            // 
+            this.userControl_text_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Humidity_AOD, "userControl_text_Humidity_AOD");
+            this.userControl_text_Humidity_AOD.Collapsed = true;
+            this.userControl_text_Humidity_AOD.Follow = false;
+            this.userControl_text_Humidity_AOD.ImageError = true;
+            this.userControl_text_Humidity_AOD.Name = "userControl_text_Humidity_AOD";
+            this.userControl_text_Humidity_AOD.OptionalSymbol = false;
+            this.userControl_text_Humidity_AOD.Padding_zero = true;
+            this.userControl_text_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Humidity_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Humidity_AOD_Copy);
+            // 
+            // userControl_pictures_Humidity_AOD
+            // 
+            this.userControl_pictures_Humidity_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Humidity_AOD, "userControl_pictures_Humidity_AOD");
+            this.userControl_pictures_Humidity_AOD.Collapsed = true;
+            this.userControl_pictures_Humidity_AOD.ImagesCount = 10;
+            this.userControl_pictures_Humidity_AOD.Name = "userControl_pictures_Humidity_AOD";
+            this.userControl_pictures_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Humidity_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Humidity_AOD_Copy);
             // 
             // tabPage_Sunrise_AOD
             // 
@@ -9595,6 +11003,56 @@
             this.tabPage_WindForce_AOD.Controls.Add(this.userControl_pictures_WindForce_AOD);
             this.tabPage_WindForce_AOD.Name = "tabPage_WindForce_AOD";
             // 
+            // userControl_scaleLinear_WindForce_AOD
+            // 
+            this.userControl_scaleLinear_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_WindForce_AOD, "userControl_scaleLinear_WindForce_AOD");
+            this.userControl_scaleLinear_WindForce_AOD.Collapsed = true;
+            this.userControl_scaleLinear_WindForce_AOD.Name = "userControl_scaleLinear_WindForce_AOD";
+            this.userControl_scaleLinear_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_WindForce_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_WindForce_AOD_Copy);
+            // 
+            // userControl_scaleCircle_WindForce_AOD
+            // 
+            this.userControl_scaleCircle_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_WindForce_AOD, "userControl_scaleCircle_WindForce_AOD");
+            this.userControl_scaleCircle_WindForce_AOD.Collapsed = true;
+            this.userControl_scaleCircle_WindForce_AOD.Name = "userControl_scaleCircle_WindForce_AOD";
+            this.userControl_scaleCircle_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_WindForce_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_WindForce_AOD_Copy);
+            // 
+            // userControl_hand_WindForce_AOD
+            // 
+            this.userControl_hand_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_WindForce_AOD, "userControl_hand_WindForce_AOD");
+            this.userControl_hand_WindForce_AOD.Collapsed = true;
+            this.userControl_hand_WindForce_AOD.Name = "userControl_hand_WindForce_AOD";
+            this.userControl_hand_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_WindForce_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_WindForce_AOD_Copy);
+            // 
+            // userControl_text_WindForce_AOD
+            // 
+            this.userControl_text_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_WindForce_AOD, "userControl_text_WindForce_AOD");
+            this.userControl_text_WindForce_AOD.Collapsed = true;
+            this.userControl_text_WindForce_AOD.Follow = false;
+            this.userControl_text_WindForce_AOD.ImageError = true;
+            this.userControl_text_WindForce_AOD.Name = "userControl_text_WindForce_AOD";
+            this.userControl_text_WindForce_AOD.OptionalSymbol = false;
+            this.userControl_text_WindForce_AOD.Padding_zero = true;
+            this.userControl_text_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_WindForce_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WindForce_AOD_Copy);
+            // 
+            // userControl_pictures_WindForce_AOD
+            // 
+            this.userControl_pictures_WindForce_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_WindForce_AOD, "userControl_pictures_WindForce_AOD");
+            this.userControl_pictures_WindForce_AOD.Collapsed = true;
+            this.userControl_pictures_WindForce_AOD.ImagesCount = 10;
+            this.userControl_pictures_WindForce_AOD.Name = "userControl_pictures_WindForce_AOD";
+            this.userControl_pictures_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_WindForce_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_WindForce_AOD_Copy);
+            // 
             // tabPage_Altitude_AOD
             // 
             resources.ApplyResources(this.tabPage_Altitude_AOD, "tabPage_Altitude_AOD");
@@ -9606,6 +11064,56 @@
             this.tabPage_Altitude_AOD.Controls.Add(this.userControl_pictures_Altitude_AOD);
             this.tabPage_Altitude_AOD.Name = "tabPage_Altitude_AOD";
             // 
+            // userControl_scaleLinear_Altitude_AOD
+            // 
+            this.userControl_scaleLinear_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_Altitude_AOD, "userControl_scaleLinear_Altitude_AOD");
+            this.userControl_scaleLinear_Altitude_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Altitude_AOD.Name = "userControl_scaleLinear_Altitude_AOD";
+            this.userControl_scaleLinear_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Altitude_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Altitude_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Altitude_AOD
+            // 
+            this.userControl_scaleCircle_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_Altitude_AOD, "userControl_scaleCircle_Altitude_AOD");
+            this.userControl_scaleCircle_Altitude_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Altitude_AOD.Name = "userControl_scaleCircle_Altitude_AOD";
+            this.userControl_scaleCircle_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Altitude_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Altitude_AOD_Copy);
+            // 
+            // userControl_hand_Altitude_AOD
+            // 
+            this.userControl_hand_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_Altitude_AOD, "userControl_hand_Altitude_AOD");
+            this.userControl_hand_Altitude_AOD.Collapsed = true;
+            this.userControl_hand_Altitude_AOD.Name = "userControl_hand_Altitude_AOD";
+            this.userControl_hand_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Altitude_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Altitude_AOD_Copy);
+            // 
+            // userControl_text_Altitude_AOD
+            // 
+            this.userControl_text_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_Altitude_AOD, "userControl_text_Altitude_AOD");
+            this.userControl_text_Altitude_AOD.Collapsed = true;
+            this.userControl_text_Altitude_AOD.Follow = false;
+            this.userControl_text_Altitude_AOD.ImageError = true;
+            this.userControl_text_Altitude_AOD.Name = "userControl_text_Altitude_AOD";
+            this.userControl_text_Altitude_AOD.OptionalSymbol = false;
+            this.userControl_text_Altitude_AOD.Padding_zero = true;
+            this.userControl_text_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Altitude_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Altitude_AOD_Copy);
+            // 
+            // userControl_pictures_Altitude_AOD
+            // 
+            this.userControl_pictures_Altitude_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_Altitude_AOD, "userControl_pictures_Altitude_AOD");
+            this.userControl_pictures_Altitude_AOD.Collapsed = true;
+            this.userControl_pictures_Altitude_AOD.ImagesCount = 10;
+            this.userControl_pictures_Altitude_AOD.Name = "userControl_pictures_Altitude_AOD";
+            this.userControl_pictures_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Altitude_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Altitude_AOD_Copy);
+            // 
             // tabPage_AirPressure_AOD
             // 
             resources.ApplyResources(this.tabPage_AirPressure_AOD, "tabPage_AirPressure_AOD");
@@ -9616,6 +11124,56 @@
             this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_text_AirPressure_AOD);
             this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_pictures_AirPressure_AOD);
             this.tabPage_AirPressure_AOD.Name = "tabPage_AirPressure_AOD";
+            // 
+            // userControl_scaleLinear_AirPressure_AOD
+            // 
+            this.userControl_scaleLinear_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleLinear_AirPressure_AOD, "userControl_scaleLinear_AirPressure_AOD");
+            this.userControl_scaleLinear_AirPressure_AOD.Collapsed = true;
+            this.userControl_scaleLinear_AirPressure_AOD.Name = "userControl_scaleLinear_AirPressure_AOD";
+            this.userControl_scaleLinear_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_AirPressure_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_AirPressure_AOD_Copy);
+            // 
+            // userControl_scaleCircle_AirPressure_AOD
+            // 
+            this.userControl_scaleCircle_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_scaleCircle_AirPressure_AOD, "userControl_scaleCircle_AirPressure_AOD");
+            this.userControl_scaleCircle_AirPressure_AOD.Collapsed = true;
+            this.userControl_scaleCircle_AirPressure_AOD.Name = "userControl_scaleCircle_AirPressure_AOD";
+            this.userControl_scaleCircle_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_AirPressure_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_AirPressure_AOD_Copy);
+            // 
+            // userControl_hand_AirPressure_AOD
+            // 
+            this.userControl_hand_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_hand_AirPressure_AOD, "userControl_hand_AirPressure_AOD");
+            this.userControl_hand_AirPressure_AOD.Collapsed = true;
+            this.userControl_hand_AirPressure_AOD.Name = "userControl_hand_AirPressure_AOD";
+            this.userControl_hand_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_AirPressure_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_AirPressure_AOD_Copy);
+            // 
+            // userControl_text_AirPressure_AOD
+            // 
+            this.userControl_text_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_text_AirPressure_AOD, "userControl_text_AirPressure_AOD");
+            this.userControl_text_AirPressure_AOD.Collapsed = true;
+            this.userControl_text_AirPressure_AOD.Follow = false;
+            this.userControl_text_AirPressure_AOD.ImageError = true;
+            this.userControl_text_AirPressure_AOD.Name = "userControl_text_AirPressure_AOD";
+            this.userControl_text_AirPressure_AOD.OptionalSymbol = false;
+            this.userControl_text_AirPressure_AOD.Padding_zero = true;
+            this.userControl_text_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_AirPressure_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_AirPressure_AOD_Copy);
+            // 
+            // userControl_pictures_AirPressure_AOD
+            // 
+            this.userControl_pictures_AirPressure_AOD.AOD = true;
+            resources.ApplyResources(this.userControl_pictures_AirPressure_AOD, "userControl_pictures_AirPressure_AOD");
+            this.userControl_pictures_AirPressure_AOD.Collapsed = true;
+            this.userControl_pictures_AirPressure_AOD.ImagesCount = 10;
+            this.userControl_pictures_AirPressure_AOD.Name = "userControl_pictures_AirPressure_AOD";
+            this.userControl_pictures_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_AirPressure_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_AirPressure_AOD_Copy);
             // 
             // tabPage_System_AOD
             // 
@@ -9641,6 +11199,56 @@
             this.tabPage_Battery_AOD.Controls.Add(this.userControl_text_Battery_AOD);
             this.tabPage_Battery_AOD.Controls.Add(this.userControl_pictures_Battery_AOD);
             this.tabPage_Battery_AOD.Name = "tabPage_Battery_AOD";
+            // 
+            // userControl_scaleLinear_Battery_AOD
+            // 
+            this.userControl_scaleLinear_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_scaleLinear_Battery_AOD, "userControl_scaleLinear_Battery_AOD");
+            this.userControl_scaleLinear_Battery_AOD.Collapsed = true;
+            this.userControl_scaleLinear_Battery_AOD.Name = "userControl_scaleLinear_Battery_AOD";
+            this.userControl_scaleLinear_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleLinear_Battery_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Battery_AOD_Copy);
+            // 
+            // userControl_scaleCircle_Battery_AOD
+            // 
+            this.userControl_scaleCircle_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_scaleCircle_Battery_AOD, "userControl_scaleCircle_Battery_AOD");
+            this.userControl_scaleCircle_Battery_AOD.Collapsed = true;
+            this.userControl_scaleCircle_Battery_AOD.Name = "userControl_scaleCircle_Battery_AOD";
+            this.userControl_scaleCircle_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_scaleCircle_Battery_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Battery_AOD_Copy);
+            // 
+            // userControl_hand_Battery_AOD
+            // 
+            this.userControl_hand_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_hand_Battery_AOD, "userControl_hand_Battery_AOD");
+            this.userControl_hand_Battery_AOD.Collapsed = true;
+            this.userControl_hand_Battery_AOD.Name = "userControl_hand_Battery_AOD";
+            this.userControl_hand_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_hand_Battery_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Battery_AOD_Copy);
+            // 
+            // userControl_text_Battery_AOD
+            // 
+            this.userControl_text_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_text_Battery_AOD, "userControl_text_Battery_AOD");
+            this.userControl_text_Battery_AOD.Collapsed = true;
+            this.userControl_text_Battery_AOD.Follow = false;
+            this.userControl_text_Battery_AOD.ImageError = true;
+            this.userControl_text_Battery_AOD.Name = "userControl_text_Battery_AOD";
+            this.userControl_text_Battery_AOD.OptionalSymbol = false;
+            this.userControl_text_Battery_AOD.Padding_zero = true;
+            this.userControl_text_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_text_Battery_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Battery_AOD_Copy);
+            // 
+            // userControl_pictures_Battery_AOD
+            // 
+            this.userControl_pictures_Battery_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_pictures_Battery_AOD, "userControl_pictures_Battery_AOD");
+            this.userControl_pictures_Battery_AOD.Collapsed = true;
+            this.userControl_pictures_Battery_AOD.ImagesCount = 10;
+            this.userControl_pictures_Battery_AOD.Name = "userControl_pictures_Battery_AOD";
+            this.userControl_pictures_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_pictures_Battery_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Battery_AOD_Copy);
             // 
             // tabControl1
             // 
@@ -9690,6 +11298,114 @@
             resources.ApplyResources(this.panel_set, "panel_set");
             this.panel_set.Name = "panel_set";
             // 
+            // userControl_Set12
+            // 
+            resources.ApplyResources(this.userControl_Set12, "userControl_Set12");
+            this.userControl_Set12.Collapsed = true;
+            this.userControl_Set12.Name = "userControl_Set12";
+            this.userControl_Set12.SetNumber = 12;
+            this.userControl_Set12.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set12_Collapse);
+            this.userControl_Set12.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set11
+            // 
+            resources.ApplyResources(this.userControl_Set11, "userControl_Set11");
+            this.userControl_Set11.Collapsed = true;
+            this.userControl_Set11.Name = "userControl_Set11";
+            this.userControl_Set11.SetNumber = 11;
+            this.userControl_Set11.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set11_Collapse);
+            this.userControl_Set11.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set10
+            // 
+            resources.ApplyResources(this.userControl_Set10, "userControl_Set10");
+            this.userControl_Set10.Collapsed = true;
+            this.userControl_Set10.Name = "userControl_Set10";
+            this.userControl_Set10.SetNumber = 10;
+            this.userControl_Set10.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set10_Collapse);
+            this.userControl_Set10.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set9
+            // 
+            resources.ApplyResources(this.userControl_Set9, "userControl_Set9");
+            this.userControl_Set9.Collapsed = true;
+            this.userControl_Set9.Name = "userControl_Set9";
+            this.userControl_Set9.SetNumber = 9;
+            this.userControl_Set9.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set9_Collapse);
+            this.userControl_Set9.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set8
+            // 
+            resources.ApplyResources(this.userControl_Set8, "userControl_Set8");
+            this.userControl_Set8.Collapsed = true;
+            this.userControl_Set8.Name = "userControl_Set8";
+            this.userControl_Set8.SetNumber = 8;
+            this.userControl_Set8.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set8_Collapse);
+            this.userControl_Set8.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set7
+            // 
+            resources.ApplyResources(this.userControl_Set7, "userControl_Set7");
+            this.userControl_Set7.Collapsed = true;
+            this.userControl_Set7.Name = "userControl_Set7";
+            this.userControl_Set7.SetNumber = 7;
+            this.userControl_Set7.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set7_Collapse);
+            this.userControl_Set7.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set6
+            // 
+            resources.ApplyResources(this.userControl_Set6, "userControl_Set6");
+            this.userControl_Set6.Collapsed = true;
+            this.userControl_Set6.Name = "userControl_Set6";
+            this.userControl_Set6.SetNumber = 6;
+            this.userControl_Set6.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set6_Collapse);
+            this.userControl_Set6.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set5
+            // 
+            resources.ApplyResources(this.userControl_Set5, "userControl_Set5");
+            this.userControl_Set5.Collapsed = true;
+            this.userControl_Set5.Name = "userControl_Set5";
+            this.userControl_Set5.SetNumber = 5;
+            this.userControl_Set5.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set5_Collapse);
+            this.userControl_Set5.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set4
+            // 
+            resources.ApplyResources(this.userControl_Set4, "userControl_Set4");
+            this.userControl_Set4.Collapsed = true;
+            this.userControl_Set4.Name = "userControl_Set4";
+            this.userControl_Set4.SetNumber = 4;
+            this.userControl_Set4.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set4_Collapse);
+            this.userControl_Set4.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set3
+            // 
+            resources.ApplyResources(this.userControl_Set3, "userControl_Set3");
+            this.userControl_Set3.Collapsed = true;
+            this.userControl_Set3.Name = "userControl_Set3";
+            this.userControl_Set3.SetNumber = 3;
+            this.userControl_Set3.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set3_Collapse);
+            this.userControl_Set3.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set2
+            // 
+            resources.ApplyResources(this.userControl_Set2, "userControl_Set2");
+            this.userControl_Set2.Collapsed = true;
+            this.userControl_Set2.Name = "userControl_Set2";
+            this.userControl_Set2.SetNumber = 2;
+            this.userControl_Set2.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set2_Collapse);
+            this.userControl_Set2.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set1
+            // 
+            resources.ApplyResources(this.userControl_Set1, "userControl_Set1");
+            this.userControl_Set1.Collapsed = true;
+            this.userControl_Set1.Name = "userControl_Set1";
+            this.userControl_Set1.SetNumber = 1;
+            this.userControl_Set1.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set1_Collapse);
+            this.userControl_Set1.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
             // panel_PreviewStates
             // 
             this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Random);
@@ -9737,8 +11453,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -9760,11 +11476,11 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.Column1, "Column1");
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -9905,7 +11621,7 @@
             resources.ApplyResources(this.groupBox10, "groupBox10");
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.TabStop = false;
-            this.groupBox10.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox10.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // numericUpDown_ConvertingOutput_Custom
             // 
@@ -9971,7 +11687,7 @@
             resources.ApplyResources(this.groupBox9, "groupBox9");
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.TabStop = false;
-            this.groupBox9.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox9.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // numericUpDown_ConvertingInput_Custom
             // 
@@ -10104,7 +11820,7 @@
             resources.ApplyResources(this.groupBox8, "groupBox8");
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.TabStop = false;
-            this.groupBox8.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox8.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // checkBox_Shortcuts_Border
             // 
@@ -10170,7 +11886,7 @@
             resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.TabStop = false;
-            this.groupBox7.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox7.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // radioButton_Settings_Pack_DoNotning
             // 
@@ -10203,7 +11919,7 @@
             resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
-            this.groupBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // radioButton_Settings_Open_DoNotning
             // 
@@ -10236,7 +11952,7 @@
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
-            this.groupBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // radioButton_Settings_AfterUnpack_DoNothing
             // 
@@ -10269,7 +11985,7 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
-            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // radioButton_Settings_Unpack_Replace
             // 
@@ -10676,1717 +12392,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // userControl_Set12
-            // 
-            resources.ApplyResources(this.userControl_Set12, "userControl_Set12");
-            this.userControl_Set12.Collapsed = true;
-            this.userControl_Set12.Name = "userControl_Set12";
-            this.userControl_Set12.SetNumber = 12;
-            this.userControl_Set12.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set12_Collapse);
-            this.userControl_Set12.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set11
-            // 
-            resources.ApplyResources(this.userControl_Set11, "userControl_Set11");
-            this.userControl_Set11.Collapsed = true;
-            this.userControl_Set11.Name = "userControl_Set11";
-            this.userControl_Set11.SetNumber = 11;
-            this.userControl_Set11.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set11_Collapse);
-            this.userControl_Set11.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set10
-            // 
-            resources.ApplyResources(this.userControl_Set10, "userControl_Set10");
-            this.userControl_Set10.Collapsed = true;
-            this.userControl_Set10.Name = "userControl_Set10";
-            this.userControl_Set10.SetNumber = 10;
-            this.userControl_Set10.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set10_Collapse);
-            this.userControl_Set10.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set9
-            // 
-            resources.ApplyResources(this.userControl_Set9, "userControl_Set9");
-            this.userControl_Set9.Collapsed = true;
-            this.userControl_Set9.Name = "userControl_Set9";
-            this.userControl_Set9.SetNumber = 9;
-            this.userControl_Set9.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set9_Collapse);
-            this.userControl_Set9.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set8
-            // 
-            resources.ApplyResources(this.userControl_Set8, "userControl_Set8");
-            this.userControl_Set8.Collapsed = true;
-            this.userControl_Set8.Name = "userControl_Set8";
-            this.userControl_Set8.SetNumber = 8;
-            this.userControl_Set8.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set8_Collapse);
-            this.userControl_Set8.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set7
-            // 
-            resources.ApplyResources(this.userControl_Set7, "userControl_Set7");
-            this.userControl_Set7.Collapsed = true;
-            this.userControl_Set7.Name = "userControl_Set7";
-            this.userControl_Set7.SetNumber = 7;
-            this.userControl_Set7.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set7_Collapse);
-            this.userControl_Set7.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set6
-            // 
-            resources.ApplyResources(this.userControl_Set6, "userControl_Set6");
-            this.userControl_Set6.Collapsed = true;
-            this.userControl_Set6.Name = "userControl_Set6";
-            this.userControl_Set6.SetNumber = 6;
-            this.userControl_Set6.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set6_Collapse);
-            this.userControl_Set6.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set5
-            // 
-            resources.ApplyResources(this.userControl_Set5, "userControl_Set5");
-            this.userControl_Set5.Collapsed = true;
-            this.userControl_Set5.Name = "userControl_Set5";
-            this.userControl_Set5.SetNumber = 5;
-            this.userControl_Set5.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set5_Collapse);
-            this.userControl_Set5.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set4
-            // 
-            resources.ApplyResources(this.userControl_Set4, "userControl_Set4");
-            this.userControl_Set4.Collapsed = true;
-            this.userControl_Set4.Name = "userControl_Set4";
-            this.userControl_Set4.SetNumber = 4;
-            this.userControl_Set4.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set4_Collapse);
-            this.userControl_Set4.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set3
-            // 
-            resources.ApplyResources(this.userControl_Set3, "userControl_Set3");
-            this.userControl_Set3.Collapsed = true;
-            this.userControl_Set3.Name = "userControl_Set3";
-            this.userControl_Set3.SetNumber = 3;
-            this.userControl_Set3.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set3_Collapse);
-            this.userControl_Set3.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set2
-            // 
-            resources.ApplyResources(this.userControl_Set2, "userControl_Set2");
-            this.userControl_Set2.Collapsed = true;
-            this.userControl_Set2.Name = "userControl_Set2";
-            this.userControl_Set2.SetNumber = 2;
-            this.userControl_Set2.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set2_Collapse);
-            this.userControl_Set2.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set1
-            // 
-            resources.ApplyResources(this.userControl_Set1, "userControl_Set1");
-            this.userControl_Set1.Collapsed = true;
-            this.userControl_Set1.Name = "userControl_Set1";
-            this.userControl_Set1.SetNumber = 1;
-            this.userControl_Set1.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set1_Collapse);
-            this.userControl_Set1.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_SystemFont_Steps
-            // 
-            this.userControl_SystemFont_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_SystemFont_Steps, "userControl_SystemFont_Steps");
-            this.userControl_SystemFont_Steps.Collapsed = true;
-            this.userControl_SystemFont_Steps.Name = "userControl_SystemFont_Steps";
-            this.userControl_SystemFont_Steps.ShowUnit = true;
-            this.userControl_SystemFont_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Steps
-            // 
-            this.userControl_scaleLinear_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Steps, "userControl_scaleLinear_Steps");
-            this.userControl_scaleLinear_Steps.Collapsed = true;
-            this.userControl_scaleLinear_Steps.Name = "userControl_scaleLinear_Steps";
-            this.userControl_scaleLinear_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Steps
-            // 
-            this.userControl_scaleCircle_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Steps, "userControl_scaleCircle_Steps");
-            this.userControl_scaleCircle_Steps.Collapsed = true;
-            this.userControl_scaleCircle_Steps.Name = "userControl_scaleCircle_Steps";
-            this.userControl_scaleCircle_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Steps
-            // 
-            this.userControl_hand_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Steps, "userControl_hand_Steps");
-            this.userControl_hand_Steps.Collapsed = true;
-            this.userControl_hand_Steps.Name = "userControl_hand_Steps";
-            this.userControl_hand_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Steps
-            // 
-            this.userControl_text_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_text_Steps, "userControl_text_Steps");
-            this.userControl_text_Steps.Collapsed = true;
-            this.userControl_text_Steps.Follow = false;
-            this.userControl_text_Steps.ImageError = true;
-            this.userControl_text_Steps.Name = "userControl_text_Steps";
-            this.userControl_text_Steps.OptionalSymbol = false;
-            this.userControl_text_Steps.Padding_zero = true;
-            this.userControl_text_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Steps
-            // 
-            this.userControl_pictures_Steps.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Steps, "userControl_pictures_Steps");
-            this.userControl_pictures_Steps.Collapsed = true;
-            this.userControl_pictures_Steps.ImagesCount = 10;
-            this.userControl_pictures_Steps.Name = "userControl_pictures_Steps";
-            this.userControl_pictures_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Calories
-            // 
-            this.userControl_scaleLinear_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Calories, "userControl_scaleLinear_Calories");
-            this.userControl_scaleLinear_Calories.Collapsed = true;
-            this.userControl_scaleLinear_Calories.Name = "userControl_scaleLinear_Calories";
-            this.userControl_scaleLinear_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Calories
-            // 
-            this.userControl_scaleCircle_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Calories, "userControl_scaleCircle_Calories");
-            this.userControl_scaleCircle_Calories.Collapsed = true;
-            this.userControl_scaleCircle_Calories.Name = "userControl_scaleCircle_Calories";
-            this.userControl_scaleCircle_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Calories
-            // 
-            this.userControl_hand_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Calories, "userControl_hand_Calories");
-            this.userControl_hand_Calories.Collapsed = true;
-            this.userControl_hand_Calories.Name = "userControl_hand_Calories";
-            this.userControl_hand_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Calories
-            // 
-            this.userControl_text_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_text_Calories, "userControl_text_Calories");
-            this.userControl_text_Calories.Collapsed = true;
-            this.userControl_text_Calories.Follow = false;
-            this.userControl_text_Calories.ImageError = true;
-            this.userControl_text_Calories.Name = "userControl_text_Calories";
-            this.userControl_text_Calories.OptionalSymbol = false;
-            this.userControl_text_Calories.Padding_zero = true;
-            this.userControl_text_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Calories
-            // 
-            this.userControl_pictures_Calories.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Calories, "userControl_pictures_Calories");
-            this.userControl_pictures_Calories.Collapsed = true;
-            this.userControl_pictures_Calories.ImagesCount = 10;
-            this.userControl_pictures_Calories.Name = "userControl_pictures_Calories";
-            this.userControl_pictures_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_HeartRate
-            // 
-            this.userControl_scaleLinear_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_HeartRate, "userControl_scaleLinear_HeartRate");
-            this.userControl_scaleLinear_HeartRate.Collapsed = true;
-            this.userControl_scaleLinear_HeartRate.Name = "userControl_scaleLinear_HeartRate";
-            this.userControl_scaleLinear_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_HeartRate
-            // 
-            this.userControl_scaleCircle_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_HeartRate, "userControl_scaleCircle_HeartRate");
-            this.userControl_scaleCircle_HeartRate.Collapsed = true;
-            this.userControl_scaleCircle_HeartRate.Name = "userControl_scaleCircle_HeartRate";
-            this.userControl_scaleCircle_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_HeartRate
-            // 
-            this.userControl_hand_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_hand_HeartRate, "userControl_hand_HeartRate");
-            this.userControl_hand_HeartRate.Collapsed = true;
-            this.userControl_hand_HeartRate.Name = "userControl_hand_HeartRate";
-            this.userControl_hand_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_HeartRate
-            // 
-            this.userControl_text_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_text_HeartRate, "userControl_text_HeartRate");
-            this.userControl_text_HeartRate.Collapsed = true;
-            this.userControl_text_HeartRate.Follow = false;
-            this.userControl_text_HeartRate.ImageError = true;
-            this.userControl_text_HeartRate.Name = "userControl_text_HeartRate";
-            this.userControl_text_HeartRate.OptionalSymbol = false;
-            this.userControl_text_HeartRate.Padding_zero = true;
-            this.userControl_text_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_HeartRate
-            // 
-            this.userControl_pictures_HeartRate.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_HeartRate, "userControl_pictures_HeartRate");
-            this.userControl_pictures_HeartRate.Collapsed = true;
-            this.userControl_pictures_HeartRate.ImagesCount = 6;
-            this.userControl_pictures_HeartRate.Name = "userControl_pictures_HeartRate";
-            this.userControl_pictures_HeartRate.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_PAI
-            // 
-            this.userControl_scaleLinear_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_PAI, "userControl_scaleLinear_PAI");
-            this.userControl_scaleLinear_PAI.Collapsed = true;
-            this.userControl_scaleLinear_PAI.Name = "userControl_scaleLinear_PAI";
-            this.userControl_scaleLinear_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_PAI
-            // 
-            this.userControl_scaleCircle_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_PAI, "userControl_scaleCircle_PAI");
-            this.userControl_scaleCircle_PAI.Collapsed = true;
-            this.userControl_scaleCircle_PAI.Name = "userControl_scaleCircle_PAI";
-            this.userControl_scaleCircle_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_PAI
-            // 
-            this.userControl_hand_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_hand_PAI, "userControl_hand_PAI");
-            this.userControl_hand_PAI.Collapsed = true;
-            this.userControl_hand_PAI.Name = "userControl_hand_PAI";
-            this.userControl_hand_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_PAI
-            // 
-            this.userControl_text_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_text_PAI, "userControl_text_PAI");
-            this.userControl_text_PAI.Collapsed = true;
-            this.userControl_text_PAI.Follow = false;
-            this.userControl_text_PAI.ImageError = true;
-            this.userControl_text_PAI.Name = "userControl_text_PAI";
-            this.userControl_text_PAI.OptionalSymbol = false;
-            this.userControl_text_PAI.Padding_zero = true;
-            this.userControl_text_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_PAI
-            // 
-            this.userControl_pictures_PAI.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_PAI, "userControl_pictures_PAI");
-            this.userControl_pictures_PAI.Collapsed = true;
-            this.userControl_pictures_PAI.ImagesCount = 10;
-            this.userControl_pictures_PAI.Name = "userControl_pictures_PAI";
-            this.userControl_pictures_PAI.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Distance
-            // 
-            this.userControl_text_Distance.AOD = false;
-            resources.ApplyResources(this.userControl_text_Distance, "userControl_text_Distance");
-            this.userControl_text_Distance.Collapsed = true;
-            this.userControl_text_Distance.Follow = false;
-            this.userControl_text_Distance.ImageError = true;
-            this.userControl_text_Distance.Name = "userControl_text_Distance";
-            this.userControl_text_Distance.OptionalSymbol = true;
-            this.userControl_text_Distance.Padding_zero = true;
-            this.userControl_text_Distance.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_StandUp
-            // 
-            this.userControl_scaleLinear_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_StandUp, "userControl_scaleLinear_StandUp");
-            this.userControl_scaleLinear_StandUp.Collapsed = true;
-            this.userControl_scaleLinear_StandUp.Name = "userControl_scaleLinear_StandUp";
-            this.userControl_scaleLinear_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_StandUp
-            // 
-            this.userControl_scaleCircle_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_StandUp, "userControl_scaleCircle_StandUp");
-            this.userControl_scaleCircle_StandUp.Collapsed = true;
-            this.userControl_scaleCircle_StandUp.Name = "userControl_scaleCircle_StandUp";
-            this.userControl_scaleCircle_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_StandUp
-            // 
-            this.userControl_hand_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_hand_StandUp, "userControl_hand_StandUp");
-            this.userControl_hand_StandUp.Collapsed = true;
-            this.userControl_hand_StandUp.Name = "userControl_hand_StandUp";
-            this.userControl_hand_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_StandUp
-            // 
-            this.userControl_text_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_text_StandUp, "userControl_text_StandUp");
-            this.userControl_text_StandUp.Collapsed = true;
-            this.userControl_text_StandUp.Follow = false;
-            this.userControl_text_StandUp.ImageError = true;
-            this.userControl_text_StandUp.Name = "userControl_text_StandUp";
-            this.userControl_text_StandUp.OptionalSymbol = false;
-            this.userControl_text_StandUp.Padding_zero = true;
-            this.userControl_text_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_StandUp
-            // 
-            this.userControl_pictures_StandUp.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_StandUp, "userControl_pictures_StandUp");
-            this.userControl_pictures_StandUp.Collapsed = true;
-            this.userControl_pictures_StandUp.ImagesCount = 10;
-            this.userControl_pictures_StandUp.Name = "userControl_pictures_StandUp";
-            this.userControl_pictures_StandUp.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Stress
-            // 
-            this.userControl_scaleLinear_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Stress, "userControl_scaleLinear_Stress");
-            this.userControl_scaleLinear_Stress.Collapsed = true;
-            this.userControl_scaleLinear_Stress.Name = "userControl_scaleLinear_Stress";
-            this.userControl_scaleLinear_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Stress
-            // 
-            this.userControl_scaleCircle_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Stress, "userControl_scaleCircle_Stress");
-            this.userControl_scaleCircle_Stress.Collapsed = true;
-            this.userControl_scaleCircle_Stress.Name = "userControl_scaleCircle_Stress";
-            this.userControl_scaleCircle_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Stress
-            // 
-            this.userControl_hand_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Stress, "userControl_hand_Stress");
-            this.userControl_hand_Stress.Collapsed = true;
-            this.userControl_hand_Stress.Name = "userControl_hand_Stress";
-            this.userControl_hand_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Stress
-            // 
-            this.userControl_text_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_text_Stress, "userControl_text_Stress");
-            this.userControl_text_Stress.Collapsed = true;
-            this.userControl_text_Stress.Follow = false;
-            this.userControl_text_Stress.ImageError = true;
-            this.userControl_text_Stress.Name = "userControl_text_Stress";
-            this.userControl_text_Stress.OptionalSymbol = false;
-            this.userControl_text_Stress.Padding_zero = true;
-            this.userControl_text_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Stress
-            // 
-            this.userControl_pictures_Stress.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Stress, "userControl_pictures_Stress");
-            this.userControl_pictures_Stress.Collapsed = true;
-            this.userControl_pictures_Stress.ImagesCount = 10;
-            this.userControl_pictures_Stress.Name = "userControl_pictures_Stress";
-            this.userControl_pictures_Stress.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_ActivityGoal
-            // 
-            this.userControl_scaleLinear_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal, "userControl_scaleLinear_ActivityGoal");
-            this.userControl_scaleLinear_ActivityGoal.Collapsed = true;
-            this.userControl_scaleLinear_ActivityGoal.Name = "userControl_scaleLinear_ActivityGoal";
-            this.userControl_scaleLinear_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_ActivityGoal
-            // 
-            this.userControl_scaleCircle_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal, "userControl_scaleCircle_ActivityGoal");
-            this.userControl_scaleCircle_ActivityGoal.Collapsed = true;
-            this.userControl_scaleCircle_ActivityGoal.Name = "userControl_scaleCircle_ActivityGoal";
-            this.userControl_scaleCircle_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_ActivityGoal
-            // 
-            this.userControl_hand_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_hand_ActivityGoal, "userControl_hand_ActivityGoal");
-            this.userControl_hand_ActivityGoal.Collapsed = true;
-            this.userControl_hand_ActivityGoal.Name = "userControl_hand_ActivityGoal";
-            this.userControl_hand_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_ActivityGoal
-            // 
-            this.userControl_text_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_text_ActivityGoal, "userControl_text_ActivityGoal");
-            this.userControl_text_ActivityGoal.Collapsed = true;
-            this.userControl_text_ActivityGoal.Follow = false;
-            this.userControl_text_ActivityGoal.ImageError = true;
-            this.userControl_text_ActivityGoal.Name = "userControl_text_ActivityGoal";
-            this.userControl_text_ActivityGoal.OptionalSymbol = false;
-            this.userControl_text_ActivityGoal.Padding_zero = true;
-            this.userControl_text_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_ActivityGoal
-            // 
-            this.userControl_pictures_ActivityGoal.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_ActivityGoal, "userControl_pictures_ActivityGoal");
-            this.userControl_pictures_ActivityGoal.Collapsed = true;
-            this.userControl_pictures_ActivityGoal.ImagesCount = 10;
-            this.userControl_pictures_ActivityGoal.Name = "userControl_pictures_ActivityGoal";
-            this.userControl_pictures_ActivityGoal.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_FatBurning
-            // 
-            this.userControl_scaleLinear_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_FatBurning, "userControl_scaleLinear_FatBurning");
-            this.userControl_scaleLinear_FatBurning.Collapsed = true;
-            this.userControl_scaleLinear_FatBurning.Name = "userControl_scaleLinear_FatBurning";
-            this.userControl_scaleLinear_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_FatBurning
-            // 
-            this.userControl_scaleCircle_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_FatBurning, "userControl_scaleCircle_FatBurning");
-            this.userControl_scaleCircle_FatBurning.Collapsed = true;
-            this.userControl_scaleCircle_FatBurning.Name = "userControl_scaleCircle_FatBurning";
-            this.userControl_scaleCircle_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_FatBurning
-            // 
-            this.userControl_hand_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_hand_FatBurning, "userControl_hand_FatBurning");
-            this.userControl_hand_FatBurning.Collapsed = true;
-            this.userControl_hand_FatBurning.Name = "userControl_hand_FatBurning";
-            this.userControl_hand_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_FatBurning
-            // 
-            this.userControl_text_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_text_FatBurning, "userControl_text_FatBurning");
-            this.userControl_text_FatBurning.Collapsed = true;
-            this.userControl_text_FatBurning.Follow = false;
-            this.userControl_text_FatBurning.ImageError = true;
-            this.userControl_text_FatBurning.Name = "userControl_text_FatBurning";
-            this.userControl_text_FatBurning.OptionalSymbol = false;
-            this.userControl_text_FatBurning.Padding_zero = true;
-            this.userControl_text_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_FatBurning
-            // 
-            this.userControl_pictures_FatBurning.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_FatBurning, "userControl_pictures_FatBurning");
-            this.userControl_pictures_FatBurning.Collapsed = true;
-            this.userControl_pictures_FatBurning.ImagesCount = 10;
-            this.userControl_pictures_FatBurning.Name = "userControl_pictures_FatBurning";
-            this.userControl_pictures_FatBurning.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Weather
-            // 
-            this.userControl_scaleLinear_Weather.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Weather, "userControl_scaleLinear_Weather");
-            this.userControl_scaleLinear_Weather.Collapsed = true;
-            this.userControl_scaleLinear_Weather.Name = "userControl_scaleLinear_Weather";
-            this.userControl_scaleLinear_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Weather
-            // 
-            this.userControl_scaleCircle_Weather.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Weather, "userControl_scaleCircle_Weather");
-            this.userControl_scaleCircle_Weather.Collapsed = true;
-            this.userControl_scaleCircle_Weather.Name = "userControl_scaleCircle_Weather";
-            this.userControl_scaleCircle_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Weather
-            // 
-            this.userControl_hand_Weather.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Weather, "userControl_hand_Weather");
-            this.userControl_hand_Weather.Collapsed = true;
-            this.userControl_hand_Weather.Name = "userControl_hand_Weather";
-            this.userControl_hand_Weather.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_weather_Max
-            // 
-            this.userControl_text_weather_Max.AOD = false;
-            resources.ApplyResources(this.userControl_text_weather_Max, "userControl_text_weather_Max");
-            this.userControl_text_weather_Max.Collapsed = true;
-            this.userControl_text_weather_Max.Follow = true;
-            this.userControl_text_weather_Max.ImageError = true;
-            this.userControl_text_weather_Max.Name = "userControl_text_weather_Max";
-            this.userControl_text_weather_Max.OptionalSymbol = true;
-            this.userControl_text_weather_Max.Padding_zero = true;
-            this.userControl_text_weather_Max.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_weather_Min
-            // 
-            this.userControl_text_weather_Min.AOD = false;
-            resources.ApplyResources(this.userControl_text_weather_Min, "userControl_text_weather_Min");
-            this.userControl_text_weather_Min.Collapsed = true;
-            this.userControl_text_weather_Min.Follow = false;
-            this.userControl_text_weather_Min.ImageError = true;
-            this.userControl_text_weather_Min.Name = "userControl_text_weather_Min";
-            this.userControl_text_weather_Min.OptionalSymbol = true;
-            this.userControl_text_weather_Min.Padding_zero = true;
-            this.userControl_text_weather_Min.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_weather_Current
-            // 
-            this.userControl_text_weather_Current.AOD = false;
-            resources.ApplyResources(this.userControl_text_weather_Current, "userControl_text_weather_Current");
-            this.userControl_text_weather_Current.Collapsed = true;
-            this.userControl_text_weather_Current.Follow = false;
-            this.userControl_text_weather_Current.ImageError = true;
-            this.userControl_text_weather_Current.Name = "userControl_text_weather_Current";
-            this.userControl_text_weather_Current.OptionalSymbol = true;
-            this.userControl_text_weather_Current.Padding_zero = true;
-            this.userControl_text_weather_Current.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_weather
-            // 
-            this.userControl_pictures_weather.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_weather, "userControl_pictures_weather");
-            this.userControl_pictures_weather.Collapsed = true;
-            this.userControl_pictures_weather.ImagesCount = 29;
-            this.userControl_pictures_weather.Name = "userControl_pictures_weather";
-            this.userControl_pictures_weather.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_UVindex
-            // 
-            this.userControl_scaleLinear_UVindex.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_UVindex, "userControl_scaleLinear_UVindex");
-            this.userControl_scaleLinear_UVindex.Collapsed = true;
-            this.userControl_scaleLinear_UVindex.Name = "userControl_scaleLinear_UVindex";
-            this.userControl_scaleLinear_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_UVindex
-            // 
-            this.userControl_scaleCircle_UVindex.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_UVindex, "userControl_scaleCircle_UVindex");
-            this.userControl_scaleCircle_UVindex.Collapsed = true;
-            this.userControl_scaleCircle_UVindex.Name = "userControl_scaleCircle_UVindex";
-            this.userControl_scaleCircle_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_UVindex
-            // 
-            this.userControl_hand_UVindex.AOD = false;
-            resources.ApplyResources(this.userControl_hand_UVindex, "userControl_hand_UVindex");
-            this.userControl_hand_UVindex.Collapsed = true;
-            this.userControl_hand_UVindex.Name = "userControl_hand_UVindex";
-            this.userControl_hand_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_UVindex
-            // 
-            this.userControl_text_UVindex.AOD = false;
-            resources.ApplyResources(this.userControl_text_UVindex, "userControl_text_UVindex");
-            this.userControl_text_UVindex.Collapsed = true;
-            this.userControl_text_UVindex.Follow = false;
-            this.userControl_text_UVindex.ImageError = true;
-            this.userControl_text_UVindex.Name = "userControl_text_UVindex";
-            this.userControl_text_UVindex.OptionalSymbol = false;
-            this.userControl_text_UVindex.Padding_zero = true;
-            this.userControl_text_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_UVindex
-            // 
-            this.userControl_pictures_UVindex.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_UVindex, "userControl_pictures_UVindex");
-            this.userControl_pictures_UVindex.Collapsed = true;
-            this.userControl_pictures_UVindex.ImagesCount = 10;
-            this.userControl_pictures_UVindex.Name = "userControl_pictures_UVindex";
-            this.userControl_pictures_UVindex.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_AirQuality
-            // 
-            this.userControl_scaleLinear_AirQuality.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_AirQuality, "userControl_scaleLinear_AirQuality");
-            this.userControl_scaleLinear_AirQuality.Collapsed = true;
-            this.userControl_scaleLinear_AirQuality.Name = "userControl_scaleLinear_AirQuality";
-            this.userControl_scaleLinear_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_AirQuality
-            // 
-            this.userControl_scaleCircle_AirQuality.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_AirQuality, "userControl_scaleCircle_AirQuality");
-            this.userControl_scaleCircle_AirQuality.Collapsed = true;
-            this.userControl_scaleCircle_AirQuality.Name = "userControl_scaleCircle_AirQuality";
-            this.userControl_scaleCircle_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_AirQuality
-            // 
-            this.userControl_hand_AirQuality.AOD = false;
-            resources.ApplyResources(this.userControl_hand_AirQuality, "userControl_hand_AirQuality");
-            this.userControl_hand_AirQuality.Collapsed = true;
-            this.userControl_hand_AirQuality.Name = "userControl_hand_AirQuality";
-            this.userControl_hand_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_AirQuality
-            // 
-            this.userControl_text_AirQuality.AOD = false;
-            resources.ApplyResources(this.userControl_text_AirQuality, "userControl_text_AirQuality");
-            this.userControl_text_AirQuality.Collapsed = true;
-            this.userControl_text_AirQuality.Follow = false;
-            this.userControl_text_AirQuality.ImageError = true;
-            this.userControl_text_AirQuality.Name = "userControl_text_AirQuality";
-            this.userControl_text_AirQuality.OptionalSymbol = false;
-            this.userControl_text_AirQuality.Padding_zero = true;
-            this.userControl_text_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_AirQuality
-            // 
-            this.userControl_pictures_AirQuality.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_AirQuality, "userControl_pictures_AirQuality");
-            this.userControl_pictures_AirQuality.Collapsed = true;
-            this.userControl_pictures_AirQuality.ImagesCount = 10;
-            this.userControl_pictures_AirQuality.Name = "userControl_pictures_AirQuality";
-            this.userControl_pictures_AirQuality.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Humidity
-            // 
-            this.userControl_scaleLinear_Humidity.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Humidity, "userControl_scaleLinear_Humidity");
-            this.userControl_scaleLinear_Humidity.Collapsed = true;
-            this.userControl_scaleLinear_Humidity.Name = "userControl_scaleLinear_Humidity";
-            this.userControl_scaleLinear_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Humidity
-            // 
-            this.userControl_scaleCircle_Humidity.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Humidity, "userControl_scaleCircle_Humidity");
-            this.userControl_scaleCircle_Humidity.Collapsed = true;
-            this.userControl_scaleCircle_Humidity.Name = "userControl_scaleCircle_Humidity";
-            this.userControl_scaleCircle_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Humidity
-            // 
-            this.userControl_hand_Humidity.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Humidity, "userControl_hand_Humidity");
-            this.userControl_hand_Humidity.Collapsed = true;
-            this.userControl_hand_Humidity.Name = "userControl_hand_Humidity";
-            this.userControl_hand_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Humidity
-            // 
-            this.userControl_text_Humidity.AOD = false;
-            resources.ApplyResources(this.userControl_text_Humidity, "userControl_text_Humidity");
-            this.userControl_text_Humidity.Collapsed = true;
-            this.userControl_text_Humidity.Follow = false;
-            this.userControl_text_Humidity.ImageError = true;
-            this.userControl_text_Humidity.Name = "userControl_text_Humidity";
-            this.userControl_text_Humidity.OptionalSymbol = false;
-            this.userControl_text_Humidity.Padding_zero = true;
-            this.userControl_text_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Humidity
-            // 
-            this.userControl_pictures_Humidity.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Humidity, "userControl_pictures_Humidity");
-            this.userControl_pictures_Humidity.Collapsed = true;
-            this.userControl_pictures_Humidity.ImagesCount = 10;
-            this.userControl_pictures_Humidity.Name = "userControl_pictures_Humidity";
-            this.userControl_pictures_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_WindForce
-            // 
-            this.userControl_scaleLinear_WindForce.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_WindForce, "userControl_scaleLinear_WindForce");
-            this.userControl_scaleLinear_WindForce.Collapsed = true;
-            this.userControl_scaleLinear_WindForce.Name = "userControl_scaleLinear_WindForce";
-            this.userControl_scaleLinear_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_WindForce
-            // 
-            this.userControl_scaleCircle_WindForce.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_WindForce, "userControl_scaleCircle_WindForce");
-            this.userControl_scaleCircle_WindForce.Collapsed = true;
-            this.userControl_scaleCircle_WindForce.Name = "userControl_scaleCircle_WindForce";
-            this.userControl_scaleCircle_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_WindForce
-            // 
-            this.userControl_hand_WindForce.AOD = false;
-            resources.ApplyResources(this.userControl_hand_WindForce, "userControl_hand_WindForce");
-            this.userControl_hand_WindForce.Collapsed = true;
-            this.userControl_hand_WindForce.Name = "userControl_hand_WindForce";
-            this.userControl_hand_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_WindForce
-            // 
-            this.userControl_text_WindForce.AOD = false;
-            resources.ApplyResources(this.userControl_text_WindForce, "userControl_text_WindForce");
-            this.userControl_text_WindForce.Collapsed = true;
-            this.userControl_text_WindForce.Follow = false;
-            this.userControl_text_WindForce.ImageError = true;
-            this.userControl_text_WindForce.Name = "userControl_text_WindForce";
-            this.userControl_text_WindForce.OptionalSymbol = false;
-            this.userControl_text_WindForce.Padding_zero = true;
-            this.userControl_text_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_WindForce
-            // 
-            this.userControl_pictures_WindForce.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_WindForce, "userControl_pictures_WindForce");
-            this.userControl_pictures_WindForce.Collapsed = true;
-            this.userControl_pictures_WindForce.ImagesCount = 10;
-            this.userControl_pictures_WindForce.Name = "userControl_pictures_WindForce";
-            this.userControl_pictures_WindForce.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Altitude
-            // 
-            this.userControl_scaleLinear_Altitude.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Altitude, "userControl_scaleLinear_Altitude");
-            this.userControl_scaleLinear_Altitude.Collapsed = true;
-            this.userControl_scaleLinear_Altitude.Name = "userControl_scaleLinear_Altitude";
-            this.userControl_scaleLinear_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Altitude
-            // 
-            this.userControl_scaleCircle_Altitude.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Altitude, "userControl_scaleCircle_Altitude");
-            this.userControl_scaleCircle_Altitude.Collapsed = true;
-            this.userControl_scaleCircle_Altitude.Name = "userControl_scaleCircle_Altitude";
-            this.userControl_scaleCircle_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Altitude
-            // 
-            this.userControl_hand_Altitude.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Altitude, "userControl_hand_Altitude");
-            this.userControl_hand_Altitude.Collapsed = true;
-            this.userControl_hand_Altitude.Name = "userControl_hand_Altitude";
-            this.userControl_hand_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Altitude
-            // 
-            this.userControl_text_Altitude.AOD = false;
-            resources.ApplyResources(this.userControl_text_Altitude, "userControl_text_Altitude");
-            this.userControl_text_Altitude.Collapsed = true;
-            this.userControl_text_Altitude.Follow = false;
-            this.userControl_text_Altitude.ImageError = true;
-            this.userControl_text_Altitude.Name = "userControl_text_Altitude";
-            this.userControl_text_Altitude.OptionalSymbol = false;
-            this.userControl_text_Altitude.Padding_zero = true;
-            this.userControl_text_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Altitude
-            // 
-            this.userControl_pictures_Altitude.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Altitude, "userControl_pictures_Altitude");
-            this.userControl_pictures_Altitude.Collapsed = true;
-            this.userControl_pictures_Altitude.ImagesCount = 10;
-            this.userControl_pictures_Altitude.Name = "userControl_pictures_Altitude";
-            this.userControl_pictures_Altitude.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_AirPressure
-            // 
-            this.userControl_scaleLinear_AirPressure.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_AirPressure, "userControl_scaleLinear_AirPressure");
-            this.userControl_scaleLinear_AirPressure.Collapsed = true;
-            this.userControl_scaleLinear_AirPressure.Name = "userControl_scaleLinear_AirPressure";
-            this.userControl_scaleLinear_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_AirPressure
-            // 
-            this.userControl_scaleCircle_AirPressure.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_AirPressure, "userControl_scaleCircle_AirPressure");
-            this.userControl_scaleCircle_AirPressure.Collapsed = true;
-            this.userControl_scaleCircle_AirPressure.Name = "userControl_scaleCircle_AirPressure";
-            this.userControl_scaleCircle_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_AirPressure
-            // 
-            this.userControl_hand_AirPressure.AOD = false;
-            resources.ApplyResources(this.userControl_hand_AirPressure, "userControl_hand_AirPressure");
-            this.userControl_hand_AirPressure.Collapsed = true;
-            this.userControl_hand_AirPressure.Name = "userControl_hand_AirPressure";
-            this.userControl_hand_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_AirPressure
-            // 
-            this.userControl_text_AirPressure.AOD = false;
-            resources.ApplyResources(this.userControl_text_AirPressure, "userControl_text_AirPressure");
-            this.userControl_text_AirPressure.Collapsed = true;
-            this.userControl_text_AirPressure.Follow = false;
-            this.userControl_text_AirPressure.ImageError = true;
-            this.userControl_text_AirPressure.Name = "userControl_text_AirPressure";
-            this.userControl_text_AirPressure.OptionalSymbol = false;
-            this.userControl_text_AirPressure.Padding_zero = true;
-            this.userControl_text_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_AirPressure
-            // 
-            this.userControl_pictures_AirPressure.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_AirPressure, "userControl_pictures_AirPressure");
-            this.userControl_pictures_AirPressure.Collapsed = true;
-            this.userControl_pictures_AirPressure.ImagesCount = 10;
-            this.userControl_pictures_AirPressure.Name = "userControl_pictures_AirPressure";
-            this.userControl_pictures_AirPressure.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Battery
-            // 
-            this.userControl_scaleLinear_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Battery, "userControl_scaleLinear_Battery");
-            this.userControl_scaleLinear_Battery.Collapsed = true;
-            this.userControl_scaleLinear_Battery.Name = "userControl_scaleLinear_Battery";
-            this.userControl_scaleLinear_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleCircle_Battery
-            // 
-            this.userControl_scaleCircle_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Battery, "userControl_scaleCircle_Battery");
-            this.userControl_scaleCircle_Battery.Collapsed = true;
-            this.userControl_scaleCircle_Battery.Name = "userControl_scaleCircle_Battery";
-            this.userControl_scaleCircle_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_hand_Battery
-            // 
-            this.userControl_hand_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Battery, "userControl_hand_Battery");
-            this.userControl_hand_Battery.Collapsed = true;
-            this.userControl_hand_Battery.Name = "userControl_hand_Battery";
-            this.userControl_hand_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_text_Battery
-            // 
-            this.userControl_text_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_text_Battery, "userControl_text_Battery");
-            this.userControl_text_Battery.Collapsed = true;
-            this.userControl_text_Battery.Follow = false;
-            this.userControl_text_Battery.ImageError = true;
-            this.userControl_text_Battery.Name = "userControl_text_Battery";
-            this.userControl_text_Battery.OptionalSymbol = false;
-            this.userControl_text_Battery.Padding_zero = true;
-            this.userControl_text_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_pictures_Battery
-            // 
-            this.userControl_pictures_Battery.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Battery, "userControl_pictures_Battery");
-            this.userControl_pictures_Battery.Collapsed = true;
-            this.userControl_pictures_Battery.ImagesCount = 10;
-            this.userControl_pictures_Battery.Name = "userControl_pictures_Battery";
-            this.userControl_pictures_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            // 
-            // userControl_scaleLinear_Steps_AOD
-            // 
-            this.userControl_scaleLinear_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Steps_AOD, "userControl_scaleLinear_Steps_AOD");
-            this.userControl_scaleLinear_Steps_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Steps_AOD.Name = "userControl_scaleLinear_Steps_AOD";
-            this.userControl_scaleLinear_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Steps_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Steps_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Steps_AOD
-            // 
-            this.userControl_scaleCircle_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Steps_AOD, "userControl_scaleCircle_Steps_AOD");
-            this.userControl_scaleCircle_Steps_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Steps_AOD.Name = "userControl_scaleCircle_Steps_AOD";
-            this.userControl_scaleCircle_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Steps_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Steps_AOD_Copy);
-            // 
-            // userControl_hand_Steps_AOD
-            // 
-            this.userControl_hand_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Steps_AOD, "userControl_hand_Steps_AOD");
-            this.userControl_hand_Steps_AOD.Collapsed = true;
-            this.userControl_hand_Steps_AOD.Name = "userControl_hand_Steps_AOD";
-            this.userControl_hand_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Steps_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Steps_AOD_Copy);
-            // 
-            // userControl_text_Steps_AOD
-            // 
-            this.userControl_text_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Steps_AOD, "userControl_text_Steps_AOD");
-            this.userControl_text_Steps_AOD.Collapsed = true;
-            this.userControl_text_Steps_AOD.Follow = false;
-            this.userControl_text_Steps_AOD.ImageError = true;
-            this.userControl_text_Steps_AOD.Name = "userControl_text_Steps_AOD";
-            this.userControl_text_Steps_AOD.OptionalSymbol = false;
-            this.userControl_text_Steps_AOD.Padding_zero = true;
-            this.userControl_text_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Steps_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Steps_AOD_Copy);
-            // 
-            // userControl_pictures_Steps_AOD
-            // 
-            this.userControl_pictures_Steps_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Steps_AOD, "userControl_pictures_Steps_AOD");
-            this.userControl_pictures_Steps_AOD.Collapsed = true;
-            this.userControl_pictures_Steps_AOD.ImagesCount = 10;
-            this.userControl_pictures_Steps_AOD.Name = "userControl_pictures_Steps_AOD";
-            this.userControl_pictures_Steps_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Steps_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Steps_AOD_Copy);
-            // 
-            // userControl_scaleLinear_Calories_AOD
-            // 
-            this.userControl_scaleLinear_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Calories_AOD, "userControl_scaleLinear_Calories_AOD");
-            this.userControl_scaleLinear_Calories_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Calories_AOD.Name = "userControl_scaleLinear_Calories_AOD";
-            this.userControl_scaleLinear_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Calories_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Calories_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Calories_AOD
-            // 
-            this.userControl_scaleCircle_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Calories_AOD, "userControl_scaleCircle_Calories_AOD");
-            this.userControl_scaleCircle_Calories_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Calories_AOD.Name = "userControl_scaleCircle_Calories_AOD";
-            this.userControl_scaleCircle_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Calories_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Calories_AOD_Copy);
-            // 
-            // userControl_hand_Calories_AOD
-            // 
-            this.userControl_hand_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Calories_AOD, "userControl_hand_Calories_AOD");
-            this.userControl_hand_Calories_AOD.Collapsed = true;
-            this.userControl_hand_Calories_AOD.Name = "userControl_hand_Calories_AOD";
-            this.userControl_hand_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Calories_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Calories_AOD_Copy);
-            // 
-            // userControl_text_Calories_AOD
-            // 
-            this.userControl_text_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Calories_AOD, "userControl_text_Calories_AOD");
-            this.userControl_text_Calories_AOD.Collapsed = true;
-            this.userControl_text_Calories_AOD.Follow = false;
-            this.userControl_text_Calories_AOD.ImageError = true;
-            this.userControl_text_Calories_AOD.Name = "userControl_text_Calories_AOD";
-            this.userControl_text_Calories_AOD.OptionalSymbol = false;
-            this.userControl_text_Calories_AOD.Padding_zero = true;
-            this.userControl_text_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Calories_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Calories_AOD_Copy);
-            // 
-            // userControl_pictures_Calories_AOD
-            // 
-            this.userControl_pictures_Calories_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Calories_AOD, "userControl_pictures_Calories_AOD");
-            this.userControl_pictures_Calories_AOD.Collapsed = true;
-            this.userControl_pictures_Calories_AOD.ImagesCount = 10;
-            this.userControl_pictures_Calories_AOD.Name = "userControl_pictures_Calories_AOD";
-            this.userControl_pictures_Calories_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Calories_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Calories_AOD_Copy);
-            // 
-            // userControl_scaleLinear_HeartRate_AOD
-            // 
-            this.userControl_scaleLinear_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_HeartRate_AOD, "userControl_scaleLinear_HeartRate_AOD");
-            this.userControl_scaleLinear_HeartRate_AOD.Collapsed = true;
-            this.userControl_scaleLinear_HeartRate_AOD.Name = "userControl_scaleLinear_HeartRate_AOD";
-            this.userControl_scaleLinear_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_HeartRate_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_HeartRate_AOD_Copy);
-            // 
-            // userControl_scaleCircle_HeartRate_AOD
-            // 
-            this.userControl_scaleCircle_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_HeartRate_AOD, "userControl_scaleCircle_HeartRate_AOD");
-            this.userControl_scaleCircle_HeartRate_AOD.Collapsed = true;
-            this.userControl_scaleCircle_HeartRate_AOD.Name = "userControl_scaleCircle_HeartRate_AOD";
-            this.userControl_scaleCircle_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_HeartRate_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_HeartRate_AOD_Copy);
-            // 
-            // userControl_hand_HeartRate_AOD
-            // 
-            this.userControl_hand_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_HeartRate_AOD, "userControl_hand_HeartRate_AOD");
-            this.userControl_hand_HeartRate_AOD.Collapsed = true;
-            this.userControl_hand_HeartRate_AOD.Name = "userControl_hand_HeartRate_AOD";
-            this.userControl_hand_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_HeartRate_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_HeartRate_AOD_Copy);
-            // 
-            // userControl_text_HeartRate_AOD
-            // 
-            this.userControl_text_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_HeartRate_AOD, "userControl_text_HeartRate_AOD");
-            this.userControl_text_HeartRate_AOD.Collapsed = true;
-            this.userControl_text_HeartRate_AOD.Follow = false;
-            this.userControl_text_HeartRate_AOD.ImageError = true;
-            this.userControl_text_HeartRate_AOD.Name = "userControl_text_HeartRate_AOD";
-            this.userControl_text_HeartRate_AOD.OptionalSymbol = false;
-            this.userControl_text_HeartRate_AOD.Padding_zero = true;
-            this.userControl_text_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_HeartRate_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_HeartRate_AOD_Copy);
-            // 
-            // userControl_pictures_HeartRate_AOD
-            // 
-            this.userControl_pictures_HeartRate_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_HeartRate_AOD, "userControl_pictures_HeartRate_AOD");
-            this.userControl_pictures_HeartRate_AOD.Collapsed = true;
-            this.userControl_pictures_HeartRate_AOD.ImagesCount = 6;
-            this.userControl_pictures_HeartRate_AOD.Name = "userControl_pictures_HeartRate_AOD";
-            this.userControl_pictures_HeartRate_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_HeartRate_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_HeartRate_AOD_Copy);
-            // 
-            // userControl_scaleLinear_PAI_AOD
-            // 
-            this.userControl_scaleLinear_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_PAI_AOD, "userControl_scaleLinear_PAI_AOD");
-            this.userControl_scaleLinear_PAI_AOD.Collapsed = true;
-            this.userControl_scaleLinear_PAI_AOD.Name = "userControl_scaleLinear_PAI_AOD";
-            this.userControl_scaleLinear_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_PAI_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_PAI_AOD_Copy);
-            // 
-            // userControl_scaleCircle_PAI_AOD
-            // 
-            this.userControl_scaleCircle_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_PAI_AOD, "userControl_scaleCircle_PAI_AOD");
-            this.userControl_scaleCircle_PAI_AOD.Collapsed = true;
-            this.userControl_scaleCircle_PAI_AOD.Name = "userControl_scaleCircle_PAI_AOD";
-            this.userControl_scaleCircle_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_PAI_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_PAI_AOD_Copy);
-            // 
-            // userControl_hand_PAI_AOD
-            // 
-            this.userControl_hand_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_PAI_AOD, "userControl_hand_PAI_AOD");
-            this.userControl_hand_PAI_AOD.Collapsed = true;
-            this.userControl_hand_PAI_AOD.Name = "userControl_hand_PAI_AOD";
-            this.userControl_hand_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_PAI_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_PAI_AOD_Copy);
-            // 
-            // userControl_text_PAI_AOD
-            // 
-            this.userControl_text_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_PAI_AOD, "userControl_text_PAI_AOD");
-            this.userControl_text_PAI_AOD.Collapsed = true;
-            this.userControl_text_PAI_AOD.Follow = false;
-            this.userControl_text_PAI_AOD.ImageError = true;
-            this.userControl_text_PAI_AOD.Name = "userControl_text_PAI_AOD";
-            this.userControl_text_PAI_AOD.OptionalSymbol = false;
-            this.userControl_text_PAI_AOD.Padding_zero = true;
-            this.userControl_text_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_PAI_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_PAI_AOD_Copy);
-            // 
-            // userControl_pictures_PAI_AOD
-            // 
-            this.userControl_pictures_PAI_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_PAI_AOD, "userControl_pictures_PAI_AOD");
-            this.userControl_pictures_PAI_AOD.Collapsed = true;
-            this.userControl_pictures_PAI_AOD.ImagesCount = 10;
-            this.userControl_pictures_PAI_AOD.Name = "userControl_pictures_PAI_AOD";
-            this.userControl_pictures_PAI_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_PAI_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_PAI_AOD_Copy);
-            // 
-            // userControl_text_Distance_AOD
-            // 
-            this.userControl_text_Distance_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Distance_AOD, "userControl_text_Distance_AOD");
-            this.userControl_text_Distance_AOD.Collapsed = true;
-            this.userControl_text_Distance_AOD.Follow = false;
-            this.userControl_text_Distance_AOD.ImageError = true;
-            this.userControl_text_Distance_AOD.Name = "userControl_text_Distance_AOD";
-            this.userControl_text_Distance_AOD.OptionalSymbol = true;
-            this.userControl_text_Distance_AOD.Padding_zero = true;
-            this.userControl_text_Distance_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Distance_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Distance_AOD_Copy);
-            // 
-            // userControl_scaleLinear_StandUp_AOD
-            // 
-            this.userControl_scaleLinear_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_StandUp_AOD, "userControl_scaleLinear_StandUp_AOD");
-            this.userControl_scaleLinear_StandUp_AOD.Collapsed = true;
-            this.userControl_scaleLinear_StandUp_AOD.Name = "userControl_scaleLinear_StandUp_AOD";
-            this.userControl_scaleLinear_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_StandUp_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_StandUp_AOD_Copy);
-            // 
-            // userControl_scaleCircle_StandUp_AOD
-            // 
-            this.userControl_scaleCircle_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_StandUp_AOD, "userControl_scaleCircle_StandUp_AOD");
-            this.userControl_scaleCircle_StandUp_AOD.Collapsed = true;
-            this.userControl_scaleCircle_StandUp_AOD.Name = "userControl_scaleCircle_StandUp_AOD";
-            this.userControl_scaleCircle_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_StandUp_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_StandUp_AOD_Copy);
-            // 
-            // userControl_hand_StandUp_AOD
-            // 
-            this.userControl_hand_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_StandUp_AOD, "userControl_hand_StandUp_AOD");
-            this.userControl_hand_StandUp_AOD.Collapsed = true;
-            this.userControl_hand_StandUp_AOD.Name = "userControl_hand_StandUp_AOD";
-            this.userControl_hand_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_StandUp_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_StandUp_AOD_Copy);
-            // 
-            // userControl_text_StandUp_AOD
-            // 
-            this.userControl_text_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_StandUp_AOD, "userControl_text_StandUp_AOD");
-            this.userControl_text_StandUp_AOD.Collapsed = true;
-            this.userControl_text_StandUp_AOD.Follow = false;
-            this.userControl_text_StandUp_AOD.ImageError = true;
-            this.userControl_text_StandUp_AOD.Name = "userControl_text_StandUp_AOD";
-            this.userControl_text_StandUp_AOD.OptionalSymbol = false;
-            this.userControl_text_StandUp_AOD.Padding_zero = true;
-            this.userControl_text_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_StandUp_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_StandUp_AOD_Copy);
-            // 
-            // userControl_pictures_StandUp_AOD
-            // 
-            this.userControl_pictures_StandUp_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_StandUp_AOD, "userControl_pictures_StandUp_AOD");
-            this.userControl_pictures_StandUp_AOD.Collapsed = true;
-            this.userControl_pictures_StandUp_AOD.ImagesCount = 10;
-            this.userControl_pictures_StandUp_AOD.Name = "userControl_pictures_StandUp_AOD";
-            this.userControl_pictures_StandUp_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_StandUp_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_StandUp_AOD_Copy);
-            // 
-            // userControl_scaleLinear_Stress_AOD
-            // 
-            this.userControl_scaleLinear_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Stress_AOD, "userControl_scaleLinear_Stress_AOD");
-            this.userControl_scaleLinear_Stress_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Stress_AOD.Name = "userControl_scaleLinear_Stress_AOD";
-            this.userControl_scaleLinear_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Stress_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Stress_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Stress_AOD
-            // 
-            this.userControl_scaleCircle_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Stress_AOD, "userControl_scaleCircle_Stress_AOD");
-            this.userControl_scaleCircle_Stress_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Stress_AOD.Name = "userControl_scaleCircle_Stress_AOD";
-            this.userControl_scaleCircle_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Stress_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Stress_AOD_Copy);
-            // 
-            // userControl_hand_Stress_AOD
-            // 
-            this.userControl_hand_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Stress_AOD, "userControl_hand_Stress_AOD");
-            this.userControl_hand_Stress_AOD.Collapsed = true;
-            this.userControl_hand_Stress_AOD.Name = "userControl_hand_Stress_AOD";
-            this.userControl_hand_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Stress_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Stress_AOD_Copy);
-            // 
-            // userControl_text_Stress_AOD
-            // 
-            this.userControl_text_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Stress_AOD, "userControl_text_Stress_AOD");
-            this.userControl_text_Stress_AOD.Collapsed = true;
-            this.userControl_text_Stress_AOD.Follow = false;
-            this.userControl_text_Stress_AOD.ImageError = true;
-            this.userControl_text_Stress_AOD.Name = "userControl_text_Stress_AOD";
-            this.userControl_text_Stress_AOD.OptionalSymbol = false;
-            this.userControl_text_Stress_AOD.Padding_zero = true;
-            this.userControl_text_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Stress_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Stress_AOD_Copy);
-            // 
-            // userControl_pictures_Stress_AOD
-            // 
-            this.userControl_pictures_Stress_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Stress_AOD, "userControl_pictures_Stress_AOD");
-            this.userControl_pictures_Stress_AOD.Collapsed = true;
-            this.userControl_pictures_Stress_AOD.ImagesCount = 10;
-            this.userControl_pictures_Stress_AOD.Name = "userControl_pictures_Stress_AOD";
-            this.userControl_pictures_Stress_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Stress_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Stress_AOD_Copy);
-            // 
-            // userControl_scaleLinear_ActivityGoal_AOD
-            // 
-            this.userControl_scaleLinear_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_ActivityGoal_AOD, "userControl_scaleLinear_ActivityGoal_AOD");
-            this.userControl_scaleLinear_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_scaleLinear_ActivityGoal_AOD.Name = "userControl_scaleLinear_ActivityGoal_AOD";
-            this.userControl_scaleLinear_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_ActivityGoal_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_ActivityGoal_AOD_Copy);
-            // 
-            // userControl_scaleCircle_ActivityGoal_AOD
-            // 
-            this.userControl_scaleCircle_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_ActivityGoal_AOD, "userControl_scaleCircle_ActivityGoal_AOD");
-            this.userControl_scaleCircle_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_scaleCircle_ActivityGoal_AOD.Name = "userControl_scaleCircle_ActivityGoal_AOD";
-            this.userControl_scaleCircle_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_ActivityGoal_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_ActivityGoal_AOD_Copy);
-            // 
-            // userControl_hand_ActivityGoal_AOD
-            // 
-            this.userControl_hand_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_ActivityGoal_AOD, "userControl_hand_ActivityGoal_AOD");
-            this.userControl_hand_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_hand_ActivityGoal_AOD.Name = "userControl_hand_ActivityGoal_AOD";
-            this.userControl_hand_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_ActivityGoal_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_ActivityGoal_AOD_Copy);
-            // 
-            // userControl_text_ActivityGoal_AOD
-            // 
-            this.userControl_text_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_ActivityGoal_AOD, "userControl_text_ActivityGoal_AOD");
-            this.userControl_text_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_text_ActivityGoal_AOD.Follow = false;
-            this.userControl_text_ActivityGoal_AOD.ImageError = true;
-            this.userControl_text_ActivityGoal_AOD.Name = "userControl_text_ActivityGoal_AOD";
-            this.userControl_text_ActivityGoal_AOD.OptionalSymbol = false;
-            this.userControl_text_ActivityGoal_AOD.Padding_zero = true;
-            this.userControl_text_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_ActivityGoal_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_ActivityGoal_AOD_Copy);
-            // 
-            // userControl_pictures_ActivityGoal_AOD
-            // 
-            this.userControl_pictures_ActivityGoal_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_ActivityGoal_AOD, "userControl_pictures_ActivityGoal_AOD");
-            this.userControl_pictures_ActivityGoal_AOD.Collapsed = true;
-            this.userControl_pictures_ActivityGoal_AOD.ImagesCount = 10;
-            this.userControl_pictures_ActivityGoal_AOD.Name = "userControl_pictures_ActivityGoal_AOD";
-            this.userControl_pictures_ActivityGoal_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_ActivityGoal_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_ActivityGoal_AOD_Copy);
-            // 
-            // userControl_scaleLinear_FatBurning_AOD
-            // 
-            this.userControl_scaleLinear_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_FatBurning_AOD, "userControl_scaleLinear_FatBurning_AOD");
-            this.userControl_scaleLinear_FatBurning_AOD.Collapsed = true;
-            this.userControl_scaleLinear_FatBurning_AOD.Name = "userControl_scaleLinear_FatBurning_AOD";
-            this.userControl_scaleLinear_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_FatBurning_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_FatBurning_AOD_Copy);
-            // 
-            // userControl_scaleCircle_FatBurning_AOD
-            // 
-            this.userControl_scaleCircle_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_FatBurning_AOD, "userControl_scaleCircle_FatBurning_AOD");
-            this.userControl_scaleCircle_FatBurning_AOD.Collapsed = true;
-            this.userControl_scaleCircle_FatBurning_AOD.Name = "userControl_scaleCircle_FatBurning_AOD";
-            this.userControl_scaleCircle_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_FatBurning_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_FatBurning_AOD_Copy);
-            // 
-            // userControl_hand_FatBurning_AOD
-            // 
-            this.userControl_hand_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_FatBurning_AOD, "userControl_hand_FatBurning_AOD");
-            this.userControl_hand_FatBurning_AOD.Collapsed = true;
-            this.userControl_hand_FatBurning_AOD.Name = "userControl_hand_FatBurning_AOD";
-            this.userControl_hand_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_FatBurning_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_FatBurning_AOD_Copy);
-            // 
-            // userControl_text_FatBurning_AOD
-            // 
-            this.userControl_text_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_FatBurning_AOD, "userControl_text_FatBurning_AOD");
-            this.userControl_text_FatBurning_AOD.Collapsed = true;
-            this.userControl_text_FatBurning_AOD.Follow = false;
-            this.userControl_text_FatBurning_AOD.ImageError = true;
-            this.userControl_text_FatBurning_AOD.Name = "userControl_text_FatBurning_AOD";
-            this.userControl_text_FatBurning_AOD.OptionalSymbol = false;
-            this.userControl_text_FatBurning_AOD.Padding_zero = true;
-            this.userControl_text_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_FatBurning_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_FatBurning_AOD_Copy);
-            // 
-            // userControl_pictures_FatBurning_AOD
-            // 
-            this.userControl_pictures_FatBurning_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_FatBurning_AOD, "userControl_pictures_FatBurning_AOD");
-            this.userControl_pictures_FatBurning_AOD.Collapsed = true;
-            this.userControl_pictures_FatBurning_AOD.ImagesCount = 10;
-            this.userControl_pictures_FatBurning_AOD.Name = "userControl_pictures_FatBurning_AOD";
-            this.userControl_pictures_FatBurning_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_FatBurning_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_FatBurning_AOD_Copy);
-            // 
-            // userControl_scaleLinear_Weather_AOD
-            // 
-            this.userControl_scaleLinear_Weather_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Weather_AOD, "userControl_scaleLinear_Weather_AOD");
-            this.userControl_scaleLinear_Weather_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Weather_AOD.Name = "userControl_scaleLinear_Weather_AOD";
-            this.userControl_scaleLinear_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Weather_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Weather_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Weather_AOD
-            // 
-            this.userControl_scaleCircle_Weather_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Weather_AOD, "userControl_scaleCircle_Weather_AOD");
-            this.userControl_scaleCircle_Weather_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Weather_AOD.Name = "userControl_scaleCircle_Weather_AOD";
-            this.userControl_scaleCircle_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Weather_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Weather_AOD_Copy);
-            // 
-            // userControl_hand_Weather_AOD
-            // 
-            this.userControl_hand_Weather_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Weather_AOD, "userControl_hand_Weather_AOD");
-            this.userControl_hand_Weather_AOD.Collapsed = true;
-            this.userControl_hand_Weather_AOD.Name = "userControl_hand_Weather_AOD";
-            this.userControl_hand_Weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Weather_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Weather_AOD_Copy);
-            // 
-            // userControl_text_weather_Max_AOD
-            // 
-            this.userControl_text_weather_Max_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_weather_Max_AOD, "userControl_text_weather_Max_AOD");
-            this.userControl_text_weather_Max_AOD.Collapsed = true;
-            this.userControl_text_weather_Max_AOD.Follow = true;
-            this.userControl_text_weather_Max_AOD.ImageError = true;
-            this.userControl_text_weather_Max_AOD.Name = "userControl_text_weather_Max_AOD";
-            this.userControl_text_weather_Max_AOD.OptionalSymbol = true;
-            this.userControl_text_weather_Max_AOD.Padding_zero = true;
-            this.userControl_text_weather_Max_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_weather_Max_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WeatherMax_AOD_Copy);
-            // 
-            // userControl_text_weather_Min_AOD
-            // 
-            this.userControl_text_weather_Min_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_weather_Min_AOD, "userControl_text_weather_Min_AOD");
-            this.userControl_text_weather_Min_AOD.Collapsed = true;
-            this.userControl_text_weather_Min_AOD.Follow = false;
-            this.userControl_text_weather_Min_AOD.ImageError = true;
-            this.userControl_text_weather_Min_AOD.Name = "userControl_text_weather_Min_AOD";
-            this.userControl_text_weather_Min_AOD.OptionalSymbol = true;
-            this.userControl_text_weather_Min_AOD.Padding_zero = true;
-            this.userControl_text_weather_Min_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_weather_Min_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WeatherMin_AOD_Copy);
-            // 
-            // userControl_text_weather_Current_AOD
-            // 
-            this.userControl_text_weather_Current_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_weather_Current_AOD, "userControl_text_weather_Current_AOD");
-            this.userControl_text_weather_Current_AOD.Collapsed = true;
-            this.userControl_text_weather_Current_AOD.Follow = false;
-            this.userControl_text_weather_Current_AOD.ImageError = true;
-            this.userControl_text_weather_Current_AOD.Name = "userControl_text_weather_Current_AOD";
-            this.userControl_text_weather_Current_AOD.OptionalSymbol = true;
-            this.userControl_text_weather_Current_AOD.Padding_zero = true;
-            this.userControl_text_weather_Current_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_weather_Current_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Weather_AOD_Copy);
-            // 
-            // userControl_pictures_weather_AOD
-            // 
-            this.userControl_pictures_weather_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_weather_AOD, "userControl_pictures_weather_AOD");
-            this.userControl_pictures_weather_AOD.Collapsed = true;
-            this.userControl_pictures_weather_AOD.ImagesCount = 29;
-            this.userControl_pictures_weather_AOD.Name = "userControl_pictures_weather_AOD";
-            this.userControl_pictures_weather_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_weather_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Weather_AOD_Copy);
-            // 
-            // userControl_scaleLinear_UVindex_AOD
-            // 
-            this.userControl_scaleLinear_UVindex_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_UVindex_AOD, "userControl_scaleLinear_UVindex_AOD");
-            this.userControl_scaleLinear_UVindex_AOD.Collapsed = true;
-            this.userControl_scaleLinear_UVindex_AOD.Name = "userControl_scaleLinear_UVindex_AOD";
-            this.userControl_scaleLinear_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_UVindex_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_UVindex_AOD_Copy);
-            // 
-            // userControl_scaleCircle_UVindex_AOD
-            // 
-            this.userControl_scaleCircle_UVindex_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_UVindex_AOD, "userControl_scaleCircle_UVindex_AOD");
-            this.userControl_scaleCircle_UVindex_AOD.Collapsed = true;
-            this.userControl_scaleCircle_UVindex_AOD.Name = "userControl_scaleCircle_UVindex_AOD";
-            this.userControl_scaleCircle_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_UVindex_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_UVindex_AOD_Copy);
-            // 
-            // userControl_hand_UVindex_AOD
-            // 
-            this.userControl_hand_UVindex_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_UVindex_AOD, "userControl_hand_UVindex_AOD");
-            this.userControl_hand_UVindex_AOD.Collapsed = true;
-            this.userControl_hand_UVindex_AOD.Name = "userControl_hand_UVindex_AOD";
-            this.userControl_hand_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_UVindex_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_UVindex_AOD_Copy);
-            // 
-            // userControl_text_UVindex_AOD
-            // 
-            this.userControl_text_UVindex_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_UVindex_AOD, "userControl_text_UVindex_AOD");
-            this.userControl_text_UVindex_AOD.Collapsed = true;
-            this.userControl_text_UVindex_AOD.Follow = false;
-            this.userControl_text_UVindex_AOD.ImageError = true;
-            this.userControl_text_UVindex_AOD.Name = "userControl_text_UVindex_AOD";
-            this.userControl_text_UVindex_AOD.OptionalSymbol = false;
-            this.userControl_text_UVindex_AOD.Padding_zero = true;
-            this.userControl_text_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_UVindex_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_UVindex_AOD_Copy);
-            // 
-            // userControl_pictures_UVindex_AOD
-            // 
-            this.userControl_pictures_UVindex_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_UVindex_AOD, "userControl_pictures_UVindex_AOD");
-            this.userControl_pictures_UVindex_AOD.Collapsed = true;
-            this.userControl_pictures_UVindex_AOD.ImagesCount = 10;
-            this.userControl_pictures_UVindex_AOD.Name = "userControl_pictures_UVindex_AOD";
-            this.userControl_pictures_UVindex_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_UVindex_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_UVindex_AOD_Copy);
-            // 
-            // userControl_scaleLinear_AirQuality_AOD
-            // 
-            this.userControl_scaleLinear_AirQuality_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_AirQuality_AOD, "userControl_scaleLinear_AirQuality_AOD");
-            this.userControl_scaleLinear_AirQuality_AOD.Collapsed = true;
-            this.userControl_scaleLinear_AirQuality_AOD.Name = "userControl_scaleLinear_AirQuality_AOD";
-            this.userControl_scaleLinear_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_AirQuality_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_AirQuality_AOD_Copy);
-            // 
-            // userControl_scaleCircle_AirQuality_AOD
-            // 
-            this.userControl_scaleCircle_AirQuality_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_AirQuality_AOD, "userControl_scaleCircle_AirQuality_AOD");
-            this.userControl_scaleCircle_AirQuality_AOD.Collapsed = true;
-            this.userControl_scaleCircle_AirQuality_AOD.Name = "userControl_scaleCircle_AirQuality_AOD";
-            this.userControl_scaleCircle_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_AirQuality_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_AirQuality_AOD_Copy);
-            // 
-            // userControl_hand_AirQuality_AOD
-            // 
-            this.userControl_hand_AirQuality_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_AirQuality_AOD, "userControl_hand_AirQuality_AOD");
-            this.userControl_hand_AirQuality_AOD.Collapsed = true;
-            this.userControl_hand_AirQuality_AOD.Name = "userControl_hand_AirQuality_AOD";
-            this.userControl_hand_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_AirQuality_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_AirQuality_AOD_Copy);
-            // 
-            // userControl_text_AirQuality_AOD
-            // 
-            this.userControl_text_AirQuality_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_AirQuality_AOD, "userControl_text_AirQuality_AOD");
-            this.userControl_text_AirQuality_AOD.Collapsed = true;
-            this.userControl_text_AirQuality_AOD.Follow = false;
-            this.userControl_text_AirQuality_AOD.ImageError = true;
-            this.userControl_text_AirQuality_AOD.Name = "userControl_text_AirQuality_AOD";
-            this.userControl_text_AirQuality_AOD.OptionalSymbol = false;
-            this.userControl_text_AirQuality_AOD.Padding_zero = true;
-            this.userControl_text_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_AirQuality_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_AirQuality_AOD_Copy);
-            // 
-            // userControl_pictures_AirQuality_AOD
-            // 
-            this.userControl_pictures_AirQuality_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_AirQuality_AOD, "userControl_pictures_AirQuality_AOD");
-            this.userControl_pictures_AirQuality_AOD.Collapsed = true;
-            this.userControl_pictures_AirQuality_AOD.ImagesCount = 10;
-            this.userControl_pictures_AirQuality_AOD.Name = "userControl_pictures_AirQuality_AOD";
-            this.userControl_pictures_AirQuality_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_AirQuality_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_AirQuality_AOD_Copy);
-            // 
-            // userControl_scaleLinear_Humidity_AOD
-            // 
-            this.userControl_scaleLinear_Humidity_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Humidity_AOD, "userControl_scaleLinear_Humidity_AOD");
-            this.userControl_scaleLinear_Humidity_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Humidity_AOD.Name = "userControl_scaleLinear_Humidity_AOD";
-            this.userControl_scaleLinear_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Humidity_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Humidity_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Humidity_AOD
-            // 
-            this.userControl_scaleCircle_Humidity_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Humidity_AOD, "userControl_scaleCircle_Humidity_AOD");
-            this.userControl_scaleCircle_Humidity_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Humidity_AOD.Name = "userControl_scaleCircle_Humidity_AOD";
-            this.userControl_scaleCircle_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Humidity_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Humidity_AOD_Copy);
-            // 
-            // userControl_hand_Humidity_AOD
-            // 
-            this.userControl_hand_Humidity_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Humidity_AOD, "userControl_hand_Humidity_AOD");
-            this.userControl_hand_Humidity_AOD.Collapsed = true;
-            this.userControl_hand_Humidity_AOD.Name = "userControl_hand_Humidity_AOD";
-            this.userControl_hand_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Humidity_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Humidity_AOD_Copy);
-            // 
-            // userControl_text_Humidity_AOD
-            // 
-            this.userControl_text_Humidity_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Humidity_AOD, "userControl_text_Humidity_AOD");
-            this.userControl_text_Humidity_AOD.Collapsed = true;
-            this.userControl_text_Humidity_AOD.Follow = false;
-            this.userControl_text_Humidity_AOD.ImageError = true;
-            this.userControl_text_Humidity_AOD.Name = "userControl_text_Humidity_AOD";
-            this.userControl_text_Humidity_AOD.OptionalSymbol = false;
-            this.userControl_text_Humidity_AOD.Padding_zero = true;
-            this.userControl_text_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Humidity_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Humidity_AOD_Copy);
-            // 
-            // userControl_pictures_Humidity_AOD
-            // 
-            this.userControl_pictures_Humidity_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Humidity_AOD, "userControl_pictures_Humidity_AOD");
-            this.userControl_pictures_Humidity_AOD.Collapsed = true;
-            this.userControl_pictures_Humidity_AOD.ImagesCount = 10;
-            this.userControl_pictures_Humidity_AOD.Name = "userControl_pictures_Humidity_AOD";
-            this.userControl_pictures_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Humidity_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Humidity_AOD_Copy);
-            // 
-            // userControl_scaleLinear_WindForce_AOD
-            // 
-            this.userControl_scaleLinear_WindForce_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_WindForce_AOD, "userControl_scaleLinear_WindForce_AOD");
-            this.userControl_scaleLinear_WindForce_AOD.Collapsed = true;
-            this.userControl_scaleLinear_WindForce_AOD.Name = "userControl_scaleLinear_WindForce_AOD";
-            this.userControl_scaleLinear_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_WindForce_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_WindForce_AOD_Copy);
-            // 
-            // userControl_scaleCircle_WindForce_AOD
-            // 
-            this.userControl_scaleCircle_WindForce_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_WindForce_AOD, "userControl_scaleCircle_WindForce_AOD");
-            this.userControl_scaleCircle_WindForce_AOD.Collapsed = true;
-            this.userControl_scaleCircle_WindForce_AOD.Name = "userControl_scaleCircle_WindForce_AOD";
-            this.userControl_scaleCircle_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_WindForce_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_WindForce_AOD_Copy);
-            // 
-            // userControl_hand_WindForce_AOD
-            // 
-            this.userControl_hand_WindForce_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_WindForce_AOD, "userControl_hand_WindForce_AOD");
-            this.userControl_hand_WindForce_AOD.Collapsed = true;
-            this.userControl_hand_WindForce_AOD.Name = "userControl_hand_WindForce_AOD";
-            this.userControl_hand_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_WindForce_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_WindForce_AOD_Copy);
-            // 
-            // userControl_text_WindForce_AOD
-            // 
-            this.userControl_text_WindForce_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_WindForce_AOD, "userControl_text_WindForce_AOD");
-            this.userControl_text_WindForce_AOD.Collapsed = true;
-            this.userControl_text_WindForce_AOD.Follow = false;
-            this.userControl_text_WindForce_AOD.ImageError = true;
-            this.userControl_text_WindForce_AOD.Name = "userControl_text_WindForce_AOD";
-            this.userControl_text_WindForce_AOD.OptionalSymbol = false;
-            this.userControl_text_WindForce_AOD.Padding_zero = true;
-            this.userControl_text_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_WindForce_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_WindForce_AOD_Copy);
-            // 
-            // userControl_pictures_WindForce_AOD
-            // 
-            this.userControl_pictures_WindForce_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_WindForce_AOD, "userControl_pictures_WindForce_AOD");
-            this.userControl_pictures_WindForce_AOD.Collapsed = true;
-            this.userControl_pictures_WindForce_AOD.ImagesCount = 10;
-            this.userControl_pictures_WindForce_AOD.Name = "userControl_pictures_WindForce_AOD";
-            this.userControl_pictures_WindForce_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_WindForce_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_WindForce_AOD_Copy);
-            // 
-            // userControl_scaleLinear_Altitude_AOD
-            // 
-            this.userControl_scaleLinear_Altitude_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_Altitude_AOD, "userControl_scaleLinear_Altitude_AOD");
-            this.userControl_scaleLinear_Altitude_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Altitude_AOD.Name = "userControl_scaleLinear_Altitude_AOD";
-            this.userControl_scaleLinear_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Altitude_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Altitude_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Altitude_AOD
-            // 
-            this.userControl_scaleCircle_Altitude_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_Altitude_AOD, "userControl_scaleCircle_Altitude_AOD");
-            this.userControl_scaleCircle_Altitude_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Altitude_AOD.Name = "userControl_scaleCircle_Altitude_AOD";
-            this.userControl_scaleCircle_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Altitude_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Altitude_AOD_Copy);
-            // 
-            // userControl_hand_Altitude_AOD
-            // 
-            this.userControl_hand_Altitude_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_Altitude_AOD, "userControl_hand_Altitude_AOD");
-            this.userControl_hand_Altitude_AOD.Collapsed = true;
-            this.userControl_hand_Altitude_AOD.Name = "userControl_hand_Altitude_AOD";
-            this.userControl_hand_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Altitude_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Altitude_AOD_Copy);
-            // 
-            // userControl_text_Altitude_AOD
-            // 
-            this.userControl_text_Altitude_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_Altitude_AOD, "userControl_text_Altitude_AOD");
-            this.userControl_text_Altitude_AOD.Collapsed = true;
-            this.userControl_text_Altitude_AOD.Follow = false;
-            this.userControl_text_Altitude_AOD.ImageError = true;
-            this.userControl_text_Altitude_AOD.Name = "userControl_text_Altitude_AOD";
-            this.userControl_text_Altitude_AOD.OptionalSymbol = false;
-            this.userControl_text_Altitude_AOD.Padding_zero = true;
-            this.userControl_text_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Altitude_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Altitude_AOD_Copy);
-            // 
-            // userControl_pictures_Altitude_AOD
-            // 
-            this.userControl_pictures_Altitude_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_Altitude_AOD, "userControl_pictures_Altitude_AOD");
-            this.userControl_pictures_Altitude_AOD.Collapsed = true;
-            this.userControl_pictures_Altitude_AOD.ImagesCount = 10;
-            this.userControl_pictures_Altitude_AOD.Name = "userControl_pictures_Altitude_AOD";
-            this.userControl_pictures_Altitude_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Altitude_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Altitude_AOD_Copy);
-            // 
-            // userControl_scaleLinear_AirPressure_AOD
-            // 
-            this.userControl_scaleLinear_AirPressure_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleLinear_AirPressure_AOD, "userControl_scaleLinear_AirPressure_AOD");
-            this.userControl_scaleLinear_AirPressure_AOD.Collapsed = true;
-            this.userControl_scaleLinear_AirPressure_AOD.Name = "userControl_scaleLinear_AirPressure_AOD";
-            this.userControl_scaleLinear_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_AirPressure_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_AirPressure_AOD_Copy);
-            // 
-            // userControl_scaleCircle_AirPressure_AOD
-            // 
-            this.userControl_scaleCircle_AirPressure_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_scaleCircle_AirPressure_AOD, "userControl_scaleCircle_AirPressure_AOD");
-            this.userControl_scaleCircle_AirPressure_AOD.Collapsed = true;
-            this.userControl_scaleCircle_AirPressure_AOD.Name = "userControl_scaleCircle_AirPressure_AOD";
-            this.userControl_scaleCircle_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_AirPressure_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_AirPressure_AOD_Copy);
-            // 
-            // userControl_hand_AirPressure_AOD
-            // 
-            this.userControl_hand_AirPressure_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_hand_AirPressure_AOD, "userControl_hand_AirPressure_AOD");
-            this.userControl_hand_AirPressure_AOD.Collapsed = true;
-            this.userControl_hand_AirPressure_AOD.Name = "userControl_hand_AirPressure_AOD";
-            this.userControl_hand_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_AirPressure_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_AirPressure_AOD_Copy);
-            // 
-            // userControl_text_AirPressure_AOD
-            // 
-            this.userControl_text_AirPressure_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_text_AirPressure_AOD, "userControl_text_AirPressure_AOD");
-            this.userControl_text_AirPressure_AOD.Collapsed = true;
-            this.userControl_text_AirPressure_AOD.Follow = false;
-            this.userControl_text_AirPressure_AOD.ImageError = true;
-            this.userControl_text_AirPressure_AOD.Name = "userControl_text_AirPressure_AOD";
-            this.userControl_text_AirPressure_AOD.OptionalSymbol = false;
-            this.userControl_text_AirPressure_AOD.Padding_zero = true;
-            this.userControl_text_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_AirPressure_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_AirPressure_AOD_Copy);
-            // 
-            // userControl_pictures_AirPressure_AOD
-            // 
-            this.userControl_pictures_AirPressure_AOD.AOD = true;
-            resources.ApplyResources(this.userControl_pictures_AirPressure_AOD, "userControl_pictures_AirPressure_AOD");
-            this.userControl_pictures_AirPressure_AOD.Collapsed = true;
-            this.userControl_pictures_AirPressure_AOD.ImagesCount = 10;
-            this.userControl_pictures_AirPressure_AOD.Name = "userControl_pictures_AirPressure_AOD";
-            this.userControl_pictures_AirPressure_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_AirPressure_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_AirPressure_AOD_Copy);
-            // 
-            // userControl_scaleLinear_Battery_AOD
-            // 
-            this.userControl_scaleLinear_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_scaleLinear_Battery_AOD, "userControl_scaleLinear_Battery_AOD");
-            this.userControl_scaleLinear_Battery_AOD.Collapsed = true;
-            this.userControl_scaleLinear_Battery_AOD.Name = "userControl_scaleLinear_Battery_AOD";
-            this.userControl_scaleLinear_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleLinear_Battery_AOD.AOD_Copy_scaleLinear += new AmazFit_Watchface_2.UserControl_scaleLinear.AOD_CopyHandler(this.userControl_scaleLinear_Battery_AOD_Copy);
-            // 
-            // userControl_scaleCircle_Battery_AOD
-            // 
-            this.userControl_scaleCircle_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_scaleCircle_Battery_AOD, "userControl_scaleCircle_Battery_AOD");
-            this.userControl_scaleCircle_Battery_AOD.Collapsed = true;
-            this.userControl_scaleCircle_Battery_AOD.Name = "userControl_scaleCircle_Battery_AOD";
-            this.userControl_scaleCircle_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_scaleCircle_Battery_AOD.AOD_Copy_scaleCircle += new AmazFit_Watchface_2.UserControl_scaleCircle.AOD_CopyHandler(this.userControl_scaleCircle_Battery_AOD_Copy);
-            // 
-            // userControl_hand_Battery_AOD
-            // 
-            this.userControl_hand_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_hand_Battery_AOD, "userControl_hand_Battery_AOD");
-            this.userControl_hand_Battery_AOD.Collapsed = true;
-            this.userControl_hand_Battery_AOD.Name = "userControl_hand_Battery_AOD";
-            this.userControl_hand_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_hand_Battery_AOD.AOD_Copy_hand += new AmazFit_Watchface_2.UserControl_hand.AOD_CopyHandler(this.userControl_hand_Battery_AOD_Copy);
-            // 
-            // userControl_text_Battery_AOD
-            // 
-            this.userControl_text_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_text_Battery_AOD, "userControl_text_Battery_AOD");
-            this.userControl_text_Battery_AOD.Collapsed = true;
-            this.userControl_text_Battery_AOD.Follow = false;
-            this.userControl_text_Battery_AOD.ImageError = true;
-            this.userControl_text_Battery_AOD.Name = "userControl_text_Battery_AOD";
-            this.userControl_text_Battery_AOD.OptionalSymbol = false;
-            this.userControl_text_Battery_AOD.Padding_zero = true;
-            this.userControl_text_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_text_Battery_AOD.AOD_Copy_text += new AmazFit_Watchface_2.UserControl_text.AOD_CopyHandler(this.userControl_text_Battery_AOD_Copy);
-            // 
-            // userControl_pictures_Battery_AOD
-            // 
-            this.userControl_pictures_Battery_AOD.AOD = false;
-            resources.ApplyResources(this.userControl_pictures_Battery_AOD, "userControl_pictures_Battery_AOD");
-            this.userControl_pictures_Battery_AOD.Collapsed = true;
-            this.userControl_pictures_Battery_AOD.ImagesCount = 10;
-            this.userControl_pictures_Battery_AOD.Name = "userControl_pictures_Battery_AOD";
-            this.userControl_pictures_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
-            this.userControl_pictures_Battery_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Battery_AOD_Copy);
+            // userControl_FontRotate1
+            // 
+            this.userControl_FontRotate1.AOD = false;
+            resources.ApplyResources(this.userControl_FontRotate1, "userControl_FontRotate1");
+            this.userControl_FontRotate1.Collapsed = false;
+            this.userControl_FontRotate1.Follow = false;
+            this.userControl_FontRotate1.Name = "userControl_FontRotate1";
+            this.userControl_FontRotate1.Padding_zero = true;
+            this.userControl_FontRotate1.ShowUnit = true;
             // 
             // Form1
             // 
@@ -13933,6 +13947,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private UserControl_SystemFont userControl_SystemFont_Steps;
+        private UserControl_FontRotate userControl_FontRotate1;
     }
 }
 

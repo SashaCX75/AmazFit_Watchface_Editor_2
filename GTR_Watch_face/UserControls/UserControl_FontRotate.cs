@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace AmazFit_Watchface_2
 {
-    public partial class UserControl_SystemFont : UserControl
+    public partial class UserControl_FontRotate : UserControl
     {
         private bool setValue;
         private bool AODmode;
         private bool showUnit;
         private bool PaddingZero;
         private bool Follow_mode;
-        public UserControl_SystemFont()
+        public UserControl_FontRotate()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace AmazFit_Watchface_2
             set
             {
                 AODmode = value;
-                button_Copy_SystemFont.Visible = AODmode;
+                button_Copy_FontRotate.Visible = AODmode;
             }
         }
 
@@ -48,7 +48,7 @@ namespace AmazFit_Watchface_2
             set
             {
                 showUnit = value;
-                checkBox_SystemFont_unit.Visible = showUnit;
+                checkBox_FontRotate_unit.Visible = showUnit;
             }
         }
 
@@ -89,7 +89,7 @@ namespace AmazFit_Watchface_2
         public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
-        public event AOD_CopyHandler AOD_Copy_SystemFont;
+        public event AOD_CopyHandler AOD_Copy_FontRotate;
         public delegate void AOD_CopyHandler(object sender, EventArgs eventArgs);
 
         /// <summary>Возвращает true если панель свернута</summary>
@@ -97,28 +97,28 @@ namespace AmazFit_Watchface_2
         {
             get
             {
-                return !panel_SystemFont.Visible;
+                return !panel_FontRotate.Visible;
             }
             set
             {
-                panel_SystemFont.Visible = !value;
+                panel_FontRotate.Visible = !value;
             }
         }
 
         // кнопка копирования свойст для AOD
-        private void button_Copy_SystemFont_Click(object sender, EventArgs e)
+        private void button_Copy_FontRotate_Click(object sender, EventArgs e)
         {
-            if (AOD_Copy_SystemFont != null)
+            if (AOD_Copy_FontRotate != null)
             {
                 EventArgs eventArgs = new EventArgs();
-                AOD_Copy_SystemFont(this, eventArgs);
+                AOD_Copy_FontRotate(this, eventArgs);
             }
         }
 
         // кнопка сворачивания
         private void button_Click(object sender, EventArgs e)
         {
-            panel_SystemFont.Visible = !panel_SystemFont.Visible;
+            panel_FontRotate.Visible = !panel_FontRotate.Visible;
             if (Collapse != null)
             {
                 EventArgs eventArgs = new EventArgs();
@@ -139,11 +139,11 @@ namespace AmazFit_Watchface_2
             if (color.Length == 18) color = color.Remove(2, 8);
             Color old_color = ColorTranslator.FromHtml(color);
             Color new_color = Color.FromArgb(255, old_color.R, old_color.G, old_color.B);
-            comboBox_SystemFont_color.BackColor = new_color;
+            comboBox_FontRotate_color.BackColor = new_color;
         }
         internal string comboBoxGetColorString()
         {
-            Color color = comboBox_SystemFont_color.BackColor;
+            Color color = comboBox_FontRotate_color.BackColor;
             Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
             string colorStr = ColorTranslator.ToHtml(new_color);
             colorStr = colorStr.Replace("#", "0xFF");
@@ -151,7 +151,7 @@ namespace AmazFit_Watchface_2
         }
         internal Color comboBoxGetColor()
         {
-            return comboBox_SystemFont_color.BackColor;
+            return comboBox_FontRotate_color.BackColor;
         }
 
         internal void checkBoxSetUnit(int unit)
@@ -159,13 +159,13 @@ namespace AmazFit_Watchface_2
             switch (unit)
             {
                 case 1:
-                    checkBox_SystemFont_unit.CheckState = CheckState.Checked;
+                    checkBox_FontRotate_unit.CheckState = CheckState.Checked;
                     break;
                 case 2:
-                    checkBox_SystemFont_unit.CheckState = CheckState.Indeterminate;
+                    checkBox_FontRotate_unit.CheckState = CheckState.Indeterminate;
                     break;
                 default:
-                    checkBox_SystemFont_unit.CheckState = CheckState.Unchecked;
+                    checkBox_FontRotate_unit.CheckState = CheckState.Unchecked;
                     break;
             }
         }
@@ -173,8 +173,8 @@ namespace AmazFit_Watchface_2
         internal int checkBoxGetUnit()
         {
             int value = -1;
-            if (checkBox_SystemFont_unit.CheckState == CheckState.Checked) value = 1;
-            if (checkBox_SystemFont_unit.CheckState == CheckState.Indeterminate) value = 2;
+            if (checkBox_FontRotate_unit.CheckState == CheckState.Checked) value = 1;
+            if (checkBox_FontRotate_unit.CheckState == CheckState.Indeterminate) value = 2;
             return value;
         }
 
@@ -187,7 +187,7 @@ namespace AmazFit_Watchface_2
 
         private void checkBox_Use_CheckedChanged(object sender, EventArgs e)
         {
-            Control.ControlCollection controlCollection = panel_SystemFont.Controls;
+            Control.ControlCollection controlCollection = panel_FontRotate.Controls;
 
             bool b = checkBox_Use.Checked;
             for (int i = 1; i < controlCollection.Count - 1; i++)
@@ -227,6 +227,44 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        // меняем цвет текста и рамки для groupBox
+        private void groupBox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
+        {
+            if (box != null)
+            {
+                Brush textBrush = new SolidBrush(textColor);
+                Brush borderBrush = new SolidBrush(borderColor);
+                Pen borderPen = new Pen(borderBrush);
+                SizeF strSize = g.MeasureString(box.Text, box.Font);
+                Rectangle rect = new Rectangle(box.ClientRectangle.X,
+                                               box.ClientRectangle.Y + (int)(strSize.Height / 2),
+                                               box.ClientRectangle.Width - 1,
+                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 5);
+
+                // Clear text and border
+                g.Clear(this.BackColor);
+
+                // Draw text
+                g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
+
+                // Drawing Border
+                //Left
+                g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
+                //Right
+                g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Bottom
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Top1
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
+                //Top2
+                g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
+            }
+        }
+
         #endregion
 
         #region Settings Set/Clear
@@ -237,16 +275,18 @@ namespace AmazFit_Watchface_2
             setValue = true;
 
             checkBox_Use.Checked = false;
-            checkBox_SystemFont_unit.Checked = false;
+            checkBox_FontRotate_unit.Checked = false;
             checkBox_addZero.Checked = false;
             checkBox_follow.Checked = false;
 
-            numericUpDown_SystemFontX.Value = 0;
-            numericUpDown_SystemFontY.Value = 0;
+            numericUpDown_FontRotateX.Value = 0;
+            numericUpDown_FontRotateY.Value = 0;
 
-            numericUpDown_SystemFont_size.Value = 20;
-            numericUpDown_SystemFont_angle.Value = 0;
-            numericUpDown_SystemFont_spacing.Value = 0;
+            numericUpDown_FontRotate_size.Value = 20;
+            numericUpDown_FontRotate_angle.Value = 0;
+            numericUpDown_FontRotate_spacing.Value = 0;
+
+            radioButton_Clockwise.Checked = true;
 
             setValue = false;
         }

@@ -58,6 +58,7 @@ namespace AmazFit_Watchface_2
             this.label07 = new System.Windows.Forms.Label();
             this.button_Copy_SystemFont = new System.Windows.Forms.Button();
             this.button_SystemFont = new System.Windows.Forms.Button();
+            this.checkBox_follow = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip_Y.SuspendLayout();
             this.contextMenuStrip_X.SuspendLayout();
             this.panel_SystemFont.SuspendLayout();
@@ -136,8 +137,9 @@ namespace AmazFit_Watchface_2
             this.panel_SystemFont.Controls.Add(this.numericUpDown_SystemFont_spacing);
             this.panel_SystemFont.Controls.Add(this.numericUpDown_SystemFont_angle);
             this.panel_SystemFont.Controls.Add(this.comboBox_SystemFont_color);
-            this.panel_SystemFont.Controls.Add(this.checkBox_addZero);
             this.panel_SystemFont.Controls.Add(this.checkBox_SystemFont_unit);
+            this.panel_SystemFont.Controls.Add(this.checkBox_addZero);
+            this.panel_SystemFont.Controls.Add(this.checkBox_follow);
             this.panel_SystemFont.Controls.Add(this.label01);
             this.panel_SystemFont.Controls.Add(this.label02);
             this.panel_SystemFont.Controls.Add(this.label03);
@@ -320,6 +322,12 @@ namespace AmazFit_Watchface_2
             this.button_SystemFont.UseVisualStyleBackColor = true;
             this.button_SystemFont.Click += new System.EventHandler(this.button_Click);
             // 
+            // checkBox_follow
+            // 
+            resources.ApplyResources(this.checkBox_follow, "checkBox_follow");
+            this.checkBox_follow.Name = "checkBox_follow";
+            this.checkBox_follow.UseVisualStyleBackColor = true;
+            // 
             // UserControl_SystemFont
             // 
             resources.ApplyResources(this, "$this");
@@ -369,5 +377,6 @@ namespace AmazFit_Watchface_2
         internal System.Windows.Forms.NumericUpDown numericUpDown_SystemFont_spacing;
         private System.Windows.Forms.Label label04;
         private System.Windows.Forms.CheckBox checkBox_SystemFont_unit;
+        public System.Windows.Forms.CheckBox checkBox_follow;
     }
 }
