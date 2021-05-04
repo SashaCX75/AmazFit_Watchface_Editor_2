@@ -166,7 +166,7 @@ namespace AmazFit_Watchface_2
         public string Color { get; set; }
 
         /// <summary>Отображать единици измерения?</summary>
-        public bool ShowUnit { get; set; }
+        public long ShowUnitCheck { get; set; }
     }
 
     public class Text

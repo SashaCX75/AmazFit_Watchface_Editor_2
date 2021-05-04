@@ -508,6 +508,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\OpenSans-Regular.ttf" />
     <None Include="Resources\watch_icon.png" />
     <None Include="Resources\Files-Clipboard-icon.png" />
     <None Include="Resources\Actions_insert_text_icon.png" />

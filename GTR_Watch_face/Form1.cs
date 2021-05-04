@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
 using System.Text.RegularExpressions;
+using System.Drawing.Text;
 
 namespace AmazFit_Watchface_2
 {
@@ -42,6 +43,12 @@ namespace AmazFit_Watchface_2
         int offSet_X = 227;
         int offSet_Y = 227;
 
+
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
+            IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
+
+        private PrivateFontCollection fonts = new PrivateFontCollection();
 
 
         public Form1(string[] args)
@@ -172,6 +179,15 @@ namespace AmazFit_Watchface_2
             splitContainer_EditParameters.Panel1Collapsed = false;
             splitContainer_EditParameters.Panel2Collapsed = true;
 
+            #region sistem font
+            byte[] fontData = Properties.Resources.OpenSans_Regular;
+            IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
+            System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
+            uint dummy = 0;
+            fonts.AddMemoryFont(fontPtr, Properties.Resources.OpenSans_Regular.Length);
+            AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.OpenSans_Regular.Length, IntPtr.Zero, ref dummy);
+            System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
+            #endregion
             //Logger.WriteLine("Создали переменные");
 
             if (args.Length == 1)

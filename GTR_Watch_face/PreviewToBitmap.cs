@@ -341,6 +341,7 @@ namespace AmazFit_Watchface_2
             UserControl_hand userPanel_hand;
             UserControl_scaleCircle userPanel_scaleCircle;
             UserControl_scaleLinear userPanel_scaleLinear;
+            UserControl_SystemFont userControl_SystemFont;
 
             #region зараяд
             userPanel_pictures = userControl_pictures_Battery;
@@ -538,6 +539,7 @@ namespace AmazFit_Watchface_2
             userPanel_hand = userControl_hand_Steps;
             userPanel_scaleCircle = userControl_scaleCircle_Steps;
             userPanel_scaleLinear = userControl_scaleLinear_Steps;
+            userControl_SystemFont = userControl_SystemFont_Steps;
             // шаги картинками
             //checkBox_Use = (CheckBox)panel_pictures.Controls[0];
             if (userPanel_pictures.checkBox_pictures_Use.Checked)
@@ -694,6 +696,29 @@ namespace AmazFit_Watchface_2
                             (int)numericUpDown_unitY.Value, src.Width, src.Height));
                     }
                 }
+            }
+
+            // шаги системным шрифтом
+            if (userControl_SystemFont.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont.numericUpDown_SystemFont_spacing;
+                CheckBox checkBox_add_zero = userControl_SystemFont.checkBox_addZero;
+
+                //int imageIndex = comboBox_image.SelectedIndex;
+                int x = (int)numericUpDownX.Value;
+                int y = (int)numericUpDownY.Value;
+                int size = (int)numericUpDown_size.Value;
+                int angle = (int)numericUpDown_angle.Value;
+                int spasing = (int)numericUpDown_spacing.Value;
+                bool addZero = checkBox_add_zero.Checked;
+                int value = Watch_Face_Preview_Set.Activity.Steps;
+                string sValue = value.ToString();
+                Color color = userControl_SystemFont.comboBoxGetColor();
+                Draw_text(gPanel,  x, y, size, spasing, color, angle, sValue, addZero, 5, BBorder);
             }
 
             // шаги стрелкой
@@ -4132,29 +4157,6 @@ namespace AmazFit_Watchface_2
             //Pen pen = new Pen(Color.Black, width);
             Pen pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
 
-            switch (lineCap)
-            {
-                case 1:
-                    pen.EndCap = LineCap.Triangle;
-                    pen.StartCap = LineCap.Triangle;
-                    break;
-                case 2:
-                    pen.EndCap = LineCap.Flat;
-                    pen.StartCap = LineCap.Flat;
-                    break;
-                case 90:
-                    pen.EndCap = LineCap.Triangle;
-                    pen.StartCap = LineCap.Triangle;
-                    break;
-                case 180:
-                    pen.EndCap = LineCap.Flat;
-                    pen.StartCap = LineCap.Flat;
-                    break;
-                default:
-                    pen.EndCap = LineCap.Round;
-                    pen.StartCap = LineCap.Round;
-                    break;
-            }
             //int srcX = (int)Math.Round(x - radius - width / 2, MidpointRounding.AwayFromZero);
             //int srcY = (int)Math.Round(y - radius - width / 2, MidpointRounding.AwayFromZero);
             int srcX = (int)(x - radius - width / 2);
@@ -4165,8 +4167,9 @@ namespace AmazFit_Watchface_2
 
             if (backgroundIndex >= 0 && backgroundIndex < ListImagesFullName.Count)
             {
-                src = OpenFileStream(ListImagesFullName[backgroundIndex]);
-                graphics.DrawImage(src, new Rectangle(srcX, srcX, src.Width, src.Height));
+                Bitmap srcBackground = OpenFileStream(ListImagesFullName[backgroundIndex]);
+                graphics.DrawImage(srcBackground, new Rectangle(srcX, srcX, srcBackground.Width, srcBackground.Height));
+                srcBackground.Dispose();
             }
 
             Bitmap mask = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
@@ -4179,6 +4182,29 @@ namespace AmazFit_Watchface_2
                 //gPanel.DrawLine(pen, centrX, centrY, centrX + 1, centrY + 1);
                 gPanel.DrawLine(pen, 0, 0, 0 + 1, 0 + 1);
                 pen = new Pen(Color.Black, width);
+                switch (lineCap)
+                {
+                    case 1:
+                        pen.EndCap = LineCap.Triangle;
+                        pen.StartCap = LineCap.Triangle;
+                        break;
+                    case 2:
+                        pen.EndCap = LineCap.Flat;
+                        pen.StartCap = LineCap.Flat;
+                        break;
+                    case 90:
+                        pen.EndCap = LineCap.Triangle;
+                        pen.StartCap = LineCap.Triangle;
+                        break;
+                    case 180:
+                        pen.EndCap = LineCap.Flat;
+                        pen.StartCap = LineCap.Flat;
+                        break;
+                    default:
+                        pen.EndCap = LineCap.Round;
+                        pen.StartCap = LineCap.Round;
+                        break;
+                }
                 //pen.Width = width;
                 //pen.Color = Color.Black;
 
@@ -4895,6 +4921,102 @@ namespace AmazFit_Watchface_2
             }
 
             Logger.WriteLine("* Draw_dagital_text (end)");
+            return result;
+        }
+
+        /// <summary>Пишем число системным шрифтом</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата y</param>
+        /// <param name="size">Размер шрифта</param>
+        /// <param name="spacing">Величина отступа</param>
+        /// <param name="color">Цвет шрифта</param>
+        /// <param name="angle">Угол поворота надписи в градусах</param>
+        /// <param name="value">Отображаемая величина</param>
+        /// <param name="addZero">Отображать начальные нули</param>
+        /// <param name="value_lenght">Количество отображаемых символов</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        /// <param name="ActivityType">Номер активности (при необходимости)</param>
+        private int Draw_text(Graphics graphics, int x, int y, float size, int spacing, Color color,
+            float angle, string value, bool addZero, int value_lenght,  bool BBorder,
+            int ActivityType = 0)
+        {
+            while (spacing > 127)
+            {
+                spacing = spacing - 255;
+            }
+            while (spacing < -127)
+            {
+                spacing = spacing + 255;
+            }
+
+            int result = 0;
+            size = size * 0.9f;
+            //Font drawFont = new Font("Times New Roman", size, GraphicsUnit.World);
+            Font drawFont = new Font(fonts.Families[0], size, GraphicsUnit.World);
+            StringFormat strFormat = new StringFormat();
+            strFormat.FormatFlags = StringFormatFlags.FitBlackBox;
+            strFormat.Alignment = StringAlignment.Near;
+            strFormat.LineAlignment = StringAlignment.Far;
+            Size strSize1 = TextRenderer.MeasureText(graphics, "0", drawFont);
+            Size strSize2 = TextRenderer.MeasureText(graphics, "00", drawFont);
+            int chLenght = strSize2.Width - strSize1.Width;
+            int offsetX = strSize1.Width - chLenght;
+            int offsetY = (int)(strSize1.Height - size);
+
+            Logger.WriteLine("* Draw_text");
+            if (addZero)
+            {
+                while (value.Length < value_lenght)
+                {
+                    value = "0" + value;
+                }
+            }
+            char[] CH = value.ToCharArray();
+
+            int PointX = (int)(-0.3 * offsetX);
+
+            Logger.WriteLine("Draw value");
+            SolidBrush drawBrush = new SolidBrush(color);
+
+            graphics.TranslateTransform(x, y);
+            graphics.RotateTransform(angle);
+            try
+            {
+                foreach (char ch in CH)
+                {
+                    string str = ch.ToString();
+                    Size strSize = TextRenderer.MeasureText(graphics, str, drawFont);
+                    //SizeF stringSize = graphics.MeasureString(str, drawFont, 10000, strFormat);
+                    //graphics.FillRectangle(new SolidBrush(Color.White), x + PointX, y + offsetY - strSize.Height, strSize.Width, strSize.Height);
+                    graphics.DrawString(str, drawFont, drawBrush, PointX, 1.1f * offsetY, strFormat);
+
+                    PointX = PointX + strSize.Width + spacing - offsetX;
+                }
+
+                result = x + value.Length * chLenght + (value.Length - 1) * spacing;
+                if (BBorder)
+                {
+                    Logger.WriteLine("DrawBorder");
+                    Rectangle rect = new Rectangle(0, (int)(-0.75 * size), result - x - 1, (int)(0.75*size));
+                    using (Pen pen1 = new Pen(Color.White, 1))
+                    {
+                        graphics.DrawRectangle(pen1, rect);
+                    }
+                    using (Pen pen2 = new Pen(Color.Black, 1))
+                    {
+                        pen2.DashStyle = DashStyle.Dot;
+                        graphics.DrawRectangle(pen2, rect);
+                    }
+                }
+            }
+            finally
+            {
+                graphics.RotateTransform(-angle);
+                graphics.TranslateTransform(-x, -y);
+            }
+
+            Logger.WriteLine("* Draw_text (end)");
             return result;
         }
 

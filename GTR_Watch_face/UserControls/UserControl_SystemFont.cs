@@ -16,6 +16,7 @@ namespace AmazFit_Watchface_2
     {
         private bool setValue;
         private bool AODmode;
+        private bool showUnit;
         public UserControl_SystemFont()
         {
             InitializeComponent();
@@ -32,6 +33,20 @@ namespace AmazFit_Watchface_2
             {
                 AODmode = value;
                 button_Copy_SystemFont.Visible = AODmode;
+            }
+        }
+
+        /// <summary>Отображение возможности выбора единиц измерения</summary>
+        public bool ShowUnit
+        {
+            get
+            {
+                return showUnit;
+            }
+            set
+            {
+                showUnit = value;
+                checkBox_SystemFont_unit.Visible = showUnit;
             }
         }
 
@@ -89,6 +104,49 @@ namespace AmazFit_Watchface_2
                 ValueChanged(this, eventArgs);
             }
         }
+        internal void comboBoxSetColorString(string color)
+        {
+            if (color.Length == 18) color = color.Remove(2, 8);
+            Color old_color = ColorTranslator.FromHtml(color);
+            Color new_color = Color.FromArgb(255, old_color.R, old_color.G, old_color.B);
+            comboBox_SystemFont_color.BackColor = new_color;
+        }
+        internal string comboBoxGetColorString()
+        {
+            Color color = comboBox_SystemFont_color.BackColor;
+            Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+            string colorStr = ColorTranslator.ToHtml(new_color);
+            colorStr = colorStr.Replace("#", "0xFF");
+            return colorStr;
+        }
+        internal Color comboBoxGetColor()
+        {
+            return comboBox_SystemFont_color.BackColor;
+        }
+
+        internal void checkBoxSetUnit(int unit)
+        {
+            switch (unit)
+            {
+                case 1:
+                    checkBox_SystemFont_unit.CheckState = CheckState.Checked;
+                    break;
+                case 2:
+                    checkBox_SystemFont_unit.CheckState = CheckState.Indeterminate;
+                    break;
+                default:
+                    checkBox_SystemFont_unit.CheckState = CheckState.Unchecked;
+                    break;
+            }
+        }
+
+        internal int checkBoxGetUnit()
+        {
+            int value = -1;
+            if (checkBox_SystemFont_unit.CheckState == CheckState.Checked) value = 1;
+            if (checkBox_SystemFont_unit.CheckState == CheckState.Indeterminate) value = 2;
+            return value;
+        }
 
         #region Standard events
 
@@ -101,7 +159,7 @@ namespace AmazFit_Watchface_2
         {
             Control.ControlCollection controlCollection = panel_SystemFont.Controls;
 
-            bool b = checkBox_SystemFont_Use.Checked;
+            bool b = checkBox_Use.Checked;
             for (int i = 1; i < controlCollection.Count - 1; i++)
             {
                 controlCollection[i].Enabled = b;
@@ -148,9 +206,9 @@ namespace AmazFit_Watchface_2
         {
             setValue = true;
 
-            checkBox_SystemFont_Use.Checked = false;
+            checkBox_Use.Checked = false;
             checkBox_SystemFont_unit.Checked = false;
-            checkBox_SystemFont_addZero.Checked = false;
+            checkBox_addZero.Checked = false;
 
             numericUpDown_SystemFontX.Value = 0;
             numericUpDown_SystemFontY.Value = 0;
