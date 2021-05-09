@@ -51,6 +51,7 @@ namespace AmazFit_Watchface_2
             this.checkBox_follow = new System.Windows.Forms.CheckBox();
             this.comboBox_FontRotate_color = new System.Windows.Forms.ComboBox();
             this.checkBox_FontRotate_unit = new System.Windows.Forms.CheckBox();
+            this.checkBox_separator = new System.Windows.Forms.CheckBox();
             this.groupBox_FontRotate_RotateDirection = new System.Windows.Forms.GroupBox();
             this.radioButton_CtrlClockwise = new System.Windows.Forms.RadioButton();
             this.radioButton_Clockwise = new System.Windows.Forms.RadioButton();
@@ -78,76 +79,66 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_X
             // 
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуХToolStripMenuItem,
             this.копироватьToolStripMenuItemX,
             this.вставитьToolStripMenuItemX});
             this.contextMenuStrip_X.Name = "contextMenuStrip_X";
-            this.contextMenuStrip_X.Size = new System.Drawing.Size(204, 82);
             this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // вставитьКоординатуХToolStripMenuItem
             // 
-            this.вставитьКоординатуХToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("вставитьКоординатуХToolStripMenuItem.Image")));
+            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
             this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
-            this.вставитьКоординатуХToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.вставитьКоординатуХToolStripMenuItem.Text = "Вставить координату Х";
             this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItemX
             // 
-            this.копироватьToolStripMenuItemX.Image = ((System.Drawing.Image)(resources.GetObject("копироватьToolStripMenuItemX.Image")));
+            resources.ApplyResources(this.копироватьToolStripMenuItemX, "копироватьToolStripMenuItemX");
             this.копироватьToolStripMenuItemX.Name = "копироватьToolStripMenuItemX";
-            this.копироватьToolStripMenuItemX.Size = new System.Drawing.Size(203, 26);
-            this.копироватьToolStripMenuItemX.Text = "Копировать";
             this.копироватьToolStripMenuItemX.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItemX
             // 
-            this.вставитьToolStripMenuItemX.Image = ((System.Drawing.Image)(resources.GetObject("вставитьToolStripMenuItemX.Image")));
+            resources.ApplyResources(this.вставитьToolStripMenuItemX, "вставитьToolStripMenuItemX");
             this.вставитьToolStripMenuItemX.Name = "вставитьToolStripMenuItemX";
-            this.вставитьToolStripMenuItemX.Size = new System.Drawing.Size(203, 26);
-            this.вставитьToolStripMenuItemX.Text = "Вставить";
             this.вставитьToolStripMenuItemX.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // contextMenuStrip_Y
             // 
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуYToolStripMenuItem,
             this.копироватьToolStripMenuItemY,
             this.вставитьToolStripMenuItemY});
             this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
-            this.contextMenuStrip_Y.Size = new System.Drawing.Size(204, 82);
             this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
             // 
             // вставитьКоординатуYToolStripMenuItem
             // 
-            this.вставитьКоординатуYToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("вставитьКоординатуYToolStripMenuItem.Image")));
+            resources.ApplyResources(this.вставитьКоординатуYToolStripMenuItem, "вставитьКоординатуYToolStripMenuItem");
             this.вставитьКоординатуYToolStripMenuItem.Name = "вставитьКоординатуYToolStripMenuItem";
-            this.вставитьКоординатуYToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.вставитьКоординатуYToolStripMenuItem.Text = "Вставить координату Y";
             this.вставитьКоординатуYToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItemY
             // 
-            this.копироватьToolStripMenuItemY.Image = ((System.Drawing.Image)(resources.GetObject("копироватьToolStripMenuItemY.Image")));
+            resources.ApplyResources(this.копироватьToolStripMenuItemY, "копироватьToolStripMenuItemY");
             this.копироватьToolStripMenuItemY.Name = "копироватьToolStripMenuItemY";
-            this.копироватьToolStripMenuItemY.Size = new System.Drawing.Size(203, 26);
-            this.копироватьToolStripMenuItemY.Text = "Копировать";
             this.копироватьToolStripMenuItemY.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItemY
             // 
-            this.вставитьToolStripMenuItemY.Image = ((System.Drawing.Image)(resources.GetObject("вставитьToolStripMenuItemY.Image")));
+            resources.ApplyResources(this.вставитьToolStripMenuItemY, "вставитьToolStripMenuItemY");
             this.вставитьToolStripMenuItemY.Name = "вставитьToolStripMenuItemY";
-            this.вставитьToolStripMenuItemY.Size = new System.Drawing.Size(203, 26);
-            this.вставитьToolStripMenuItemY.Text = "Вставить";
             this.вставитьToolStripMenuItemY.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // panel_FontRotate
             // 
+            resources.ApplyResources(this.panel_FontRotate, "panel_FontRotate");
+            this.panel_FontRotate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel_FontRotate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_FontRotate.Controls.Add(this.checkBox_Use);
             this.panel_FontRotate.Controls.Add(this.numericUpDown_FontRotateX);
@@ -160,6 +151,7 @@ namespace AmazFit_Watchface_2
             this.panel_FontRotate.Controls.Add(this.checkBox_follow);
             this.panel_FontRotate.Controls.Add(this.comboBox_FontRotate_color);
             this.panel_FontRotate.Controls.Add(this.checkBox_FontRotate_unit);
+            this.panel_FontRotate.Controls.Add(this.checkBox_separator);
             this.panel_FontRotate.Controls.Add(this.groupBox_FontRotate_RotateDirection);
             this.panel_FontRotate.Controls.Add(this.label01);
             this.panel_FontRotate.Controls.Add(this.label02);
@@ -170,30 +162,20 @@ namespace AmazFit_Watchface_2
             this.panel_FontRotate.Controls.Add(this.label07);
             this.panel_FontRotate.Controls.Add(this.label08);
             this.panel_FontRotate.Controls.Add(this.button_Copy_FontRotate);
-            this.panel_FontRotate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_FontRotate.Location = new System.Drawing.Point(0, 23);
             this.panel_FontRotate.Name = "panel_FontRotate";
-            this.panel_FontRotate.Size = new System.Drawing.Size(435, 200);
-            this.panel_FontRotate.TabIndex = 203;
             // 
             // checkBox_Use
             // 
-            this.checkBox_Use.AutoSize = true;
-            this.checkBox_Use.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_Use.Location = new System.Drawing.Point(3, 6);
+            resources.ApplyResources(this.checkBox_Use, "checkBox_Use");
             this.checkBox_Use.Name = "checkBox_Use";
-            this.checkBox_Use.Size = new System.Drawing.Size(99, 17);
-            this.checkBox_Use.TabIndex = 142;
-            this.checkBox_Use.Text = "Использовать";
             this.checkBox_Use.UseVisualStyleBackColor = true;
             this.checkBox_Use.CheckedChanged += new System.EventHandler(this.checkBox_Use_CheckedChanged);
             this.checkBox_Use.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // numericUpDown_FontRotateX
             // 
+            resources.ApplyResources(this.numericUpDown_FontRotateX, "numericUpDown_FontRotateX");
             this.numericUpDown_FontRotateX.ContextMenuStrip = this.contextMenuStrip_X;
-            this.numericUpDown_FontRotateX.Enabled = false;
-            this.numericUpDown_FontRotateX.Location = new System.Drawing.Point(20, 58);
             this.numericUpDown_FontRotateX.Maximum = new decimal(new int[] {
             999,
             0,
@@ -205,16 +187,13 @@ namespace AmazFit_Watchface_2
             0,
             -2147483648});
             this.numericUpDown_FontRotateX.Name = "numericUpDown_FontRotateX";
-            this.numericUpDown_FontRotateX.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown_FontRotateX.TabIndex = 128;
             this.numericUpDown_FontRotateX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_FontRotateX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_picturesX_MouseDoubleClick);
             // 
             // numericUpDown_FontRotateY
             // 
+            resources.ApplyResources(this.numericUpDown_FontRotateY, "numericUpDown_FontRotateY");
             this.numericUpDown_FontRotateY.ContextMenuStrip = this.contextMenuStrip_Y;
-            this.numericUpDown_FontRotateY.Enabled = false;
-            this.numericUpDown_FontRotateY.Location = new System.Drawing.Point(93, 58);
             this.numericUpDown_FontRotateY.Maximum = new decimal(new int[] {
             999,
             0,
@@ -226,15 +205,12 @@ namespace AmazFit_Watchface_2
             0,
             -2147483648});
             this.numericUpDown_FontRotateY.Name = "numericUpDown_FontRotateY";
-            this.numericUpDown_FontRotateY.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown_FontRotateY.TabIndex = 129;
             this.numericUpDown_FontRotateY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_FontRotateY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_picturesY_MouseDoubleClick);
             // 
             // numericUpDown_FontRotate_size
             // 
-            this.numericUpDown_FontRotate_size.Enabled = false;
-            this.numericUpDown_FontRotate_size.Location = new System.Drawing.Point(175, 58);
+            resources.ApplyResources(this.numericUpDown_FontRotate_size, "numericUpDown_FontRotate_size");
             this.numericUpDown_FontRotate_size.Maximum = new decimal(new int[] {
             999,
             0,
@@ -246,8 +222,6 @@ namespace AmazFit_Watchface_2
             0,
             -2147483648});
             this.numericUpDown_FontRotate_size.Name = "numericUpDown_FontRotate_size";
-            this.numericUpDown_FontRotate_size.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown_FontRotate_size.TabIndex = 154;
             this.numericUpDown_FontRotate_size.Value = new decimal(new int[] {
             20,
             0,
@@ -257,8 +231,7 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_FontRotate_spacing
             // 
-            this.numericUpDown_FontRotate_spacing.Enabled = false;
-            this.numericUpDown_FontRotate_spacing.Location = new System.Drawing.Point(347, 58);
+            resources.ApplyResources(this.numericUpDown_FontRotate_spacing, "numericUpDown_FontRotate_spacing");
             this.numericUpDown_FontRotate_spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -270,14 +243,11 @@ namespace AmazFit_Watchface_2
             0,
             -2147483648});
             this.numericUpDown_FontRotate_spacing.Name = "numericUpDown_FontRotate_spacing";
-            this.numericUpDown_FontRotate_spacing.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown_FontRotate_spacing.TabIndex = 157;
             this.numericUpDown_FontRotate_spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_FontRotate_angle
             // 
-            this.numericUpDown_FontRotate_angle.Enabled = false;
-            this.numericUpDown_FontRotate_angle.Location = new System.Drawing.Point(261, 58);
+            resources.ApplyResources(this.numericUpDown_FontRotate_angle, "numericUpDown_FontRotate_angle");
             this.numericUpDown_FontRotate_angle.Maximum = new decimal(new int[] {
             999,
             0,
@@ -289,14 +259,11 @@ namespace AmazFit_Watchface_2
             0,
             -2147483648});
             this.numericUpDown_FontRotate_angle.Name = "numericUpDown_FontRotate_angle";
-            this.numericUpDown_FontRotate_angle.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown_FontRotate_angle.TabIndex = 145;
             this.numericUpDown_FontRotate_angle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_FontRotate_radius
             // 
-            this.numericUpDown_FontRotate_radius.Enabled = false;
-            this.numericUpDown_FontRotate_radius.Location = new System.Drawing.Point(20, 122);
+            resources.ApplyResources(this.numericUpDown_FontRotate_radius, "numericUpDown_FontRotate_radius");
             this.numericUpDown_FontRotate_radius.Maximum = new decimal(new int[] {
             999,
             0,
@@ -308,226 +275,138 @@ namespace AmazFit_Watchface_2
             0,
             -2147483648});
             this.numericUpDown_FontRotate_radius.Name = "numericUpDown_FontRotate_radius";
-            this.numericUpDown_FontRotate_radius.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown_FontRotate_radius.TabIndex = 163;
             this.numericUpDown_FontRotate_radius.Value = new decimal(new int[] {
             20,
             0,
             0,
             0});
+            this.numericUpDown_FontRotate_radius.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_addZero
             // 
-            this.checkBox_addZero.Enabled = false;
-            this.checkBox_addZero.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_addZero.Location = new System.Drawing.Point(182, 169);
+            resources.ApplyResources(this.checkBox_addZero, "checkBox_addZero");
             this.checkBox_addZero.Name = "checkBox_addZero";
-            this.checkBox_addZero.Size = new System.Drawing.Size(163, 30);
-            this.checkBox_addZero.TabIndex = 143;
-            this.checkBox_addZero.Text = "Добавлять нули в начале";
             this.checkBox_addZero.UseVisualStyleBackColor = true;
             this.checkBox_addZero.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // checkBox_follow
             // 
-            this.checkBox_follow.Enabled = false;
-            this.checkBox_follow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_follow.Location = new System.Drawing.Point(182, 142);
+            resources.ApplyResources(this.checkBox_follow, "checkBox_follow");
             this.checkBox_follow.Name = "checkBox_follow";
-            this.checkBox_follow.Size = new System.Drawing.Size(125, 30);
-            this.checkBox_follow.TabIndex = 164;
-            this.checkBox_follow.Text = "Следовать за";
             this.checkBox_follow.UseVisualStyleBackColor = true;
+            this.checkBox_follow.CheckedChanged += new System.EventHandler(this.checkBox_follow_CheckedChanged);
+            this.checkBox_follow.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // comboBox_FontRotate_color
             // 
+            resources.ApplyResources(this.comboBox_FontRotate_color, "comboBox_FontRotate_color");
             this.comboBox_FontRotate_color.BackColor = System.Drawing.Color.DarkOrange;
             this.comboBox_FontRotate_color.DropDownHeight = 1;
-            this.comboBox_FontRotate_color.Enabled = false;
             this.comboBox_FontRotate_color.FormattingEnabled = true;
-            this.comboBox_FontRotate_color.IntegralHeight = false;
-            this.comboBox_FontRotate_color.Location = new System.Drawing.Point(88, 121);
             this.comboBox_FontRotate_color.Name = "comboBox_FontRotate_color";
-            this.comboBox_FontRotate_color.Size = new System.Drawing.Size(45, 21);
-            this.comboBox_FontRotate_color.TabIndex = 152;
             this.comboBox_FontRotate_color.Click += new System.EventHandler(this.comboBox_color_Click);
             this.comboBox_FontRotate_color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // checkBox_FontRotate_unit
             // 
-            this.checkBox_FontRotate_unit.Enabled = false;
-            this.checkBox_FontRotate_unit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox_FontRotate_unit.Location = new System.Drawing.Point(20, 170);
+            resources.ApplyResources(this.checkBox_FontRotate_unit, "checkBox_FontRotate_unit");
             this.checkBox_FontRotate_unit.Name = "checkBox_FontRotate_unit";
-            this.checkBox_FontRotate_unit.Size = new System.Drawing.Size(163, 30);
-            this.checkBox_FontRotate_unit.TabIndex = 151;
-            this.checkBox_FontRotate_unit.Text = "Единицы измерения";
             this.checkBox_FontRotate_unit.ThreeState = true;
             this.checkBox_FontRotate_unit.UseVisualStyleBackColor = true;
             this.checkBox_FontRotate_unit.Click += new System.EventHandler(this.checkBox_Click);
             // 
+            // checkBox_separator
+            // 
+            resources.ApplyResources(this.checkBox_separator, "checkBox_separator");
+            this.checkBox_separator.Name = "checkBox_separator";
+            this.checkBox_separator.UseVisualStyleBackColor = true;
+            this.checkBox_separator.Click += new System.EventHandler(this.checkBox_Click);
+            // 
             // groupBox_FontRotate_RotateDirection
             // 
+            resources.ApplyResources(this.groupBox_FontRotate_RotateDirection, "groupBox_FontRotate_RotateDirection");
             this.groupBox_FontRotate_RotateDirection.Controls.Add(this.radioButton_CtrlClockwise);
             this.groupBox_FontRotate_RotateDirection.Controls.Add(this.radioButton_Clockwise);
-            this.groupBox_FontRotate_RotateDirection.Enabled = false;
-            this.groupBox_FontRotate_RotateDirection.Location = new System.Drawing.Point(175, 88);
             this.groupBox_FontRotate_RotateDirection.Name = "groupBox_FontRotate_RotateDirection";
-            this.groupBox_FontRotate_RotateDirection.Size = new System.Drawing.Size(249, 54);
-            this.groupBox_FontRotate_RotateDirection.TabIndex = 161;
             this.groupBox_FontRotate_RotateDirection.TabStop = false;
-            this.groupBox_FontRotate_RotateDirection.Text = "Направление текста";
             this.groupBox_FontRotate_RotateDirection.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
             // 
             // radioButton_CtrlClockwise
             // 
-            this.radioButton_CtrlClockwise.AutoSize = true;
-            this.radioButton_CtrlClockwise.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton_CtrlClockwise.Location = new System.Drawing.Point(121, 31);
+            resources.ApplyResources(this.radioButton_CtrlClockwise, "radioButton_CtrlClockwise");
             this.radioButton_CtrlClockwise.Name = "radioButton_CtrlClockwise";
-            this.radioButton_CtrlClockwise.Size = new System.Drawing.Size(106, 17);
-            this.radioButton_CtrlClockwise.TabIndex = 1;
-            this.radioButton_CtrlClockwise.Text = "Против часовой";
             this.radioButton_CtrlClockwise.UseVisualStyleBackColor = true;
             // 
             // radioButton_Clockwise
             // 
-            this.radioButton_Clockwise.AutoSize = true;
+            resources.ApplyResources(this.radioButton_Clockwise, "radioButton_Clockwise");
             this.radioButton_Clockwise.Checked = true;
-            this.radioButton_Clockwise.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton_Clockwise.Location = new System.Drawing.Point(7, 31);
             this.radioButton_Clockwise.Name = "radioButton_Clockwise";
-            this.radioButton_Clockwise.Size = new System.Drawing.Size(83, 17);
-            this.radioButton_Clockwise.TabIndex = 0;
             this.radioButton_Clockwise.TabStop = true;
-            this.radioButton_Clockwise.Text = "По часовой";
             this.radioButton_Clockwise.UseVisualStyleBackColor = true;
+            this.radioButton_Clockwise.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // label01
             // 
-            this.label01.AutoSize = true;
-            this.label01.Enabled = false;
-            this.label01.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label01.Location = new System.Drawing.Point(3, 41);
-            this.label01.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.label01, "label01");
             this.label01.Name = "label01";
-            this.label01.Size = new System.Drawing.Size(69, 13);
-            this.label01.TabIndex = 144;
-            this.label01.Text = "Координаты";
             // 
             // label02
             // 
-            this.label02.AutoSize = true;
-            this.label02.Enabled = false;
-            this.label02.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label02.Location = new System.Drawing.Point(172, 41);
-            this.label02.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.label02, "label02");
             this.label02.Name = "label02";
-            this.label02.Size = new System.Drawing.Size(46, 13);
-            this.label02.TabIndex = 153;
-            this.label02.Text = "Размер";
             // 
             // label03
             // 
-            this.label03.AutoSize = true;
-            this.label03.Enabled = false;
-            this.label03.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label03.Location = new System.Drawing.Point(258, 41);
-            this.label03.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.label03, "label03");
             this.label03.Name = "label03";
-            this.label03.Size = new System.Drawing.Size(32, 13);
-            this.label03.TabIndex = 136;
-            this.label03.Text = "Угол";
             // 
             // label04
             // 
-            this.label04.AutoSize = true;
-            this.label04.Enabled = false;
-            this.label04.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label04.Location = new System.Drawing.Point(344, 41);
-            this.label04.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.label04, "label04");
             this.label04.Name = "label04";
-            this.label04.Size = new System.Drawing.Size(50, 13);
-            this.label04.TabIndex = 156;
-            this.label04.Text = "Отступы";
             // 
             // label05
             // 
-            this.label05.AutoSize = true;
-            this.label05.Enabled = false;
-            this.label05.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label05.Location = new System.Drawing.Point(3, 60);
+            resources.ApplyResources(this.label05, "label05");
             this.label05.Name = "label05";
-            this.label05.Size = new System.Drawing.Size(17, 13);
-            this.label05.TabIndex = 126;
-            this.label05.Text = "X:";
             // 
             // label06
             // 
-            this.label06.AutoSize = true;
-            this.label06.Enabled = false;
-            this.label06.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label06.Location = new System.Drawing.Point(76, 60);
+            resources.ApplyResources(this.label06, "label06");
             this.label06.Name = "label06";
-            this.label06.Size = new System.Drawing.Size(17, 13);
-            this.label06.TabIndex = 127;
-            this.label06.Text = "Y:";
             // 
             // label07
             // 
-            this.label07.Enabled = false;
-            this.label07.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label07.Location = new System.Drawing.Point(75, 88);
-            this.label07.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.label07, "label07");
             this.label07.Name = "label07";
-            this.label07.Size = new System.Drawing.Size(70, 30);
-            this.label07.TabIndex = 146;
-            this.label07.Text = "Цвет";
-            this.label07.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label08
             // 
-            this.label08.AutoSize = true;
-            this.label08.Enabled = false;
-            this.label08.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label08.Location = new System.Drawing.Point(17, 105);
-            this.label08.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.label08, "label08");
             this.label08.Name = "label08";
-            this.label08.Size = new System.Drawing.Size(43, 13);
-            this.label08.TabIndex = 162;
-            this.label08.Text = "Радиус";
             // 
             // button_Copy_FontRotate
             // 
-            this.button_Copy_FontRotate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_Copy_FontRotate.Location = new System.Drawing.Point(120, 3);
+            resources.ApplyResources(this.button_Copy_FontRotate, "button_Copy_FontRotate");
             this.button_Copy_FontRotate.Name = "button_Copy_FontRotate";
-            this.button_Copy_FontRotate.Size = new System.Drawing.Size(195, 23);
-            this.button_Copy_FontRotate.TabIndex = 150;
-            this.button_Copy_FontRotate.Text = "Скопировать с основного экрана";
             this.button_Copy_FontRotate.UseVisualStyleBackColor = true;
             this.button_Copy_FontRotate.Click += new System.EventHandler(this.button_Copy_FontRotate_Click);
             // 
             // button_FontRotate
             // 
-            this.button_FontRotate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_FontRotate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_FontRotate.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.button_FontRotate, "button_FontRotate");
             this.button_FontRotate.Name = "button_FontRotate";
-            this.button_FontRotate.Size = new System.Drawing.Size(435, 23);
-            this.button_FontRotate.TabIndex = 202;
-            this.button_FontRotate.Text = "Системный шрифт (по окружности)";
             this.button_FontRotate.UseVisualStyleBackColor = true;
             this.button_FontRotate.Click += new System.EventHandler(this.button_Click);
             // 
             // UserControl_FontRotate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel_FontRotate);
             this.Controls.Add(this.button_FontRotate);
             this.Name = "UserControl_FontRotate";
-            this.Size = new System.Drawing.Size(435, 260);
             this.contextMenuStrip_X.ResumeLayout(false);
             this.contextMenuStrip_Y.ResumeLayout(false);
             this.panel_FontRotate.ResumeLayout(false);
@@ -579,5 +458,6 @@ namespace AmazFit_Watchface_2
         internal System.Windows.Forms.NumericUpDown numericUpDown_FontRotate_radius;
         private System.Windows.Forms.Label label08;
         public System.Windows.Forms.CheckBox checkBox_follow;
+        public System.Windows.Forms.CheckBox checkBox_separator;
     }
 }

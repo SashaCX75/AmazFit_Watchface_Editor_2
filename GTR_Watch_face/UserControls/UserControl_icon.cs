@@ -15,6 +15,7 @@ namespace AmazFit_Watchface_2
     {
         private bool setValue;
         private bool AODmode;
+        private bool Image2mode;
 
         /// <summary>Отображение кнопки копирования значений для AOD</summary>
         public bool AOD
@@ -27,6 +28,21 @@ namespace AmazFit_Watchface_2
             {
                 AODmode = value;
                 button_Copy_icon.Visible = AODmode;
+            }
+        }
+
+        /// <summary>Отображение второй иконки</summary>
+        public bool Image2
+        {
+            get
+            {
+                return Image2mode;
+            }
+            set
+            {
+                Image2mode = value;
+                comboBox_icon_image2.Visible = Image2mode;
+                label06.Visible = Image2mode;
             }
         }
 
@@ -104,6 +120,11 @@ namespace AmazFit_Watchface_2
             comboBox_icon_image.Text = value.ToString();
             if (comboBox_icon_image.SelectedIndex < 0) comboBox_icon_image.Text = "";
         }
+        internal void comboBoxSetImage2(long value)
+        {
+            comboBox_icon_image2.Text = value.ToString();
+            if (comboBox_icon_image2.SelectedIndex < 0) comboBox_icon_image2.Text = "";
+        }
 
         /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImage()
@@ -113,11 +134,24 @@ namespace AmazFit_Watchface_2
             Int32.TryParse(comboBox_icon_image.Text, out value);
             return value;
         }
+        internal int comboBoxGetImage2()
+        {
+            if (comboBox_icon_image2.SelectedIndex < 0) return -1;
+            int value = -1;
+            Int32.TryParse(comboBox_icon_image2.Text, out value);
+            return value;
+        }
 
         /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
         internal int comboBoxGetSelectedIndexImage()
         {
             return comboBox_icon_image.SelectedIndex;
+        }
+
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexImage2()
+        {
+            return comboBox_icon_image2.SelectedIndex;
         }
 
         #region Standard events
@@ -206,6 +240,7 @@ namespace AmazFit_Watchface_2
         internal void ComboBoxAddItems(List<string> ListImages)
         {
             comboBox_icon_image.Items.AddRange(ListImages.ToArray());
+            comboBox_icon_image2.Items.AddRange(ListImages.ToArray());
         }
 
         /// <summary>Очищает выпадающие списки с картинками, сбрасывает данные на значения по умолчанию</summary>
@@ -217,6 +252,8 @@ namespace AmazFit_Watchface_2
 
             comboBox_icon_image.Items.Clear();
             comboBox_icon_image.Text = "";
+            comboBox_icon_image2.Items.Clear();
+            comboBox_icon_image2.Text = "";
 
             numericUpDown_iconX.Value = 0;
             numericUpDown_iconY.Value = 0;

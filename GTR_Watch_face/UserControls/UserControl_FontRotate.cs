@@ -19,12 +19,13 @@ namespace AmazFit_Watchface_2
         private bool showUnit;
         private bool PaddingZero;
         private bool Follow_mode;
+        private bool Separator_mode;
         public UserControl_FontRotate()
         {
             InitializeComponent();
         }
 
-        /// <summary>Отображение кнопки копирования значений для AOD</summary>
+        [Description("Отображение кнопки копирования значений для AOD")]
         public bool AOD
         {
             get
@@ -38,7 +39,7 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        /// <summary>Отображение возможности выбора единиц измерения</summary>
+        [Description("Отображение возможности выбора единиц измерения")]
         public bool ShowUnit
         {
             get
@@ -52,7 +53,7 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        /// <summary>Отображение чекбокса добавления нулей в начале</summary>
+        [Description("Отображение чекбокса добавления нулей в начале")]
         public bool Padding_zero
         {
             get
@@ -66,7 +67,21 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        /// <summary>Отображение чекбокса следовать за</summary>
+        [Description("Отображение чекбокса разделитель")]
+        public bool Separator
+        {
+            get
+            {
+                return Separator_mode;
+            }
+            set
+            {
+                Separator_mode = value;
+                checkBox_separator.Visible = Separator_mode;
+            }
+        }
+
+        [Description("Отображение чекбокса \"Следовать за...\"")]
         public bool Follow
         {
             get
@@ -77,6 +92,20 @@ namespace AmazFit_Watchface_2
             {
                 Follow_mode = value;
                 checkBox_follow.Visible = Follow_mode;
+            }
+        }
+
+        [Description("Устанавливает надпись \"Следовать за...\"")]
+        [Localizable(true)]
+        public string FollowText
+        {
+            get
+            {
+                return checkBox_follow.Text;
+            }
+            set
+            {
+                checkBox_follow.Text = value;
             }
         }
 
@@ -92,7 +121,8 @@ namespace AmazFit_Watchface_2
         public event AOD_CopyHandler AOD_Copy_FontRotate;
         public delegate void AOD_CopyHandler(object sender, EventArgs eventArgs);
 
-        /// <summary>Возвращает true если панель свернута</summary>
+        [Description("Возвращает true если панель свернута")]
+        //[Description("The image associated with the control"), Category("Appearance")]
         public bool Collapsed
         {
             get
@@ -127,6 +157,15 @@ namespace AmazFit_Watchface_2
         }
 
         private void checkBox_Click(object sender, EventArgs e)
+        {
+            if (ValueChanged != null && !setValue)
+            {
+                EventArgs eventArgs = new EventArgs();
+                ValueChanged(this, eventArgs);
+            }
+        }
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (ValueChanged != null && !setValue)
             {
@@ -175,6 +214,25 @@ namespace AmazFit_Watchface_2
             int value = -1;
             if (checkBox_FontRotate_unit.CheckState == CheckState.Checked) value = 1;
             if (checkBox_FontRotate_unit.CheckState == CheckState.Indeterminate) value = 2;
+            return value;
+        }
+
+        internal void radioButtonSetRotateDirection(int direction)
+        {
+            if (direction == 0)
+            {
+                radioButton_Clockwise.Checked = true;
+            }
+            else
+            {
+                radioButton_CtrlClockwise.Checked = true;
+            }
+        }
+
+        internal int radioButtonGetRotateDirection()
+        {
+            int value = 0;
+            if (radioButton_CtrlClockwise.Checked) value = 1;
             return value;
         }
 
@@ -284,6 +342,7 @@ namespace AmazFit_Watchface_2
 
             numericUpDown_FontRotate_size.Value = 20;
             numericUpDown_FontRotate_angle.Value = 0;
+            numericUpDown_FontRotate_radius.Value = 20;
             numericUpDown_FontRotate_spacing.Value = 0;
 
             radioButton_Clockwise.Checked = true;
@@ -452,5 +511,30 @@ namespace AmazFit_Watchface_2
         }
 
         #endregion
+
+        private void checkBox_follow_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = !checkBox_follow.Checked;
+            label01.Enabled = b;
+            label02.Enabled = b;
+            label03.Enabled = b;
+            label04.Enabled = b;
+            label05.Enabled = b;
+            label06.Enabled = b;
+            label07.Enabled = b;
+            label08.Enabled = b;
+
+            numericUpDown_FontRotateX.Enabled = b;
+            numericUpDown_FontRotateY.Enabled = b;
+
+            numericUpDown_FontRotate_size.Enabled = b;
+            numericUpDown_FontRotate_angle.Enabled = b;
+            numericUpDown_FontRotate_spacing.Enabled = b;
+
+            numericUpDown_FontRotate_radius.Enabled = b;
+            comboBox_FontRotate_color.Enabled = b;
+
+            groupBox_FontRotate_RotateDirection.Enabled = b;
+        }
     }
 }

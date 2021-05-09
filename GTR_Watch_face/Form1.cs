@@ -161,7 +161,7 @@ namespace AmazFit_Watchface_2
 
             //tabControl_SystemWeather.TabPages[4].Parent = null;
             tabControl_SystemActivity.TabPages["tabPage_Stress"].Parent = null;
-            tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
+            //tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_AirQuality"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_Altitude"].Parent = null;
@@ -169,7 +169,7 @@ namespace AmazFit_Watchface_2
 
             //tabControl_SystemWeather_AOD.TabPages[4].Parent = null;
             tabControl_SystemActivity_AOD.TabPages["tabPage_Stress_AOD"].Parent = null;
-            tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
+            //tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_AirQuality_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_Altitude_AOD"].Parent = null;
@@ -7561,7 +7561,7 @@ namespace AmazFit_Watchface_2
             Copy_pictures_AOD(userControl_pictures_weather, userControl_pictures_weather_AOD);
             Copy_text_AOD(userControl_text_weather_Current, userControl_text_weather_Current_AOD);
             Copy_text_AOD(userControl_text_weather_Min, userControl_text_weather_Min_AOD);
-            Copy_text_AOD(userControl_text_weather_Max_AOD, userControl_text_weather_Max_AOD);
+            Copy_text_AOD(userControl_text_weather_Max, userControl_text_weather_Max_AOD);
             Copy_hand_AOD(userControl_hand_Weather, userControl_hand_Weather_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Weather, userControl_scaleCircle_Weather_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Weather, userControl_scaleLinear_Weather_AOD);
@@ -8273,7 +8273,7 @@ namespace AmazFit_Watchface_2
         private void userControl_text_WeatherMax_AOD_Copy(object sender, EventArgs eventArgs)
         {
             PreviewView = false;
-            Copy_text_AOD(userControl_text_weather_Max_AOD, userControl_text_weather_Max_AOD);
+            Copy_text_AOD(userControl_text_weather_Max, userControl_text_weather_Max_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8668,6 +8668,12 @@ namespace AmazFit_Watchface_2
             PreviewView = false;
             Copy_scaleLinear_AOD(userControl_scaleLinear_FatBurning, userControl_scaleLinear_FatBurning_AOD);
             PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void radioButton_ActivityGoal_CheckedChanged(object sender, EventArgs e)
+        {
             JSON_write();
             PreviewImage();
         }

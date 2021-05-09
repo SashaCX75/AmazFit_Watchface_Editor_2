@@ -1464,6 +1464,24 @@
   <data name="tabPage_Date.Text" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="userControl_SystemFont_Group_Steps.FollowRotateText" xml:space="preserve">
+    <value>Follow the steps</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.FollowText" xml:space="preserve">
+    <value>Follow the steps</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (goal of steps)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.SystemFontText" xml:space="preserve">
+    <value>System font rotated (goal of steps)</value>
+  </data>
+  <data name="userControl_text_goal_Steps.ButtonText" xml:space="preserve">
+    <value>Numerical values (goal of steps)</value>
+  </data>
+  <data name="userControl_text_goal_Steps.FollowText" xml:space="preserve">
+    <value>Follow the steps</value>
+  </data>
   <data name="tabPage_Steps.Text" xml:space="preserve">
     <value>Steps</value>
   </data>
@@ -1476,11 +1494,87 @@
   <data name="tabPage_Distance.Text" xml:space="preserve">
     <value>Distance</value>
   </data>
+  <data name="userControl_SystemFont_Group_StandUp.FollowRotateText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (number of StandUp)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.SystemFontText" xml:space="preserve">
+    <value>System font rotated (number of StandUp)</value>
+  </data>
+  <data name="userControl_text_goal_StandUp.ButtonText" xml:space="preserve">
+    <value>Numerical values (number of StandUp)</value>
+  </data>
+  <data name="userControl_text_goal_StandUp.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
   <data name="tabPage_StandUp.Text" xml:space="preserve">
     <value>Stand up</value>
   </data>
+  <data name="tabPage_Stress.Text" xml:space="preserve">
+    <value>Stress</value>
+  </data>
+  <data name="label_ActivityGoalHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 13</value>
+  </data>
+  <data name="label_ActivityGoalHelp.Text" xml:space="preserve">
+    <value>* Displays the steps or calories depending on the watch setting.</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Calories.Text" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radioButton_ActivityGoal_Steps.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 17</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.Text" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="groupBox_ActivityGoal.Text" xml:space="preserve">
+    <value>* Displays the steps or calories depending on the watch setting.</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.FollowRotateText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (activity goal)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.SystemFontText" xml:space="preserve">
+    <value>System font rotated (activity goal)</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.ButtonText" xml:space="preserve">
+    <value>Numerical values (activity goal)</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
   <data name="tabPage_ActivityGoal.Text" xml:space="preserve">
     <value>Activity goal</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.FollowRotateText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning.ButtonText" xml:space="preserve">
+    <value>Numerical values (goal of fat burning)</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
   </data>
   <data name="tabPage_FatBurning.Text" xml:space="preserve">
     <value>Fat-burning</value>
@@ -1619,7 +1713,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAbgBBAG4AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAegBBAHoAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -2664,6 +2758,18 @@
   <data name="tabPage_StandUp_AOD.Text" xml:space="preserve">
     <value>Stand up</value>
   </data>
+  <data name="tabPage_Stress_AOD.Text" xml:space="preserve">
+    <value>Stress</value>
+  </data>
+  <data name="label_ActivityGoalHelp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 13</value>
+  </data>
+  <data name="label_ActivityGoalHelp_AOD.Text" xml:space="preserve">
+    <value>* Displays the steps or calories depending on the watch setting.</value>
+  </data>
+  <data name="tabPage_ActivityGoal_AOD.Text" xml:space="preserve">
+    <value>Activity goal</value>
+  </data>
   <data name="tabPage_FatBurning_AOD.Text" xml:space="preserve">
     <value>Fat-burning</value>
   </data>
@@ -2788,7 +2894,7 @@
     <value>Converting</value>
   </data>
   <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 213</value>
+    <value>508, 285</value>
   </data>
   <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 13</value>

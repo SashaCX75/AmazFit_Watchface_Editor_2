@@ -124,6 +124,27 @@
   <data name="checkBox_icon_Use.Text" xml:space="preserve">
     <value>Use</value>
   </data>
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 82</value>
+  </data>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 82</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="label06.Text" xml:space="preserve">
+    <value>Image 2</value>
+  </data>
+  <data name="button_Copy_icon.Text" xml:space="preserve">
+    <value>Copy from main screen</value>
+  </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -189,9 +210,6 @@
   <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 82</value>
-  </data>
   <data name="вставитьКоординатуYToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -256,21 +274,6 @@
   </data>
   <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
     <value>Paste</value>
-  </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 82</value>
-  </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>Image</value>
-  </data>
-  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
-  </data>
-  <data name="label02.Text" xml:space="preserve">
-    <value>Coordinates</value>
-  </data>
-  <data name="button_Copy_icon.Text" xml:space="preserve">
-    <value>Copy from main screen</value>
   </data>
   <data name="button_icon.Text" xml:space="preserve">
     <value>Icon</value>
