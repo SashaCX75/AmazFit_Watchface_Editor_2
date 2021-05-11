@@ -284,6 +284,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.zh.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.en.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
@@ -345,6 +346,10 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UserControl_FontRotate.en.resx">
       <DependentUpon>UserControl_FontRotate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_FontRotate.zh.resx">
+      <DependentUpon>UserControl_FontRotate.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_FontRotate_weather.resx">
       <DependentUpon>UserControl_FontRotate_weather.cs</DependentUpon>
@@ -479,8 +484,16 @@
       <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont.zh.resx">
+      <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.en.resx">
       <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.zh.resx">
+      <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text.en.resx">
       <DependentUpon>UserControl_text.cs</DependentUpon>
