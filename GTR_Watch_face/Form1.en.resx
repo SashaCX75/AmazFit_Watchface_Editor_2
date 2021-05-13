@@ -1518,21 +1518,11 @@
   <data name="tabPage_Stress.Text" xml:space="preserve">
     <value>Stress</value>
   </data>
-  <data name="label_ActivityGoalHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 13</value>
-  </data>
-  <data name="label_ActivityGoalHelp.Text" xml:space="preserve">
-    <value>* Displays the steps or calories depending on the watch setting.</value>
-  </data>
   <data name="radioButton_ActivityGoal_Calories.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 17</value>
   </data>
   <data name="radioButton_ActivityGoal_Calories.Text" xml:space="preserve">
     <value>Calories</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="radioButton_ActivityGoal_Steps.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="radioButton_ActivityGoal_Steps.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 17</value>
@@ -1582,6 +1572,18 @@
   <data name="tabPage_Activity.Text" xml:space="preserve">
     <value>Activity</value>
   </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowRotatText_Max" xml:space="preserve">
+    <value>Follow the minimum temperature</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowRotatText_Min" xml:space="preserve">
+    <value>Follow the current temperature</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowText_Max" xml:space="preserve">
+    <value>Follow the minimum temperature</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowText_Min" xml:space="preserve">
+    <value>Follow the current temperature</value>
+  </data>
   <data name="userControl_text_weather_Max.ButtonText" xml:space="preserve">
     <value>Maximum temperature</value>
   </data>
@@ -1605,6 +1607,37 @@
   </data>
   <data name="tabPage_Humidity.Text" xml:space="preserve">
     <value>Humidity</value>
+  </data>
+  <data name="label_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 32</value>
+  </data>
+  <data name="label_Sunrise.Text" xml:space="preserve">
+    <value>* Data for sunrise and sunset varies by city.
+The data is not displayed correctly for all cities.</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowRotatText_Max" xml:space="preserve">
+    <value>Follow the sunrise</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowRotatText_Min" xml:space="preserve">
+    <value>Follow the sunrise / sunset</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowText_Max" xml:space="preserve">
+    <value>Follow the sunrise</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowText_Min" xml:space="preserve">
+    <value>Follow the sunrise / sunset</value>
+  </data>
+  <data name="userControl_text_Sunset.ButtonText" xml:space="preserve">
+    <value>Sunset</value>
+  </data>
+  <data name="userControl_text_Sunset.FollowText" xml:space="preserve">
+    <value>Follow the sunrise</value>
+  </data>
+  <data name="userControl_text_Sunrise.ButtonText" xml:space="preserve">
+    <value>Sunrise</value>
+  </data>
+  <data name="userControl_text_SunriseSunset.ButtonText" xml:space="preserve">
+    <value>Closest sunrise / sunset</value>
   </data>
   <data name="tabPage_Sunrise.Text" xml:space="preserve">
     <value>Sunrise</value>
@@ -1713,7 +1746,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAegBBAHoAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAARABBQEQAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA

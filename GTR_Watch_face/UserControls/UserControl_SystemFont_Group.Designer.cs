@@ -68,6 +68,7 @@ namespace AmazFit_Watchface_2
             this.userControl_FontRotate_goal.Separator = true;
             this.userControl_FontRotate_goal.ShowUnit = true;
             this.userControl_FontRotate_goal.ValueChanged += new AmazFit_Watchface_2.UserControl_FontRotate.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_FontRotate_goal.AOD_Copy_FontRotate += new AmazFit_Watchface_2.UserControl_FontRotate.AOD_CopyHandler(this.userControl_Copy_SystemFont);
             // 
             // userControl_FontRotate
             // 
@@ -80,6 +81,7 @@ namespace AmazFit_Watchface_2
             this.userControl_FontRotate.Separator = true;
             this.userControl_FontRotate.ShowUnit = true;
             this.userControl_FontRotate.ValueChanged += new AmazFit_Watchface_2.UserControl_FontRotate.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_FontRotate.AOD_Copy_FontRotate += new AmazFit_Watchface_2.UserControl_FontRotate.AOD_CopyHandler(this.userControl_Copy_SystemFont);
             // 
             // userControl_SystemFont_goal
             // 
@@ -92,6 +94,7 @@ namespace AmazFit_Watchface_2
             this.userControl_SystemFont_goal.Separator = true;
             this.userControl_SystemFont_goal.ShowUnit = true;
             this.userControl_SystemFont_goal.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_SystemFont_goal.AOD_Copy_SystemFont += new AmazFit_Watchface_2.UserControl_SystemFont.AOD_CopyHandler(this.userControl_Copy_SystemFont);
             // 
             // userControl_SystemFont
             // 
@@ -104,6 +107,7 @@ namespace AmazFit_Watchface_2
             this.userControl_SystemFont.Separator = true;
             this.userControl_SystemFont.ShowUnit = true;
             this.userControl_SystemFont.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont.ValueChangedHandler(this.userControl_ValueChanged);
+            this.userControl_SystemFont.AOD_Copy_SystemFont += new AmazFit_Watchface_2.UserControl_SystemFont.AOD_CopyHandler(this.userControl_Copy_SystemFont);
             // 
             // UserControl_SystemFont_Group
             // 

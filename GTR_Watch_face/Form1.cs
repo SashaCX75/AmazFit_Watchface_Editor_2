@@ -154,7 +154,7 @@ namespace AmazFit_Watchface_2
             tabControl1.TabPages[2].Parent = null;
 #if DEBUG
             tabControl1.SelectTab(1);
-            tabControl_EditParameters.SelectTab(3);
+            tabControl_EditParameters.SelectTab(4);
 #endif
 
 #if !DEBUG
@@ -163,7 +163,7 @@ namespace AmazFit_Watchface_2
             tabControl_SystemActivity.TabPages["tabPage_Stress"].Parent = null;
             //tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_AirQuality"].Parent = null;
-            tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
+            //tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_Altitude"].Parent = null;
 
 
@@ -171,7 +171,7 @@ namespace AmazFit_Watchface_2
             tabControl_SystemActivity_AOD.TabPages["tabPage_Stress_AOD"].Parent = null;
             //tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_AirQuality_AOD"].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
+            //tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_Altitude_AOD"].Parent = null;
 
 #endif

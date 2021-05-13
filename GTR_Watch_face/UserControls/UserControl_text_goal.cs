@@ -15,7 +15,7 @@ namespace AmazFit_Watchface_2
             InitializeComponent();
         }
 
-        /// <summary>Устанавливает надпись на кнопке</summary>
+        [Description("Устанавливает надпись на кнопке")]
         [Localizable(true)]
         public string ButtonText
         {
@@ -26,6 +26,20 @@ namespace AmazFit_Watchface_2
             set
             {
                 button_text.Text = value;
+            }
+        }
+
+        [Description("Устанавливает надпись для десятичного разделителя")]
+        [Localizable(true)]
+        public string ButtonTextDecimalPoint
+        {
+            get
+            {
+                return label07.Text;
+            }
+            set
+            {
+                label07.Text = value;
             }
         }
     }

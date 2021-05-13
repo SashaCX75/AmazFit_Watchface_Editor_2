@@ -1591,7 +1591,7 @@ namespace AmazFit_Watchface_2
             {
                 if (userPanel_pictures_weather.comboBoxGetSelectedIndexImage() >= 0)
                 {
-                    AvailabilityIcon = true;
+                    //AvailabilityIcon = true;
                     NumericUpDown numericUpDownX = userPanel_pictures_weather.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = userPanel_pictures_weather.numericUpDown_picturesY;
                     //NumericUpDown numericUpDown_count = (NumericUpDown)panel_pictures.Controls[4];

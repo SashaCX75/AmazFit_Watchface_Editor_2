@@ -99,7 +99,7 @@ namespace AmazFit_Watchface_2
                                             }
                                         }
                                     }
-                                    AlignmentToString(comboBox_Hour_alignment, digitalTimeDigit.Digit.Alignment);
+                                    AlignmentToString(comboBox_Hour_alignment_AOD, digitalTimeDigit.Digit.Alignment);
                                     if (digitalTimeDigit.Digit.Spacing != null)
                                         numericUpDown_Hour_spacing_AOD.Value = (decimal)digitalTimeDigit.Digit.Spacing;
                                     checkBox_Hour_add_zero_AOD.Checked = digitalTimeDigit.Digit.PaddingZero;
@@ -246,7 +246,7 @@ namespace AmazFit_Watchface_2
                                             }
                                         }
                                     }
-                                    AlignmentToString(comboBox_Day_alignment, digitalDateDigit.Digit.Alignment);
+                                    AlignmentToString(comboBox_Day_alignment_AOD, digitalDateDigit.Digit.Alignment);
                                     if (digitalDateDigit.Digit.Spacing != null)
                                         numericUpDown_Day_spacing_AOD.Value = (decimal)digitalDateDigit.Digit.Spacing;
                                     checkBox_Day_add_zero_AOD.Checked = digitalDateDigit.Digit.PaddingZero;
@@ -310,7 +310,7 @@ namespace AmazFit_Watchface_2
                                                 }
                                             }
                                         }
-                                        AlignmentToString(comboBox_Month_alignment, digitalDateDigit.Digit.Alignment);
+                                        AlignmentToString(comboBox_Month_alignment_AOD, digitalDateDigit.Digit.Alignment);
                                         if (digitalDateDigit.Digit.Spacing != null)
                                             numericUpDown_Month_spacing_AOD.Value = (decimal)digitalDateDigit.Digit.Spacing;
                                         checkBox_Month_add_zero_AOD.Checked = digitalDateDigit.Digit.PaddingZero;
@@ -348,7 +348,7 @@ namespace AmazFit_Watchface_2
                                             }
                                         }
                                     }
-                                    AlignmentToString(comboBox_Year_alignment, digitalDateDigit.Digit.Alignment);
+                                    AlignmentToString(comboBox_Year_alignment_AOD, digitalDateDigit.Digit.Alignment);
                                     if (digitalDateDigit.Digit.Spacing != null)
                                         numericUpDown_Year_spacing_AOD.Value = (decimal)digitalDateDigit.Digit.Spacing;
                                     checkBox_Year_add_zero_AOD.Checked = digitalDateDigit.Digit.PaddingZero;

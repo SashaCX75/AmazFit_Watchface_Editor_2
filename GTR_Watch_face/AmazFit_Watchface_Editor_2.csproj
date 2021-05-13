@@ -266,6 +266,18 @@
     <Compile Include="UserControls\UserControl_SystemFont_Group.Designer.cs">
       <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_SystemFont_GroupWeather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_SystemFont_GroupWeather.Designer.cs">
+      <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_SystemFont_GroupSunrise.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_SystemFont_GroupSunrise.Designer.cs">
+      <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -482,6 +494,15 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.en.resx">
       <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.en.resx">
+      <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.en.resx">
+      <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_weather.resx">
+      <DependentUpon>UserControl_SystemFont_weather.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text.en.resx">
       <DependentUpon>UserControl_text.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,6 +554,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.resx">
       <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.resx">
+      <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.resx">
+      <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config">

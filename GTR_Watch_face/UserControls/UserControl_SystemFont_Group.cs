@@ -206,6 +206,10 @@ namespace AmazFit_Watchface_2
         public event ValueChangedHandler ValueChanged;
         public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
 
+        [Browsable(true)]
+        public event AOD_CopyHandler AOD_Copy_SystemFont;
+        public delegate void AOD_CopyHandler(object sender, EventArgs eventArgs);
+
         [Description("Возвращает true если панель свернута")]
         //[Description("The image associated with the control"), Category("Appearance")]
         public bool Collapsed
@@ -249,5 +253,14 @@ namespace AmazFit_Watchface_2
             setValue = false;
         }
         #endregion
+
+        private void userControl_Copy_SystemFont(object sender, EventArgs eventArgs)
+        {
+            if (AOD_Copy_SystemFont != null)
+            {
+                //EventArgs eventArgs = new EventArgs();
+                AOD_Copy_SystemFont(sender, eventArgs);
+            }
+        }
     }
 }
