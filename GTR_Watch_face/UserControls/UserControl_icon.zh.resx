@@ -139,7 +139,7 @@
 </value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
     <value>粘贴坐标 X</value>
@@ -161,7 +161,7 @@
 </value>
   </data>
   <data name="копироватьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
     <value>复制</value>
@@ -184,13 +184,13 @@
 </value>
   </data>
   <data name="вставитьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
     <value>粘贴</value>
   </data>
   <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 82</value>
+    <value>137, 82</value>
   </data>
   <data name="вставитьКоординатуYToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -207,7 +207,7 @@
 </value>
   </data>
   <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
     <value>粘贴坐标 Y</value>
@@ -229,7 +229,7 @@
 </value>
   </data>
   <data name="копироватьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
     <value>复制</value>
@@ -252,13 +252,16 @@
 </value>
   </data>
   <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
     <value>粘贴</value>
   </data>
   <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 82</value>
+    <value>137, 82</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>图像</value>
   </data>
   <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -266,16 +269,13 @@
   <data name="label02.Text" xml:space="preserve">
     <value>坐标</value>
   </data>
+  <data name="label06.Text" xml:space="preserve">
+    <value>图像 2</value>
+  </data>
   <data name="button_Copy_icon.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
   <data name="button_icon.Text" xml:space="preserve">
     <value>图标</value>
-  </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>图像</value>
-  </data>
-  <data name="label06.Text" xml:space="preserve">
-    <value>图像 2</value>
   </data>
 </root>
