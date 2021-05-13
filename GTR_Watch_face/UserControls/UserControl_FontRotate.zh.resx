@@ -117,16 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_text.Text" xml:space="preserve">
-    <value>数值</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="checkBox_Use.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
-  </data>
-  <data name="checkBox_Use.Text" xml:space="preserve">
-    <value>启用</value>
-  </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAfxJREFUOE9j
@@ -221,62 +212,77 @@
         zqO/TnAxx2CuMF/jKtTrXEWk1Wk1ZkEQhL+gXkz+KXzH3gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="comboBox_alignment.Items" xml:space="preserve">
-    <value>左对齐</value>
+  <data name="checkBox_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
   </data>
-  <data name="comboBox_alignment.Items1" xml:space="preserve">
-    <value>右对齐</value>
-  </data>
-  <data name="comboBox_alignment.Items2" xml:space="preserve">
-    <value>居中对齐</value>
+  <data name="checkBox_Use.Text" xml:space="preserve">
+    <value>启用</value>
   </data>
   <data name="checkBox_addZero.Text" xml:space="preserve">
     <value>前面加0</value>
   </data>
-  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+  <data name="checkBox_follow.Text" xml:space="preserve">
+    <value>跟随</value>
   </data>
-  <data name="label02.Text" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="label08.Text" xml:space="preserve">
+  <data name="checkBox_FontRotate_unit.Text" xml:space="preserve">
     <value>单位</value>
   </data>
-  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+  <data name="checkBox_separator.Text" xml:space="preserve">
+    <value>分隔符</value>
   </data>
-  <data name="label04.Text" xml:space="preserve">
-    <value>图标</value>
+  <data name="radioButton_CtrlClockwise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 17</value>
+  </data>
+  <data name="radioButton_CtrlClockwise.Text" xml:space="preserve">
+    <value>逆时针</value>
+  </data>
+  <data name="radioButton_Clockwise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="radioButton_Clockwise.Text" xml:space="preserve">
+    <value>顺时针</value>
+  </data>
+  <data name="groupBox_FontRotate_RotateDirection.Text" xml:space="preserve">
+    <value>文字方向</value>
+  </data>
+  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
   </data>
   <data name="label01.Text" xml:space="preserve">
-    <value>起始图像</value>
+    <value>坐标</value>
   </data>
-  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
+  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
   </data>
-  <data name="label05.Text" xml:space="preserve">
-    <value>坐标图标</value>
-  </data>
-  <data name="label09.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="label09.Text" xml:space="preserve">
-    <value>对齐方式</value>
+  <data name="label02.Text" xml:space="preserve">
+    <value>大小</value>
   </data>
   <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label03.Text" xml:space="preserve">
-    <value>间距</value>
+    <value>角度</value>
   </data>
-  <data name="label06.Text" xml:space="preserve">
-    <value>错误图像</value>
+  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label04.Text" xml:space="preserve">
+    <value>间隔</value>
   </data>
   <data name="label07.Text" xml:space="preserve">
-    <value>小数点分隔符</value>
+    <value>颜色</value>
   </data>
-  <data name="button_Copy_text.Text" xml:space="preserve">
+  <data name="label08.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="label08.Text" xml:space="preserve">
+    <value>半径</value>
+  </data>
+  <data name="button_Copy_FontRotate.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
+  </data>
+  <data name="button_FontRotate.Text" xml:space="preserve">
+    <value>圆形系统字体</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
     <value>粘贴</value>
@@ -288,15 +294,12 @@
     <value>粘贴坐标 Y</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>粘贴坐标 X</value>
+    <value>粘贴坐标 Х</value>
   </data>
   <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
     <value>复制</value>
   </data>
   <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
     <value>复制</value>
-  </data>
-  <data name="checkBox_follow.Text" xml:space="preserve">
-    <value>跟随</value>
   </data>
 </root>

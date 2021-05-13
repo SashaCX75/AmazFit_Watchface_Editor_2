@@ -263,4 +263,22 @@
   <data name="button_scaleLinear.Text" xml:space="preserve">
     <value>线形刻度</value>
   </data>
+  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
+    <value>粘贴坐标 Y</value>
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>粘贴坐标 X</value>
+  </data>
+  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>复制</value>
+  </data>
 </root>
