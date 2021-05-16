@@ -762,6 +762,7 @@ namespace AmazFit_Watchface_2
                         case "Calories":
                             userPanel_pictures = userControl_pictures_Calories;
                             userPanel_text = userControl_text_Calories;
+                            userPanel_textGoal = userControl_text_goal_Calories;
                             userPanel_hand = userControl_hand_Calories;
                             userPanel_scaleCircle = userControl_scaleCircle_Calories;
                             userPanel_scaleLinear = userControl_scaleLinear_Calories;
@@ -789,6 +790,7 @@ namespace AmazFit_Watchface_2
                         case "Distance":
                             userPanel_text = userControl_text_Distance;
                             userControl_SystemFont_Group = userControl_SystemFont_Group_Distance;
+                            userControl_icon = userControl_icon_Distance;
                             break;
                         case "StandUp":
                             userPanel_pictures = userControl_pictures_StandUp;
@@ -938,8 +940,6 @@ namespace AmazFit_Watchface_2
                         {
                             foreach (DigitalCommonDigit digitalCommonDigit in activity.Digits)
                             {
-                                //TODO добавить обработку цели параметра
-
                                 userPanel_text_Activity = userPanel_text;
                                 userControl_SystemFont_Activity = userControl_SystemFont;
                                 userControl_FontRotate_Activity = userControl_FontRotate;
@@ -1261,9 +1261,7 @@ namespace AmazFit_Watchface_2
                     else if (activity.Type == "Sunrise")
                     {
                         UserControl_SystemFont_GroupWeather userControl_SystemFont_Group_Weather =
-                            userControl_SystemFont_GroupWeather;
-                        if (activity.Type == "Sunrise") userControl_SystemFont_Group_Weather =
-                              userControl_SystemFont_GroupSunrise;
+                            userControl_SystemFont_GroupSunrise;
                         UserControl_SystemFont_weather userControl_SystemFont_weather = null;
                         UserControl_FontRotate_weather userControl_FontRotate_weather = null;
 
@@ -2401,6 +2399,7 @@ namespace AmazFit_Watchface_2
 
             userPanel_pictures = userControl_pictures_Calories;
             userPanel_text = userControl_text_Calories;
+            userPanel_textGoal = userControl_text_goal_Calories;
             userPanel_hand = userControl_hand_Calories;
             userPanel_scaleCircle = userControl_scaleCircle_Calories;
             userPanel_scaleLinear = userControl_scaleLinear_Calories;
@@ -2411,6 +2410,7 @@ namespace AmazFit_Watchface_2
                 userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                 userControl_icon, "Calories");
 
+            userPanel_textGoal = null;
             #endregion
 
             #region HeartRate
@@ -5072,14 +5072,9 @@ namespace AmazFit_Watchface_2
             userControl_icon_Humidity.ComboBoxAddItems(ListImages);
 
             userControl_pictures_Sunrise.ComboBoxAddItems(ListImages);
-            //userControl_text_Sunrise_Current.ComboBoxAddItems(ListImages);
-            //userControl_text_Sunrise_Min.ComboBoxAddItems(ListImages);
-            //userControl_text_Sunrise_Max.ComboBoxAddItems(ListImages);
             userControl_text_SunriseSunset.ComboBoxAddItems(ListImages);
             userControl_text_Sunrise.ComboBoxAddItems(ListImages);
             userControl_text_Sunset.ComboBoxAddItems(ListImages);
-
-
             userControl_hand_Sunrise.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_Sunrise.ComboBoxAddItems(ListImages);
             userControl_scaleLinear_Sunrise.ComboBoxAddItems(ListImages);
@@ -5287,6 +5282,7 @@ namespace AmazFit_Watchface_2
 
             userControl_pictures_Calories.SettingsClear();
             userControl_text_Calories.SettingsClear();
+            userControl_text_goal_Calories.SettingsClear();
             userControl_hand_Calories.SettingsClear();
             userControl_scaleCircle_Calories.SettingsClear();
             userControl_scaleLinear_Calories.SettingsClear();
@@ -5360,12 +5356,14 @@ namespace AmazFit_Watchface_2
             userControl_icon_Humidity.SettingsClear();
 
             userControl_pictures_Sunrise.SettingsClear();
-            //userControl_text_Sunrise_Current.SettingsClear();
-            //userControl_text_Sunrise_Min.SettingsClear();
-            //userControl_text_Sunrise_Max.SettingsClear();
             userControl_text_SunriseSunset.SettingsClear();
             userControl_text_Sunrise.SettingsClear();
             userControl_text_Sunset.SettingsClear();
+            userControl_hand_Sunrise.SettingsClear();
+            userControl_scaleCircle_Sunrise.SettingsClear();
+            userControl_scaleLinear_Sunrise.SettingsClear();
+            userControl_SystemFont_GroupSunrise.SettingsClear();
+            userControl_icon_Sunrise.SettingsClear();
 
 
             userControl_hand_Sunrise.SettingsClear();

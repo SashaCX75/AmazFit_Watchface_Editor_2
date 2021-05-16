@@ -456,6 +456,7 @@ namespace AmazFit_Watchface_2
             #region калории
             userPanel_pictures = userControl_pictures_Calories;
             userPanel_text = userControl_text_Calories;
+            userPanel_textGoal = userControl_text_goal_Calories;
             userPanel_hand = userControl_hand_Calories;
             userPanel_scaleCircle = userControl_scaleCircle_Calories;
             userPanel_scaleLinear = userControl_scaleLinear_Calories;
@@ -497,6 +498,7 @@ namespace AmazFit_Watchface_2
                 userPanel_scaleLinear, userControl_SystemFont_Group, userControl_icon, activityValue, 4, activityGoal,
                 progress, BBorder, showProgressArea, showCentrHend, "Calories");
 
+            userPanel_textGoal = null;
             #endregion
 
             #region пульс
@@ -1445,7 +1447,7 @@ namespace AmazFit_Watchface_2
             }
             DrawActivity(gPanel, userPanel_text, userPanel_textGoal, userPanel_hand, userPanel_scaleCircle,
                 userPanel_scaleLinear, userControl_SystemFont_Group, userControl_icon, activityValue, 4, activityGoal,
-                progress, BBorder, showProgressArea, showCentrHend, "ActivityGoal");
+                progress, BBorder, showProgressArea, showCentrHend, "ActivityGoal", ActivityGoal_Calories);
 
             userPanel_textGoal = null;
             #endregion
@@ -1838,7 +1840,8 @@ namespace AmazFit_Watchface_2
             UserControl_hand userPanel_hand, UserControl_scaleCircle userPanel_scaleCircle,
             UserControl_scaleLinear userPanel_scaleLinear, UserControl_SystemFont_Group userControl_SystemFont_Group, 
             UserControl_icon userControl_icon, float value, int value_lenght, int goal, float progress, 
-            bool  BBorder, bool showProgressArea, bool showCentrHend, string activity)
+            bool  BBorder, bool showProgressArea, bool showCentrHend, string activity,
+            bool ActivityGoal_Calories = false)
         {
             if (progress > 1) progress = 1;
             Bitmap src = new Bitmap(1, 1);
@@ -2238,7 +2241,7 @@ namespace AmazFit_Watchface_2
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
                     float angle = startAngle + progress * (endAngle - startAngle);
-                    if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                    //if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (imageCentr >= 0)
@@ -2251,10 +2254,6 @@ namespace AmazFit_Watchface_2
             }
 
             // иконка
-
-            bool ActivityGoal_Calories = false;
-            if (radioButton_ScreenNormal.Checked && radioButton_ActivityGoal_Calories.Checked) 
-                ActivityGoal_Calories = true;
             if (userControl_icon != null && userControl_icon.checkBox_icon_Use.Checked)
             {
                 int imageIndex = userControl_icon.comboBoxGetSelectedIndexImage();

@@ -6520,6 +6520,42 @@
   <data name="tabPage_Date.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_Steps.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Steps.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Steps.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Steps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.FollowRotateText" xml:space="preserve">
+    <value>跟随步数</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（目标步数）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（目标步数）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_Steps.Error" xml:space="preserve">
     <value />
   </data>
@@ -6554,6 +6590,24 @@
     <value>0</value>
   </data>
   <data name="userControl_hand_Steps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_Steps.ButtonText" xml:space="preserve">
+    <value>数值（目标步数）</value>
+  </data>
+  <data name="userControl_text_goal_Steps.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_Steps.FollowText" xml:space="preserve">
+    <value>跟随步数</value>
+  </data>
+  <data name="userControl_text_goal_Steps.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_text_goal_Steps.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_text_goal_Steps.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_text_Steps.Error" xml:space="preserve">
@@ -6593,6 +6647,30 @@
     <value>步数</value>
   </data>
   <data name="tabPage_Steps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Calories.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Calories.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Calories.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Calories.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_scaleLinear_Calories.Error" xml:space="preserve">
@@ -6670,6 +6748,30 @@
   <data name="tabPage_Calories.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_HeartRate.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_HeartRate.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_HeartRate.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_HeartRate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_HeartRate.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_HeartRate.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_HeartRate.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_HeartRate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_HeartRate.Error" xml:space="preserve">
     <value />
   </data>
@@ -6745,6 +6847,30 @@
   <data name="tabPage_HeartRate.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_PAI.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_PAI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_PAI.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_PAI.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_PAI.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_PAI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_PAI.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_PAI.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_PAI.Error" xml:space="preserve">
     <value />
   </data>
@@ -6817,6 +6943,30 @@
   <data name="tabPage_PAI.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_Distance.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Distance.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Distance.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Distance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Distance.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Distance.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Distance.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Distance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_text_Distance.Error" xml:space="preserve">
     <value />
   </data>
@@ -6842,6 +6992,42 @@
     <value>距离</value>
   </data>
   <data name="tabPage_Distance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_StandUp.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_StandUp.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_StandUp.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_StandUp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.FollowRotateText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（站立数）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（站立数）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_scaleLinear_StandUp.Error" xml:space="preserve">
@@ -6878,6 +7064,24 @@
     <value>0</value>
   </data>
   <data name="userControl_hand_StandUp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_StandUp.ButtonText" xml:space="preserve">
+    <value>数值（站立数）</value>
+  </data>
+  <data name="userControl_text_goal_StandUp.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_StandUp.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_text_goal_StandUp.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_text_goal_StandUp.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_text_goal_StandUp.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_text_StandUp.Error" xml:space="preserve">
@@ -6917,6 +7121,30 @@
     <value>站立</value>
   </data>
   <data name="tabPage_StandUp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Stress.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Stress.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Stress.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Stress.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Stress.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Stress.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Stress.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Stress.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_scaleLinear_Stress.Error" xml:space="preserve">
@@ -6994,6 +7222,93 @@
   <data name="tabPage_Stress.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="radioButton_ActivityGoal_Calories.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radioButton_ActivityGoal_Calories.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Calories.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Calories.Text" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Calories.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 17</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.Text" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox_ActivityGoal.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox_ActivityGoal.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="groupBox_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox_ActivityGoal.Text" xml:space="preserve">
+    <value>*根据手表设置显示步数或卡路里。</value>
+  </data>
+  <data name="groupBox_ActivityGoal.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_ActivityGoal.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_ActivityGoal.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_ActivityGoal.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.FollowRotateText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（活动目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（活动目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_ActivityGoal.Error" xml:space="preserve">
     <value />
   </data>
@@ -7028,6 +7343,24 @@
     <value>0</value>
   </data>
   <data name="userControl_hand_ActivityGoal.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.ButtonText" xml:space="preserve">
+    <value>数值（活动目标）</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_text_ActivityGoal.Error" xml:space="preserve">
@@ -7069,6 +7402,42 @@
   <data name="tabPage_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_FatBurning.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_FatBurning.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_FatBurning.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_FatBurning.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.FollowRotateText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（脂肪燃烧目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（脂肪燃烧目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_FatBurning.Error" xml:space="preserve">
     <value />
   </data>
@@ -7103,6 +7472,24 @@
     <value>0</value>
   </data>
   <data name="userControl_hand_FatBurning.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_FatBurning.ButtonText" xml:space="preserve">
+    <value>数值（燃烧脂肪目标）</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_goal_FatBurning.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_text_FatBurning.Error" xml:space="preserve">
@@ -7169,6 +7556,30 @@
     <value>活动</value>
   </data>
   <data name="tabPage_Activity.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Weather.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Weather.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Weather.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Weather.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_scaleLinear_Weather.Error" xml:space="preserve">
@@ -7282,6 +7693,30 @@
   <data name="tabPage_Weather.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_UVindex.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_UVindex.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_UVindex.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_UVindex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_UVindex.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_UVindex.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_UVindex.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_UVindex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_UVindex.Error" xml:space="preserve">
     <value />
   </data>
@@ -7355,6 +7790,30 @@
     <value>紫外线指数</value>
   </data>
   <data name="tabPage_UVindex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_AirQuality.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_AirQuality.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_AirQuality.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_AirQuality.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_AirQuality.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_AirQuality.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirQuality.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirQuality.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_scaleLinear_AirQuality.Error" xml:space="preserve">
@@ -7432,6 +7891,30 @@
   <data name="tabPage_AirQuality.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_Humidity.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Humidity.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Humidity.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Humidity.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Humidity.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Humidity.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Humidity.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Humidity.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_Humidity.Error" xml:space="preserve">
     <value />
   </data>
@@ -7507,6 +7990,126 @@
   <data name="tabPage_Humidity.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="label_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_scaleLinear_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_scaleLinear_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_scaleLinear_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_scaleLinear_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_scaleCircle_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_scaleCircle_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_scaleCircle_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_scaleCircle_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_hand_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_hand_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_hand_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_hand_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_Sunset.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_Sunset.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_text_Sunset.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_text_Sunset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_text_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_text_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_SunriseSunset.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_text_SunriseSunset.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_text_SunriseSunset.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_text_SunriseSunset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_pictures_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_pictures_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_pictures_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_pictures_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="tabPage_Sunrise.Error" xml:space="preserve">
     <value />
   </data>
@@ -7520,6 +8123,30 @@
     <value>日出</value>
   </data>
   <data name="tabPage_Sunrise.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_WindForce.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_WindForce.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_WindForce.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_WindForce.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_WindForce.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_WindForce.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_WindForce.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_WindForce.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_scaleLinear_WindForce.Error" xml:space="preserve">
@@ -7597,6 +8224,30 @@
   <data name="tabPage_WindForce.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_Altitude.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Altitude.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Altitude.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Altitude.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Altitude.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Altitude.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Altitude.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Altitude.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_Altitude.Error" xml:space="preserve">
     <value />
   </data>
@@ -7670,6 +8321,30 @@
     <value>海拔高度</value>
   </data>
   <data name="tabPage_Altitude.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_AirPressure.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_AirPressure.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_AirPressure.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_AirPressure.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_AirPressure.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_AirPressure.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirPressure.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirPressure.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_scaleLinear_AirPressure.Error" xml:space="preserve">
@@ -8305,6 +8980,30 @@
   <data name="tabPage_Status.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_icon_Battery.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_icon_Battery.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_icon_Battery.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_icon_Battery.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Battery.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_SystemFont_Group_Battery.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Battery.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Battery.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_Battery.Error" xml:space="preserve">
     <value />
   </data>
@@ -8420,8 +9119,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
-        DQAAAk1TRnQBSQFMAgEBBgEAAWwBBAFwAQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
+        DQAAAk1TRnQBSQFMAgEBBgEAAXgBBAF4AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -8479,7 +9178,7 @@
         AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
         AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
+        AZ8CAAHwAQ8B9wHnAf4BHws=
 </value>
   </data>
   <data name="tabControl_EditParameters.ToolTip" xml:space="preserve">
@@ -13516,6 +14215,24 @@
   <data name="tabPage_Stress_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="label_ActivityGoalHelp_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_ActivityGoalHelp_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label_ActivityGoalHelp_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label_ActivityGoalHelp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 13</value>
+  </data>
+  <data name="label_ActivityGoalHelp_AOD.Text" xml:space="preserve">
+    <value>*根据手表设置显示步数或卡路里。</value>
+  </data>
+  <data name="label_ActivityGoalHelp_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_scaleLinear_ActivityGoal_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -13584,6 +14301,9 @@
   </data>
   <data name="tabPage_ActivityGoal_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="tabPage_ActivityGoal_AOD.Text" xml:space="preserve">
+    <value>活动目标</value>
   </data>
   <data name="tabPage_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -18538,11 +19258,41 @@
   <data name="splitContainer1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="richTextBox_JsonText.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="richTextBox_JsonText.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="richTextBox_JsonText.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="richTextBox_JsonText.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Panel1.Error" xml:space="preserve">
+    <value />
+  </data>
   <data name="splitContainer1.Panel1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <data name="splitContainer1.Panel1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="splitContainer1.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="treeView_JsonTree.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="treeView_JsonTree.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="treeView_JsonTree.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="treeView_JsonTree.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="splitContainer1.Panel2.Error" xml:space="preserve">
     <value />
@@ -18556,11 +19306,17 @@
   <data name="splitContainer1.Panel2.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="splitContainer1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="contextMenuStrip_XY_InAnimationTable.Error" xml:space="preserve">
     <value />
   </data>
   <data name="contextMenuStrip_XY_InAnimationTable.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
+  </data>
+  <data name="contextMenuStrip_XY_InAnimationTable.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 22</value>
@@ -18610,8 +19366,8 @@
   <data name="contextMenuStrip_XY_InTable.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="вставитьToolStripMenuItem2.Text" xml:space="preserve">
-    <value>粘贴</value>
+  <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>粘贴坐标</value>
@@ -18625,6 +19381,9 @@
   <data name="вставитьToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
   </data>
+  <data name="вставитьToolStripMenuItem2.Text" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
   <data name="удалитьСтрокуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
   </data>
@@ -18636,95 +19395,5 @@
   </data>
   <data name="contextMenuStrip_XY_InTable.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="groupBox_ActivityGoal.Text" xml:space="preserve">
-    <value>*根据手表设置显示步数或卡路里。</value>
-  </data>
-  <data name="label_ActivityGoalHelp.Text" xml:space="preserve">
-    <value>*根据手表设置显示步数或卡路里。</value>
-  </data>
-  <data name="label_ActivityGoalHelp_AOD.Text" xml:space="preserve">
-    <value>*根据手表设置显示步数或卡路里。</value>
-  </data>
-  <data name="radioButton_ActivityGoal_Calories.Text" xml:space="preserve">
-    <value>卡路里</value>
-  </data>
-  <data name="radioButton_ActivityGoal_Steps.Text" xml:space="preserve">
-    <value>步数</value>
-  </data>
-  <data name="tabPage_ActivityGoal_AOD.Text" xml:space="preserve">
-    <value>活动目标</value>
-  </data>
-  <data name="userControl_SystemFont_Group_ActivityGoal.FollowRotateText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_SystemFont_Group_ActivityGoal.FollowText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_SystemFont_Group_ActivityGoal.FontRotateText" xml:space="preserve">
-    <value>圆形系统字体（活动目标）</value>
-  </data>
-  <data name="userControl_SystemFont_Group_ActivityGoal.SystemFontText" xml:space="preserve">
-    <value>旋转系统字体（活动目标）</value>
-  </data>
-  <data name="userControl_SystemFont_Group_FatBurning.FollowRotateText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_SystemFont_Group_FatBurning.FollowText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_SystemFont_Group_StandUp.FollowRotateText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_SystemFont_Group_StandUp.FollowText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_SystemFont_Group_StandUp.FontRotateText" xml:space="preserve">
-    <value>圆形系统字体（站立数）</value>
-  </data>
-  <data name="userControl_SystemFont_Group_StandUp.SystemFontText" xml:space="preserve">
-    <value>旋转系统字体（站立数）</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Steps.FollowRotateText" xml:space="preserve">
-    <value>跟随步数</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Steps.FollowText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Steps.FontRotateText" xml:space="preserve">
-    <value>圆形系统字体（目标步数）</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Steps.SystemFontText" xml:space="preserve">
-    <value>旋转系统字体（目标步数）</value>
-  </data>
-  <data name="userControl_SystemFont_Group_FatBurning.FontRotateText" xml:space="preserve">
-    <value>圆形系统字体（脂肪燃烧目标）</value>
-  </data>
-  <data name="userControl_SystemFont_Group_FatBurning.SystemFontText" xml:space="preserve">
-    <value>旋转系统字体（脂肪燃烧目标）</value>
-  </data>
-  <data name="userControl_text_goal_ActivityGoal.ButtonText" xml:space="preserve">
-    <value>数值（活动目标）</value>
-  </data>
-  <data name="userControl_text_goal_ActivityGoal.FollowText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_text_goal_FatBurning.ButtonText" xml:space="preserve">
-    <value>数值（燃烧脂肪目标）</value>
-  </data>
-  <data name="userControl_text_goal_FatBurning.FollowText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_text_goal_StandUp.ButtonText" xml:space="preserve">
-    <value>数值（站立数）</value>
-  </data>
-  <data name="userControl_text_goal_StandUp.FollowText" xml:space="preserve">
-    <value>跟随基础数值</value>
-  </data>
-  <data name="userControl_text_goal_Steps.ButtonText" xml:space="preserve">
-    <value>数值（目标步数）</value>
-  </data>
-  <data name="userControl_text_goal_Steps.FollowText" xml:space="preserve">
-    <value>跟随步数</value>
   </data>
 </root>
