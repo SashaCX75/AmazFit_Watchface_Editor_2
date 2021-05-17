@@ -2245,7 +2245,7 @@ namespace AmazFit_Watchface_2
 
             userPanel_pictures = userControl_pictures_ActivityGoal_AOD;
             userPanel_text = userControl_text_ActivityGoal_AOD;
-            userPanel_textGoal = userControl_text_goal_FatBurning_AOD;
+            userPanel_textGoal = userControl_text_goal_ActivityGoal_AOD;
             userPanel_hand = userControl_hand_ActivityGoal_AOD;
             userPanel_scaleCircle = userControl_scaleCircle_ActivityGoal_AOD;
             userPanel_scaleLinear = userControl_scaleLinear_ActivityGoal_AOD;
@@ -4513,6 +4513,7 @@ namespace AmazFit_Watchface_2
 
             userControl_pictures_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
             userControl_text_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
+            userControl_text_goal_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleLinear_ActivityGoal_AOD.ComboBoxAddItems(ListImages);

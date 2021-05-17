@@ -1077,7 +1077,7 @@ namespace AmazFit_Watchface_2
             userControl_icon = userControl_icon_ActivityGoal_AOD;
 
             bool ActivityGoal_Calories = false;
-            if (radioButton_ScreenNormal.Checked && radioButton_ActivityGoal_Calories.Checked) ActivityGoal_Calories = true;
+            if (radioButton_ScreenIdle.Checked && radioButton_ActivityGoal_Calories_AOD.Checked) ActivityGoal_Calories = true;
             // ActivityGoal картинками
             if (userPanel_pictures.checkBox_pictures_Use.Checked)
             {

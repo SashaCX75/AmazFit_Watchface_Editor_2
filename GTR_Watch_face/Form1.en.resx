@@ -1485,6 +1485,24 @@
   <data name="tabPage_Steps.Text" xml:space="preserve">
     <value>Steps</value>
   </data>
+  <data name="userControl_SystemFont_Group_Calories.FollowRotateText" xml:space="preserve">
+    <value>Follow calories</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.FollowText" xml:space="preserve">
+    <value>Follow calories</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (calorie goal)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.SystemFontText" xml:space="preserve">
+    <value>System font rotated (calorie goal)</value>
+  </data>
+  <data name="userControl_text_goal_Calories.ButtonText" xml:space="preserve">
+    <value>Numerical values (calorie goal)</value>
+  </data>
+  <data name="userControl_text_goal_Calories.FollowText" xml:space="preserve">
+    <value>Follow calories</value>
+  </data>
   <data name="tabPage_Calories.Text" xml:space="preserve">
     <value>Calories</value>
   </data>
@@ -1559,6 +1577,12 @@
   </data>
   <data name="userControl_SystemFont_Group_FatBurning.FollowText" xml:space="preserve">
     <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (goal of fat burning)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning.SystemFontText" xml:space="preserve">
+    <value>System font rotated (goal of fat burning)</value>
   </data>
   <data name="userControl_text_goal_FatBurning.ButtonText" xml:space="preserve">
     <value>Numerical values (goal of fat burning)</value>
@@ -1746,7 +1770,7 @@ The data is not displayed correctly for all cities.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAARABBQEQAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAASABBQEgAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -2776,8 +2800,44 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPage_Date_AOD.Text" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow the steps</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.FollowText" xml:space="preserve">
+    <value>Follow the steps</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (goal of steps)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.SystemFontText" xml:space="preserve">
+    <value>System font rotated (goal of steps)</value>
+  </data>
+  <data name="userControl_text_goal_Steps_AOD.ButtonText" xml:space="preserve">
+    <value>Numerical values (goal of steps)</value>
+  </data>
+  <data name="userControl_text_goal_Steps_AOD.FollowText" xml:space="preserve">
+    <value>Follow the steps</value>
+  </data>
   <data name="tabPage_Steps_AOD.Text" xml:space="preserve">
     <value>Steps</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow calories</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.FollowText" xml:space="preserve">
+    <value>Follow calories</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (calorie goal)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.SystemFontText" xml:space="preserve">
+    <value>System font rotated (calorie goal)</value>
+  </data>
+  <data name="userControl_text_goal_Calories_AOD.ButtonText" xml:space="preserve">
+    <value>Numerical values (calorie goal)</value>
+  </data>
+  <data name="userControl_text_goal_Calories_AOD.FollowText" xml:space="preserve">
+    <value>Follow calories</value>
   </data>
   <data name="tabPage_Calories_AOD.Text" xml:space="preserve">
     <value>Calories</value>
@@ -2788,20 +2848,83 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPage_Distance_AOD.Text" xml:space="preserve">
     <value>Distance</value>
   </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (number of StandUp)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.SystemFontText" xml:space="preserve">
+    <value>System font rotated (number of StandUp)</value>
+  </data>
+  <data name="userControl_text_goal_StandUp_AOD.ButtonText" xml:space="preserve">
+    <value>Numerical values (number of StandUp)</value>
+  </data>
+  <data name="userControl_text_goal_StandUp_AOD.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
   <data name="tabPage_StandUp_AOD.Text" xml:space="preserve">
     <value>Stand up</value>
   </data>
   <data name="tabPage_Stress_AOD.Text" xml:space="preserve">
     <value>Stress</value>
   </data>
-  <data name="label_ActivityGoalHelp_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 13</value>
+  <data name="radioButton_ActivityGoal_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
   </data>
-  <data name="label_ActivityGoalHelp_AOD.Text" xml:space="preserve">
+  <data name="radioButton_ActivityGoal_Calories_AOD.Text" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 17</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps_AOD.Text" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="groupBox_ActivityGoal_AOD.Text" xml:space="preserve">
     <value>* Displays the steps or calories depending on the watch setting.</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (activity goal)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.SystemFontText" xml:space="preserve">
+    <value>System font rotated (activity goal)</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal_AOD.ButtonText" xml:space="preserve">
+    <value>Numerical values (activity goal)</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal_AOD.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
   </data>
   <data name="tabPage_ActivityGoal_AOD.Text" xml:space="preserve">
     <value>Activity goal</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.FontRotateText" xml:space="preserve">
+    <value>System font in a circle (goal of fat burning)</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.SystemFontText" xml:space="preserve">
+    <value>System font rotated (goal of fat burning)</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning_AOD.ButtonText" xml:space="preserve">
+    <value>Numerical values (goal of fat burning)</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning_AOD.FollowText" xml:space="preserve">
+    <value>Follow the basic value</value>
   </data>
   <data name="tabPage_FatBurning_AOD.Text" xml:space="preserve">
     <value>Fat-burning</value>
@@ -2832,6 +2955,22 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="tabPage_Humidity_AOD.Text" xml:space="preserve">
     <value>Humidity</value>
+  </data>
+  <data name="label_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 32</value>
+  </data>
+  <data name="label_Sunrise_AOD.Text" xml:space="preserve">
+    <value>* Data for sunrise and sunset varies by city.
+The data is not displayed correctly for all cities.</value>
+  </data>
+  <data name="userControl_text_Sunset_AOD.ButtonText" xml:space="preserve">
+    <value>Sunset</value>
+  </data>
+  <data name="userControl_text_Sunrise_AOD.ButtonText" xml:space="preserve">
+    <value>Sunrise</value>
+  </data>
+  <data name="userControl_text_SunriseSunset_AOD.ButtonText" xml:space="preserve">
+    <value>Closest sunrise / sunset</value>
   </data>
   <data name="tabPage_Sunrise_AOD.Text" xml:space="preserve">
     <value>Sunrise</value>
@@ -6084,6 +6223,10 @@ The data is not displayed correctly for all cities.</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 22</value>

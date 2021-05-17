@@ -2625,7 +2625,7 @@ namespace AmazFit_Watchface_2
 
             userPanel_pictures = userControl_pictures_ActivityGoal;
             userPanel_text = userControl_text_ActivityGoal;
-            userPanel_textGoal = userControl_text_goal_FatBurning;
+            userPanel_textGoal = userControl_text_goal_ActivityGoal;
             userPanel_hand = userControl_hand_ActivityGoal;
             userPanel_scaleCircle = userControl_scaleCircle_ActivityGoal;
             userPanel_scaleLinear = userControl_scaleLinear_ActivityGoal;
