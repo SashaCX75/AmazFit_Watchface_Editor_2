@@ -17,6 +17,7 @@ using System.Globalization;
 using System.Threading;
 using System.Text.RegularExpressions;
 using System.Drawing.Text;
+using System.Runtime.InteropServices;
 
 namespace AmazFit_Watchface_2
 {
@@ -56,6 +57,7 @@ namespace AmazFit_Watchface_2
             if (File.Exists(Application.StartupPath + "\\Program log.txt")) File.Delete(Application.StartupPath + @"\Program log.txt");
             Logger.WriteLine("* Form1");
 
+            SplashScreenStart();
 
             Program_Settings = new PROGRAM_SETTINGS();
             try
@@ -71,6 +73,7 @@ namespace AmazFit_Watchface_2
                                 });
                     //Logger.WriteLine("Чтение Settings.json");
                 }
+
 
 
                 if ((Program_Settings.language == null) || (Program_Settings.language.Length < 2))
@@ -208,7 +211,22 @@ namespace AmazFit_Watchface_2
             }
             Logger.WriteLine("* Form1 (end)");
         }
-        
+
+        private void SplashScreenStart()
+        {
+            string splashScreenPath = Application.StartupPath + @"\Tools\SplashScreen.exe";
+            if (File.Exists(splashScreenPath))
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = splashScreenPath;
+                Process exeProcess = Process.Start(startInfo);
+
+                exeProcess.Dispose();
+                //exeProcess.CloseMainWindow();
+            }
+
+        }
+
         private void SetLanguage()
         {
             Logger.WriteLine("* SetLanguage");
@@ -265,12 +283,30 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("* SetLanguage (end)");
         }
 
+
+
+        /// <summary>
+        /// Find window by Caption only. Note you must pass IntPtr.Zero as the first parameter.
+        /// </summary>
+        [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
+        static extern IntPtr FindWindowByCaption(IntPtr ZeroOnly, string lpWindowName);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
+
+        const UInt32 WM_CLOSE = 0x0010;
         private void Form1_Load(object sender, EventArgs e)
         {
             Logger.WriteLine("* Form1_Load ");
+            IntPtr windowPtr = FindWindowByCaption(IntPtr.Zero, "AmazFit WatchFace editor SplashScreen");
+            if (windowPtr != IntPtr.Zero)
+            {
+                SendMessage(windowPtr, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
+            }
+
 
             //Logger.WriteLine("Form1_Load");
-            
+
             string subPath = Application.StartupPath + @"\Tools\main.exe";
             Logger.WriteLine("Set textBox.Text");
             if (Program_Settings.pack_unpack_dir == null)

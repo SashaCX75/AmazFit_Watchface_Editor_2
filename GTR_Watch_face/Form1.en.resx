@@ -1654,14 +1654,26 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Sunset.ButtonText" xml:space="preserve">
     <value>Sunset</value>
   </data>
+  <data name="userControl_text_Sunset.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>Separator</value>
+  </data>
   <data name="userControl_text_Sunset.FollowText" xml:space="preserve">
     <value>Follow the sunrise</value>
   </data>
   <data name="userControl_text_Sunrise.ButtonText" xml:space="preserve">
     <value>Sunrise</value>
   </data>
+  <data name="userControl_text_Sunrise.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>Separator</value>
+  </data>
   <data name="userControl_text_SunriseSunset.ButtonText" xml:space="preserve">
     <value>Closest sunrise / sunset</value>
+  </data>
+  <data name="userControl_text_SunriseSunset.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>Separator</value>
+  </data>
+  <data name="tabPage_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Sunrise.Text" xml:space="preserve">
     <value>Sunrise</value>
@@ -1674,6 +1686,12 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="tabPage_AirPressure.Text" xml:space="preserve">
     <value>Air pressure</value>
+  </data>
+  <data name="tabControl_SystemWeather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
+  <data name="tabPage_Air.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
   </data>
   <data name="tabPage_Air.Text" xml:space="preserve">
     <value>Atmosphere</value>
@@ -1770,7 +1788,7 @@ The data is not displayed correctly for all cities.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAASABBQEgAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAASgBBQEoAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1830,6 +1848,9 @@ The data is not displayed correctly for all cities.</value>
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
         AZ8CAAHwAQ8B9wHnAf4BHws=
 </value>
+  </data>
+  <data name="tabControl_EditParameters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 331</value>
   </data>
   <data name="label284.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
@@ -2956,6 +2977,9 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPage_Humidity_AOD.Text" xml:space="preserve">
     <value>Humidity</value>
   </data>
+  <data name="tabPage_Sunrise_AOD.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 32</value>
   </data>
@@ -2963,14 +2987,68 @@ The data is not displayed correctly for all cities.</value>
     <value>* Data for sunrise and sunset varies by city.
 The data is not displayed correctly for all cities.</value>
   </data>
+  <data name="userControl_icon_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowRotatText_Max" xml:space="preserve">
+    <value>Follow the sunrise</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowRotatText_Min" xml:space="preserve">
+    <value>Follow the sunrise / sunset</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowText_Max" xml:space="preserve">
+    <value>Follow the sunrise</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowText_Min" xml:space="preserve">
+    <value>Follow the sunrise / sunset</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_hand_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
   <data name="userControl_text_Sunset_AOD.ButtonText" xml:space="preserve">
     <value>Sunset</value>
+  </data>
+  <data name="userControl_text_Sunset_AOD.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>Separator</value>
+  </data>
+  <data name="userControl_text_Sunset_AOD.FollowText" xml:space="preserve">
+    <value>Follow the sunrise</value>
+  </data>
+  <data name="userControl_text_Sunset_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
   </data>
   <data name="userControl_text_Sunrise_AOD.ButtonText" xml:space="preserve">
     <value>Sunrise</value>
   </data>
+  <data name="userControl_text_Sunrise_AOD.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>Separator</value>
+  </data>
+  <data name="userControl_text_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
   <data name="userControl_text_SunriseSunset_AOD.ButtonText" xml:space="preserve">
     <value>Closest sunrise / sunset</value>
+  </data>
+  <data name="userControl_text_SunriseSunset_AOD.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>Separator</value>
+  </data>
+  <data name="userControl_text_SunriseSunset_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_pictures_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="tabPage_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Sunrise_AOD.Text" xml:space="preserve">
     <value>Sunrise</value>
@@ -2984,6 +3062,12 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPage_AirPressure_AOD.Text" xml:space="preserve">
     <value>Air pressure</value>
   </data>
+  <data name="tabControl_SystemWeather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
+  <data name="tabPage_Air_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
   <data name="tabPage_Air_AOD.Text" xml:space="preserve">
     <value>Atmosphere</value>
   </data>
@@ -2992,6 +3076,12 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="tabPage_System_AOD.Text" xml:space="preserve">
     <value>System</value>
+  </data>
+  <data name="tabControl_EditParameters_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 275</value>
+  </data>
+  <data name="splitContainer_EditParameters.SplitterDistance" type="System.Int32, mscorlib">
+    <value>331</value>
   </data>
   <data name="button_RandomPreview.Text" xml:space="preserve">
     <value>Random preview</value>
@@ -6223,10 +6313,6 @@ The data is not displayed correctly for all cities.</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 22</value>

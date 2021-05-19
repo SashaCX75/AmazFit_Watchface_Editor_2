@@ -612,6 +612,9 @@
     <Content Include="Tools\main.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Tools\SplashScreen.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="watch.ico" />
   </ItemGroup>
   <ItemGroup>

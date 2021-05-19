@@ -406,7 +406,7 @@
     <value>Дождливо ночью</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items28" xml:space="preserve">
-    <value>Солнечно ночью</value>
+    <value>Ясно ночью</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 22</value>
