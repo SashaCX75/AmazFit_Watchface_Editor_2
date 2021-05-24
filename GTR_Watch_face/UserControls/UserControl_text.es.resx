@@ -117,15 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_text.Text" xml:space="preserve">
-    <value>Valores numéricos</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkBox_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
-  </data>
-  <data name="checkBox_Use.Text" xml:space="preserve">
-    <value>Usar</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -143,9 +137,6 @@
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pegar coordenada X</value>
   </data>
   <data name="копироватьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -165,9 +156,6 @@
   </data>
   <data name="копироватьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
-    <value>Copiar</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -189,9 +177,6 @@
   <data name="вставитьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
   <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 82</value>
   </data>
@@ -212,9 +197,6 @@
   <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pegar coordenada Y</value>
-  </data>
   <data name="копироватьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -233,9 +215,6 @@
   </data>
   <data name="копироватьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Copiar</value>
   </data>
   <data name="вставитьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -257,11 +236,35 @@
   <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
   <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 82</value>
+  </data>
+  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 13</value>
+  </data>
+  <data name="label09.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="button_Copy_text.Text" xml:space="preserve">
+    <value>Copiar de la pantalla principal</value>
+  </data>
+  <data name="button_text.Text" xml:space="preserve">
+    <value>Valores numéricos</value>
+  </data>
+  <data name="checkBox_addZero.Text" xml:space="preserve">
+    <value>Agregar ceros a la izquierda</value>
+  </data>
+  <data name="checkBox_Use.Text" xml:space="preserve">
+    <value>Usar</value>
   </data>
   <data name="comboBox_alignment.Items" xml:space="preserve">
     <value>Izquierda</value>
@@ -272,44 +275,20 @@
   <data name="comboBox_alignment.Items2" xml:space="preserve">
     <value>Centrar</value>
   </data>
-  <data name="checkBox_addZero.Text" xml:space="preserve">
-    <value>Agregar ceros a la izquierda</value>
-  </data>
-  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Primera imagen</value>
   </data>
   <data name="label02.Text" xml:space="preserve">
     <value>Coordenadas</value>
   </data>
-  <data name="label08.Text" xml:space="preserve">
-    <value>Unidad</value>
-  </data>
-  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+  <data name="label03.Text" xml:space="preserve">
+    <value>Espaciado</value>
   </data>
   <data name="label04.Text" xml:space="preserve">
     <value>Icono</value>
   </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>Primera imagen</value>
-  </data>
-  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 13</value>
-  </data>
   <data name="label05.Text" xml:space="preserve">
     <value>Coordenadas de icono</value>
-  </data>
-  <data name="label09.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="label09.Text" xml:space="preserve">
-    <value>Alineación</value>
-  </data>
-  <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label03.Text" xml:space="preserve">
-    <value>Espaciado</value>
   </data>
   <data name="label06.Text" xml:space="preserve">
     <value>Imagen erronea</value>
@@ -317,7 +296,28 @@
   <data name="label07.Text" xml:space="preserve">
     <value>Separador decimal</value>
   </data>
-  <data name="button_Copy_text.Text" xml:space="preserve">
-    <value>Copiar de la pantalla principal</value>
+  <data name="label08.Text" xml:space="preserve">
+    <value>Unidad</value>
+  </data>
+  <data name="label09.Text" xml:space="preserve">
+    <value>Alineación</value>
+  </data>
+  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pegar coordenada Y</value>
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pegar coordenada X</value>
+  </data>
+  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Copiar</value>
   </data>
 </root>

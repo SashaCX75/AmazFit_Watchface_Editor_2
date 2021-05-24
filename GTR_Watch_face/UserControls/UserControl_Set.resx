@@ -237,6 +237,9 @@
   <data name="&gt;&gt;numericUpDown_Humidity_Set.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="numericUpDown_AirQuality_Set.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="numericUpDown_AirQuality_Set.Location" type="System.Drawing.Point, System.Drawing">
     <value>83, 104</value>
   </data>
@@ -632,6 +635,9 @@
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>16</value>
+  </data>
+  <data name="label16.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

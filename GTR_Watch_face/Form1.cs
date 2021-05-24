@@ -1796,6 +1796,7 @@ namespace AmazFit_Watchface_2
 
 
             JSON_read();
+            progressBar1.Visible = false;
             //Logger.WriteLine("Установили значения в соответствии с json файлом");
             string path = Path.GetDirectoryName(fullfilename);
             string newFullName = Path.Combine(path, "Watchface.ID");
@@ -2890,39 +2891,6 @@ namespace AmazFit_Watchface_2
         private void checkBox_WebB_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox_WebB.Checked) checkBox_WebW.Checked = false;
-            PreviewImage();
-        }
-
-        private void button_TextToJson_Click(object sender, EventArgs e)
-        {
-            string text = richTextBox_JsonText.Text;
-            //richTextBox_JsonText.Text = text;
-
-
-            try
-            {
-                Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
-                {
-                    DefaultValueHandling = DefaultValueHandling.Ignore,
-                    NullValueHandling = NullValueHandling.Ignore
-                });
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show(Properties.FormStrings.Message_JsonError_Text, Properties.FormStrings.Message_Error_Caption, 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
-            {
-                //DefaultValueHandling = DefaultValueHandling.Ignore,
-                NullValueHandling = NullValueHandling.Ignore
-            });
-            JsonToTree(richTextBox_JsonText.Text);
-            PreviewView = false;
-            JSON_read();
-            PreviewView = true;
             PreviewImage();
         }
 

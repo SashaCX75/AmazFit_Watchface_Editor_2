@@ -213,7 +213,7 @@
 </value>
   </data>
   <data name="button_Copy_icon.Text" xml:space="preserve">
-    <value>Copier deuis le cadran principal</value>
+    <value>Copier depuis le cadran principal</value>
   </data>
   <data name="button_icon.Text" xml:space="preserve">
     <value>Icône</value>
@@ -226,6 +226,9 @@
   </data>
   <data name="label02.Text" xml:space="preserve">
     <value>Coordonnées</value>
+  </data>
+  <data name="label06.Text" xml:space="preserve">
+    <value>Image 2</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
     <value>Coller</value>

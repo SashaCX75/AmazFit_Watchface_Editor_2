@@ -2547,14 +2547,14 @@ namespace AmazFit_Watchface_2
                     sValue_max = "";
                 }
             }
-            else sValue_max = sValue_cerent + sValue_min + sValue_max;
+            //else sValue_max = sValue_cerent + sValue_min + sValue_max;
 
             if (follow_min)
             {
                 sValue_cerent = sValue_cerent + sValue_min;
                 sValue_min = "";
             }
-            else sValue_min = sValue_cerent + sValue_min;
+            //else sValue_min = sValue_cerent + sValue_min;
 
             // надпись системным шрифтом
             if (userControl_SystemFont_Current != null && userControl_SystemFont_Current.checkBox_Use.Checked)
@@ -2701,14 +2701,14 @@ namespace AmazFit_Watchface_2
                     sValue_max = "";
                 }
             }
-            else sValue_max = sValue_cerent + sValue_min + sValue_max;
+            //else sValue_max = sValue_cerent + sValue_min + sValue_max;
 
             if (follow_min)
             {
                 sValue_cerent = sValue_cerent + sValue_min;
                 sValue_min = "";
             }
-            else sValue_min = sValue_cerent + sValue_min;
+            //else sValue_min = sValue_cerent + sValue_min;
 
             // надпись системным шрифтом по окружности
             if (userControl_FontRotate_Current != null && userControl_FontRotate_Current.checkBox_Use.Checked)
@@ -3125,14 +3125,14 @@ namespace AmazFit_Watchface_2
                     sValue_max = "";
                 }
             }
-            else sValue_max = sValue_cerent + sValue_min + sValue_max;
+            //else sValue_max = sValue_cerent + sValue_min + sValue_max;
 
             if (follow_min)
             {
                 sValue_cerent = sValue_cerent + sValue_min;
                 sValue_min = "";
             }
-            else sValue_min = sValue_cerent + sValue_min;
+            //else sValue_min = sValue_cerent + sValue_min;
 
             // надпись системным шрифтом (рассвет/закат)
             if (userControl_SystemFont_Current != null && userControl_SystemFont_Current.checkBox_Use.Checked)
@@ -3280,14 +3280,14 @@ namespace AmazFit_Watchface_2
                     sValue_max = "";
                 }
             }
-            else sValue_max = sValue_cerent + sValue_min + sValue_max;
+            //else sValue_max = sValue_cerent + sValue_min + sValue_max;
 
             if (follow_min)
             {
                 sValue_cerent = sValue_cerent + sValue_min;
                 sValue_min = "";
             }
-            else sValue_min = sValue_cerent + sValue_min;
+            //else sValue_min = sValue_cerent + sValue_min;
 
             // надпись системным шрифтом по окружности (рассвет/закат)
             if (userControl_FontRotate_Current != null && userControl_FontRotate_Current.checkBox_Use.Checked)

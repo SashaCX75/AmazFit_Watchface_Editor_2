@@ -171,9 +171,6 @@
   <data name="&gt;&gt;userControl_FontRotate.Type" xml:space="preserve">
     <value>AmazFit_Watchface_2.UserControl_FontRotate, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>UserControl_SystemFont_Group</value>
-  </data>
   <data name="&gt;&gt;userControl_FontRotate_goal.Name" xml:space="preserve">
     <value>userControl_FontRotate_goal</value>
   </data>
@@ -192,14 +189,8 @@
   <data name="userControl_FontRotate.FollowText" xml:space="preserve">
     <value>Следовать за</value>
   </data>
-  <data name="&gt;&gt;userControl_SystemFont.Name" xml:space="preserve">
-    <value>userControl_SystemFont</value>
-  </data>
   <data name="&gt;&gt;userControl_SystemFont.Type" xml:space="preserve">
     <value>AmazFit_Watchface_2.UserControl_SystemFont, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="button_SystemFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 23</value>
   </data>
   <data name="userControl_SystemFont_goal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -215,6 +206,9 @@
   </data>
   <data name="&gt;&gt;button_SystemFont.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="userControl_SystemFont_goal.FollowText" xml:space="preserve">
+    <value>Следовать за</value>
   </data>
   <data name="userControl_FontRotate.Size" type="System.Drawing.Size, System.Drawing">
     <value>427, 23</value>
@@ -240,11 +234,14 @@
   <data name="&gt;&gt;userControl_SystemFont_goal.Type" xml:space="preserve">
     <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="panel_SystemFont.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="button_SystemFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 23</value>
   </data>
   <data name="&gt;&gt;panel_SystemFont.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="userControl_FontRotate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="panel_SystemFont.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -270,8 +267,8 @@
   <data name="userControl_FontRotate_goal.FollowText" xml:space="preserve">
     <value>Следовать за</value>
   </data>
-  <data name="userControl_SystemFont_goal.FollowText" xml:space="preserve">
-    <value>Следовать за</value>
+  <data name="&gt;&gt;userControl_SystemFont.Name" xml:space="preserve">
+    <value>userControl_SystemFont</value>
   </data>
   <data name="panel_SystemFont.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -291,11 +288,14 @@
   <data name="&gt;&gt;userControl_FontRotate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;button_SystemFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel_SystemFont.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="userControl_FontRotate_goal.ButtonText" xml:space="preserve">
     <value>Системный шрифт по окружности (цель)</value>
+  </data>
+  <data name="&gt;&gt;button_SystemFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;userControl_FontRotate_goal.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
@@ -312,16 +312,13 @@
   <data name="userControl_SystemFont_goal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="userControl_FontRotate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserControl_SystemFont_Group</value>
   </data>
   <data name="userControl_SystemFont.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh</value>
   </metadata>
 </root>

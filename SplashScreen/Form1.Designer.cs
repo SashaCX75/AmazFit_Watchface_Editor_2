@@ -44,12 +44,11 @@ namespace SplashScreen
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::SplashScreen.Properties.Resources.SplashScreen;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::SplashScreen.Properties.Resources.smoke_150;
+            this.pictureBox1.Image = global::SplashScreen.Properties.Resources.SplashScreen;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(550, 530);
+            this.pictureBox1.Size = new System.Drawing.Size(599, 412);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -58,7 +57,7 @@ namespace SplashScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(550, 400);
+            this.ClientSize = new System.Drawing.Size(599, 412);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

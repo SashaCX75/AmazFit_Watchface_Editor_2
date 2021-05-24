@@ -358,6 +358,12 @@
     <EmbeddedResource Include="UserControls\UserControl_FontRotate.en.resx">
       <DependentUpon>UserControl_FontRotate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_FontRotate.es.resx">
+      <DependentUpon>UserControl_FontRotate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_FontRotate.fr.resx">
+      <DependentUpon>UserControl_FontRotate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_FontRotate.zh.resx">
       <DependentUpon>UserControl_FontRotate.cs</DependentUpon>
     </EmbeddedResource>
@@ -484,6 +490,9 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont.en.resx">
       <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont.es.resx">
+      <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont.fr.resx">
       <DependentUpon>UserControl_SystemFont.cs</DependentUpon>
     </EmbeddedResource>
@@ -500,13 +509,31 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.en.resx">
       <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.es.resx">
+      <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.fr.resx">
+      <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_Group.zh.resx">
       <DependentUpon>UserControl_SystemFont_Group.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.en.resx">
       <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.es.resx">
+      <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.fr.resx">
+      <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.en.resx">
+      <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.es.resx">
+      <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.fr.resx">
       <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_weather.resx">
@@ -539,6 +566,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text.zh.resx">
       <DependentUpon>UserControl_text.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_text_goal.resx">
+      <DependentUpon>UserControl_text_goal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_text_weather.en.resx">
       <DependentUpon>UserControl_text_weather.cs</DependentUpon>

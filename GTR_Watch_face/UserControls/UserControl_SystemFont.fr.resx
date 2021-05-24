@@ -216,15 +216,18 @@
     <value>Copier depuis le cadran principal</value>
   </data>
   <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>Police système</value>
+    <value>Rotation du texte</value>
   </data>
-  <data name="checkBox_SystemFont_addZero.Text" xml:space="preserve">
+  <data name="checkBox_addZero.Text" xml:space="preserve">
     <value>Ajouter les zéros</value>
+  </data>
+  <data name="checkBox_separator.Text" xml:space="preserve">
+    <value>Séparateur</value>
   </data>
   <data name="checkBox_SystemFont_unit.Text" xml:space="preserve">
     <value>Unités</value>
   </data>
-  <data name="checkBox_SystemFont_Use.Text" xml:space="preserve">
+  <data name="checkBox_Use.Text" xml:space="preserve">
     <value>Activer</value>
   </data>
   <data name="label01.Text" xml:space="preserve">

@@ -130,11 +130,12 @@
   <data name="label02.Location" type="System.Drawing.Point, System.Drawing">
     <value>172, 41</value>
   </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItemY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;numericUpDown_SystemFont_size.Name" xml:space="preserve">
     <value>numericUpDown_SystemFont_size</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBox_addZero.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="вставитьКоординатуYToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -156,7 +157,6 @@
   <data name="button_SystemFont.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="checkBox_Use.TabIndex" type="System.Int32, mscorlib">
     <value>142</value>
   </data>
@@ -169,6 +169,9 @@
   <data name="&gt;&gt;button_SystemFont.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;numericUpDown_SystemFont_size.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
   </data>
@@ -176,19 +179,16 @@
     <value>153</value>
   </data>
   <data name="checkBox_follow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 88</value>
+    <value>261, 85</value>
   </data>
   <data name="&gt;&gt;checkBox_Use.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label05.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label05.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
   </data>
-  <data name="&gt;&gt;checkBox_Use.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
+  <data name="&gt;&gt;label04.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="checkBox_Use.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -200,23 +200,20 @@
   <data name="checkBox_separator.Text" xml:space="preserve">
     <value>Разделитель</value>
   </data>
-  <data name="label04.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;comboBox_SystemFont_color.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;button_Copy_SystemFont.ZOrder" xml:space="preserve">
-    <value>18</value>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 82</value>
   </data>
-  <data name="label05.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Use.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label03.Location" type="System.Drawing.Point, System.Drawing">
     <value>258, 41</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_SystemFontY.Name" xml:space="preserve">
-    <value>numericUpDown_SystemFontY</value>
   </data>
   <data name="comboBox_SystemFont_color.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 21</value>
@@ -224,23 +221,23 @@
   <data name="numericUpDown_SystemFontY.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
   </data>
-  <data name="&gt;&gt;button_Copy_SystemFont.Name" xml:space="preserve">
-    <value>button_Copy_SystemFont</value>
+  <data name="checkBox_SystemFont_unit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 85</value>
   </data>
   <data name="&gt;&gt;label05.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label03.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;checkBox_Use.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
   </data>
   <data name="label07.TabIndex" type="System.Int32, mscorlib">
     <value>146</value>
   </data>
-  <data name="&gt;&gt;label03.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;вставитьToolStripMenuItemX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label04.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;numericUpDown_SystemFont_spacing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Name" xml:space="preserve">
     <value>вставитьКоординатуХToolStripMenuItem</value>
@@ -251,11 +248,14 @@
   <data name="&gt;&gt;label01.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_SystemFont_size.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="numericUpDown_SystemFont_size.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
     <value>Вставить</value>
+  </data>
+  <data name="checkBox_addZero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="checkBox_Use.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -277,9 +277,6 @@
         uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="panel_SystemFont.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="&gt;&gt;label05.Name" xml:space="preserve">
     <value>label05</value>
   </data>
@@ -288,6 +285,9 @@
   </data>
   <data name="&gt;&gt;label04.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="checkBox_separator.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFontY.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -304,20 +304,14 @@
   <data name="checkBox_separator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label04.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="numericUpDown_SystemFont_angle.Location" type="System.Drawing.Point, System.Drawing">
     <value>261, 58</value>
   </data>
-  <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>Системный шрифт повернутый</value>
-  </data>
   <data name="checkBox_addZero.TabIndex" type="System.Int32, mscorlib">
     <value>143</value>
-  </data>
-  <data name="&gt;&gt;копироватьToolStripMenuItemX.Name" xml:space="preserve">
-    <value>копироватьToolStripMenuItemX</value>
   </data>
   <data name="button_SystemFont.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -330,9 +324,6 @@
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFontY.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_SystemFont.Name" xml:space="preserve">
-    <value>button_SystemFont</value>
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFontX.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -355,17 +346,14 @@
   <data name="&gt;&gt;label05.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="button_SystemFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
     <value>Копировать</value>
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFont_spacing.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="checkBox_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 30</value>
+  <data name="&gt;&gt;comboBox_SystemFont_color.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 41</value>
@@ -373,32 +361,23 @@
   <data name="&gt;&gt;contextMenuStrip_X.Name" xml:space="preserve">
     <value>contextMenuStrip_X</value>
   </data>
-  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
-  </data>
-  <data name="&gt;&gt;label06.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
-  </data>
   <data name="panel_SystemFont.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 150</value>
-  </data>
-  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFontX.Name" xml:space="preserve">
     <value>numericUpDown_SystemFontX</value>
   </data>
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 82</value>
+  </data>
   <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
     <value>Копировать</value>
   </data>
-  <data name="numericUpDown_SystemFont_size.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="label03.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="numericUpDown_SystemFont_spacing.TabIndex" type="System.Int32, mscorlib">
-    <value>157</value>
-  </data>
-  <data name="&gt;&gt;label04.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;button_Copy_SystemFont.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="label01.TabIndex" type="System.Int32, mscorlib">
     <value>144</value>
@@ -406,17 +385,23 @@
   <data name="label02.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;вставитьКоординатуYToolStripMenuItem.Name" xml:space="preserve">
-    <value>вставитьКоординатуYToolStripMenuItem</value>
+  <data name="checkBox_SystemFont_unit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 115</value>
   </data>
   <data name="&gt;&gt;checkBox_follow.Name" xml:space="preserve">
     <value>checkBox_follow</value>
   </data>
-  <data name="label01.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;button_SystemFont.Name" xml:space="preserve">
+    <value>button_SystemFont</value>
   </data>
   <data name="label07.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="копироватьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -434,20 +419,26 @@
         vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button_Copy_SystemFont.TabIndex" type="System.Int32, mscorlib">
-    <value>150</value>
+  <data name="&gt;&gt;вставитьToolStripMenuItemY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label07.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
+  <data name="numericUpDown_SystemFont_angle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
   <data name="label01.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
   </data>
   <data name="label02.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label04.TabIndex" type="System.Int32, mscorlib">
     <value>156</value>
+  </data>
+  <data name="&gt;&gt;label07.Name" xml:space="preserve">
+    <value>label07</value>
   </data>
   <data name="label07.Text" xml:space="preserve">
     <value>Цвет</value>
@@ -472,23 +463,17 @@
   <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="label07.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 30</value>
-  </data>
   <data name="checkBox_follow.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;panel_SystemFont.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="label06.Text" xml:space="preserve">
+    <value>Y:</value>
   </data>
-  <data name="&gt;&gt;button_SystemFont.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label03.TabIndex" type="System.Int32, mscorlib">
-    <value>136</value>
+  <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
   </data>
   <data name="checkBox_separator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 30</value>
+    <value>160, 35</value>
   </data>
   <data name="label02.Text" xml:space="preserve">
     <value>Размер</value>
@@ -496,14 +481,14 @@
   <data name="&gt;&gt;label01.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel_SystemFont.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;checkBox_follow.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
     <value>Вставить</value>
+  </data>
+  <data name="numericUpDown_SystemFont_spacing.TabIndex" type="System.Int32, mscorlib">
+    <value>157</value>
   </data>
   <data name="button_Copy_SystemFont.Text" xml:space="preserve">
     <value>Скопировать с основного экрана</value>
@@ -532,14 +517,17 @@
   <data name="label06.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="comboBox_SystemFont_color.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 121</value>
+  </data>
   <data name="label06.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 60</value>
   </data>
   <data name="label04.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="numericUpDown_SystemFont_angle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="numericUpDown_SystemFont_size.TabIndex" type="System.Int32, mscorlib">
+    <value>154</value>
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFont_angle.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
@@ -562,8 +550,8 @@
   <data name="button_SystemFont.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 210</value>
+  <data name="checkBox_SystemFont_unit.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="comboBox_SystemFont_color.TabIndex" type="System.Int32, mscorlib">
     <value>152</value>
@@ -574,9 +562,6 @@
   <data name="&gt;&gt;contextMenuStrip_Y.Name" xml:space="preserve">
     <value>contextMenuStrip_Y</value>
   </data>
-  <data name="numericUpDown_SystemFont_size.TabIndex" type="System.Int32, mscorlib">
-    <value>154</value>
-  </data>
   <data name="checkBox_SystemFont_unit.Text" xml:space="preserve">
     <value>Единицы измерения</value>
   </data>
@@ -586,20 +571,17 @@
   <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel_SystemFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 23</value>
-  </data>
   <data name="&gt;&gt;label06.Name" xml:space="preserve">
     <value>label06</value>
   </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItemY.Name" xml:space="preserve">
-    <value>вставитьToolStripMenuItemY</value>
+  <data name="label04.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;checkBox_SystemFont_unit.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="label07.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
   </data>
-  <data name="&gt;&gt;label07.Name" xml:space="preserve">
-    <value>label07</value>
+  <data name="&gt;&gt;копироватьToolStripMenuItemX.Name" xml:space="preserve">
+    <value>копироватьToolStripMenuItemX</value>
   </data>
   <data name="&gt;&gt;comboBox_SystemFont_color.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
@@ -621,8 +603,11 @@
         5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="numericUpDown_SystemFont_angle.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;numericUpDown_SystemFont_spacing.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;button_Copy_SystemFont.Name" xml:space="preserve">
+    <value>button_Copy_SystemFont</value>
   </data>
   <data name="button_Copy_SystemFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -639,8 +624,8 @@
   <data name="&gt;&gt;checkBox_SystemFont_unit.Name" xml:space="preserve">
     <value>checkBox_SystemFont_unit</value>
   </data>
-  <data name="comboBox_SystemFont_color.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;label06.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
   </data>
   <data name="&gt;&gt;label07.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -651,44 +636,41 @@
   <data name="numericUpDown_SystemFontY.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 58</value>
   </data>
-  <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
   </data>
   <data name="button_SystemFont.TabIndex" type="System.Int32, mscorlib">
     <value>200</value>
   </data>
-  <data name="label05.Text" xml:space="preserve">
-    <value>X:</value>
-  </data>
   <data name="копироватьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 26</value>
   </data>
-  <data name="checkBox_addZero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="numericUpDown_SystemFont_angle.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="checkBox_SystemFont_unit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 30</value>
+    <value>160, 35</value>
   </data>
   <data name="numericUpDown_SystemFont_spacing.Location" type="System.Drawing.Point, System.Drawing">
     <value>347, 58</value>
   </data>
-  <data name="&gt;&gt;comboBox_SystemFont_color.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="label06.TabIndex" type="System.Int32, mscorlib">
     <value>127</value>
+  </data>
+  <data name="numericUpDown_SystemFontX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFont_angle.Name" xml:space="preserve">
     <value>numericUpDown_SystemFont_angle</value>
   </data>
-  <data name="checkBox_SystemFont_unit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="panel_SystemFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
   </data>
   <data name="&gt;&gt;checkBox_addZero.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label03.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 210</value>
   </data>
   <data name="label03.Text" xml:space="preserve">
     <value>Угол</value>
@@ -696,38 +678,38 @@
   <data name="&gt;&gt;checkBox_Use.Name" xml:space="preserve">
     <value>checkBox_Use</value>
   </data>
-  <data name="numericUpDown_SystemFont_spacing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="&gt;&gt;panel_SystemFont.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 82</value>
+  <data name="button_SystemFont.Text" xml:space="preserve">
+    <value>Системный шрифт повернутый</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl_SystemFont</value>
   </data>
-  <data name="numericUpDown_SystemFontY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="label04.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;comboBox_SystemFont_color.Name" xml:space="preserve">
-    <value>comboBox_SystemFont_color</value>
+  <data name="panel_SystemFont.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="checkBox_separator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 116</value>
+    <value>93, 115</value>
   </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItemX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="comboBox_SystemFont_color.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_SystemFont_spacing.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="label05.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="button_Copy_SystemFont.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
   </data>
   <data name="panel_SystemFont.TabIndex" type="System.Int32, mscorlib">
     <value>201</value>
+  </data>
+  <data name="&gt;&gt;button_Copy_SystemFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -738,26 +720,119 @@
   <data name="label04.Location" type="System.Drawing.Point, System.Drawing">
     <value>344, 41</value>
   </data>
+  <data name="label01.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
   <data name="&gt;&gt;label07.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="&gt;&gt;вставитьКоординатуYToolStripMenuItem.Name" xml:space="preserve">
+    <value>вставитьКоординатуYToolStripMenuItem</value>
   </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 82</value>
-  </data>
-  <data name="label07.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_SystemFont_size.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
+  <data name="&gt;&gt;button_SystemFont.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
   </data>
   <data name="&gt;&gt;checkBox_SystemFont_unit.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
+  </data>
+  <data name="label07.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
+  </data>
+  <data name="&gt;&gt;checkBox_SystemFont_unit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;checkBox_addZero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_separator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="&gt;&gt;label04.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
+  </data>
+  <data name="label03.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="&gt;&gt;label03.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label07.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="checkBox_follow.TabIndex" type="System.Int32, mscorlib">
+    <value>202</value>
+  </data>
+  <data name="checkBox_follow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 35</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_SystemFontY.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
+  </data>
+  <data name="label05.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 60</value>
+  </data>
+  <data name="numericUpDown_SystemFont_spacing.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_SystemFontY.Name" xml:space="preserve">
+    <value>numericUpDown_SystemFontY</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItemX.Name" xml:space="preserve">
+    <value>вставитьToolStripMenuItemX</value>
+  </data>
+  <data name="label07.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="numericUpDown_SystemFontX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 58</value>
+  </data>
+  <data name="&gt;&gt;panel_SystemFont.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="button_Copy_SystemFont.TabIndex" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="label07.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 88</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Координаты</value>
+  </data>
+  <data name="&gt;&gt;checkBox_separator.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label02.Name" xml:space="preserve">
+    <value>label02</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItemY.Name" xml:space="preserve">
+    <value>вставитьToolStripMenuItemY</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label05.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставить координату Х</value>
+  </data>
+  <data name="label03.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="checkBox_follow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="копироватьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -775,101 +850,17 @@
         vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="checkBox_SystemFont_unit.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_SystemFont_spacing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_addZero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_separator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
-  </data>
-  <data name="&gt;&gt;label04.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
-  </data>
-  <data name="numericUpDown_SystemFontX.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
-  </data>
-  <data name="&gt;&gt;label03.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="checkBox_follow.TabIndex" type="System.Int32, mscorlib">
-    <value>202</value>
-  </data>
-  <data name="checkBox_separator.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label05.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
-  </data>
-  <data name="numericUpDown_SystemFont_spacing.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBox_SystemFont_color.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 121</value>
-  </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItemX.Name" xml:space="preserve">
-    <value>вставитьToolStripMenuItemX</value>
-  </data>
-  <data name="label07.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="numericUpDown_SystemFontX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 58</value>
-  </data>
-  <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 13</value>
-  </data>
-  <data name="&gt;&gt;label02.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label07.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 88</value>
-  </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>Координаты</value>
-  </data>
-  <data name="&gt;&gt;checkBox_separator.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label02.Name" xml:space="preserve">
-    <value>label02</value>
-  </data>
-  <data name="label06.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label05.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
-  </data>
-  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вставить координату Х</value>
-  </data>
-  <data name="checkBox_Use.Text" xml:space="preserve">
-    <value>Использовать</value>
-  </data>
-  <data name="checkBox_follow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label03.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="numericUpDown_SystemFont_size.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 58</value>
+  <data name="label05.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;button_Copy_SystemFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label02.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label02.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label06.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -877,26 +868,29 @@
   <data name="&gt;&gt;numericUpDown_SystemFontX.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;comboBox_SystemFont_color.Name" xml:space="preserve">
+    <value>comboBox_SystemFont_color</value>
+  </data>
   <data name="label01.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label06.Text" xml:space="preserve">
-    <value>Y:</value>
+  <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
-  <data name="label02.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label03.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBox_follow.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 30</value>
+    <value>160, 35</value>
   </data>
-  <data name="label04.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="label05.Text" xml:space="preserve">
+    <value>X:</value>
   </data>
-  <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 116</value>
+  <data name="numericUpDown_SystemFontY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
   <data name="&gt;&gt;button_SystemFont.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -904,8 +898,8 @@
   <data name="label06.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="checkBox_addZero.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="label06.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
   </data>
   <data name="&gt;&gt;label03.Name" xml:space="preserve">
     <value>label03</value>
@@ -913,11 +907,11 @@
   <data name="&gt;&gt;checkBox_separator.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_SystemFontY.Parent" xml:space="preserve">
+  <data name="&gt;&gt;numericUpDown_SystemFont_size.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="&gt;&gt;checkBox_Use.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="button_SystemFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;numericUpDown_SystemFontX.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
@@ -931,14 +925,20 @@
   <data name="&gt;&gt;копироватьToolStripMenuItemY.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBox_SystemFont_unit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 88</value>
+  <data name="checkBox_Use.Text" xml:space="preserve">
+    <value>Использовать</value>
   </data>
   <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
     <value>Вставить координату Y</value>
+  </data>
+  <data name="numericUpDown_SystemFont_size.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 58</value>
+  </data>
+  <data name="numericUpDown_SystemFont_spacing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
   <metadata name="contextMenuStrip_Y.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>165, 16</value>

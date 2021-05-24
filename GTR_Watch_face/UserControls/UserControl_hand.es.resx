@@ -135,9 +135,6 @@
   <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pegar coordenada Y</value>
-  </data>
   <data name="копироватьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -156,9 +153,6 @@
   </data>
   <data name="копироватьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Copiar</value>
   </data>
   <data name="вставитьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -180,9 +174,6 @@
   <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
   <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 82</value>
   </data>
@@ -203,9 +194,6 @@
   <data name="вставитьКоординатуХToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pegar coordenada X</value>
-  </data>
   <data name="копироватьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -224,9 +212,6 @@
   </data>
   <data name="копироватьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
-    <value>Copiar</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -248,49 +233,64 @@
   <data name="вставитьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
   <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 82</value>
   </data>
   <data name="checkBox_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
-  <data name="checkBox_hand_Use.Text" xml:space="preserve">
-    <value>Usar</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>Ángulo final</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Ángulo inicial</value>
-  </data>
-  <data name="label03.Text" xml:space="preserve">
-    <value>Desplazamiento del punto de rotación</value>
-  </data>
-  <data name="label02.Text" xml:space="preserve">
-    <value>Coordenadas del centro de rotación</value>
-  </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>Imagen dial</value>
-  </data>
-  <data name="label09.Text" xml:space="preserve">
-    <value>Coodenadas imagen central</value>
-  </data>
-  <data name="label08.Text" xml:space="preserve">
-    <value>Imagen Central</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>Coordenadas de la imagen de fondo</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Imagen de fondo</value>
-  </data>
   <data name="button_Copy_hand.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
   </data>
   <data name="button_hand.Text" xml:space="preserve">
     <value>Dial</value>
+  </data>
+  <data name="checkBox_hand_Use.Text" xml:space="preserve">
+    <value>Usar</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Imagen dial</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>Coordenadas del centro de rotación</value>
+  </data>
+  <data name="label03.Text" xml:space="preserve">
+    <value>Desplazamiento del punto de rotación</value>
+  </data>
+  <data name="label08.Text" xml:space="preserve">
+    <value>Imagen Central</value>
+  </data>
+  <data name="label09.Text" xml:space="preserve">
+    <value>Coodenadas imagen central</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Ángulo inicial</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Ángulo final</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Imagen de fondo</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Coordenadas de la imagen de fondo</value>
+  </data>
+  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pegar coordenada Y</value>
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pegar coordenada X</value>
+  </data>
+  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Copiar</value>
   </data>
 </root>

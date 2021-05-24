@@ -36,29 +36,9 @@ namespace AmazFit_Watchface_2
             // 
             resources.ApplyResources(this.label08, "label08");
             // 
-            // label06
-            // 
-            resources.ApplyResources(this.label06, "label06");
-            // 
             // label07
             // 
             resources.ApplyResources(this.label07, "label07");
-            // 
-            // label02
-            // 
-            resources.ApplyResources(this.label02, "label02");
-            // 
-            // label1084
-            // 
-            resources.ApplyResources(this.label1084, "label1084");
-            // 
-            // label1085
-            // 
-            resources.ApplyResources(this.label1085, "label1085");
-            // 
-            // button_text
-            // 
-            resources.ApplyResources(this.button_text, "button_text");
             // 
             // checkBox_follow
             // 
