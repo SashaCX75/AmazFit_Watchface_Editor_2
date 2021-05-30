@@ -3722,6 +3722,13 @@ namespace AmazFit_Watchface_2
                 if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
                 ScreenIdle.Activity.Add(activityMax);
             }
+
+            if (activityPictures != null)
+            {
+                activityPictures.Type = "Weather";
+                if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
+                ScreenIdle.Activity.Add(activityPictures);
+            }
         }
 
         private void AddActivitySunrise_AOD(ScreenIdle ScreenIdle, UserControl_pictures panel_pictures,
