@@ -715,6 +715,8 @@ namespace AmazFit_Watchface_2
             userPanel_hand = userControl_hand_Weather;
             userPanel_scaleCircle = userControl_scaleCircle_Weather;
             userPanel_scaleLinear = userControl_scaleLinear_Weather;
+            UserControl_SystemFont_GroupWeather userControl_SystemFont_Group_Weather
+                = userControl_SystemFont_GroupWeather;
             userControl_icon = userControl_icon_Weather;
             int value_current = Watch_Face_Preview_Set.Weather.Temperature;
             int value_min = Watch_Face_Preview_Set.Weather.TemperatureMin;
@@ -723,7 +725,7 @@ namespace AmazFit_Watchface_2
             bool showTemperature = Watch_Face_Preview_Set.Weather.showTemperature;
 
             DrawWeather(gPanel, userPanel_pictures_weather, userPanel_text_weather_Current, userPanel_text_weather_Min,
-                userPanel_text_weather_Max, userControl_SystemFont_GroupWeather, userControl_icon, value_current,
+                userPanel_text_weather_Max, userControl_SystemFont_Group_Weather, userControl_icon, value_current,
                 value_min, value_max, icon_index, BBorder, showTemperature);
 
             //// погода картинками
@@ -4061,11 +4063,11 @@ namespace AmazFit_Watchface_2
         {
             while (spacing > 127)
             {
-                spacing = spacing - 255;
+                spacing = spacing - 256;
             }
-            while (spacing < -127)
+            while (spacing < -128)
             {
-                spacing = spacing + 255;
+                spacing = spacing + 256;
             }
 
             int result = 0;
@@ -4109,7 +4111,7 @@ namespace AmazFit_Watchface_2
             if (ActivityType == 17) value_lenght = 5;
             int DateLenght = width * value_lenght + 1;
             if (spacing > 0) DateLenght = DateLenght + spacing * (value_lenght - 1);
-            else DateLenght = DateLenght - spacing;
+            //else DateLenght = DateLenght - spacing;
 
             int PointX = 0;
             int PointY = y;

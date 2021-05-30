@@ -2697,12 +2697,19 @@ namespace AmazFit_Watchface_2
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            //richTextBox_JsonText.Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
-            //{
-            //    //DefaultValueHandling = DefaultValueHandling.Ignore,
-            //    NullValueHandling = NullValueHandling.Ignore
-            //});
-            //PreviewView = false;
+            SetPreferences(userControl_Set12);
+            if (!userControl_Set1.Collapsed) SetPreferences(userControl_Set1);
+            if (!userControl_Set2.Collapsed) SetPreferences(userControl_Set2);
+            if (!userControl_Set3.Collapsed) SetPreferences(userControl_Set3);
+            if (!userControl_Set4.Collapsed) SetPreferences(userControl_Set4);
+            if (!userControl_Set5.Collapsed) SetPreferences(userControl_Set5);
+            if (!userControl_Set6.Collapsed) SetPreferences(userControl_Set6);
+            if (!userControl_Set7.Collapsed) SetPreferences(userControl_Set7);
+            if (!userControl_Set8.Collapsed) SetPreferences(userControl_Set8);
+            if (!userControl_Set9.Collapsed) SetPreferences(userControl_Set9);
+            if (!userControl_Set10.Collapsed) SetPreferences(userControl_Set10);
+            if (!userControl_Set11.Collapsed) SetPreferences(userControl_Set11);
+
             PreviewView = true;
             PreviewImage();
         }

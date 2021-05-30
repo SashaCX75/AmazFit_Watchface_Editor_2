@@ -2539,8 +2539,6 @@ namespace AmazFit_Watchface_2
                 bool add_zero = userControl_SystemFontGoal.checkBox_addZero.Checked;
                 bool separator = userControl_SystemFontGoal.checkBox_separator.Checked;
 
-                if (activity == null) activity = new Activity();
-                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
                 DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
                 digitalCommonDigit.Type = "Min";
                 if (!follow) digitalCommonDigit.CombingMode = "Single";
@@ -2569,7 +2567,18 @@ namespace AmazFit_Watchface_2
                 digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFontGoal.checkBoxGetUnit();
                 digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFontGoal.comboBoxGetColorString();
 
-                activity.Digits.Add(digitalCommonDigit);
+                if (follow)
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+                else
+                {
+                    if (activityMin == null) activityMin = new Activity();
+                    if (activityMin.Digits == null) activityMin.Digits = new List<DigitalCommonDigit>();
+                    activityMin.Digits.Add(digitalCommonDigit);
+                }
             }
 
             // данные системным шрифтом по окружности
@@ -2633,8 +2642,6 @@ namespace AmazFit_Watchface_2
                 bool add_zero = userControl_FontRotateGoal.checkBox_addZero.Checked;
                 bool separator = userControl_FontRotateGoal.checkBox_separator.Checked;
 
-                if (activity == null) activity = new Activity();
-                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
                 DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
                 digitalCommonDigit.Type = "Min";
                 if (!follow) digitalCommonDigit.CombingMode = "Single";
@@ -2666,7 +2673,18 @@ namespace AmazFit_Watchface_2
                 digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotateGoal.checkBoxGetUnit();
                 digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotateGoal.comboBoxGetColorString();
 
-                activity.Digits.Add(digitalCommonDigit);
+                if (follow)
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+                else
+                {
+                    if (activityMin == null) activityMin = new Activity();
+                    if (activityMin.Digits == null) activityMin.Digits = new List<DigitalCommonDigit>();
+                    activityMin.Digits.Add(digitalCommonDigit);
+                }
             }
 
             // данные стрелкой
@@ -2816,6 +2834,7 @@ namespace AmazFit_Watchface_2
                         activityMin.ProgressBar.LinearSettings.EndX = endX;
                         activityMin.ProgressBar.LinearSettings.EndY = (long)numericUpDownY.Value;
                         activityMin.ProgressBar.Width = (long)numericUpDown_width.Value;
+                        activityMin.ProgressBar.Flatness = panel_scaleLinear.comboBoxGetFlatness();
                     }
                     else
                     {
@@ -2841,6 +2860,7 @@ namespace AmazFit_Watchface_2
                         activity.ProgressBar.LinearSettings.EndX = endX;
                         activity.ProgressBar.LinearSettings.EndY = (long)numericUpDownY.Value;
                         activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                        activity.ProgressBar.Flatness = panel_scaleLinear.comboBoxGetFlatness();
                     }
                 }
 
@@ -2900,6 +2920,7 @@ namespace AmazFit_Watchface_2
             Activity activity = null;
             Activity activityMin = null;
             Activity activityMax = null;
+            Activity activityPictures = null;
 
             // данные картинками
             if (panel_pictures.checkBox_pictures_Use.Checked)
@@ -2909,17 +2930,17 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDownX = panel_pictures.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = panel_pictures.numericUpDown_picturesY;
 
-                    if (activity == null) activity = new Activity();
-                    activity.ImageProgress = new ImageProgress();
-                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
-                    activity.ImageProgress.Coordinates = new List<Coordinates>();
-                    activity.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
-                    activity.ImageProgress.ImageSet.ImagesCount = 29;
-                    //activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    if (activityPictures == null) activityPictures = new Activity();
+                    activityPictures.ImageProgress = new ImageProgress();
+                    activityPictures.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activityPictures.ImageProgress.Coordinates = new List<Coordinates>();
+                    activityPictures.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
+                    activityPictures.ImageProgress.ImageSet.ImagesCount = 29;
+                    //activityPictures.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
                     Coordinates coordinates = new Coordinates();
                     coordinates.X = (long)numericUpDownX.Value;
                     coordinates.Y = (long)numericUpDownY.Value;
-                    activity.ImageProgress.Coordinates.Add(coordinates);
+                    activityPictures.ImageProgress.Coordinates.Add(coordinates);
                 }
             }
 

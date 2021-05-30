@@ -709,6 +709,8 @@ namespace AmazFit_Watchface_2
             userPanel_hand = userControl_hand_Weather_AOD;
             userPanel_scaleCircle = userControl_scaleCircle_Weather_AOD;
             userPanel_scaleLinear = userControl_scaleLinear_Weather_AOD;
+            UserControl_SystemFont_GroupWeather userControl_SystemFont_Group_Weather
+                = userControl_SystemFont_GroupWeather_AOD;
             userControl_icon = userControl_icon_Weather_AOD;
             int value_current = Watch_Face_Preview_Set.Weather.Temperature;
             int value_min = Watch_Face_Preview_Set.Weather.TemperatureMin;
@@ -717,7 +719,7 @@ namespace AmazFit_Watchface_2
             bool showTemperature = Watch_Face_Preview_Set.Weather.showTemperature;
 
             DrawWeather(gPanel, userPanel_pictures_weather, userPanel_text_weather_Current, userPanel_text_weather_Min,
-                userPanel_text_weather_Max, userControl_SystemFont_GroupWeather, userControl_icon, value_current,
+                userPanel_text_weather_Max, userControl_SystemFont_Group_Weather, userControl_icon, value_current,
                 value_min, value_max, icon_index, BBorder, showTemperature);
 
             #endregion
