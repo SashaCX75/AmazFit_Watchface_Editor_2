@@ -9119,8 +9119,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAXgBBAF4AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
+        DQAAAk1TRnQBSQFMAgEBBgEAAXgBBAF8AQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -9178,7 +9178,7 @@
         AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
         AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHws=
+        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
 </value>
   </data>
   <data name="tabControl_EditParameters.ToolTip" xml:space="preserve">
@@ -19395,5 +19395,208 @@
   </data>
   <data name="contextMenuStrip_XY_InTable.ToolTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="groupBox_ActivityGoal_AOD.Text" xml:space="preserve">
+    <value>*根据手表设置显示步数或卡路里。</value>
+  </data>
+  <data name="label_Sunrise.Text" xml:space="preserve">
+    <value>*日出和日落的数据因城市而异。
+并非所有城市的数据都正确显示。</value>
+  </data>
+  <data name="label_Sunrise_AOD.Text" xml:space="preserve">
+    <value>*日出和日落的数据因城市而异。
+并非所有城市的数据都正确显示。</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Calories_AOD.Text" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="radioButton_ActivityGoal_Steps_AOD.Text" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowRotatText_Max" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowRotatText_Min" xml:space="preserve">
+    <value>跟随日出/日落</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowText_Max" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise.FollowText_Min" xml:space="preserve">
+    <value>跟随日出/日落</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowRotatText_Max" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowRotatText_Min" xml:space="preserve">
+    <value>跟随日出/日落</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowText_Max" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_SystemFont_GroupSunrise_AOD.FollowText_Min" xml:space="preserve">
+    <value>跟随日出/日落</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowRotatText_Max" xml:space="preserve">
+    <value>跟随最低温度</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowRotatText_Min" xml:space="preserve">
+    <value>跟随当前温度</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowText_Max" xml:space="preserve">
+    <value>跟随最低温度</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather.FollowText_Min" xml:space="preserve">
+    <value>跟随当前温度</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（活动目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（活动目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.FollowRotateText" xml:space="preserve">
+    <value>跟随卡路里</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.FollowText" xml:space="preserve">
+    <value>跟随卡路里</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（卡路里）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（卡路里）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随卡路里</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.FollowText" xml:space="preserve">
+    <value>跟随卡路里</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（卡路里）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（卡路里）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（脂肪燃烧目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（脂肪燃烧目标）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（站立数）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（站立数）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随步数</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.FollowText" xml:space="preserve">
+    <value>跟随步数</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.FontRotateText" xml:space="preserve">
+    <value>圆形系统字体（目标步数）</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.SystemFontText" xml:space="preserve">
+    <value>旋转系统字体（目标步数）</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal_AOD.ButtonText" xml:space="preserve">
+    <value>数值（活动目标）</value>
+  </data>
+  <data name="userControl_text_goal_ActivityGoal_AOD.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_text_goal_Calories.ButtonText" xml:space="preserve">
+    <value>数值（卡路里目标）</value>
+  </data>
+  <data name="userControl_text_goal_Calories.FollowText" xml:space="preserve">
+    <value>跟随卡路里</value>
+  </data>
+  <data name="userControl_text_goal_Calories_AOD.ButtonText" xml:space="preserve">
+    <value>数值（卡路里目标）</value>
+  </data>
+  <data name="userControl_text_goal_Calories_AOD.FollowText" xml:space="preserve">
+    <value>跟随卡路里</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning_AOD.ButtonText" xml:space="preserve">
+    <value>数值脂（肪燃烧目标）</value>
+  </data>
+  <data name="userControl_text_goal_FatBurning_AOD.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_text_goal_StandUp_AOD.ButtonText" xml:space="preserve">
+    <value>数值（站立数）</value>
+  </data>
+  <data name="userControl_text_goal_StandUp_AOD.FollowText" xml:space="preserve">
+    <value>跟随基础数值</value>
+  </data>
+  <data name="userControl_text_goal_Steps_AOD.ButtonText" xml:space="preserve">
+    <value>数值（站立数目标）</value>
+  </data>
+  <data name="userControl_text_goal_Steps_AOD.FollowText" xml:space="preserve">
+    <value>跟随步数</value>
+  </data>
+  <data name="userControl_text_Sunrise.ButtonText" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="userControl_text_Sunrise.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>分隔符</value>
+  </data>
+  <data name="userControl_text_SunriseSunset.ButtonText" xml:space="preserve">
+    <value>最近的日出/日落</value>
+  </data>
+  <data name="userControl_text_SunriseSunset.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>分隔符</value>
+  </data>
+  <data name="userControl_text_SunriseSunset_AOD.ButtonText" xml:space="preserve">
+    <value>最近的日出/日落</value>
+  </data>
+  <data name="userControl_text_SunriseSunset_AOD.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>分隔符</value>
+  </data>
+  <data name="userControl_text_Sunrise_AOD.ButtonText" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="userControl_text_Sunrise_AOD.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>分隔符</value>
+  </data>
+  <data name="userControl_text_Sunset.ButtonText" xml:space="preserve">
+    <value>日落</value>
+  </data>
+  <data name="userControl_text_Sunset.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>分隔符</value>
+  </data>
+  <data name="userControl_text_Sunset.FollowText" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_text_Sunset_AOD.ButtonText" xml:space="preserve">
+    <value>日落</value>
+  </data>
+  <data name="userControl_text_Sunset_AOD.ButtonTextDecimalPoint" xml:space="preserve">
+    <value>分隔符</value>
+  </data>
+  <data name="userControl_text_Sunset_AOD.FollowText" xml:space="preserve">
+    <value>跟随日出</value>
   </data>
 </root>

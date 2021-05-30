@@ -296,6 +296,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.zh.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.en.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
@@ -527,6 +528,9 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.fr.resx">
       <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.zh.resx">
+      <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.en.resx">
       <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,6 +538,9 @@
       <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.fr.resx">
+      <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.zh.resx">
       <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_weather.resx">
