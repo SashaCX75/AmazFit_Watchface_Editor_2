@@ -117,140 +117,140 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;label1084.Name" xml:space="preserve">
-    <value>label1084</value>
-  </data>
-  <data name="&gt;&gt;label08.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
-    <value>panel_text</value>
-  </data>
-  <data name="&gt;&gt;label06.Name" xml:space="preserve">
-    <value>label06</value>
-  </data>
-  <data name="&gt;&gt;label07.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 30</value>
-  </data>
-  <data name="&gt;&gt;label1084.Parent" xml:space="preserve">
-    <value>panel_text</value>
-  </data>
-  <data name="&gt;&gt;checkBox_follow.Name" xml:space="preserve">
-    <value>checkBox_follow</value>
+  <data name="label08.Text" xml:space="preserve">
+    <value>Символ "°"</value>
   </data>
   <data name="&gt;&gt;label08.Name" xml:space="preserve">
     <value>label08</value>
   </data>
-  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label08.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>UserControl_text_weather</value>
+  <data name="&gt;&gt;label06.Name" xml:space="preserve">
+    <value>label06</value>
   </data>
-  <data name="&gt;&gt;label02.Type" xml:space="preserve">
+  <data name="&gt;&gt;label06.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBox_follow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 151</value>
+  <data name="&gt;&gt;label06.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="label07.Text" xml:space="preserve">
+    <value>Символ "-"</value>
+  </data>
+  <data name="&gt;&gt;label07.Name" xml:space="preserve">
+    <value>label07</value>
+  </data>
+  <data name="&gt;&gt;label07.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
+    <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label07.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label02.Name" xml:space="preserve">
+    <value>label02</value>
+  </data>
+  <data name="&gt;&gt;label02.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label02.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
-  <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 179</value>
+  <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
-  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label1084.Name" xml:space="preserve">
+    <value>label1084</value>
+  </data>
+  <data name="&gt;&gt;label1084.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1084.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;label1084.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="&gt;&gt;label1085.Name" xml:space="preserve">
+    <value>label1085</value>
+  </data>
+  <data name="&gt;&gt;label1085.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1085.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;label1085.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;button_text.Name" xml:space="preserve">
+    <value>button_text</value>
+  </data>
+  <data name="&gt;&gt;button_text.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_text.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;button_text.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label07.Text" xml:space="preserve">
-    <value>Символ "-"</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBox_follow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 145</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Name" xml:space="preserve">
+    <value>checkBox_follow</value>
   </data>
   <data name="&gt;&gt;checkBox_follow.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;label02.Name" xml:space="preserve">
-    <value>label02</value>
-  </data>
-  <data name="&gt;&gt;label1084.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label07.Name" xml:space="preserve">
-    <value>label07</value>
-  </data>
-  <data name="&gt;&gt;label1085.Name" xml:space="preserve">
-    <value>label1085</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;label02.Parent" xml:space="preserve">
-    <value>panel_text</value>
-  </data>
-  <data name="&gt;&gt;label06.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
     <value>panel_text</value>
   </data>
   <data name="&gt;&gt;checkBox_follow.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="label08.Text" xml:space="preserve">
-    <value>Символ "°"</value>
+  <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 179</value>
+  </data>
+  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 35</value>
   </data>
   <data name="&gt;&gt;checkBox_addZero.Name" xml:space="preserve">
     <value>checkBox_addZero</value>
   </data>
-  <data name="&gt;&gt;button_text.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label06.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1085.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;label1085.Parent" xml:space="preserve">
-    <value>panel_text</value>
-  </data>
   <data name="&gt;&gt;checkBox_addZero.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
+    <value>panel_text</value>
   </data>
   <data name="&gt;&gt;checkBox_addZero.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;button_text.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1085.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_text.Name" xml:space="preserve">
-    <value>button_text</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserControl_text_weather</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

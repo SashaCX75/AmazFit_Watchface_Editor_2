@@ -16,12 +16,16 @@ namespace AmazFit_Watchface_2
     {
         private bool setValue;
         private bool AODmode;
+        private bool showUnit;
+        private bool PaddingZero;
+        private bool Follow_mode;
+        private bool Separator_mode;
         public UserControl_SystemFont()
         {
             InitializeComponent();
         }
 
-        /// <summary>Отображение кнопки копирования значений для AOD</summary>
+        [Description("Отображение кнопки копирования значений для AOD")]
         public bool AOD
         {
             get
@@ -35,6 +39,76 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        [Description("Отображение возможности выбора единиц измерения")]
+        public bool ShowUnit
+        {
+            get
+            {
+                return showUnit;
+            }
+            set
+            {
+                showUnit = value;
+                checkBox_SystemFont_unit.Visible = showUnit;
+            }
+        }
+
+        [Description("Отображение чекбокса добавления нулей в начале")]
+        public bool Padding_zero
+        {
+            get
+            {
+                return PaddingZero;
+            }
+            set
+            {
+                PaddingZero = value;
+                checkBox_addZero.Visible = PaddingZero;
+            }
+        }
+
+        [Description("Отображение чекбокса разделитель")]
+        public bool Separator
+        {
+            get
+            {
+                return Separator_mode;
+            }
+            set
+            {
+                Separator_mode = value;
+                checkBox_separator.Visible = Separator_mode;
+            }
+        }
+
+        [Description("Отображение чекбокса \"Следовать за...\"")]
+        public bool Follow
+        {
+            get
+            {
+                return Follow_mode;
+            }
+            set
+            {
+                Follow_mode = value;
+                checkBox_follow.Visible = Follow_mode;
+            }
+        }
+
+        [Description("Устанавливает надпись \"Следовать за...\"")]
+        [Localizable(true)]
+        public string FollowText
+        {
+            get
+            {
+                return checkBox_follow.Text;
+            }
+            set
+            {
+                checkBox_follow.Text = value;
+            }
+        }
+
         [Browsable(true)]
         public event CollapseHandler Collapse;
         public delegate void CollapseHandler(object sender, EventArgs eventArgs);
@@ -44,10 +118,11 @@ namespace AmazFit_Watchface_2
         public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
 
         [Browsable(true)]
-        public event AOD_CopyHandler AOD_Copy_scaleCircle;
+        public event AOD_CopyHandler AOD_Copy_SystemFont;
         public delegate void AOD_CopyHandler(object sender, EventArgs eventArgs);
 
-        /// <summary>Возвращает true если панель свернута</summary>
+        [Description("Возвращает true если панель свернута")]
+        //[Description("The image associated with the control"), Category("Appearance")]
         public bool Collapsed
         {
             get
@@ -63,10 +138,10 @@ namespace AmazFit_Watchface_2
         // кнопка копирования свойст для AOD
         private void button_Copy_SystemFont_Click(object sender, EventArgs e)
         {
-            if (AOD_Copy_scaleCircle != null)
+            if (AOD_Copy_SystemFont != null)
             {
                 EventArgs eventArgs = new EventArgs();
-                AOD_Copy_scaleCircle(this, eventArgs);
+                AOD_Copy_SystemFont(this, eventArgs);
             }
         }
 
@@ -89,6 +164,49 @@ namespace AmazFit_Watchface_2
                 ValueChanged(this, eventArgs);
             }
         }
+        internal void comboBoxSetColorString(string color)
+        {
+            if (color.Length == 18) color = color.Remove(2, 8);
+            Color old_color = ColorTranslator.FromHtml(color);
+            Color new_color = Color.FromArgb(255, old_color.R, old_color.G, old_color.B);
+            comboBox_SystemFont_color.BackColor = new_color;
+        }
+        internal string comboBoxGetColorString()
+        {
+            Color color = comboBox_SystemFont_color.BackColor;
+            Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+            string colorStr = ColorTranslator.ToHtml(new_color);
+            colorStr = colorStr.Replace("#", "0xFF");
+            return colorStr;
+        }
+        internal Color comboBoxGetColor()
+        {
+            return comboBox_SystemFont_color.BackColor;
+        }
+
+        internal void checkBoxSetUnit(int unit)
+        {
+            switch (unit)
+            {
+                case 1:
+                    checkBox_SystemFont_unit.CheckState = CheckState.Checked;
+                    break;
+                case 2:
+                    checkBox_SystemFont_unit.CheckState = CheckState.Indeterminate;
+                    break;
+                default:
+                    checkBox_SystemFont_unit.CheckState = CheckState.Unchecked;
+                    break;
+            }
+        }
+
+        internal int checkBoxGetUnit()
+        {
+            int value = -1;
+            if (checkBox_SystemFont_unit.CheckState == CheckState.Checked) value = 1;
+            if (checkBox_SystemFont_unit.CheckState == CheckState.Indeterminate) value = 2;
+            return value;
+        }
 
         #region Standard events
 
@@ -101,7 +219,7 @@ namespace AmazFit_Watchface_2
         {
             Control.ControlCollection controlCollection = panel_SystemFont.Controls;
 
-            bool b = checkBox_SystemFont_Use.Checked;
+            bool b = checkBox_Use.Checked;
             for (int i = 1; i < controlCollection.Count - 1; i++)
             {
                 controlCollection[i].Enabled = b;
@@ -148,9 +266,10 @@ namespace AmazFit_Watchface_2
         {
             setValue = true;
 
-            checkBox_SystemFont_Use.Checked = false;
+            checkBox_Use.Checked = false;
             checkBox_SystemFont_unit.Checked = false;
-            checkBox_SystemFont_addZero.Checked = false;
+            checkBox_addZero.Checked = false;
+            checkBox_follow.Checked = false;
 
             numericUpDown_SystemFontX.Value = 0;
             numericUpDown_SystemFontY.Value = 0;
@@ -323,5 +442,25 @@ namespace AmazFit_Watchface_2
         }
 
         #endregion
+
+        private void checkBox_follow_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = !checkBox_follow.Checked;
+            label01.Enabled = b;
+            label02.Enabled = b;
+            label03.Enabled = b;
+            label04.Enabled = b;
+            label05.Enabled = b;
+            label06.Enabled = b;
+            label07.Enabled = b;
+
+            numericUpDown_SystemFontX.Enabled = b;
+            numericUpDown_SystemFontY.Enabled = b;
+
+            numericUpDown_SystemFont_size.Enabled = b;
+            numericUpDown_SystemFont_angle.Enabled = b;
+            numericUpDown_SystemFont_spacing.Enabled = b;
+            comboBox_SystemFont_color.Enabled = b;
+        }
     }
 }

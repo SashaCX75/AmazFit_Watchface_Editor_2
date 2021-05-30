@@ -34,6 +34,7 @@ namespace AmazFit_Watchface_2
             this.panel_icon = new System.Windows.Forms.Panel();
             this.checkBox_icon_Use = new System.Windows.Forms.CheckBox();
             this.comboBox_icon_image = new System.Windows.Forms.ComboBox();
+            this.comboBox_icon_image2 = new System.Windows.Forms.ComboBox();
             this.numericUpDown_iconX = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +49,7 @@ namespace AmazFit_Watchface_2
             this.label02 = new System.Windows.Forms.Label();
             this.label04 = new System.Windows.Forms.Label();
             this.label05 = new System.Windows.Forms.Label();
+            this.label06 = new System.Windows.Forms.Label();
             this.button_Copy_icon = new System.Windows.Forms.Button();
             this.button_icon = new System.Windows.Forms.Button();
             this.panel_icon.SuspendLayout();
@@ -63,12 +65,14 @@ namespace AmazFit_Watchface_2
             this.panel_icon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_icon.Controls.Add(this.checkBox_icon_Use);
             this.panel_icon.Controls.Add(this.comboBox_icon_image);
+            this.panel_icon.Controls.Add(this.comboBox_icon_image2);
             this.panel_icon.Controls.Add(this.numericUpDown_iconX);
             this.panel_icon.Controls.Add(this.numericUpDown_iconY);
             this.panel_icon.Controls.Add(this.label01);
             this.panel_icon.Controls.Add(this.label02);
             this.panel_icon.Controls.Add(this.label04);
             this.panel_icon.Controls.Add(this.label05);
+            this.panel_icon.Controls.Add(this.label06);
             this.panel_icon.Controls.Add(this.button_Copy_icon);
             this.panel_icon.Name = "panel_icon";
             // 
@@ -92,6 +96,19 @@ namespace AmazFit_Watchface_2
             this.comboBox_icon_image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             this.comboBox_icon_image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
             this.comboBox_icon_image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // comboBox_icon_image2
+            // 
+            resources.ApplyResources(this.comboBox_icon_image2, "comboBox_icon_image2");
+            this.comboBox_icon_image2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_icon_image2.DropDownWidth = 75;
+            this.comboBox_icon_image2.FormattingEnabled = true;
+            this.comboBox_icon_image2.Name = "comboBox_icon_image2";
+            this.comboBox_icon_image2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_DrawItem);
+            this.comboBox_icon_image2.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_MeasureItem);
+            this.comboBox_icon_image2.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_icon_image2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_icon_image2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_iconX
             // 
@@ -207,6 +224,11 @@ namespace AmazFit_Watchface_2
             resources.ApplyResources(this.label05, "label05");
             this.label05.Name = "label05";
             // 
+            // label06
+            // 
+            resources.ApplyResources(this.label06, "label06");
+            this.label06.Name = "label06";
+            // 
             // button_Copy_icon
             // 
             resources.ApplyResources(this.button_Copy_icon, "button_Copy_icon");
@@ -259,5 +281,7 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.ToolStripMenuItem вставитьКоординатуYToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItemY;
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItemY;
+        public System.Windows.Forms.ComboBox comboBox_icon_image2;
+        private System.Windows.Forms.Label label06;
     }
 }

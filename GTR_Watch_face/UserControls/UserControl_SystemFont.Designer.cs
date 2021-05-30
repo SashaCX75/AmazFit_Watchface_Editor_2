@@ -40,15 +40,17 @@ namespace AmazFit_Watchface_2
             this.копироватьToolStripMenuItemX = new System.Windows.Forms.ToolStripMenuItem();
             this.вставитьToolStripMenuItemX = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_SystemFont = new System.Windows.Forms.Panel();
-            this.checkBox_SystemFont_Use = new System.Windows.Forms.CheckBox();
+            this.checkBox_Use = new System.Windows.Forms.CheckBox();
             this.numericUpDown_SystemFontX = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_SystemFontY = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_SystemFont_size = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_SystemFont_spacing = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_SystemFont_angle = new System.Windows.Forms.NumericUpDown();
             this.comboBox_SystemFont_color = new System.Windows.Forms.ComboBox();
-            this.checkBox_SystemFont_addZero = new System.Windows.Forms.CheckBox();
             this.checkBox_SystemFont_unit = new System.Windows.Forms.CheckBox();
+            this.checkBox_addZero = new System.Windows.Forms.CheckBox();
+            this.checkBox_follow = new System.Windows.Forms.CheckBox();
+            this.checkBox_separator = new System.Windows.Forms.CheckBox();
             this.label01 = new System.Windows.Forms.Label();
             this.label02 = new System.Windows.Forms.Label();
             this.label03 = new System.Windows.Forms.Label();
@@ -70,13 +72,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_Y
             // 
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуYToolStripMenuItem,
             this.копироватьToolStripMenuItemY,
             this.вставитьToolStripMenuItemY});
             this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
             // 
             // вставитьКоординатуYToolStripMenuItem
@@ -99,13 +101,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_X
             // 
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуХToolStripMenuItem,
             this.копироватьToolStripMenuItemX,
             this.вставитьToolStripMenuItemX});
             this.contextMenuStrip_X.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // вставитьКоординатуХToolStripMenuItem
@@ -128,16 +130,20 @@ namespace AmazFit_Watchface_2
             // 
             // panel_SystemFont
             // 
+            resources.ApplyResources(this.panel_SystemFont, "panel_SystemFont");
+            this.panel_SystemFont.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel_SystemFont.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_SystemFont.Controls.Add(this.checkBox_SystemFont_Use);
+            this.panel_SystemFont.Controls.Add(this.checkBox_Use);
             this.panel_SystemFont.Controls.Add(this.numericUpDown_SystemFontX);
             this.panel_SystemFont.Controls.Add(this.numericUpDown_SystemFontY);
             this.panel_SystemFont.Controls.Add(this.numericUpDown_SystemFont_size);
             this.panel_SystemFont.Controls.Add(this.numericUpDown_SystemFont_spacing);
             this.panel_SystemFont.Controls.Add(this.numericUpDown_SystemFont_angle);
             this.panel_SystemFont.Controls.Add(this.comboBox_SystemFont_color);
-            this.panel_SystemFont.Controls.Add(this.checkBox_SystemFont_addZero);
             this.panel_SystemFont.Controls.Add(this.checkBox_SystemFont_unit);
+            this.panel_SystemFont.Controls.Add(this.checkBox_addZero);
+            this.panel_SystemFont.Controls.Add(this.checkBox_follow);
+            this.panel_SystemFont.Controls.Add(this.checkBox_separator);
             this.panel_SystemFont.Controls.Add(this.label01);
             this.panel_SystemFont.Controls.Add(this.label02);
             this.panel_SystemFont.Controls.Add(this.label03);
@@ -146,21 +152,20 @@ namespace AmazFit_Watchface_2
             this.panel_SystemFont.Controls.Add(this.label06);
             this.panel_SystemFont.Controls.Add(this.label07);
             this.panel_SystemFont.Controls.Add(this.button_Copy_SystemFont);
-            resources.ApplyResources(this.panel_SystemFont, "panel_SystemFont");
             this.panel_SystemFont.Name = "panel_SystemFont";
             // 
-            // checkBox_SystemFont_Use
+            // checkBox_Use
             // 
-            resources.ApplyResources(this.checkBox_SystemFont_Use, "checkBox_SystemFont_Use");
-            this.checkBox_SystemFont_Use.Name = "checkBox_SystemFont_Use";
-            this.checkBox_SystemFont_Use.UseVisualStyleBackColor = true;
-            this.checkBox_SystemFont_Use.CheckedChanged += new System.EventHandler(this.checkBox_Use_CheckedChanged);
-            this.checkBox_SystemFont_Use.Click += new System.EventHandler(this.checkBox_Click);
+            resources.ApplyResources(this.checkBox_Use, "checkBox_Use");
+            this.checkBox_Use.Name = "checkBox_Use";
+            this.checkBox_Use.UseVisualStyleBackColor = true;
+            this.checkBox_Use.CheckedChanged += new System.EventHandler(this.checkBox_Use_CheckedChanged);
+            this.checkBox_Use.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // numericUpDown_SystemFontX
             // 
-            this.numericUpDown_SystemFontX.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_SystemFontX, "numericUpDown_SystemFontX");
+            this.numericUpDown_SystemFontX.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_SystemFontX.Maximum = new decimal(new int[] {
             999,
             0,
@@ -177,8 +182,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_SystemFontY
             // 
-            this.numericUpDown_SystemFontY.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_SystemFontY, "numericUpDown_SystemFontY");
+            this.numericUpDown_SystemFontY.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_SystemFontY.Maximum = new decimal(new int[] {
             999,
             0,
@@ -248,20 +253,13 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_SystemFont_color
             // 
+            resources.ApplyResources(this.comboBox_SystemFont_color, "comboBox_SystemFont_color");
             this.comboBox_SystemFont_color.BackColor = System.Drawing.Color.DarkOrange;
             this.comboBox_SystemFont_color.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_SystemFont_color, "comboBox_SystemFont_color");
             this.comboBox_SystemFont_color.FormattingEnabled = true;
             this.comboBox_SystemFont_color.Name = "comboBox_SystemFont_color";
             this.comboBox_SystemFont_color.Click += new System.EventHandler(this.comboBox_color_Click);
             this.comboBox_SystemFont_color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // checkBox_SystemFont_addZero
-            // 
-            resources.ApplyResources(this.checkBox_SystemFont_addZero, "checkBox_SystemFont_addZero");
-            this.checkBox_SystemFont_addZero.Name = "checkBox_SystemFont_addZero";
-            this.checkBox_SystemFont_addZero.UseVisualStyleBackColor = true;
-            this.checkBox_SystemFont_addZero.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // checkBox_SystemFont_unit
             // 
@@ -270,6 +268,28 @@ namespace AmazFit_Watchface_2
             this.checkBox_SystemFont_unit.ThreeState = true;
             this.checkBox_SystemFont_unit.UseVisualStyleBackColor = true;
             this.checkBox_SystemFont_unit.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // checkBox_addZero
+            // 
+            resources.ApplyResources(this.checkBox_addZero, "checkBox_addZero");
+            this.checkBox_addZero.Name = "checkBox_addZero";
+            this.checkBox_addZero.UseVisualStyleBackColor = true;
+            this.checkBox_addZero.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // checkBox_follow
+            // 
+            resources.ApplyResources(this.checkBox_follow, "checkBox_follow");
+            this.checkBox_follow.Name = "checkBox_follow";
+            this.checkBox_follow.UseVisualStyleBackColor = true;
+            this.checkBox_follow.CheckedChanged += new System.EventHandler(this.checkBox_follow_CheckedChanged);
+            this.checkBox_follow.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // checkBox_separator
+            // 
+            resources.ApplyResources(this.checkBox_separator, "checkBox_separator");
+            this.checkBox_separator.Name = "checkBox_separator";
+            this.checkBox_separator.UseVisualStyleBackColor = true;
+            this.checkBox_separator.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // label01
             // 
@@ -351,12 +371,11 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItemX;
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItemX;
         private System.Windows.Forms.Panel panel_SystemFont;
-        internal System.Windows.Forms.CheckBox checkBox_SystemFont_Use;
+        internal System.Windows.Forms.CheckBox checkBox_Use;
         internal System.Windows.Forms.NumericUpDown numericUpDown_SystemFontX;
         internal System.Windows.Forms.NumericUpDown numericUpDown_SystemFontY;
         internal System.Windows.Forms.NumericUpDown numericUpDown_SystemFont_angle;
-        public System.Windows.Forms.CheckBox checkBox_SystemFont_addZero;
-        public System.Windows.Forms.CheckBox checkBox_SystemFont_unit;
+        public System.Windows.Forms.CheckBox checkBox_addZero;
         protected System.Windows.Forms.Label label01;
         private System.Windows.Forms.Label label03;
         protected System.Windows.Forms.Label label06;
@@ -369,5 +388,8 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.ComboBox comboBox_SystemFont_color;
         internal System.Windows.Forms.NumericUpDown numericUpDown_SystemFont_spacing;
         private System.Windows.Forms.Label label04;
+        private System.Windows.Forms.CheckBox checkBox_SystemFont_unit;
+        public System.Windows.Forms.CheckBox checkBox_follow;
+        public System.Windows.Forms.CheckBox checkBox_separator;
     }
 }

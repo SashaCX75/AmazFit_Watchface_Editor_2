@@ -16,6 +16,8 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
 using System.Text.RegularExpressions;
+using System.Drawing.Text;
+using System.Runtime.InteropServices;
 
 namespace AmazFit_Watchface_2
 {
@@ -43,12 +45,19 @@ namespace AmazFit_Watchface_2
         int offSet_Y = 227;
 
 
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
+            IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
+
+        private PrivateFontCollection fonts = new PrivateFontCollection();
+
 
         public Form1(string[] args)
         {
             if (File.Exists(Application.StartupPath + "\\Program log.txt")) File.Delete(Application.StartupPath + @"\Program log.txt");
             Logger.WriteLine("* Form1");
 
+            SplashScreenStart();
 
             Program_Settings = new PROGRAM_SETTINGS();
             try
@@ -64,6 +73,7 @@ namespace AmazFit_Watchface_2
                                 });
                     //Logger.WriteLine("Чтение Settings.json");
                 }
+
 
 
                 if ((Program_Settings.language == null) || (Program_Settings.language.Length < 2))
@@ -147,24 +157,24 @@ namespace AmazFit_Watchface_2
             tabControl1.TabPages[2].Parent = null;
 #if DEBUG
             tabControl1.SelectTab(1);
-            tabControl_EditParameters.SelectTab(3);
+            tabControl_EditParameters.SelectTab(4);
 #endif
 
 #if !DEBUG
 
             //tabControl_SystemWeather.TabPages[4].Parent = null;
             tabControl_SystemActivity.TabPages["tabPage_Stress"].Parent = null;
-            tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
+            //tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_AirQuality"].Parent = null;
-            tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
+            //tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_Altitude"].Parent = null;
 
 
             //tabControl_SystemWeather_AOD.TabPages[4].Parent = null;
             tabControl_SystemActivity_AOD.TabPages["tabPage_Stress_AOD"].Parent = null;
-            tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
+            //tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_AirQuality_AOD"].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
+            //tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_Altitude_AOD"].Parent = null;
 
 #endif
@@ -172,6 +182,15 @@ namespace AmazFit_Watchface_2
             splitContainer_EditParameters.Panel1Collapsed = false;
             splitContainer_EditParameters.Panel2Collapsed = true;
 
+            #region sistem font
+            byte[] fontData = Properties.Resources.OpenSans_Regular;
+            IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
+            System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
+            uint dummy = 0;
+            fonts.AddMemoryFont(fontPtr, Properties.Resources.OpenSans_Regular.Length);
+            AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.OpenSans_Regular.Length, IntPtr.Zero, ref dummy);
+            System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
+            #endregion
             //Logger.WriteLine("Создали переменные");
 
             if (args.Length == 1)
@@ -192,7 +211,22 @@ namespace AmazFit_Watchface_2
             }
             Logger.WriteLine("* Form1 (end)");
         }
-        
+
+        private void SplashScreenStart()
+        {
+            string splashScreenPath = Application.StartupPath + @"\Tools\SplashScreen.exe";
+            if (File.Exists(splashScreenPath))
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = splashScreenPath;
+                Process exeProcess = Process.Start(startInfo);
+
+                exeProcess.Dispose();
+                //exeProcess.CloseMainWindow();
+            }
+
+        }
+
         private void SetLanguage()
         {
             Logger.WriteLine("* SetLanguage");
@@ -249,12 +283,30 @@ namespace AmazFit_Watchface_2
             Logger.WriteLine("* SetLanguage (end)");
         }
 
+
+
+        /// <summary>
+        /// Find window by Caption only. Note you must pass IntPtr.Zero as the first parameter.
+        /// </summary>
+        [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
+        static extern IntPtr FindWindowByCaption(IntPtr ZeroOnly, string lpWindowName);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
+
+        const UInt32 WM_CLOSE = 0x0010;
         private void Form1_Load(object sender, EventArgs e)
         {
             Logger.WriteLine("* Form1_Load ");
+            IntPtr windowPtr = FindWindowByCaption(IntPtr.Zero, "AmazFit WatchFace editor SplashScreen");
+            if (windowPtr != IntPtr.Zero)
+            {
+                SendMessage(windowPtr, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
+            }
+
 
             //Logger.WriteLine("Form1_Load");
-            
+
             string subPath = Application.StartupPath + @"\Tools\main.exe";
             Logger.WriteLine("Set textBox.Text");
             if (Program_Settings.pack_unpack_dir == null)
@@ -1744,6 +1796,7 @@ namespace AmazFit_Watchface_2
 
 
             JSON_read();
+            progressBar1.Visible = false;
             //Logger.WriteLine("Установили значения в соответствии с json файлом");
             string path = Path.GetDirectoryName(fullfilename);
             string newFullName = Path.Combine(path, "Watchface.ID");
@@ -2180,7 +2233,7 @@ namespace AmazFit_Watchface_2
         }
 
         // меняем цвет текста и рамки для groupBox
-        private void groupBox1_Paint(object sender, PaintEventArgs e)
+        private void groupBox_Paint(object sender, PaintEventArgs e)
         {
             GroupBox box = sender as GroupBox;
             DrawGroupBox(box, e.Graphics, Color.Black, Color.DarkGray);
@@ -2533,7 +2586,7 @@ namespace AmazFit_Watchface_2
                     Activity.Add("PAI", ps.PAI);
                     Activity.Add("StandUp", ps.Stand);
                     Activity.Add("Stress", ps.Stress);
-                    Activity.Add("ActivityGoal", ps.ActivityGoal);
+                    //Activity.Add("ActivityGoal", ps.ActivityGoal);
                     Activity.Add("FatBurning", ps.FatBurning);
 
 
@@ -2644,12 +2697,19 @@ namespace AmazFit_Watchface_2
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            //richTextBox_JsonText.Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
-            //{
-            //    //DefaultValueHandling = DefaultValueHandling.Ignore,
-            //    NullValueHandling = NullValueHandling.Ignore
-            //});
-            //PreviewView = false;
+            SetPreferences(userControl_Set12);
+            if (!userControl_Set1.Collapsed) SetPreferences(userControl_Set1);
+            if (!userControl_Set2.Collapsed) SetPreferences(userControl_Set2);
+            if (!userControl_Set3.Collapsed) SetPreferences(userControl_Set3);
+            if (!userControl_Set4.Collapsed) SetPreferences(userControl_Set4);
+            if (!userControl_Set5.Collapsed) SetPreferences(userControl_Set5);
+            if (!userControl_Set6.Collapsed) SetPreferences(userControl_Set6);
+            if (!userControl_Set7.Collapsed) SetPreferences(userControl_Set7);
+            if (!userControl_Set8.Collapsed) SetPreferences(userControl_Set8);
+            if (!userControl_Set9.Collapsed) SetPreferences(userControl_Set9);
+            if (!userControl_Set10.Collapsed) SetPreferences(userControl_Set10);
+            if (!userControl_Set11.Collapsed) SetPreferences(userControl_Set11);
+
             PreviewView = true;
             PreviewImage();
         }
@@ -2733,7 +2793,7 @@ namespace AmazFit_Watchface_2
                     ps.PAI = Activity["PAI"];
                     ps.Stand = Activity["StandUp"];
                     ps.Stress = Activity["Stress"];
-                    ps.ActivityGoal = Activity["ActivityGoal"];
+                    //ps.ActivityGoal = Activity["ActivityGoal"];
                     ps.FatBurning = Activity["FatBurning"];
 
 
@@ -2838,39 +2898,6 @@ namespace AmazFit_Watchface_2
         private void checkBox_WebB_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox_WebB.Checked) checkBox_WebW.Checked = false;
-            PreviewImage();
-        }
-
-        private void button_TextToJson_Click(object sender, EventArgs e)
-        {
-            string text = richTextBox_JsonText.Text;
-            //richTextBox_JsonText.Text = text;
-
-
-            try
-            {
-                Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
-                {
-                    DefaultValueHandling = DefaultValueHandling.Ignore,
-                    NullValueHandling = NullValueHandling.Ignore
-                });
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show(Properties.FormStrings.Message_JsonError_Text, Properties.FormStrings.Message_Error_Caption, 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
-            {
-                //DefaultValueHandling = DefaultValueHandling.Ignore,
-                NullValueHandling = NullValueHandling.Ignore
-            });
-            JsonToTree(richTextBox_JsonText.Text);
-            PreviewView = false;
-            JSON_read();
-            PreviewView = true;
             PreviewImage();
         }
 
@@ -7509,100 +7536,149 @@ namespace AmazFit_Watchface_2
             Copy_hand_AOD(userControl_hand_Battery, userControl_hand_Battery_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Battery, userControl_scaleCircle_Battery_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Battery, userControl_scaleLinear_Battery_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Battery, userControl_SystemFont_Group_Battery_AOD);
+            Copy_icon_AOD(userControl_icon_Battery, userControl_icon_Battery_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Steps, userControl_pictures_Steps_AOD);
             Copy_text_AOD(userControl_text_Steps, userControl_text_Steps_AOD);
+            Copy_text_AOD(userControl_text_goal_Steps_AOD, userControl_text_goal_Steps_AOD);
             Copy_hand_AOD(userControl_hand_Steps, userControl_hand_Steps_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Steps, userControl_scaleCircle_Steps_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Steps, userControl_scaleLinear_Steps_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Steps, userControl_SystemFont_Group_Steps_AOD);
+            Copy_icon_AOD(userControl_icon_Steps, userControl_icon_Steps_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Calories, userControl_pictures_Calories_AOD);
             Copy_text_AOD(userControl_text_Calories, userControl_text_Calories_AOD);
+            Copy_text_AOD(userControl_text_goal_Calories_AOD, userControl_text_goal_Calories_AOD);
             Copy_hand_AOD(userControl_hand_Calories, userControl_hand_Calories_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Calories, userControl_scaleCircle_Calories_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Calories, userControl_scaleLinear_Calories_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Calories, userControl_SystemFont_Group_Calories_AOD);
+            Copy_icon_AOD(userControl_icon_Calories, userControl_icon_Calories_AOD);
 
             Copy_pictures_AOD(userControl_pictures_HeartRate, userControl_pictures_HeartRate_AOD);
             Copy_text_AOD(userControl_text_HeartRate, userControl_text_HeartRate_AOD);
             Copy_hand_AOD(userControl_hand_HeartRate, userControl_hand_HeartRate_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_HeartRate, userControl_scaleCircle_HeartRate_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_HeartRate, userControl_scaleLinear_HeartRate_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_HeartRate, userControl_SystemFont_Group_HeartRate_AOD);
+            Copy_icon_AOD(userControl_icon_HeartRate, userControl_icon_HeartRate_AOD);
 
             Copy_pictures_AOD(userControl_pictures_PAI, userControl_pictures_PAI_AOD);
             Copy_text_AOD(userControl_text_PAI, userControl_text_PAI_AOD);
             Copy_hand_AOD(userControl_hand_PAI, userControl_hand_PAI_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_PAI, userControl_scaleCircle_PAI_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_PAI, userControl_scaleLinear_PAI_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_PAI, userControl_SystemFont_Group_PAI_AOD);
+            Copy_icon_AOD(userControl_icon_PAI, userControl_icon_PAI_AOD);
 
             Copy_text_AOD(userControl_text_Distance, userControl_text_Distance_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Distance, userControl_SystemFont_Group_Distance_AOD);
+            Copy_icon_AOD(userControl_icon_Distance, userControl_icon_Distance_AOD);
 
             Copy_pictures_AOD(userControl_pictures_StandUp, userControl_pictures_StandUp_AOD);
             Copy_text_AOD(userControl_text_StandUp, userControl_text_StandUp_AOD);
+            Copy_text_AOD(userControl_text_goal_StandUp_AOD, userControl_text_goal_StandUp_AOD);
             Copy_hand_AOD(userControl_hand_StandUp, userControl_hand_StandUp_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_StandUp, userControl_scaleCircle_StandUp_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_StandUp, userControl_scaleLinear_StandUp_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_StandUp, userControl_SystemFont_Group_StandUp_AOD);
+            Copy_icon_AOD(userControl_icon_StandUp, userControl_icon_StandUp_AOD);
 
             Copy_pictures_AOD(userControl_pictures_weather, userControl_pictures_weather_AOD);
             Copy_text_AOD(userControl_text_weather_Current, userControl_text_weather_Current_AOD);
             Copy_text_AOD(userControl_text_weather_Min, userControl_text_weather_Min_AOD);
-            Copy_text_AOD(userControl_text_weather_Max_AOD, userControl_text_weather_Max_AOD);
+            Copy_text_AOD(userControl_text_weather_Max, userControl_text_weather_Max_AOD);
             Copy_hand_AOD(userControl_hand_Weather, userControl_hand_Weather_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Weather, userControl_scaleCircle_Weather_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Weather, userControl_scaleLinear_Weather_AOD);
+            Copy_SystemFont_GroupWeather_AOD(userControl_SystemFont_GroupWeather, userControl_SystemFont_GroupWeather_AOD);
+            Copy_icon_AOD(userControl_icon_Weather, userControl_icon_Weather_AOD);
 
             Copy_pictures_AOD(userControl_pictures_UVindex, userControl_pictures_UVindex_AOD);
             Copy_text_AOD(userControl_text_UVindex, userControl_text_UVindex_AOD);
             Copy_hand_AOD(userControl_hand_UVindex, userControl_hand_UVindex_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_UVindex, userControl_scaleCircle_UVindex_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_UVindex, userControl_scaleLinear_UVindex_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_UVindex, userControl_SystemFont_Group_UVindex_AOD);
+            Copy_icon_AOD(userControl_icon_UVindex, userControl_icon_UVindex_AOD);
 
             Copy_pictures_AOD(userControl_pictures_AirQuality, userControl_pictures_AirQuality_AOD);
             Copy_text_AOD(userControl_text_AirQuality, userControl_text_AirQuality_AOD);
             Copy_hand_AOD(userControl_hand_AirQuality, userControl_hand_AirQuality_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_AirQuality, userControl_scaleCircle_AirQuality_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_AirQuality, userControl_scaleLinear_AirQuality_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_AirQuality, userControl_SystemFont_Group_AirQuality_AOD);
+            Copy_icon_AOD(userControl_icon_AirQuality, userControl_icon_AirQuality_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Humidity, userControl_pictures_Humidity_AOD);
             Copy_text_AOD(userControl_text_Humidity, userControl_text_Humidity_AOD);
             Copy_hand_AOD(userControl_hand_Humidity, userControl_hand_Humidity_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Humidity, userControl_scaleCircle_Humidity_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Humidity, userControl_scaleLinear_Humidity_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Humidity, userControl_SystemFont_Group_Humidity_AOD);
+            Copy_icon_AOD(userControl_icon_Humidity, userControl_icon_Humidity_AOD);
+
+            Copy_pictures_AOD(userControl_pictures_Sunrise, userControl_pictures_Sunrise_AOD);
+            Copy_text_AOD(userControl_text_SunriseSunset, userControl_text_SunriseSunset_AOD);
+            Copy_text_AOD(userControl_text_Sunrise, userControl_text_Sunrise_AOD);
+            Copy_text_AOD(userControl_text_Sunset, userControl_text_Sunset_AOD);
+            Copy_hand_AOD(userControl_hand_Sunrise, userControl_hand_Sunrise_AOD);
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Sunrise, userControl_scaleCircle_Sunrise_AOD);
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Sunrise, userControl_scaleLinear_Sunrise_AOD);
+            Copy_SystemFont_GroupWeather_AOD(userControl_SystemFont_GroupSunrise, userControl_SystemFont_GroupSunrise_AOD);
+            Copy_icon_AOD(userControl_icon_Sunrise, userControl_icon_Sunrise_AOD);
 
             Copy_pictures_AOD(userControl_pictures_WindForce, userControl_pictures_WindForce_AOD);
             Copy_text_AOD(userControl_text_WindForce, userControl_text_WindForce_AOD);
             Copy_hand_AOD(userControl_hand_WindForce, userControl_hand_WindForce_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_WindForce, userControl_scaleCircle_WindForce_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_WindForce, userControl_scaleLinear_WindForce_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_WindForce, userControl_SystemFont_Group_WindForce_AOD);
+            Copy_icon_AOD(userControl_icon_WindForce, userControl_icon_WindForce_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Altitude, userControl_pictures_Altitude_AOD);
             Copy_text_AOD(userControl_text_Altitude, userControl_text_Altitude_AOD);
             Copy_hand_AOD(userControl_hand_Altitude, userControl_hand_Altitude_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Altitude, userControl_scaleCircle_Altitude_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Altitude, userControl_scaleLinear_Altitude_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Altitude, userControl_SystemFont_Group_Altitude_AOD);
+            Copy_icon_AOD(userControl_icon_Altitude, userControl_icon_Altitude_AOD);
 
             Copy_pictures_AOD(userControl_pictures_AirPressure, userControl_pictures_AirPressure_AOD);
             Copy_text_AOD(userControl_text_AirPressure, userControl_text_AirPressure_AOD);
             Copy_hand_AOD(userControl_hand_AirPressure, userControl_hand_AirPressure_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_AirPressure, userControl_scaleCircle_AirPressure_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_AirPressure, userControl_scaleLinear_AirPressure_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_AirPressure, userControl_SystemFont_Group_AirPressure_AOD);
+            Copy_icon_AOD(userControl_icon_AirPressure, userControl_icon_AirPressure_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Stress, userControl_pictures_Stress_AOD);
             Copy_text_AOD(userControl_text_Stress, userControl_text_Stress_AOD);
             Copy_hand_AOD(userControl_hand_Stress, userControl_hand_Stress_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Stress, userControl_scaleCircle_Stress_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_Stress, userControl_scaleLinear_Stress_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Stress, userControl_SystemFont_Group_Stress_AOD);
+            Copy_icon_AOD(userControl_icon_Stress, userControl_icon_Stress_AOD);
 
             Copy_pictures_AOD(userControl_pictures_ActivityGoal, userControl_pictures_ActivityGoal_AOD);
             Copy_text_AOD(userControl_text_ActivityGoal, userControl_text_ActivityGoal_AOD);
+            Copy_text_AOD(userControl_text_goal_ActivityGoal_AOD, userControl_text_goal_StandUp_AOD);
             Copy_hand_AOD(userControl_hand_ActivityGoal, userControl_hand_ActivityGoal_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_ActivityGoal, userControl_scaleCircle_ActivityGoal_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_ActivityGoal, userControl_scaleLinear_ActivityGoal_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_ActivityGoal, userControl_SystemFont_Group_ActivityGoal_AOD);
+            Copy_icon_AOD(userControl_icon_ActivityGoal, userControl_icon_ActivityGoal_AOD);
 
             Copy_pictures_AOD(userControl_pictures_FatBurning, userControl_pictures_FatBurning_AOD);
             Copy_text_AOD(userControl_text_FatBurning, userControl_text_FatBurning_AOD);
+            Copy_text_AOD(userControl_text_goal_FatBurning_AOD, userControl_text_goal_StandUp_AOD);
             Copy_hand_AOD(userControl_hand_FatBurning, userControl_hand_FatBurning_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_FatBurning, userControl_scaleCircle_FatBurning_AOD);
             Copy_scaleLinear_AOD(userControl_scaleLinear_FatBurning, userControl_scaleLinear_FatBurning_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_FatBurning, userControl_SystemFont_Group_FatBurning_AOD);
+            Copy_icon_AOD(userControl_icon_FatBurning, userControl_icon_FatBurning_AOD);
 
 
             PreviewView = true;
@@ -7632,6 +7708,7 @@ namespace AmazFit_Watchface_2
             userControl_text_AOD.comboBoxSetAlignment(userControl_text.comboBoxGetAlignment());
             userControl_text_AOD.numericUpDown_spacing.Value = userControl_text.numericUpDown_spacing.Value;
             userControl_text_AOD.checkBox_addZero.Checked = userControl_text.checkBox_addZero.Checked;
+            userControl_text_AOD.checkBox_follow.Checked = userControl_text.checkBox_follow.Checked;
             userControl_text_AOD.comboBoxSetImageError(userControl_text.comboBoxGetImageError());
             userControl_text_AOD.comboBoxSetImageDecimalPointOrMinus(userControl_text.comboBoxGetImageDecimalPointOrMinus());
 
@@ -7684,6 +7761,104 @@ namespace AmazFit_Watchface_2
             userControl_scaleLinear_AOD.numericUpDown_scaleLinear_length.Value = userControl_scaleLinear.numericUpDown_scaleLinear_length.Value;
             userControl_scaleLinear_AOD.numericUpDown_scaleLinear_width.Value = userControl_scaleLinear.numericUpDown_scaleLinear_width.Value;
             userControl_scaleLinear_AOD.comboBoxSetFlatness(userControl_scaleLinear.comboBoxGetFlatness());
+        }
+        private void Copy_icon_AOD(UserControl_icon userControl_icon, UserControl_icon userControl_icon_AOD)
+        {
+            userControl_icon_AOD.checkBox_icon_Use.Checked = userControl_icon.checkBox_icon_Use.Checked;
+            userControl_icon_AOD.comboBoxSetImage(userControl_icon.comboBoxGetImage());
+            userControl_icon_AOD.comboBoxSetImage2(userControl_icon.comboBoxGetImage2());
+            userControl_icon_AOD.numericUpDown_iconX.Value = userControl_icon.numericUpDown_iconX.Value;
+            userControl_icon_AOD.numericUpDown_iconY.Value = userControl_icon.numericUpDown_iconY.Value;
+        }
+        private void Copy_SystemFont_AOD(UserControl_SystemFont userControl_SystemFont,
+            UserControl_SystemFont userControl_SystemFont_AOD)
+        {
+            userControl_SystemFont_AOD.checkBox_Use.Checked = userControl_SystemFont.checkBox_Use.Checked;
+            userControl_SystemFont_AOD.numericUpDown_SystemFontX.Value =
+                userControl_SystemFont.numericUpDown_SystemFontX.Value;
+            userControl_SystemFont_AOD.numericUpDown_SystemFontY.Value =
+                userControl_SystemFont.numericUpDown_SystemFontY.Value;
+            userControl_SystemFont_AOD.numericUpDown_SystemFont_angle.Value =
+                userControl_SystemFont.numericUpDown_SystemFont_angle.Value;
+            userControl_SystemFont_AOD.numericUpDown_SystemFont_size.Value =
+                userControl_SystemFont.numericUpDown_SystemFont_size.Value;
+            userControl_SystemFont_AOD.numericUpDown_SystemFont_spacing.Value =
+                userControl_SystemFont.numericUpDown_SystemFont_spacing.Value;
+            userControl_SystemFont_AOD.comboBoxSetColorString(userControl_SystemFont.comboBoxGetColorString());
+            userControl_SystemFont_AOD.checkBoxSetUnit(userControl_SystemFont.checkBoxGetUnit());
+            userControl_SystemFont_AOD.checkBox_addZero.Checked = userControl_SystemFont.checkBox_addZero.Checked;
+            userControl_SystemFont_AOD.checkBox_follow.Checked = userControl_SystemFont.checkBox_follow.Checked;
+            userControl_SystemFont_AOD.checkBox_separator.Checked = userControl_SystemFont.checkBox_separator.Checked;
+        }
+        private void Copy_FontRotate_AOD(UserControl_FontRotate userControl_FontRotate,
+            UserControl_FontRotate userControl_FontRotate_AOD)
+        {
+            userControl_FontRotate_AOD.checkBox_Use.Checked = userControl_FontRotate.checkBox_Use.Checked;
+            userControl_FontRotate_AOD.numericUpDown_FontRotateX.Value =
+                userControl_FontRotate.numericUpDown_FontRotateX.Value;
+            userControl_FontRotate_AOD.numericUpDown_FontRotateY.Value =
+                userControl_FontRotate.numericUpDown_FontRotateY.Value;
+            userControl_FontRotate_AOD.numericUpDown_FontRotate_angle.Value =
+                userControl_FontRotate.numericUpDown_FontRotate_angle.Value;
+            userControl_FontRotate_AOD.numericUpDown_FontRotate_size.Value =
+                userControl_FontRotate.numericUpDown_FontRotate_size.Value;
+            userControl_FontRotate_AOD.numericUpDown_FontRotate_spacing.Value =
+                userControl_FontRotate.numericUpDown_FontRotate_spacing.Value;
+            userControl_FontRotate_AOD.numericUpDown_FontRotate_radius.Value =
+                userControl_FontRotate.numericUpDown_FontRotate_radius.Value;
+            userControl_FontRotate_AOD.comboBoxSetColorString(userControl_FontRotate.comboBoxGetColorString());
+            userControl_FontRotate_AOD.checkBoxSetUnit(userControl_FontRotate.checkBoxGetUnit());
+            userControl_FontRotate_AOD.radioButtonSetRotateDirection(userControl_FontRotate.radioButtonGetRotateDirection());
+            userControl_FontRotate_AOD.checkBox_addZero.Checked = userControl_FontRotate.checkBox_addZero.Checked;
+            userControl_FontRotate_AOD.checkBox_follow.Checked = userControl_FontRotate.checkBox_follow.Checked;
+            userControl_FontRotate_AOD.checkBox_separator.Checked = userControl_FontRotate.checkBox_separator.Checked;
+        }
+
+        private void Copy_SystemFont_Group_AOD(UserControl_SystemFont_Group userControl_SystemFont_Group,
+            UserControl_SystemFont_Group userControl_SystemFont_Group_AOD)
+        {
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont);
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont_goal);
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate);
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate_goal);
+        }
+        private void Copy_SystemFont_GroupWeather_AOD(UserControl_SystemFont_GroupWeather userControl_SystemFont_Group,
+            UserControl_SystemFont_GroupWeather userControl_SystemFont_Group_AOD)
+        {
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont_weather_Current,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont_weather_Current);
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont_weather_Min,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont_weather_Min);
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont_weather_Max,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont_weather_Max);
+
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate_weather_Current,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate_weather_Current);
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate_weather_Min,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate_weather_Min);
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate_weather_Max,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate_weather_Max);
+        }
+        private void Copy_SystemFont_GroupSunrise_AOD(UserControl_SystemFont_GroupSunrise userControl_SystemFont_Group,
+            UserControl_SystemFont_GroupSunrise userControl_SystemFont_Group_AOD)
+        {
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont_weather_Current,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont_weather_Current);
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont_weather_Min,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont_weather_Min);
+            Copy_SystemFont_AOD(userControl_SystemFont_Group.userControl_SystemFont_weather_Max,
+                    userControl_SystemFont_Group_AOD.userControl_SystemFont_weather_Max);
+
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate_weather_Current,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate_weather_Current);
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate_weather_Min,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate_weather_Min);
+            Copy_FontRotate_AOD(userControl_SystemFont_Group.userControl_FontRotate_weather_Max,
+                    userControl_SystemFont_Group_AOD.userControl_FontRotate_weather_Max);
         }
 
         private void button_Copy_Hour_AOD_Click(object sender, EventArgs e)
@@ -8015,7 +8190,41 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Battery.userControl_SystemFont,
+                    userControl_SystemFont_Group_Battery_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Battery.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Battery_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Battery.userControl_FontRotate,
+                    userControl_SystemFont_Group_Battery_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Battery.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Battery_AOD.userControl_FontRotate_goal);
+            }
 
+        }
+        private void userControl_icon_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Battery, userControl_icon_Battery_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        
         private void userControl_pictures_Steps_AOD_Copy(object sender, EventArgs eventArgs)
         {
             PreviewView = false;
@@ -8028,6 +8237,14 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_text_AOD(userControl_text_Steps, userControl_text_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_goal_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_goal_Steps, userControl_text_goal_Steps_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8056,6 +8273,40 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Steps.userControl_SystemFont,
+                    userControl_SystemFont_Group_Steps_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Steps.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Steps_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Steps.userControl_FontRotate,
+                    userControl_SystemFont_Group_Steps_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Steps.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Steps_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Steps, userControl_icon_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_pictures_Calories_AOD_Copy(object sender, EventArgs eventArgs)
         {
@@ -8069,6 +8320,14 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_text_AOD(userControl_text_Calories, userControl_text_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_goal_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_goal_Calories, userControl_text_goal_Calories_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8093,6 +8352,40 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_scaleLinear_AOD(userControl_scaleLinear_Calories, userControl_scaleLinear_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Calories.userControl_SystemFont,
+                    userControl_SystemFont_Group_Calories_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Calories.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Calories_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Calories.userControl_FontRotate,
+                    userControl_SystemFont_Group_Calories_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Calories.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Calories_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Calories, userControl_icon_Calories_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8138,6 +8431,40 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_HeartRate.userControl_SystemFont,
+                    userControl_SystemFont_Group_HeartRate_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_HeartRate.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_HeartRate_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_HeartRate.userControl_FontRotate,
+                    userControl_SystemFont_Group_HeartRate_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_HeartRate.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_HeartRate_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_HeartRate, userControl_icon_HeartRate_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_pictures_PAI_AOD_Copy(object sender, EventArgs eventArgs)
         {
@@ -8179,11 +8506,79 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_PAI.userControl_SystemFont,
+                    userControl_SystemFont_Group_PAI_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_PAI.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_PAI_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_PAI.userControl_FontRotate,
+                    userControl_SystemFont_Group_PAI_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_PAI.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_PAI_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_PAI, userControl_icon_PAI_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_text_Distance_AOD_Copy(object sender, EventArgs eventArgs)
         {
             PreviewView = false;
             Copy_text_AOD(userControl_text_Distance, userControl_text_Distance_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_Distance_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Distance.userControl_SystemFont,
+                    userControl_SystemFont_Group_Distance_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Distance.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Distance_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Distance.userControl_FontRotate,
+                    userControl_SystemFont_Group_Distance_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Distance.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Distance_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_Distance_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Distance, userControl_icon_Distance_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8201,6 +8596,14 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_text_AOD(userControl_text_StandUp, userControl_text_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_goal_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_goal_StandUp, userControl_text_goal_StandUp_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8225,6 +8628,40 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_scaleLinear_AOD(userControl_scaleLinear_StandUp, userControl_scaleLinear_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_StandUp.userControl_SystemFont,
+                    userControl_SystemFont_Group_StandUp_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_StandUp.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_StandUp_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_StandUp.userControl_FontRotate,
+                    userControl_SystemFont_Group_StandUp_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_StandUp.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_StandUp_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_StandUp, userControl_icon_StandUp_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8257,7 +8694,7 @@ namespace AmazFit_Watchface_2
         private void userControl_text_WeatherMax_AOD_Copy(object sender, EventArgs eventArgs)
         {
             PreviewView = false;
-            Copy_text_AOD(userControl_text_weather_Max_AOD, userControl_text_weather_Max_AOD);
+            Copy_text_AOD(userControl_text_weather_Max, userControl_text_weather_Max_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8282,6 +8719,60 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_scaleLinear_AOD(userControl_scaleLinear_Weather, userControl_scaleLinear_Weather_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_Weather_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                UserControl_SystemFont_weather userControl_SystemFont_weather =
+                    sender as UserControl_SystemFont_weather;
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Current")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupWeather.userControl_SystemFont_weather_Current, 
+                        userControl_SystemFont_GroupWeather_AOD.userControl_SystemFont_weather_Current);
+                }
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Min")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupWeather.userControl_SystemFont_weather_Min,
+                        userControl_SystemFont_GroupWeather_AOD.userControl_SystemFont_weather_Min);
+                }
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Max")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupWeather.userControl_SystemFont_weather_Max,
+                        userControl_SystemFont_GroupWeather_AOD.userControl_SystemFont_weather_Max);
+                }
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                UserControl_FontRotate_weather userControl_FontRotate_weather =
+                    sender as UserControl_FontRotate_weather;
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Current")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupWeather.userControl_FontRotate_weather_Current,
+                        userControl_SystemFont_GroupWeather_AOD.userControl_FontRotate_weather_Current);
+                }
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Min")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupWeather.userControl_FontRotate_weather_Min,
+                        userControl_SystemFont_GroupWeather_AOD.userControl_FontRotate_weather_Min);
+                }
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Max")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupWeather.userControl_FontRotate_weather_Max,
+                        userControl_SystemFont_GroupWeather_AOD.userControl_FontRotate_weather_Max);
+                }
+            }
+
+        }
+        private void userControl_icon_Weather_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Weather, userControl_icon_Weather_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8327,6 +8818,40 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_UVindex.userControl_SystemFont,
+                    userControl_SystemFont_Group_UVindex_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_UVindex.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_UVindex_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_UVindex.userControl_FontRotate,
+                    userControl_SystemFont_Group_UVindex_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_UVindex.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_UVindex_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_UVindex, userControl_icon_UVindex_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_pictures_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
         {
@@ -8364,6 +8889,40 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_scaleLinear_AOD(userControl_scaleLinear_AirQuality, userControl_scaleLinear_AirQuality_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_AirQuality.userControl_SystemFont,
+                    userControl_SystemFont_Group_AirQuality_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_AirQuality.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_AirQuality_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_AirQuality.userControl_FontRotate,
+                    userControl_SystemFont_Group_AirQuality_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_AirQuality.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_AirQuality_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_AirQuality, userControl_icon_AirQuality_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8409,6 +8968,151 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Humidity.userControl_SystemFont,
+                    userControl_SystemFont_Group_Humidity_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Humidity.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Humidity_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Humidity.userControl_FontRotate,
+                    userControl_SystemFont_Group_Humidity_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Humidity.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Humidity_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Humidity, userControl_icon_Humidity_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_pictures_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_pictures_AOD(userControl_pictures_Sunrise, userControl_pictures_Sunrise_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_SunriseSunset_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_SunriseSunset, userControl_text_SunriseSunset_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Sunrise, userControl_text_Sunrise_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_Sunset_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_Sunset, userControl_text_Sunset_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_hand_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_hand_AOD(userControl_hand_Sunrise, userControl_hand_Sunrise_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleCircle_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleCircle_AOD(userControl_scaleCircle_Sunrise, userControl_scaleCircle_Sunrise_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_scaleLinear_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_scaleLinear_AOD(userControl_scaleLinear_Sunrise, userControl_scaleLinear_Sunrise_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                UserControl_SystemFont_weather userControl_SystemFont_weather =
+                    sender as UserControl_SystemFont_weather;
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Current")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupSunrise.userControl_SystemFont_weather_Current,
+                        userControl_SystemFont_GroupSunrise_AOD.userControl_SystemFont_weather_Current);
+                }
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Min")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupSunrise.userControl_SystemFont_weather_Min,
+                        userControl_SystemFont_GroupSunrise_AOD.userControl_SystemFont_weather_Min);
+                }
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Max")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupSunrise.userControl_SystemFont_weather_Max,
+                        userControl_SystemFont_GroupSunrise_AOD.userControl_SystemFont_weather_Max);
+                }
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                UserControl_FontRotate_weather userControl_FontRotate_weather =
+                    sender as UserControl_FontRotate_weather;
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Current")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupSunrise.userControl_FontRotate_weather_Current,
+                        userControl_SystemFont_GroupSunrise_AOD.userControl_FontRotate_weather_Current);
+                }
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Min")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupSunrise.userControl_FontRotate_weather_Min,
+                        userControl_SystemFont_GroupSunrise_AOD.userControl_FontRotate_weather_Min);
+                }
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Max")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupSunrise.userControl_FontRotate_weather_Max,
+                        userControl_SystemFont_GroupSunrise_AOD.userControl_FontRotate_weather_Max);
+                }
+            }
+
+        }
+        private void userControl_icon_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Sunrise, userControl_icon_Sunrise_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_pictures_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
         {
@@ -8446,6 +9150,40 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_scaleLinear_AOD(userControl_scaleLinear_WindForce, userControl_scaleLinear_WindForce_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_WindForce.userControl_SystemFont,
+                    userControl_SystemFont_Group_WindForce_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_WindForce.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_WindForce_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_WindForce.userControl_FontRotate,
+                    userControl_SystemFont_Group_WindForce_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_WindForce.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_WindForce_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_WindForce, userControl_icon_WindForce_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8491,6 +9229,40 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Altitude.userControl_SystemFont,
+                    userControl_SystemFont_Group_Altitude_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Altitude.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Altitude_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Altitude.userControl_FontRotate,
+                    userControl_SystemFont_Group_Altitude_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Altitude.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Altitude_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Altitude, userControl_icon_Altitude_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_pictures_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
         {
@@ -8528,6 +9300,40 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_scaleLinear_AOD(userControl_scaleLinear_AirPressure, userControl_scaleLinear_AirPressure_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_SystemFont_Group_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_AirPressure.userControl_SystemFont,
+                    userControl_SystemFont_Group_AirPressure_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_AirPressure.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_AirPressure_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_AirPressure.userControl_FontRotate,
+                    userControl_SystemFont_Group_AirPressure_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_AirPressure.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_AirPressure_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_AirPressure, userControl_icon_AirPressure_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8573,6 +9379,40 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Stress.userControl_SystemFont,
+                    userControl_SystemFont_Group_Stress_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Stress.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Stress_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Stress.userControl_FontRotate,
+                    userControl_SystemFont_Group_Stress_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Stress.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Stress_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_Stress, userControl_icon_Stress_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_pictures_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
         {
@@ -8586,6 +9426,14 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_text_AOD(userControl_text_ActivityGoal, userControl_text_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_goal_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_goal_ActivityGoal, userControl_text_goal_ActivityGoal_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8614,6 +9462,40 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_ActivityGoal.userControl_SystemFont,
+                    userControl_SystemFont_Group_ActivityGoal_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_ActivityGoal.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_ActivityGoal_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_ActivityGoal.userControl_FontRotate,
+                    userControl_SystemFont_Group_ActivityGoal_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_ActivityGoal.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_ActivityGoal_AOD.userControl_FontRotate_goal);
+            }
+
+        }
+        private void userControl_icon_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_ActivityGoal, userControl_icon_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
 
         private void userControl_pictures_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
         {
@@ -8627,6 +9509,14 @@ namespace AmazFit_Watchface_2
         {
             PreviewView = false;
             Copy_text_AOD(userControl_text_FatBurning, userControl_text_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_text_goal_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_text_AOD(userControl_text_goal_FatBurning, userControl_text_goal_FatBurning_AOD);
             PreviewView = true;
             JSON_write();
             PreviewImage();
@@ -8655,7 +9545,54 @@ namespace AmazFit_Watchface_2
             JSON_write();
             PreviewImage();
         }
+        private void userControl_SystemFont_Group_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_FatBurning.userControl_SystemFont,
+                    userControl_SystemFont_Group_FatBurning_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_FatBurning.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_FatBurning_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_FatBurning.userControl_FontRotate,
+                    userControl_SystemFont_Group_FatBurning_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_FatBurning.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_FatBurning_AOD.userControl_FontRotate_goal);
+            }
 
+        }
+        private void userControl_icon_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+
+            PreviewView = false;
+            Copy_icon_AOD(userControl_icon_FatBurning, userControl_icon_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void radioButton_ActivityGoal_CheckedChanged(object sender, EventArgs e)
+        {
+            JSON_write();
+            PreviewImage();
+        }
+
+
+        
+        
+        
+        
+        
+        
 
 
 

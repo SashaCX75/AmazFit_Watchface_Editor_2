@@ -13,7 +13,7 @@
         public int PAI { get; set; }
         public int Stand { get; set; }
         public int Stress = 7;
-        public int ActivityGoal = 7;
+        //public int ActivityGoal = 7;
         public int FatBurning = 7;
 
         public int CurrentWeather { get; set; }

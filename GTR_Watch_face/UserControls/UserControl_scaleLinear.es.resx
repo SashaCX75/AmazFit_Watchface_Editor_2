@@ -121,20 +121,11 @@
   <data name="checkBox_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
   </data>
-  <data name="checkBox_scaleLinear_Use.Text" xml:space="preserve">
-    <value>Usar</value>
-  </data>
   <data name="radioButton_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 17</value>
   </data>
-  <data name="radioButton_scaleLinear_image.Text" xml:space="preserve">
-    <value>Imagen</value>
-  </data>
   <data name="radioButton_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 17</value>
-  </data>
-  <data name="radioButton_scaleLinear_color.Text" xml:space="preserve">
-    <value>Color</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -152,9 +143,6 @@
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pegar coordenada X</value>
   </data>
   <data name="копироватьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -174,9 +162,6 @@
   </data>
   <data name="копироватьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
-    <value>Copiar</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -198,9 +183,6 @@
   <data name="вставитьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
   <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 82</value>
   </data>
@@ -221,9 +203,6 @@
   <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pegar coordenada Y</value>
-  </data>
   <data name="копироватьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -242,9 +221,6 @@
   </data>
   <data name="копироватьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Copiar</value>
   </data>
   <data name="вставитьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -266,11 +242,20 @@
   <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
   </data>
-  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Pegar</value>
-  </data>
   <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 82</value>
+  </data>
+  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="button_Copy_scaleLinear.Text" xml:space="preserve">
+    <value>Copiar de la pantalla principal</value>
+  </data>
+  <data name="button_scaleLinear.Text" xml:space="preserve">
+    <value>Progreso de línea</value>
+  </data>
+  <data name="checkBox_scaleLinear_Use.Text" xml:space="preserve">
+    <value>Usar</value>
   </data>
   <data name="comboBox_scaleLinear_flatness.Items" xml:space="preserve">
     <value>Circulo</value>
@@ -278,20 +263,17 @@
   <data name="comboBox_scaleLinear_flatness.Items1" xml:space="preserve">
     <value>Plano</value>
   </data>
-  <data name="label02.Text" xml:space="preserve">
-    <value>Final de línea</value>
-  </data>
-  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 13</value>
-  </data>
   <data name="label01.Text" xml:space="preserve">
     <value>Coordenadas de inicio</value>
   </data>
-  <data name="label06.Text" xml:space="preserve">
-    <value>Ancho</value>
+  <data name="label02.Text" xml:space="preserve">
+    <value>Final de línea</value>
   </data>
   <data name="label05.Text" xml:space="preserve">
     <value>Largo</value>
+  </data>
+  <data name="label06.Text" xml:space="preserve">
+    <value>Ancho</value>
   </data>
   <data name="label07.Text" xml:space="preserve">
     <value>Imagen dial</value>
@@ -299,10 +281,28 @@
   <data name="label08.Text" xml:space="preserve">
     <value>Imagen de fondo</value>
   </data>
-  <data name="button_Copy_scaleLinear.Text" xml:space="preserve">
-    <value>Copiar de la pantalla principal</value>
+  <data name="radioButton_scaleLinear_color.Text" xml:space="preserve">
+    <value>Color</value>
   </data>
-  <data name="button_scaleLinear.Text" xml:space="preserve">
-    <value>Progreso de línea</value>
+  <data name="radioButton_scaleLinear_image.Text" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pegar coordenada Y</value>
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pegar coordenada X</value>
+  </data>
+  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Copiar</value>
   </data>
 </root>

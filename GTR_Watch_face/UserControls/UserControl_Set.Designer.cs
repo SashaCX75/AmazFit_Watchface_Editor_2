@@ -56,7 +56,6 @@ namespace AmazFit_Watchface_2
             this.checkBox_Lock_Set = new System.Windows.Forms.CheckBox();
             this.checkBox_Alarm_Set = new System.Windows.Forms.CheckBox();
             this.numericUpDown_FatBurning_Set = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityGoal_Set = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Stress_Set = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_StandUp_Set = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_PAI_Set = new System.Windows.Forms.NumericUpDown();
@@ -70,7 +69,6 @@ namespace AmazFit_Watchface_2
             this.dateTimePicker_Time_Set = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Date_Set = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label09 = new System.Windows.Forms.Label();
@@ -95,7 +93,6 @@ namespace AmazFit_Watchface_2
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_MaxTemp)).BeginInit();
             this.groupBox_Activity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_FatBurning_Set)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityGoal_Set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Stress_Set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StandUp_Set)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAI_Set)).BeginInit();
@@ -383,7 +380,6 @@ namespace AmazFit_Watchface_2
             this.groupBox_Activity.Controls.Add(this.checkBox_Lock_Set);
             this.groupBox_Activity.Controls.Add(this.checkBox_Alarm_Set);
             this.groupBox_Activity.Controls.Add(this.numericUpDown_FatBurning_Set);
-            this.groupBox_Activity.Controls.Add(this.numericUpDown_ActivityGoal_Set);
             this.groupBox_Activity.Controls.Add(this.numericUpDown_Stress_Set);
             this.groupBox_Activity.Controls.Add(this.numericUpDown_StandUp_Set);
             this.groupBox_Activity.Controls.Add(this.numericUpDown_PAI_Set);
@@ -397,7 +393,6 @@ namespace AmazFit_Watchface_2
             this.groupBox_Activity.Controls.Add(this.dateTimePicker_Time_Set);
             this.groupBox_Activity.Controls.Add(this.dateTimePicker_Date_Set);
             this.groupBox_Activity.Controls.Add(this.label13);
-            this.groupBox_Activity.Controls.Add(this.label12);
             this.groupBox_Activity.Controls.Add(this.label11);
             this.groupBox_Activity.Controls.Add(this.label10);
             this.groupBox_Activity.Controls.Add(this.label09);
@@ -451,17 +446,6 @@ namespace AmazFit_Watchface_2
             0,
             0});
             this.numericUpDown_FatBurning_Set.ValueChanged += new System.EventHandler(this.numericUpDown_Set_ValueChanged);
-            // 
-            // numericUpDown_ActivityGoal_Set
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivityGoal_Set, "numericUpDown_ActivityGoal_Set");
-            this.numericUpDown_ActivityGoal_Set.Name = "numericUpDown_ActivityGoal_Set";
-            this.numericUpDown_ActivityGoal_Set.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityGoal_Set.ValueChanged += new System.EventHandler(this.numericUpDown_Set_ValueChanged);
             // 
             // numericUpDown_Stress_Set
             // 
@@ -622,11 +606,6 @@ namespace AmazFit_Watchface_2
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
             // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
@@ -711,7 +690,6 @@ namespace AmazFit_Watchface_2
             this.groupBox_Activity.ResumeLayout(false);
             this.groupBox_Activity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_FatBurning_Set)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityGoal_Set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Stress_Set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StandUp_Set)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PAI_Set)).EndInit();
@@ -747,7 +725,6 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.CheckBox checkBox_Lock_Set;
         private System.Windows.Forms.CheckBox checkBox_Alarm_Set;
         private System.Windows.Forms.NumericUpDown numericUpDown_FatBurning_Set;
-        private System.Windows.Forms.NumericUpDown numericUpDown_ActivityGoal_Set;
         private System.Windows.Forms.NumericUpDown numericUpDown_Stress_Set;
         private System.Windows.Forms.NumericUpDown numericUpDown_StandUp_Set;
         private System.Windows.Forms.NumericUpDown numericUpDown_PAI_Set;
@@ -760,7 +737,6 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label09;

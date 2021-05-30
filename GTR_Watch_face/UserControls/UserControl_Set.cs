@@ -163,12 +163,11 @@ namespace AmazFit_Watchface_2
 
         /// <summary>Возвращает данные для предпросмотра из выбранного набора параметров</summary>
         /// <param name="Activity">Данные активностей (год, число, день, день недели, часы, минуты, секунды,
-        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, ActivityGoal, жиросжигание)</param>
+        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, жиросжигание)</param>
         /// <param name="Air">Атмосферные данные (иконка погоды, текущая температура, максимальная температура, 
         /// минимальная температура, УФ индекс, качество воздуха, влажность, сила ветра,
         /// высота, давление)</param>
-        /// <param name="Activity">ДЗначение переключателей (год, число, день недели, Часы, минуты, секунды,
-        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, ActivityGoal, жиросжигание)</param>
+        /// <param name="checkValue">Дначение переключателей (Bluetooth, будильник, блокировка, DND, показ температуры)</param>
         public void GetValue(out Dictionary<string, int> Activity, out Dictionary<string, int> Air, out Dictionary<string, bool> checkValue)
         {
             Activity = new Dictionary<string, int>();
@@ -196,7 +195,7 @@ namespace AmazFit_Watchface_2
             Activity.Add("PAI", (int)numericUpDown_PAI_Set.Value);
             Activity.Add("StandUp", (int)numericUpDown_StandUp_Set.Value);
             Activity.Add("Stress", (int)numericUpDown_Stress_Set.Value);
-            Activity.Add("ActivityGoal", (int)numericUpDown_ActivityGoal_Set.Value);
+            //Activity.Add("ActivityGoal", (int)numericUpDown_ActivityGoal_Set.Value);
             Activity.Add("FatBurning", (int)numericUpDown_FatBurning_Set.Value);
 
 
@@ -224,12 +223,11 @@ namespace AmazFit_Watchface_2
 
         /// <summary>Устанавливает данные для предпросмотра из выбранного набора параметров</summary>
         /// <param name="Activity">Данные активностей (год, число, день, часы, минуты, секунды,
-        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, ActivityGoal, жиросжигание)</param>
+        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, жиросжигание)</param>
         /// <param name="Air">Атмосферные данные (иконка погоды, текущая температура, максимальная температура, 
         /// минимальная температура, УФ индекс, качество воздуха, влажность, сила ветра,
         /// высота, давление)</param>
-        /// <param name="Activity">ДЗначение переключателей (год, число, день недели, Часы, минуты, секунды,
-        /// заряд, калории, ЧСС,  путь, шаги, цель шагов, PAI, StandUp, стресс, ActivityGoal, жиросжигание)</param>
+        /// <param name="checkValue">Дначение переключателей (Bluetooth, будильник, блокировка, DND, показ температуры)</param>
         public void SetValue(Dictionary<string, int> Activity, Dictionary<string, int> Air, Dictionary<string, bool> checkValue)
         {
             int year;
@@ -264,8 +262,8 @@ namespace AmazFit_Watchface_2
             Activity.TryGetValue("StandUp", out standUp);
             int stress;
             Activity.TryGetValue("Stress", out stress);
-            int activityGoal;
-            Activity.TryGetValue("ActivityGoal", out activityGoal);
+            //int activityGoal;
+            //Activity.TryGetValue("ActivityGoal", out activityGoal);
             int fatBurning;
             Activity.TryGetValue("FatBurning", out fatBurning);
 
@@ -320,7 +318,7 @@ namespace AmazFit_Watchface_2
                 numericUpDown_PAI_Set.Value = PAI;
                 numericUpDown_StandUp_Set.Value = standUp;
                 numericUpDown_Stress_Set.Value = stress;
-                numericUpDown_ActivityGoal_Set.Value = activityGoal;
+                //numericUpDown_ActivityGoal_Set.Value = activityGoal;
                 numericUpDown_FatBurning_Set.Value = fatBurning;
 
 
@@ -378,7 +376,7 @@ namespace AmazFit_Watchface_2
             numericUpDown_PAI_Set.Value = rnd.Next(0, 150);
             numericUpDown_StandUp_Set.Value = rnd.Next(0, 13);
             numericUpDown_Stress_Set.Value = rnd.Next(0, 13);
-            numericUpDown_ActivityGoal_Set.Value = rnd.Next(0, 13);
+            //numericUpDown_ActivityGoal_Set.Value = rnd.Next(0, 13);
             numericUpDown_FatBurning_Set.Value = rnd.Next(0, 13);
 
 

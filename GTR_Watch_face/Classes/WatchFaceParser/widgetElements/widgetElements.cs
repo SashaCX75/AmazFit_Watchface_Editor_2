@@ -6,7 +6,6 @@ namespace AmazFit_Watchface_2
     {
         public List<Widget> Widget { get; set; }
 
-        //TODO поменять названия масок
         public long TopMaskImageIndex { get; set; }
 
         public long UnderMaskImageIndex { get; set; }
