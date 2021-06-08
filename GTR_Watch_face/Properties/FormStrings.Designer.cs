@@ -61,6 +61,195 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Активность.
+        /// </summary>
+        public static string ActivityName_ActivityGoal {
+            get {
+                return ResourceManager.GetString("ActivityName_ActivityGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Давление.
+        /// </summary>
+        public static string ActivityName_AirPressure {
+            get {
+                return ResourceManager.GetString("ActivityName_AirPressure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Качество воздуха.
+        /// </summary>
+        public static string ActivityName_AirQuality {
+            get {
+                return ResourceManager.GetString("ActivityName_AirQuality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Высота.
+        /// </summary>
+        public static string ActivityName_Altitude {
+            get {
+                return ResourceManager.GetString("ActivityName_Altitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Батарея.
+        /// </summary>
+        public static string ActivityName_Battery {
+            get {
+                return ResourceManager.GetString("ActivityName_Battery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Калории.
+        /// </summary>
+        public static string ActivityName_Calories {
+            get {
+                return ResourceManager.GetString("ActivityName_Calories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Путь.
+        /// </summary>
+        public static string ActivityName_Distance {
+            get {
+                return ResourceManager.GetString("ActivityName_Distance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Жиросжигание.
+        /// </summary>
+        public static string ActivityName_FatBurning {
+            get {
+                return ResourceManager.GetString("ActivityName_FatBurning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пульс.
+        /// </summary>
+        public static string ActivityName_HeartRate {
+            get {
+                return ResourceManager.GetString("ActivityName_HeartRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Влажность.
+        /// </summary>
+        public static string ActivityName_Humidity {
+            get {
+                return ResourceManager.GetString("ActivityName_Humidity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PAI.
+        /// </summary>
+        public static string ActivityName_PAI {
+            get {
+                return ResourceManager.GetString("ActivityName_PAI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Разминка.
+        /// </summary>
+        public static string ActivityName_StandUp {
+            get {
+                return ResourceManager.GetString("ActivityName_StandUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Шаги.
+        /// </summary>
+        public static string ActivityName_Steps {
+            get {
+                return ResourceManager.GetString("ActivityName_Steps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Уровень стресса.
+        /// </summary>
+        public static string ActivityName_Stress {
+            get {
+                return ResourceManager.GetString("ActivityName_Stress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Восход.
+        /// </summary>
+        public static string ActivityName_Sunrise {
+            get {
+                return ResourceManager.GetString("ActivityName_Sunrise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на УФ индекс.
+        /// </summary>
+        public static string ActivityName_UVindex {
+            get {
+                return ResourceManager.GetString("ActivityName_UVindex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Погода.
+        /// </summary>
+        public static string ActivityName_Weather {
+            get {
+                return ResourceManager.GetString("ActivityName_Weather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ветер.
+        /// </summary>
+        public static string ActivityName_WindForce {
+            get {
+                return ResourceManager.GetString("ActivityName_WindForce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на День.
+        /// </summary>
+        public static string DateName_Day {
+            get {
+                return ResourceManager.GetString("DateName_Day", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Месяц.
+        /// </summary>
+        public static string DateName_Month {
+            get {
+                return ResourceManager.GetString("DateName_Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Год.
+        /// </summary>
+        public static string DateName_Year {
+            get {
+                return ResourceManager.GetString("DateName_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Выбор файлов изображений.
         /// </summary>
         public static string Dialog_Title_Image {
@@ -120,6 +309,15 @@ namespace AmazFit_Watchface_2.Properties {
         public static string Dialog_Title_Unpack {
             get {
                 return ResourceManager.GetString("Dialog_Title_Unpack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выбор файла изображения часов.
+        /// </summary>
+        public static string Dialog_Title_WatchSkin {
+            get {
+                return ResourceManager.GetString("Dialog_Title_WatchSkin", resourceCulture);
             }
         }
         

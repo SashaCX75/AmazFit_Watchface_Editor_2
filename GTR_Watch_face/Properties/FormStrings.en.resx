@@ -339,4 +339,67 @@
   <data name="Message_WarningWeatherError" xml:space="preserve">
     <value>The image for the error symbol may be incorrectly specified if there is no current temperature data.</value>
   </data>
+  <data name="ActivityName_ActivityGoal" xml:space="preserve">
+    <value>Activity goal</value>
+  </data>
+  <data name="ActivityName_AirPressure" xml:space="preserve">
+    <value>Air pressure</value>
+  </data>
+  <data name="ActivityName_AirQuality" xml:space="preserve">
+    <value>Air Quality</value>
+  </data>
+  <data name="ActivityName_Altitude" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="ActivityName_Battery" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="ActivityName_Calories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="ActivityName_Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="ActivityName_FatBurning" xml:space="preserve">
+    <value>Fat-burning</value>
+  </data>
+  <data name="ActivityName_HeartRate" xml:space="preserve">
+    <value>Heart rate</value>
+  </data>
+  <data name="ActivityName_Humidity" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="ActivityName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="ActivityName_StandUp" xml:space="preserve">
+    <value>Stand up</value>
+  </data>
+  <data name="ActivityName_Steps" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="ActivityName_Stress" xml:space="preserve">
+    <value>Stress</value>
+  </data>
+  <data name="ActivityName_Sunrise" xml:space="preserve">
+    <value>Sunrise</value>
+  </data>
+  <data name="ActivityName_UVindex" xml:space="preserve">
+    <value>UV Index</value>
+  </data>
+  <data name="ActivityName_Weather" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="ActivityName_WindForce" xml:space="preserve">
+    <value>Wind force</value>
+  </data>
+  <data name="DateName_Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="DateName_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="DateName_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
 </root>

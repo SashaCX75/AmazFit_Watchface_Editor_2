@@ -8,7 +8,7 @@ namespace AmazFit_Watchface_2
         public ScreenNormal DialFace { get; set; }
 
         /// <summary>Дата</summary>
-        public Date Date { get; set; }
+        public DateAmazfit Date { get; set; }
 
         /// <summary>Активности</summary>
         public List<Activity> Activity { get; set; }

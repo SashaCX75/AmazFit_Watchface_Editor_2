@@ -1,0 +1,9 @@
+{
+  "Background": {
+    "Path": "WatchSkin\\t-rex-pro.png",
+    "ImageHeight": 600
+  },
+  "Image": {
+    "ImageHeight": 273
+  }
+}

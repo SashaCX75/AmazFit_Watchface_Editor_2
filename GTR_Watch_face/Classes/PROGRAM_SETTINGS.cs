@@ -48,5 +48,11 @@
         public string language { get; set; }
 
         public int Splitter_Pos = 0;
+
+        public string WatchSkin_GTR_2 = @"WatchSkin\WatchSkin_GTR_2e.json";
+        public string WatchSkin_GTS_2 = @"WatchSkin\WatchSkin_GTS_2.json";
+        public string WatchSkin_TRex_pro = @"WatchSkin\WatchSkin_TRex_Pro.json";
+        public bool WatchSkin_Use = false;
+
     }
 }

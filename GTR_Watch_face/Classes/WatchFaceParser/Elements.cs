@@ -8,6 +8,9 @@ namespace AmazFit_Watchface_2
     {
         /// <summary> Id модели часов</summary>
         public long DeviceId { get; set; }
+
+        /// <summary> Id циферблата</summary>
+        public long? WatchFaceId { get; set; }
     }
     public class Background
     {

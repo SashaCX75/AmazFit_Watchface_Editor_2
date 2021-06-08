@@ -342,4 +342,70 @@
   <data name="Message_PNGFromOne_Text" xml:space="preserve">
     <value>Нумерация PNG файлов должна начинаться с 1.</value>
   </data>
+  <data name="ActivityName_ActivityGoal" xml:space="preserve">
+    <value>Активность</value>
+  </data>
+  <data name="ActivityName_AirPressure" xml:space="preserve">
+    <value>Давление</value>
+  </data>
+  <data name="ActivityName_AirQuality" xml:space="preserve">
+    <value>Качество воздуха</value>
+  </data>
+  <data name="ActivityName_Altitude" xml:space="preserve">
+    <value>Высота</value>
+  </data>
+  <data name="ActivityName_Battery" xml:space="preserve">
+    <value>Батарея</value>
+  </data>
+  <data name="ActivityName_Calories" xml:space="preserve">
+    <value>Калории</value>
+  </data>
+  <data name="ActivityName_Distance" xml:space="preserve">
+    <value>Путь</value>
+  </data>
+  <data name="ActivityName_FatBurning" xml:space="preserve">
+    <value>Жиросжигание</value>
+  </data>
+  <data name="ActivityName_HeartRate" xml:space="preserve">
+    <value>Пульс</value>
+  </data>
+  <data name="ActivityName_Humidity" xml:space="preserve">
+    <value>Влажность</value>
+  </data>
+  <data name="ActivityName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="ActivityName_StandUp" xml:space="preserve">
+    <value>Разминка</value>
+  </data>
+  <data name="ActivityName_Steps" xml:space="preserve">
+    <value>Шаги</value>
+  </data>
+  <data name="ActivityName_Stress" xml:space="preserve">
+    <value>Уровень стресса</value>
+  </data>
+  <data name="ActivityName_Sunrise" xml:space="preserve">
+    <value>Восход</value>
+  </data>
+  <data name="ActivityName_UVindex" xml:space="preserve">
+    <value>УФ индекс</value>
+  </data>
+  <data name="ActivityName_Weather" xml:space="preserve">
+    <value>Погода</value>
+  </data>
+  <data name="ActivityName_WindForce" xml:space="preserve">
+    <value>Ветер</value>
+  </data>
+  <data name="DateName_Day" xml:space="preserve">
+    <value>День</value>
+  </data>
+  <data name="DateName_Month" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="DateName_Year" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="Dialog_Title_WatchSkin" xml:space="preserve">
+    <value>Выбор файла изображения часов</value>
+  </data>
 </root>

@@ -9,7 +9,7 @@ namespace AmazFit_Watchface_2
         public Status Status { get; set; }
 
         /// <summary>Дата</summary>
-        public Date Date { get; set; }
+        public DateAmazfit Date { get; set; }
 
         /// <summary>Активности</summary>
         public List<Activity> Activity { get; set; }
@@ -32,7 +32,7 @@ namespace AmazFit_Watchface_2
         public ImageCoord Alarm { get; set; }
     }
 
-    public class Date
+    public class DateAmazfit
     {
         /// <summary>Дата</summary>
         public List<DigitalDateDigit> DateDigits { get; set; }

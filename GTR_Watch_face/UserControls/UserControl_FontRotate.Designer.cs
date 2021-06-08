@@ -79,13 +79,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_X
             // 
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуХToolStripMenuItem,
             this.копироватьToolStripMenuItemX,
             this.вставитьToolStripMenuItemX});
             this.contextMenuStrip_X.Name = "contextMenuStrip_X";
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // вставитьКоординатуХToolStripMenuItem
@@ -108,13 +108,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_Y
             // 
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуYToolStripMenuItem,
             this.копироватьToolStripMenuItemY,
             this.вставитьToolStripMenuItemY});
             this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
             // 
             // вставитьКоординатуYToolStripMenuItem
@@ -137,7 +137,6 @@ namespace AmazFit_Watchface_2
             // 
             // panel_FontRotate
             // 
-            resources.ApplyResources(this.panel_FontRotate, "panel_FontRotate");
             this.panel_FontRotate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel_FontRotate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_FontRotate.Controls.Add(this.checkBox_Use);
@@ -162,6 +161,7 @@ namespace AmazFit_Watchface_2
             this.panel_FontRotate.Controls.Add(this.label07);
             this.panel_FontRotate.Controls.Add(this.label08);
             this.panel_FontRotate.Controls.Add(this.button_Copy_FontRotate);
+            resources.ApplyResources(this.panel_FontRotate, "panel_FontRotate");
             this.panel_FontRotate.Name = "panel_FontRotate";
             // 
             // checkBox_Use
@@ -174,8 +174,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_FontRotateX
             // 
-            resources.ApplyResources(this.numericUpDown_FontRotateX, "numericUpDown_FontRotateX");
             this.numericUpDown_FontRotateX.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_FontRotateX, "numericUpDown_FontRotateX");
             this.numericUpDown_FontRotateX.Maximum = new decimal(new int[] {
             999,
             0,
@@ -192,8 +192,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_FontRotateY
             // 
-            resources.ApplyResources(this.numericUpDown_FontRotateY, "numericUpDown_FontRotateY");
             this.numericUpDown_FontRotateY.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_FontRotateY, "numericUpDown_FontRotateY");
             this.numericUpDown_FontRotateY.Maximum = new decimal(new int[] {
             999,
             0,
@@ -299,9 +299,9 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_FontRotate_color
             // 
-            resources.ApplyResources(this.comboBox_FontRotate_color, "comboBox_FontRotate_color");
             this.comboBox_FontRotate_color.BackColor = System.Drawing.Color.DarkOrange;
             this.comboBox_FontRotate_color.DropDownHeight = 1;
+            resources.ApplyResources(this.comboBox_FontRotate_color, "comboBox_FontRotate_color");
             this.comboBox_FontRotate_color.FormattingEnabled = true;
             this.comboBox_FontRotate_color.Name = "comboBox_FontRotate_color";
             this.comboBox_FontRotate_color.Click += new System.EventHandler(this.comboBox_color_Click);
@@ -324,9 +324,9 @@ namespace AmazFit_Watchface_2
             // 
             // groupBox_FontRotate_RotateDirection
             // 
-            resources.ApplyResources(this.groupBox_FontRotate_RotateDirection, "groupBox_FontRotate_RotateDirection");
             this.groupBox_FontRotate_RotateDirection.Controls.Add(this.radioButton_CtrlClockwise);
             this.groupBox_FontRotate_RotateDirection.Controls.Add(this.radioButton_Clockwise);
+            resources.ApplyResources(this.groupBox_FontRotate_RotateDirection, "groupBox_FontRotate_RotateDirection");
             this.groupBox_FontRotate_RotateDirection.Name = "groupBox_FontRotate_RotateDirection";
             this.groupBox_FontRotate_RotateDirection.TabStop = false;
             this.groupBox_FontRotate_RotateDirection.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
@@ -442,7 +442,6 @@ namespace AmazFit_Watchface_2
         internal System.Windows.Forms.NumericUpDown numericUpDown_FontRotate_angle;
         private System.Windows.Forms.ComboBox comboBox_FontRotate_color;
         public System.Windows.Forms.CheckBox checkBox_addZero;
-        private System.Windows.Forms.CheckBox checkBox_FontRotate_unit;
         protected System.Windows.Forms.Label label01;
         private System.Windows.Forms.Label label02;
         private System.Windows.Forms.Label label03;
@@ -459,5 +458,6 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.Label label08;
         public System.Windows.Forms.CheckBox checkBox_follow;
         public System.Windows.Forms.CheckBox checkBox_separator;
+        public System.Windows.Forms.CheckBox checkBox_FontRotate_unit;
     }
 }

@@ -40,7 +40,7 @@ namespace AmazFit_Watchface_2
     {
         public List<MultilangImage> Preview { get; set; }
 
-        public Date Date { get; set; }
+        public DateAmazfit Date { get; set; }
 
         public List<Activity> Activity { get; set; }
 

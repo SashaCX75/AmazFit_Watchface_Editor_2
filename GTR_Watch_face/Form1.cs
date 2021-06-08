@@ -154,7 +154,19 @@ namespace AmazFit_Watchface_2
             //    MessageBox.Show(currentDPI.ToString());
             //}
             currentDPI = tabControl1.Height / 670f;
-            tabControl1.TabPages[2].Parent = null;
+            tabControl1.TabPages["tabPageConverting"].Parent = null;
+
+            userControl_SystemFont_Group_Year.userControl_SystemFont.checkBox_addZero.Text =
+                checkBox_Year_add_zero.Text;
+            userControl_SystemFont_Group_Year.userControl_FontRotate.checkBox_addZero.Text =
+                checkBox_Year_add_zero.Text;
+
+            userControl_SystemFont_Group_Year_AOD.userControl_SystemFont.checkBox_addZero.Text =
+                checkBox_Year_add_zero_AOD.Text;
+            userControl_SystemFont_Group_Year_AOD.userControl_FontRotate.checkBox_addZero.Text =
+                checkBox_Year_add_zero_AOD.Text;
+
+            AddDataDataGridView();
 #if DEBUG
             tabControl1.SelectTab(1);
             tabControl_EditParameters.SelectTab(4);
@@ -210,6 +222,205 @@ namespace AmazFit_Watchface_2
                 }
             }
             Logger.WriteLine("* Form1 (end)");
+        }
+
+        private void AddDataDataGridView()
+        {
+            for (int i = 1; i < 19; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        dataGridView_SNL_Activity.Rows.Add("Battery", Properties.FormStrings.ActivityName_Battery);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 2:
+                        dataGridView_SNL_Activity.Rows.Add("Steps", Properties.FormStrings.ActivityName_Steps);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 3:
+                        dataGridView_SNL_Activity.Rows.Add("Calories", Properties.FormStrings.ActivityName_Calories);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 4:
+                        dataGridView_SNL_Activity.Rows.Add("HeartRate", Properties.FormStrings.ActivityName_HeartRate);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 5:
+                        dataGridView_SNL_Activity.Rows.Add("PAI", Properties.FormStrings.ActivityName_PAI);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 6:
+                        dataGridView_SNL_Activity.Rows.Add("Distance", Properties.FormStrings.ActivityName_Distance);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 7:
+                        dataGridView_SNL_Activity.Rows.Add("StandUp", Properties.FormStrings.ActivityName_StandUp);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 8:
+                        dataGridView_SNL_Activity.Rows.Add("Weather", Properties.FormStrings.ActivityName_Weather);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 9:
+                        dataGridView_SNL_Activity.Rows.Add("UVindex", Properties.FormStrings.ActivityName_UVindex);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 10:
+                        dataGridView_SNL_Activity.Rows.Add("AirQuality", Properties.FormStrings.ActivityName_AirQuality);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 11:
+                        dataGridView_SNL_Activity.Rows.Add("Humidity", Properties.FormStrings.ActivityName_Humidity);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 12:
+                        dataGridView_SNL_Activity.Rows.Add("Sunrise", Properties.FormStrings.ActivityName_Sunrise);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 13:
+                        dataGridView_SNL_Activity.Rows.Add("WindForce", Properties.FormStrings.ActivityName_WindForce);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 14:
+                        dataGridView_SNL_Activity.Rows.Add("Altitude", Properties.FormStrings.ActivityName_Altitude);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 15:
+                        dataGridView_SNL_Activity.Rows.Add("AirPressure", Properties.FormStrings.ActivityName_AirPressure);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 16:
+                        dataGridView_SNL_Activity.Rows.Add("Stress", Properties.FormStrings.ActivityName_Stress);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 17:
+                        dataGridView_SNL_Activity.Rows.Add("ActivityGoal", Properties.FormStrings.ActivityName_ActivityGoal);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 18:
+                        dataGridView_SNL_Activity.Rows.Add("FatBurning", Properties.FormStrings.ActivityName_FatBurning);
+                        dataGridView_SNL_Activity.Rows[dataGridView_SNL_Activity.RowCount - 1].Visible = false;
+                        break;
+                }
+            }
+            for (int i = 1; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        dataGridView_SNL_Date.Rows.Add("Day", Properties.FormStrings.DateName_Day);
+                        dataGridView_SNL_Date.Rows[dataGridView_SNL_Date.RowCount - 1].Visible = false;
+                        break;
+                    case 2:
+                        dataGridView_SNL_Date.Rows.Add("Month", Properties.FormStrings.DateName_Month);
+                        dataGridView_SNL_Date.Rows[dataGridView_SNL_Date.RowCount - 1].Visible = false;
+                        break;
+                    case 3:
+                        dataGridView_SNL_Date.Rows.Add("Year", Properties.FormStrings.DateName_Year);
+                        dataGridView_SNL_Date.Rows[dataGridView_SNL_Date.RowCount - 1].Visible = false;
+                        break;
+                }
+            }
+
+            for (int i = 1; i < 19; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        dataGridView_AODL_Activity.Rows.Add("Battery", Properties.FormStrings.ActivityName_Battery);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 2:
+                        dataGridView_AODL_Activity.Rows.Add("Steps", Properties.FormStrings.ActivityName_Steps);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 3:
+                        dataGridView_AODL_Activity.Rows.Add("Calories", Properties.FormStrings.ActivityName_Calories);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 4:
+                        dataGridView_AODL_Activity.Rows.Add("HeartRate", Properties.FormStrings.ActivityName_HeartRate);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 5:
+                        dataGridView_AODL_Activity.Rows.Add("PAI", Properties.FormStrings.ActivityName_PAI);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 6:
+                        dataGridView_AODL_Activity.Rows.Add("Distance", Properties.FormStrings.ActivityName_Distance);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 7:
+                        dataGridView_AODL_Activity.Rows.Add("StandUp", Properties.FormStrings.ActivityName_StandUp);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 8:
+                        dataGridView_AODL_Activity.Rows.Add("Weather", Properties.FormStrings.ActivityName_Weather);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 9:
+                        dataGridView_AODL_Activity.Rows.Add("UVindex", Properties.FormStrings.ActivityName_UVindex);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 10:
+                        dataGridView_AODL_Activity.Rows.Add("AirQuality", Properties.FormStrings.ActivityName_AirQuality);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 11:
+                        dataGridView_AODL_Activity.Rows.Add("Humidity", Properties.FormStrings.ActivityName_Humidity);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 12:
+                        dataGridView_AODL_Activity.Rows.Add("Sunrise", Properties.FormStrings.ActivityName_Sunrise);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 13:
+                        dataGridView_AODL_Activity.Rows.Add("WindForce", Properties.FormStrings.ActivityName_WindForce);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 14:
+                        dataGridView_AODL_Activity.Rows.Add("Altitude", Properties.FormStrings.ActivityName_Altitude);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 15:
+                        dataGridView_AODL_Activity.Rows.Add("AirPressure", Properties.FormStrings.ActivityName_AirPressure);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 16:
+                        dataGridView_AODL_Activity.Rows.Add("Stress", Properties.FormStrings.ActivityName_Stress);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 17:
+                        dataGridView_AODL_Activity.Rows.Add("ActivityGoal", Properties.FormStrings.ActivityName_ActivityGoal);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                    case 18:
+                        dataGridView_AODL_Activity.Rows.Add("FatBurning", Properties.FormStrings.ActivityName_FatBurning);
+                        dataGridView_AODL_Activity.Rows[dataGridView_AODL_Activity.RowCount - 1].Visible = false;
+                        break;
+                }
+            }
+            for (int i = 1; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        dataGridView_AODL_Date.Rows.Add("Day", Properties.FormStrings.DateName_Day);
+                        dataGridView_AODL_Date.Rows[dataGridView_AODL_Date.RowCount - 1].Visible = false;
+                        break;
+                    case 2:
+                        dataGridView_AODL_Date.Rows.Add("Month", Properties.FormStrings.DateName_Month);
+                        dataGridView_AODL_Date.Rows[dataGridView_AODL_Date.RowCount - 1].Visible = false;
+                        break;
+                    case 3:
+                        dataGridView_AODL_Date.Rows.Add("Year", Properties.FormStrings.DateName_Year);
+                        dataGridView_AODL_Date.Rows[dataGridView_AODL_Date.RowCount - 1].Visible = false;
+                        break;
+                }
+            }
+            //dataGridView_ScreenNormalLayer.Rows[0].Visible = false;
+
         }
 
         private void SplashScreenStart()
@@ -325,22 +536,21 @@ namespace AmazFit_Watchface_2
             {
                 radioButton_GTR2.Checked = true;
                 Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
-            }
-            else if (Program_Settings.Model_GTR2e)
-            {
-                radioButton_GTR2e.Checked = true;
-                Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_GTR_2;
             }
             else if (Program_Settings.Model_GTS2)
             {
                 radioButton_GTS2.Checked = true;
                 Program_Settings.unpack_command = Program_Settings.unpack_command_GTS_2;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_GTS_2;
             }
             else if (Program_Settings.Model_TRex_pro)
             {
                 radioButton_TRex_pro.Checked = true;
                 Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_TRex_pro;
             }
+            checkBox_WatchSkin_Use.Checked = Program_Settings.WatchSkin_Use;
 
             Logger.WriteLine("Set checkBox");
             checkBox_border.Checked = Program_Settings.ShowBorder;
@@ -1800,22 +2010,29 @@ namespace AmazFit_Watchface_2
             //Logger.WriteLine("Установили значения в соответствии с json файлом");
             string path = Path.GetDirectoryName(fullfilename);
             string newFullName = Path.Combine(path, "Watchface.ID");
-            if (File.Exists(newFullName))
+            if (Watch_Face != null && Watch_Face.Info != null && Watch_Face.Info.WatchFaceId != null)
             {
-                WatchfaceID watchfaceID = new WatchfaceID();
-                watchfaceID = JsonConvert.DeserializeObject<WatchfaceID>
-                                (File.ReadAllText(newFullName), new JsonSerializerSettings
-                                {
-                                    //DefaultValueHandling = DefaultValueHandling.Ignore,
-                                    NullValueHandling = NullValueHandling.Ignore
-                                });
-                checkBox_UseID.Checked = watchfaceID.UseID;
-                textBox_WatchfaceID.Text = watchfaceID.ID.ToString();
+                textBox_WatchfaceID.Text = Watch_Face.Info.WatchFaceId.ToString();
             }
             else
             {
-                textBox_WatchfaceID.Text = "";
-                checkBox_UseID.Checked = false;
+                if (File.Exists(newFullName))
+                {
+                    WatchfaceID watchfaceID = new WatchfaceID();
+                    watchfaceID = JsonConvert.DeserializeObject<WatchfaceID>
+                                  (File.ReadAllText(newFullName), new JsonSerializerSettings
+                                  {
+                                      //DefaultValueHandling = DefaultValueHandling.Ignore,
+                                      NullValueHandling = NullValueHandling.Ignore
+                                  });
+                    checkBox_UseID.Checked = watchfaceID.UseID;
+                    textBox_WatchfaceID.Text = watchfaceID.ID.ToString();
+                }
+                else
+                {
+                    textBox_WatchfaceID.Text = "";
+                    checkBox_UseID.Checked = false;
+                } 
             }
 
             newFullName = Path.Combine(path, "Preview.States");
@@ -3093,9 +3310,9 @@ namespace AmazFit_Watchface_2
             }
 
             // название и номер месяца
-            if (Watch_Face.Date != null && Watch_Face.Date.MonthAndDay != null && Watch_Face.Date.MonthAndDay.Separate != null)
+            if (Watch_Face.DateAmazfit != null && Watch_Face.DateAmazfit.MonthAndDay != null && Watch_Face.DateAmazfit.MonthAndDay.Separate != null)
             {
-                if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null && Watch_Face.Date.MonthAndDay.Separate.Month != null)
+                if (Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName != null && Watch_Face.DateAmazfit.MonthAndDay.Separate.Month != null)
                 {
                     MessageBox.Show(Properties.FormStrings.Message_WarningMonthName,
                             Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -3103,9 +3320,9 @@ namespace AmazFit_Watchface_2
             }
 
             // дата в одну линию и отдельными блоками
-            if (Watch_Face.Date != null && Watch_Face.Date.MonthAndDay != null)
+            if (Watch_Face.DateAmazfit != null && Watch_Face.DateAmazfit.MonthAndDay != null)
             {
-                if (Watch_Face.Date.MonthAndDay.Separate != null && Watch_Face.Date.MonthAndDay.OneLine != null)
+                if (Watch_Face.DateAmazfit.MonthAndDay.Separate != null && Watch_Face.DateAmazfit.MonthAndDay.OneLine != null)
                 {
                     MessageBox.Show(Properties.FormStrings.Message_WarningDateOnelineAndSeparate,
                             Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -3192,7 +3409,8 @@ namespace AmazFit_Watchface_2
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
-                if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+                if (checkBox_WatchSkin_Use.Checked) bitmap = ApplyWatchSkin(bitmap);
+                else if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
             Logger.WriteLine("* SavePNG(end)");
@@ -3222,6 +3440,7 @@ namespace AmazFit_Watchface_2
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
+                Bitmap bitmapTemp = new Bitmap(bitmap.Width, bitmap.Height, PixelFormat.Format32bppArgb);
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
                 Random rnd = new Random();
@@ -3321,15 +3540,19 @@ namespace AmazFit_Watchface_2
 
                         if (save)
                         {
+                            bitmap = bitmapTemp; 
+                            gPanel = Graphics.FromImage(bitmap);
                             Logger.WriteLine("SaveGIF SetPreferences(" + i.ToString() + ")");
 
                             //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                             int link = 0;
                             PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
-                            if (checkBox_crop.Checked) {
-                                bitmap = ApplyMask(bitmap, mask);
-                                gPanel = Graphics.FromImage(bitmap);
-                            }
+                            //if (checkBox_crop.Checked) {
+                            //    bitmap = ApplyMask(bitmap, mask);
+                            //    gPanel = Graphics.FromImage(bitmap);
+                            //}
+                            if (checkBox_WatchSkin_Use.Checked) bitmap = ApplyWatchSkin(bitmap);
+                            else if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                             // Add first image and set the animation delay to 100ms
                             MagickImage item = new MagickImage(bitmap);
                             //ExifProfile profile = item.GetExifProfile();
@@ -3345,14 +3568,18 @@ namespace AmazFit_Watchface_2
                     if (Watch_Face.ScreenIdle != null)
                     {
 
+                        bitmap = bitmapTemp;
+                        gPanel = Graphics.FromImage(bitmap);
                         //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                         int link_AOD = 1;
                         PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
-                        if (checkBox_crop.Checked)
-                        {
-                            bitmap = ApplyMask(bitmap, mask);
-                            gPanel = Graphics.FromImage(bitmap);
-                        }
+                        //if (checkBox_crop.Checked)
+                        //{
+                        //    bitmap = ApplyMask(bitmap, mask);
+                        //    gPanel = Graphics.FromImage(bitmap);
+                        //}
+                        if (checkBox_WatchSkin_Use.Checked) bitmap = ApplyWatchSkin(bitmap);
+                        else if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                         // Add first image and set the animation delay to 100ms
                         MagickImage item_AOD = new MagickImage(bitmap);
                         //ExifProfile profile = item.GetExifProfile();
@@ -3362,12 +3589,16 @@ namespace AmazFit_Watchface_2
 
 
                         SetPreferences(userControl_Set1);
+                        bitmap = bitmapTemp;
+                        gPanel = Graphics.FromImage(bitmap);
                         PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
-                        if (checkBox_crop.Checked)
-                        {
-                            bitmap = ApplyMask(bitmap, mask);
-                            gPanel = Graphics.FromImage(bitmap);
-                        }
+                        //if (checkBox_crop.Checked)
+                        //{
+                        //    bitmap = ApplyMask(bitmap, mask);
+                        //    gPanel = Graphics.FromImage(bitmap);
+                        //}
+                        if (checkBox_WatchSkin_Use.Checked) bitmap = ApplyWatchSkin(bitmap);
+                        else if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                         item_AOD = new MagickImage(bitmap);
                         //ExifProfile profile = item.GetExifProfile();
                         collection.Add(item_AOD);
@@ -3432,6 +3663,8 @@ namespace AmazFit_Watchface_2
                 }
                 PreviewView = true;
                 mask.Dispose();
+                bitmapTemp.Dispose();
+                bitmap.Dispose();
             }
             Logger.WriteLine("* SaveGIF (end)");
         }
@@ -3463,16 +3696,19 @@ namespace AmazFit_Watchface_2
             {
                 pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
                 Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_GTR_2;
             }
             else if (radioButton_GTS2.Checked)
             {
                 pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
                 Program_Settings.unpack_command = Program_Settings.unpack_command_GTS_2;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_GTS_2;
             }
             else if (radioButton_TRex_pro.Checked)
             {
                 pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                 Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_TRex_pro;
             }
 
             // изменяем размер панели для предпросмотра если она не влазит
@@ -4781,6 +5017,7 @@ namespace AmazFit_Watchface_2
         /// <returns>The resized image.</returns>
         public static Bitmap ResizeImage(Image image, float scale)
         {
+            if (scale <= 0) return new Bitmap(image);
             int width = (int)Math.Round(image.Width * scale);
             int height = (int)Math.Round(image.Height * scale);
             var destRect = new Rectangle(0, 0, width, height);
@@ -4877,90 +5114,90 @@ namespace AmazFit_Watchface_2
             //}
             //#endregion
 
-            //#region Date
-            //if (Watch_Face.Date != null)
+            //#region DateAmazfit
+            //if (Watch_Face.DateAmazfit != null)
             //{
-            //    if (Watch_Face.Date.WeekDay != null)
+            //    if (Watch_Face.DateAmazfit.WeekDay != null)
             //    {
-            //        Watch_Face.Date.WeekDay.X = (int)Math.Round(Watch_Face.Date.WeekDay.X * scale);
-            //        Watch_Face.Date.WeekDay.Y = (int)Math.Round(Watch_Face.Date.WeekDay.Y * scale);
+            //        Watch_Face.DateAmazfit.WeekDay.X = (int)Math.Round(Watch_Face.DateAmazfit.WeekDay.X * scale);
+            //        Watch_Face.DateAmazfit.WeekDay.Y = (int)Math.Round(Watch_Face.DateAmazfit.WeekDay.Y * scale);
             //    }
 
-            //    if ((Watch_Face.Date.WeekDayProgress != null) && (Watch_Face.Date.WeekDayProgress.Coordinates != null))
+            //    if ((Watch_Face.DateAmazfit.WeekDayProgress != null) && (Watch_Face.DateAmazfit.WeekDayProgress.Coordinates != null))
             //    {
-            //        foreach (Coordinates coordinates in Watch_Face.Date.WeekDayProgress.Coordinates)
+            //        foreach (Coordinates coordinates in Watch_Face.DateAmazfit.WeekDayProgress.Coordinates)
             //        {
             //            coordinates.X = (int)Math.Round(coordinates.X * scale);
             //            coordinates.Y = (int)Math.Round(coordinates.Y * scale);
             //        }
             //    }
 
-            //    if (Watch_Face.Date.MonthAndDay != null)
+            //    if (Watch_Face.DateAmazfit.MonthAndDay != null)
             //    {
-            //        if ((Watch_Face.Date.MonthAndDay.OneLine != null) && (Watch_Face.Date.MonthAndDay.OneLine.Number != null))
+            //        if ((Watch_Face.DateAmazfit.MonthAndDay.OneLine != null) && (Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number != null))
             //        {
-            //            Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftX =
-            //                (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftX * scale);
-            //            Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftY =
-            //                (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftY * scale);
-            //            Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightX =
-            //                (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightX * scale);
-            //            Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY =
-            //                (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY * scale);
-            //            Watch_Face.Date.MonthAndDay.OneLine.Number.Spacing =
-            //                (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.Spacing * scale);
+            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftX =
+            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftX * scale);
+            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftY =
+            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftY * scale);
+            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightX =
+            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightX * scale);
+            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightY =
+            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightY * scale);
+            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.Spacing =
+            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.Spacing * scale);
             //        }
 
-            //        if (Watch_Face.Date.MonthAndDay.Separate != null)
+            //        if (Watch_Face.DateAmazfit.MonthAndDay.Separate != null)
             //        {
-            //            if (Watch_Face.Date.MonthAndDay.Separate.Day != null)
+            //            if (Watch_Face.DateAmazfit.MonthAndDay.Separate.Day != null)
             //            {
-            //                Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftX =
-            //                     (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftX * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftY =
-            //                     (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftY * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightX =
-            //                     (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightX * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY =
-            //                     (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Day.Spacing =
-            //                     (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.Spacing * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftX =
+            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftX * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftY =
+            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftY * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightX =
+            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightX * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightY =
+            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightY * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.Spacing =
+            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.Spacing * scale);
             //            }
 
-            //            if (Watch_Face.Date.MonthAndDay.Separate.Month != null)
+            //            if (Watch_Face.DateAmazfit.MonthAndDay.Separate.Month != null)
             //            {
-            //                Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftX =
-            //                    (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftX * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftY =
-            //                    (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftY * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightX =
-            //                    (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightX * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY =
-            //                    (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.Month.Spacing =
-            //                    (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.Spacing * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftX =
+            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftX * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftY =
+            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftY * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightX =
+            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightX * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightY =
+            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightY * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.Spacing =
+            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.Spacing * scale);
             //            }
 
-            //            if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null)
+            //            if (Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName != null)
             //            {
-            //                Watch_Face.Date.MonthAndDay.Separate.MonthName.X = 
-            //                    (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.MonthName.X * scale);
-            //                Watch_Face.Date.MonthAndDay.Separate.MonthName.Y = 
-            //                    (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.MonthName.Y * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.X = 
+            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.X * scale);
+            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.Y = 
+            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.Y * scale);
             //            }
             //        }
 
             //    }
 
-            //    if (Watch_Face.Date.Year != null)
+            //    if (Watch_Face.DateAmazfit.Year != null)
             //    {
-            //        if ((Watch_Face.Date.Year.OneLine != null) && (Watch_Face.Date.Year.OneLine.Number != null))
+            //        if ((Watch_Face.DateAmazfit.Year.OneLine != null) && (Watch_Face.DateAmazfit.Year.OneLine.Number != null))
             //        {
-            //            Watch_Face.Date.Year.OneLine.Number.TopLeftX = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.TopLeftX * scale);
-            //            Watch_Face.Date.Year.OneLine.Number.TopLeftY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.TopLeftY * scale);
-            //            Watch_Face.Date.Year.OneLine.Number.BottomRightX = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightX * scale);
-            //            Watch_Face.Date.Year.OneLine.Number.BottomRightY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightY * scale);
-            //            Watch_Face.Date.Year.OneLine.Number.Spacing = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.Spacing * scale);
+            //            Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftX = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftX * scale);
+            //            Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftY = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftY * scale);
+            //            Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightX = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightX * scale);
+            //            Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightY = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightY * scale);
+            //            Watch_Face.DateAmazfit.Year.OneLine.Number.Spacing = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.Spacing * scale);
             //        }
             //    }
             //}
@@ -5945,6 +6182,24 @@ namespace AmazFit_Watchface_2
             textBox_WatchfaceID.Text = rndID.ToString();
             JSON_Modified = true;
             FormText();
+
+            if (checkBox_UseID.Checked)
+            {
+                if (Watch_Face.Info == null) Watch_Face.Info = new Device_Id();
+                int ID = 0;
+                Int32.TryParse(textBox_WatchfaceID.Text, out ID);
+                if (ID >= 1000)
+                {
+                    Watch_Face.Info.WatchFaceId = ID;
+
+                    richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    JsonToTree(richTextBox_JsonText.Text);
+                }
+            }
         }
 
         private void checkBox_UseID_CheckedChanged(object sender, EventArgs e)
@@ -5957,10 +6212,36 @@ namespace AmazFit_Watchface_2
                 {
                     Random rnd = new Random();
                     ushort rndID = (ushort)rnd.Next(1000, 65530);
+                    ID = rndID;
                     textBox_WatchfaceID.Text = rndID.ToString();
                     JSON_Modified = true;
                     FormText();
-                } 
+                }
+                if (Watch_Face != null && Watch_Face.Info != null)
+                {
+                    Watch_Face.Info.WatchFaceId = ID;
+
+                    richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    JsonToTree(richTextBox_JsonText.Text);
+                }
+            }
+            else
+            {
+                if (Watch_Face != null && Watch_Face.Info != null)
+                {
+                    Watch_Face.Info.WatchFaceId = null;
+
+                    richTextBox_JsonText.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    JsonToTree(richTextBox_JsonText.Text);
+                }
             }
         }
 
@@ -7679,6 +7960,12 @@ namespace AmazFit_Watchface_2
             Copy_scaleLinear_AOD(userControl_scaleLinear_FatBurning, userControl_scaleLinear_FatBurning_AOD);
             Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_FatBurning, userControl_SystemFont_Group_FatBurning_AOD);
             Copy_icon_AOD(userControl_icon_FatBurning, userControl_icon_FatBurning_AOD);
+
+            Copy_SystemFont_GroupWeather_AOD(userControl_SystemFont_GroupTime, userControl_SystemFont_GroupTime_AOD);
+
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Day, userControl_SystemFont_Group_Day_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Month, userControl_SystemFont_Group_Month_AOD);
+            Copy_SystemFont_Group_AOD(userControl_SystemFont_Group_Year, userControl_SystemFont_Group_Year_AOD);
 
 
             PreviewView = true;
@@ -9580,31 +9867,632 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
-        private void radioButton_ActivityGoal_CheckedChanged(object sender, EventArgs e)
+        private void userControl_SystemFont_GroupTime_AOD_Copy(object sender, EventArgs eventArgs)
         {
-            JSON_write();
-            PreviewImage();
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                UserControl_SystemFont_weather userControl_SystemFont_weather =
+                    sender as UserControl_SystemFont_weather;
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Current")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupTime.userControl_SystemFont_weather_Current,
+                        userControl_SystemFont_GroupTime_AOD.userControl_SystemFont_weather_Current);
+                }
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Min")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupTime.userControl_SystemFont_weather_Min,
+                        userControl_SystemFont_GroupTime_AOD.userControl_SystemFont_weather_Min);
+                }
+                if (userControl_SystemFont_weather.Name == "userControl_SystemFont_weather_Max")
+                {
+                    Copy_SystemFont_AOD(userControl_SystemFont_GroupTime.userControl_SystemFont_weather_Max,
+                        userControl_SystemFont_GroupTime_AOD.userControl_SystemFont_weather_Max);
+                }
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                UserControl_FontRotate_weather userControl_FontRotate_weather =
+                    sender as UserControl_FontRotate_weather;
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Current")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupTime.userControl_FontRotate_weather_Current,
+                        userControl_SystemFont_GroupTime_AOD.userControl_FontRotate_weather_Current);
+                }
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Min")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupTime.userControl_FontRotate_weather_Min,
+                        userControl_SystemFont_GroupTime_AOD.userControl_FontRotate_weather_Min);
+                }
+                if (userControl_FontRotate_weather.Name == "userControl_FontRotate_weather_Max")
+                {
+                    Copy_FontRotate_AOD(userControl_SystemFont_GroupTime.userControl_FontRotate_weather_Max,
+                        userControl_SystemFont_GroupTime_AOD.userControl_FontRotate_weather_Max);
+                }
+            }
         }
 
+        private void userControl_SystemFont_Group_Day_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Day.userControl_SystemFont,
+                    userControl_SystemFont_Group_Day_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Day.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Day_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Day.userControl_FontRotate,
+                    userControl_SystemFont_Group_Day_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Day.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Day_AOD.userControl_FontRotate_goal);
+            }
+        }
 
-        
-        
-        
-        
-        
-        
+        private void userControl_SystemFont_Group_Month_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Month.userControl_SystemFont,
+                    userControl_SystemFont_Group_Month_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Month.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Month_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Month.userControl_FontRotate,
+                    userControl_SystemFont_Group_Month_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Month.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Month_AOD.userControl_FontRotate_goal);
+            }
+        }
 
+        private void userControl_SystemFont_Group_Year_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            Type type = sender.GetType();
+            if (type.Name == "UserControl_SystemFont")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Year.userControl_SystemFont,
+                    userControl_SystemFont_Group_Year_AOD.userControl_SystemFont);
+            }
+            if (type.Name == "UserControl_SystemFont_weather")
+            {
+                Copy_SystemFont_AOD(userControl_SystemFont_Group_Year.userControl_SystemFont_goal,
+                    userControl_SystemFont_Group_Year_AOD.userControl_SystemFont_goal);
+            }
+            if (type.Name == "UserControl_FontRotate")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Year.userControl_FontRotate,
+                    userControl_SystemFont_Group_Year_AOD.userControl_FontRotate);
+            }
+            if (type.Name == "UserControl_FontRotate_weather")
+            {
+                Copy_FontRotate_AOD(userControl_SystemFont_Group_Year.userControl_FontRotate_goal,
+                    userControl_SystemFont_Group_Year_AOD.userControl_FontRotate_goal);
+            }
+        }
 
 
         #endregion
 
 
 
+        private void radioButton_ActivityGoal_CheckedChanged(object sender, EventArgs e)
+        {
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void dataGridView_SNL_Activity_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_SNL_Activity.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_SNL_Activity.SelectedCells[0].RowIndex;
+                int RowIndexMin = -1;
+                int RowIndexMax = -1;
+                for(int i=0; i < dataGridView_SNL_Activity.Rows.Count; i++)
+                {
+                    if (dataGridView_SNL_Activity.Rows[i].Visible)
+                    {
+                        if (RowIndexMin < 0) RowIndexMin = i;
+                        RowIndexMax = i;
+                    }
+                }
+
+                button_SNL_Activity_Start.Enabled = true;
+                button_SNL_Activity_Up.Enabled = true;
+                button_SNL_Activity_Down.Enabled = true;
+                button_SNL_Activity_End.Enabled = true;
+
+                if (RowIndex <= RowIndexMin)
+                {
+                    button_SNL_Activity_Start.Enabled = false;
+                    button_SNL_Activity_Up.Enabled = false;
+                }
+
+                if (RowIndex >= RowIndexMax)
+                {
+                    button_SNL_Activity_Down.Enabled = false;
+                    button_SNL_Activity_End.Enabled = false;
+                }
+            }
+            else
+            {
+                button_SNL_Activity_Start.Enabled = false;
+                button_SNL_Activity_Up.Enabled = false;
+                button_SNL_Activity_Down.Enabled = false;
+                button_SNL_Activity_End.Enabled = false;
+            }
+        }
+
+        private void Row_FullUp(DataGridView dgv, int rowIndex)
+        {
+            if (rowIndex == 0) return;
+            try
+            {
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                //dgv.Rows.Remove(selectedRow);
+                dgv.Rows.RemoveAt(rowIndex);
+                dgv.Rows.Insert(0, selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[0].Selected = true;
+            }
+            catch { }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void Row_Up(DataGridView dgv, int rowIndex)
+        {
+            if (rowIndex == 0) return;
+            try
+            {
+                int newRowIndex = rowIndex - 1;
+                while (newRowIndex > 0 && !dgv.Rows[newRowIndex].Visible)
+                {
+                    newRowIndex--;
+                }
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                //dgv.Rows.Remove(selectedRow);
+                dgv.Rows.RemoveAt(rowIndex);
+                dgv.Rows.Insert(newRowIndex, selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[newRowIndex].Selected = true;
+            }
+            catch { }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void Row_Down(DataGridView dgv, int rowIndex)
+        {
+            int totalRows = dgv.Rows.Count;
+            if (rowIndex == totalRows - 1) return;
+            try
+            {
+                int newRowIndex = rowIndex + 1;
+                while (newRowIndex < dgv.Rows.Count && !dgv.Rows[newRowIndex].Visible)
+                {
+                    newRowIndex++;
+                }
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                //dgv.Rows.Remove(selectedRow);
+                dgv.Rows.RemoveAt(rowIndex);
+                dgv.Rows.Insert(newRowIndex, selectedRow);
+                //dgv.Rows.Add(selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[newRowIndex].Selected = true;
+            }
+            catch { }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void Row_FullDown(DataGridView dgv, int rowIndex)
+        {
+            int totalRows = dgv.Rows.Count;
+            if (rowIndex == totalRows - 1) return;
+            try
+            {
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                //dgv.Rows.Remove(selectedRow);
+                dgv.Rows.RemoveAt(rowIndex);
+                //dgv.Rows.Insert(rowIndex + 1, selectedRow);
+                dgv.Rows.Add(selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[totalRows - 1].Selected = true;
+            }
+            catch { }
+
+            JSON_write();
+            PreviewImage();
+        }
 
 
+        private void button_SNL_Activity_Start_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_FullUp(dataGridView_SNL_Activity, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_SNL_Activity_Up_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_Up(dataGridView_SNL_Activity, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_SNL_Activity_Down_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_Down(dataGridView_SNL_Activity, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_SNL_Activity_End_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_FullDown(dataGridView_SNL_Activity, rowIndex);
+            }
+            catch { }
+        }
 
 
+        private void dataGridView_SNL_Date_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_SNL_Date.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_SNL_Date.SelectedCells[0].RowIndex;
+                int RowIndexMin = -1;
+                int RowIndexMax = -1;
+                for (int i = 0; i < dataGridView_SNL_Date.Rows.Count; i++)
+                {
+                    if (dataGridView_SNL_Date.Rows[i].Visible)
+                    {
+                        if (RowIndexMin < 0) RowIndexMin = i;
+                        RowIndexMax = i;
+                    }
+                }
 
+                button_SNL_Date_Start.Enabled = true;
+                button_SNL_Date_Up.Enabled = true;
+                button_SNL_Date_Down.Enabled = true;
+                button_SNL_Date_End.Enabled = true;
+
+                if (RowIndex <= RowIndexMin)
+                {
+                    button_SNL_Date_Start.Enabled = false;
+                    button_SNL_Date_Up.Enabled = false;
+                }
+
+                if (RowIndex >= RowIndexMax)
+                {
+                    button_SNL_Date_Down.Enabled = false;
+                    button_SNL_Date_End.Enabled = false;
+                }
+            }
+            else
+            {
+                button_SNL_Date_Start.Enabled = false;
+                button_SNL_Date_Up.Enabled = false;
+                button_SNL_Date_Down.Enabled = false;
+                button_SNL_Date_End.Enabled = false;
+            }
+        }
+
+        private void button_SNL_Date_Start_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                Row_FullUp(dataGridView_SNL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_SNL_Date_Up_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                Row_Up(dataGridView_SNL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_SNL_Date_Down_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                Row_Down(dataGridView_SNL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_SNL_Date_End_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                Row_FullDown(dataGridView_SNL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Activity_Start_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_FullUp(dataGridView_AODL_Activity, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Activity_Up_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_Up(dataGridView_AODL_Activity, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Activity_Down_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_Down(dataGridView_AODL_Activity, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Activity_End_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                Row_FullDown(dataGridView_AODL_Activity, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Date_Start_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                Row_FullUp(dataGridView_AODL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Date_Up_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                Row_Up(dataGridView_AODL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Date_Down_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                Row_Down(dataGridView_AODL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void button_AODL_Date_End_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                Row_FullDown(dataGridView_AODL_Date, rowIndex);
+            }
+            catch { }
+        }
+
+        private void textBox_WatchSkin_Path_Leave(object sender, EventArgs e)
+        {
+            if (radioButton_GTR2.Checked)
+            {
+                Program_Settings.WatchSkin_GTR_2 = textBox_WatchSkin_Path.Text;
+            }
+            else if (radioButton_GTS2.Checked)
+            {
+                Program_Settings.WatchSkin_GTS_2 = textBox_WatchSkin_Path.Text;
+            }
+            else if (radioButton_TRex_pro.Checked)
+            {
+                Program_Settings.WatchSkin_TRex_pro = textBox_WatchSkin_Path.Text;
+            }
+
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+        }
+
+        private void button_WatchSkin_PathGet_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = FullFileDir;
+            openFileDialog.FileName = FileName;
+            openFileDialog.Filter = Properties.FormStrings.FilterJson;
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_WatchSkin;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Logger.WriteLine("* WatchSkin_PathGet_Click");
+                string fullfilename = openFileDialog.FileName;
+                if (fullfilename.IndexOf(Application.StartupPath) == 0)
+                    fullfilename = fullfilename.Remove(0, Application.StartupPath.Length);
+                textBox_WatchSkin_Path.Text = fullfilename;
+
+                if (radioButton_GTR2.Checked)
+                {
+                    Program_Settings.WatchSkin_GTR_2 = textBox_WatchSkin_Path.Text;
+                }
+                else if (radioButton_GTS2.Checked)
+                {
+                    Program_Settings.WatchSkin_GTS_2 = textBox_WatchSkin_Path.Text;
+                }
+                else if (radioButton_TRex_pro.Checked)
+                {
+                    Program_Settings.WatchSkin_TRex_pro = textBox_WatchSkin_Path.Text;
+                }
+
+                string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+                Logger.WriteLine("* WatchSkin_PathGet_Click_END");
+            }
+        }
+
+        private void checkBox_WatchSkin_Use_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_WatchSkin_Use.Checked;
+            textBox_WatchSkin_Path.Enabled = b;
+            button_WatchSkin_PathGet.Enabled = b;
+            if (Settings_Load) return;
+            Program_Settings.WatchSkin_Use = b;
+
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+
+        private void dataGridView_AODL_Activity_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_AODL_Activity.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_AODL_Activity.SelectedCells[0].RowIndex;
+                int RowIndexMin = -1;
+                int RowIndexMax = -1;
+                for (int i = 0; i < dataGridView_AODL_Activity.Rows.Count; i++)
+                {
+                    if (dataGridView_AODL_Activity.Rows[i].Visible)
+                    {
+                        if (RowIndexMin < 0) RowIndexMin = i;
+                        RowIndexMax = i;
+                    }
+                }
+
+                button_AODL_Activity_Start.Enabled = true;
+                button_AODL_Activity_Up.Enabled = true;
+                button_AODL_Activity_Down.Enabled = true;
+                button_AODL_Activity_End.Enabled = true;
+
+                if (RowIndex <= RowIndexMin)
+                {
+                    button_AODL_Activity_Start.Enabled = false;
+                    button_AODL_Activity_Up.Enabled = false;
+                }
+
+                if (RowIndex >= RowIndexMax)
+                {
+                    button_AODL_Activity_Down.Enabled = false;
+                    button_AODL_Activity_End.Enabled = false;
+                }
+            }
+            else
+            {
+                button_AODL_Activity_Start.Enabled = false;
+                button_AODL_Activity_Up.Enabled = false;
+                button_AODL_Activity_Down.Enabled = false;
+                button_AODL_Activity_End.Enabled = false;
+            }
+        }
+
+        private void dataGridView_AODL_Date_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_AODL_Date.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_AODL_Date.SelectedCells[0].RowIndex;
+                int RowIndexMin = -1;
+                int RowIndexMax = -1;
+                for (int i = 0; i < dataGridView_AODL_Date.Rows.Count; i++)
+                {
+                    if (dataGridView_AODL_Date.Rows[i].Visible)
+                    {
+                        if (RowIndexMin < 0) RowIndexMin = i;
+                        RowIndexMax = i;
+                    }
+                }
+
+                button_AODL_Date_Start.Enabled = true;
+                button_AODL_Date_Up.Enabled = true;
+                button_AODL_Date_Down.Enabled = true;
+                button_AODL_Date_End.Enabled = true;
+
+                if (RowIndex <= RowIndexMin)
+                {
+                    button_AODL_Date_Start.Enabled = false;
+                    button_AODL_Date_Up.Enabled = false;
+                }
+
+                if (RowIndex >= RowIndexMax)
+                {
+                    button_AODL_Date_Down.Enabled = false;
+                    button_AODL_Date_End.Enabled = false;
+                }
+            }
+            else
+            {
+                button_AODL_Date_Start.Enabled = false;
+                button_AODL_Date_Up.Enabled = false;
+                button_AODL_Date_Down.Enabled = false;
+                button_AODL_Date_End.Enabled = false;
+            }
+        }
 
 
 

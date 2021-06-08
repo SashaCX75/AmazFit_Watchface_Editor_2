@@ -157,10 +157,11 @@ namespace AmazFit_Watchface_2
             set
             {
                 userControl_SystemFont_goal.FollowText = value;
+                userControl_SystemFont.FollowText = value;
             }
         }
 
-        [Description("Устанавливает надпись \"Следовать за ...\" для по окружности")]
+        [Description("Устанавливает надпись \"Следовать за ...\" для текста по окружности")]
         [Localizable(true)]
         public string FollowRotateText
         {
@@ -171,6 +172,7 @@ namespace AmazFit_Watchface_2
             set
             {
                 userControl_FontRotate_goal.FollowText = value;
+                userControl_FontRotate.FollowText = value;
             }
         }
 
