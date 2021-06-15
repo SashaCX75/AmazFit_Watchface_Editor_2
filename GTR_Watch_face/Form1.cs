@@ -7405,6 +7405,7 @@ namespace AmazFit_Watchface_2
             comboBox_Year_alignment.Enabled = b;
             checkBox_Year_add_zero.Enabled = b;
             numericUpDown_Year_spacing.Enabled = b;
+            checkBox_Year_follow.Enabled = b;
 
             label598.Enabled = b;
             label599.Enabled = b;
@@ -7651,6 +7652,7 @@ namespace AmazFit_Watchface_2
             comboBox_Year_alignment_AOD.Enabled = b;
             checkBox_Year_add_zero_AOD.Enabled = b;
             numericUpDown_Year_spacing_AOD.Enabled = b;
+            checkBox_Year_follow_AOD.Enabled = b;
 
             label432.Enabled = b;
             label433.Enabled = b;
@@ -10389,6 +10391,7 @@ namespace AmazFit_Watchface_2
                     //DefaultValueHandling = DefaultValueHandling.Ignore,
                     NullValueHandling = NullValueHandling.Ignore
                 });
+                File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
 
                 Logger.WriteLine("* WatchSkin_PathGet_Click_END");
             }
@@ -10491,6 +10494,246 @@ namespace AmazFit_Watchface_2
                 button_AODL_Date_Up.Enabled = false;
                 button_AODL_Date_Down.Enabled = false;
                 button_AODL_Date_End.Enabled = false;
+            }
+        }
+
+        private void dataGridView_SNL_Activity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_Up(dataGridView_SNL_Activity, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_Down(dataGridView_SNL_Activity, rowIndex); 
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_FullUp(dataGridView_SNL_Activity, rowIndex); 
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_FullDown(dataGridView_SNL_Activity, rowIndex); 
+                    }
+                }
+                catch { }
+                return;
+            }
+        }
+
+        private void dataGridView_SNL_Date_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_Up(dataGridView_SNL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_Down(dataGridView_SNL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_FullUp(dataGridView_SNL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_SNL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_SNL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_FullDown(dataGridView_SNL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+        }
+
+        private void dataGridView_AODL_Activity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_Up(dataGridView_AODL_Activity, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_Down(dataGridView_AODL_Activity, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_FullUp(dataGridView_AODL_Activity, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Activity.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Activity.SelectedCells[0].OwningRow.Index;
+                        Row_FullDown(dataGridView_AODL_Activity, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+        }
+
+        private void dataGridView_AODL_Date_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_Up(dataGridView_AODL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_Down(dataGridView_AODL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_FullUp(dataGridView_AODL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_AODL_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_AODL_Date.SelectedCells[0].OwningRow.Index;
+                        Row_FullDown(dataGridView_AODL_Date, rowIndex);
+                    }
+                }
+                catch { }
+                return;
             }
         }
 

@@ -117,6 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActivityName_ActivityGoal" xml:space="preserve">
+    <value>Objetivo actividad</value>
+  </data>
+  <data name="ActivityName_AirPressure" xml:space="preserve">
+    <value>Presión de aire</value>
+  </data>
+  <data name="ActivityName_AirQuality" xml:space="preserve">
+    <value>Calidad del aire</value>
+  </data>
+  <data name="ActivityName_Altitude" xml:space="preserve">
+    <value>Altitud</value>
+  </data>
+  <data name="ActivityName_Battery" xml:space="preserve">
+    <value>Batería</value>
+  </data>
+  <data name="ActivityName_Calories" xml:space="preserve">
+    <value>Calorías</value>
+  </data>
+  <data name="ActivityName_Distance" xml:space="preserve">
+    <value>Distancia</value>
+  </data>
+  <data name="ActivityName_FatBurning" xml:space="preserve">
+    <value>Grasa quemada</value>
+  </data>
+  <data name="ActivityName_HeartRate" xml:space="preserve">
+    <value>Ritmo cardíaco</value>
+  </data>
+  <data name="ActivityName_Humidity" xml:space="preserve">
+    <value>Humedad</value>
+  </data>
+  <data name="ActivityName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="ActivityName_StandUp" xml:space="preserve">
+    <value>Ponerse de pie</value>
+  </data>
+  <data name="ActivityName_Steps" xml:space="preserve">
+    <value>Pasos</value>
+  </data>
+  <data name="ActivityName_Stress" xml:space="preserve">
+    <value>Estrés</value>
+  </data>
+  <data name="ActivityName_Sunrise" xml:space="preserve">
+    <value>Amanecer</value>
+  </data>
+  <data name="ActivityName_UVindex" xml:space="preserve">
+    <value>Índice UV</value>
+  </data>
+  <data name="ActivityName_Weather" xml:space="preserve">
+    <value>Clima</value>
+  </data>
+  <data name="ActivityName_WindForce" xml:space="preserve">
+    <value>Fuerza del viento</value>
+  </data>
+  <data name="DateName_Day" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="DateName_Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="DateName_Year" xml:space="preserve">
+    <value>Año</value>
+  </data>
   <data name="Dialog_Title_Image" xml:space="preserve">
     <value>Seleccionar archivos de imagen</value>
   </data>
@@ -137,6 +200,21 @@
   </data>
   <data name="Dialog_Title_Unpack" xml:space="preserve">
     <value>Seleccione un archivo de log</value>
+  </data>
+  <data name="Dialog_Title_WatchSkin" xml:space="preserve">
+    <value>Seleccionar archivo de imagen del reloj</value>
+  </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Archivo Bin (*.bin)|*.bin</value>
+  </data>
+  <data name="FilterGif" xml:space="preserve">
+    <value>Archivos GIF (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Archivos Json (*.json)|*.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>Archivos PNG (*.png)|*.png</value>
   </data>
   <data name="Form_Preview" xml:space="preserve">
     <value>Vista previa</value>

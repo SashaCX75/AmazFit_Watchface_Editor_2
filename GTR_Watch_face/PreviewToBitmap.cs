@@ -82,12 +82,17 @@ namespace AmazFit_Watchface_2
             int date_offsetY = -1;
             int spasing_offset = 0;
 
-            string sValue_first = "";
-            string sValue_second = "";
-            string sValue_third = "";
-            //bool follow_first = false;
-            bool follow_second = false;
-            bool follow_third = false;
+            string sValue_firstSF = "";
+            string sValue_secondSF = "";
+            string sValue_thirdSF = "";
+            bool follow_secondSF = false;
+            bool follow_thirdSF = false;
+
+            string sValue_firstFR = "";
+            string sValue_secondFR = "";
+            string sValue_thirdFR = "";
+            bool follow_secondFR = false;
+            bool follow_thirdFR = false;
 
             // формируем надписи
             for (int j = 0; j < dataGridView_SNL_Date.RowCount; j++)
@@ -99,27 +104,59 @@ namespace AmazFit_Watchface_2
                 {
                     UserControl_SystemFont userControl_SystemFont =
                            userControl_SystemFont_Group_Year.userControl_SystemFont;
-                    int unitCheck = userControl_SystemFont.checkBoxGetUnit();
-                    bool addZero = userControl_SystemFont.checkBox_addZero.Checked;
-                    bool separator = userControl_SystemFont.checkBox_separator.Checked;
-                    int value = Watch_Face_Preview_Set.Date.Year;
-                    if (addZero) value = Watch_Face_Preview_Set.Date.Year % 100;
-                    string sValue = value.ToString();
-                    sValue = sValue + UnitName("Date", unitCheck);
-                    if (separator) sValue = sValue + "/";
-                    switch (j)
+                    UserControl_FontRotate userControl_FontRotate =
+                           userControl_SystemFont_Group_Year.userControl_FontRotate;
+
+                    if (userControl_SystemFont.checkBox_Use.Checked)
                     {
-                        case 0:
-                            sValue_first = sValue;
-                            break;
-                        case 1:
-                            sValue_second = sValue;
-                            follow_second = userControl_SystemFont.checkBox_follow.Checked;
-                            break;
-                        case 2:
-                            sValue_third = sValue;
-                            follow_third = userControl_SystemFont.checkBox_follow.Checked;
-                            break;
+                        int unitCheck = userControl_SystemFont.checkBoxGetUnit();
+                        bool addZero = userControl_SystemFont.checkBox_addZero.Checked;
+                        bool separator = userControl_SystemFont.checkBox_separator.Checked;
+                        int value = Watch_Face_Preview_Set.Date.Year;
+                        if (addZero) value = Watch_Face_Preview_Set.Date.Year % 100;
+                        string sValue = value.ToString();
+                        sValue = sValue + UnitName("Date", unitCheck);
+                        if (separator) sValue = sValue + "/";
+                        switch (j)
+                        {
+                            case 0:
+                                sValue_firstSF = sValue;
+                                break;
+                            case 1:
+                                sValue_secondSF = sValue;
+                                follow_secondSF = userControl_SystemFont.checkBox_follow.Checked;
+                                break;
+                            case 2:
+                                sValue_thirdSF = sValue;
+                                follow_thirdSF = userControl_SystemFont.checkBox_follow.Checked;
+                                break;
+                        }
+                    }
+
+                    if (userControl_FontRotate.checkBox_Use.Checked)
+                    {
+                        int unitCheck = userControl_FontRotate.checkBoxGetUnit();
+                        bool addZero = userControl_FontRotate.checkBox_addZero.Checked;
+                        bool separator = userControl_FontRotate.checkBox_separator.Checked;
+                        int value = Watch_Face_Preview_Set.Date.Year;
+                        if (addZero) value = Watch_Face_Preview_Set.Date.Year % 100;
+                        string sValue = value.ToString();
+                        sValue = sValue + UnitName("Date", unitCheck);
+                        if (separator) sValue = sValue + "/";
+                        switch (j)
+                        {
+                            case 0:
+                                sValue_firstFR = sValue;
+                                break;
+                            case 1:
+                                sValue_secondFR = sValue;
+                                follow_secondFR = userControl_FontRotate.checkBox_follow.Checked;
+                                break;
+                            case 2:
+                                sValue_thirdFR = sValue;
+                                follow_thirdFR = userControl_FontRotate.checkBox_follow.Checked;
+                                break;
+                        }
                     }
 
                 }
@@ -129,33 +166,71 @@ namespace AmazFit_Watchface_2
                 {
                     UserControl_SystemFont userControl_SystemFont =
                            userControl_SystemFont_Group_Month.userControl_SystemFont;
-                    int unitCheck = userControl_SystemFont.checkBoxGetUnit();
-                    bool addZero = userControl_SystemFont.checkBox_addZero.Checked;
-                    bool separator = userControl_SystemFont.checkBox_separator.Checked;
-                    int value = Watch_Face_Preview_Set.Date.Month;
-                    string sValue = value.ToString();
-                    if (addZero)
+                    UserControl_FontRotate userControl_FontRotate =
+                           userControl_SystemFont_Group_Month.userControl_FontRotate;
+
+                    if (userControl_SystemFont.checkBox_Use.Checked)
                     {
-                        while (sValue.Length < 2)
+                        int unitCheck = userControl_SystemFont.checkBoxGetUnit();
+                        bool addZero = userControl_SystemFont.checkBox_addZero.Checked;
+                        bool separator = userControl_SystemFont.checkBox_separator.Checked;
+                        int value = Watch_Face_Preview_Set.Date.Month;
+                        string sValue = value.ToString();
+                        if (addZero)
                         {
-                            sValue = "0" + sValue;
+                            while (sValue.Length < 2)
+                            {
+                                sValue = "0" + sValue;
+                            }
+                        }
+                        sValue = sValue + UnitName("Date", unitCheck);
+                        if (separator) sValue = sValue + "/";
+                        switch (j)
+                        {
+                            case 0:
+                                sValue_firstSF = sValue;
+                                break;
+                            case 1:
+                                sValue_secondSF = sValue;
+                                follow_secondSF = userControl_SystemFont.checkBox_follow.Checked;
+                                break;
+                            case 2:
+                                sValue_thirdSF = sValue;
+                                follow_thirdSF = userControl_SystemFont.checkBox_follow.Checked;
+                                break;
                         }
                     }
-                    sValue = sValue + UnitName("Date", unitCheck);
-                    if (separator) sValue = sValue + "/";
-                    switch (j)
+
+                    if (userControl_FontRotate.checkBox_Use.Checked)
                     {
-                        case 0:
-                            sValue_first = sValue;
-                            break;
-                        case 1:
-                            sValue_second = sValue;
-                            follow_second = userControl_SystemFont.checkBox_follow.Checked;
-                            break;
-                        case 2:
-                            sValue_third = sValue;
-                            follow_third = userControl_SystemFont.checkBox_follow.Checked;
-                            break;
+                        int unitCheck = userControl_FontRotate.checkBoxGetUnit();
+                        bool addZero = userControl_FontRotate.checkBox_addZero.Checked;
+                        bool separator = userControl_FontRotate.checkBox_separator.Checked;
+                        int value = Watch_Face_Preview_Set.Date.Month;
+                        string sValue = value.ToString();
+                        if (addZero)
+                        {
+                            while (sValue.Length < 2)
+                            {
+                                sValue = "0" + sValue;
+                            }
+                        }
+                        sValue = sValue + UnitName("Date", unitCheck);
+                        if (separator) sValue = sValue + "/";
+                        switch (j)
+                        {
+                            case 0:
+                                sValue_firstFR = sValue;
+                                break;
+                            case 1:
+                                sValue_secondFR = sValue;
+                                follow_secondFR = userControl_FontRotate.checkBox_follow.Checked;
+                                break;
+                            case 2:
+                                sValue_thirdFR = sValue;
+                                follow_thirdFR = userControl_FontRotate.checkBox_follow.Checked;
+                                break;
+                        }
                     }
                 }
 
@@ -164,51 +239,103 @@ namespace AmazFit_Watchface_2
                 {
                     UserControl_SystemFont userControl_SystemFont =
                            userControl_SystemFont_Group_Day.userControl_SystemFont;
-                    int unitCheck = userControl_SystemFont.checkBoxGetUnit();
-                    bool addZero = userControl_SystemFont.checkBox_addZero.Checked;
-                    bool separator = userControl_SystemFont.checkBox_separator.Checked;
-                    int value = Watch_Face_Preview_Set.Date.Day;
-                    string sValue = value.ToString();
-                    if (addZero)
+                    UserControl_FontRotate userControl_FontRotate =
+                           userControl_SystemFont_Group_Day.userControl_FontRotate;
+
+                    if (userControl_SystemFont.checkBox_Use.Checked)
                     {
-                        while (sValue.Length < 2)
+                        int unitCheck = userControl_SystemFont.checkBoxGetUnit();
+                        bool addZero = userControl_SystemFont.checkBox_addZero.Checked;
+                        bool separator = userControl_SystemFont.checkBox_separator.Checked;
+                        int value = Watch_Face_Preview_Set.Date.Day;
+                        string sValue = value.ToString();
+                        if (addZero)
                         {
-                            sValue = "0" + sValue;
+                            while (sValue.Length < 2)
+                            {
+                                sValue = "0" + sValue;
+                            }
+                        }
+                        sValue = sValue + UnitName("Date", unitCheck);
+                        if (separator) sValue = sValue + "/";
+                        switch (j)
+                        {
+                            case 0:
+                                sValue_firstSF = sValue;
+                                break;
+                            case 1:
+                                sValue_secondSF = sValue;
+                                follow_secondSF = userControl_SystemFont.checkBox_follow.Checked;
+                                break;
+                            case 2:
+                                sValue_thirdSF = sValue;
+                                follow_thirdSF = userControl_SystemFont.checkBox_follow.Checked;
+                                break;
                         }
                     }
-                    sValue = sValue + UnitName("Date", unitCheck);
-                    if (separator) sValue = sValue + "/";
-                    switch (j)
+
+                    if (userControl_FontRotate.checkBox_Use.Checked)
                     {
-                        case 0:
-                            sValue_first = sValue;
-                            break;
-                        case 1:
-                            sValue_second = sValue;
-                            follow_second = userControl_SystemFont.checkBox_follow.Checked;
-                            break;
-                        case 2:
-                            sValue_third = sValue;
-                            follow_third = userControl_SystemFont.checkBox_follow.Checked;
-                            break;
+                        int unitCheck = userControl_FontRotate.checkBoxGetUnit();
+                        bool addZero = userControl_FontRotate.checkBox_addZero.Checked;
+                        bool separator = userControl_FontRotate.checkBox_separator.Checked;
+                        int value = Watch_Face_Preview_Set.Date.Day;
+                        string sValue = value.ToString();
+                        if (addZero)
+                        {
+                            while (sValue.Length < 2)
+                            {
+                                sValue = "0" + sValue;
+                            }
+                        }
+                        sValue = sValue + UnitName("Date", unitCheck);
+                        if (separator) sValue = sValue + "/";
+                        switch (j)
+                        {
+                            case 0:
+                                sValue_firstFR = sValue;
+                                break;
+                            case 1:
+                                sValue_secondFR = sValue;
+                                follow_secondFR = userControl_FontRotate.checkBox_follow.Checked;
+                                break;
+                            case 2:
+                                sValue_thirdFR = sValue;
+                                follow_thirdFR = userControl_FontRotate.checkBox_follow.Checked;
+                                break;
+                        }
                     }
                 }
 
             }
 
-            if (follow_third)
+            if (follow_thirdSF)
             {
-                sValue_second = sValue_second + sValue_third;
-                sValue_third = "";
+                sValue_secondSF = sValue_secondSF + sValue_thirdSF;
+                sValue_thirdSF = "";
             }
-            else sValue_third = sValue_first + sValue_second + sValue_third;
-            if (follow_second)
+            else sValue_thirdSF = sValue_firstSF + sValue_secondSF + sValue_thirdSF;
+            if (follow_secondSF)
             {
-                sValue_first = sValue_first + sValue_second;
-                sValue_second = sValue_third;
-                sValue_third = "";
+                sValue_firstSF = sValue_firstSF + sValue_secondSF;
+                sValue_secondSF = sValue_thirdSF;
+                sValue_thirdSF = "";
             }
-            else sValue_second = sValue_first + sValue_second;
+            else sValue_secondSF = sValue_firstSF + sValue_secondSF;
+
+            if (follow_thirdFR)
+            {
+                sValue_secondFR = sValue_secondFR + sValue_thirdFR;
+                sValue_thirdFR = "";
+            }
+            else sValue_thirdFR = sValue_firstFR + sValue_secondFR + sValue_thirdFR;
+            if (follow_secondFR)
+            {
+                sValue_firstFR = sValue_firstFR + sValue_secondFR;
+                sValue_secondFR = sValue_thirdFR;
+                sValue_thirdFR = "";
+            }
+            else sValue_secondFR = sValue_firstFR + sValue_secondFR;
 
             for (int j = 0; j < dataGridView_SNL_Date.RowCount; j++)
             {
@@ -274,13 +401,13 @@ namespace AmazFit_Watchface_2
                         switch (j)
                         {
                             case 0:
-                                sValue = sValue_first;
+                                sValue = sValue_firstSF;
                                 break;
                             case 1:
-                                sValue = sValue_second;
+                                sValue = sValue_secondSF;
                                 break;
                             case 2:
-                                sValue = sValue_third;
+                                sValue = sValue_thirdSF;
                                 break;
                         }
                         Color color = userControl_SystemFont.comboBoxGetColor();
@@ -323,13 +450,13 @@ namespace AmazFit_Watchface_2
                         switch (j)
                         {
                             case 0:
-                                sValue = sValue_first;
+                                sValue = sValue_firstFR;
                                 break;
                             case 1:
-                                sValue = sValue_second;
+                                sValue = sValue_secondFR;
                                 break;
                             case 2:
-                                sValue = sValue_third;
+                                sValue = sValue_thirdFR;
                                 break;
                         }
                         Color color = userControl_FontRotate.comboBoxGetColor();
@@ -423,13 +550,13 @@ namespace AmazFit_Watchface_2
                         switch (j)
                         {
                             case 0:
-                                sValue = sValue_first;
+                                sValue = sValue_firstSF;
                                 break;
                             case 1:
-                                sValue = sValue_second;
+                                sValue = sValue_secondSF;
                                 break;
                             case 2:
-                                sValue = sValue_third;
+                                sValue = sValue_thirdSF;
                                 break;
                         }
                         Color color = userControl_SystemFont.comboBoxGetColor();
@@ -471,13 +598,13 @@ namespace AmazFit_Watchface_2
                         switch (j)
                         {
                             case 0:
-                                sValue = sValue_first;
+                                sValue = sValue_firstFR;
                                 break;
                             case 1:
-                                sValue = sValue_second;
+                                sValue = sValue_secondFR;
                                 break;
                             case 2:
-                                sValue = sValue_third;
+                                sValue = sValue_thirdFR;
                                 break;
                         }
                         Color color = userControl_FontRotate.comboBoxGetColor();
@@ -556,13 +683,13 @@ namespace AmazFit_Watchface_2
                         switch (j)
                         {
                             case 0:
-                                sValue = sValue_first;
+                                sValue = sValue_firstSF;
                                 break;
                             case 1:
-                                sValue = sValue_second;
+                                sValue = sValue_secondSF;
                                 break;
                             case 2:
-                                sValue = sValue_third;
+                                sValue = sValue_thirdSF;
                                 break;
                         }
                         Color color = userControl_SystemFont.comboBoxGetColor();
@@ -605,13 +732,13 @@ namespace AmazFit_Watchface_2
                         switch (j)
                         {
                             case 0:
-                                sValue = sValue_first;
+                                sValue = sValue_firstFR;
                                 break;
                             case 1:
-                                sValue = sValue_second;
+                                sValue = sValue_secondFR;
                                 break;
                             case 2:
-                                sValue = sValue_third;
+                                sValue = sValue_thirdFR;
                                 break;
                         }
                         Color color = userControl_FontRotate.comboBoxGetColor();

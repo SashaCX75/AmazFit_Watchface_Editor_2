@@ -402,4 +402,7 @@
   <data name="DateName_Year" xml:space="preserve">
     <value>Year</value>
   </data>
+  <data name="Dialog_Title_WatchSkin" xml:space="preserve">
+    <value>Selecting a watch image file</value>
+  </data>
 </root>

@@ -508,7 +508,7 @@
     <value>Alignment</value>
   </data>
   <data name="comboBox_Second_alignment.Items" xml:space="preserve">
-    <value>0</value>
+    <value>Left</value>
   </data>
   <data name="comboBox_Second_alignment.Items1" xml:space="preserve">
     <value>Right</value>
@@ -1149,9 +1149,6 @@
   <data name="label583.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
-  <data name="checkBox_Day_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
-  </data>
   <data name="checkBox_Day_follow.Text" xml:space="preserve">
     <value>Follow the predecessor</value>
   </data>
@@ -1332,9 +1329,6 @@
   <data name="label594.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
-  <data name="checkBox_Month_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
-  </data>
   <data name="checkBox_Month_follow.Text" xml:space="preserve">
     <value>Follow the predecessor</value>
   </data>
@@ -1403,6 +1397,9 @@
   </data>
   <data name="button_Year_hand.Text" xml:space="preserve">
     <value>Pointer</value>
+  </data>
+  <data name="checkBox_Year_follow.Text" xml:space="preserve">
+    <value>Follow the predecessor</value>
   </data>
   <data name="checkBox_Year_text_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
@@ -2429,8 +2426,8 @@ The data is not displayed correctly for all cities.</value>
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAVgBBQFYAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
+        DQAAAk1TRnQBSQFMAgEBBgEAAWwBBQF0AQUBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -2488,7 +2485,7 @@ The data is not displayed correctly for all cities.</value>
         AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
         AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHws=
+        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
 </value>
   </data>
   <data name="tabControl_EditParameters.Size" type="System.Drawing.Size, System.Drawing">
@@ -3037,9 +3034,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="comboBox_Day_alignment_AOD.Items2" xml:space="preserve">
     <value>Center</value>
   </data>
-  <data name="checkBox_Day_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 17</value>
-  </data>
   <data name="checkBox_Day_follow_AOD.Text" xml:space="preserve">
     <value>Follow the predecessor</value>
   </data>
@@ -3235,9 +3229,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="checkBox_Month_Use_AOD.Text" xml:space="preserve">
     <value>Use</value>
   </data>
-  <data name="checkBox_Month_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 17</value>
-  </data>
   <data name="checkBox_Month_follow_AOD.Text" xml:space="preserve">
     <value>Follow the predecessor</value>
   </data>
@@ -3381,6 +3372,9 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="button13.Text" xml:space="preserve">
     <value>Pointer</value>
+  </data>
+  <data name="checkBox_Year_follow_AOD.Text" xml:space="preserve">
+    <value>Follow the predecessor</value>
   </data>
   <data name="button_Copy_Year_text_AOD.Text" xml:space="preserve">
     <value>Copy from main screen</value>

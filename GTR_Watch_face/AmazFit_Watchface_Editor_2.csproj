@@ -541,6 +541,12 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.en.resx">
       <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.es.resx">
+      <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.fr.resx">
+      <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.en.resx">
       <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
     </EmbeddedResource>

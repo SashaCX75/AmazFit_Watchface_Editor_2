@@ -425,6 +425,18 @@
   <data name="label570.Text" xml:space="preserve">
     <value>Coordonnées</value>
   </data>
+  <data name="userControl_SystemFont_GroupTime.FollowRotatText_Max" xml:space="preserve">
+    <value>Suit les minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowRotatText_Min" xml:space="preserve">
+    <value>Suit les heures</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowText_Max" xml:space="preserve">
+    <value>Suit les minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowText_Min" xml:space="preserve">
+    <value>Suit les heures</value>
+  </data>
   <data name="label534.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 13</value>
   </data>
@@ -816,6 +828,12 @@
   <data name="tabPage_Time.Text" xml:space="preserve">
     <value>Heure</value>
   </data>
+  <data name="userControl_SystemFont_Group_Day.FollowRotateText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day.FollowText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
   <data name="checkBox_Day_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
   </data>
@@ -969,14 +987,20 @@
   <data name="label583.Text" xml:space="preserve">
     <value>Espacement</value>
   </data>
-  <data name="checkBox_Day_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+  <data name="checkBox_Day_follow.Text" xml:space="preserve">
+    <value>Suit le précédent</value>
   </data>
   <data name="button_Day_text.Text" xml:space="preserve">
     <value>Valeurs numériques</value>
   </data>
   <data name="tabPage_Day.Text" xml:space="preserve">
     <value>Jour</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.FollowRotateText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.FollowText" xml:space="preserve">
+    <value>Suit le précédent</value>
   </data>
   <data name="label706.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1131,8 +1155,8 @@
   <data name="label594.Text" xml:space="preserve">
     <value>Espacement</value>
   </data>
-  <data name="checkBox_Month_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 17</value>
+  <data name="checkBox_Month_follow.Text" xml:space="preserve">
+    <value>Suit le précédent</value>
   </data>
   <data name="button_Month_text.Text" xml:space="preserve">
     <value>Valeurs numériques</value>
@@ -1167,8 +1191,17 @@
   <data name="tabPage_Month.Text" xml:space="preserve">
     <value>Mois</value>
   </data>
+  <data name="userControl_SystemFont_Group_Year.FollowRotateText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year.FollowText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
   <data name="button_Year_hand.Text" xml:space="preserve">
     <value>Indicateur</value>
+  </data>
+  <data name="checkBox_Year_follow.Text" xml:space="preserve">
+    <value>Suit le précédent</value>
   </data>
   <data name="checkBox_Year_text_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -1677,7 +1710,7 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAUwBEQFMAREBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAXQBEQF0AREBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1767,6 +1800,18 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   </data>
   <data name="label290.Text" xml:space="preserve">
     <value>Coordonnées</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowRotatText_Max" xml:space="preserve">
+    <value>Suit les minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowRotatText_Min" xml:space="preserve">
+    <value>Suit les heures</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowText_Max" xml:space="preserve">
+    <value>Suit les minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowText_Min" xml:space="preserve">
+    <value>Suit les heures</value>
   </data>
   <data name="button_Copy_Minute_AOD.Text" xml:space="preserve">
     <value>Copier depuis le cadran principal</value>
@@ -2041,6 +2086,12 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   <data name="tabPage_Time_AOD.Text" xml:space="preserve">
     <value>Heure</value>
   </data>
+  <data name="userControl_SystemFont_Group_Day_AOD.FollowRotateText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day_AOD.FollowText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
   <data name="button_Copy_Day_hand_AOD.Text" xml:space="preserve">
     <value>Copier depuis le cadran principal</value>
   </data>
@@ -2137,6 +2188,12 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   <data name="comboBox_Day_alignment_AOD.Items2" xml:space="preserve">
     <value>Centre</value>
   </data>
+  <data name="checkBox_Day_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 17</value>
+  </data>
+  <data name="checkBox_Day_follow_AOD.Text" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
   <data name="checkBox_Day_add_zero_AOD.Text" xml:space="preserve">
     <value>Ajouter les zéros </value>
   </data>
@@ -2205,6 +2262,12 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   </data>
   <data name="tabPage_Day_AOD.Text" xml:space="preserve">
     <value>Jour</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.FollowRotateText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.FollowText" xml:space="preserve">
+    <value>Suit le précédent</value>
   </data>
   <data name="button_Copy_Month_hand_AOD.Text" xml:space="preserve">
     <value>Copier depuis le cadran principal</value>
@@ -2292,6 +2355,12 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   </data>
   <data name="checkBox_Month_Use_AOD.Text" xml:space="preserve">
     <value>Activer</value>
+  </data>
+  <data name="checkBox_Month_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 17</value>
+  </data>
+  <data name="checkBox_Month_follow_AOD.Text" xml:space="preserve">
+    <value>Suit le précédent</value>
   </data>
   <data name="checkBox_Month_add_zero_AOD.Text" xml:space="preserve">
     <value>Ajouter les zéros</value>
@@ -2401,8 +2470,17 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   <data name="tabPage_Month_AOD.Text" xml:space="preserve">
     <value>Mois</value>
   </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.FollowRotateText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.FollowText" xml:space="preserve">
+    <value>Suit le précédent</value>
+  </data>
   <data name="button13.Text" xml:space="preserve">
     <value>Indicateur</value>
+  </data>
+  <data name="checkBox_Year_follow_AOD.Text" xml:space="preserve">
+    <value>Suit le précédent</value>
   </data>
   <data name="button_Copy_Year_text_AOD.Text" xml:space="preserve">
     <value>Copier depuis le cadran principal</value>
@@ -2834,6 +2912,39 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   <data name="tabPage_Edit.Text" xml:space="preserve">
     <value>Edition</value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>* Affecte l'ordre dans lequel les valeurs numériques sont affichées et le comportement de l'option "Suit…"</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Calques</value>
+  </data>
+  <data name="groupBox_AODL_Date.Text" xml:space="preserve">
+    <value>Date (AOD)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Calques</value>
+  </data>
+  <data name="groupBox_AODL_Activity.Text" xml:space="preserve">
+    <value>Activités et météo (AOD)</value>
+  </data>
+  <data name="label_SNL_Date.Text" xml:space="preserve">
+    <value>* Affecte l'ordre dans lequel les valeurs numériques sont affichées et le comportement de l'option "Suit…"</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Calques</value>
+  </data>
+  <data name="groupBox_SNL_Date.Text" xml:space="preserve">
+    <value>Date (cadran principal)</value>
+  </data>
+  <data name="ActivityName.HeaderText" xml:space="preserve">
+    <value>Calques</value>
+  </data>
+  <data name="groupBox_SNL_Activity.Text" xml:space="preserve">
+    <value>Activités et météo (cadran principal)</value>
+  </data>
+  <data name="tabPage_LayerOrder.Text" xml:space="preserve">
+    <value>Ordre des calques</value>
+  </data>
   <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 13</value>
   </data>
@@ -2881,6 +2992,18 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   </data>
   <data name="tabPageConverting.Text" xml:space="preserve">
     <value>Conversion</value>
+  </data>
+  <data name="button_WatchSkin_PathGet.Text" xml:space="preserve">
+    <value>Parcourir</value>
+  </data>
+  <data name="checkBox_WatchSkin_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 17</value>
+  </data>
+  <data name="checkBox_WatchSkin_Use.Text" xml:space="preserve">
+    <value>Utiliser le skin du modèle de montre pour les fichiers preview *.png et *.gif</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Skin du modèle de montre</value>
   </data>
   <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
     <value>530, 290</value>
