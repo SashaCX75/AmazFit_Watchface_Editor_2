@@ -274,6 +274,9 @@
   <data name="radioButton_Background_image.Text" xml:space="preserve">
     <value>Image</value>
   </data>
+  <data name="tabPage_Background.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
   <data name="tabPage_Background.Text" xml:space="preserve">
     <value>Background</value>
   </data>
@@ -428,6 +431,24 @@
   <data name="label570.Text" xml:space="preserve">
     <value>Coordinates</value>
   </data>
+  <data name="panel_AM_PM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 81</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowRotatText_Max" xml:space="preserve">
+    <value>Follow the minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowRotatText_Min" xml:space="preserve">
+    <value>Follow the hours</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowText_Max" xml:space="preserve">
+    <value>Follow the minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowText_Min" xml:space="preserve">
+    <value>Follow the hours</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="label534.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
   </data>
@@ -487,7 +508,7 @@
     <value>Alignment</value>
   </data>
   <data name="comboBox_Second_alignment.Items" xml:space="preserve">
-    <value>0</value>
+    <value>Left</value>
   </data>
   <data name="comboBox_Second_alignment.Items1" xml:space="preserve">
     <value>Right</value>
@@ -512,6 +533,12 @@
   </data>
   <data name="label531.Text" xml:space="preserve">
     <value>Separator</value>
+  </data>
+  <data name="panel_Second.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Second.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="button_Second.Text" xml:space="preserve">
     <value>Seconds</value>
@@ -600,6 +627,12 @@
   <data name="label521.Text" xml:space="preserve">
     <value>Separator</value>
   </data>
+  <data name="panel_Minute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Minute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Minute.Text" xml:space="preserve">
     <value>Minutes</value>
   </data>
@@ -681,8 +714,17 @@
   <data name="label506.Text" xml:space="preserve">
     <value>Separator</value>
   </data>
+  <data name="panel_Hour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Hour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Hour.Text" xml:space="preserve">
     <value>Hours</value>
+  </data>
+  <data name="tabPage_Digital_time.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Digital_time.Text" xml:space="preserve">
     <value>Digital Clock</value>
@@ -753,6 +795,12 @@
   <data name="checkBox_Second_hand_Use.Text" xml:space="preserve">
     <value>Use</value>
   </data>
+  <data name="panel_Second_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Second_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Second_hand.Text" xml:space="preserve">
     <value>Seconds</value>
   </data>
@@ -821,6 +869,12 @@
   </data>
   <data name="checkBox_Minute_hand_Use.Text" xml:space="preserve">
     <value>Use</value>
+  </data>
+  <data name="panel_Minute_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Minute_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="button_Minute_hand.Text" xml:space="preserve">
     <value>Minutes</value>
@@ -891,14 +945,38 @@
   <data name="checkBox_Hour_hand_Use.Text" xml:space="preserve">
     <value>Use</value>
   </data>
+  <data name="panel_Hour_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Hour_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Hour_hand.Text" xml:space="preserve">
     <value>Hours</value>
+  </data>
+  <data name="tabPage_Analog_time.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Analog_time.Text" xml:space="preserve">
     <value>Analog Clock</value>
   </data>
+  <data name="tabControl_time.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
+  <data name="tabPage_Time.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
   <data name="tabPage_Time.Text" xml:space="preserve">
     <value>Time</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day.FollowRotateText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day.FollowText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="checkBox_Day_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
@@ -984,6 +1062,12 @@
   <data name="label717.Text" xml:space="preserve">
     <value>Background image</value>
   </data>
+  <data name="panel_Day_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Day_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Day_hand.Text" xml:space="preserve">
     <value>Pointer</value>
   </data>
@@ -1065,17 +1149,32 @@
   <data name="label583.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
-  <data name="checkBox_Day_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
-  </data>
   <data name="checkBox_Day_follow.Text" xml:space="preserve">
-    <value>Follow the month</value>
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="panel_Day_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Day_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="button_Day_text.Text" xml:space="preserve">
     <value>Numerical values</value>
   </data>
+  <data name="tabPage_Day.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Day.Text" xml:space="preserve">
     <value>Day</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.FollowRotateText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.FollowText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="label706.Text" xml:space="preserve">
     <value>Background image coordinates</value>
@@ -1142,6 +1241,12 @@
   </data>
   <data name="label638.Text" xml:space="preserve">
     <value>Center image</value>
+  </data>
+  <data name="panel_Month_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Month_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="button_Month_hand.Text" xml:space="preserve">
     <value>Pointer</value>
@@ -1224,11 +1329,14 @@
   <data name="label594.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
-  <data name="checkBox_Month_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
-  </data>
   <data name="checkBox_Month_follow.Text" xml:space="preserve">
-    <value>Follow the year</value>
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="panel_Month_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Month_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="button_Month_text.Text" xml:space="preserve">
     <value>Numerical values</value>
@@ -1257,14 +1365,41 @@
   <data name="label614.Text" xml:space="preserve">
     <value>First Image</value>
   </data>
+  <data name="panel_Month_pictures.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Month_pictures.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Month_pictures.Text" xml:space="preserve">
     <value>Image progress</value>
+  </data>
+  <data name="tabPage_Month.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Month.Text" xml:space="preserve">
     <value>Month</value>
   </data>
+  <data name="userControl_SystemFont_Group_Year.FollowRotateText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year.FollowText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 23</value>
+  </data>
+  <data name="panel_Year_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 30</value>
+  </data>
+  <data name="button_Year_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 23</value>
+  </data>
   <data name="button_Year_hand.Text" xml:space="preserve">
     <value>Pointer</value>
+  </data>
+  <data name="checkBox_Year_follow.Text" xml:space="preserve">
+    <value>Follow the predecessor</value>
   </data>
   <data name="checkBox_Year_text_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
@@ -1344,8 +1479,17 @@
   <data name="label605.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
+  <data name="panel_Year_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 215</value>
+  </data>
+  <data name="button_Year_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 23</value>
+  </data>
   <data name="button_Year_text.Text" xml:space="preserve">
     <value>Numerical values</value>
+  </data>
+  <data name="tabPage_Year.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Year.Text" xml:space="preserve">
     <value>Year</value>
@@ -1434,6 +1578,12 @@
   <data name="label655.Text" xml:space="preserve">
     <value>Center image</value>
   </data>
+  <data name="panel_DOW_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_DOW_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_DOW_hand.Text" xml:space="preserve">
     <value>Pointer</value>
   </data>
@@ -1455,14 +1605,32 @@
   <data name="label640.Text" xml:space="preserve">
     <value>First Image</value>
   </data>
+  <data name="panel_DOW_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_DOW_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_DOW_image.Text" xml:space="preserve">
     <value>Image progress</value>
+  </data>
+  <data name="tabPage_Day_of_week.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Day_of_week.Text" xml:space="preserve">
     <value>Day of the week</value>
   </data>
+  <data name="tabControl_date.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
+  <data name="tabPage_Date.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
   <data name="tabPage_Date.Text" xml:space="preserve">
     <value>Date</value>
+  </data>
+  <data name="userControl_icon_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Steps.FollowRotateText" xml:space="preserve">
     <value>Follow the steps</value>
@@ -1473,8 +1641,20 @@
   <data name="userControl_SystemFont_Group_Steps.FontRotateText" xml:space="preserve">
     <value>System font in a circle (goal of steps)</value>
   </data>
+  <data name="userControl_SystemFont_Group_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_Steps.SystemFontText" xml:space="preserve">
     <value>System font rotated (goal of steps)</value>
+  </data>
+  <data name="userControl_scaleLinear_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_text_goal_Steps.ButtonText" xml:space="preserve">
     <value>Numerical values (goal of steps)</value>
@@ -1482,8 +1662,23 @@
   <data name="userControl_text_goal_Steps.FollowText" xml:space="preserve">
     <value>Follow the steps</value>
   </data>
+  <data name="userControl_text_goal_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Steps.Text" xml:space="preserve">
     <value>Steps</value>
+  </data>
+  <data name="userControl_icon_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Calories.FollowRotateText" xml:space="preserve">
     <value>Follow calories</value>
@@ -1494,8 +1689,20 @@
   <data name="userControl_SystemFont_Group_Calories.FontRotateText" xml:space="preserve">
     <value>System font in a circle (calorie goal)</value>
   </data>
+  <data name="userControl_SystemFont_Group_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_Calories.SystemFontText" xml:space="preserve">
     <value>System font rotated (calorie goal)</value>
+  </data>
+  <data name="userControl_scaleLinear_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_text_goal_Calories.ButtonText" xml:space="preserve">
     <value>Numerical values (calorie goal)</value>
@@ -1503,14 +1710,89 @@
   <data name="userControl_text_goal_Calories.FollowText" xml:space="preserve">
     <value>Follow calories</value>
   </data>
+  <data name="userControl_text_goal_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Calories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Calories.Text" xml:space="preserve">
     <value>Calories</value>
+  </data>
+  <data name="userControl_icon_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_HeartRate.Text" xml:space="preserve">
     <value>Heart rate</value>
   </data>
+  <data name="userControl_icon_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_PAI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
+  <data name="userControl_icon_Distance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Distance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_Distance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Distance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Distance.Text" xml:space="preserve">
     <value>Distance</value>
+  </data>
+  <data name="userControl_icon_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_StandUp.FollowRotateText" xml:space="preserve">
     <value>Follow the basic value</value>
@@ -1521,8 +1803,20 @@
   <data name="userControl_SystemFont_Group_StandUp.FontRotateText" xml:space="preserve">
     <value>System font in a circle (number of StandUp)</value>
   </data>
+  <data name="userControl_SystemFont_Group_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_StandUp.SystemFontText" xml:space="preserve">
     <value>System font rotated (number of StandUp)</value>
+  </data>
+  <data name="userControl_scaleLinear_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_text_goal_StandUp.ButtonText" xml:space="preserve">
     <value>Numerical values (number of StandUp)</value>
@@ -1530,8 +1824,44 @@
   <data name="userControl_text_goal_StandUp.FollowText" xml:space="preserve">
     <value>Follow the basic value</value>
   </data>
+  <data name="userControl_text_goal_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_StandUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_StandUp.Text" xml:space="preserve">
     <value>Stand up</value>
+  </data>
+  <data name="userControl_icon_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Stress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Stress.Text" xml:space="preserve">
     <value>Stress</value>
@@ -1548,8 +1878,14 @@
   <data name="radioButton_ActivityGoal_Steps.Text" xml:space="preserve">
     <value>Steps</value>
   </data>
+  <data name="groupBox_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 45</value>
+  </data>
   <data name="groupBox_ActivityGoal.Text" xml:space="preserve">
     <value>* Displays the steps or calories depending on the watch setting.</value>
+  </data>
+  <data name="userControl_icon_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_ActivityGoal.FollowRotateText" xml:space="preserve">
     <value>Follow the basic value</value>
@@ -1560,8 +1896,20 @@
   <data name="userControl_SystemFont_Group_ActivityGoal.FontRotateText" xml:space="preserve">
     <value>System font in a circle (activity goal)</value>
   </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_ActivityGoal.SystemFontText" xml:space="preserve">
     <value>System font rotated (activity goal)</value>
+  </data>
+  <data name="userControl_scaleLinear_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_text_goal_ActivityGoal.ButtonText" xml:space="preserve">
     <value>Numerical values (activity goal)</value>
@@ -1569,8 +1917,23 @@
   <data name="userControl_text_goal_ActivityGoal.FollowText" xml:space="preserve">
     <value>Follow the basic value</value>
   </data>
+  <data name="userControl_text_goal_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_ActivityGoal.Text" xml:space="preserve">
     <value>Activity goal</value>
+  </data>
+  <data name="userControl_icon_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_FatBurning.FollowRotateText" xml:space="preserve">
     <value>Follow the basic value</value>
@@ -1581,8 +1944,20 @@
   <data name="userControl_SystemFont_Group_FatBurning.FontRotateText" xml:space="preserve">
     <value>System font in a circle (goal of fat burning)</value>
   </data>
+  <data name="userControl_SystemFont_Group_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_FatBurning.SystemFontText" xml:space="preserve">
     <value>System font rotated (goal of fat burning)</value>
+  </data>
+  <data name="userControl_scaleLinear_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_text_goal_FatBurning.ButtonText" xml:space="preserve">
     <value>Numerical values (goal of fat burning)</value>
@@ -1590,11 +1965,32 @@
   <data name="userControl_text_goal_FatBurning.FollowText" xml:space="preserve">
     <value>Follow the basic value</value>
   </data>
+  <data name="userControl_text_goal_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_FatBurning.Text" xml:space="preserve">
     <value>Fat-burning</value>
   </data>
+  <data name="tabControl_SystemActivity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
+  <data name="tabPage_Activity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
   <data name="tabPage_Activity.Text" xml:space="preserve">
     <value>Activity</value>
+  </data>
+  <data name="userControl_icon_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_GroupWeather.FollowRotatText_Max" xml:space="preserve">
     <value>Follow the minimum temperature</value>
@@ -1608,26 +2004,125 @@
   <data name="userControl_SystemFont_GroupWeather.FollowText_Min" xml:space="preserve">
     <value>Follow the current temperature</value>
   </data>
+  <data name="userControl_SystemFont_GroupWeather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_text_weather_Max.ButtonText" xml:space="preserve">
     <value>Maximum temperature</value>
   </data>
   <data name="userControl_text_weather_Max.FollowText" xml:space="preserve">
     <value>Follow the minimum temperature</value>
   </data>
+  <data name="userControl_text_weather_Max.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_text_weather_Min.ButtonText" xml:space="preserve">
     <value>Minimum Temperature</value>
+  </data>
+  <data name="userControl_text_weather_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_text_weather_Current.ButtonText" xml:space="preserve">
     <value>Current temperature</value>
   </data>
+  <data name="userControl_text_weather_Current.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Weather.Text" xml:space="preserve">
     <value>Weather</value>
+  </data>
+  <data name="userControl_icon_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_UVindex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_UVindex.Text" xml:space="preserve">
     <value>UV Index</value>
   </data>
+  <data name="userControl_icon_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_AirQuality.Text" xml:space="preserve">
     <value>Air Quality</value>
+  </data>
+  <data name="userControl_icon_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Humidity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_Humidity.Text" xml:space="preserve">
     <value>Humidity</value>
@@ -1638,6 +2133,9 @@
   <data name="label_Sunrise.Text" xml:space="preserve">
     <value>* Data for sunrise and sunset varies by city.
 The data is not displayed correctly for all cities.</value>
+  </data>
+  <data name="userControl_icon_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_GroupSunrise.FollowRotatText_Max" xml:space="preserve">
     <value>Follow the sunrise</value>
@@ -1651,6 +2149,18 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_SystemFont_GroupSunrise.FollowText_Min" xml:space="preserve">
     <value>Follow the sunrise / sunset</value>
   </data>
+  <data name="userControl_SystemFont_GroupSunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_text_Sunset.ButtonText" xml:space="preserve">
     <value>Sunset</value>
   </data>
@@ -1660,11 +2170,17 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Sunset.FollowText" xml:space="preserve">
     <value>Follow the sunrise</value>
   </data>
+  <data name="userControl_text_Sunset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="userControl_text_Sunrise.ButtonText" xml:space="preserve">
     <value>Sunrise</value>
   </data>
   <data name="userControl_text_Sunrise.ButtonTextDecimalPoint" xml:space="preserve">
     <value>Separator</value>
+  </data>
+  <data name="userControl_text_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="userControl_text_SunriseSunset.ButtonText" xml:space="preserve">
     <value>Closest sunrise / sunset</value>
@@ -1672,17 +2188,95 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_SunriseSunset.ButtonTextDecimalPoint" xml:space="preserve">
     <value>Separator</value>
   </data>
+  <data name="userControl_text_SunriseSunset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="tabPage_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
     <value>438, 297</value>
   </data>
   <data name="tabPage_Sunrise.Text" xml:space="preserve">
     <value>Sunrise</value>
   </data>
+  <data name="userControl_icon_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_WindForce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_WindForce.Text" xml:space="preserve">
     <value>Wind force</value>
   </data>
+  <data name="userControl_icon_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Altitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Altitude.Text" xml:space="preserve">
     <value>Altitude</value>
+  </data>
+  <data name="userControl_icon_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
   </data>
   <data name="tabPage_AirPressure.Text" xml:space="preserve">
     <value>Air pressure</value>
@@ -1714,6 +2308,9 @@ The data is not displayed correctly for all cities.</value>
   <data name="label661.Text" xml:space="preserve">
     <value>Image</value>
   </data>
+  <data name="groupBox_Lock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 65</value>
+  </data>
   <data name="groupBox_Lock.Text" xml:space="preserve">
     <value>Lock</value>
   </data>
@@ -1735,6 +2332,9 @@ The data is not displayed correctly for all cities.</value>
   <data name="label669.Text" xml:space="preserve">
     <value>Image</value>
   </data>
+  <data name="groupBox_DND.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 65</value>
+  </data>
   <data name="checkBox_Alarm_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
   </data>
@@ -1752,6 +2352,9 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="label665.Text" xml:space="preserve">
     <value>Image</value>
+  </data>
+  <data name="groupBox_Alarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 65</value>
   </data>
   <data name="groupBox_Alarm.Text" xml:space="preserve">
     <value>Alarm</value>
@@ -1774,11 +2377,47 @@ The data is not displayed correctly for all cities.</value>
   <data name="label657.Text" xml:space="preserve">
     <value>Image</value>
   </data>
+  <data name="groupBox_Bluetooth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 65</value>
+  </data>
+  <data name="tabPage_Status.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Status.Text" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="userControl_icon_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_hand_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_text_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="userControl_pictures_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
+  <data name="tabPage_Battery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 297</value>
+  </data>
   <data name="tabPage_Battery.Text" xml:space="preserve">
     <value>Battery</value>
+  </data>
+  <data name="tabControl_System.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
+  </data>
+  <data name="tabPage_System.Size" type="System.Drawing.Size, System.Drawing">
+    <value>446, 323</value>
   </data>
   <data name="tabPage_System.Text" xml:space="preserve">
     <value>System</value>
@@ -1787,8 +2426,8 @@ The data is not displayed correctly for all cities.</value>
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAASgBBQEoAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
+        DQAAAk1TRnQBSQFMAgEBBgEAAWwBBQF0AQUBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1846,7 +2485,7 @@ The data is not displayed correctly for all cities.</value>
         AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
         AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHws=
+        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
 </value>
   </data>
   <data name="tabControl_EditParameters.Size" type="System.Drawing.Size, System.Drawing">
@@ -1858,8 +2497,17 @@ The data is not displayed correctly for all cities.</value>
   <data name="label284.Text" xml:space="preserve">
     <value>Image</value>
   </data>
+  <data name="button_Capy_ScreenNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 241</value>
+  </data>
+  <data name="button_Capy_ScreenNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>421, 23</value>
+  </data>
   <data name="button_Capy_ScreenNormal.Text" xml:space="preserve">
     <value>Copy all elements from the main screen</value>
+  </data>
+  <data name="tabPage_Background_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
   </data>
   <data name="tabPage_Background_AOD.Text" xml:space="preserve">
     <value>Background</value>
@@ -1881,6 +2529,24 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="label290.Text" xml:space="preserve">
     <value>Coordinates</value>
+  </data>
+  <data name="panel_AM_PM_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 115</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowRotatText_Max" xml:space="preserve">
+    <value>Follow the minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowRotatText_Min" xml:space="preserve">
+    <value>Follow the hours</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowText_Max" xml:space="preserve">
+    <value>Follow the minutes</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowText_Min" xml:space="preserve">
+    <value>Follow the hours</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="button_Copy_Minute_AOD.Text" xml:space="preserve">
     <value>Copy from main screen</value>
@@ -1969,6 +2635,12 @@ The data is not displayed correctly for all cities.</value>
   <data name="label316.Text" xml:space="preserve">
     <value>Separator</value>
   </data>
+  <data name="panel_Minute_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Minute_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Minute_AOD.Text" xml:space="preserve">
     <value>Minutes</value>
   </data>
@@ -2053,8 +2725,17 @@ The data is not displayed correctly for all cities.</value>
   <data name="label327.Text" xml:space="preserve">
     <value>Separator</value>
   </data>
+  <data name="panel_Hour_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Hour_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Hour_AOD.Text" xml:space="preserve">
     <value>Hours</value>
+  </data>
+  <data name="tabPage_Digital_time_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Digital_time_AOD.Text" xml:space="preserve">
     <value>Digital Clock</value>
@@ -2128,6 +2809,12 @@ The data is not displayed correctly for all cities.</value>
   <data name="label349.Text" xml:space="preserve">
     <value>Center image</value>
   </data>
+  <data name="panel_Minute_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Minute_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Minute_hand_AOD.Text" xml:space="preserve">
     <value>Minutes</value>
   </data>
@@ -2200,14 +2887,38 @@ The data is not displayed correctly for all cities.</value>
   <data name="label362.Text" xml:space="preserve">
     <value>Center image</value>
   </data>
+  <data name="panel_Hour_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Hour_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Hour_hand_AOD.Text" xml:space="preserve">
     <value>Hours</value>
+  </data>
+  <data name="tabPage_Analog_time_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Analog_time_AOD.Text" xml:space="preserve">
     <value>Analog Clock</value>
   </data>
+  <data name="tabControl_time_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
+  <data name="tabPage_Time_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
   <data name="tabPage_Time_AOD.Text" xml:space="preserve">
     <value>Time</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day_AOD.FollowText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="button_Copy_Day_hand_AOD.Text" xml:space="preserve">
     <value>Copy from main screen</value>
@@ -2296,6 +3007,12 @@ The data is not displayed correctly for all cities.</value>
   <data name="label379.Text" xml:space="preserve">
     <value>End angle</value>
   </data>
+  <data name="panel_Day_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Day_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Day_hand_AOD.Text" xml:space="preserve">
     <value>Pointer</value>
   </data>
@@ -2317,11 +3034,8 @@ The data is not displayed correctly for all cities.</value>
   <data name="comboBox_Day_alignment_AOD.Items2" xml:space="preserve">
     <value>Center</value>
   </data>
-  <data name="checkBox_Day_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
-  </data>
   <data name="checkBox_Day_follow_AOD.Text" xml:space="preserve">
-    <value>Follow the month</value>
+    <value>Follow the predecessor</value>
   </data>
   <data name="checkBox_Day_add_zero_AOD.Text" xml:space="preserve">
     <value>Add leading zeros</value>
@@ -2386,11 +3100,29 @@ The data is not displayed correctly for all cities.</value>
   <data name="label386.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
+  <data name="panel_Day_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Day_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Day_text_AOD.Text" xml:space="preserve">
     <value>Numerical values</value>
   </data>
+  <data name="tabPage_Day_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_Day_AOD.Text" xml:space="preserve">
     <value>Day</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.FollowText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="button_Copy_Month_hand_AOD.Text" xml:space="preserve">
     <value>Copy from main screen</value>
@@ -2479,6 +3211,12 @@ The data is not displayed correctly for all cities.</value>
   <data name="label416.Text" xml:space="preserve">
     <value>Center image</value>
   </data>
+  <data name="panel_Month_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Month_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Month_hand_AOD.Text" xml:space="preserve">
     <value>Pointer</value>
   </data>
@@ -2491,11 +3229,8 @@ The data is not displayed correctly for all cities.</value>
   <data name="checkBox_Month_Use_AOD.Text" xml:space="preserve">
     <value>Use</value>
   </data>
-  <data name="checkBox_Month_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
-  </data>
   <data name="checkBox_Month_follow_AOD.Text" xml:space="preserve">
-    <value>Follow the year</value>
+    <value>Follow the predecessor</value>
   </data>
   <data name="checkBox_Month_add_zero_AOD.Text" xml:space="preserve">
     <value>Add leading zeros</value>
@@ -2569,6 +3304,12 @@ The data is not displayed correctly for all cities.</value>
   <data name="label423.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
+  <data name="panel_Month_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Month_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Month_text_AOD.Text" xml:space="preserve">
     <value>Numerical values</value>
   </data>
@@ -2599,14 +3340,41 @@ The data is not displayed correctly for all cities.</value>
   <data name="label429.Text" xml:space="preserve">
     <value>First Image</value>
   </data>
+  <data name="panel_Month_pictures_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Month_pictures_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Month_pictures_AOD.Text" xml:space="preserve">
     <value>Image progress</value>
+  </data>
+  <data name="tabPage_Month_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Month_AOD.Text" xml:space="preserve">
     <value>Month</value>
   </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.FollowRotateText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.FollowText" xml:space="preserve">
+    <value>Follow the predecessor</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="panel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 30</value>
+  </data>
+  <data name="button13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
   <data name="button13.Text" xml:space="preserve">
     <value>Pointer</value>
+  </data>
+  <data name="checkBox_Year_follow_AOD.Text" xml:space="preserve">
+    <value>Follow the predecessor</value>
   </data>
   <data name="button_Copy_Year_text_AOD.Text" xml:space="preserve">
     <value>Copy from main screen</value>
@@ -2689,8 +3457,17 @@ The data is not displayed correctly for all cities.</value>
   <data name="label438.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
+  <data name="panel_Year_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 215</value>
+  </data>
+  <data name="button_Year_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
   <data name="button_Year_text_AOD.Text" xml:space="preserve">
     <value>Numerical values</value>
+  </data>
+  <data name="tabPage_Year_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Year_AOD.Text" xml:space="preserve">
     <value>Year</value>
@@ -2782,6 +3559,12 @@ The data is not displayed correctly for all cities.</value>
   <data name="label459.Text" xml:space="preserve">
     <value>Center image</value>
   </data>
+  <data name="panel_DOW_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_DOW_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_DOW_hand_AOD.Text" xml:space="preserve">
     <value>Pointer</value>
   </data>
@@ -2812,14 +3595,32 @@ The data is not displayed correctly for all cities.</value>
   <data name="label461.Text" xml:space="preserve">
     <value>First Image</value>
   </data>
+  <data name="panel_DOW_image_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_DOW_image_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_DOW_image_AOD.Text" xml:space="preserve">
     <value>Image progress</value>
+  </data>
+  <data name="tabPage_Day_of_week_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Day_of_week_AOD.Text" xml:space="preserve">
     <value>Day of the week</value>
   </data>
+  <data name="tabControl_date_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
+  <data name="tabPage_Date_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
   <data name="tabPage_Date_AOD.Text" xml:space="preserve">
     <value>Date</value>
+  </data>
+  <data name="userControl_icon_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Steps_AOD.FollowRotateText" xml:space="preserve">
     <value>Follow the steps</value>
@@ -2830,8 +3631,20 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_SystemFont_Group_Steps_AOD.FontRotateText" xml:space="preserve">
     <value>System font in a circle (goal of steps)</value>
   </data>
+  <data name="userControl_SystemFont_Group_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_Steps_AOD.SystemFontText" xml:space="preserve">
     <value>System font rotated (goal of steps)</value>
+  </data>
+  <data name="userControl_scaleLinear_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_Steps_AOD.ButtonText" xml:space="preserve">
     <value>Numerical values (goal of steps)</value>
@@ -2839,8 +3652,23 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_goal_Steps_AOD.FollowText" xml:space="preserve">
     <value>Follow the steps</value>
   </data>
+  <data name="userControl_text_goal_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_Steps_AOD.Text" xml:space="preserve">
     <value>Steps</value>
+  </data>
+  <data name="userControl_icon_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Calories_AOD.FollowRotateText" xml:space="preserve">
     <value>Follow calories</value>
@@ -2851,8 +3679,20 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_SystemFont_Group_Calories_AOD.FontRotateText" xml:space="preserve">
     <value>System font in a circle (calorie goal)</value>
   </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_Calories_AOD.SystemFontText" xml:space="preserve">
     <value>System font rotated (calorie goal)</value>
+  </data>
+  <data name="userControl_scaleLinear_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_Calories_AOD.ButtonText" xml:space="preserve">
     <value>Numerical values (calorie goal)</value>
@@ -2860,14 +3700,89 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_goal_Calories_AOD.FollowText" xml:space="preserve">
     <value>Follow calories</value>
   </data>
+  <data name="userControl_text_goal_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_Calories_AOD.Text" xml:space="preserve">
     <value>Calories</value>
+  </data>
+  <data name="userControl_icon_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_HeartRate_AOD.Text" xml:space="preserve">
     <value>Heart rate</value>
   </data>
+  <data name="userControl_icon_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
+  <data name="userControl_icon_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_Distance_AOD.Text" xml:space="preserve">
     <value>Distance</value>
+  </data>
+  <data name="userControl_icon_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_StandUp_AOD.FollowRotateText" xml:space="preserve">
     <value>Follow the basic value</value>
@@ -2878,8 +3793,20 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_SystemFont_Group_StandUp_AOD.FontRotateText" xml:space="preserve">
     <value>System font in a circle (number of StandUp)</value>
   </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_StandUp_AOD.SystemFontText" xml:space="preserve">
     <value>System font rotated (number of StandUp)</value>
+  </data>
+  <data name="userControl_scaleLinear_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_StandUp_AOD.ButtonText" xml:space="preserve">
     <value>Numerical values (number of StandUp)</value>
@@ -2887,8 +3814,44 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_goal_StandUp_AOD.FollowText" xml:space="preserve">
     <value>Follow the basic value</value>
   </data>
+  <data name="userControl_text_goal_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_StandUp_AOD.Text" xml:space="preserve">
     <value>Stand up</value>
+  </data>
+  <data name="userControl_icon_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Stress_AOD.Text" xml:space="preserve">
     <value>Stress</value>
@@ -2905,8 +3868,14 @@ The data is not displayed correctly for all cities.</value>
   <data name="radioButton_ActivityGoal_Steps_AOD.Text" xml:space="preserve">
     <value>Steps</value>
   </data>
+  <data name="groupBox_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 45</value>
+  </data>
   <data name="groupBox_ActivityGoal_AOD.Text" xml:space="preserve">
     <value>* Displays the steps or calories depending on the watch setting.</value>
+  </data>
+  <data name="userControl_icon_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FollowRotateText" xml:space="preserve">
     <value>Follow the basic value</value>
@@ -2917,8 +3886,20 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FontRotateText" xml:space="preserve">
     <value>System font in a circle (activity goal)</value>
   </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.SystemFontText" xml:space="preserve">
     <value>System font rotated (activity goal)</value>
+  </data>
+  <data name="userControl_scaleLinear_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_ActivityGoal_AOD.ButtonText" xml:space="preserve">
     <value>Numerical values (activity goal)</value>
@@ -2926,8 +3907,23 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_goal_ActivityGoal_AOD.FollowText" xml:space="preserve">
     <value>Follow the basic value</value>
   </data>
+  <data name="userControl_text_goal_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_ActivityGoal_AOD.Text" xml:space="preserve">
     <value>Activity goal</value>
+  </data>
+  <data name="userControl_icon_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_FatBurning_AOD.FollowRotateText" xml:space="preserve">
     <value>Follow the basic value</value>
@@ -2938,8 +3934,20 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_SystemFont_Group_FatBurning_AOD.FontRotateText" xml:space="preserve">
     <value>System font in a circle (goal of fat burning)</value>
   </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_FatBurning_AOD.SystemFontText" xml:space="preserve">
     <value>System font rotated (goal of fat burning)</value>
+  </data>
+  <data name="userControl_scaleLinear_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_FatBurning_AOD.ButtonText" xml:space="preserve">
     <value>Numerical values (goal of fat burning)</value>
@@ -2947,11 +3955,44 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_goal_FatBurning_AOD.FollowText" xml:space="preserve">
     <value>Follow the basic value</value>
   </data>
+  <data name="userControl_text_goal_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_FatBurning_AOD.Text" xml:space="preserve">
     <value>Fat-burning</value>
   </data>
+  <data name="tabControl_SystemActivity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
+  <data name="tabPage_Activity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
   <data name="tabPage_Activity_AOD.Text" xml:space="preserve">
     <value>Activity</value>
+  </data>
+  <data name="userControl_icon_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_GroupWeather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_weather_Max_AOD.ButtonText" xml:space="preserve">
     <value>Maximum temperature</value>
@@ -2959,20 +4000,107 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_weather_Max_AOD.FollowText" xml:space="preserve">
     <value>Follow the minimum temperature</value>
   </data>
+  <data name="userControl_text_weather_Max_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_text_weather_Min_AOD.ButtonText" xml:space="preserve">
     <value>Minimum Temperature</value>
+  </data>
+  <data name="userControl_text_weather_Min_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_weather_Current_AOD.ButtonText" xml:space="preserve">
     <value>Current temperature</value>
   </data>
+  <data name="userControl_text_weather_Current_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_Weather_AOD.Text" xml:space="preserve">
     <value>Weather</value>
+  </data>
+  <data name="userControl_icon_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_UVindex_AOD.Text" xml:space="preserve">
     <value>UV Index</value>
   </data>
+  <data name="userControl_icon_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_AirQuality_AOD.Text" xml:space="preserve">
     <value>Air Quality</value>
+  </data>
+  <data name="userControl_icon_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_Humidity_AOD.Text" xml:space="preserve">
     <value>Humidity</value>
@@ -3053,11 +4181,83 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPage_Sunrise_AOD.Text" xml:space="preserve">
     <value>Sunrise</value>
   </data>
+  <data name="userControl_icon_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_WindForce_AOD.Text" xml:space="preserve">
     <value>Wind force</value>
   </data>
+  <data name="userControl_icon_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_Altitude_AOD.Text" xml:space="preserve">
     <value>Altitude</value>
+  </data>
+  <data name="userControl_icon_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
   </data>
   <data name="tabPage_AirPressure_AOD.Text" xml:space="preserve">
     <value>Air pressure</value>
@@ -3071,8 +4271,38 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPage_Air_AOD.Text" xml:space="preserve">
     <value>Atmosphere</value>
   </data>
+  <data name="userControl_icon_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 241</value>
+  </data>
   <data name="tabPage_Battery_AOD.Text" xml:space="preserve">
     <value>Battery</value>
+  </data>
+  <data name="tabControl_System_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
+  </data>
+  <data name="tabPage_System_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
   </data>
   <data name="tabPage_System_AOD.Text" xml:space="preserve">
     <value>System</value>
@@ -3100,6 +4330,39 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="tabPage_Edit.Text" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>* Affects the order in which numeric values are displayed and the behavior of the "Follow ..."</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Layers</value>
+  </data>
+  <data name="groupBox_AODL_Date.Text" xml:space="preserve">
+    <value>Date (AOD)</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Layers</value>
+  </data>
+  <data name="groupBox_AODL_Activity.Text" xml:space="preserve">
+    <value>Activities and atmosphere (AOD)</value>
+  </data>
+  <data name="label_SNL_Date.Text" xml:space="preserve">
+    <value>* Affects the order in which numeric values are displayed and the behavior of the "Follow ..."</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Layers</value>
+  </data>
+  <data name="groupBox_SNL_Date.Text" xml:space="preserve">
+    <value>Date (main screen)</value>
+  </data>
+  <data name="ActivityName.HeaderText" xml:space="preserve">
+    <value>Layers</value>
+  </data>
+  <data name="groupBox_SNL_Activity.Text" xml:space="preserve">
+    <value>Activities and atmosphere (main screen)</value>
+  </data>
+  <data name="tabPage_LayerOrder.Text" xml:space="preserve">
+    <value>Layer order</value>
   </data>
   <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 13</value>
@@ -3155,8 +4418,20 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPageConverting.Text" xml:space="preserve">
     <value>Converting</value>
   </data>
+  <data name="button_WatchSkin_PathGet.Text" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="checkBox_WatchSkin_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 17</value>
+  </data>
+  <data name="checkBox_WatchSkin_Use.Text" xml:space="preserve">
+    <value>Use watch image when saving *.png and *.gif</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Watch image</value>
+  </data>
   <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>508, 285</value>
+    <value>508, 290</value>
   </data>
   <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 13</value>

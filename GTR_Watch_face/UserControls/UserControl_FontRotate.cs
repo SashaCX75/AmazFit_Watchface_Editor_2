@@ -503,6 +503,13 @@ namespace AmazFit_Watchface_2
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (numericUpDown.Name == "numericUpDown_FontRotate_size")
+            {
+                if (numericUpDown.Value > 47) numericUpDown.Value = 47;
+                if (numericUpDown.Value <1) numericUpDown.Value = 1;
+            }
+
             if (ValueChanged != null && !setValue)
             {
                 EventArgs eventArgs = new EventArgs();

@@ -117,38 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Actions_insert_text_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actions_insert_text_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
+    <value>Texte en forme de cercle (heures)</value>
   </data>
-  <data name="Navigate-up-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Navigate-up-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userControl_FontRotate_weather_Max.ButtonText" xml:space="preserve">
+    <value>Texte en forme de cercle (secondes)</value>
   </data>
-  <data name="watch_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\watch_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userControl_FontRotate_weather_Min.ButtonText" xml:space="preserve">
+    <value>Texte en forme de cercle (minutes)</value>
   </data>
-  <data name="Files_Copy_File_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Files_Copy_File_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
+    <value>Rotation du texte (heures)</value>
   </data>
-  <data name="Navigate-down-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Navigate-down-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userControl_SystemFont_weather_Max.ButtonText" xml:space="preserve">
+    <value>Rotation du texte (secondes)</value>
   </data>
-  <data name="OpenSans_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OpenSans-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Navigate-full_up-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Navigate-full_up-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gtr-2-sport-obsidian-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gtr-2-sport-obsidian-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="table_row_delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\table_row_delete_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Files_Clipboard_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Files_Clipboard_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Navigate-full_down-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Navigate-full_down-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userControl_SystemFont_weather_Min.ButtonText" xml:space="preserve">
+    <value>Rotation du texte (minutes)</value>
   </data>
 </root>

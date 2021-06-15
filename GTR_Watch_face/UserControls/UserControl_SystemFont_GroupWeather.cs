@@ -69,7 +69,7 @@ namespace AmazFit_Watchface_2
         }
 
         [Description("Отображение чекбокса добавления нулей в начале")]
-        public bool Padding_zero
+        public virtual bool Padding_zero
         {
             get
             {

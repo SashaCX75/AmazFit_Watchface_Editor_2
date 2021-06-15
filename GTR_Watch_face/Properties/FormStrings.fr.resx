@@ -117,6 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActivityName_ActivityGoal" xml:space="preserve">
+    <value>Objectif activité</value>
+  </data>
+  <data name="ActivityName_AirPressure" xml:space="preserve">
+    <value>Pression atmosphérique</value>
+  </data>
+  <data name="ActivityName_AirQuality" xml:space="preserve">
+    <value>Qualité de l'air</value>
+  </data>
+  <data name="ActivityName_Altitude" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="ActivityName_Battery" xml:space="preserve">
+    <value>Batterie</value>
+  </data>
+  <data name="ActivityName_Calories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="ActivityName_Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="ActivityName_FatBurning" xml:space="preserve">
+    <value>Graisse brûlée</value>
+  </data>
+  <data name="ActivityName_HeartRate" xml:space="preserve">
+    <value>Rythme cardiaque</value>
+  </data>
+  <data name="ActivityName_Humidity" xml:space="preserve">
+    <value>Humidité</value>
+  </data>
+  <data name="ActivityName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="ActivityName_StandUp" xml:space="preserve">
+    <value>Position debout</value>
+  </data>
+  <data name="ActivityName_Steps" xml:space="preserve">
+    <value>Pas</value>
+  </data>
+  <data name="ActivityName_Stress" xml:space="preserve">
+    <value>Stress</value>
+  </data>
+  <data name="ActivityName_Sunrise" xml:space="preserve">
+    <value>Lever du soleil</value>
+  </data>
+  <data name="ActivityName_UVindex" xml:space="preserve">
+    <value>Index UV</value>
+  </data>
+  <data name="ActivityName_Weather" xml:space="preserve">
+    <value>Météo</value>
+  </data>
+  <data name="ActivityName_WindForce" xml:space="preserve">
+    <value>Force du vent</value>
+  </data>
+  <data name="DateName_Day" xml:space="preserve">
+    <value>Jour</value>
+  </data>
+  <data name="DateName_Month" xml:space="preserve">
+    <value>Mois</value>
+  </data>
+  <data name="DateName_Year" xml:space="preserve">
+    <value>Année</value>
+  </data>
   <data name="Dialog_Title_Image" xml:space="preserve">
     <value>Sélectionner les fichiers images</value>
   </data>
@@ -137,6 +200,9 @@
   </data>
   <data name="Dialog_Title_Unpack" xml:space="preserve">
     <value>Sélectionner un fichier de cadran</value>
+  </data>
+  <data name="Dialog_Title_WatchSkin" xml:space="preserve">
+    <value>Sélectionner un skin de montre</value>
   </data>
   <data name="File_ReadMy_Start" xml:space="preserve">
     <value>quick_guide.htm</value>
@@ -270,9 +336,6 @@
   <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
     <value>Souhaitez-vous sauver les modifications du projet</value>
   </data>
-  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
-    <value>Le projet actuel n'a pas été sauvé. Voulez-vous le sauver?</value>
-  </data>
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>Le projet actuel n'a pas été sauvé. Voulez-vous le sauver?</value>
   </data>
@@ -299,9 +362,6 @@
   </data>
   <data name="Message_WarningConverting_Text2" xml:space="preserve">
     <value> existe déjà. Remplacer?</value>
-  </data>
-  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
-    <value>???</value>
   </data>
   <data name="Message_WarningDistanceSuffix" xml:space="preserve">
     <value>L'utilisation de l'affichage de la distance sans suffixe n'est pas recommandée.</value>

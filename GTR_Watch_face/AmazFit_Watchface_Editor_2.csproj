@@ -278,6 +278,13 @@
     <Compile Include="UserControls\UserControl_SystemFont_GroupSunrise.Designer.cs">
       <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_SystemFont_GroupTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_SystemFont_GroupTime.Designer.cs">
+      <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\WatchSkin.cs" />
     <EmbeddedResource Include="Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -531,6 +538,15 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.zh.resx">
       <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.en.resx">
+      <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.es.resx">
+      <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.fr.resx">
+      <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupWeather.en.resx">
       <DependentUpon>UserControl_SystemFont_GroupWeather.cs</DependentUpon>
     </EmbeddedResource>
@@ -607,6 +623,9 @@
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupSunrise.resx">
       <DependentUpon>UserControl_SystemFont_GroupSunrise.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.resx">
+      <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -620,6 +639,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="WatchSkin\WatchSkin_GTR_2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WatchSkin\WatchSkin_GTR_2e.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WatchSkin\WatchSkin_GTS_2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WatchSkin\WatchSkin_TRex_Pro.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -627,6 +658,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WatchSkin\gtr2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WatchSkin\gtr2e.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WatchSkin\gts2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WatchSkin\t-rex-pro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\OpenSans-Regular.ttf" />
     <None Include="Resources\watch_icon.png" />
     <None Include="Resources\Files-Clipboard-icon.png" />
@@ -643,6 +686,10 @@
     <Content Include="Mask\mask_trex_pro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Navigate-full_up-icon.png" />
+    <None Include="Resources\Navigate-up-icon.png" />
+    <None Include="Resources\Navigate-down-icon.png" />
+    <None Include="Resources\Navigate-full_down-icon.png" />
     <Content Include="Tools\GTR2_Packer.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
