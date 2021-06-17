@@ -1784,8 +1784,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAYgBBAGIAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
+        DQAAAk1TRnQBSQFMAgEBBgEAAYgBBAGQAQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1843,7 +1843,7 @@
         AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
         AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHws=
+        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
 </value>
   </data>
   <data name="label284.Size" type="System.Drawing.Size, System.Drawing">
@@ -2880,7 +2880,7 @@
     <value>用于压缩/解解压缩bin文件的工具：</value>
   </data>
   <data name="label409.Text" xml:space="preserve">
-    <value>该程序是GTR2＆GTS2的.json表盘设置文件的GUI编辑器。 它使用以下第三方工具来处理.bin表盘文件：</value>
+    <value>该程序是GTR2＆GTS2&amp;T-REX PRO的.json表盘设置文件的GUI编辑器。 它使用以下第三方工具来处理.bin表盘文件：</value>
   </data>
   <data name="label407.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -5926,5 +5926,125 @@
   </data>
   <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 92</value>
+  </data>
+  <data name="ActivityName.HeaderText" xml:space="preserve">
+    <value>图层</value>
+  </data>
+  <data name="button_WatchSkin_PathGet.Text" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="checkBox_Day_follow.Text" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="checkBox_Day_follow_AOD.Text" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="checkBox_Month_follow.Text" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="checkBox_Month_follow_AOD.Text" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="checkBox_WatchSkin_Use.Text" xml:space="preserve">
+    <value>保存 *.png 和 *.gif 时使用手表框</value>
+  </data>
+  <data name="checkBox_Year_follow.Text" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="checkBox_Year_follow_AOD.Text" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>图层</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>图层</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>图层</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>手表框</value>
+  </data>
+  <data name="groupBox_AODL_Activity.Text" xml:space="preserve">
+    <value>活动和天气（息屏显示）</value>
+  </data>
+  <data name="groupBox_AODL_Date.Text" xml:space="preserve">
+    <value>日期（息屏显示）</value>
+  </data>
+  <data name="groupBox_SNL_Activity.Text" xml:space="preserve">
+    <value>活动和天气（主屏幕）</value>
+  </data>
+  <data name="groupBox_SNL_Date.Text" xml:space="preserve">
+    <value>日期（主屏幕）</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>*影响显示数值的顺序和“跟随…”</value>
+  </data>
+  <data name="label_SNL_Date.Text" xml:space="preserve">
+    <value>*影响显示数值的顺序和“跟随…”</value>
+  </data>
+  <data name="tabPage_LayerOrder.Text" xml:space="preserve">
+    <value>图层顺序</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowRotatText_Max" xml:space="preserve">
+    <value>跟随分钟</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowRotatText_Min" xml:space="preserve">
+    <value>跟随小时</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowText_Max" xml:space="preserve">
+    <value>跟随分钟</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime.FollowText_Min" xml:space="preserve">
+    <value>跟随小时</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowRotatText_Max" xml:space="preserve">
+    <value>跟随分钟</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowRotatText_Min" xml:space="preserve">
+    <value>跟随小时</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowText_Max" xml:space="preserve">
+    <value>跟随分钟</value>
+  </data>
+  <data name="userControl_SystemFont_GroupTime_AOD.FollowText_Min" xml:space="preserve">
+    <value>跟随小时</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day.FollowRotateText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day.FollowText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Day_AOD.FollowText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.FollowRotateText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.FollowText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.FollowText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year.FollowRotateText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year.FollowText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.FollowRotateText" xml:space="preserve">
+    <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.FollowText" xml:space="preserve">
+    <value>跟随前辈</value>
   </data>
 </root>
