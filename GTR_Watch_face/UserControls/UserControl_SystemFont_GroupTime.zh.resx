@@ -117,25 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>系统字体</value>
+  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
+    <value>旋转系统字体（小时）</value>
   </data>
-  <data name="userControl_FontRotate.FollowText" xml:space="preserve">
-    <value>跟随</value>
+  <data name="userControl_FontRotate_weather_Max.ButtonText" xml:space="preserve">
+    <value>圆形系统字体（秒）</value>
   </data>
-  <data name="userControl_FontRotate_goal.ButtonText" xml:space="preserve">
-    <value>圆形系统字体（目标）</value>
+  <data name="userControl_FontRotate_weather_Min.ButtonText" xml:space="preserve">
+    <value>圆形系统字体（分钟）</value>
   </data>
-  <data name="userControl_FontRotate_goal.FollowText" xml:space="preserve">
-    <value>跟随</value>
+  <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
+    <value>圆形系统字体（小时）</value>
   </data>
-  <data name="userControl_SystemFont.FollowText" xml:space="preserve">
-    <value>跟随</value>
+  <data name="userControl_SystemFont_weather_Max.ButtonText" xml:space="preserve">
+    <value>旋转系统字体（秒）</value>
   </data>
-  <data name="userControl_SystemFont_goal.ButtonText" xml:space="preserve">
-    <value>旋转系统字体（目标）</value>
-  </data>
-  <data name="userControl_SystemFont_goal.FollowText" xml:space="preserve">
-    <value>跟随</value>
+  <data name="userControl_SystemFont_weather_Min.ButtonText" xml:space="preserve">
+    <value>旋转系统字体（分钟）</value>
   </data>
 </root>
