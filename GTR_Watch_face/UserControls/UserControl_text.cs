@@ -189,7 +189,7 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Отображение поля изображения при ошибке</summary>
-        public bool ImageError
+        public virtual bool ImageError
         {
             get
             {
@@ -204,7 +204,7 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Отображение поля изображения десятичного разделителя</summary>
-        public bool OptionalSymbol
+        public virtual bool OptionalSymbol
         {
             get
             {

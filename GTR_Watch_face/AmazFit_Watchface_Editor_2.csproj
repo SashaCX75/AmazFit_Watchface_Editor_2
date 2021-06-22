@@ -140,6 +140,9 @@
     <Compile Include="Preview_AOD.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Preview_Widget.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Classes\PROGRAM_SETTINGS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -285,6 +288,18 @@
       <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\WatchSkin.cs" />
+    <Compile Include="UserControls\UserControl_preview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_preview.Designer.cs">
+      <DependentUpon>UserControl_preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_text_date.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_text_date.Designer.cs">
+      <DependentUpon>UserControl_text_date.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -625,6 +640,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_SystemFont_GroupTime.resx">
       <DependentUpon>UserControl_SystemFont_GroupTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_preview.resx">
+      <DependentUpon>UserControl_preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_text_date.resx">
+      <DependentUpon>UserControl_text_date.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config">

@@ -1807,7 +1807,7 @@ namespace AmazFit_Watchface_2
                     // иконки
                     if (userControl_icon != null)
                     {
-                        if (activity.Icon != null)
+                        if (activity.Icon != null && activity.Icon.Coordinates != null)
 
                         {
                             userControl_icon.checkBox_icon_Use.Checked = true;

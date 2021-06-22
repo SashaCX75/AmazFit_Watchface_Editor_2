@@ -25,10 +25,11 @@ namespace AmazFit_Watchface_2
         /// <param name="showAnimation">Показывать анимацию при предпросмотре</param>
         /// <param name="showProgressArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         /// <param name="showCentrHend">Подсвечивать центр стрелки</param>
+        /// <param name="showWidgetsArea">Подсвечивать область виджетов</param>
         /// <param name="link">0 - основной экран; 1 - AOD</param>
         public void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, 
             bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showProgressArea, 
-            bool showCentrHend, int link)
+            bool showCentrHend, bool showWidgetsArea, int link)
         {
             Logger.WriteLine("* PreviewToBitmap");
             if(link == 1)
@@ -76,6 +77,9 @@ namespace AmazFit_Watchface_2
             #endregion
                 //if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+
+            DrawWidgets(gPanel, scale, crop, WMesh, BMesh, BBorder, showShortcuts, showShortcutsArea,
+                    showShortcutsBorder, showAnimation, showProgressArea, showCentrHend, showWidgetsArea);
 
             #region дата 
             int date_offsetX = -1;
@@ -805,7 +809,7 @@ namespace AmazFit_Watchface_2
                     gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                 }
             }
-
+            
             // месяц стрелкой
             if (checkBox_Month_hand_Use.Checked && comboBox_Month_hand_image.SelectedIndex >= 0)
             {
@@ -2258,6 +2262,9 @@ namespace AmazFit_Watchface_2
             }
 
             // надпись
+            int ActivityType = 0;
+            if (activity == "ActivityGoal") ActivityType = 17;
+            if (activity == "Humidity") ActivityType = 11;
             int goal_offsetX = -1;
             int goal_offsetY = -1;
             int goal_spasing = 0;
@@ -2283,7 +2290,7 @@ namespace AmazFit_Watchface_2
                     bool addZero = checkBox_add_zero.Checked;
                     int separator_index = userPanel_text.comboBoxGetSelectedIndexUnit();
                     goal_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, (int)value, addZero, value_lenght, separator_index, BBorder);
+                        spasing, alignment, (int)value, addZero, value_lenght, separator_index, BBorder, ActivityType);
 
                     if (unit >= 0)
                     {
@@ -2311,7 +2318,7 @@ namespace AmazFit_Watchface_2
                 {
                     int x = (int)numericUpDownX.Value;
                     int y = (int)numericUpDownY.Value;
-                    int spasing = (int)numericUpDown_spacing.Value;
+                    int spacing = (int)numericUpDown_spacing.Value;
                     int alignment = userPanel_textGoal.comboBoxGetSelectedIndexAlignment();
                     //bool addZero = checkBox_add_zero.Checked;
                     bool follow = checkBox_follow.Checked;
@@ -2321,10 +2328,10 @@ namespace AmazFit_Watchface_2
                         x = goal_offsetX;
                         alignment = 0;
                         y = goal_offsetY;
-                        spasing = goal_spasing;
+                        spacing = goal_spasing;
                     }
                     Draw_dagital_text(gPanel, imageIndex, x, y,
-                        spasing, alignment, goal, false, value_lenght, separator_index, BBorder);
+                        spacing, alignment, goal, false, value_lenght, separator_index, BBorder);
 
                     if (unit >= 0)
                     {
@@ -4934,6 +4941,7 @@ namespace AmazFit_Watchface_2
             int height = src.Height;
             //int DateLenght = width * value_lenght + spacing * (value_lenght - 1);
             if (ActivityType == 17) value_lenght = 5;
+            if (ActivityType == 11) value_lenght = 3;
             int DateLenght = width * value_lenght + 1;
             if (spacing > 0) DateLenght = DateLenght + spacing * (value_lenght - 1);
             //else DateLenght = DateLenght - spacing;

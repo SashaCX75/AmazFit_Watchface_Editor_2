@@ -288,7 +288,9 @@ namespace AmazFit_Watchface_2
         // меняем цвет текста и рамки для groupBox
         private void groupBox_Paint(object sender, PaintEventArgs e)
         {
-
+            GroupBox box = sender as GroupBox;
+            if (box.Enabled) DrawGroupBox(box, e.Graphics, Color.Black, Color.DarkGray);
+            else DrawGroupBox(box, e.Graphics, Color.DarkGray, Color.DarkGray);
         }
         private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
         {
@@ -304,7 +306,7 @@ namespace AmazFit_Watchface_2
                                                box.ClientRectangle.Height - (int)(strSize.Height / 2) - 5);
 
                 // Clear text and border
-                g.Clear(this.BackColor);
+                g.Clear(panel_FontRotate.BackColor);
 
                 // Draw text
                 g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);

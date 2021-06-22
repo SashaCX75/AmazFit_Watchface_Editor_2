@@ -760,6 +760,7 @@ namespace AmazFit_Watchface_2
 
             }
 
+            //TODO добавить отрисовку фона под стрелкой
             // число стрелкой
             if (checkBox_Day_hand_Use_AOD.Checked && comboBox_Day_hand_image_AOD.SelectedIndex >= 0)
             {
