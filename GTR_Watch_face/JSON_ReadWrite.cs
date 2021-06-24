@@ -2686,8 +2686,8 @@ namespace AmazFit_Watchface_2
 
                         DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
                         digitalDateDigit.DateType = "Year";
-                        digitalDateDigit.CombingMode = "Single";
-                        //digitalDateDigit.CombingMode = checkBox_Year_follow.Checked ? "Follow" : "Single";
+                        //digitalDateDigit.CombingMode = "Single";
+                        digitalDateDigit.CombingMode = checkBox_Year_follow.Checked ? "Follow" : "Single";
                         digitalDateDigit.Digit = new Text();
                         digitalDateDigit.Digit.Image = new ImageAmazfit();
                         digitalDateDigit.Digit.Image.X = (long)numericUpDown_YearX.Value;
@@ -6903,6 +6903,15 @@ namespace AmazFit_Watchface_2
             userControl_scaleCircleWidget.ComboBoxAddItems(ListImages);
             userControl_scaleLinearWidget.ComboBoxAddItems(ListImages);
             userControl_iconWidget.ComboBoxAddItems(ListImages);
+
+            userControl_text_date_DayWidget.ComboBoxAddItems(ListImages);
+            userControl_hand_DayWidget.ComboBoxAddItems(ListImages);
+            userControl_pictures_MonthWidget.ComboBoxAddItems(ListImages);
+            userControl_text_date_MonthWidget.ComboBoxAddItems(ListImages);
+            userControl_hand_MonthWidget.ComboBoxAddItems(ListImages);
+            userControl_text_date_YearWidget.ComboBoxAddItems(ListImages);
+            userControl_pictures_DOWWidget.ComboBoxAddItems(ListImages);
+            userControl_hand_DOWWidget.ComboBoxAddItems(ListImages);
 
             if (comboBox_WidgetNumber.Items.Count > 0) comboBox_WidgetNumber.SelectedIndex = 0;
         }

@@ -4,13 +4,13 @@ namespace AmazFit_Watchface_2
 {
     public class Widgets
     {
-        public List<Widget> Widget { get; set; }
-
         public long TopMaskImageIndex { get; set; }
 
         public long UnderMaskImageIndex { get; set; }
 
         public long Unknown4 { get; set; }
+
+        public List<Widget> Widget { get; set; }
 
     }
 

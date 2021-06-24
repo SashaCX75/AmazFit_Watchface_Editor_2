@@ -10908,7 +10908,7 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
-        private void WidgetRow_FullUp(DataGridView dgv, int rowIndex)
+        private void WidgetRow_FullUp(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
         {
             if (rowIndex == 0) return;
             int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
@@ -10921,16 +10921,19 @@ namespace AmazFit_Watchface_2
                 dgv.ClearSelection();
                 dgv.Rows[0].Selected = true;
 
-                WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(0, selectedWidgetElement);
+                if (removWidgetElement)
+                {
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(0, selectedWidgetElement); 
+                }
             }
             catch { }
 
             JSON_write();
         }
 
-        private void WidgetRow_Up(DataGridView dgv, int rowIndex)
+        private void WidgetRow_Up(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
         {
             if (rowIndex == 0) return;
             int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
@@ -10943,16 +10946,19 @@ namespace AmazFit_Watchface_2
                 dgv.ClearSelection();
                 dgv.Rows[rowIndex - 1].Selected = true;
 
-                WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex - 1, selectedWidgetElement);
+                if (removWidgetElement)
+                {
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex - 1, selectedWidgetElement); 
+                }
             }
             catch { }
 
             JSON_write();
         }
 
-        private void WidgetRow_Down(DataGridView dgv, int rowIndex)
+        private void WidgetRow_Down(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
         {
             int totalRows = dgv.Rows.Count;
             if (rowIndex == totalRows - 1) return;
@@ -10966,16 +10972,19 @@ namespace AmazFit_Watchface_2
                 dgv.ClearSelection();
                 dgv.Rows[rowIndex + 1].Selected = true;
 
-                WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex + 1, selectedWidgetElement);
+                if (removWidgetElement)
+                {
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex + 1, selectedWidgetElement); 
+                }
             }
             catch { }
 
             JSON_write();
         }
 
-        private void WidgetRow_FullDown(DataGridView dgv, int rowIndex)
+        private void WidgetRow_FullDown(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
         {
             int totalRows = dgv.Rows.Count;
             if (rowIndex == totalRows - 1) return;
@@ -10989,9 +10998,12 @@ namespace AmazFit_Watchface_2
                 dgv.ClearSelection();
                 dgv.Rows[totalRows - 1].Selected = true;
 
-                WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
-                WidgetsTemp.Widget[selectedWidget].WidgetElement.Add(selectedWidgetElement);
+                if (removWidgetElement)
+                {
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Add(selectedWidgetElement); 
+                }
             }
             catch { }
 
@@ -11164,11 +11176,11 @@ namespace AmazFit_Watchface_2
 
         private void button_WidgetDel_Click(object sender, EventArgs e)
         {
-            int selectedIndex = comboBox_WidgetNumber.SelectedIndex;
-            if (selectedIndex >= 0)
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            if (widgetIndex >= 0)
             {
                 if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null &&
-                    Watch_Face.Widgets.Widget.Count > selectedIndex) WidgetDel(selectedIndex);
+                    Watch_Face.Widgets.Widget.Count > widgetIndex) WidgetDel(widgetIndex);
             }
         }
 
@@ -11176,9 +11188,9 @@ namespace AmazFit_Watchface_2
         {
             if (dataGridView_WidgetElement.SelectedCells.Count > 0)
             {
-                int selectedIndex = comboBox_WidgetNumber.SelectedIndex;
-                int RowIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
-                WidgetElementDel(selectedIndex, RowIndex);
+                int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+                int widgetElementIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
+                WidgetElementDel(widgetIndex, widgetElementIndex);
             }
         }
 
@@ -11186,15 +11198,202 @@ namespace AmazFit_Watchface_2
         {
             if (comboBox_WidgetsUnderMask.SelectedIndex >= 0)
             {
-                if (WidgetsTemp != null) WidgetsTemp.UnderMaskImageIndex = Int32.Parse(comboBox_WidgetsUnderMask.Text);
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.UnderMaskImageIndex = Int32.Parse(comboBox_WidgetsUnderMask.Text);
             }
             if (comboBox_WidgetsTopMask.SelectedIndex >= 0)
             {
-                if (WidgetsTemp != null) WidgetsTemp.TopMaskImageIndex = Int32.Parse(comboBox_WidgetsTopMask.Text);
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.TopMaskImageIndex = Int32.Parse(comboBox_WidgetsTopMask.Text);
             }
 
             JSON_write();
             PreviewImage();
+        }
+
+        private void dataGridView_Widget_Date_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Up(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Down(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullUp(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullDown(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+        }
+
+        private void button_Widget_Date_Start_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullUp(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_Up_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Up(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_Down_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Down(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_End_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullDown(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void checkBox_TimeOnWidgetEdit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_TimeOnWidgetEdit.Checked)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.Unknown4 = 1;
+            }
+            else
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.Unknown4 = 0;
+            }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void numericUpDown_Widget_ValueChanged(object sender, EventArgs e)
+        {
+            if (!PreviewView) return;
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            WidgetEdit(widgetIndex);
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void comboBox_Widget_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!PreviewView) return;
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            WidgetEdit(widgetIndex);
+
+            if (comboBox_WidgetsUnderMask.SelectedIndex >= 0)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.UnderMaskImageIndex = Int32.Parse(comboBox_WidgetsUnderMask.Text);
+            }
+            if (comboBox_WidgetsTopMask.SelectedIndex >= 0)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.TopMaskImageIndex = Int32.Parse(comboBox_WidgetsTopMask.Text);
+            }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_Widget_ValueChanged(object sender, EventArgs eventArgs)
+        {
+            if (!PreviewView) return;
+            if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+            {
+                int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+                int widgetElementIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
+                WidgetElementEdit(widgetIndex, widgetElementIndex);
+            }
         }
 
 

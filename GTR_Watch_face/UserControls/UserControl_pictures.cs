@@ -224,13 +224,16 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Очищает выпадающие списки с картинками, сбрасывает данные на значения по умолчанию</summary>
-        internal void SettingsClear()
+        internal void SettingsClear(bool full = true)
         {
             setValue = true;
 
             checkBox_pictures_Use.Checked = false;
 
-            comboBox_pictures_image.Items.Clear();
+            if (full)
+            {
+                comboBox_pictures_image.Items.Clear(); 
+            }
             comboBox_pictures_image.Text = "";
 
             numericUpDown_picturesX.Value = 0;

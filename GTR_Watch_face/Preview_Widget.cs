@@ -14,9 +14,27 @@ namespace AmazFit_Watchface_2
     {
         public void JSON_read_Widgets()
         {
-            if (Watch_Face == null || Watch_Face.Widgets == null) return;
+            if (Watch_Face == null || Watch_Face.Widgets == null) 
+            {
+
+                comboBox_WidgetsUnderMask.Enabled = false;
+                comboBox_WidgetsTopMask.Enabled = false;
+                checkBox_TimeOnWidgetEdit.Enabled = false;
+                label7.Enabled = false;
+                label01.Enabled = false;
+                return;
+            }
             comboBoxSetText(comboBox_WidgetsUnderMask, Watch_Face.Widgets.UnderMaskImageIndex);
             comboBoxSetText(comboBox_WidgetsTopMask, Watch_Face.Widgets.TopMaskImageIndex);
+            if (Watch_Face.Widgets.Unknown4 == 0)
+                checkBox_TimeOnWidgetEdit.Checked = false;
+            else checkBox_TimeOnWidgetEdit.Checked = true;
+
+            comboBox_WidgetsUnderMask.Enabled = true;
+            comboBox_WidgetsTopMask.Enabled = true;
+            checkBox_TimeOnWidgetEdit.Enabled = true;
+            label7.Enabled = true;
+            label01.Enabled = true;
         }
 
         public void DrawWidgets(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder,
@@ -88,6 +106,7 @@ namespace AmazFit_Watchface_2
             {
                 foreach (Activity activity in widgetElement.Activity)
                 {
+                    if (activity == null) continue;
                     float activityValue = 0;
                     float activityGoal = 100;
                     float activityGoal2 = 100;
@@ -130,7 +149,7 @@ namespace AmazFit_Watchface_2
                             activityValue = (float)Math.Round(activityValue, 2, MidpointRounding.AwayFromZero);
                             activityGoal = activityValue;
                             progress = activityValue / activityGoal;
-                            value_lenght = 5;
+                            value_lenght = 4;
                             break;
                         case "StandUp":
                             activityValue = Watch_Face_Preview_Set.Activity.StandUp;
@@ -1352,7 +1371,7 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        /// <summary>заполняем таблицу с элементами для выбранно редактируемой зоны</summary>
+        /// <summary>заполняем таблицу с элементами для выбранной редактируемой зоны</summary>
         private void JSON_read_widgetElement_order(Widget widget)
         {
             dataGridView_WidgetElement.Rows.Clear();
@@ -1465,8 +1484,43 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        private void dataGridView_Widget_Date_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_Widget_Date.SelectedCells[0].RowIndex;
+
+                button_Widget_Date_Start.Enabled = true;
+                button_Widget_Date_Up.Enabled = true;
+                button_Widget_Date_Down.Enabled = true;
+                button_Widget_Date_End.Enabled = true;
+
+                if (RowIndex == 0)
+                {
+                    button_Widget_Date_Start.Enabled = false;
+                    button_Widget_Date_Up.Enabled = false;
+                }
+
+                if (RowIndex == dataGridView_Widget_Date.Rows.Count - 1)
+                {
+                    button_Widget_Date_Down.Enabled = false;
+                    button_Widget_Date_End.Enabled = false;
+                }
+            }
+            else
+            {
+                button_Widget_Date_Start.Enabled = false;
+                button_Widget_Date_Up.Enabled = false;
+                button_Widget_Date_Down.Enabled = false;
+                button_Widget_Date_End.Enabled = false;
+            }
+
+            PreviewImage();
+        }
+
         private void SelectWidgetElement(string name, WidgetElement widgetElement)
         {
+            PreviewView = false;
             UserControl_preview userControl_preview = userControl_previewWidget;
             UserControl_pictures userPanel_pictures = null;
             UserControl_text userPanel_text = null;
@@ -1506,9 +1560,43 @@ namespace AmazFit_Watchface_2
             tabControl_DateWidget.Visible = false;
             if (widgetElement == null) return;
 
+            userControl_previewWidget.SettingsClear(false);
+            userControl_picturesWidget.SettingsClear(false);
+            userControl_pictures_weatherWidget.SettingsClear(false);
+            userControl_textWidget.SettingsClear(false);
+            userControl_text_goalWidget.SettingsClear(false);
+            userControl_text_weatherWidgetCur.SettingsClear(false);
+            userControl_text_weatherWidgetMin.SettingsClear(false);
+            userControl_text_weatherWidgetMax.SettingsClear(false);
+            userControl_text_goalWidgetSunrise.SettingsClear(false);
+            userControl_text_goalWidgetSunset.SettingsClear(false);
+            userControl_handWidget.SettingsClear(false);
+            userControl_scaleCircleWidget.SettingsClear(false);
+            userControl_scaleLinearWidget.SettingsClear(false);
+            userControl_SystemFont_GroupWidget.SettingsClear();
+            userControl_SystemFont_GroupWeatherWidget.SettingsClear();
+            userControl_SystemFont_GroupSunriseWidget.SettingsClear();
+            userControl_iconWidget.SettingsClear(false);
+
+            userControl_text_date_DayWidget.SettingsClear(false);
+            userControl_hand_DayWidget.SettingsClear(false);
+            userControl_SystemFont_Group_DayWidget.SettingsClear();
+
+            userControl_pictures_MonthWidget.SettingsClear(false);
+            userControl_text_date_MonthWidget.SettingsClear(false);
+            userControl_hand_MonthWidget.SettingsClear(false);
+            userControl_SystemFont_Group_MonthWidget.SettingsClear();
+
+            userControl_text_date_YearWidget.SettingsClear(false);
+            userControl_SystemFont_Group_YearWidget.SettingsClear();
+
+            userControl_pictures_DOWWidget.SettingsClear(false);
+            userControl_hand_DOWWidget.SettingsClear(false);
+
             userControl_textWidget.OptionalSymbol = false;
             userControl_text_goalWidget.Follow = true;
             userControl_iconWidget.Image2 = false;
+            
             switch (name)
             {
                 case "Battery":
@@ -2151,7 +2239,8 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            if (widgetElement.Activity != null)
+            #region Activity
+            if (widgetElement.Activity != null && widgetElement.Activity[0] != null)
             {
                 Activity activity = widgetElement.Activity[0];
                 // набор картинок
@@ -2839,15 +2928,633 @@ namespace AmazFit_Watchface_2
                         userControl_icon.numericUpDown_iconX.Value = numericUpDownX;
                         userControl_icon.numericUpDown_iconY.Value = numericUpDownY;
                     }
-                } 
+                }
             }
+            #endregion
+
+            #region Date
+            if (widgetElement.Date != null)
+            {
+                dataGridView_Widget_Date.Rows.Clear();
+
+                if (widgetElement.Date.DateDigits != null &&
+                        widgetElement.Date.DateDigits.Count > 0)
+                {
+                    //Dictionary<int, string> date_layer = new Dictionary<int, string>();
+                    List<string> date_layer = new List<string>();
+                    foreach (DigitalDateDigit digitalDateDigit in widgetElement.Date.DateDigits)
+                    {
+                        switch (digitalDateDigit.DateType)
+                        {
+                            case "Day":
+                                if (date_layer.LastIndexOf("Day") < 0)
+                                {
+                                    date_layer.Add("Day");
+                                    dataGridView_Widget_Date.Rows.Add("Day", Properties.FormStrings.DateName_Day);
+                                }
+                                
+                                // надпись
+                                if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.Image != null)
+                                {
+                                    userControl_text_date_DayWidget.checkBox_Use.Checked = true;
+                                    if (digitalDateDigit.CombingMode == "Single")
+                                    {
+                                        userControl_text_date_DayWidget.checkBox_follow.Checked = false;
+                                    }
+                                    else
+                                    {
+                                        userControl_text_date_DayWidget.checkBox_follow.Checked = true;
+                                    }
+
+                                    userControl_text_date_DayWidget.numericUpDown_imageX.Value = digitalDateDigit.Digit.Image.X;
+                                    userControl_text_date_DayWidget.numericUpDown_imageY.Value = digitalDateDigit.Digit.Image.Y;
+                                    foreach (MultilangImage multilangImage in digitalDateDigit.Digit.Image.MultilangImage)
+                                    {
+                                        if (multilangImage.LangCode == "All")
+                                            userControl_text_date_DayWidget.comboBoxSetImage((int)multilangImage.ImageSet.ImageIndex);
+                                    }
+                                    if (digitalDateDigit.Digit.Image.MultilangImageUnit != null)
+                                    {
+                                        foreach (MultilangImage multilangImage in digitalDateDigit.Digit.Image.MultilangImageUnit)
+                                        {
+                                            if (multilangImage.LangCode == "All")
+                                                userControl_text_date_DayWidget.comboBoxSetUnit((int)multilangImage.ImageSet.ImageIndex);
+                                        }
+                                    }
+
+                                    userControl_text_date_DayWidget.comboBoxSetAlignment(digitalDateDigit.Digit.Alignment);
+                                    if (digitalDateDigit.Digit.Spacing != null)
+                                        userControl_text_date_DayWidget.numericUpDown_spacing.Value = 
+                                            (decimal)digitalDateDigit.Digit.Spacing;
+                                    userControl_text_date_DayWidget.checkBox_addZero.Checked = digitalDateDigit.Digit.PaddingZero;
+
+                                    if (digitalDateDigit.Separator != null)
+                                    {
+                                        userControl_text_date_DayWidget.comboBoxSetIcon((int)digitalDateDigit.Separator.ImageIndex);
+                                        userControl_text_date_DayWidget.numericUpDown_iconX.Value = digitalDateDigit.Separator.Coordinates.X;
+                                        userControl_text_date_DayWidget.numericUpDown_iconY.Value = digitalDateDigit.Separator.Coordinates.Y;
+                                    }
+                                }
+
+                                // системный шрифт
+                                if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.SystemFont != null &&
+                                    digitalDateDigit.Digit.SystemFont.FontRotate == null)
+                                {
+                                    UserControl_SystemFont userControl_SystemFont_Date =
+                                        userControl_SystemFont_Group_DayWidget.userControl_SystemFont;
+                                    userControl_SystemFont_Date.checkBox_Use.Checked = true;
+                                    NumericUpDown numericUpDownX = userControl_SystemFont_Date.numericUpDown_SystemFontX;
+                                    NumericUpDown numericUpDownY = userControl_SystemFont_Date.numericUpDown_SystemFontY;
+                                    NumericUpDown numericUpDown_size = userControl_SystemFont_Date.numericUpDown_SystemFont_size;
+                                    NumericUpDown numericUpDown_angle = userControl_SystemFont_Date.numericUpDown_SystemFont_angle;
+                                    CheckBox checkBox_add_zero = userControl_SystemFont_Date.checkBox_addZero;
+                                    NumericUpDown numericUpDown_spacing = userControl_SystemFont_Date.numericUpDown_SystemFont_spacing;
+                                    CheckBox checkBox_follow = userControl_SystemFont_Date.checkBox_follow;
+                                    CheckBox checkBox_separator = userControl_SystemFont_Date.checkBox_separator;
+
+                                    if (digitalDateDigit.CombingMode == null ||
+                                        digitalDateDigit.CombingMode == "Follow") checkBox_follow.Checked = true;
+                                    if (digitalDateDigit.Separator != null) checkBox_separator.Checked = true;
+
+                                    if (digitalDateDigit.Digit.SystemFont.Coordinates != null)
+                                    {
+                                        numericUpDownX.Value = digitalDateDigit.Digit.SystemFont.Coordinates.X;
+                                        numericUpDownY.Value = digitalDateDigit.Digit.SystemFont.Coordinates.Y;
+                                    }
+                                    numericUpDown_size.Value = digitalDateDigit.Digit.SystemFont.Size;
+                                    numericUpDown_angle.Value = digitalDateDigit.Digit.SystemFont.Angle;
+                                    if (digitalDateDigit.Digit.Spacing != null)
+                                    {
+                                        numericUpDown_spacing.Value = (int)digitalDateDigit.Digit.Spacing;
+                                    }
+                                    userControl_SystemFont_Date.comboBoxSetColorString(digitalDateDigit.Digit.SystemFont.Color);
+                                    userControl_SystemFont_Date.checkBoxSetUnit((int)digitalDateDigit.Digit.SystemFont.ShowUnitCheck);
+                                    checkBox_add_zero.Checked = digitalDateDigit.Digit.PaddingZero;
+                                }
+
+                                // системный шрифт по окружности
+                                if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.SystemFont != null &&
+                                    digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                {
+                                    UserControl_FontRotate userControl_FontRotate_Date =
+                                        userControl_SystemFont_Group_DayWidget.userControl_FontRotate;
+                                    userControl_FontRotate_Date.checkBox_Use.Checked = true;
+                                    NumericUpDown numericUpDownX = userControl_FontRotate_Date.numericUpDown_FontRotateX;
+                                    NumericUpDown numericUpDownY = userControl_FontRotate_Date.numericUpDown_FontRotateY;
+                                    NumericUpDown numericUpDown_size = userControl_FontRotate_Date.numericUpDown_FontRotate_size;
+                                    NumericUpDown numericUpDown_angle = userControl_FontRotate_Date.numericUpDown_FontRotate_angle;
+                                    NumericUpDown numericUpDown_radius = userControl_FontRotate_Date.numericUpDown_FontRotate_radius;
+                                    NumericUpDown numericUpDown_spacing = userControl_FontRotate_Date.numericUpDown_FontRotate_spacing;
+                                    CheckBox checkBox_add_zero = userControl_FontRotate_Date.checkBox_addZero;
+                                    CheckBox checkBox_follow = userControl_FontRotate_Date.checkBox_follow;
+                                    CheckBox checkBox_separator = userControl_FontRotate_Date.checkBox_separator;
+
+                                    if (digitalDateDigit.CombingMode == null ||
+                                        digitalDateDigit.CombingMode == "Follow") checkBox_follow.Checked = true;
+                                    if (digitalDateDigit.Separator != null) checkBox_separator.Checked = true;
+
+                                    if (digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                    {
+                                        numericUpDownX.Value = digitalDateDigit.Digit.SystemFont.FontRotate.X;
+                                        numericUpDownY.Value = digitalDateDigit.Digit.SystemFont.FontRotate.Y;
+                                        numericUpDown_radius.Value = digitalDateDigit.Digit.SystemFont.FontRotate.Radius;
+                                        userControl_FontRotate_Date.radioButtonSetRotateDirection(
+                                            (int)digitalDateDigit.Digit.SystemFont.FontRotate.RotateDirection);
+                                    }
+                                    numericUpDown_size.Value = digitalDateDigit.Digit.SystemFont.Size;
+                                    numericUpDown_angle.Value = digitalDateDigit.Digit.SystemFont.Angle;
+                                    if (digitalDateDigit.Digit.Spacing != null)
+                                    {
+                                        numericUpDown_spacing.Value = (int)digitalDateDigit.Digit.Spacing;
+                                    }
+                                    userControl_FontRotate_Date.comboBoxSetColorString(digitalDateDigit.Digit.SystemFont.Color);
+                                    userControl_FontRotate_Date.checkBoxSetUnit((int)digitalDateDigit.Digit.SystemFont.ShowUnitCheck);
+                                    checkBox_add_zero.Checked = digitalDateDigit.Digit.PaddingZero;
+                                }
+
+
+                                break;
+
+                            case "Month":
+                                if (date_layer.LastIndexOf("Month") < 0)
+                                {
+                                    date_layer.Add("Month");
+                                    dataGridView_Widget_Date.Rows.Add("Month", Properties.FormStrings.DateName_Month);
+                                }
+
+                                // картинка
+                                if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.DisplayFormAnalog)
+                                {
+                                    if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.Image != null)
+                                    {
+                                        userControl_pictures_MonthWidget.checkBox_pictures_Use.Checked = true;
+                                        userControl_pictures_MonthWidget.numericUpDown_picturesX.Value = digitalDateDigit.Digit.Image.X;
+                                        userControl_pictures_MonthWidget.numericUpDown_picturesY.Value = digitalDateDigit.Digit.Image.Y;
+                                        foreach (MultilangImage multilangImage in digitalDateDigit.Digit.Image.MultilangImage)
+                                        {
+                                            if (multilangImage.LangCode == "All")
+                                                userControl_pictures_MonthWidget.comboBoxSetImage(multilangImage.ImageSet.ImageIndex);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    // надпись
+                                    if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.Image != null)
+                                    {
+                                        userControl_text_date_MonthWidget.checkBox_Use.Checked = true;
+                                        if (digitalDateDigit.CombingMode == "Single")
+                                        {
+                                            userControl_text_date_MonthWidget.checkBox_follow.Checked = false;
+                                        }
+                                        else
+                                        {
+                                            userControl_text_date_MonthWidget.checkBox_follow.Checked = true;
+                                        }
+
+                                        userControl_text_date_MonthWidget.numericUpDown_imageX.Value = digitalDateDigit.Digit.Image.X;
+                                        userControl_text_date_MonthWidget.numericUpDown_imageY.Value = digitalDateDigit.Digit.Image.Y;
+                                        foreach (MultilangImage multilangImage in digitalDateDigit.Digit.Image.MultilangImage)
+                                        {
+                                            if (multilangImage.LangCode == "All")
+                                                userControl_text_date_MonthWidget.comboBoxSetImage((int)multilangImage.ImageSet.ImageIndex);
+                                        }
+                                        if (digitalDateDigit.Digit.Image.MultilangImageUnit != null)
+                                        {
+                                            foreach (MultilangImage multilangImage in digitalDateDigit.Digit.Image.MultilangImageUnit)
+                                            {
+                                                if (multilangImage.LangCode == "All")
+                                                    userControl_text_date_MonthWidget.comboBoxSetUnit((int)multilangImage.ImageSet.ImageIndex);
+                                            }
+                                        }
+
+                                        userControl_text_date_MonthWidget.comboBoxSetAlignment(digitalDateDigit.Digit.Alignment);
+                                        if (digitalDateDigit.Digit.Spacing != null)
+                                            userControl_text_date_MonthWidget.numericUpDown_spacing.Value =
+                                                (decimal)digitalDateDigit.Digit.Spacing;
+                                        userControl_text_date_MonthWidget.checkBox_addZero.Checked = digitalDateDigit.Digit.PaddingZero;
+
+                                        if (digitalDateDigit.Separator != null)
+                                        {
+                                            userControl_text_date_MonthWidget.comboBoxSetIcon((int)digitalDateDigit.Separator.ImageIndex);
+                                            userControl_text_date_MonthWidget.numericUpDown_iconX.Value = digitalDateDigit.Separator.Coordinates.X;
+                                            userControl_text_date_MonthWidget.numericUpDown_iconY.Value = digitalDateDigit.Separator.Coordinates.Y;
+                                        }
+                                    }
+
+                                    // системный шрифт
+                                    if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.SystemFont != null &&
+                                        digitalDateDigit.Digit.SystemFont.FontRotate == null)
+                                    {
+                                        UserControl_SystemFont userControl_SystemFont_Date =
+                                            userControl_SystemFont_Group_MonthWidget.userControl_SystemFont;
+                                        userControl_SystemFont_Date.checkBox_Use.Checked = true;
+                                        NumericUpDown numericUpDownX = userControl_SystemFont_Date.numericUpDown_SystemFontX;
+                                        NumericUpDown numericUpDownY = userControl_SystemFont_Date.numericUpDown_SystemFontY;
+                                        NumericUpDown numericUpDown_size = userControl_SystemFont_Date.numericUpDown_SystemFont_size;
+                                        NumericUpDown numericUpDown_angle = userControl_SystemFont_Date.numericUpDown_SystemFont_angle;
+                                        CheckBox checkBox_add_zero = userControl_SystemFont_Date.checkBox_addZero;
+                                        NumericUpDown numericUpDown_spacing = userControl_SystemFont_Date.numericUpDown_SystemFont_spacing;
+                                        CheckBox checkBox_follow = userControl_SystemFont_Date.checkBox_follow;
+                                        CheckBox checkBox_separator = userControl_SystemFont_Date.checkBox_separator;
+
+                                        if (digitalDateDigit.CombingMode == null ||
+                                            digitalDateDigit.CombingMode == "Follow") checkBox_follow.Checked = true;
+                                        if (digitalDateDigit.Separator != null) checkBox_separator.Checked = true;
+
+                                        if (digitalDateDigit.Digit.SystemFont.Coordinates != null)
+                                        {
+                                            numericUpDownX.Value = digitalDateDigit.Digit.SystemFont.Coordinates.X;
+                                            numericUpDownY.Value = digitalDateDigit.Digit.SystemFont.Coordinates.Y;
+                                        }
+                                        numericUpDown_size.Value = digitalDateDigit.Digit.SystemFont.Size;
+                                        numericUpDown_angle.Value = digitalDateDigit.Digit.SystemFont.Angle;
+                                        if (digitalDateDigit.Digit.Spacing != null)
+                                        {
+                                            numericUpDown_spacing.Value = (int)digitalDateDigit.Digit.Spacing;
+                                        }
+                                        userControl_SystemFont_Date.comboBoxSetColorString(digitalDateDigit.Digit.SystemFont.Color);
+                                        userControl_SystemFont_Date.checkBoxSetUnit((int)digitalDateDigit.Digit.SystemFont.ShowUnitCheck);
+                                        checkBox_add_zero.Checked = digitalDateDigit.Digit.PaddingZero;
+                                    }
+
+                                    // системный шрифт по окружности
+                                    if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.SystemFont != null &&
+                                        digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                    {
+                                        UserControl_FontRotate userControl_FontRotate_Date =
+                                            userControl_SystemFont_Group_MonthWidget.userControl_FontRotate;
+                                        userControl_FontRotate_Date.checkBox_Use.Checked = true;
+                                        NumericUpDown numericUpDownX = userControl_FontRotate_Date.numericUpDown_FontRotateX;
+                                        NumericUpDown numericUpDownY = userControl_FontRotate_Date.numericUpDown_FontRotateY;
+                                        NumericUpDown numericUpDown_size = userControl_FontRotate_Date.numericUpDown_FontRotate_size;
+                                        NumericUpDown numericUpDown_angle = userControl_FontRotate_Date.numericUpDown_FontRotate_angle;
+                                        NumericUpDown numericUpDown_radius = userControl_FontRotate_Date.numericUpDown_FontRotate_radius;
+                                        NumericUpDown numericUpDown_spacing = userControl_FontRotate_Date.numericUpDown_FontRotate_spacing;
+                                        CheckBox checkBox_add_zero = userControl_FontRotate_Date.checkBox_addZero;
+                                        CheckBox checkBox_follow = userControl_FontRotate_Date.checkBox_follow;
+                                        CheckBox checkBox_separator = userControl_FontRotate_Date.checkBox_separator;
+
+                                        if (digitalDateDigit.CombingMode == null ||
+                                            digitalDateDigit.CombingMode == "Follow") checkBox_follow.Checked = true;
+                                        if (digitalDateDigit.Separator != null) checkBox_separator.Checked = true;
+
+                                        if (digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                        {
+                                            numericUpDownX.Value = digitalDateDigit.Digit.SystemFont.FontRotate.X;
+                                            numericUpDownY.Value = digitalDateDigit.Digit.SystemFont.FontRotate.Y;
+                                            numericUpDown_radius.Value = digitalDateDigit.Digit.SystemFont.FontRotate.Radius;
+                                            userControl_FontRotate_Date.radioButtonSetRotateDirection(
+                                                (int)digitalDateDigit.Digit.SystemFont.FontRotate.RotateDirection);
+                                        }
+                                        numericUpDown_size.Value = digitalDateDigit.Digit.SystemFont.Size;
+                                        numericUpDown_angle.Value = digitalDateDigit.Digit.SystemFont.Angle;
+                                        if (digitalDateDigit.Digit.Spacing != null)
+                                        {
+                                            numericUpDown_spacing.Value = (int)digitalDateDigit.Digit.Spacing;
+                                        }
+                                        userControl_FontRotate_Date.comboBoxSetColorString(digitalDateDigit.Digit.SystemFont.Color);
+                                        userControl_FontRotate_Date.checkBoxSetUnit((int)digitalDateDigit.Digit.SystemFont.ShowUnitCheck);
+                                        checkBox_add_zero.Checked = digitalDateDigit.Digit.PaddingZero;
+                                    }
+                                }
+                                break;
+
+                            default:
+                                if (date_layer.LastIndexOf("Year") < 0)
+                                {
+                                    date_layer.Add("Year");
+                                    dataGridView_Widget_Date.Rows.Add("Year", Properties.FormStrings.DateName_Year);
+                                }
+                                // надпись
+                                if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.Image != null)
+                                {
+                                    userControl_text_date_YearWidget.checkBox_Use.Checked = true;
+                                    if (digitalDateDigit.CombingMode == "Single")
+                                    {
+                                        userControl_text_date_YearWidget.checkBox_follow.Checked = false;
+                                    }
+                                    else
+                                    {
+                                        userControl_text_date_YearWidget.checkBox_follow.Checked = true;
+                                    }
+
+                                    userControl_text_date_YearWidget.numericUpDown_imageX.Value = digitalDateDigit.Digit.Image.X;
+                                    userControl_text_date_YearWidget.numericUpDown_imageY.Value = digitalDateDigit.Digit.Image.Y;
+                                    foreach (MultilangImage multilangImage in digitalDateDigit.Digit.Image.MultilangImage)
+                                    {
+                                        if (multilangImage.LangCode == "All")
+                                            userControl_text_date_YearWidget.comboBoxSetImage((int)multilangImage.ImageSet.ImageIndex);
+                                    }
+                                    if (digitalDateDigit.Digit.Image.MultilangImageUnit != null)
+                                    {
+                                        foreach (MultilangImage multilangImage in digitalDateDigit.Digit.Image.MultilangImageUnit)
+                                        {
+                                            if (multilangImage.LangCode == "All")
+                                                userControl_text_date_YearWidget.comboBoxSetUnit((int)multilangImage.ImageSet.ImageIndex);
+                                        }
+                                    }
+
+                                    userControl_text_date_YearWidget.comboBoxSetAlignment(digitalDateDigit.Digit.Alignment);
+                                    if (digitalDateDigit.Digit.Spacing != null)
+                                        userControl_text_date_YearWidget.numericUpDown_spacing.Value =
+                                            (decimal)digitalDateDigit.Digit.Spacing;
+                                    userControl_text_date_YearWidget.checkBox_addZero.Checked = digitalDateDigit.Digit.PaddingZero;
+
+                                    if (digitalDateDigit.Separator != null)
+                                    {
+                                        userControl_text_date_YearWidget.comboBoxSetIcon((int)digitalDateDigit.Separator.ImageIndex);
+                                        userControl_text_date_YearWidget.numericUpDown_iconX.Value = digitalDateDigit.Separator.Coordinates.X;
+                                        userControl_text_date_YearWidget.numericUpDown_iconY.Value = digitalDateDigit.Separator.Coordinates.Y;
+                                    }
+                                }
+
+                                // системный шрифт
+                                if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.SystemFont != null &&
+                                    digitalDateDigit.Digit.SystemFont.FontRotate == null)
+                                {
+                                    UserControl_SystemFont userControl_SystemFont_Date =
+                                        userControl_SystemFont_Group_YearWidget.userControl_SystemFont;
+                                    userControl_SystemFont_Date.checkBox_Use.Checked = true;
+                                    NumericUpDown numericUpDownX = userControl_SystemFont_Date.numericUpDown_SystemFontX;
+                                    NumericUpDown numericUpDownY = userControl_SystemFont_Date.numericUpDown_SystemFontY;
+                                    NumericUpDown numericUpDown_size = userControl_SystemFont_Date.numericUpDown_SystemFont_size;
+                                    NumericUpDown numericUpDown_angle = userControl_SystemFont_Date.numericUpDown_SystemFont_angle;
+                                    CheckBox checkBox_add_zero = userControl_SystemFont_Date.checkBox_addZero;
+                                    NumericUpDown numericUpDown_spacing = userControl_SystemFont_Date.numericUpDown_SystemFont_spacing;
+                                    CheckBox checkBox_follow = userControl_SystemFont_Date.checkBox_follow;
+                                    CheckBox checkBox_separator = userControl_SystemFont_Date.checkBox_separator;
+
+                                    if (digitalDateDigit.CombingMode == null ||
+                                        digitalDateDigit.CombingMode == "Follow") checkBox_follow.Checked = true;
+                                    if (digitalDateDigit.Separator != null) checkBox_separator.Checked = true;
+
+                                    if (digitalDateDigit.Digit.SystemFont.Coordinates != null)
+                                    {
+                                        numericUpDownX.Value = digitalDateDigit.Digit.SystemFont.Coordinates.X;
+                                        numericUpDownY.Value = digitalDateDigit.Digit.SystemFont.Coordinates.Y;
+                                    }
+                                    numericUpDown_size.Value = digitalDateDigit.Digit.SystemFont.Size;
+                                    numericUpDown_angle.Value = digitalDateDigit.Digit.SystemFont.Angle;
+                                    if (digitalDateDigit.Digit.Spacing != null)
+                                    {
+                                        numericUpDown_spacing.Value = (int)digitalDateDigit.Digit.Spacing;
+                                    }
+                                    userControl_SystemFont_Date.comboBoxSetColorString(digitalDateDigit.Digit.SystemFont.Color);
+                                    userControl_SystemFont_Date.checkBoxSetUnit((int)digitalDateDigit.Digit.SystemFont.ShowUnitCheck);
+                                    checkBox_add_zero.Checked = digitalDateDigit.Digit.PaddingZero;
+                                }
+
+                                // системный шрифт по окружности
+                                if (digitalDateDigit.Digit != null && digitalDateDigit.Digit.SystemFont != null &&
+                                    digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                {
+                                    UserControl_FontRotate userControl_FontRotate_Date =
+                                        userControl_SystemFont_Group_YearWidget.userControl_FontRotate;
+                                    userControl_FontRotate_Date.checkBox_Use.Checked = true;
+                                    NumericUpDown numericUpDownX = userControl_FontRotate_Date.numericUpDown_FontRotateX;
+                                    NumericUpDown numericUpDownY = userControl_FontRotate_Date.numericUpDown_FontRotateY;
+                                    NumericUpDown numericUpDown_size = userControl_FontRotate_Date.numericUpDown_FontRotate_size;
+                                    NumericUpDown numericUpDown_angle = userControl_FontRotate_Date.numericUpDown_FontRotate_angle;
+                                    NumericUpDown numericUpDown_radius = userControl_FontRotate_Date.numericUpDown_FontRotate_radius;
+                                    NumericUpDown numericUpDown_spacing = userControl_FontRotate_Date.numericUpDown_FontRotate_spacing;
+                                    CheckBox checkBox_add_zero = userControl_FontRotate_Date.checkBox_addZero;
+                                    CheckBox checkBox_follow = userControl_FontRotate_Date.checkBox_follow;
+                                    CheckBox checkBox_separator = userControl_FontRotate_Date.checkBox_separator;
+
+                                    if (digitalDateDigit.CombingMode == null ||
+                                        digitalDateDigit.CombingMode == "Follow") checkBox_follow.Checked = true;
+                                    if (digitalDateDigit.Separator != null) checkBox_separator.Checked = true;
+
+                                    if (digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                    {
+                                        numericUpDownX.Value = digitalDateDigit.Digit.SystemFont.FontRotate.X;
+                                        numericUpDownY.Value = digitalDateDigit.Digit.SystemFont.FontRotate.Y;
+                                        numericUpDown_radius.Value = digitalDateDigit.Digit.SystemFont.FontRotate.Radius;
+                                        userControl_FontRotate_Date.radioButtonSetRotateDirection(
+                                            (int)digitalDateDigit.Digit.SystemFont.FontRotate.RotateDirection);
+                                    }
+                                    numericUpDown_size.Value = digitalDateDigit.Digit.SystemFont.Size;
+                                    numericUpDown_angle.Value = digitalDateDigit.Digit.SystemFont.Angle;
+                                    if (digitalDateDigit.Digit.Spacing != null)
+                                    {
+                                        numericUpDown_spacing.Value = (int)digitalDateDigit.Digit.Spacing;
+                                    }
+                                    userControl_FontRotate_Date.comboBoxSetColorString(digitalDateDigit.Digit.SystemFont.Color);
+                                    userControl_FontRotate_Date.checkBoxSetUnit((int)digitalDateDigit.Digit.SystemFont.ShowUnitCheck);
+                                    checkBox_add_zero.Checked = digitalDateDigit.Digit.PaddingZero;
+                                }
+                                break;
+                        }
+
+                    }
+                }
+
+                // дата стрелкой
+                if (widgetElement.Date.DateClockHand != null && widgetElement.Date.DateClockHand.DayClockHand != null)
+                {
+                    userControl_hand_DayWidget.checkBox_hand_Use.Checked = true;
+                    userControl_hand_DayWidget.numericUpDown_handX.Value = widgetElement.Date.DateClockHand.DayClockHand.X;
+                    userControl_hand_DayWidget.numericUpDown_handY.Value = widgetElement.Date.DateClockHand.DayClockHand.Y;
+                    userControl_hand_DayWidget.numericUpDown_hand_startAngle.Value =
+                        (decimal)widgetElement.Date.DateClockHand.DayClockHand.StartAngle;
+                    userControl_hand_DayWidget.numericUpDown_hand_endAngle.Value =
+                        (decimal)widgetElement.Date.DateClockHand.DayClockHand.EndAngle;
+                    if (widgetElement.Date.DateClockHand.DayClockHand.Pointer != null)
+                    {
+                        userControl_hand_DayWidget.comboBoxSetHandImage(
+                            (int)widgetElement.Date.DateClockHand.DayClockHand.Pointer.ImageIndex);
+                        if (widgetElement.Date.DateClockHand.DayClockHand.Pointer.Coordinates != null)
+                        {
+                            userControl_hand_DayWidget.numericUpDown_handX_offset.Value =
+                                widgetElement.Date.DateClockHand.DayClockHand.Pointer.Coordinates.X;
+                            userControl_hand_DayWidget.numericUpDown_handY_offset.Value =
+                                widgetElement.Date.DateClockHand.DayClockHand.Pointer.Coordinates.Y;
+                        }
+                    }
+
+                    // центральное изображение
+                    if (widgetElement.Date.DateClockHand.DayClockHand.Cover != null)
+                    {
+                        userControl_hand_DayWidget.comboBoxSetHandImageCentr(
+                            (int)widgetElement.Date.DateClockHand.DayClockHand.Cover.ImageIndex);
+                        if (widgetElement.Date.DateClockHand.DayClockHand.Pointer.Coordinates != null)
+                        {
+                            userControl_hand_DayWidget.numericUpDown_handX_centr.Value =
+                                widgetElement.Date.DateClockHand.DayClockHand.Cover.Coordinates.X;
+                            userControl_hand_DayWidget.numericUpDown_handY_centr.Value =
+                                widgetElement.Date.DateClockHand.DayClockHand.Cover.Coordinates.Y;
+                        }
+                    }
+
+                    // фон
+                    if (widgetElement.Date.DateClockHand.DayClockHand.Scale != null &&
+                        widgetElement.Date.DateClockHand.DayClockHand.Scale.ImageSet != null)
+                    {
+                        foreach (MultilangImage multilangImage in widgetElement.Date.DateClockHand.DayClockHand.Scale.ImageSet)
+                        {
+                            if (multilangImage.LangCode == "All")
+                                userControl_hand_DayWidget.comboBoxSetHandImageBackground((int)multilangImage.ImageSet.ImageIndex);
+                        }
+                        if (widgetElement.Date.DateClockHand.DayClockHand.Scale.Coordinates != null)
+                        {
+                            userControl_hand_DayWidget.numericUpDown_handX_background.Value =
+                                widgetElement.Date.DateClockHand.DayClockHand.Scale.Coordinates.X;
+                            userControl_hand_DayWidget.numericUpDown_handY_background.Value =
+                                widgetElement.Date.DateClockHand.DayClockHand.Scale.Coordinates.Y;
+                        }
+                    }
+                }
+
+                // месяц стрелкой
+                if (widgetElement.Date.DateClockHand != null && widgetElement.Date.DateClockHand.MonthClockHand != null)
+                {
+                    userControl_hand_MonthWidget.checkBox_hand_Use.Checked = true;
+                    userControl_hand_MonthWidget.numericUpDown_handX.Value = widgetElement.Date.DateClockHand.MonthClockHand.X;
+                    userControl_hand_MonthWidget.numericUpDown_handY.Value = widgetElement.Date.DateClockHand.MonthClockHand.Y;
+                    userControl_hand_MonthWidget.numericUpDown_hand_startAngle.Value =
+                        (decimal)widgetElement.Date.DateClockHand.MonthClockHand.StartAngle;
+                    userControl_hand_MonthWidget.numericUpDown_hand_endAngle.Value =
+                        (decimal)widgetElement.Date.DateClockHand.MonthClockHand.EndAngle;
+                    if (widgetElement.Date.DateClockHand.MonthClockHand.Pointer != null)
+                    {
+                        userControl_hand_MonthWidget.comboBoxSetHandImage(
+                            (int)widgetElement.Date.DateClockHand.MonthClockHand.Pointer.ImageIndex);
+                        if (widgetElement.Date.DateClockHand.MonthClockHand.Pointer.Coordinates != null)
+                        {
+                            userControl_hand_MonthWidget.numericUpDown_handX_offset.Value =
+                                widgetElement.Date.DateClockHand.MonthClockHand.Pointer.Coordinates.X;
+                            userControl_hand_MonthWidget.numericUpDown_handY_offset.Value =
+                                widgetElement.Date.DateClockHand.MonthClockHand.Pointer.Coordinates.Y;
+                        }
+                    }
+
+                    // центральное изображение
+                    if (widgetElement.Date.DateClockHand.MonthClockHand.Cover != null)
+                    {
+                        userControl_hand_MonthWidget.comboBoxSetHandImageCentr(
+                            (int)widgetElement.Date.DateClockHand.MonthClockHand.Cover.ImageIndex);
+                        if (widgetElement.Date.DateClockHand.MonthClockHand.Pointer.Coordinates != null)
+                        {
+                            userControl_hand_MonthWidget.numericUpDown_handX_centr.Value =
+                                widgetElement.Date.DateClockHand.MonthClockHand.Cover.Coordinates.X;
+                            userControl_hand_MonthWidget.numericUpDown_handY_centr.Value =
+                                widgetElement.Date.DateClockHand.MonthClockHand.Cover.Coordinates.Y;
+                        }
+                    }
+
+                    // фон
+                    if (widgetElement.Date.DateClockHand.MonthClockHand.Scale != null &&
+                        widgetElement.Date.DateClockHand.MonthClockHand.Scale.ImageSet != null)
+                    {
+                        foreach (MultilangImage multilangImage in widgetElement.Date.DateClockHand.MonthClockHand.Scale.ImageSet)
+                        {
+                            if (multilangImage.LangCode == "All")
+                                userControl_hand_MonthWidget.comboBoxSetHandImageBackground((int)multilangImage.ImageSet.ImageIndex);
+                        }
+                        if (widgetElement.Date.DateClockHand.MonthClockHand.Scale.Coordinates != null)
+                        {
+                            userControl_hand_MonthWidget.numericUpDown_handX_background.Value =
+                                widgetElement.Date.DateClockHand.MonthClockHand.Scale.Coordinates.X;
+                            userControl_hand_MonthWidget.numericUpDown_handY_background.Value =
+                                widgetElement.Date.DateClockHand.MonthClockHand.Scale.Coordinates.Y;
+                        }
+                    }
+                }
+
+                // день недели стрелкой
+                if (widgetElement.Date.DateClockHand != null && widgetElement.Date.DateClockHand.WeekDayClockHand != null)
+                {
+                    userControl_hand_DOWWidget.checkBox_hand_Use.Checked = true;
+                    userControl_hand_DOWWidget.numericUpDown_handX.Value = widgetElement.Date.DateClockHand.WeekDayClockHand.X;
+                    userControl_hand_DOWWidget.numericUpDown_handY.Value = widgetElement.Date.DateClockHand.WeekDayClockHand.Y;
+                    userControl_hand_DOWWidget.numericUpDown_hand_startAngle.Value =
+                        (decimal)widgetElement.Date.DateClockHand.WeekDayClockHand.StartAngle;
+                    userControl_hand_DOWWidget.numericUpDown_hand_endAngle.Value =
+                        (decimal)widgetElement.Date.DateClockHand.WeekDayClockHand.EndAngle;
+                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer != null)
+                    {
+                        userControl_hand_DOWWidget.comboBoxSetHandImage(
+                            (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.ImageIndex);
+                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates != null)
+                        {
+                            userControl_hand_DOWWidget.numericUpDown_handX_offset.Value =
+                                widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates.X;
+                            userControl_hand_DOWWidget.numericUpDown_handY_offset.Value =
+                                widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates.Y;
+                        }
+                    }
+
+                    // центральное изображение
+                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Cover != null)
+                    {
+                        userControl_hand_DOWWidget.comboBoxSetHandImageCentr(
+                            (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.ImageIndex);
+                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates != null)
+                        {
+                            userControl_hand_DOWWidget.numericUpDown_handX_centr.Value =
+                                widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.Coordinates.X;
+                            userControl_hand_DOWWidget.numericUpDown_handY_centr.Value =
+                                widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.Coordinates.Y;
+                        }
+                    }
+
+                    // фон
+                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Scale != null &&
+                        widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.ImageSet != null)
+                    {
+                        foreach (MultilangImage multilangImage in widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.ImageSet)
+                        {
+                            if (multilangImage.LangCode == "All")
+                                userControl_hand_DOWWidget.comboBoxSetHandImageBackground((int)multilangImage.ImageSet.ImageIndex);
+                        }
+                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates != null)
+                        {
+                            userControl_hand_DOWWidget.numericUpDown_handX_background.Value =
+                                widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates.X;
+                            userControl_hand_DOWWidget.numericUpDown_handY_background.Value =
+                                widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates.Y;
+                        }
+                    }
+                }
+
+                // день недели картинкой
+                if (widgetElement.Date.WeeksDigits != null)
+                {
+                    if (widgetElement.Date.WeeksDigits.Digit != null)
+                    {
+                        if (widgetElement.Date.WeeksDigits.Digit.Image != null)
+                        {
+                            userControl_pictures_DOWWidget.checkBox_pictures_Use.Checked = true;
+                            userControl_pictures_DOWWidget.numericUpDown_picturesX.Value = widgetElement.Date.WeeksDigits.Digit.Image.X;
+                            userControl_pictures_DOWWidget.numericUpDown_picturesY.Value = widgetElement.Date.WeeksDigits.Digit.Image.Y;
+                            foreach (MultilangImage multilangImage in widgetElement.Date.WeeksDigits.Digit.Image.MultilangImage)
+                            {
+                                if (multilangImage.LangCode == "All")
+                                    userControl_pictures_DOWWidget.comboBoxSetImage(multilangImage.ImageSet.ImageIndex);
+                            }
+                        }
+                    }
+                }
+
+            }
+            #endregion
+            PreviewView = true;
         }
 
         private void WidgetDel(int widgetIndex) 
         {
             if (widgetIndex < 0) return;
             if (widgetIndex > WidgetsTemp.Widget.Count-1) return;
-            if (WidgetsTemp.Widget.Count == 1) WidgetsTemp = null;
+            if (WidgetsTemp.Widget.Count == 1) 
+            {
+                WidgetsTemp = null;
+                comboBox_WidgetsUnderMask.Enabled = false;
+                comboBox_WidgetsTopMask.Enabled = false;
+                checkBox_TimeOnWidgetEdit.Enabled = false;
+                label7.Enabled = false;
+                label01.Enabled = false;
+            }
             else WidgetsTemp.Widget.RemoveAt(widgetIndex);
             JSON_write();
             PreviewView = false;
@@ -2873,6 +3580,2764 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        private void WidgetEdit(int widgetIndex)
+        {
+            if (WidgetsTemp == null || WidgetsTemp.Widget == null) return;
+            if (WidgetsTemp.Widget.Count <= widgetIndex+1 || widgetIndex < 0) return;
+            if(comboBox_WidgetBorderActiv.SelectedIndex >= 0)
+                WidgetsTemp.Widget[widgetIndex].BorderActivImageIndex = Int32.Parse(comboBox_WidgetBorderActiv.Text);
+            if (comboBox_WidgetBorderInactiv.SelectedIndex >= 0)
+                WidgetsTemp.Widget[widgetIndex].BorderInactivImageIndex = Int32.Parse(comboBox_WidgetBorderInactiv.Text);
+            if (comboBox_WidgetDescriptionBackground.SelectedIndex >= 0)
+            {
+                if (WidgetsTemp.Widget[widgetIndex].DescriptionImageBackground == null)
+                    WidgetsTemp.Widget[widgetIndex].DescriptionImageBackground = new ImageCoord();
+                if (WidgetsTemp.Widget[widgetIndex].DescriptionImageBackground.Coordinates == null)
+                    WidgetsTemp.Widget[widgetIndex].DescriptionImageBackground.Coordinates = new Coordinates();
+                WidgetsTemp.Widget[widgetIndex].DescriptionImageBackground.ImageIndex =
+                    Int32.Parse(comboBox_WidgetDescriptionBackground.Text);
+                WidgetsTemp.Widget[widgetIndex].DescriptionImageBackground.Coordinates.X =
+                    (int)numericUpDown_WidgetDescriptionBackgroundX.Value;
+                WidgetsTemp.Widget[widgetIndex].DescriptionImageBackground.Coordinates.Y =
+                    (int)numericUpDown_WidgetDescriptionBackgroundY.Value; 
+            }
+            WidgetsTemp.Widget[widgetIndex].DescriptionWidthCheck = (int)numericUpDown_WidgetDescriptionLenght.Value;
+            WidgetsTemp.Widget[widgetIndex].X = (int)numericUpDown_WidgetX.Value;
+            WidgetsTemp.Widget[widgetIndex].Y = (int)numericUpDown_WidgetY.Value;
+            WidgetsTemp.Widget[widgetIndex].Width = (int)numericUpDown_WidgetWidth.Value;
+            WidgetsTemp.Widget[widgetIndex].Height = (int)numericUpDown_WidgetHeight.Value;
+        }
 
+        private void WidgetElementEdit(int widgetIndex, int widgetElementIndex)
+        {
+            if (WidgetsTemp == null || WidgetsTemp.Widget == null || WidgetsTemp.Widget.Count < widgetIndex + 1) return;
+            if (WidgetsTemp.Widget[widgetIndex].WidgetElement == null ||
+                WidgetsTemp.Widget[widgetIndex].WidgetElement.Count < widgetElementIndex + 1) return;
+            WidgetElement widgetElement = new WidgetElement();
+
+            MultilangImage preview = null;
+            int image = userControl_previewWidget.comboBoxGetImage();
+            if (image >= 0)
+            {
+                preview = new MultilangImage();
+                preview.LangCode = "All";
+                preview.ImageSet = new ImageSetGTR2();
+                preview.ImageSet.ImagesCount = 1;
+                preview.ImageSet.ImageIndex = image;
+            }
+
+            DateAmazfit date = null;
+            Activity activity = null;
+            string type = dataGridView_WidgetElement.Rows[widgetElementIndex].Cells[0].Value.ToString();
+            if (type == "Date") date = WidgetElementDateEdit(widgetIndex, widgetElementIndex);
+            else activity = WidgetElementActivityEdit(widgetIndex, widgetElementIndex, type);
+
+            if (preview != null)
+            {
+                widgetElement.Preview = new List<MultilangImage>();
+                widgetElement.Preview.Add(preview); 
+            }
+            if (activity != null)
+            {
+                widgetElement.Activity = new List<Activity>();
+                widgetElement.Activity.Add(activity); 
+            }
+            widgetElement.Date = date;
+            if (widgetElement == null) WidgetsTemp.Widget[widgetIndex].WidgetElement.RemoveAt(widgetElementIndex);
+            else WidgetsTemp.Widget[widgetIndex].WidgetElement[widgetElementIndex] = widgetElement;
+
+            JSON_write();
+            PreviewImage();
+
+        }
+
+        private DateAmazfit WidgetElementDateEdit(int widgetIndex, int widgetElementIndex)
+        {
+            if (WidgetsTemp == null || WidgetsTemp.Widget == null || WidgetsTemp.Widget.Count < widgetIndex + 1) return null;
+            if (WidgetsTemp.Widget[widgetIndex].WidgetElement == null || 
+                WidgetsTemp.Widget[widgetIndex].WidgetElement.Count < widgetElementIndex + 1) return null;
+
+            DateAmazfit dateWidget = AddDateWidget(userControl_text_date_DayWidget, userControl_hand_DayWidget,
+                    userControl_SystemFont_Group_DayWidget, userControl_pictures_MonthWidget, userControl_text_date_MonthWidget,
+                    userControl_hand_MonthWidget, userControl_SystemFont_Group_MonthWidget,
+                    userControl_text_date_YearWidget, userControl_SystemFont_Group_YearWidget,
+                    userControl_pictures_DOWWidget, userControl_hand_DOWWidget, dataGridView_Widget_Date);
+
+            return dateWidget;
+        }
+
+        private Activity WidgetElementActivityEdit(int widgetIndex, int widgetElementIndex, string type)
+        {
+            if (WidgetsTemp == null || WidgetsTemp.Widget == null || WidgetsTemp.Widget.Count < widgetIndex + 1) return null;
+            if (WidgetsTemp.Widget[widgetIndex].WidgetElement == null ||
+                WidgetsTemp.Widget[widgetIndex].WidgetElement.Count < widgetElementIndex + 1) return null;
+
+            Activity activity = null;
+
+            if (type != "Weather" && type != "Sunrise" && type != "Date")
+            {
+                activity = AddActivityWidget(userControl_picturesWidget, userControl_textWidget, userControl_text_goalWidget,
+                    userControl_handWidget, userControl_scaleCircleWidget, userControl_scaleLinearWidget,
+                    userControl_SystemFont_GroupWidget, userControl_iconWidget, type);
+            }
+            else if (type == "Weather")
+            {
+                activity = AddActivityWeatherWidget(userControl_pictures_weatherWidget, userControl_text_weatherWidgetCur,
+                    userControl_text_weatherWidgetMin, userControl_text_weatherWidgetMax, userControl_handWidget,
+                    userControl_scaleCircleWidget, userControl_scaleLinearWidget,
+                    userControl_SystemFont_GroupWeatherWidget, userControl_iconWidget); 
+            }
+            else if (type == "Sunrise")
+            {
+                activity =  AddActivitySunriseWidget(userControl_picturesWidget, userControl_text_goalWidget,
+                    userControl_text_goalWidgetSunrise, userControl_text_goalWidgetSunset, userControl_handWidget,
+                    userControl_scaleCircleWidget, userControl_scaleLinearWidget,
+                    userControl_SystemFont_GroupSunriseWidget, userControl_iconWidget); 
+            }
+            return activity;
+        }
+
+        private Activity AddActivityWidget(UserControl_pictures userPanel_pictures, UserControl_text userPanel_text,
+            UserControl_text userPanel_textGoal, UserControl_hand userPanel_hand,
+            UserControl_scaleCircle userPanel_scaleCircle, UserControl_scaleLinear userPanel_scaleLinear,
+            UserControl_SystemFont_Group userControl_SystemFont_Group,
+            UserControl_icon userControl_icon, string type)
+        {
+            UserControl_SystemFont userControl_SystemFont = userControl_SystemFont_Group.userControl_SystemFont;
+            UserControl_FontRotate userControl_FontRotate = userControl_SystemFont_Group.userControl_FontRotate;
+            UserControl_SystemFont_weather userControl_SystemFontGoal = userControl_SystemFont_Group.userControl_SystemFont_goal;
+            UserControl_FontRotate_weather userControl_FontRotateGoal = userControl_SystemFont_Group.userControl_FontRotate_goal;
+
+
+            Activity activity = null;
+
+            // данные картинками
+            //checkBox_Use = (CheckBox)panel_pictures.checkBox_pictures_Use;
+            if (userPanel_pictures != null && userPanel_pictures.checkBox_pictures_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
+                int image = userPanel_pictures.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)userPanel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = (NumericUpDown)userPanel_pictures.numericUpDown_picturesY;
+                    NumericUpDown numericUpDown_count = (NumericUpDown)userPanel_pictures.numericUpDown_pictures_count;
+
+                    if (activity == null) activity = new Activity();
+                    activity.ImageProgress = new ImageProgress();
+                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activity.ImageProgress.Coordinates = new List<Coordinates>();
+                    activity.ImageProgress.ImageSet.ImageIndex = image;
+                    activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    Coordinates coordinates = new Coordinates();
+                    coordinates.X = (long)numericUpDownX.Value;
+                    coordinates.Y = (long)numericUpDownY.Value;
+                    activity.ImageProgress.Coordinates.Add(coordinates);
+                }
+            }
+
+            // данные надписью
+            //checkBox_Use = (CheckBox)panel_text.checkBox_Use;
+            if (userPanel_text != null && userPanel_text.checkBox_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_text.Controls[1];
+                int image = userPanel_text.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
+                    int unit = userPanel_text.comboBoxGetIcon();
+                    int separator = userPanel_text.comboBoxGetUnit();
+                    NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = userPanel_text.numericUpDown_iconY;
+                    string Alignment = userPanel_text.comboBoxGetAlignment();
+                    NumericUpDown numericUpDown_spacing = userPanel_text.numericUpDown_spacing;
+                    bool add_zero = userPanel_text.checkBox_addZero.Checked;
+                    bool follow = userPanel_text.checkBox_follow.Checked;
+                    int imageError = userPanel_text.comboBoxGetImageError();
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    if (!follow) digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    digitalCommonDigit.Digit.PaddingZero = add_zero;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+                    if (imageError >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = imageError;
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+                    if (type == "Distance")
+                    {
+                        int DecimalPoint = userPanel_text.comboBoxGetImageDecimalPointOrMinus();
+                        if (DecimalPoint >= 0)
+                        {
+                            digitalCommonDigit.Digit.Image.DecimalPointImageIndex = DecimalPoint;
+                        }
+                    }
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = image;
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (separator >= 0)
+                    {
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = separator;
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (unit >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = unit;
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // цель надписью
+            if (userPanel_textGoal != null && userPanel_textGoal.checkBox_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)userPanel_textGoal.Controls[1];
+                int image = userPanel_textGoal.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)userPanel_textGoal.Controls[2];
+                    //ComboBox comboBox_separator = (ComboBox)userPanel_textGoal.Controls[3];
+                    int unit = userPanel_textGoal.comboBoxGetIcon();
+                    int separator = userPanel_textGoal.comboBoxGetUnit();
+                    NumericUpDown numericUpDownX = userPanel_textGoal.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = userPanel_textGoal.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = userPanel_textGoal.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = userPanel_textGoal.numericUpDown_iconY;
+                    string Alignment = userPanel_textGoal.comboBoxGetAlignment();
+                    NumericUpDown numericUpDown_spacing = userPanel_textGoal.numericUpDown_spacing;
+                    bool add_zero = userPanel_textGoal.checkBox_addZero.Checked;
+                    bool follow = userPanel_textGoal.checkBox_follow.Checked;
+                    int imageError = userPanel_textGoal.comboBoxGetImageError();
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Min";
+                    if (!follow) digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = Alignment;
+                    digitalCommonDigit.Digit.PaddingZero = add_zero;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+                    if (imageError >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = imageError;
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+                    if (type == "Distance")
+                    {
+                        int DecimalPoint = userPanel_textGoal.comboBoxGetImageDecimalPointOrMinus();
+                        if (DecimalPoint >= 0)
+                        {
+                            digitalCommonDigit.Digit.Image.DecimalPointImageIndex = DecimalPoint;
+                        }
+                    }
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = image;
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (separator >= 0)
+                    {
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = separator;
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (unit >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = unit;
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные системным шрифтом
+            if (userControl_SystemFont != null && userControl_SystemFont.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFont.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFont.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFont.checkBox_separator.Checked;
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFont.comboBoxGetColorString();
+
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // цель системным шрифтом
+            if (userControl_SystemFontGoal != null && userControl_SystemFontGoal.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFontGoal.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFontGoal.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFontGoal.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFontGoal.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFontGoal.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFontGoal.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFontGoal.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFontGoal.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Min";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFontGoal.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFontGoal.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом по окружности
+            if (userControl_FontRotate != null && userControl_FontRotate.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotate.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotate.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotate.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotate.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotate.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotate.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotate.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotate.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotate.checkBox_separator.Checked;
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotate.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotate.comboBoxGetColorString();
+
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // цель системным шрифтом по окружности
+            if (userControl_FontRotateGoal != null && userControl_FontRotateGoal.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotateGoal.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotateGoal.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotateGoal.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotateGoal.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotateGoal.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotateGoal.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotateGoal.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotateGoal.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotateGoal.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Min";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotateGoal.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotateGoal.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotateGoal.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные стрелкой
+            if (userPanel_hand != null && userPanel_hand.checkBox_hand_Use.Checked)
+            {
+                //ComboBox comboBox_image = (ComboBox)panel_hand.Controls[1];
+                int image = userPanel_hand.comboBoxGetHandImage();
+                if (image >= 0)
+                {
+                    NumericUpDown numericUpDownX = userPanel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = userPanel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = userPanel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = userPanel_hand.numericUpDown_handY_offset;
+                    int imageCentr = userPanel_hand.comboBoxGetHandImageCentr();
+                    NumericUpDown numericUpDownX_centr = userPanel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = userPanel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = userPanel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = userPanel_hand.numericUpDown_hand_endAngle;
+                    int imageBackground = userPanel_hand.comboBoxGetHandImageBackground();
+                    NumericUpDown numericUpDownX_background = userPanel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = userPanel_hand.numericUpDown_handY_background;
+
+                    if (activity == null) activity = new Activity();
+                    activity.PointerProgress = new ClockHand();
+                    activity.PointerProgress.X = (long)numericUpDownX.Value;
+                    activity.PointerProgress.Y = (long)numericUpDownY.Value;
+                    activity.PointerProgress.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.PointerProgress.EndAngle = (float)numericUpDown_endAngle.Value;
+
+                    activity.PointerProgress.Pointer = new ImageCoord();
+                    activity.PointerProgress.Pointer.ImageIndex = image;
+                    activity.PointerProgress.Pointer.Coordinates = new Coordinates();
+                    activity.PointerProgress.Pointer.Coordinates.X = (long)numericUpDown_offsetX.Value;
+                    activity.PointerProgress.Pointer.Coordinates.Y = (long)numericUpDown_offsetY.Value;
+
+                    if (imageCentr >= 0)
+                    {
+                        activity.PointerProgress.Cover = new ImageCoord();
+                        activity.PointerProgress.Cover.ImageIndex = imageCentr;
+                        activity.PointerProgress.Cover.Coordinates = new Coordinates();
+                        activity.PointerProgress.Cover.Coordinates.X = (long)numericUpDownX_centr.Value;
+                        activity.PointerProgress.Cover.Coordinates.Y = (long)numericUpDownY_centr.Value;
+                    }
+
+                    if (imageBackground >= 0)
+                    {
+                        activity.PointerProgress.Scale = new MultilangImageCoord();
+                        activity.PointerProgress.Scale.Coordinates = new Coordinates();
+                        activity.PointerProgress.Scale.Coordinates.X = (long)numericUpDownX_background.Value;
+                        activity.PointerProgress.Scale.Coordinates.Y = (long)numericUpDownY_background.Value;
+                        activity.PointerProgress.Scale.ImageSet = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = imageBackground;
+                        activity.PointerProgress.Scale.ImageSet.Add(multilangImage);
+                    }
+                }
+            }
+
+            // данные круговой шкалой
+            if (userPanel_scaleCircle != null && userPanel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleCircle.radioButton_scaleCircle_image;
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = userPanel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = userPanel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = userPanel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = userPanel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                if ((radioButton_image.Checked && userPanel_scaleCircle.comboBoxGetSelectedIndexImage() >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.AngleSettings = new AngleSettings();
+                    if (radioButton_image.Checked && userPanel_scaleCircle.comboBoxGetSelectedIndexImage() >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = userPanel_scaleCircle.comboBoxGetImage();
+                    }
+                    else
+                    {
+                        activity.ProgressBar.Color = userPanel_scaleCircle.comboBoxGetColorString();
+                    }
+
+                    if (userPanel_scaleCircle.comboBoxGetSelectedIndexImageBackground() >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = userPanel_scaleCircle.comboBoxGetImageBackground();
+
+                    activity.ProgressBar.AngleSettings.X = (long)numericUpDownX.Value;
+                    activity.ProgressBar.AngleSettings.Y = (long)numericUpDownY.Value;
+                    activity.ProgressBar.AngleSettings.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.ProgressBar.AngleSettings.EndAngle = (float)numericUpDown_endAngle.Value;
+                    activity.ProgressBar.AngleSettings.Radius = (float)numericUpDown_radius.Value;
+
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                    activity.ProgressBar.Flatness = userPanel_scaleCircle.comboBoxGetFlatness();
+                }
+            }
+
+            // данные линейной шкалой
+            if (userPanel_scaleLinear != null && userPanel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = userPanel_scaleLinear.radioButton_scaleLinear_image;
+                ////RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = userPanel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = userPanel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = userPanel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = userPanel_scaleLinear.numericUpDown_scaleLinear_width;
+
+                if ((radioButton_image.Checked && userPanel_scaleLinear.comboBoxGetSelectedIndexImage() >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.LinearSettings = new LinearSettings();
+                    if (radioButton_image.Checked && userPanel_scaleLinear.comboBoxGetSelectedIndexImage() >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = userPanel_scaleLinear.comboBoxGetImage();
+                    }
+                    else
+                    {
+                        activity.ProgressBar.Color = userPanel_scaleLinear.comboBoxGetColorString();
+                    }
+                    if (userPanel_scaleLinear.comboBoxGetSelectedIndexImagePointer() >= 0)
+                        activity.ProgressBar.PointerImageIndex = userPanel_scaleLinear.comboBoxGetImagePointer();
+                    if (userPanel_scaleLinear.comboBoxGetSelectedIndexImageBackground() >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = userPanel_scaleLinear.comboBoxGetImageBackground();
+
+                    activity.ProgressBar.LinearSettings.StartX = (long)numericUpDownX.Value;
+                    activity.ProgressBar.LinearSettings.StartY = (long)numericUpDownY.Value;
+                    long endX = (long)(numericUpDownX.Value + numericUpDown_length.Value);
+                    activity.ProgressBar.LinearSettings.EndX = endX;
+                    activity.ProgressBar.LinearSettings.EndY = (long)numericUpDownY.Value;
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                    activity.ProgressBar.Flatness = userPanel_scaleLinear.comboBoxGetFlatness();
+                }
+
+            }
+
+            // данные иконки
+            if (userControl_icon != null && userControl_icon.checkBox_icon_Use.Checked)
+            {
+                int image = userControl_icon.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)userControl_icon.numericUpDown_iconX;
+                    NumericUpDown numericUpDownY = (NumericUpDown)userControl_icon.numericUpDown_iconY;
+                    int image2 = userControl_icon.comboBoxGetImage2();
+
+                    if (activity == null) activity = new Activity();
+                    activity.Icon = new ImageCoord();
+                    activity.Icon.Coordinates = new Coordinates();
+                    activity.Icon.ImageIndex = image;
+                    if (image2 >= 0) activity.Icon.ImageIndex2 = image2;
+                    activity.Icon.Coordinates.X = (long)numericUpDownX.Value;
+                    activity.Icon.Coordinates.Y = (long)numericUpDownY.Value;
+                }
+            }
+
+            if (activity != null) activity.Type = type;
+
+            return activity;
+        }
+
+        private Activity AddActivityWeatherWidget(UserControl_pictures panel_pictures,
+            UserControl_text_weather panel_text, UserControl_text_weather panel_text_min,
+            UserControl_text_weather panel_text_max, UserControl_hand panel_hand,
+            UserControl_scaleCircle panel_scaleCircle, UserControl_scaleLinear panel_scaleLinear,
+            UserControl_SystemFont_GroupWeather userControl_SystemFont_Group, UserControl_icon userControl_icon)
+        {
+            UserControl_SystemFont userControl_SystemFont_Current = userControl_SystemFont_Group.userControl_SystemFont_weather_Current;
+            UserControl_SystemFont userControl_SystemFont_Min = userControl_SystemFont_Group.userControl_SystemFont_weather_Min;
+            UserControl_SystemFont userControl_SystemFont_Max = userControl_SystemFont_Group.userControl_SystemFont_weather_Max;
+
+            UserControl_FontRotate userControl_FontRotate_Current = userControl_SystemFont_Group.userControl_FontRotate_weather_Current;
+            UserControl_FontRotate userControl_FontRotate_Min = userControl_SystemFont_Group.userControl_FontRotate_weather_Min;
+            UserControl_FontRotate userControl_FontRotate_Max = userControl_SystemFont_Group.userControl_FontRotate_weather_Max;
+
+
+            Activity activity = null;
+
+            // данные картинками
+            if (panel_pictures.checkBox_pictures_Use.Checked)
+            {
+                if (panel_pictures.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = panel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = panel_pictures.numericUpDown_picturesY;
+
+                    if (activity == null) activity = new Activity();
+                    activity.ImageProgress = new ImageProgress();
+                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activity.ImageProgress.Coordinates = new List<Coordinates>();
+                    activity.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
+                    activity.ImageProgress.ImageSet.ImagesCount = 29;
+                    //activityPictures.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    Coordinates coordinates = new Coordinates();
+                    coordinates.X = (long)numericUpDownX.Value;
+                    coordinates.Y = (long)numericUpDownY.Value;
+                    activity.ImageProgress.Coordinates.Add(coordinates);
+                }
+            }
+
+            // данные надписью current temperature
+            if (panel_text.checkBox_Use.Checked)
+            {
+                if (panel_text.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    //ComboBox comboBox_separatorF = (ComboBox)panel_text.Controls[3];
+                    NumericUpDown numericUpDownX = panel_text.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = panel_text.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = panel_text.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = panel_text.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                    NumericUpDown numericUpDown_spacing = panel_text.numericUpDown_spacing;
+                    CheckBox checkBox_add_zero = panel_text.checkBox_addZero;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = panel_text.comboBoxGetAlignment();
+                    digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (panel_text.comboBoxGetImageError() >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = panel_text.comboBoxGetImageError();
+
+                    if (panel_text.comboBoxGetSelectedIndexImageDecimalPointOrMinus() >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = panel_text.comboBoxGetImageDecimalPointOrMinus();
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = panel_text.comboBoxGetImage();
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (panel_text.comboBoxGetSelectedIndexUnit() >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_text.comboBoxGetUnit();
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (panel_text.comboBoxGetSelectedIndexIcon() >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = panel_text.comboBoxGetIcon();
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью min temperature
+            if (panel_text_min.checkBox_Use.Checked)
+            {
+                if (panel_text_min.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)panel_text_min.Controls[2];
+                    //ComboBox comboBox_separatorF = (ComboBox)panel_text_min.Controls[3];
+                    NumericUpDown numericUpDownX = panel_text_min.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = panel_text_min.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = panel_text_min.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = panel_text_min.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text_min.Controls[8];
+                    NumericUpDown numericUpDown_spacing = panel_text_min.numericUpDown_spacing;
+                    CheckBox checkBox_add_zero = panel_text_min.checkBox_addZero;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text_min.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text_min.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Min";
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = panel_text_min.comboBoxGetAlignment();
+                    digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (panel_text_min.comboBoxGetImageError() >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = panel_text_min.comboBoxGetImageError();
+
+                    if (panel_text_min.comboBoxGetSelectedIndexImageDecimalPointOrMinus() >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = panel_text_min.comboBoxGetImageDecimalPointOrMinus();
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = panel_text_min.comboBoxGetImage();
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (panel_text_min.comboBoxGetSelectedIndexUnit() >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_text_min.comboBoxGetUnit();
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (panel_text_min.comboBoxGetSelectedIndexIcon() >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = panel_text_min.comboBoxGetIcon();
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью max temperature
+            if (panel_text_max.checkBox_Use.Checked)
+            {
+                if (panel_text_max.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)panel_text_max.Controls[2];
+                    //ComboBox comboBox_separatorF = (ComboBox)panel_text_max.Controls[3];
+                    NumericUpDown numericUpDownX = panel_text_max.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = panel_text_max.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = panel_text_max.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = panel_text_max.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text_max.Controls[8];
+                    NumericUpDown numericUpDown_spacing = panel_text_max.numericUpDown_spacing;
+                    CheckBox checkBox_add_zero = panel_text_max.checkBox_addZero;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text_max.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text_max.Controls[11];
+                    CheckBox checkBox_follow = panel_text_max.checkBox_follow;
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Max";
+                    if (!checkBox_follow.Checked) digitalCommonDigit.CombingMode = "Single";
+                    //digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = panel_text_max.comboBoxGetAlignment();
+                    digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (panel_text_max.comboBoxGetImageError() >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = panel_text_max.comboBoxGetImageError();
+
+                    if (panel_text_max.comboBoxGetSelectedIndexImageDecimalPointOrMinus() >= 0)
+                        digitalCommonDigit.Digit.Image.DelimiterImageIndex = panel_text_max.comboBoxGetImageDecimalPointOrMinus();
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = panel_text_max.comboBoxGetImage();
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (panel_text_max.comboBoxGetSelectedIndexUnit() >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_text_max.comboBoxGetUnit();
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (panel_text_max.comboBoxGetSelectedIndexIcon() >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = panel_text_max.comboBoxGetIcon();
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные системным шрифтом current temperature
+            if (userControl_SystemFont_Current != null && userControl_SystemFont_Current.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont_Current.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont_Current.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont_Current.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont_Current.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont_Current.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFont_Current.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFont_Current.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFont_Current.checkBox_separator.Checked;
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont_Current.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFont_Current.comboBoxGetColorString();
+
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом min temperature
+            if (userControl_SystemFont_Min != null && userControl_SystemFont_Min.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont_Min.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont_Min.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont_Min.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont_Min.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont_Min.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFont_Min.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFont_Min.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFont_Min.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Min";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont_Min.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFont_Min.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+
+            }
+
+            // данные системным шрифтом max temperature
+            if (userControl_SystemFont_Max != null && userControl_SystemFont_Max.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont_Max.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont_Max.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont_Max.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont_Max.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont_Max.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFont_Max.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFont_Max.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFont_Max.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Max";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont_Max.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFont_Max.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+
+            }
+
+            // данные системным шрифтом по окружности current temperature
+            if (userControl_FontRotate_Current != null && userControl_FontRotate_Current.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotate_Current.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotate_Current.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotate_Current.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotate_Current.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotate_Current.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotate_Current.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotate_Current.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotate_Current.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotate_Current.checkBox_separator.Checked;
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotate_Current.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate_Current.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotate_Current.comboBoxGetColorString();
+
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом по окружности min temperature
+            if (userControl_FontRotate_Min != null && userControl_FontRotate_Min.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotate_Min.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotate_Min.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotate_Min.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotate_Min.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotate_Min.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotate_Min.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotate_Min.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotate_Min.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotate_Min.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Min";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotate_Min.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate_Min.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotate_Min.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом по окружности max temperature
+            if (userControl_FontRotate_Max != null && userControl_FontRotate_Max.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotate_Max.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotate_Max.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotate_Max.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotate_Max.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotate_Max.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotate_Max.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotate_Max.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotate_Max.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotate_Max.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Max";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotate_Max.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate_Max.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotate_Max.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные стрелкой
+            if (panel_hand.checkBox_hand_Use.Checked)
+            {
+                if (panel_hand.comboBoxGetSelectedIndexHandImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = panel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = panel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = panel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = panel_hand.numericUpDown_handY_offset;
+                    //ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = panel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = panel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = panel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = panel_hand.numericUpDown_hand_endAngle;
+                    //ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = panel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = panel_hand.numericUpDown_handY_background;
+
+                    if (activity == null) activity = new Activity();
+                    activity.PointerProgress = new ClockHand();
+                    activity.PointerProgress.X = (long)numericUpDownX.Value;
+                    activity.PointerProgress.Y = (long)numericUpDownY.Value;
+                    activity.PointerProgress.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.PointerProgress.EndAngle = (float)numericUpDown_endAngle.Value;
+
+                    activity.PointerProgress.Pointer = new ImageCoord();
+                    activity.PointerProgress.Pointer.ImageIndex = panel_hand.comboBoxGetHandImage();
+                    activity.PointerProgress.Pointer.Coordinates = new Coordinates();
+                    activity.PointerProgress.Pointer.Coordinates.X = (long)numericUpDown_offsetX.Value;
+                    activity.PointerProgress.Pointer.Coordinates.Y = (long)numericUpDown_offsetY.Value;
+
+                    if (panel_hand.comboBoxGetSelectedIndexHandImageCentr() >= 0)
+                    {
+                        activity.PointerProgress.Cover = new ImageCoord();
+                        activity.PointerProgress.Cover.ImageIndex = panel_hand.comboBoxGetHandImageCentr();
+                        activity.PointerProgress.Cover.Coordinates = new Coordinates();
+                        activity.PointerProgress.Cover.Coordinates.X = (long)numericUpDownX_centr.Value;
+                        activity.PointerProgress.Cover.Coordinates.Y = (long)numericUpDownY_centr.Value;
+                    }
+
+                    if (panel_hand.comboBoxGetSelectedIndexHandImageBackground() >= 0)
+                    {
+                        activity.PointerProgress.Scale = new MultilangImageCoord();
+                        activity.PointerProgress.Scale.Coordinates = new Coordinates();
+                        activity.PointerProgress.Scale.Coordinates.X = (long)numericUpDownX_background.Value;
+                        activity.PointerProgress.Scale.Coordinates.Y = (long)numericUpDownY_background.Value;
+                        activity.PointerProgress.Scale.ImageSet = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_hand.comboBoxGetHandImageBackground();
+                        activity.PointerProgress.Scale.ImageSet.Add(multilangImage);
+                    }
+                }
+            }
+
+            // данные круговой шкалой
+            if (panel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = panel_scaleCircle.radioButton_scaleCircle_image;
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = panel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = panel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = panel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = panel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = panel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = panel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                if ((radioButton_image.Checked && panel_scaleCircle.comboBoxGetSelectedIndexImage() >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.AngleSettings = new AngleSettings();
+                    if (radioButton_image.Checked && panel_scaleCircle.comboBoxGetSelectedIndexImage() >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = panel_scaleCircle.comboBoxGetImage();
+                    }
+                    else
+                    {
+                        activity.ProgressBar.Color = panel_scaleCircle.comboBoxGetColorString();
+                    }
+
+                    if (panel_scaleCircle.comboBoxGetSelectedIndexImageBackground() >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = panel_scaleCircle.comboBoxGetImageBackground();
+
+                    activity.ProgressBar.AngleSettings.X = (long)numericUpDownX.Value;
+                    activity.ProgressBar.AngleSettings.Y = (long)numericUpDownY.Value;
+                    activity.ProgressBar.AngleSettings.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.ProgressBar.AngleSettings.EndAngle = (float)numericUpDown_endAngle.Value;
+                    activity.ProgressBar.AngleSettings.Radius = (float)numericUpDown_radius.Value;
+
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                    activity.ProgressBar.Flatness = panel_scaleCircle.comboBoxGetFlatness();
+                }
+            }
+
+            // данные линейной шкалой
+            if (panel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = panel_scaleLinear.radioButton_scaleLinear_image;
+                ////RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = panel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = panel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = panel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = panel_scaleLinear.numericUpDown_scaleLinear_width;
+
+                if ((radioButton_image.Checked && panel_scaleLinear.comboBoxGetSelectedIndexImage() >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.LinearSettings = new LinearSettings();
+                    if (radioButton_image.Checked && panel_scaleLinear.comboBoxGetSelectedIndexImage() >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = panel_scaleLinear.comboBoxGetImage();
+                    }
+                    else
+                    {
+                        activity.ProgressBar.Color = panel_scaleLinear.comboBoxGetColorString();
+                    }
+                    if (panel_scaleLinear.comboBoxGetSelectedIndexImagePointer() >= 0)
+                        activity.ProgressBar.PointerImageIndex = panel_scaleLinear.comboBoxGetImagePointer();
+                    if (panel_scaleLinear.comboBoxGetSelectedIndexImageBackground() >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = panel_scaleLinear.comboBoxGetImageBackground();
+
+                    activity.ProgressBar.LinearSettings.StartX = (long)numericUpDownX.Value;
+                    activity.ProgressBar.LinearSettings.StartY = (long)numericUpDownY.Value;
+                    long endX = (long)(numericUpDownX.Value + numericUpDown_length.Value);
+                    activity.ProgressBar.LinearSettings.EndX = endX;
+                    activity.ProgressBar.LinearSettings.EndY = (long)numericUpDownY.Value;
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                }
+
+            }
+
+            // данные иконки
+            if (userControl_icon != null && userControl_icon.checkBox_icon_Use.Checked)
+            {
+                int image = userControl_icon.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)userControl_icon.numericUpDown_iconX;
+                    NumericUpDown numericUpDownY = (NumericUpDown)userControl_icon.numericUpDown_iconY;
+                    int image2 = userControl_icon.comboBoxGetImage2();
+
+                    if (activity == null) activity = new Activity();
+                    activity.Icon = new ImageCoord();
+                    activity.Icon.Coordinates = new Coordinates();
+                    activity.Icon.ImageIndex = image;
+                    if (image2 >= 0) activity.Icon.ImageIndex2 = image2;
+                    activity.Icon.Coordinates.X = (long)numericUpDownX.Value;
+                    activity.Icon.Coordinates.Y = (long)numericUpDownY.Value;
+                }
+            }
+
+            if (activity != null) activity.Type = "Weather";
+            return activity;
+        }
+
+        private Activity AddActivitySunriseWidget(UserControl_pictures panel_pictures,
+            UserControl_text_goal panel_text, UserControl_text_goal panel_text_min,
+            UserControl_text_goal panel_text_max, UserControl_hand panel_hand,
+            UserControl_scaleCircle panel_scaleCircle, UserControl_scaleLinear panel_scaleLinear,
+            UserControl_SystemFont_GroupWeather userControl_SystemFont_Group, UserControl_icon userControl_icon)
+        {
+            UserControl_SystemFont userControl_SystemFont_Current = userControl_SystemFont_Group.userControl_SystemFont_weather_Current;
+            UserControl_SystemFont userControl_SystemFont_Min = userControl_SystemFont_Group.userControl_SystemFont_weather_Min;
+            UserControl_SystemFont userControl_SystemFont_Max = userControl_SystemFont_Group.userControl_SystemFont_weather_Max;
+
+            UserControl_FontRotate userControl_FontRotate_Current = userControl_SystemFont_Group.userControl_FontRotate_weather_Current;
+            UserControl_FontRotate userControl_FontRotate_Min = userControl_SystemFont_Group.userControl_FontRotate_weather_Min;
+            UserControl_FontRotate userControl_FontRotate_Max = userControl_SystemFont_Group.userControl_FontRotate_weather_Max;
+
+
+            Activity activity = null;
+
+            // данные картинками
+            if (panel_pictures.checkBox_pictures_Use.Checked)
+            {
+                if (panel_pictures.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = panel_pictures.numericUpDown_picturesX;
+                    NumericUpDown numericUpDownY = panel_pictures.numericUpDown_picturesY;
+
+                    if (activity == null) activity = new Activity();
+                    activity.ImageProgress = new ImageProgress();
+                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activity.ImageProgress.Coordinates = new List<Coordinates>();
+                    activity.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
+                    activity.ImageProgress.ImageSet.ImagesCount = 2;
+                    //activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    Coordinates coordinates = new Coordinates();
+                    coordinates.X = (long)numericUpDownX.Value;
+                    coordinates.Y = (long)numericUpDownY.Value;
+                    activity.ImageProgress.Coordinates.Add(coordinates);
+                }
+            }
+
+            // данные надписью SunriseSunset
+            if (panel_text.checkBox_Use.Checked)
+            {
+                if (panel_text.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)panel_text.Controls[2];
+                    //ComboBox comboBox_separatorF = (ComboBox)panel_text.Controls[3];
+                    NumericUpDown numericUpDownX = panel_text.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = panel_text.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = panel_text.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = panel_text.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text.Controls[8];
+                    NumericUpDown numericUpDown_spacing = panel_text.numericUpDown_spacing;
+                    CheckBox checkBox_add_zero = panel_text.checkBox_addZero;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = panel_text.comboBoxGetAlignment();
+                    digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (panel_text.comboBoxGetImageError() >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = panel_text.comboBoxGetImageError();
+
+                    if (panel_text.comboBoxGetSelectedIndexImageDecimalPointOrMinus() >= 0)
+                        digitalCommonDigit.Digit.Image.DecimalPointImageIndex = panel_text.comboBoxGetImageDecimalPointOrMinus();
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = panel_text.comboBoxGetImage();
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (panel_text.comboBoxGetSelectedIndexUnit() >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_text.comboBoxGetUnit();
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (panel_text.comboBoxGetSelectedIndexIcon() >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = panel_text.comboBoxGetIcon();
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью Sunrise
+            if (panel_text_min.checkBox_Use.Checked)
+            {
+                if (panel_text_min.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)panel_text_min.Controls[2];
+                    //ComboBox comboBox_separatorF = (ComboBox)panel_text_min.Controls[3];
+                    NumericUpDown numericUpDownX = panel_text_min.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = panel_text_min.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = panel_text_min.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = panel_text_min.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text_min.Controls[8];
+                    NumericUpDown numericUpDown_spacing = panel_text_min.numericUpDown_spacing;
+                    CheckBox checkBox_add_zero = panel_text_min.checkBox_addZero;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text_min.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text_min.Controls[11];
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Min";
+                    digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = panel_text_min.comboBoxGetAlignment();
+                    digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (panel_text_min.comboBoxGetImageError() >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = panel_text_min.comboBoxGetImageError();
+
+                    if (panel_text_min.comboBoxGetSelectedIndexImageDecimalPointOrMinus() >= 0)
+                        digitalCommonDigit.Digit.Image.DecimalPointImageIndex = panel_text_min.comboBoxGetImageDecimalPointOrMinus();
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = panel_text_min.comboBoxGetImage();
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (panel_text_min.comboBoxGetSelectedIndexUnit() >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_text_min.comboBoxGetUnit();
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (panel_text_min.comboBoxGetSelectedIndexIcon() >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = panel_text_min.comboBoxGetIcon();
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные надписью Sunset
+            if (panel_text_max.checkBox_Use.Checked)
+            {
+                if (panel_text_max.comboBoxGetSelectedIndexImage() >= 0)
+                {
+                    //ComboBox comboBox_unit = (ComboBox)panel_text_max.Controls[2];
+                    //ComboBox comboBox_separatorF = (ComboBox)panel_text_max.Controls[3];
+                    NumericUpDown numericUpDownX = panel_text_max.numericUpDown_imageX;
+                    NumericUpDown numericUpDownY = panel_text_max.numericUpDown_imageY;
+                    NumericUpDown numericUpDown_unitX = panel_text_max.numericUpDown_iconX;
+                    NumericUpDown numericUpDown_unitY = panel_text_max.numericUpDown_iconY;
+                    //ComboBox comboBox_alignment = (ComboBox)panel_text_max.Controls[8];
+                    NumericUpDown numericUpDown_spacing = panel_text_max.numericUpDown_spacing;
+                    CheckBox checkBox_add_zero = panel_text_max.checkBox_addZero;
+                    //ComboBox comboBox_imageError = (ComboBox)panel_text_max.Controls[10];
+                    //ComboBox comboBox_imageMinus = (ComboBox)panel_text_max.Controls[11];
+                    CheckBox checkBox_follow = panel_text_max.checkBox_follow;
+
+                    if (activity == null) activity = new Activity();
+                    if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                    DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                    digitalCommonDigit.Type = "Max";
+                    if (!checkBox_follow.Checked) digitalCommonDigit.CombingMode = "Single";
+                    //digitalCommonDigit.CombingMode = "Single";
+                    digitalCommonDigit.Digit = new Text();
+                    //string Alignment = StringToAlignment(comboBox_alignment.SelectedIndex);
+                    digitalCommonDigit.Digit.Alignment = panel_text_max.comboBoxGetAlignment();
+                    digitalCommonDigit.Digit.PaddingZero = checkBox_add_zero.Checked;
+                    digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+                    digitalCommonDigit.Digit.Image = new ImageAmazfit();
+
+                    if (panel_text_max.comboBoxGetImageError() >= 0)
+                        digitalCommonDigit.Digit.Image.NoDataImageIndex = panel_text_max.comboBoxGetImageError();
+
+                    if (panel_text_max.comboBoxGetSelectedIndexImageDecimalPointOrMinus() >= 0)
+                        digitalCommonDigit.Digit.Image.DecimalPointImageIndex = panel_text_max.comboBoxGetImageDecimalPointOrMinus();
+
+                    digitalCommonDigit.Digit.Image.X = (long)numericUpDownX.Value;
+                    digitalCommonDigit.Digit.Image.Y = (long)numericUpDownY.Value;
+
+                    digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.ImageSet.ImageIndex = panel_text_max.comboBoxGetImage();
+                    digitalCommonDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                    if (panel_text_max.comboBoxGetSelectedIndexUnit() >= 0)
+                    {
+                        if (digitalCommonDigit.Digit.Image.MultilangImageUnit == null)
+                            digitalCommonDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                        multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_text_max.comboBoxGetUnit();
+                        digitalCommonDigit.Digit.Image.MultilangImageUnit.Add(multilangImage);
+                    }
+
+                    if (panel_text_max.comboBoxGetSelectedIndexIcon() >= 0)
+                    {
+                        digitalCommonDigit.Separator = new ImageCoord();
+                        digitalCommonDigit.Separator.ImageIndex = panel_text_max.comboBoxGetIcon();
+                        digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                        digitalCommonDigit.Separator.Coordinates.X = (long)numericUpDown_unitX.Value;
+                        digitalCommonDigit.Separator.Coordinates.Y = (long)numericUpDown_unitY.Value;
+                    }
+
+                    activity.Digits.Add(digitalCommonDigit);
+                }
+            }
+
+            // данные системным шрифтом SunriseSunset
+            if (userControl_SystemFont_Current != null && userControl_SystemFont_Current.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont_Current.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont_Current.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont_Current.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont_Current.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont_Current.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFont_Current.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFont_Current.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFont_Current.checkBox_separator.Checked;
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont_Current.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFont_Current.comboBoxGetColorString();
+
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом Sunrise
+            if (userControl_SystemFont_Min != null && userControl_SystemFont_Min.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont_Min.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont_Min.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont_Min.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont_Min.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont_Min.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFont_Min.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFont_Min.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFont_Min.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Min";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont_Min.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFont_Min.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом Sunset
+            if (userControl_SystemFont_Max != null && userControl_SystemFont_Max.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_SystemFont_Max.numericUpDown_SystemFontX;
+                NumericUpDown numericUpDownY = userControl_SystemFont_Max.numericUpDown_SystemFontY;
+                NumericUpDown numericUpDown_size = userControl_SystemFont_Max.numericUpDown_SystemFont_size;
+                NumericUpDown numericUpDown_angle = userControl_SystemFont_Max.numericUpDown_SystemFont_angle;
+                NumericUpDown numericUpDown_spacing = userControl_SystemFont_Max.numericUpDown_SystemFont_spacing;
+                bool follow = userControl_SystemFont_Max.checkBox_follow.Checked;
+                bool add_zero = userControl_SystemFont_Max.checkBox_addZero.Checked;
+                bool separator = userControl_SystemFont_Max.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Max";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.Coordinates == null)
+                    digitalCommonDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont_Max.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_SystemFont_Max.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом по окружности SunriseSunset
+            if (userControl_FontRotate_Current != null && userControl_FontRotate_Current.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotate_Current.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotate_Current.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotate_Current.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotate_Current.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotate_Current.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotate_Current.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotate_Current.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotate_Current.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotate_Current.checkBox_separator.Checked;
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotate_Current.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate_Current.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotate_Current.comboBoxGetColorString();
+
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом по окружности Sunrise
+            if (userControl_FontRotate_Min != null && userControl_FontRotate_Min.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotate_Min.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotate_Min.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotate_Min.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotate_Min.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotate_Min.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotate_Min.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotate_Min.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotate_Min.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotate_Min.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Min";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotate_Min.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate_Min.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotate_Min.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные системным шрифтом по окружности Sunset
+            if (userControl_FontRotate_Max != null && userControl_FontRotate_Max.checkBox_Use.Checked)
+            {
+                NumericUpDown numericUpDownX = userControl_FontRotate_Max.numericUpDown_FontRotateX;
+                NumericUpDown numericUpDownY = userControl_FontRotate_Max.numericUpDown_FontRotateY;
+                NumericUpDown numericUpDown_size = userControl_FontRotate_Max.numericUpDown_FontRotate_size;
+                NumericUpDown numericUpDown_angle = userControl_FontRotate_Max.numericUpDown_FontRotate_angle;
+                NumericUpDown numericUpDown_radius = userControl_FontRotate_Max.numericUpDown_FontRotate_radius;
+                NumericUpDown numericUpDown_spacing = userControl_FontRotate_Max.numericUpDown_FontRotate_spacing;
+                bool follow = userControl_FontRotate_Max.checkBox_follow.Checked;
+                bool add_zero = userControl_FontRotate_Max.checkBox_addZero.Checked;
+                bool separator = userControl_FontRotate_Max.checkBox_separator.Checked;
+
+                DigitalCommonDigit digitalCommonDigit = new DigitalCommonDigit();
+                digitalCommonDigit.Type = "Max";
+                if (!follow) digitalCommonDigit.CombingMode = "Single";
+                if (separator)
+                {
+                    digitalCommonDigit.Separator = new ImageCoord();
+                    digitalCommonDigit.Separator.Coordinates = new Coordinates();
+                    digitalCommonDigit.Separator.Coordinates.X = -1;
+                    digitalCommonDigit.Separator.Coordinates.Y = -1;
+                }
+
+                if (digitalCommonDigit.Digit == null) digitalCommonDigit.Digit = new Text();
+                if (digitalCommonDigit.Digit.SystemFont == null)
+                    digitalCommonDigit.Digit.SystemFont = new SystemFont();
+                if (digitalCommonDigit.Digit.SystemFont.FontRotate == null)
+                    digitalCommonDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                digitalCommonDigit.Digit.PaddingZero = add_zero;
+                digitalCommonDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                digitalCommonDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                digitalCommonDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                    userControl_FontRotate_Max.radioButtonGetRotateDirection();
+                digitalCommonDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                digitalCommonDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                digitalCommonDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate_Max.checkBoxGetUnit();
+                digitalCommonDigit.Digit.SystemFont.Color = userControl_FontRotate_Max.comboBoxGetColorString();
+
+                if (activity == null) activity = new Activity();
+                if (activity.Digits == null) activity.Digits = new List<DigitalCommonDigit>();
+                activity.Digits.Add(digitalCommonDigit);
+            }
+
+            // данные стрелкой
+            if (panel_hand.checkBox_hand_Use.Checked)
+            {
+                if (panel_hand.comboBoxGetSelectedIndexHandImage() >= 0)
+                {
+                    NumericUpDown numericUpDownX = panel_hand.numericUpDown_handX;
+                    NumericUpDown numericUpDownY = panel_hand.numericUpDown_handY;
+                    NumericUpDown numericUpDown_offsetX = panel_hand.numericUpDown_handX_offset;
+                    NumericUpDown numericUpDown_offsetY = panel_hand.numericUpDown_handY_offset;
+                    //ComboBox comboBox_imageCentr = (ComboBox)panel_hand.Controls[6];
+                    NumericUpDown numericUpDownX_centr = panel_hand.numericUpDown_handX_centr;
+                    NumericUpDown numericUpDownY_centr = panel_hand.numericUpDown_handY_centr;
+                    NumericUpDown numericUpDown_startAngle = panel_hand.numericUpDown_hand_startAngle;
+                    NumericUpDown numericUpDown_endAngle = panel_hand.numericUpDown_hand_endAngle;
+                    //ComboBox comboBox_imageBackground = (ComboBox)panel_hand.Controls[11];
+                    NumericUpDown numericUpDownX_background = panel_hand.numericUpDown_handX_background;
+                    NumericUpDown numericUpDownY_background = panel_hand.numericUpDown_handY_background;
+
+                    if (activity == null) activity = new Activity();
+                    activity.PointerProgress = new ClockHand();
+                    activity.PointerProgress.X = (long)numericUpDownX.Value;
+                    activity.PointerProgress.Y = (long)numericUpDownY.Value;
+                    activity.PointerProgress.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.PointerProgress.EndAngle = (float)numericUpDown_endAngle.Value;
+
+                    activity.PointerProgress.Pointer = new ImageCoord();
+                    activity.PointerProgress.Pointer.ImageIndex = panel_hand.comboBoxGetHandImage();
+                    activity.PointerProgress.Pointer.Coordinates = new Coordinates();
+                    activity.PointerProgress.Pointer.Coordinates.X = (long)numericUpDown_offsetX.Value;
+                    activity.PointerProgress.Pointer.Coordinates.Y = (long)numericUpDown_offsetY.Value;
+
+                    if (panel_hand.comboBoxGetSelectedIndexHandImageCentr() >= 0)
+                    {
+                        activity.PointerProgress.Cover = new ImageCoord();
+                        activity.PointerProgress.Cover.ImageIndex = panel_hand.comboBoxGetHandImageCentr();
+                        activity.PointerProgress.Cover.Coordinates = new Coordinates();
+                        activity.PointerProgress.Cover.Coordinates.X = (long)numericUpDownX_centr.Value;
+                        activity.PointerProgress.Cover.Coordinates.Y = (long)numericUpDownY_centr.Value;
+                    }
+
+                    if (panel_hand.comboBoxGetSelectedIndexHandImageBackground() >= 0)
+                    {
+                        activity.PointerProgress.Scale = new MultilangImageCoord();
+                        activity.PointerProgress.Scale.Coordinates = new Coordinates();
+                        activity.PointerProgress.Scale.Coordinates.X = (long)numericUpDownX_background.Value;
+                        activity.PointerProgress.Scale.Coordinates.Y = (long)numericUpDownY_background.Value;
+                        activity.PointerProgress.Scale.ImageSet = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        multilangImage.ImageSet.ImagesCount = 1;
+                        multilangImage.ImageSet.ImageIndex = panel_hand.comboBoxGetHandImageBackground();
+                        activity.PointerProgress.Scale.ImageSet.Add(multilangImage);
+                    }
+                }
+            }
+
+            // данные круговой шкалой
+            if (panel_scaleCircle.checkBox_scaleCircle_Use.Checked)
+            {
+                RadioButton radioButton_image = panel_scaleCircle.radioButton_scaleCircle_image;
+                //RadioButton radioButton_color = (RadioButton)panel_scaleCircle.Controls[2];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleCircle.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleCircle.Controls[4];
+                //ComboBox comboBox_flatness = (ComboBox)panel_scaleCircle.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleCircle.Controls[6];
+                NumericUpDown numericUpDownX = panel_scaleCircle.numericUpDown_scaleCircleX;
+                NumericUpDown numericUpDownY = panel_scaleCircle.numericUpDown_scaleCircleY;
+                NumericUpDown numericUpDown_radius = panel_scaleCircle.numericUpDown_scaleCircle_radius;
+                NumericUpDown numericUpDown_width = panel_scaleCircle.numericUpDown_scaleCircle_width;
+                NumericUpDown numericUpDown_startAngle = panel_scaleCircle.numericUpDown_scaleCircle_startAngle;
+                NumericUpDown numericUpDown_endAngle = panel_scaleCircle.numericUpDown_scaleCircle_endAngle;
+
+                if ((radioButton_image.Checked && panel_scaleCircle.comboBoxGetSelectedIndexImage() >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.AngleSettings = new AngleSettings();
+                    if (radioButton_image.Checked && panel_scaleCircle.comboBoxGetSelectedIndexImage() >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = panel_scaleCircle.comboBoxGetImage();
+                    }
+                    else
+                    {
+                        activity.ProgressBar.Color = panel_scaleCircle.comboBoxGetColorString();
+                    }
+
+                    if (panel_scaleCircle.comboBoxGetSelectedIndexImageBackground() >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = panel_scaleCircle.comboBoxGetImageBackground();
+
+                    activity.ProgressBar.AngleSettings.X = (long)numericUpDownX.Value;
+                    activity.ProgressBar.AngleSettings.Y = (long)numericUpDownY.Value;
+                    activity.ProgressBar.AngleSettings.StartAngle = (float)numericUpDown_startAngle.Value;
+                    activity.ProgressBar.AngleSettings.EndAngle = (float)numericUpDown_endAngle.Value;
+                    activity.ProgressBar.AngleSettings.Radius = (float)numericUpDown_radius.Value;
+
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                    activity.ProgressBar.Flatness = panel_scaleCircle.comboBoxGetFlatness();
+                }
+            }
+
+            // данные линейной шкалой
+            if (panel_scaleLinear.checkBox_scaleLinear_Use.Checked)
+            {
+                RadioButton radioButton_image = panel_scaleLinear.radioButton_scaleLinear_image;
+                ////RadioButton radioButton_color = (RadioButton)panel_scaleLinear.Controls[2];
+                //ComboBox comboBox_image = (ComboBox)panel_scaleLinear.Controls[3];
+                //ComboBox comboBox_color = (ComboBox)panel_scaleLinear.Controls[4];
+                //ComboBox comboBox_pointer = (ComboBox)panel_scaleLinear.Controls[5];
+                //ComboBox comboBox_background = (ComboBox)panel_scaleLinear.Controls[6];
+                NumericUpDown numericUpDownX = panel_scaleLinear.numericUpDown_scaleLinearX;
+                NumericUpDown numericUpDownY = panel_scaleLinear.numericUpDown_scaleLinearY;
+                NumericUpDown numericUpDown_length = panel_scaleLinear.numericUpDown_scaleLinear_length;
+                NumericUpDown numericUpDown_width = panel_scaleLinear.numericUpDown_scaleLinear_width;
+
+                if ((radioButton_image.Checked && panel_scaleLinear.comboBoxGetSelectedIndexImage() >= 0) ||
+                    (!radioButton_image.Checked))
+                {
+                    if (activity == null) activity = new Activity();
+                    if (activity.ProgressBar == null) activity.ProgressBar = new ProgressBar();
+                    activity.ProgressBar.LinearSettings = new LinearSettings();
+                    if (radioButton_image.Checked && panel_scaleLinear.comboBoxGetSelectedIndexImage() >= 0)
+                    {
+                        activity.ProgressBar.ForegroundImageIndex = panel_scaleLinear.comboBoxGetImage();
+                    }
+                    else
+                    {
+                        activity.ProgressBar.Color = panel_scaleLinear.comboBoxGetColorString();
+                    }
+                    if (panel_scaleLinear.comboBoxGetSelectedIndexImagePointer() >= 0)
+                        activity.ProgressBar.PointerImageIndex = panel_scaleLinear.comboBoxGetImagePointer();
+                    if (panel_scaleLinear.comboBoxGetSelectedIndexImageBackground() >= 0)
+                        activity.ProgressBar.BackgroundImageIndex = panel_scaleLinear.comboBoxGetImageBackground();
+
+                    activity.ProgressBar.LinearSettings.StartX = (long)numericUpDownX.Value;
+                    activity.ProgressBar.LinearSettings.StartY = (long)numericUpDownY.Value;
+                    long endX = (long)(numericUpDownX.Value + numericUpDown_length.Value);
+                    activity.ProgressBar.LinearSettings.EndX = endX;
+                    activity.ProgressBar.LinearSettings.EndY = (long)numericUpDownY.Value;
+                    activity.ProgressBar.Width = (long)numericUpDown_width.Value;
+                }
+
+            }
+
+            // данные иконки
+            if (userControl_icon != null && userControl_icon.checkBox_icon_Use.Checked)
+            {
+                int image = userControl_icon.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    NumericUpDown numericUpDownX = (NumericUpDown)userControl_icon.numericUpDown_iconX;
+                    NumericUpDown numericUpDownY = (NumericUpDown)userControl_icon.numericUpDown_iconY;
+                    int image2 = userControl_icon.comboBoxGetImage2();
+
+                    if (activity == null) activity = new Activity();
+                    activity.Icon = new ImageCoord();
+                    activity.Icon.Coordinates = new Coordinates();
+                    activity.Icon.ImageIndex = image;
+                    if (image2 >= 0) activity.Icon.ImageIndex2 = image2;
+                    activity.Icon.Coordinates.X = (long)numericUpDownX.Value;
+                    activity.Icon.Coordinates.Y = (long)numericUpDownY.Value;
+                }
+            }
+
+            if (activity != null) activity.Type = "Sunrise";
+            return activity;
+        }
+
+        private DateAmazfit AddDateWidget(UserControl_text_date userControl_text_Day, UserControl_hand userControl_hand_Day,
+            UserControl_SystemFont_Group userControl_SystemFont_Group_DayWidget, UserControl_pictures userControl_pictures_Month,
+            UserControl_text_date userControl_text_Month, UserControl_hand userControl_hand_Month,
+            UserControl_SystemFont_Group userControl_SystemFont_Group_MonthWidget, UserControl_text_date userControl_text_Year,
+            UserControl_SystemFont_Group userControl_SystemFont_Group_YearWidget, UserControl_pictures userControl_pictures_DOW,
+            UserControl_hand userControl_hand_DOW, DataGridView dataGridView_Widget_Date)
+        {
+            DateAmazfit dateWidget = null;
+
+            for (int i = 0; i < dataGridView_Widget_Date.RowCount; i++)
+            {
+                string dataName = dataGridView_Widget_Date.Rows[i].Cells[0].Value.ToString();
+
+                // год
+                if (dataName == "Year")
+                {
+                    if (userControl_text_Year.checkBox_Use.Checked && userControl_text_Year.comboBoxGetImage() >= 0)
+                    {
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Year";
+                        //digitalDateDigit.CombingMode = "Single";
+                        digitalDateDigit.CombingMode = userControl_text_Year.checkBox_follow.Checked ? "Follow" : "Single";
+                        digitalDateDigit.Digit = new Text();
+                        digitalDateDigit.Digit.Image = new ImageAmazfit();
+                        digitalDateDigit.Digit.Image.X = (long)userControl_text_Year.numericUpDown_imageX.Value;
+                        digitalDateDigit.Digit.Image.Y = (long)userControl_text_Year.numericUpDown_imageY.Value;
+                        digitalDateDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        if (userControl_text_Year.comboBoxGetImage() >= 0)
+                            multilangImage.ImageSet.ImageIndex = userControl_text_Year.comboBoxGetImage();
+                        multilangImage.ImageSet.ImagesCount = 10;
+                        digitalDateDigit.Digit.Image.MultilangImage.Add(multilangImage);
+                        if (userControl_text_Year.comboBoxGetUnit() >= 0)
+                        {
+                            digitalDateDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                            MultilangImage multilangImageUnit = new MultilangImage();
+                            multilangImageUnit.LangCode = "All";
+                            multilangImageUnit.ImageSet = new ImageSetGTR2();
+                            multilangImageUnit.ImageSet.ImageIndex = userControl_text_Year.comboBoxGetUnit();
+                            multilangImageUnit.ImageSet.ImagesCount = 1;
+                            digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
+                        }
+                        digitalDateDigit.Digit.Alignment = userControl_text_Year.comboBoxGetAlignment();
+                        digitalDateDigit.Digit.Spacing = (long)userControl_text_Year.numericUpDown_spacing.Value;
+                        //digitalTimeDigit.Digit.PaddingZero = checkBox_Year_add_zero.Checked ? 1 : 0;
+                        digitalDateDigit.Digit.PaddingZero = userControl_text_Year.checkBox_addZero.Checked;
+
+                        if (userControl_text_Year.comboBoxGetIcon() >= 0)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = (long)userControl_text_Year.numericUpDown_iconX.Value;
+                            digitalDateDigit.Separator.Coordinates.Y = (long)userControl_text_Year.numericUpDown_iconY.Value;
+                            digitalDateDigit.Separator.ImageIndex = userControl_text_Year.comboBoxGetIcon();
+                        }
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+
+                    // данные системным шрифтом
+                    UserControl_SystemFont userControl_SystemFont =
+                        userControl_SystemFont_Group_YearWidget.userControl_SystemFont;
+                    if (userControl_SystemFont != null && userControl_SystemFont.checkBox_Use.Checked)
+                    {
+                        NumericUpDown numericUpDownX = userControl_SystemFont.numericUpDown_SystemFontX;
+                        NumericUpDown numericUpDownY = userControl_SystemFont.numericUpDown_SystemFontY;
+                        NumericUpDown numericUpDown_size = userControl_SystemFont.numericUpDown_SystemFont_size;
+                        NumericUpDown numericUpDown_angle = userControl_SystemFont.numericUpDown_SystemFont_angle;
+                        NumericUpDown numericUpDown_spacing = userControl_SystemFont.numericUpDown_SystemFont_spacing;
+                        bool follow = userControl_SystemFont.checkBox_follow.Checked;
+                        bool add_zero = userControl_SystemFont.checkBox_addZero.Checked;
+                        bool separator = userControl_SystemFont.checkBox_separator.Checked;
+
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Year";
+                        if (!follow) digitalDateDigit.CombingMode = "Single";
+                        if (separator)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = -1;
+                            digitalDateDigit.Separator.Coordinates.Y = -1;
+                        }
+
+
+                        if (digitalDateDigit.Digit == null) digitalDateDigit.Digit = new Text();
+                        if (digitalDateDigit.Digit.SystemFont == null)
+                            digitalDateDigit.Digit.SystemFont = new SystemFont();
+                        if (digitalDateDigit.Digit.SystemFont.Coordinates == null)
+                            digitalDateDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                        digitalDateDigit.Digit.PaddingZero = add_zero;
+                        digitalDateDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                        digitalDateDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                        digitalDateDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                        digitalDateDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                        digitalDateDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                        digitalDateDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont.checkBoxGetUnit();
+                        digitalDateDigit.Digit.SystemFont.Color = userControl_SystemFont.comboBoxGetColorString();
+
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+
+                    // данные системным шрифтом по окружности
+                    UserControl_FontRotate userControl_FontRotate =
+                        userControl_SystemFont_Group_YearWidget.userControl_FontRotate;
+                    if (userControl_FontRotate != null && userControl_FontRotate.checkBox_Use.Checked)
+                    {
+                        NumericUpDown numericUpDownX = userControl_FontRotate.numericUpDown_FontRotateX;
+                        NumericUpDown numericUpDownY = userControl_FontRotate.numericUpDown_FontRotateY;
+                        NumericUpDown numericUpDown_size = userControl_FontRotate.numericUpDown_FontRotate_size;
+                        NumericUpDown numericUpDown_angle = userControl_FontRotate.numericUpDown_FontRotate_angle;
+                        NumericUpDown numericUpDown_radius = userControl_FontRotate.numericUpDown_FontRotate_radius;
+                        NumericUpDown numericUpDown_spacing = userControl_FontRotate.numericUpDown_FontRotate_spacing;
+                        bool follow = userControl_FontRotate.checkBox_follow.Checked;
+                        bool add_zero = userControl_FontRotate.checkBox_addZero.Checked;
+                        bool separator = userControl_FontRotate.checkBox_separator.Checked;
+
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Year";
+                        if (!follow) digitalDateDigit.CombingMode = "Single";
+                        if (separator)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = -1;
+                            digitalDateDigit.Separator.Coordinates.Y = -1;
+                        }
+
+                        if (digitalDateDigit.Digit == null) digitalDateDigit.Digit = new Text();
+                        if (digitalDateDigit.Digit.SystemFont == null)
+                            digitalDateDigit.Digit.SystemFont = new SystemFont();
+                        if (digitalDateDigit.Digit.SystemFont.FontRotate == null)
+                            digitalDateDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                        digitalDateDigit.Digit.PaddingZero = add_zero;
+                        digitalDateDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                        digitalDateDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                            userControl_FontRotate.radioButtonGetRotateDirection();
+                        digitalDateDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                        digitalDateDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                        digitalDateDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate.checkBoxGetUnit();
+                        digitalDateDigit.Digit.SystemFont.Color = userControl_FontRotate.comboBoxGetColorString();
+
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+                }
+
+                // месяц
+                if (dataName == "Month")
+                {
+                    if (userControl_text_Month.checkBox_Use.Checked && userControl_text_Month.comboBoxGetImage() >= 0)
+                    {
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Month";
+                        //digitalDateDigit.CombingMode = "Single";
+                        digitalDateDigit.CombingMode = userControl_text_Month.checkBox_follow.Checked ? "Follow" : "Single";
+                        digitalDateDigit.Digit = new Text();
+                        digitalDateDigit.Digit.Image = new ImageAmazfit();
+                        digitalDateDigit.Digit.Image.X = (long)userControl_text_Month.numericUpDown_imageX.Value;
+                        digitalDateDigit.Digit.Image.Y = (long)userControl_text_Month.numericUpDown_imageY.Value;
+                        digitalDateDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        if (userControl_text_Month.comboBoxGetImage() >= 0)
+                            multilangImage.ImageSet.ImageIndex = userControl_text_Month.comboBoxGetImage();
+                        multilangImage.ImageSet.ImagesCount = 10;
+                        digitalDateDigit.Digit.Image.MultilangImage.Add(multilangImage);
+                        if (userControl_text_Month.comboBoxGetUnit() >= 0)
+                        {
+                            digitalDateDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                            MultilangImage multilangImageUnit = new MultilangImage();
+                            multilangImageUnit.LangCode = "All";
+                            multilangImageUnit.ImageSet = new ImageSetGTR2();
+                            multilangImageUnit.ImageSet.ImageIndex = userControl_text_Month.comboBoxGetUnit();
+                            multilangImageUnit.ImageSet.ImagesCount = 1;
+                            digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
+                        }
+                        digitalDateDigit.Digit.Alignment = userControl_text_Month.comboBoxGetAlignment();
+                        digitalDateDigit.Digit.Spacing = (long)userControl_text_Month.numericUpDown_spacing.Value;
+                        //digitalTimeDigit.Digit.PaddingZero = checkBox_Year_add_zero.Checked ? 1 : 0;
+                        digitalDateDigit.Digit.PaddingZero = userControl_text_Month.checkBox_addZero.Checked;
+
+                        if (userControl_text_Month.comboBoxGetIcon() >= 0)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = (long)userControl_text_Month.numericUpDown_iconX.Value;
+                            digitalDateDigit.Separator.Coordinates.Y = (long)userControl_text_Month.numericUpDown_iconY.Value;
+                            digitalDateDigit.Separator.ImageIndex = userControl_text_Month.comboBoxGetIcon();
+                        }
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+
+                    // данные системным шрифтом
+                    UserControl_SystemFont userControl_SystemFont =
+                        userControl_SystemFont_Group_MonthWidget.userControl_SystemFont;
+                    if (userControl_SystemFont != null && userControl_SystemFont.checkBox_Use.Checked)
+                    {
+                        NumericUpDown numericUpDownX = userControl_SystemFont.numericUpDown_SystemFontX;
+                        NumericUpDown numericUpDownY = userControl_SystemFont.numericUpDown_SystemFontY;
+                        NumericUpDown numericUpDown_size = userControl_SystemFont.numericUpDown_SystemFont_size;
+                        NumericUpDown numericUpDown_angle = userControl_SystemFont.numericUpDown_SystemFont_angle;
+                        NumericUpDown numericUpDown_spacing = userControl_SystemFont.numericUpDown_SystemFont_spacing;
+                        bool follow = userControl_SystemFont.checkBox_follow.Checked;
+                        bool add_zero = userControl_SystemFont.checkBox_addZero.Checked;
+                        bool separator = userControl_SystemFont.checkBox_separator.Checked;
+
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Month";
+                        if (!follow) digitalDateDigit.CombingMode = "Single";
+                        if (separator)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = -1;
+                            digitalDateDigit.Separator.Coordinates.Y = -1;
+                        }
+
+
+                        if (digitalDateDigit.Digit == null) digitalDateDigit.Digit = new Text();
+                        if (digitalDateDigit.Digit.SystemFont == null)
+                            digitalDateDigit.Digit.SystemFont = new SystemFont();
+                        if (digitalDateDigit.Digit.SystemFont.Coordinates == null)
+                            digitalDateDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                        digitalDateDigit.Digit.PaddingZero = add_zero;
+                        digitalDateDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                        digitalDateDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                        digitalDateDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                        digitalDateDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                        digitalDateDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                        digitalDateDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont.checkBoxGetUnit();
+                        digitalDateDigit.Digit.SystemFont.Color = userControl_SystemFont.comboBoxGetColorString();
+
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+
+                    // данные системным шрифтом по окружности
+                    UserControl_FontRotate userControl_FontRotate =
+                        userControl_SystemFont_Group_MonthWidget.userControl_FontRotate;
+                    if (userControl_FontRotate != null && userControl_FontRotate.checkBox_Use.Checked)
+                    {
+                        NumericUpDown numericUpDownX = userControl_FontRotate.numericUpDown_FontRotateX;
+                        NumericUpDown numericUpDownY = userControl_FontRotate.numericUpDown_FontRotateY;
+                        NumericUpDown numericUpDown_size = userControl_FontRotate.numericUpDown_FontRotate_size;
+                        NumericUpDown numericUpDown_angle = userControl_FontRotate.numericUpDown_FontRotate_angle;
+                        NumericUpDown numericUpDown_radius = userControl_FontRotate.numericUpDown_FontRotate_radius;
+                        NumericUpDown numericUpDown_spacing = userControl_FontRotate.numericUpDown_FontRotate_spacing;
+                        bool follow = userControl_FontRotate.checkBox_follow.Checked;
+                        bool add_zero = userControl_FontRotate.checkBox_addZero.Checked;
+                        bool separator = userControl_FontRotate.checkBox_separator.Checked;
+
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Month";
+                        if (!follow) digitalDateDigit.CombingMode = "Single";
+                        if (separator)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = -1;
+                            digitalDateDigit.Separator.Coordinates.Y = -1;
+                        }
+
+                        if (digitalDateDigit.Digit == null) digitalDateDigit.Digit = new Text();
+                        if (digitalDateDigit.Digit.SystemFont == null)
+                            digitalDateDigit.Digit.SystemFont = new SystemFont();
+                        if (digitalDateDigit.Digit.SystemFont.FontRotate == null)
+                            digitalDateDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                        digitalDateDigit.Digit.PaddingZero = add_zero;
+                        digitalDateDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                        digitalDateDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                            userControl_FontRotate.radioButtonGetRotateDirection();
+                        digitalDateDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                        digitalDateDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                        digitalDateDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate.checkBoxGetUnit();
+                        digitalDateDigit.Digit.SystemFont.Color = userControl_FontRotate.comboBoxGetColorString();
+
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+
+                    // месяц картинкой
+                    if (userControl_pictures_Month.checkBox_pictures_Use.Checked && userControl_pictures_Month.comboBoxGetImage() >= 0)
+                    {
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Month";
+                        digitalDateDigit.CombingMode = "Single";
+                        //digitalDateDigit.CombingMode = checkBox_Month_follow.Checked ? "Follow" : "Single";
+                        digitalDateDigit.Digit = new Text();
+                        digitalDateDigit.Digit.DisplayFormAnalog = true;
+                        digitalDateDigit.Digit.Image = new ImageAmazfit();
+                        digitalDateDigit.Digit.Image.X = (long)userControl_pictures_Month.numericUpDown_picturesX.Value;
+                        digitalDateDigit.Digit.Image.Y = (long)userControl_pictures_Month.numericUpDown_picturesY.Value;
+                        digitalDateDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        if (userControl_pictures_Month.comboBoxGetImage() >= 0)
+                            multilangImage.ImageSet.ImageIndex = userControl_pictures_Month.comboBoxGetImage();
+                        multilangImage.ImageSet.ImagesCount = 12;
+                        digitalDateDigit.Digit.Image.MultilangImage.Add(multilangImage);
+
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+                }
+
+                // число
+                if (dataName == "Day")
+                {
+                    if (userControl_text_Day.checkBox_Use.Checked && userControl_text_Day.comboBoxGetImage() >= 0)
+                    {
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Day";
+                        //digitalDateDigit.CombingMode = "Single";
+                        digitalDateDigit.CombingMode = userControl_text_Day.checkBox_follow.Checked ? "Follow" : "Single";
+                        digitalDateDigit.Digit = new Text();
+                        digitalDateDigit.Digit.Image = new ImageAmazfit();
+                        digitalDateDigit.Digit.Image.X = (long)userControl_text_Day.numericUpDown_imageX.Value;
+                        digitalDateDigit.Digit.Image.Y = (long)userControl_text_Day.numericUpDown_imageY.Value;
+                        digitalDateDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
+                        MultilangImage multilangImage = new MultilangImage();
+                        multilangImage.LangCode = "All";
+                        multilangImage.ImageSet = new ImageSetGTR2();
+                        if (userControl_text_Day.comboBoxGetImage() >= 0)
+                            multilangImage.ImageSet.ImageIndex = userControl_text_Day.comboBoxGetImage();
+                        multilangImage.ImageSet.ImagesCount = 10;
+                        digitalDateDigit.Digit.Image.MultilangImage.Add(multilangImage);
+                        if (userControl_text_Day.comboBoxGetUnit() >= 0)
+                        {
+                            digitalDateDigit.Digit.Image.MultilangImageUnit = new List<MultilangImage>();
+                            MultilangImage multilangImageUnit = new MultilangImage();
+                            multilangImageUnit.LangCode = "All";
+                            multilangImageUnit.ImageSet = new ImageSetGTR2();
+                            multilangImageUnit.ImageSet.ImageIndex = userControl_text_Day.comboBoxGetUnit();
+                            multilangImageUnit.ImageSet.ImagesCount = 1;
+                            digitalDateDigit.Digit.Image.MultilangImageUnit.Add(multilangImageUnit);
+                        }
+                        digitalDateDigit.Digit.Alignment = userControl_text_Day.comboBoxGetAlignment();
+                        digitalDateDigit.Digit.Spacing = (long)userControl_text_Day.numericUpDown_spacing.Value;
+                        //digitalTimeDigit.Digit.PaddingZero = checkBox_Year_add_zero.Checked ? 1 : 0;
+                        digitalDateDigit.Digit.PaddingZero = userControl_text_Day.checkBox_addZero.Checked;
+
+                        if (userControl_text_Day.comboBoxGetIcon() >= 0)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = (long)userControl_text_Day.numericUpDown_iconX.Value;
+                            digitalDateDigit.Separator.Coordinates.Y = (long)userControl_text_Day.numericUpDown_iconY.Value;
+                            digitalDateDigit.Separator.ImageIndex = userControl_text_Day.comboBoxGetIcon();
+                        }
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+
+                    // данные системным шрифтом
+                    UserControl_SystemFont userControl_SystemFont =
+                        userControl_SystemFont_Group_DayWidget.userControl_SystemFont;
+                    if (userControl_SystemFont != null && userControl_SystemFont.checkBox_Use.Checked)
+                    {
+                        NumericUpDown numericUpDownX = userControl_SystemFont.numericUpDown_SystemFontX;
+                        NumericUpDown numericUpDownY = userControl_SystemFont.numericUpDown_SystemFontY;
+                        NumericUpDown numericUpDown_size = userControl_SystemFont.numericUpDown_SystemFont_size;
+                        NumericUpDown numericUpDown_angle = userControl_SystemFont.numericUpDown_SystemFont_angle;
+                        NumericUpDown numericUpDown_spacing = userControl_SystemFont.numericUpDown_SystemFont_spacing;
+                        bool follow = userControl_SystemFont.checkBox_follow.Checked;
+                        bool add_zero = userControl_SystemFont.checkBox_addZero.Checked;
+                        bool separator = userControl_SystemFont.checkBox_separator.Checked;
+
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Day";
+                        if (!follow) digitalDateDigit.CombingMode = "Single";
+                        if (separator)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = -1;
+                            digitalDateDigit.Separator.Coordinates.Y = -1;
+                        }
+
+
+                        if (digitalDateDigit.Digit == null) digitalDateDigit.Digit = new Text();
+                        if (digitalDateDigit.Digit.SystemFont == null)
+                            digitalDateDigit.Digit.SystemFont = new SystemFont();
+                        if (digitalDateDigit.Digit.SystemFont.Coordinates == null)
+                            digitalDateDigit.Digit.SystemFont.Coordinates = new Coordinates();
+
+                        digitalDateDigit.Digit.PaddingZero = add_zero;
+                        digitalDateDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                        digitalDateDigit.Digit.SystemFont.Coordinates.X = (long)numericUpDownX.Value;
+                        digitalDateDigit.Digit.SystemFont.Coordinates.Y = (long)numericUpDownY.Value;
+                        digitalDateDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                        digitalDateDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                        digitalDateDigit.Digit.SystemFont.ShowUnitCheck = userControl_SystemFont.checkBoxGetUnit();
+                        digitalDateDigit.Digit.SystemFont.Color = userControl_SystemFont.comboBoxGetColorString();
+
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+
+                    // данные системным шрифтом по окружности
+                    UserControl_FontRotate userControl_FontRotate =
+                        userControl_SystemFont_Group_DayWidget.userControl_FontRotate;
+                    if (userControl_FontRotate != null && userControl_FontRotate.checkBox_Use.Checked)
+                    {
+                        NumericUpDown numericUpDownX = userControl_FontRotate.numericUpDown_FontRotateX;
+                        NumericUpDown numericUpDownY = userControl_FontRotate.numericUpDown_FontRotateY;
+                        NumericUpDown numericUpDown_size = userControl_FontRotate.numericUpDown_FontRotate_size;
+                        NumericUpDown numericUpDown_angle = userControl_FontRotate.numericUpDown_FontRotate_angle;
+                        NumericUpDown numericUpDown_radius = userControl_FontRotate.numericUpDown_FontRotate_radius;
+                        NumericUpDown numericUpDown_spacing = userControl_FontRotate.numericUpDown_FontRotate_spacing;
+                        bool follow = userControl_FontRotate.checkBox_follow.Checked;
+                        bool add_zero = userControl_FontRotate.checkBox_addZero.Checked;
+                        bool separator = userControl_FontRotate.checkBox_separator.Checked;
+
+                        if (dateWidget == null) dateWidget = new DateAmazfit();
+                        if (dateWidget.DateDigits == null)
+                            dateWidget.DateDigits = new List<DigitalDateDigit>();
+
+                        DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
+                        digitalDateDigit.DateType = "Day";
+                        if (!follow) digitalDateDigit.CombingMode = "Single";
+                        if (separator)
+                        {
+                            digitalDateDigit.Separator = new ImageCoord();
+                            digitalDateDigit.Separator.Coordinates = new Coordinates();
+                            digitalDateDigit.Separator.Coordinates.X = -1;
+                            digitalDateDigit.Separator.Coordinates.Y = -1;
+                        }
+
+                        if (digitalDateDigit.Digit == null) digitalDateDigit.Digit = new Text();
+                        if (digitalDateDigit.Digit.SystemFont == null)
+                            digitalDateDigit.Digit.SystemFont = new SystemFont();
+                        if (digitalDateDigit.Digit.SystemFont.FontRotate == null)
+                            digitalDateDigit.Digit.SystemFont.FontRotate = new FontRotate();
+
+                        digitalDateDigit.Digit.PaddingZero = add_zero;
+                        digitalDateDigit.Digit.Spacing = (long)numericUpDown_spacing.Value;
+
+                        digitalDateDigit.Digit.SystemFont.FontRotate.X = (long)numericUpDownX.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.Y = (long)numericUpDownY.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.Radius = (long)numericUpDown_radius.Value;
+                        digitalDateDigit.Digit.SystemFont.FontRotate.RotateDirection =
+                            userControl_FontRotate.radioButtonGetRotateDirection();
+                        digitalDateDigit.Digit.SystemFont.Size = (long)numericUpDown_size.Value;
+                        digitalDateDigit.Digit.SystemFont.Angle = (long)numericUpDown_angle.Value;
+
+                        digitalDateDigit.Digit.SystemFont.ShowUnitCheck = userControl_FontRotate.checkBoxGetUnit();
+                        digitalDateDigit.Digit.SystemFont.Color = userControl_FontRotate.comboBoxGetColorString();
+
+                        dateWidget.DateDigits.Add(digitalDateDigit);
+                    }
+                }
+            }
+
+            // день недели картинкой
+            if (userControl_pictures_DOW.checkBox_pictures_Use.Checked && userControl_pictures_DOW.comboBoxGetImage() >= 0)
+            {
+                if (dateWidget == null) dateWidget = new DateAmazfit();
+                if (dateWidget.WeeksDigits == null)
+                    dateWidget.WeeksDigits = new DigitalCommonDigit();
+
+                dateWidget.WeeksDigits.CombingMode = "Single";
+                //digitalDateDigit.CombingMode = checkBox_DOW_follow.Checked ? "Follow" : "Single";
+                dateWidget.WeeksDigits.Digit = new Text();
+                dateWidget.WeeksDigits.Digit.DisplayFormAnalog = true;
+                dateWidget.WeeksDigits.Digit.Image = new ImageAmazfit();
+                dateWidget.WeeksDigits.Digit.Image.X = (long)userControl_pictures_DOW.numericUpDown_picturesX.Value;
+                dateWidget.WeeksDigits.Digit.Image.Y = (long)userControl_pictures_DOW.numericUpDown_picturesY.Value;
+                dateWidget.WeeksDigits.Digit.Image.MultilangImage = new List<MultilangImage>();
+                MultilangImage multilangImage = new MultilangImage();
+                multilangImage.LangCode = "All";
+                multilangImage.ImageSet = new ImageSetGTR2();
+                if (userControl_pictures_DOW.comboBoxGetImage() >= 0)
+                    multilangImage.ImageSet.ImageIndex = userControl_pictures_DOW.comboBoxGetImage();
+                multilangImage.ImageSet.ImagesCount = 7;
+                dateWidget.WeeksDigits.Digit.Image.MultilangImage.Add(multilangImage);
+            }
+
+            // день недели стрелкой
+            if (userControl_hand_DOW.checkBox_hand_Use.Checked && userControl_hand_DOW.comboBoxGetHandImage() >= 0)
+            {
+                if (dateWidget == null)
+                    dateWidget = new DateAmazfit();
+                if (dateWidget.DateClockHand == null)
+                    dateWidget.DateClockHand = new DateClockHand();
+                dateWidget.DateClockHand.WeekDayClockHand = new ClockHand();
+                dateWidget.DateClockHand.WeekDayClockHand.X = (long)userControl_hand_DOW.numericUpDown_handX.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Y = (long)userControl_hand_DOW.numericUpDown_handY.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.StartAngle = (float)userControl_hand_DOW.numericUpDown_hand_startAngle.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.EndAngle = (float)userControl_hand_DOW.numericUpDown_hand_endAngle.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer = new ImageCoord();
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates = new Coordinates();
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates.X = 
+                    (long)userControl_hand_DOW.numericUpDown_handX_offset.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates.Y = 
+                    (long)userControl_hand_DOW.numericUpDown_handY_offset .Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.ImageIndex = userControl_hand_DOW.comboBoxGetHandImage();
+                if (userControl_hand_DOW.comboBoxGetHandImageCentr() >= 0)
+                {
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover = new ImageCoord();
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates = new Coordinates();
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates.X = 
+                        (long)userControl_hand_DOW.numericUpDown_handX_centr.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates.Y = 
+                        (long)userControl_hand_DOW.numericUpDown_handY_centr.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.ImageIndex = userControl_hand_DOW.comboBoxGetHandImageCentr();
+                }
+
+                if (userControl_hand_DOW.comboBoxGetHandImageBackground() >= 0)
+                {
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale = new MultilangImageCoord();
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates = new Coordinates();
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates.X = 
+                        (long)userControl_hand_DOW.numericUpDown_handX_background.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates.Y = 
+                        (long)userControl_hand_DOW.numericUpDown_handY_background.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.ImageSet = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImageIndex = userControl_hand_DOW.comboBoxGetHandImageBackground();
+                    multilangImage.ImageSet.ImagesCount = 1;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.ImageSet.Add(multilangImage);
+                }
+            }
+
+            // месяц стрелкой
+            if (userControl_hand_Month.checkBox_hand_Use.Checked && userControl_hand_Month.comboBoxGetHandImage() >= 0)
+            {
+                if (dateWidget == null)
+                    dateWidget = new DateAmazfit();
+                if (dateWidget.DateClockHand == null)
+                    dateWidget.DateClockHand = new DateClockHand();
+                dateWidget.DateClockHand.WeekDayClockHand = new ClockHand();
+                dateWidget.DateClockHand.WeekDayClockHand.X = (long)userControl_hand_Month.numericUpDown_handX.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Y = (long)userControl_hand_Month.numericUpDown_handY.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.StartAngle = (float)userControl_hand_Month.numericUpDown_hand_startAngle.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.EndAngle = (float)userControl_hand_Month.numericUpDown_hand_endAngle.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer = new ImageCoord();
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates = new Coordinates();
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates.X =
+                    (long)userControl_hand_Month.numericUpDown_handX_offset.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates.Y =
+                    (long)userControl_hand_Month.numericUpDown_handY_offset.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.ImageIndex = userControl_hand_Month.comboBoxGetHandImage();
+                if (userControl_hand_Month.comboBoxGetHandImageCentr() >= 0)
+                {
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover = new ImageCoord();
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates = new Coordinates();
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates.X =
+                        (long)userControl_hand_Month.numericUpDown_handX_centr.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates.Y =
+                        (long)userControl_hand_Month.numericUpDown_handY_centr.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.ImageIndex = userControl_hand_Month.comboBoxGetHandImageCentr();
+                }
+
+                if (userControl_hand_Month.comboBoxGetHandImageBackground() >= 0)
+                {
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale = new MultilangImageCoord();
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates = new Coordinates();
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates.X =
+                        (long)userControl_hand_Month.numericUpDown_handX_background.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates.Y =
+                        (long)userControl_hand_Month.numericUpDown_handY_background.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.ImageSet = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImageIndex = userControl_hand_Month.comboBoxGetHandImageBackground();
+                    multilangImage.ImageSet.ImagesCount = 1;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.ImageSet.Add(multilangImage);
+                }
+            }
+
+            // число стрелкой
+            if (userControl_hand_Day.checkBox_hand_Use.Checked && userControl_hand_Day.comboBoxGetHandImage() >= 0)
+            {
+                if (dateWidget == null)
+                    dateWidget = new DateAmazfit();
+                if (dateWidget.DateClockHand == null)
+                    dateWidget.DateClockHand = new DateClockHand();
+                dateWidget.DateClockHand.WeekDayClockHand = new ClockHand();
+                dateWidget.DateClockHand.WeekDayClockHand.X = (long)userControl_hand_Day.numericUpDown_handX.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Y = (long)userControl_hand_Day.numericUpDown_handY.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.StartAngle = (float)userControl_hand_Day.numericUpDown_hand_startAngle.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.EndAngle = (float)userControl_hand_Day.numericUpDown_hand_endAngle.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer = new ImageCoord();
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates = new Coordinates();
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates.X =
+                    (long)userControl_hand_Day.numericUpDown_handX_offset.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.Coordinates.Y =
+                    (long)userControl_hand_Day.numericUpDown_handY_offset.Value;
+                dateWidget.DateClockHand.WeekDayClockHand.Pointer.ImageIndex = userControl_hand_Day.comboBoxGetHandImage();
+                if (userControl_hand_Day.comboBoxGetHandImageCentr() >= 0)
+                {
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover = new ImageCoord();
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates = new Coordinates();
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates.X =
+                        (long)userControl_hand_Day.numericUpDown_handX_centr.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.Coordinates.Y =
+                        (long)userControl_hand_Day.numericUpDown_handY_centr.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Cover.ImageIndex = userControl_hand_Day.comboBoxGetHandImageCentr();
+                }
+
+                if (userControl_hand_Day.comboBoxGetHandImageBackground() >= 0)
+                {
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale = new MultilangImageCoord();
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates = new Coordinates();
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates.X =
+                        (long)userControl_hand_Day.numericUpDown_handX_background.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.Coordinates.Y =
+                        (long)userControl_hand_Day.numericUpDown_handY_background.Value;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.ImageSet = new List<MultilangImage>();
+                    MultilangImage multilangImage = new MultilangImage();
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImageIndex = userControl_hand_Day.comboBoxGetHandImageBackground();
+                    multilangImage.ImageSet.ImagesCount = 1;
+                    dateWidget.DateClockHand.WeekDayClockHand.Scale.ImageSet.Add(multilangImage);
+                }
+            }
+
+            return dateWidget;
+        }
     }
 }

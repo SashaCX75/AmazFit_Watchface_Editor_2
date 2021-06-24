@@ -250,19 +250,21 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Очищает выпадающие списки с картинками, сбрасывает данные на значения по умолчанию</summary>
-        internal void SettingsClear()
+        internal void SettingsClear(bool full = true)
         {
             setValue = true;
 
             checkBox_hand_Use.Checked = false;
 
-            comboBox_hand_image.Items.Clear();
+            if (full)
+            {
+                comboBox_hand_image.Items.Clear();
+                comboBox_hand_imageCentr.Items.Clear();
+                comboBox_hand_imageBackground.Items.Clear(); 
+            }
+
             comboBox_hand_image.Text = "";
-
-            comboBox_hand_imageCentr.Items.Clear();
             comboBox_hand_imageCentr.Text = "";
-
-            comboBox_hand_imageBackground.Items.Clear();
             comboBox_hand_imageBackground.Text = "";
 
             numericUpDown_handX.Value = 0;
