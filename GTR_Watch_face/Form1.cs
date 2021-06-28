@@ -43,6 +43,7 @@ namespace AmazFit_Watchface_2
 
         int offSet_X = 227;
         int offSet_Y = 227;
+        string oldTabName = "";
 
 
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
@@ -420,88 +421,25 @@ namespace AmazFit_Watchface_2
                 }
             }
 
-            //for (int i = 0; i < 19; i++)
-            //{
-            //    switch (i)
-            //    {
-            //        case 0:
-            //            dataGridView_WidgetElement.Rows.Add("Date", Properties.FormStrings.WidgetName_Date);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 1:
-            //            dataGridView_WidgetElement.Rows.Add("Battery", Properties.FormStrings.WidgetName_Battery);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 2:
-            //            dataGridView_WidgetElement.Rows.Add("Steps", Properties.FormStrings.WidgetName_Steps);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 3:
-            //            dataGridView_WidgetElement.Rows.Add("Calories", Properties.FormStrings.WidgetName_Calories);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 4:
-            //            dataGridView_WidgetElement.Rows.Add("HeartRate", Properties.FormStrings.WidgetName_HeartRate);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 5:
-            //            dataGridView_WidgetElement.Rows.Add("PAI", Properties.FormStrings.WidgetName_PAI);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 6:
-            //            dataGridView_WidgetElement.Rows.Add("Distance", Properties.FormStrings.WidgetName_Distance);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 7:
-            //            dataGridView_WidgetElement.Rows.Add("StandUp", Properties.FormStrings.WidgetName_StandUp);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 8:
-            //            dataGridView_WidgetElement.Rows.Add("Weather", Properties.FormStrings.WidgetName_Weather);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 9:
-            //            dataGridView_WidgetElement.Rows.Add("UVindex", Properties.FormStrings.WidgetName_UVindex);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 10:
-            //            dataGridView_WidgetElement.Rows.Add("AirQuality", Properties.FormStrings.WidgetName_AirQuality);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 11:
-            //            dataGridView_WidgetElement.Rows.Add("Humidity", Properties.FormStrings.WidgetName_Humidity);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 12:
-            //            dataGridView_WidgetElement.Rows.Add("Sunrise", Properties.FormStrings.WidgetName_Sunrise);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 13:
-            //            dataGridView_WidgetElement.Rows.Add("WindForce", Properties.FormStrings.WidgetName_WindForce);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 14:
-            //            dataGridView_WidgetElement.Rows.Add("Altitude", Properties.FormStrings.WidgetName_Altitude);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 15:
-            //            dataGridView_WidgetElement.Rows.Add("AirPressure", Properties.FormStrings.WidgetName_AirPressure);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 16:
-            //            dataGridView_WidgetElement.Rows.Add("Stress", Properties.FormStrings.WidgetName_Stress);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 17:
-            //            dataGridView_WidgetElement.Rows.Add("ActivityGoal", Properties.FormStrings.WidgetName_ActivityGoal);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //        case 18:
-            //            dataGridView_WidgetElement.Rows.Add("FatBurning", Properties.FormStrings.WidgetName_FatBurning);
-            //            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.RowCount - 1].Visible = false;
-            //            break;
-            //    }
-            //}
+
+            for (int i = 1; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        dataGridView_Widget_DateAdd.Rows.Add("Day", Properties.FormStrings.DateName_Day);
+                        //dataGridView_Widget_DateAdd.Rows[dataGridView_Widget_DateAdd.RowCount - 1].Visible = false;
+                        break;
+                    case 2:
+                        dataGridView_Widget_DateAdd.Rows.Add("Month", Properties.FormStrings.DateName_Month);
+                        //dataGridView_Widget_DateAdd.Rows[dataGridView_Widget_DateAdd.RowCount - 1].Visible = false;
+                        break;
+                    case 3:
+                        dataGridView_Widget_DateAdd.Rows.Add("Year", Properties.FormStrings.DateName_Year);
+                        //dataGridView_Widget_DateAdd.Rows[dataGridView_Widget_DateAdd.RowCount - 1].Visible = false;
+                        break;
+                }
+            }
 
         }
 
@@ -761,6 +699,7 @@ namespace AmazFit_Watchface_2
             //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
             //}
             button_CreatePreview.Location= new Point(5, 563);
+            //HideWidgetEditElement();
             Logger.WriteLine("* Form1_Shown(end)");
         }
 
@@ -4139,24 +4078,7 @@ namespace AmazFit_Watchface_2
 
         private void numericUpDown_OffSetX_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (MouseСoordinates.X < 0) return;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if (e.X <= numericUpDown.Controls[1].Width + 1)
-            {
-                // Click is in text area
-                //numericUpDown.Value = MouseСoordinates.X - offSet_X;
-            }
-            else
-            {
-                if (e.Y <= numericUpDown.Controls[1].Height / 2)
-                {
-                    // Click is on Up arrow
-                }
-                else
-                {
-                    // Click is on Down arrow
-                }
-            }
+
         }
 
         private void numericUpDown_OffSetY_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -10911,8 +10833,6 @@ namespace AmazFit_Watchface_2
         private void WidgetRow_FullUp(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
         {
             if (rowIndex == 0) return;
-            int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
-            if (selectedWidget < 0) return;
             try
             {
                 DataGridViewRow selectedRow = dgv.Rows[rowIndex];
@@ -10923,6 +10843,8 @@ namespace AmazFit_Watchface_2
 
                 if (removWidgetElement)
                 {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
                     WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(0, selectedWidgetElement); 
@@ -10936,8 +10858,6 @@ namespace AmazFit_Watchface_2
         private void WidgetRow_Up(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
         {
             if (rowIndex == 0) return;
-            int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
-            if (selectedWidget < 0) return;
             try
             {
                 DataGridViewRow selectedRow = dgv.Rows[rowIndex];
@@ -10948,6 +10868,8 @@ namespace AmazFit_Watchface_2
 
                 if (removWidgetElement)
                 {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
                     WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex - 1, selectedWidgetElement); 
@@ -10962,8 +10884,6 @@ namespace AmazFit_Watchface_2
         {
             int totalRows = dgv.Rows.Count;
             if (rowIndex == totalRows - 1) return;
-            int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
-            if (selectedWidget < 0) return;
             try
             {
                 DataGridViewRow selectedRow = dgv.Rows[rowIndex];
@@ -10974,6 +10894,8 @@ namespace AmazFit_Watchface_2
 
                 if (removWidgetElement)
                 {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
                     WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex + 1, selectedWidgetElement); 
@@ -10988,8 +10910,6 @@ namespace AmazFit_Watchface_2
         {
             int totalRows = dgv.Rows.Count;
             if (rowIndex == totalRows - 1) return;
-            int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
-            if (selectedWidget < 0) return;
             try
             {
                 DataGridViewRow selectedRow = dgv.Rows[rowIndex];
@@ -11000,6 +10920,8 @@ namespace AmazFit_Watchface_2
 
                 if (removWidgetElement)
                 {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
                     WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
                     WidgetsTemp.Widget[selectedWidget].WidgetElement.Add(selectedWidgetElement); 
@@ -11101,6 +11023,8 @@ namespace AmazFit_Watchface_2
             bool widgetsExist = false;
             bool PreviewViewTemp = PreviewView;
             PreviewView = false;
+            tabControl_Widget.TabStop = true;
+            SelectWidgetElementAdd("Steps");
             dataGridView_WidgetElement.Rows.Clear();
             int selectedIndex = comboBox_WidgetNumber.SelectedIndex;
             if (selectedIndex >= 0)
@@ -11285,6 +11209,82 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        private void dataGridView_Widget_DateAdd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Up(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Down(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullUp(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullDown(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+        }
+
         private void button_Widget_Date_Start_Click(object sender, EventArgs e)
         {
             PreviewView = false;
@@ -11341,6 +11341,58 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        private void button_Widget_Date_StartAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullUp(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_UpAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Up(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_DownAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Down(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_EndAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullDown(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
         private void checkBox_TimeOnWidgetEdit_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox_TimeOnWidgetEdit.Checked)
@@ -11394,6 +11446,114 @@ namespace AmazFit_Watchface_2
                 int widgetElementIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
                 WidgetElementEdit(widgetIndex, widgetElementIndex);
             }
+        }
+
+        private void radioButton_WidgetAdd_CheckedChanged(object sender, EventArgs e)
+        {
+            groupBox_WidgetNumberAdd.Enabled = radioButton_WidgetAdd.Checked;
+            PreviewImage();
+        }
+
+        private void radioButton_WidgetAddType_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (!radioButton.Checked) return;
+            string name = null;
+            switch (radioButton.Name)
+            {
+                case "radioButton_DateWidgetAdd":
+                    name = "Date";
+                    break;
+                case "radioButton_StepsWidgetAdd":
+                    name = "Steps";
+                    break;
+                case "radioButton_CaloriesWidgetAdd":
+                    name = "Calories";
+                    break;
+                case "radioButton_HeartRateWidgetAdd":
+                    name = "HeartRate";
+                    break;
+                case "radioButton_PAIWidgetAdd":
+                    name = "PAI";
+                    break;
+                case "radioButton_DistanceWidgetAdd":
+                    name = "Distance";
+                    break;
+                case "radioButton_StandUpWidgetAdd":
+                    name = "StandUp";
+                    break;
+                case "radioButton_ActivityGoalWidgetAdd":
+                    name = "ActivityGoal";
+                    break;
+                case "radioButton_FatBurningWidgetAdd":
+                    name = "FatBurning";
+                    break;
+                case "radioButton_WeatherWidgetAdd":
+                    name = "Weather";
+                    break;
+                case "radioButton_UVindexWidgetAdd":
+                    name = "UVindex";
+                    break;
+                case "radioButton_HumidityWidgetAdd":
+                    name = "Humidity";
+                    break;
+                case "radioButton_SunriseWidgetAdd":
+                    name = "Sunrise";
+                    break;
+                case "radioButton_WindForceWidgetAdd":
+                    name = "WindForce";
+                    break;
+                case "radioButton_AirPressureWidgetAdd":
+                    name = "AirPressure";
+                    break;
+                case "radioButton_BatteryWidgetAdd":
+                    name = "Battery";
+                    break;
+            }
+            SelectWidgetElementAdd(name);
+            PreviewImage();
+        }
+
+        private void userControl_WidgetAdd_ValueChanged(object sender, EventArgs eventArgs)
+        {
+            if (PreviewView) PreviewImage();
+        }
+
+        private void tabControl_Widget_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void tabControl_Widget_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!tabControl_Widget.TabStop) 
+            {
+                tabControl_Widget.TabStop = true;
+                HideWidgetEditElement();
+            }
+        }
+
+        private void button_WidgetAdd_Click(object sender, EventArgs e)
+        {
+            if (radioButton_WidgetAdd.Checked) AddWidget();
+            else if (radioButton_WidgetElementAdd.Checked) AddWidgetElement();
+        }
+
+        private void WidgetAdd_ValueChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void radioButton_WidgetPreviewNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tabName = tabControl1.SelectedTab.Name;
+            if(tabName == "tabPage_Widgets" || oldTabName == "tabPage_Widgets") PreviewImage();
+            oldTabName = tabName;
         }
 
 

@@ -31,6 +31,13 @@ namespace AmazFit_Watchface_2
             bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showProgressArea, 
             bool showCentrHend, bool showWidgetsArea, int link)
         {
+
+            if (tabControl1.SelectedTab.Name == "tabPage_Widgets" && radioButton_WidgetPreviewEdit.Checked)
+            {
+                DrawWidgetEditScreen(gPanel, showWidgetsArea);
+                return;
+            }
+
             Logger.WriteLine("* PreviewToBitmap");
             if(link == 1)
             {
@@ -38,7 +45,7 @@ namespace AmazFit_Watchface_2
                     showShortcutsBorder, showAnimation, showProgressArea, showCentrHend);
                 return;
             }
-            var src = new Bitmap(1, 1);
+            Bitmap src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
             int i;
             //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
@@ -2645,14 +2652,13 @@ namespace AmazFit_Watchface_2
             UserControl_FontRotate userControl_FontRotate_Current = userControl_SystemFont_Group.userControl_FontRotate_weather_Current;
             UserControl_FontRotate userControl_FontRotate_Min = userControl_SystemFont_Group.userControl_FontRotate_weather_Min;
             UserControl_FontRotate userControl_FontRotate_Max = userControl_SystemFont_Group.userControl_FontRotate_weather_Max;
-            bool AvailabilityIcon = false;
+            
 
             // погода картинками
             if (userPanel_pictures.checkBox_pictures_Use.Checked)
             {
                 if (userPanel_pictures.comboBoxGetSelectedIndexImage() >= 0)
                 {
-                    //AvailabilityIcon = true;
                     NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
 
@@ -2697,13 +2703,16 @@ namespace AmazFit_Watchface_2
                     if (showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index,
-                                        BBorder, AvailabilityIcon);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else if (imageError_index >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[imageError_index]);
-                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                        //src = OpenFileStream(ListImagesFullName[imageError_index]);
+                        //gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+
+                        Draw_weather_text(gPanel, imageIndex, x, y,
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index,
+                                        BBorder, imageError_index, !showTemperature);
                     }
 
                     if (userPanel_text.comboBoxGetSelectedIndexIcon() >= 0)
@@ -2745,13 +2754,16 @@ namespace AmazFit_Watchface_2
                     if (showTemperature)
                     {
                         Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value_min, addZero, imageMinus_index, separator_index,
-                                        BBorder, AvailabilityIcon);
+                                        spasing, alignment, value_min, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else if (imageError_index >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[imageError_index]);
-                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                        //src = OpenFileStream(ListImagesFullName[imageError_index]);
+                        //gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+
+                        Temperature_offsetX = Draw_weather_text(gPanel, imageIndex, x, y,
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index,
+                                        BBorder, imageError_index, !showTemperature);
                     }
 
                     if (userPanel_textMin.comboBoxGetSelectedIndexIcon() >= 0)
@@ -2798,13 +2810,16 @@ namespace AmazFit_Watchface_2
                     if (showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value_max, addZero, imageMinus_index, separator_index,
-                                        BBorder, AvailabilityIcon);
+                                        spasing, alignment, value_max, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else if (imageError_index >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[imageError_index]);
-                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                        //src = OpenFileStream(ListImagesFullName[imageError_index]);
+                        //gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+
+                        Draw_weather_text(gPanel, imageIndex, x, y,
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index,
+                                        BBorder, imageError_index, !showTemperature);
                     }
 
                     if (userPanel_textMax.comboBoxGetSelectedIndexIcon() >= 0)
@@ -4975,7 +4990,7 @@ namespace AmazFit_Watchface_2
                     {
                         string s = ListImagesFullName[i];
                         src = OpenFileStream(ListImagesFullName[i]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        graphics.DrawImage(src, PointX, PointY);
                         PointX = PointX + src.Width + spacing;
                         //src.Dispose();
                     }
@@ -5386,9 +5401,11 @@ namespace AmazFit_Watchface_2
         /// <param name="image_minus_index">Символ "-"</param>
         /// <param name="separator_index">Символ разделителя (единиц измерения)</param>
         /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        /// <param name="AvailabilityIcon">Наличие иконки погоды</param>
+        /// <param name="imageError_index">Иконка ошибки данны</param>
+        /// <param name="errorData">отображать ошибку данный</param>
         private int Draw_weather_text(Graphics graphics, int image_index, int x, int y, int spacing,
-            int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder, bool AvailabilityIcon)
+            int alignment, int value, bool addZero, int image_minus_index, int separator_index, bool BBorder, 
+            int imageError_index = -1, bool errorData = false)
         {
             while (spacing > 127)
             {
@@ -5431,10 +5448,10 @@ namespace AmazFit_Watchface_2
             }
 
             int DateLenght = widthD * 3 + widthM + widthCF +1;
-            if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - widthCF;
+            //if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - widthCF;
             if (spacing > 0) DateLenght = DateLenght + 4*spacing;
             if (widthM == 0) DateLenght = DateLenght - spacing;
-            if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - spacing;
+            //if (alignment == 2 && AvailabilityIcon) DateLenght = DateLenght - spacing;
 
             int DateLenghtReal = 0;
             Logger.WriteLine("DateLenght");
@@ -5467,16 +5484,6 @@ namespace AmazFit_Watchface_2
 
             DateLenghtReal = DateLenghtReal - spacing;
 
-            
-            //if (radioButton_GTS2.Checked)
-            //{
-            //    if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
-            //    {
-            //        src = OpenFileStream(ListImagesFullName[image_minus_index]);
-            //        DateLenght = DateLenght + src.Width + Math.Abs(spacing);
-            //    } 
-            //}
-
             int PointX = 0;
             int PointY = y;
             switch (alignment)
@@ -5496,40 +5503,63 @@ namespace AmazFit_Watchface_2
             }
 
             Logger.WriteLine("Draw value");
-            foreach (char ch in CH)
+            if (!errorData)
             {
-                _number = 0;
-                if (int.TryParse(ch.ToString(), out _number))
+                foreach (char ch in CH)
                 {
-                    i = image_index + _number;
-                    if (i < ListImagesFullName.Count)
+                    _number = 0;
+                    if (int.TryParse(ch.ToString(), out _number))
                     {
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                        //src.Dispose();
+                        i = image_index + _number;
+                        if (i < ListImagesFullName.Count)
+                        {
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
+                            graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                            PointX = PointX + src.Width + spacing;
+                            //src.Dispose();
+                        }
                     }
-                }
-                else
-                {
-                    if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
+                    else
                     {
-                        //src = new Bitmap(ListImagesFullName[dec]);
-                        src = OpenFileStream(ListImagesFullName[image_minus_index]);
-                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + src.Width + spacing;
-                        //src.Dispose();
+                        if (image_minus_index >= 0 && image_minus_index < ListImagesFullName.Count)
+                        {
+                            //src = new Bitmap(ListImagesFullName[dec]);
+                            src = OpenFileStream(ListImagesFullName[image_minus_index]);
+                            graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                            PointX = PointX + src.Width + spacing;
+                            //src.Dispose();
+                        }
                     }
-                }
 
+                }
+                result = PointX - spacing;
+                if (separator_index > -1)
+                {
+                    src = OpenFileStream(ListImagesFullName[separator_index]);
+                    graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    result = result + src.Width + spacing;
+                } 
             }
-            result = PointX - spacing;
-            if (separator_index > -1)
+            else if (imageError_index >= 0)
             {
-                src = OpenFileStream(ListImagesFullName[separator_index]);
-                graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                result = result + src.Width + spacing;
+                src = OpenFileStream(ListImagesFullName[imageError_index]);
+                switch (alignment)
+                {
+                    case 0:
+                        PointX = x;
+                        break;
+                    case 1:
+                        PointX = x + DateLenght - src.Width;
+                        break;
+                    case 2:
+                        PointX = x + (DateLenght - src.Width) / 2;
+                        break;
+                    default:
+                        PointX = x;
+                        break;
+                }
+                graphics.DrawImage(src, PointX, PointY);
             }
             src.Dispose();
 

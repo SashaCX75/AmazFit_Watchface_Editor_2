@@ -459,6 +459,9 @@
     <EmbeddedResource Include="UserControls\UserControl_pictures_weather.zh.resx">
       <DependentUpon>UserControl_pictures_weather.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_preview.en.resx">
+      <DependentUpon>UserControl_preview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleCircle.en.resx">
       <DependentUpon>UserControl_scaleCircle.cs</DependentUpon>
     </EmbeddedResource>

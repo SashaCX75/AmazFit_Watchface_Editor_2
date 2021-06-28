@@ -6914,6 +6914,34 @@ namespace AmazFit_Watchface_2
             userControl_hand_DOWWidget.ComboBoxAddItems(ListImages);
 
             if (comboBox_WidgetNumber.Items.Count > 0) comboBox_WidgetNumber.SelectedIndex = 0;
+
+            comboBox_WidgetDescriptionBackgroundAdd.Items.AddRange(ListImages.ToArray());
+            comboBox_WidgetBorderActivAdd.Items.AddRange(ListImages.ToArray());
+            comboBox_WidgetBorderInactivAdd.Items.AddRange(ListImages.ToArray());
+
+
+            userControl_previewWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_picturesWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_textWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_text_goalWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_text_weatherWidgetCurAdd.ComboBoxAddItems(ListImages);
+            userControl_text_weatherWidgetMinAdd.ComboBoxAddItems(ListImages);
+            userControl_text_weatherWidgetMaxAdd.ComboBoxAddItems(ListImages);
+            userControl_text_goalWidgetSunriseAdd.ComboBoxAddItems(ListImages);
+            userControl_text_goalWidgetSunsetAdd.ComboBoxAddItems(ListImages);
+            userControl_handWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_scaleCircleWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_scaleLinearWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_iconWidgetAdd.ComboBoxAddItems(ListImages);
+
+            userControl_text_date_DayWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_hand_DayWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_pictures_MonthWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_text_date_MonthWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_hand_MonthWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_text_date_YearWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_pictures_DOWWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_hand_DOWWidgetAdd.ComboBoxAddItems(ListImages);
         }
 
         // сбрасываем все настройки отображения
@@ -7223,7 +7251,6 @@ namespace AmazFit_Watchface_2
         }
         private void SettingsClear_Widgets()
         {
-            bool PreviewViewTemp = PreviewView;
             comboBox_WidgetNumber.SelectedIndex = -1;
             comboBox_WidgetNumber.Items.Clear();
             comboBox_WidgetNumber.Text = "";
@@ -7232,9 +7259,71 @@ namespace AmazFit_Watchface_2
             comboBox_WidgetsUnderMask.Text = "";
             comboBox_WidgetsTopMask.Items.Clear();
             comboBox_WidgetsTopMask.Text = "";
-            PreviewView = PreviewViewTemp;
 
-            //dataGridView_WidgetElement.Rows.Clear();
+            comboBox_WidgetDescriptionBackground.Items.Clear();
+            comboBox_WidgetDescriptionBackground.Text = "";
+            comboBox_WidgetBorderActiv.Items.Clear();
+            comboBox_WidgetBorderActiv.Text = "";
+            comboBox_WidgetBorderInactiv.Items.Clear();
+            comboBox_WidgetBorderInactiv.Text = "";
+
+
+            userControl_previewWidget.SettingsClear();
+            userControl_picturesWidget.SettingsClear();
+            userControl_textWidget.SettingsClear();
+            userControl_text_goalWidget.SettingsClear();
+            userControl_text_weatherWidgetCur.SettingsClear();
+            userControl_text_weatherWidgetMin.SettingsClear();
+            userControl_text_weatherWidgetMax.SettingsClear();
+            userControl_text_goalWidgetSunrise.SettingsClear();
+            userControl_text_goalWidgetSunset.SettingsClear();
+            userControl_handWidget.SettingsClear();
+            userControl_scaleCircleWidget.SettingsClear();
+            userControl_scaleLinearWidget.SettingsClear();
+            userControl_iconWidget.SettingsClear();
+
+            userControl_text_date_DayWidget.SettingsClear();
+            userControl_hand_DayWidget.SettingsClear();
+            userControl_pictures_MonthWidget.SettingsClear();
+            userControl_text_date_MonthWidget.SettingsClear();
+            userControl_hand_MonthWidget.SettingsClear();
+            userControl_text_date_YearWidget.SettingsClear();
+            userControl_pictures_DOWWidget.SettingsClear();
+            userControl_hand_DOWWidget.SettingsClear();
+
+
+
+
+            comboBox_WidgetDescriptionBackgroundAdd.Items.Clear();
+            comboBox_WidgetDescriptionBackgroundAdd.Text = "";
+            comboBox_WidgetBorderActivAdd.Items.Clear();
+            comboBox_WidgetBorderActivAdd.Text = "";
+            comboBox_WidgetBorderInactivAdd.Items.Clear();
+            comboBox_WidgetBorderInactivAdd.Text = "";
+
+
+            userControl_previewWidgetAdd.SettingsClear();
+            userControl_picturesWidgetAdd.SettingsClear();
+            userControl_textWidgetAdd.SettingsClear();
+            userControl_text_goalWidgetAdd.SettingsClear();
+            userControl_text_weatherWidgetCurAdd.SettingsClear();
+            userControl_text_weatherWidgetMinAdd.SettingsClear();
+            userControl_text_weatherWidgetMaxAdd.SettingsClear();
+            userControl_text_goalWidgetSunriseAdd.SettingsClear();
+            userControl_text_goalWidgetSunsetAdd.SettingsClear();
+            userControl_handWidgetAdd.SettingsClear();
+            userControl_scaleCircleWidgetAdd.SettingsClear();
+            userControl_scaleLinearWidgetAdd.SettingsClear();
+            userControl_iconWidgetAdd.SettingsClear();
+
+            userControl_text_date_DayWidgetAdd.SettingsClear();
+            userControl_hand_DayWidgetAdd.SettingsClear();
+            userControl_pictures_MonthWidgetAdd.SettingsClear();
+            userControl_text_date_MonthWidgetAdd.SettingsClear();
+            userControl_hand_MonthWidgetAdd.SettingsClear();
+            userControl_text_date_YearWidgetAdd.SettingsClear();
+            userControl_pictures_DOWWidgetAdd.SettingsClear();
+            userControl_hand_DOWWidgetAdd.SettingsClear();
         }
 
         // устанавливаем тип циферблата исходя из DeviceId

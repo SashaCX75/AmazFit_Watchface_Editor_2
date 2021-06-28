@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -37,45 +38,88 @@ namespace AmazFit_Watchface_2
             label01.Enabled = true;
         }
 
+        /// <summary>Перебираем все виджеты и посылаем их на отрисовку</summary>
         public void DrawWidgets(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder,
             bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showProgressArea,
             bool showCentrHend, bool showWidgetsArea)
         {
-            if (Watch_Face == null || Watch_Face.Widgets == null) return;
-            if (Watch_Face.Widgets.Widget == null || Watch_Face.Widgets.Widget.Count < 1) return;
-            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
-            for (int i = 0; i < Watch_Face.Widgets.Widget.Count; i++)
+            if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
             {
-                int widgetElementIndex = 0;
-                if (i== widgetIndex) widgetElementIndex = SelectedWidgetElement();
-                if (Watch_Face.Widgets.Widget[i].WidgetElement != null &&
-                    Watch_Face.Widgets.Widget[i].WidgetElement.Count > 0)
+                int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+                for (int i = 0; i < Watch_Face.Widgets.Widget.Count; i++)
                 {
-                    WidgetElement widgetElement = Watch_Face.Widgets.Widget[i].WidgetElement[widgetElementIndex];
-                    DrawWidgetElement(widgetElement,
-                        gPanel, scale, crop, WMesh, BMesh, BBorder, showShortcuts, showShortcutsArea,
-                        showShortcutsBorder, showAnimation, showProgressArea, showCentrHend);
-                }
+                    int widgetElementIndex = 0;
+                    if (i == widgetIndex)
+                    {
+                        widgetElementIndex = SelectedWidgetElement();
+                        if (tabControl1.SelectedTab.Name == "tabPage_Widgets" &&
+                            tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" &&
+                            radioButton_WidgetElementAdd.Checked) widgetElementIndex = -1;
+                    }
+                    if (Watch_Face.Widgets.Widget[i].WidgetElement != null &&
+                        Watch_Face.Widgets.Widget[i].WidgetElement.Count > 0 && widgetElementIndex >= 0)
+                    {
+                        WidgetElement widgetElement = Watch_Face.Widgets.Widget[i].WidgetElement[widgetElementIndex];
+                        DrawWidgetElement(widgetElement,
+                            gPanel, scale, crop, WMesh, BMesh, BBorder, showShortcuts, showShortcutsArea,
+                            showShortcutsBorder, showAnimation, showProgressArea, showCentrHend);
+                    }
 
+                    if (showWidgetsArea)
+                    {
+                        Logger.WriteLine("DrawWidgetBorder");
+                        int x = (int)Watch_Face.Widgets.Widget[i].X;
+                        int y = (int)Watch_Face.Widgets.Widget[i].Y;
+                        int width = (int)Watch_Face.Widgets.Widget[i].Width;
+                        int height = (int)Watch_Face.Widgets.Widget[i].Height;
+                        Rectangle rect = new Rectangle(x, y, width - 1, height - 1);
+                        using (Pen pen1 = new Pen(Color.White, 1))
+                        {
+                            gPanel.DrawRectangle(pen1, rect);
+                        }
+                        using (Pen pen2 = new Pen(Color.Black, 1))
+                        {
+                            pen2.DashStyle = DashStyle.Dot;
+                            gPanel.DrawRectangle(pen2, rect);
+                        }
+
+                        Logger.WriteLine("DrawWidgetBorder (end)");
+
+                    }
+                } 
+            }
+
+            if(tabControl1.SelectedTab.Name == "tabPage_Widgets" && 
+                tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd")
+            {
+                WidgetElement widgetElement = WidgetElementAdd();
+                DrawWidgetElement(widgetElement,
+                    gPanel, scale, crop, WMesh, BMesh, BBorder, showShortcuts, showShortcutsArea,
+                    showShortcutsBorder, showAnimation, showProgressArea, showCentrHend);
+                
                 if (showWidgetsArea)
                 {
-                    Logger.WriteLine("DrawWidgetBorder");
-                    int x = (int)Watch_Face.Widgets.Widget[i].X;
-                    int y = (int)Watch_Face.Widgets.Widget[i].Y;
-                    int width = (int)Watch_Face.Widgets.Widget[i].Width;
-                    int height = (int)Watch_Face.Widgets.Widget[i].Height;
-                    Rectangle rect = new Rectangle(x, y, width - 1, height - 1);
-                    using (Pen pen1 = new Pen(Color.White, 1))
+                    if (radioButton_WidgetAdd.Checked)
                     {
-                        gPanel.DrawRectangle(pen1, rect);
-                    }
-                    using (Pen pen2 = new Pen(Color.Black, 1))
-                    {
-                        pen2.DashStyle = DashStyle.Dot;
-                        gPanel.DrawRectangle(pen2, rect);
+                        Logger.WriteLine("DrawWidgetBorder");
+                        int x = (int)numericUpDown_WidgetXAdd.Value;
+                        int y = (int)numericUpDown_WidgetYAdd.Value;
+                        int width = (int)numericUpDown_WidgetWidthAdd.Value;
+                        int height = (int)numericUpDown_WidgetHeightAdd.Value;
+                        Rectangle rect = new Rectangle(x, y, width - 1, height - 1);
+                        using (Pen pen1 = new Pen(Color.White, 1))
+                        {
+                            gPanel.DrawRectangle(pen1, rect);
+                        }
+                        using (Pen pen2 = new Pen(Color.Black, 1))
+                        {
+                            pen2.DashStyle = DashStyle.Dot;
+                            gPanel.DrawRectangle(pen2, rect);
+                        }
+
+                        Logger.WriteLine("DrawWidgetBorder (end)");
                     }
 
-                    Logger.WriteLine("DrawWidgetBorder (end)");
                 }
             }
         }
@@ -95,10 +139,12 @@ namespace AmazFit_Watchface_2
             return RowIndex;
         }
 
+        /// <summary>отрисовываем присланый WidgetElement</summary>
         public void DrawWidgetElement(WidgetElement widgetElement, Graphics gPanel, float scale, 
             bool crop, bool WMesh, bool BMesh, bool BBorder,bool showShortcuts, bool showShortcutsArea, 
             bool showShortcutsBorder, bool showAnimation, bool showProgressArea, bool showCentrHend)
         {
+            if (widgetElement == null) return;
             //WidgetElement widgetElement = Watch_Face.Widgets.Widget[widgetIndex].WidgetElement[widgetElementIndex];
             Bitmap src = new Bitmap(1, 1);
             // активности
@@ -516,9 +562,27 @@ namespace AmazFit_Watchface_2
                                     else if (activity.Type == "Weather")
                                     {
                                         //TODO проверить зависимость выравнивания температуры от наличия иконки для виджетов
-                                        Draw_weather_text(gPanel, _imageIndex, _x, _y,
-                                        _spacing, _alignment, (int)value, _addZero, _imageDecimalIndex, _imageUnitIndex,
-                                        BBorder, false);
+                                        bool showTemperature = Watch_Face_Preview_Set.Weather.showTemperature;
+                                        int imageError_index = -1;
+                                        if (digitalCommonDigit.Digit.Image.NoDataImageIndex != null)
+                                            imageError_index = (int)digitalCommonDigit.Digit.Image.NoDataImageIndex;
+                                        //Draw_weather_text(gPanel, _imageIndex, _x, _y,
+                                        //_spacing, _alignment, (int)value, _addZero, _imageDecimalIndex, _imageUnitIndex, BBorder);
+
+                                        if (showTemperature)
+                                        {
+                                            _offsetX = Draw_weather_text(gPanel, _imageIndex, _x, _y,
+                                                _spacing, _alignment, (int)value, _addZero, _imageDecimalIndex, _imageUnitIndex, BBorder);
+                                        }
+                                        else if (imageError_index >= 0)
+                                        {
+                                            //src = OpenFileStream(ListImagesFullName[imageError_index]);
+                                            //gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+
+                                            _offsetX = Draw_weather_text(gPanel, _imageIndex, _x, _y,
+                                                            _spacing, _alignment, (int)value, _addZero, _imageDecimalIndex, _imageUnitIndex,
+                                                            BBorder, imageError_index, !showTemperature);
+                                        }
                                     }
                                     else
                                     {
@@ -1348,10 +1412,38 @@ namespace AmazFit_Watchface_2
             }
 
             src.Dispose();
+        }
+
+        /// <summary>отрисовываем Preview присланого WidgetElement</summary>
+        public void DrawWidgetElementPreview(WidgetElement widgetElement, Graphics gPanel, int x, int y, int width, int height)
+        {
+            if (widgetElement == null) return;
+            //WidgetElement widgetElement = Watch_Face.Widgets.Widget[widgetIndex].WidgetElement[widgetElementIndex];
+            Bitmap src = new Bitmap(1, 1);
+            if (widgetElement.Preview != null && widgetElement.Preview.Count > 0)
+            {
+                foreach (MultilangImage multilangImage in widgetElement.Preview)
+                {
+                    if (multilangImage.LangCode == "All") 
+                    {
+                        int index = (int)multilangImage.ImageSet.ImageIndex - 1;
+                        if (index >= 0)
+                        {
+                            src = OpenFileStream(ListImagesFullName[index]);
+                            x = x + (width - src.Width) / 2;
+                            y = y + (height - src.Height) / 2;
+                            gPanel.DrawImage(src, x, y); 
+                        }
+                    }
+                }
+            }
+
+            src.Dispose();
 
             return;
         }
 
+        /// <summary>меняем цвета таблици на похожие на неактивные</summary>
         private void dataGridView_WidgetElement_EnabledChanged(object sender, EventArgs e)
         {
             if (dataGridView_WidgetElement.Enabled)
@@ -1384,67 +1476,87 @@ namespace AmazFit_Watchface_2
                         switch (widgetElement.Activity[0].Type)
                         {
                             case "Battery":
-                                dataGridView_WidgetElement.Rows.Add("Battery", Properties.FormStrings.WidgetName_Battery);
+                                dataGridView_WidgetElement.Rows.Add("Battery",
+                                    Properties.FormStrings.ActivityName_Battery, Properties.FormStrings.WidgetName_Battery);
                                 break;
                             case "Steps":
-                                dataGridView_WidgetElement.Rows.Add("Steps", Properties.FormStrings.WidgetName_Steps);
+                                dataGridView_WidgetElement.Rows.Add("Steps",
+                                    Properties.FormStrings.ActivityName_Steps, Properties.FormStrings.WidgetName_Steps);
                                 break;
                             case "Calories":
-                                dataGridView_WidgetElement.Rows.Add("Calories", Properties.FormStrings.WidgetName_Calories);
+                                dataGridView_WidgetElement.Rows.Add("Calories", 
+                                    Properties.FormStrings.ActivityName_Calories, Properties.FormStrings.WidgetName_Calories);
                                 break;
                             case "HeartRate":
-                                dataGridView_WidgetElement.Rows.Add("HeartRate", Properties.FormStrings.WidgetName_HeartRate);
+                                dataGridView_WidgetElement.Rows.Add("HeartRate",
+                                    Properties.FormStrings.ActivityName_HeartRate, Properties.FormStrings.WidgetName_HeartRate);
                                 break;
                             case "PAI":
-                                dataGridView_WidgetElement.Rows.Add("PAI", Properties.FormStrings.WidgetName_PAI);
+                                dataGridView_WidgetElement.Rows.Add("PAI",
+                                    Properties.FormStrings.ActivityName_PAI, Properties.FormStrings.WidgetName_PAI);
                                 break;
                             case "Distance":
-                                dataGridView_WidgetElement.Rows.Add("Distance", Properties.FormStrings.WidgetName_Distance);
+                                dataGridView_WidgetElement.Rows.Add("Distance",
+                                    Properties.FormStrings.ActivityName_Distance, Properties.FormStrings.WidgetName_Distance);
                                 break;
                             case "StandUp":
-                                dataGridView_WidgetElement.Rows.Add("StandUp", Properties.FormStrings.WidgetName_StandUp);
+                                dataGridView_WidgetElement.Rows.Add("StandUp",
+                                    Properties.FormStrings.ActivityName_StandUp, Properties.FormStrings.WidgetName_StandUp);
                                 break;
                             case "Weather":
-                                dataGridView_WidgetElement.Rows.Add("Weather", Properties.FormStrings.WidgetName_Weather);
+                                dataGridView_WidgetElement.Rows.Add("Weather",
+                                    Properties.FormStrings.ActivityName_Weather, Properties.FormStrings.WidgetName_Weather);
                                 break;
                             case "UVindex":
-                                dataGridView_WidgetElement.Rows.Add("UVindex", Properties.FormStrings.WidgetName_UVindex);
+                                dataGridView_WidgetElement.Rows.Add("UVindex",
+                                    Properties.FormStrings.ActivityName_UVindex, Properties.FormStrings.WidgetName_UVindex);
                                 break;
                             case "AirQuality":
-                                dataGridView_WidgetElement.Rows.Add("AirQuality", Properties.FormStrings.WidgetName_AirQuality);
+                                dataGridView_WidgetElement.Rows.Add("AirQuality",
+                                    Properties.FormStrings.ActivityName_AirQuality, Properties.FormStrings.WidgetName_AirQuality);
                                 break;
                             case "Humidity":
-                                dataGridView_WidgetElement.Rows.Add("Humidity", Properties.FormStrings.WidgetName_Humidity);
+                                dataGridView_WidgetElement.Rows.Add("Humidity",
+                                    Properties.FormStrings.ActivityName_Humidity, Properties.FormStrings.WidgetName_Humidity);
                                 break;
                             case "Sunrise":
-                                dataGridView_WidgetElement.Rows.Add("Sunrise", Properties.FormStrings.WidgetName_Sunrise);
+                                dataGridView_WidgetElement.Rows.Add("Sunrise",
+                                    Properties.FormStrings.ActivityName_Sunrise, Properties.FormStrings.WidgetName_Sunrise);
                                 break;
                             case "WindForce":
-                                dataGridView_WidgetElement.Rows.Add("WindForce", Properties.FormStrings.WidgetName_WindForce);
+                                dataGridView_WidgetElement.Rows.Add("WindForce",
+                                    Properties.FormStrings.ActivityName_WindForce, Properties.FormStrings.WidgetName_WindForce);
                                 break;
                             case "Altitude":
-                                dataGridView_WidgetElement.Rows.Add("Altitude", Properties.FormStrings.WidgetName_Altitude);
+                                dataGridView_WidgetElement.Rows.Add("Altitude",
+                                    Properties.FormStrings.ActivityName_Altitude, Properties.FormStrings.WidgetName_Altitude);
                                 break;
                             case "AirPressure":
-                                dataGridView_WidgetElement.Rows.Add("AirPressure", Properties.FormStrings.WidgetName_AirPressure);
+                                dataGridView_WidgetElement.Rows.Add("AirPressure",
+                                    Properties.FormStrings.ActivityName_AirPressure, Properties.FormStrings.WidgetName_AirPressure);
                                 break;
                             case "Stress":
-                                dataGridView_WidgetElement.Rows.Add("Stress", Properties.FormStrings.WidgetName_Stress);
+                                dataGridView_WidgetElement.Rows.Add("Stress",
+                                    Properties.FormStrings.ActivityName_Stress, Properties.FormStrings.WidgetName_Stress);
                                 break;
                             case "ActivityGoal":
-                                dataGridView_WidgetElement.Rows.Add("ActivityGoal", Properties.FormStrings.WidgetName_ActivityGoal);
+                                dataGridView_WidgetElement.Rows.Add("ActivityGoal",
+                                    Properties.FormStrings.ActivityName_ActivityGoal, Properties.FormStrings.WidgetName_ActivityGoal);
                                 break;
                             case "FatBurning":
-                                dataGridView_WidgetElement.Rows.Add("FatBurning", Properties.FormStrings.WidgetName_FatBurning);
+                                dataGridView_WidgetElement.Rows.Add("FatBurning",
+                                    Properties.FormStrings.ActivityName_FatBurning, Properties.FormStrings.WidgetName_FatBurning);
                                 break;
                         } 
                     }
-                    if(widgetElement.Date != null) dataGridView_WidgetElement.Rows.Add("Date", Properties.FormStrings.WidgetName_Date);
+                    if(widgetElement.Date != null) dataGridView_WidgetElement.Rows.Add("Date", 
+                        Properties.FormStrings.WidgeDescription_Date, Properties.FormStrings.WidgetName_Date);
                 }
                 dataGridView_WidgetElement.ClearSelection();
             }
         }
 
+        /// <summary>выбрали новый WidgetElement в таблице редактирования</summary>
         private void dataGridView_WidgetElement_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView_WidgetElement.SelectedCells.Count > 0)
@@ -1484,6 +1596,7 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        /// <summary>выбрали новый элемент в таблице редактирования даты на виджете</summary>
         private void dataGridView_Widget_Date_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView_Widget_Date.SelectedCells.Count > 0)
@@ -1518,6 +1631,42 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        /// <summary>выбрали новый элемент в таблице добавления даты на виджете</summary>
+        private void dataGridView_Widget_DateAdd_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].RowIndex;
+
+                button_Widget_Date_StartAdd.Enabled = true;
+                button_Widget_Date_UpAdd.Enabled = true;
+                button_Widget_Date_DownAdd.Enabled = true;
+                button_Widget_Date_EndAdd.Enabled = true;
+
+                if (RowIndex == 0)
+                {
+                    button_Widget_Date_StartAdd.Enabled = false;
+                    button_Widget_Date_UpAdd.Enabled = false;
+                }
+
+                if (RowIndex == dataGridView_Widget_DateAdd.Rows.Count - 1)
+                {
+                    button_Widget_Date_DownAdd.Enabled = false;
+                    button_Widget_Date_EndAdd.Enabled = false;
+                }
+            }
+            else
+            {
+                button_Widget_Date_StartAdd.Enabled = false;
+                button_Widget_Date_UpAdd.Enabled = false;
+                button_Widget_Date_DownAdd.Enabled = false;
+                button_Widget_Date_EndAdd.Enabled = false;
+            }
+
+            PreviewImage();
+        }
+
+        /// <summary>заполняем настройки для выбранного WidgetElement</summary>
         private void SelectWidgetElement(string name, WidgetElement widgetElement)
         {
             PreviewView = false;
@@ -3542,6 +3691,555 @@ namespace AmazFit_Watchface_2
             PreviewView = true;
         }
 
+        /// <summary>активируем панели настроек для выбранного WidgetElement при добавлении</summary>
+        private void SelectWidgetElementAdd(string name)
+        {
+            if (name == null) return;
+            bool PreviewViewTemp = PreviewView;
+            PreviewView = false;
+
+            userControl_previewWidgetAdd.Visible = false;
+            userControl_picturesWidgetAdd.Visible = false;
+            userControl_pictures_weatherWidgetAdd.Visible = false;
+            userControl_textWidgetAdd.Visible = false;
+            userControl_text_goalWidgetAdd.Visible = false;
+            userControl_text_weatherWidgetCurAdd.Visible = false;
+            userControl_text_weatherWidgetMinAdd.Visible = false;
+            userControl_text_weatherWidgetMaxAdd.Visible = false;
+            userControl_text_goalWidgetSunriseAdd.Visible = false;
+            userControl_text_goalWidgetSunsetAdd.Visible = false;
+            userControl_handWidgetAdd.Visible = false;
+            userControl_scaleCircleWidgetAdd.Visible = false;
+            userControl_scaleLinearWidgetAdd.Visible = false;
+            userControl_SystemFont_GroupWidgetAdd.Visible = false;
+            userControl_SystemFont_GroupWeatherWidgetAdd.Visible = false;
+            userControl_SystemFont_GroupSunriseWidgetAdd.Visible = false;
+            userControl_iconWidgetAdd.Visible = false;
+            tabControl_DateWidgetAdd.Visible = false;
+
+            userControl_previewWidgetAdd.SettingsClear(false);
+            userControl_picturesWidgetAdd.checkBox_pictures_Use.Checked = false;
+            userControl_pictures_weatherWidgetAdd.checkBox_pictures_Use.Checked = false;
+            userControl_textWidgetAdd.checkBox_Use.Checked = false;
+            userControl_text_goalWidgetAdd.checkBox_Use.Checked = false;
+            userControl_text_weatherWidgetCur.checkBox_Use.Checked = false;
+            userControl_text_weatherWidgetMin.checkBox_Use.Checked = false;
+            userControl_text_weatherWidgetMax.checkBox_Use.Checked = false;
+            userControl_text_goalWidgetSunrise.checkBox_Use.Checked = false;
+            userControl_text_goalWidgetSunset.checkBox_Use.Checked = false;
+            userControl_handWidgetAdd.checkBox_hand_Use.Checked = false;
+            userControl_scaleCircleWidgetAdd.checkBox_scaleCircle_Use.Checked = false;
+            userControl_scaleLinearWidgetAdd.checkBox_scaleLinear_Use.Checked = false;
+
+            userControl_SystemFont_GroupWidgetAdd.userControl_FontRotate.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWidgetAdd.userControl_FontRotate_goal.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWidgetAdd.userControl_SystemFont.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWidgetAdd.userControl_SystemFont_goal.checkBox_Use.Checked = false;
+
+            userControl_SystemFont_GroupWeatherWidgetAdd.userControl_FontRotate_weather_Current.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWeatherWidgetAdd.userControl_FontRotate_weather_Max.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWeatherWidgetAdd.userControl_FontRotate_weather_Min.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWeatherWidgetAdd.userControl_SystemFont_weather_Current.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWeatherWidgetAdd.userControl_SystemFont_weather_Max.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupWeatherWidgetAdd.userControl_SystemFont_weather_Min.checkBox_Use.Checked = false;
+
+            userControl_SystemFont_GroupSunriseWidgetAdd.userControl_FontRotate_weather_Current.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupSunriseWidgetAdd.userControl_FontRotate_weather_Max.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupSunriseWidgetAdd.userControl_FontRotate_weather_Min.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupSunriseWidgetAdd.userControl_SystemFont_weather_Current.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupSunriseWidgetAdd.userControl_SystemFont_weather_Max.checkBox_Use.Checked = false;
+            userControl_SystemFont_GroupSunriseWidgetAdd.userControl_SystemFont_weather_Min.checkBox_Use.Checked = false;
+
+            userControl_iconWidgetAdd.checkBox_icon_Use.Checked = false;
+
+            userControl_text_date_DayWidgetAdd.checkBox_Use.Checked = false;
+            userControl_hand_DayWidgetAdd.checkBox_hand_Use.Checked = false;
+            userControl_SystemFont_Group_DayWidgetAdd.userControl_FontRotate.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_DayWidgetAdd.userControl_FontRotate_goal.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_DayWidgetAdd.userControl_SystemFont.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_DayWidgetAdd.userControl_SystemFont_goal.checkBox_Use.Checked = false;
+
+            userControl_pictures_MonthWidgetAdd.checkBox_pictures_Use.Checked = false;
+            userControl_text_date_MonthWidgetAdd.checkBox_Use.Checked = false;
+            userControl_hand_MonthWidgetAdd.checkBox_hand_Use.Checked = false;
+            userControl_SystemFont_Group_MonthWidgetAdd.userControl_FontRotate.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_MonthWidgetAdd.userControl_FontRotate_goal.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_MonthWidgetAdd.userControl_SystemFont.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_MonthWidgetAdd.userControl_SystemFont_goal.checkBox_Use.Checked = false;
+
+            userControl_text_date_YearWidgetAdd.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_YearWidgetAdd.userControl_FontRotate.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_YearWidgetAdd.userControl_FontRotate_goal.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_YearWidgetAdd.userControl_SystemFont.checkBox_Use.Checked = false;
+            userControl_SystemFont_Group_YearWidgetAdd.userControl_SystemFont_goal.checkBox_Use.Checked = false;
+
+            userControl_pictures_DOWWidgetAdd.checkBox_pictures_Use.Checked = false;
+            userControl_hand_DOWWidgetAdd.checkBox_hand_Use.Checked = false;
+
+            userControl_textWidgetAdd.OptionalSymbol = false;
+            userControl_text_goalWidgetAdd.Follow = true;
+            userControl_iconWidgetAdd.Image2 = false;
+
+            switch (name)
+            {
+                case "Battery":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "Steps":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = true;
+                    userControl_SystemFont_GroupWidgetAdd.FollowText = userControl_SystemFont_Group_Steps.FollowText;
+                    userControl_SystemFont_GroupWidgetAdd.FollowRotateText = userControl_SystemFont_Group_Steps.FollowRotateText;
+                    userControl_SystemFont_GroupWidgetAdd.SystemFontText = userControl_SystemFont_Group_Steps.SystemFontText;
+                    userControl_SystemFont_GroupWidgetAdd.FontRotateText = userControl_SystemFont_Group_Steps.FontRotateText;
+
+                    userControl_text_goalWidgetAdd.ButtonText = userControl_text_goal_Steps.ButtonText;
+                    userControl_text_goalWidgetAdd.FollowText = userControl_text_goal_Steps.FollowText;
+                    break;
+
+                case "Calories":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = true;
+                    userControl_SystemFont_GroupWidgetAdd.FollowText = userControl_SystemFont_Group_Calories.FollowText;
+                    userControl_SystemFont_GroupWidgetAdd.FollowRotateText = userControl_SystemFont_Group_Calories.FollowRotateText;
+                    userControl_SystemFont_GroupWidgetAdd.SystemFontText = userControl_SystemFont_Group_Calories.SystemFontText;
+                    userControl_SystemFont_GroupWidgetAdd.FontRotateText = userControl_SystemFont_Group_Calories.FontRotateText;
+
+                    userControl_text_goalWidgetAdd.ButtonText = userControl_text_goal_Calories.ButtonText;
+                    userControl_text_goalWidgetAdd.FollowText = userControl_text_goal_Calories.FollowText;
+                    break;
+
+                case "HeartRate":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "PAI":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "Distance":
+                    userControl_previewWidgetAdd.Visible = true;
+                    //userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    //userControl_handWidgetAdd.Visible = true;
+                    //userControl_scaleCircleWidgetAdd.Visible = true;
+                    //userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    userControl_textWidgetAdd.OptionalSymbol = true;
+                    break;
+
+                case "StandUp":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = true;
+                    userControl_SystemFont_GroupWidgetAdd.FollowText = userControl_SystemFont_Group_StandUp.FollowText;
+                    userControl_SystemFont_GroupWidgetAdd.FollowRotateText = userControl_SystemFont_Group_StandUp.FollowRotateText;
+                    userControl_SystemFont_GroupWidgetAdd.SystemFontText = userControl_SystemFont_Group_StandUp.SystemFontText;
+                    userControl_SystemFont_GroupWidgetAdd.FontRotateText = userControl_SystemFont_Group_StandUp.FontRotateText;
+
+                    userControl_text_goalWidgetAdd.ButtonText = userControl_text_goal_StandUp.ButtonText;
+                    userControl_text_goalWidgetAdd.FollowText = userControl_text_goal_StandUp.FollowText;
+                    break;
+
+                case "Weather":
+                    userControl_previewWidgetAdd.Visible = true;
+                    //userControl_picturesWidgetAdd.Visible = true;
+                    userControl_pictures_weatherWidgetAdd.Visible = true;
+                    //userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    userControl_text_weatherWidgetCurAdd.Visible = true;
+                    userControl_text_weatherWidgetMinAdd.Visible = true;
+                    userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    //userControl_handWidgetAdd.Visible = true;
+                    //userControl_scaleCircleWidgetAdd.Visible = true;
+                    //userControl_scaleLinearWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+                    break;
+
+                case "UVindex":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "AirQuality":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "Humidity":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "Sunrise":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    //userControl_textWidgetAdd.Visible = true;
+                    userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_text_goalWidgetAdd.ButtonText = userControl_text_SunriseSunset.ButtonText;
+                    userControl_text_goalWidgetAdd.Follow = false;
+                    break;
+
+                case "WindForce":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "Altitude":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "AirPressure":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "Stress":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+                    break;
+
+                case "ActivityGoal":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = true;
+                    userControl_iconWidgetAdd.Image2 = true;
+                    userControl_SystemFont_GroupWidgetAdd.FollowText = userControl_SystemFont_Group_ActivityGoal.FollowText;
+                    userControl_SystemFont_GroupWidgetAdd.FollowRotateText = userControl_SystemFont_Group_ActivityGoal.FollowRotateText;
+                    userControl_SystemFont_GroupWidgetAdd.SystemFontText = userControl_SystemFont_Group_ActivityGoal.SystemFontText;
+                    userControl_SystemFont_GroupWidgetAdd.FontRotateText = userControl_SystemFont_Group_ActivityGoal.FontRotateText;
+
+                    userControl_text_goalWidgetAdd.ButtonText = userControl_text_goal_ActivityGoal.ButtonText;
+                    userControl_text_goalWidgetAdd.FollowText = userControl_text_goal_ActivityGoal.FollowText;
+                    break;
+
+                case "FatBurning":
+                    userControl_previewWidgetAdd.Visible = true;
+                    userControl_picturesWidgetAdd.Visible = true;
+                    userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    userControl_handWidgetAdd.Visible = true;
+                    userControl_scaleCircleWidgetAdd.Visible = true;
+                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    userControl_iconWidgetAdd.Visible = true;
+                    //tabControl_DateWidgetAdd.Visible = true;
+
+                    userControl_SystemFont_GroupWidgetAdd.ShowGoal = true;
+                    userControl_SystemFont_GroupWidgetAdd.FollowText = userControl_SystemFont_Group_FatBurning.FollowText;
+                    userControl_SystemFont_GroupWidgetAdd.FollowRotateText = userControl_SystemFont_Group_FatBurning.FollowRotateText;
+                    userControl_SystemFont_GroupWidgetAdd.SystemFontText = userControl_SystemFont_Group_FatBurning.SystemFontText;
+                    userControl_SystemFont_GroupWidgetAdd.FontRotateText = userControl_SystemFont_Group_FatBurning.FontRotateText;
+
+                    userControl_text_goalWidgetAdd.ButtonText = userControl_text_goal_FatBurning.ButtonText;
+                    userControl_text_goalWidgetAdd.FollowText = userControl_text_goal_FatBurning.FollowText;
+                    break;
+
+                case "Date":
+                    userControl_previewWidgetAdd.Visible = true;
+                    //userControl_picturesWidgetAdd.Visible = true;
+                    //userControl_textWidgetAdd.Visible = true;
+                    //userControl_text_goalWidgetAdd.Visible = true;
+                    //userControl_text_weatherWidgetCurAdd.Visible = true;
+                    //userControl_text_weatherWidgetMinAdd.Visible = true;
+                    //userControl_text_weatherWidgetMaxAdd.Visible = true;
+                    //userControl_text_goalWidgetSunriseAdd.Visible = true;
+                    //userControl_text_goalWidgetSunsetAdd.Visible = true;
+                    //userControl_handWidgetAdd.Visible = true;
+                    //userControl_scaleCircleWidgetAdd.Visible = true;
+                    //userControl_scaleLinearWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = true;
+                    //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = true;
+                    //userControl_iconWidgetAdd.Visible = true;
+                    tabControl_DateWidgetAdd.Visible = true;
+                    break;
+            }
+
+            PreviewView = PreviewViewTemp;
+        }
+
+        /// <summary>удаляем выбранную редактируемую зону</summary>
         private void WidgetDel(int widgetIndex) 
         {
             if (widgetIndex < 0) return;
@@ -3564,6 +4262,7 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        /// <summary>удаляем выбранный виджет из зоны</summary>
         private void WidgetElementDel(int widgetIndex, int widgetElementIndex)
         {
             if (widgetElementIndex < 0) return;
@@ -3580,10 +4279,11 @@ namespace AmazFit_Watchface_2
             PreviewImage();
         }
 
+        /// <summary>меняем настройки выбранной редактируемой зоны</summary>
         private void WidgetEdit(int widgetIndex)
         {
             if (WidgetsTemp == null || WidgetsTemp.Widget == null) return;
-            if (WidgetsTemp.Widget.Count <= widgetIndex+1 || widgetIndex < 0) return;
+            if (WidgetsTemp.Widget.Count < widgetIndex+1 || widgetIndex < 0) return;
             if(comboBox_WidgetBorderActiv.SelectedIndex >= 0)
                 WidgetsTemp.Widget[widgetIndex].BorderActivImageIndex = Int32.Parse(comboBox_WidgetBorderActiv.Text);
             if (comboBox_WidgetBorderInactiv.SelectedIndex >= 0)
@@ -3608,6 +4308,7 @@ namespace AmazFit_Watchface_2
             WidgetsTemp.Widget[widgetIndex].Height = (int)numericUpDown_WidgetHeight.Value;
         }
 
+        /// <summary>меняем настройки выбранного виджета</summary>
         private void WidgetElementEdit(int widgetIndex, int widgetElementIndex)
         {
             if (WidgetsTemp == null || WidgetsTemp.Widget == null || WidgetsTemp.Widget.Count < widgetIndex + 1) return;
@@ -3651,6 +4352,163 @@ namespace AmazFit_Watchface_2
 
         }
 
+        /// <summary>получаем WidgetElement при его добавлении</summary>
+        private WidgetElement WidgetElementAdd()
+        {
+            WidgetElement widgetElement = null;
+
+            MultilangImage preview = null;
+            int image = userControl_previewWidgetAdd.comboBoxGetImage();
+            if (image >= 0)
+            {
+                preview = new MultilangImage();
+                preview.LangCode = "All";
+                preview.ImageSet = new ImageSetGTR2();
+                preview.ImageSet.ImagesCount = 1;
+                preview.ImageSet.ImageIndex = image;
+            }
+
+            DateAmazfit date = null;
+            Activity activity = null;
+            string type = null;
+            Control.ControlCollection controlCollection = groupBox_WidgetTypeAdd.Controls;
+
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                //string name = controlCollection[i].GetType().Name;
+                if (controlCollection[i].GetType().Name == "RadioButton")
+                {
+                    RadioButton radioButton = controlCollection[i] as RadioButton;
+                    if (radioButton.Checked)
+                    {
+                        switch (radioButton.Name)
+                        {
+                            case "radioButton_DateWidgetAdd":
+                                type = "Date";
+                                break;
+                            case "radioButton_StepsWidgetAdd":
+                                type = "Steps";
+                                break;
+                            case "radioButton_CaloriesWidgetAdd":
+                                type = "Calories";
+                                break;
+                            case "radioButton_HeartRateWidgetAdd":
+                                type = "HeartRate";
+                                break;
+                            case "radioButton_PAIWidgetAdd":
+                                type = "PAI";
+                                break;
+                            case "radioButton_DistanceWidgetAdd":
+                                type = "Distance";
+                                break;
+                            case "radioButton_StandUpWidgetAdd":
+                                type = "StandUp";
+                                break;
+                            case "radioButton_ActivityGoalWidgetAdd":
+                                type = "ActivityGoal";
+                                break;
+                            case "radioButton_FatBurningWidgetAdd":
+                                type = "FatBurning";
+                                break;
+                            case "radioButton_WeatherWidgetAdd":
+                                type = "Weather";
+                                break;
+                            case "radioButton_UVindexWidgetAdd":
+                                type = "UVindex";
+                                break;
+                            case "radioButton_HumidityWidgetAdd":
+                                type = "Humidity";
+                                break;
+                            case "radioButton_SunriseWidgetAdd":
+                                type = "Sunrise";
+                                break;
+                            case "radioButton_WindForceWidgetAdd":
+                                type = "WindForce";
+                                break;
+                            case "radioButton_AirPressureWidgetAdd":
+                                type = "AirPressure";
+                                break;
+                            case "radioButton_BatteryWidgetAdd":
+                                type = "Battery";
+                                break;
+                        } 
+                    }
+                }
+            }
+
+            if (type == "Date") date = WidgetElementDateAdd();
+            else activity = WidgetElementActivityAdd(type);
+
+            if (preview != null)
+            {
+                widgetElement = new WidgetElement();
+                if (widgetElement == null) widgetElement = new WidgetElement();
+                widgetElement.Preview = new List<MultilangImage>();
+                widgetElement.Preview.Add(preview);
+            }
+            if (activity != null)
+            {
+                if (widgetElement == null) widgetElement = new WidgetElement();
+                widgetElement.Activity = new List<Activity>();
+                widgetElement.Activity.Add(activity);
+            }
+            if (date != null)
+            {
+                if (widgetElement == null) widgetElement = new WidgetElement();
+                widgetElement.Date = date;
+            }
+            //if (widgetElement == null) WidgetsTemp.Widget[widgetIndex].WidgetElement.RemoveAt(widgetElementIndex);
+            //else WidgetsTemp.Widget[widgetIndex].WidgetElement[widgetElementIndex] = widgetElement;
+
+            //JSON_write();
+            //PreviewImage();
+            return widgetElement;
+        }
+
+        /// <summary>получаем раздел Date для WidgetElement при его добавлении</summary>
+        private DateAmazfit WidgetElementDateAdd()
+        {
+            DateAmazfit dateWidget = AddDateWidget(userControl_text_date_DayWidgetAdd, userControl_hand_DayWidgetAdd,
+                    userControl_SystemFont_Group_DayWidgetAdd, userControl_pictures_MonthWidgetAdd, userControl_text_date_MonthWidgetAdd,
+                    userControl_hand_MonthWidgetAdd, userControl_SystemFont_Group_MonthWidgetAdd,
+                    userControl_text_date_YearWidgetAdd, userControl_SystemFont_Group_YearWidgetAdd,
+                    userControl_pictures_DOWWidgetAdd, userControl_hand_DOWWidgetAdd, dataGridView_Widget_DateAdd);
+
+            return dateWidget;
+        }
+
+        /// <summary>получаем раздел Activity для WidgetElement при его редактировании</summary>
+        private Activity WidgetElementActivityAdd(string type)
+        {
+            Activity activity = null;
+
+            if (type != "Weather" && type != "Sunrise" && type != "Date")
+            {
+                activity = AddActivityWidget(userControl_picturesWidgetAdd, userControl_textWidgetAdd, userControl_text_goalWidgetAdd,
+                    userControl_handWidgetAdd, userControl_scaleCircleWidgetAdd, userControl_scaleLinearWidgetAdd,
+                    userControl_SystemFont_GroupWidgetAdd, userControl_iconWidgetAdd, type);
+            }
+            else if (type == "Weather")
+            {
+                activity = AddActivityWeatherWidget(userControl_pictures_weatherWidgetAdd, userControl_text_weatherWidgetCurAdd,
+                    userControl_text_weatherWidgetMinAdd, userControl_text_weatherWidgetMaxAdd, userControl_handWidgetAdd,
+                    userControl_scaleCircleWidgetAdd, userControl_scaleLinearWidgetAdd,
+                    userControl_SystemFont_GroupWeatherWidgetAdd, userControl_iconWidgetAdd);
+            }
+            else if (type == "Sunrise")
+            {
+                activity = AddActivitySunriseWidget(userControl_picturesWidgetAdd, userControl_text_goalWidgetAdd,
+                    userControl_text_goalWidgetSunriseAdd, userControl_text_goalWidgetSunsetAdd, userControl_handWidgetAdd,
+                    userControl_scaleCircleWidgetAdd, userControl_scaleLinearWidgetAdd,
+                    userControl_SystemFont_GroupSunriseWidgetAdd, userControl_iconWidget);
+            }
+            return activity;
+        }
+
+
+
+
+        /// <summary>получаем раздел Date для WidgetElement при его редактировании</summary>
         private DateAmazfit WidgetElementDateEdit(int widgetIndex, int widgetElementIndex)
         {
             if (WidgetsTemp == null || WidgetsTemp.Widget == null || WidgetsTemp.Widget.Count < widgetIndex + 1) return null;
@@ -3666,6 +4524,7 @@ namespace AmazFit_Watchface_2
             return dateWidget;
         }
 
+        /// <summary>получаем раздел Activity для WidgetElement при его редактировании</summary>
         private Activity WidgetElementActivityEdit(int widgetIndex, int widgetElementIndex, string type)
         {
             if (WidgetsTemp == null || WidgetsTemp.Widget == null || WidgetsTemp.Widget.Count < widgetIndex + 1) return null;
@@ -3697,6 +4556,7 @@ namespace AmazFit_Watchface_2
             return activity;
         }
 
+        /// <summary>получаем раздел Activity(Activity) для WidgetElement при его редактировании</summary>
         private Activity AddActivityWidget(UserControl_pictures userPanel_pictures, UserControl_text userPanel_text,
             UserControl_text userPanel_textGoal, UserControl_hand userPanel_hand,
             UserControl_scaleCircle userPanel_scaleCircle, UserControl_scaleLinear userPanel_scaleLinear,
@@ -4250,6 +5110,7 @@ namespace AmazFit_Watchface_2
             return activity;
         }
 
+        /// <summary>получаем раздел Activity(Weather) для WidgetElement при его редактировании</summary>
         private Activity AddActivityWeatherWidget(UserControl_pictures panel_pictures,
             UserControl_text_weather panel_text, UserControl_text_weather panel_text_min,
             UserControl_text_weather panel_text_max, UserControl_hand panel_hand,
@@ -4957,6 +5818,7 @@ namespace AmazFit_Watchface_2
             return activity;
         }
 
+        /// <summary>получаем раздел Activity(Sunrise) для WidgetElement при его редактировании</summary>
         private Activity AddActivitySunriseWidget(UserControl_pictures panel_pictures,
             UserControl_text_goal panel_text, UserControl_text_goal panel_text_min,
             UserControl_text_goal panel_text_max, UserControl_hand panel_hand,
@@ -5662,6 +6524,7 @@ namespace AmazFit_Watchface_2
             return activity;
         }
 
+        /// <summary>получаем раздел Date(Date) для WidgetElement при его редактировании</summary>
         private DateAmazfit AddDateWidget(UserControl_text_date userControl_text_Day, UserControl_hand userControl_hand_Day,
             UserControl_SystemFont_Group userControl_SystemFont_Group_DayWidget, UserControl_pictures userControl_pictures_Month,
             UserControl_text_date userControl_text_Month, UserControl_hand userControl_hand_Month,
@@ -6338,6 +7201,983 @@ namespace AmazFit_Watchface_2
             }
 
             return dateWidget;
+        }
+
+        /// <summary>скрываем панели с настройками элементов</summary>
+        private void HideWidgetEditElement()
+        {
+            userControl_previewWidget.Visible = false;
+            userControl_picturesWidget.Visible = false;
+            userControl_pictures_weatherWidget.Visible = false;
+            userControl_textWidget.Visible = false;
+            userControl_text_goalWidget.Visible = false;
+            userControl_text_weatherWidgetCur.Visible = false;
+            userControl_text_weatherWidgetMin.Visible = false;
+            userControl_text_weatherWidgetMax.Visible = false;
+            userControl_text_goalWidgetSunrise.Visible = false;
+            userControl_text_goalWidgetSunset.Visible = false;
+            userControl_handWidget.Visible = false;
+            userControl_scaleCircleWidget.Visible = false;
+            userControl_scaleLinearWidget.Visible = false;
+            userControl_SystemFont_GroupWidget.Visible = false;
+            userControl_SystemFont_GroupWeatherWidget.Visible = false;
+            userControl_SystemFont_GroupSunriseWidget.Visible = false;
+            userControl_iconWidget.Visible = false;
+            tabControl_DateWidget.Visible = false;
+
+            //userControl_previewWidgetAdd.Visible = false;
+            //userControl_picturesWidgetAdd.Visible = false;
+            //userControl_pictures_weatherWidgetAdd.Visible = false;
+            //userControl_textWidgetAdd.Visible = false;
+            //userControl_text_goalWidgetAdd.Visible = false;
+            //userControl_text_weatherWidgetCurAdd.Visible = false;
+            //userControl_text_weatherWidgetMinAdd.Visible = false;
+            //userControl_text_weatherWidgetMaxAdd.Visible = false;
+            //userControl_text_goalWidgetSunriseAdd.Visible = false;
+            //userControl_text_goalWidgetSunsetAdd.Visible = false;
+            //userControl_handWidgetAdd.Visible = false;
+            //userControl_scaleCircleWidgetAdd.Visible = false;
+            //userControl_scaleLinearWidgetAdd.Visible = false;
+            //userControl_SystemFont_GroupWidgetAdd.Visible = false;
+            //userControl_SystemFont_GroupWeatherWidgetAdd.Visible = false;
+            //userControl_SystemFont_GroupSunriseWidgetAdd.Visible = false;
+            //userControl_iconWidgetAdd.Visible = false;
+            //tabControl_DateWidgetAdd.Visible = false;
+            SelectWidgetElementAdd("Steps");
+        }
+
+        /// <summary>добавляем новый WidgetElement</summary>
+        private void AddWidgetElement()
+        {
+            if (WidgetsTemp == null || WidgetsTemp.Widget == null || WidgetsTemp.Widget.Count < 1)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_Warning_No_Widget,
+                    Properties.FormStrings.Message_Warning_Caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            WidgetElement widgetElement = WidgetElementAdd();
+            if (widgetElement == null)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_Warning_AddData_WidgetElement,
+                    Properties.FormStrings.Message_Warning_Caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                if (widgetElement.Activity == null && widgetElement.Date == null)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_Warning_AddData_WidgetElement,
+                        Properties.FormStrings.Message_Warning_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                    
+                if (widgetElement.Preview == null)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_Warning_AddPreview_WidgetElement,
+                        Properties.FormStrings.Message_Warning_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            if (widgetIndex < 0) widgetIndex = 0;
+            WidgetsTemp.Widget[widgetIndex].WidgetElement.Add(widgetElement);
+            PreviewView = false;
+            //comboBox_WidgetNumber.SelectedIndex = comboBox_WidgetNumber.Items.Count - 1;
+            JSON_read_widgetElement_order(Watch_Face.Widgets.Widget[comboBox_WidgetNumber.SelectedIndex]);
+            PreviewView = true;
+            JSON_write();
+            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.Rows.Count - 1].Selected = true;
+            tabControl_Widget.SelectedIndex = 0;
+
+            string type = null;
+            Control.ControlCollection controlCollection = groupBox_WidgetTypeAdd.Controls;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                //string name = controlCollection[i].GetType().Name;
+                if (controlCollection[i].GetType().Name == "RadioButton")
+                {
+                    RadioButton radioButton = controlCollection[i] as RadioButton;
+                    if (radioButton.Checked)
+                    {
+                        switch (radioButton.Name)
+                        {
+                            case "radioButton_DateWidgetAdd":
+                                type = "Date";
+                                break;
+                            case "radioButton_StepsWidgetAdd":
+                                type = "Steps";
+                                break;
+                            case "radioButton_CaloriesWidgetAdd":
+                                type = "Calories";
+                                break;
+                            case "radioButton_HeartRateWidgetAdd":
+                                type = "HeartRate";
+                                break;
+                            case "radioButton_PAIWidgetAdd":
+                                type = "PAI";
+                                break;
+                            case "radioButton_DistanceWidgetAdd":
+                                type = "Distance";
+                                break;
+                            case "radioButton_StandUpWidgetAdd":
+                                type = "StandUp";
+                                break;
+                            case "radioButton_ActivityGoalWidgetAdd":
+                                type = "ActivityGoal";
+                                break;
+                            case "radioButton_FatBurningWidgetAdd":
+                                type = "FatBurning";
+                                break;
+                            case "radioButton_WeatherWidgetAdd":
+                                type = "Weather";
+                                break;
+                            case "radioButton_UVindexWidgetAdd":
+                                type = "UVindex";
+                                break;
+                            case "radioButton_HumidityWidgetAdd":
+                                type = "Humidity";
+                                break;
+                            case "radioButton_SunriseWidgetAdd":
+                                type = "Sunrise";
+                                break;
+                            case "radioButton_WindForceWidgetAdd":
+                                type = "WindForce";
+                                break;
+                            case "radioButton_AirPressureWidgetAdd":
+                                type = "AirPressure";
+                                break;
+                            case "radioButton_BatteryWidgetAdd":
+                                type = "Battery";
+                                break;
+                        }
+                    }
+                }
+            }
+            SelectWidgetElementAdd(type);
+        }
+
+        /// <summary>добавляем новый Widget</summary>
+        private void AddWidget()
+        {
+            WidgetElement widgetElement = WidgetElementAdd();
+            if (widgetElement == null)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_Warning_AddData_WidgetElement,
+                    Properties.FormStrings.Message_Warning_Caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                if (widgetElement.Activity == null && widgetElement.Date == null)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_Warning_AddData_WidgetElement,
+                        Properties.FormStrings.Message_Warning_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                if (widgetElement.Preview == null)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_Warning_AddPreview_WidgetElement,
+                        Properties.FormStrings.Message_Warning_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
+            if (comboBox_WidgetDescriptionBackgroundAdd.SelectedIndex < 0 ||
+                comboBox_WidgetBorderActivAdd.SelectedIndex < 0 || comboBox_WidgetBorderInactivAdd.SelectedIndex < 0)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_Warning_Add_Widget,
+                        Properties.FormStrings.Message_Warning_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (WidgetsTemp == null)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_Warning_Add_FirstWidget1 + Environment.NewLine+
+                    Properties.FormStrings.Message_Warning_Add_FirstWidget2,
+                        Properties.FormStrings.Message_Information_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                WidgetsTemp = new Widgets();
+                comboBox_WidgetsUnderMask.Enabled = true;
+                comboBox_WidgetsTopMask.Enabled = true;
+                checkBox_TimeOnWidgetEdit.Enabled = true;
+                label7.Enabled = true;
+                label01.Enabled = true;
+            }
+            if (WidgetsTemp.Widget == null) WidgetsTemp.Widget = new List<Widget>();
+            Widget widget = new Widget();
+            widget.WidgetElement = new List<WidgetElement>();
+            widget.WidgetElement.Add(widgetElement);
+            widget.BorderActivImageIndex = Int32.Parse(comboBox_WidgetBorderActivAdd.Text);
+            widget.BorderInactivImageIndex = Int32.Parse(comboBox_WidgetBorderInactivAdd.Text);
+
+            widget.DescriptionImageBackground = new ImageCoord();
+            widget.DescriptionImageBackground.ImageIndex = Int32.Parse(comboBox_WidgetDescriptionBackgroundAdd.Text);
+            widget.DescriptionImageBackground.Coordinates = new Coordinates();
+            widget.DescriptionImageBackground.Coordinates.X = (long)numericUpDown_WidgetDescriptionBackgroundXAdd.Value;
+            widget.DescriptionImageBackground.Coordinates.Y = (long)numericUpDown_WidgetDescriptionBackgroundYAdd.Value;
+            widget.DescriptionWidthCheck = (long)numericUpDown_WidgetDescriptionLenghtAdd.Value;
+
+            widget.X = (long)numericUpDown_WidgetXAdd.Value;
+            widget.Y = (long)numericUpDown_WidgetYAdd.Value;
+            widget.Height = (long)numericUpDown_WidgetHeightAdd.Value;
+            widget.Width = (long)numericUpDown_WidgetWidthAdd.Value;
+
+            WidgetsTemp.Widget.Add(widget);
+            PreviewView = false;
+
+            comboBox_WidgetBorderActivAdd.Text = "";
+            comboBox_WidgetBorderInactivAdd.Text = "";
+            comboBox_WidgetDescriptionBackgroundAdd.Text = "";
+            radioButton_WidgetElementAdd.Checked = true;
+
+            //comboBox_WidgetNumber.SelectedIndex = comboBox_WidgetNumber.Items.Count - 1;
+            //JSON_read_widgetElement_order(Watch_Face.Widgets.Widget[comboBox_WidgetNumber.SelectedIndex]);
+            PreviewView = true;
+            JSON_write();
+            comboBox_WidgetNumber.Items.Add((comboBox_WidgetNumber.Items.Count + 1).ToString());
+            comboBox_WidgetNumber.SelectedIndex = comboBox_WidgetNumber.Items.Count - 1;
+            dataGridView_WidgetElement.Rows[dataGridView_WidgetElement.Rows.Count - 1].Selected = true;
+            tabControl_Widget.SelectedIndex = 0;
+
+            string type = null;
+            Control.ControlCollection controlCollection = groupBox_WidgetTypeAdd.Controls;
+            for (int i = 1; i < controlCollection.Count; i++)
+            {
+                //string name = controlCollection[i].GetType().Name;
+                if (controlCollection[i].GetType().Name == "RadioButton")
+                {
+                    RadioButton radioButton = controlCollection[i] as RadioButton;
+                    if (radioButton.Checked)
+                    {
+                        switch (radioButton.Name)
+                        {
+                            case "radioButton_DateWidgetAdd":
+                                type = "Date";
+                                break;
+                            case "radioButton_StepsWidgetAdd":
+                                type = "Steps";
+                                break;
+                            case "radioButton_CaloriesWidgetAdd":
+                                type = "Calories";
+                                break;
+                            case "radioButton_HeartRateWidgetAdd":
+                                type = "HeartRate";
+                                break;
+                            case "radioButton_PAIWidgetAdd":
+                                type = "PAI";
+                                break;
+                            case "radioButton_DistanceWidgetAdd":
+                                type = "Distance";
+                                break;
+                            case "radioButton_StandUpWidgetAdd":
+                                type = "StandUp";
+                                break;
+                            case "radioButton_ActivityGoalWidgetAdd":
+                                type = "ActivityGoal";
+                                break;
+                            case "radioButton_FatBurningWidgetAdd":
+                                type = "FatBurning";
+                                break;
+                            case "radioButton_WeatherWidgetAdd":
+                                type = "Weather";
+                                break;
+                            case "radioButton_UVindexWidgetAdd":
+                                type = "UVindex";
+                                break;
+                            case "radioButton_HumidityWidgetAdd":
+                                type = "Humidity";
+                                break;
+                            case "radioButton_SunriseWidgetAdd":
+                                type = "Sunrise";
+                                break;
+                            case "radioButton_WindForceWidgetAdd":
+                                type = "WindForce";
+                                break;
+                            case "radioButton_AirPressureWidgetAdd":
+                                type = "AirPressure";
+                                break;
+                            case "radioButton_BatteryWidgetAdd":
+                                type = "Battery";
+                                break;
+                        }
+                    }
+                }
+            }
+            SelectWidgetElementAdd(type);
+        }
+
+        /// <summary>отрисовываем экран выбора виджета на часах</summary>
+        private void DrawWidgetEditScreen(Graphics gPanel, bool showWidgetsArea)
+        {
+            Bitmap src = new Bitmap(1, 1);
+            int i;
+
+            #region Black background
+            Logger.WriteLine("PreviewToBitmapWidget (Black background)");
+            src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+            if (radioButton_GTS2.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts_2.png");
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+            }
+            gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
+            //src.Dispose();
+            #endregion
+
+            #region Background
+            Logger.WriteLine("PreviewToBitmapWidget (Background)");
+            if (radioButton_Background_image.Checked)
+            {
+                if (comboBox_Background_image.SelectedIndex >= 0)
+                {
+                    i = comboBox_Background_image.SelectedIndex;
+                    src = OpenFileStream(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
+                    //src.Dispose();
+                }
+            }
+            else gPanel.Clear(comboBox_Background_color.BackColor);
+            #endregion
+
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            int imageDescriptionIndex = -1;
+            int imageDescriptionX = 0;
+            int imageDescriptionY = 0;
+
+            #region preview
+            if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
+            {
+                for (int j = 0; j < Watch_Face.Widgets.Widget.Count; j++)
+                {
+                    int widgetElementIndex = 0;
+                    int x = (int)Watch_Face.Widgets.Widget[j].X;
+                    int y = (int)Watch_Face.Widgets.Widget[j].Y;
+                    int width = (int)Watch_Face.Widgets.Widget[j].Width;
+                    int height = (int)Watch_Face.Widgets.Widget[j].Height;
+
+                    if (j == widgetIndex)
+                    {
+                        widgetElementIndex = SelectedWidgetElement();
+                        //if (tabControl_Widget.SelectedTab.Name != "tabPage_WidgetAdd" || !radioButton_WidgetAdd.Checked)
+                        //{
+                        //    if (Watch_Face.Widgets.Widget[j].DescriptionImageBackground != null)
+                        //    {
+                        //        imageDescriptionIndex = (int)(Watch_Face.Widgets.Widget[j].DescriptionImageBackground.ImageIndex - 1);
+                        //        if (Watch_Face.Widgets.Widget[j].DescriptionImageBackground.Coordinates != null)
+                        //        {
+                        //            imageDescriptionX = (int)Watch_Face.Widgets.Widget[j].DescriptionImageBackground.Coordinates.X;
+                        //            imageDescriptionY = (int)Watch_Face.Widgets.Widget[j].DescriptionImageBackground.Coordinates.Y;
+                        //        }
+                        //    }
+                        //}
+                    }
+                    if (Watch_Face.Widgets.Widget[j].WidgetElement != null &&
+                        Watch_Face.Widgets.Widget[j].WidgetElement.Count > 0 && widgetElementIndex >= 0)
+                    {
+                        WidgetElement widgetElement = Watch_Face.Widgets.Widget[j].WidgetElement[widgetElementIndex];
+                        DrawWidgetElementPreview(widgetElement, gPanel, x, y, width, height);
+                    }
+                } 
+            }
+
+            // режим добавления виджетов
+            if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" && radioButton_WidgetAdd.Checked)
+            {
+                int x = (int)numericUpDown_WidgetXAdd.Value;
+                int y = (int)numericUpDown_WidgetYAdd.Value;
+                int width = (int)numericUpDown_WidgetWidthAdd.Value;
+                int height = (int)numericUpDown_WidgetHeightAdd.Value;
+                WidgetElement widgetElement = WidgetElementAdd();
+                DrawWidgetElementPreview(widgetElement, gPanel, x, y, width, height);
+            }
+            #endregion
+
+            #region mask
+            if (Watch_Face != null && Watch_Face.Widgets != null)
+            {
+                i = (int)(Watch_Face.Widgets.TopMaskImageIndex - 1);
+                if (i >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, 0, 0);
+                }
+                i = (int)(Watch_Face.Widgets.UnderMaskImageIndex - 1);
+                if (i >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, 0, 0);
+                } 
+            }
+            #endregion
+
+            #region border
+            if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
+            {
+                for (int j = 0; j < Watch_Face.Widgets.Widget.Count; j++)
+                {
+                    int widgetElementIndex = 0;
+                    int x = (int)Watch_Face.Widgets.Widget[j].X;
+                    int y = (int)Watch_Face.Widgets.Widget[j].Y;
+
+                    int imageBorderActivIndex = (int)(Watch_Face.Widgets.Widget[j].BorderActivImageIndex - 1);
+                    int imageBorderInactivIndex = (int)(Watch_Face.Widgets.Widget[j].BorderInactivImageIndex - 1);
+                    int imageBorderIndex = imageBorderInactivIndex;
+
+                    if (j == widgetIndex)
+                    {
+                        widgetElementIndex = SelectedWidgetElement();
+                        if (tabControl_Widget.SelectedTab.Name != "tabPage_WidgetAdd" || !radioButton_WidgetAdd.Checked)
+                        {
+                            imageBorderIndex = imageBorderActivIndex;
+
+                            if (Watch_Face.Widgets.Widget[j].DescriptionImageBackground != null)
+                            {
+                                imageDescriptionIndex = (int)(Watch_Face.Widgets.Widget[j].DescriptionImageBackground.ImageIndex - 1);
+                                if (Watch_Face.Widgets.Widget[j].DescriptionImageBackground.Coordinates != null)
+                                {
+                                    imageDescriptionX = (int)Watch_Face.Widgets.Widget[j].DescriptionImageBackground.Coordinates.X;
+                                    imageDescriptionY = (int)Watch_Face.Widgets.Widget[j].DescriptionImageBackground.Coordinates.Y;
+                                }
+                            }
+                        }
+                    }
+                    if (Watch_Face.Widgets.Widget[j].WidgetElement != null &&
+                        Watch_Face.Widgets.Widget[j].WidgetElement.Count > 0 && widgetElementIndex >= 0)
+                    {
+                        // рисуем рамку выделения
+                        if (imageBorderIndex >= 0)
+                        {
+                            src = OpenFileStream(ListImagesFullName[imageBorderIndex]);
+                            gPanel.DrawImage(src, x, y);
+                        }
+
+                    }
+                } 
+            }
+
+            // режим добавления виджетов
+            if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" && radioButton_WidgetAdd.Checked)
+            {
+                int x = (int)numericUpDown_WidgetXAdd.Value;
+                int y = (int)numericUpDown_WidgetYAdd.Value;
+
+                // рисуем рамку выделения
+                int imageBorderActivIndex = comboBox_WidgetBorderActivAdd.SelectedIndex;
+                if (imageBorderActivIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[imageBorderActivIndex]);
+                    gPanel.DrawImage(src, x, y);
+                }
+            }
+            #endregion
+
+            #region Time
+            if (Watch_Face != null && Watch_Face.Widgets != null)
+            {
+                if (Watch_Face.Widgets.Unknown4 != 0)
+                {
+                    src = DrawWidgetTime();
+                    gPanel.DrawImage(src, 0, 0);
+                } 
+            }
+            #endregion
+
+
+            #region description
+            // режим добавления виджетов
+            if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" && radioButton_WidgetAdd.Checked)
+            {
+                // рисуем описание
+                imageDescriptionIndex = comboBox_WidgetDescriptionBackgroundAdd.SelectedIndex;
+                if (imageDescriptionIndex >= 0)
+                {
+                    imageDescriptionX = (int)numericUpDown_WidgetDescriptionBackgroundXAdd.Value;
+                    imageDescriptionY = (int)numericUpDown_WidgetDescriptionBackgroundYAdd.Value;
+                    src = OpenFileStream(ListImagesFullName[imageDescriptionIndex]);
+                    gPanel.DrawImage(src, imageDescriptionX, imageDescriptionY);
+                }
+            }
+            // обычный режим
+            else if (comboBox_WidgetNumber.SelectedIndex >= 0)
+            {
+                if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
+                {
+                    int index = comboBox_WidgetNumber.SelectedIndex;
+                    int descripLenght = 0;
+                    if (Watch_Face.Widgets.Widget[index].DescriptionImageBackground != null)
+                    {
+                        imageDescriptionIndex = (int)(Watch_Face.Widgets.Widget[index].DescriptionImageBackground.ImageIndex - 1);
+                        descripLenght = (int)Watch_Face.Widgets.Widget[index].DescriptionWidthCheck;
+                        if (Watch_Face.Widgets.Widget[index].DescriptionImageBackground.Coordinates != null)
+                        {
+                            imageDescriptionX = (int)Watch_Face.Widgets.Widget[index].DescriptionImageBackground.Coordinates.X;
+                            imageDescriptionY = (int)Watch_Face.Widgets.Widget[index].DescriptionImageBackground.Coordinates.Y;
+                        }
+                    }
+
+                    // рисуем описание
+                    if (imageDescriptionIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageDescriptionIndex]);
+                        int imageDescriptionLenght = src.Width;
+                        gPanel.DrawImage(src, imageDescriptionX, imageDescriptionY);
+
+
+                        string name = "";
+                        if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+                        {
+                            name = dataGridView_WidgetElement.SelectedRows[0].Cells[2].Value.ToString();
+                            //int RowIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
+                        }
+                        else if (dataGridView_WidgetElement.Rows.Count > 0)
+                        {
+                            name = dataGridView_WidgetElement.Rows[0].Cells[2].Value.ToString();
+                            //int RowIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
+                        }
+
+                        //src = DrawTimeOnWidget(name, 100, 30);
+                        //imageDescriptionX = imageDescriptionX + (imageDescriptionLenght - src.Width) / 2;
+                        //imageDescriptionY = imageDescriptionY + 3;
+                        //gPanel.DrawImage(src, imageDescriptionX, imageDescriptionY);
+
+                        string shortName = ShortName(gPanel, name, descripLenght, 25);
+
+                        Font drawFont = new Font(fonts.Families[0], 25, GraphicsUnit.World);
+                        StringFormat strFormat = new StringFormat();
+                        strFormat.FormatFlags = StringFormatFlags.FitBlackBox;
+                        strFormat.Alignment = StringAlignment.Center;
+                        strFormat.LineAlignment = StringAlignment.Near;
+                        imageDescriptionX = imageDescriptionX + imageDescriptionLenght / 2;
+                        imageDescriptionY = imageDescriptionY - 2;
+
+                        SolidBrush drawBrush = new SolidBrush(Color.Black);
+                        gPanel.DrawString(shortName, drawFont, drawBrush, imageDescriptionX, imageDescriptionY, strFormat);
+                    } 
+                }
+            }
+            #endregion
+
+            #region showWidgetsArea
+            if (showWidgetsArea)
+            {
+                if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
+                {
+                    for (int j = 0; j < Watch_Face.Widgets.Widget.Count; j++)
+                    {
+                        int x = (int)Watch_Face.Widgets.Widget[j].X;
+                        int y = (int)Watch_Face.Widgets.Widget[j].Y;
+                        int width = (int)Watch_Face.Widgets.Widget[j].Width;
+                        int height = (int)Watch_Face.Widgets.Widget[j].Height;
+
+                        Logger.WriteLine("DrawWidgetBorder");
+                        Rectangle rect = new Rectangle(x, y, width - 1, height - 1);
+                        using (Pen pen1 = new Pen(Color.White, 1))
+                        {
+                            gPanel.DrawRectangle(pen1, rect);
+                        }
+                        using (Pen pen2 = new Pen(Color.Black, 1))
+                        {
+                            pen2.DashStyle = DashStyle.Dot;
+                            gPanel.DrawRectangle(pen2, rect);
+                        }
+
+                        Logger.WriteLine("DrawWidgetBorder (end)");
+                    } 
+                }
+
+                // режим добавления виджетов
+                if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" && radioButton_WidgetAdd.Checked)
+                {
+                    int x = (int)numericUpDown_WidgetXAdd.Value;
+                    int y = (int)numericUpDown_WidgetYAdd.Value;
+                    int width = (int)numericUpDown_WidgetWidthAdd.Value;
+                    int height = (int)numericUpDown_WidgetHeightAdd.Value;
+
+
+                    Logger.WriteLine("DrawWidgetBorder");
+                    Rectangle rect = new Rectangle(x, y, width - 1, height - 1);
+                    using (Pen pen1 = new Pen(Color.White, 1))
+                    {
+                        gPanel.DrawRectangle(pen1, rect);
+                    }
+                    using (Pen pen2 = new Pen(Color.Black, 1))
+                    {
+                        pen2.DashStyle = DashStyle.Dot;
+                        gPanel.DrawRectangle(pen2, rect);
+                    }
+
+                    Logger.WriteLine("DrawWidgetBorder (end)");
+                } 
+            }
+            #endregion
+
+            src.Dispose();
+        }
+
+        private string ShortName(Graphics graphics, string name, int lenght, int size)
+        {
+            Font drawFont = new Font(fonts.Families[0], size, GraphicsUnit.World);
+            StringFormat strFormat = new StringFormat();
+            strFormat.FormatFlags = StringFormatFlags.FitBlackBox;
+            strFormat.Alignment = StringAlignment.Near;
+            strFormat.LineAlignment = StringAlignment.Far;
+            Size strSize1 = TextRenderer.MeasureText(graphics, "0", drawFont);
+            Size strSize2 = TextRenderer.MeasureText(graphics, "00", drawFont);
+            int chLenght = strSize2.Width - strSize1.Width;
+            int offsetX = strSize1.Width - chLenght;
+
+            strSize1 = TextRenderer.MeasureText(graphics, name, drawFont);
+            int stringLenght = strSize1.Width - offsetX;
+            while(stringLenght> lenght && name.Length > 1)
+            {
+                name = name.Remove(name.Length - 1);
+                strSize1 = TextRenderer.MeasureText(graphics, name, drawFont);
+                stringLenght = strSize1.Width - offsetX;
+            }
+            return name;
+        }
+
+        private Bitmap DrawWidgetTime()
+        {
+            Bitmap src = new Bitmap(454, 454);
+            Color colorMask = Color.FromArgb(100, Color.Black);
+            ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(colorMask, 454, 454);
+            if (radioButton_GTS2.Checked)
+            {
+                src = new Bitmap(348, 442);
+                combineMask = new ImageMagick.MagickImage(colorMask, 348, 442);
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                src = new Bitmap(360, 360);
+                combineMask = new ImageMagick.MagickImage(colorMask, 360, 360);
+            }
+            offSet_X = src.Width / 2;
+            offSet_Y = src.Height / 2;
+            Graphics gPanel = Graphics.FromImage(src);
+            gPanel.DrawLine(new Pen(Color.Red, 1), 0, 0, 1, 1);
+
+            #region цифровое время
+            int time_offsetX = -1;
+            int time_offsetY = -1;
+            int time_spasing = 0;
+            bool _pm = false;
+            // часы
+            if (checkBox_Hour_Use.Checked && comboBox_Hour_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Hour_image.SelectedIndex;
+                int x = (int)numericUpDown_HourX.Value;
+                int y = (int)numericUpDown_HourY.Value;
+                time_offsetY = y;
+                int spasing = (int)numericUpDown_Hour_spacing.Value;
+                time_spasing = spasing;
+                int alignment = comboBox_Hour_alignment.SelectedIndex;
+                bool addZero = checkBox_Hour_add_zero.Checked;
+                //addZero = true;
+                //int value = Watch_Face_Preview_Set.Time.Hours;
+                int value = 10;
+                int separator_index = -1;
+                if (comboBox_Hour_separator.SelectedIndex >= 0) separator_index = comboBox_Hour_separator.SelectedIndex;
+
+                if (checkBox_12h_Use.Checked && Program_Settings.ShowIn12hourFormat)
+                {
+                    if (comboBox_AM_image.SelectedIndex >= 0 && comboBox_PM_image.SelectedIndex >= 0)
+                    {
+                        if (value > 11)
+                        {
+                            _pm = true;
+                            value -= 12;
+                        }
+                        if (value == 0) value = 12;
+                    }
+                }
+                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 2, separator_index, false);
+
+
+                if (comboBox_Hour_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Hour_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hour_unitX.Value,
+                        (int)numericUpDown_Hour_unitY.Value, src.Width, src.Height));
+                }
+            }
+
+            // минуты
+            if (checkBox_Minute_Use.Checked && comboBox_Minute_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Minute_image.SelectedIndex;
+                int x = (int)numericUpDown_MinuteX.Value;
+                int y = (int)numericUpDown_MinuteY.Value;
+                int spasing = (int)numericUpDown_Minute_spacing.Value;
+                int alignment = comboBox_Minute_alignment.SelectedIndex;
+                //bool addZero = checkBox_Minute_add_zero.Checked;
+                bool addZero = true;
+                //int value = Watch_Face_Preview_Set.Time.Minutes;
+                int value = 9;
+                int separator_index = -1;
+                if (comboBox_Minute_separator.SelectedIndex >= 0) separator_index = comboBox_Minute_separator.SelectedIndex;
+                if (checkBox_Minute_follow.Checked && time_offsetX > -1)
+                {
+                    x = time_offsetX;
+                    alignment = 0;
+                    y = time_offsetY;
+                    spasing = time_spasing;
+                }
+                time_offsetY = y;
+                time_spasing = spasing;
+                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 2, separator_index, false);
+
+                if (comboBox_Minute_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Minute_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Minute_unitX.Value,
+                        (int)numericUpDown_Minute_unitY.Value, src.Width, src.Height));
+                }
+            }
+            else time_offsetX = -1;
+
+            //секунды
+            if (checkBox_Second_Use.Checked && comboBox_Second_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_Second_image.SelectedIndex;
+                int x = (int)numericUpDown_SecondX.Value;
+                int y = (int)numericUpDown_SecondY.Value;
+                int spasing = (int)numericUpDown_Second_spacing.Value;
+                int alignment = comboBox_Second_alignment.SelectedIndex;
+                //bool addZero = checkBox_Second_add_zero.Checked;
+                bool addZero = true;
+                //int value = Watch_Face_Preview_Set.Time.Seconds;
+                int value = 35;
+                int separator_index = -1;
+                if (comboBox_Second_separator.SelectedIndex >= 0) separator_index = comboBox_Second_separator.SelectedIndex;
+                if (checkBox_Second_follow.Checked && time_offsetX > -1)
+                {
+                    x = time_offsetX;
+                    alignment = 0;
+                    y = time_offsetY;
+                    spasing = time_spasing;
+                }
+                Draw_dagital_text(gPanel, imageIndex, x, y,
+                    spasing, alignment, value, addZero, 2, separator_index, false);
+
+                if (comboBox_Second_unit.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Second_unitX.Value,
+                        (int)numericUpDown_Second_unitY.Value, src.Width, src.Height));
+                }
+            }
+
+            //// AM/PM
+            if (checkBox_12h_Use.Checked && Program_Settings.ShowIn12hourFormat)
+            {
+                if (comboBox_AM_image.SelectedIndex >= 0 && comboBox_PM_image.SelectedIndex >= 0)
+                {
+                    if (_pm)
+                    {
+                        //src = OpenFileStream(ListImagesFullName[comboBox_PM_image.SelectedIndex]);
+                        //gPanel.DrawImage(src, (int)numericUpDown_PM_X.Value, (int)numericUpDown_PM_Y.Value);
+                        Draw_image(gPanel, comboBox_PM_image.SelectedIndex,
+                            (int)numericUpDown_PM_X.Value, (int)numericUpDown_PM_Y.Value);
+                    }
+                    else
+                    {
+                        //src = OpenFileStream(ListImagesFullName[comboBox_AM_image.SelectedIndex]);
+                        //gPanel.DrawImage(src, (int)numericUpDown_AM_X.Value, (int)numericUpDown_AM_Y.Value);
+                        Draw_image(gPanel, comboBox_AM_image.SelectedIndex,
+                            (int)numericUpDown_AM_X.Value, (int)numericUpDown_AM_Y.Value);
+                    }
+                }
+            }
+
+            // системный шрифт
+            //int SFhour = Watch_Face_Preview_Set.Time.Hours;
+            //int SFminute = Watch_Face_Preview_Set.Time.Minutes;
+            //int SFsecond = Watch_Face_Preview_Set.Time.Seconds;
+
+            int SFhour = 10;
+            int SFminute = 9;
+            int SFsecond = 37;
+            DrawTime(gPanel, null, null, null, userControl_SystemFont_GroupTime, SFhour, SFminute, SFsecond, false, false);
+            #endregion
+
+            #region аналоговое время
+
+            bool AnalogClockOffSet = false;
+            int centerX = 227;
+            int centerY = 227;
+            if (radioButton_GTS2.Checked)
+            {
+                centerX = 174;
+                centerY = 221;
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                centerX = 180;
+                centerY = 180;
+            }
+
+            int Hour_X = (int)numericUpDown_Hour_handX.Value;
+            int Hour_Y = (int)numericUpDown_Hour_handY.Value;
+            int Minute_X = (int)numericUpDown_Minute_handX.Value;
+            int Minute_Y = (int)numericUpDown_Minute_handY.Value;
+            int Second_X = (int)numericUpDown_Second_handX.Value;
+            int Second_Y = (int)numericUpDown_Second_handY.Value;
+
+            if (Hour_X == 0) Hour_X = centerX;
+            if (Minute_X == 0) Minute_X = centerX;
+            if (Second_X == 0) Second_X = centerX;
+
+            if (Hour_Y == 0) Hour_Y = centerY;
+            if (Minute_Y == 0) Minute_Y = centerY;
+            if (Second_Y == 0) Second_Y = centerY;
+
+            if ((Hour_X != centerX) || (Hour_Y != centerY)) AnalogClockOffSet = true;
+            if ((Minute_X != centerX) || (Minute_Y != centerY)) AnalogClockOffSet = true;
+            if ((Second_X != centerX) || (Second_Y != centerY)) AnalogClockOffSet = true;
+
+            if (AnalogClockOffSet)
+            {
+                if ((Hour_X != centerX || Hour_Y != centerY) &&
+                    ((Minute_X != centerX || Minute_Y != centerY))) AnalogClockOffSet = false;
+            }
+
+            // секунды
+            if (AnalogClockOffSet)
+            {
+                if (checkBox_Second_hand_Use.Checked && comboBox_Second_hand_image.SelectedIndex >= 0)
+                {
+                    int x = (int)numericUpDown_Second_handX.Value;
+                    int y = (int)numericUpDown_Second_handY.Value;
+                    int offsetX = (int)numericUpDown_Second_handX_offset.Value;
+                    int offsetY = (int)numericUpDown_Second_handY_offset.Value;
+                    int image_index = comboBox_Second_hand_image.SelectedIndex;
+                    //int sec = Watch_Face_Preview_Set.Time.Seconds;
+                    int sec = 35;
+                    //if (hour >= 12) hour = hour - 12;
+                    float angle = 360 * sec / 60;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, false);
+
+                    if (comboBox_Second_hand_imageCentr.SelectedIndex >= 0)
+                    {
+                        //src = OpenFileStream(ListImagesFullName[comboBox_Second_hand_imageCentr.SelectedIndex]);
+                        //gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Second_handX_centr.Value,
+                        //    (int)numericUpDown_Second_handY_centr.Value, src.Width, src.Height));
+                        Draw_image(gPanel, comboBox_Second_hand_imageCentr.SelectedIndex,
+                            (int)numericUpDown_Second_handX_centr.Value, (int)numericUpDown_Second_handY_centr.Value);
+                    }
+                }
+            }
+
+            // часы
+            if (checkBox_Hour_hand_Use.Checked && comboBox_Hour_hand_image.SelectedIndex >= 0)
+            {
+                int x = (int)numericUpDown_Hour_handX.Value;
+                int y = (int)numericUpDown_Hour_handY.Value;
+                int offsetX = (int)numericUpDown_Hour_handX_offset.Value;
+                int offsetY = (int)numericUpDown_Hour_handY_offset.Value;
+                int image_index = comboBox_Hour_hand_image.SelectedIndex;
+                //int hour = Watch_Face_Preview_Set.Time.Hours;
+                //int min = Watch_Face_Preview_Set.Time.Minutes;
+                int hour = 10;
+                int min = 9;
+                //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
+                if (hour >= 12) hour = hour - 12;
+                float angle = 360 * hour / 12 + 360 * min / (60 * 12);
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, false);
+
+                if (comboBox_Hour_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    //src = OpenFileStream(ListImagesFullName[comboBox_Hour_hand_imageCentr.SelectedIndex]);
+                    //gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hour_handX_centr.Value,
+                    //    (int)numericUpDown_Hour_handY_centr.Value, src.Width, src.Height));
+                    Draw_image(gPanel, comboBox_Hour_hand_imageCentr.SelectedIndex,
+                            (int)numericUpDown_Hour_handX_centr.Value, (int)numericUpDown_Hour_handY_centr.Value);
+                }
+            }
+
+            // минуты
+            if (checkBox_Minute_hand_Use.Checked && comboBox_Minute_hand_image.SelectedIndex >= 0)
+            {
+                int x = (int)numericUpDown_Minute_handX.Value;
+                int y = (int)numericUpDown_Minute_handY.Value;
+                int offsetX = (int)numericUpDown_Minute_handX_offset.Value;
+                int offsetY = (int)numericUpDown_Minute_handY_offset.Value;
+                int image_index = comboBox_Minute_hand_image.SelectedIndex;
+                //int min = Watch_Face_Preview_Set.Time.Minutes;
+                int min = 9;
+                float angle = 360 * min / 60;
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, false);
+
+                if (comboBox_Minute_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    //src = OpenFileStream(ListImagesFullName[comboBox_Minute_hand_imageCentr.SelectedIndex]);
+                    //gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Minute_handX_centr.Value,
+                    //    (int)numericUpDown_Minute_handY_centr.Value, src.Width, src.Height));
+                    Draw_image(gPanel, comboBox_Minute_hand_imageCentr.SelectedIndex,
+                            (int)numericUpDown_Minute_handX_centr.Value, (int)numericUpDown_Minute_handY_centr.Value);
+                }
+            }
+
+            // секунды
+            if (!AnalogClockOffSet)
+            {
+                if (checkBox_Second_hand_Use.Checked && comboBox_Second_hand_image.SelectedIndex >= 0)
+                {
+                    int x = (int)numericUpDown_Second_handX.Value;
+                    int y = (int)numericUpDown_Second_handY.Value;
+                    int offsetX = (int)numericUpDown_Second_handX_offset.Value;
+                    int offsetY = (int)numericUpDown_Second_handY_offset.Value;
+                    int image_index = comboBox_Second_hand_image.SelectedIndex;
+                    //int sec = Watch_Face_Preview_Set.Time.Seconds;
+                    int sec = 35;
+                    //if (hour >= 12) hour = hour - 12;
+                    float angle = 360 * sec / 60;
+                    DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, false);
+
+                    if (comboBox_Second_hand_imageCentr.SelectedIndex >= 0)
+                    {
+                        //src = OpenFileStream(ListImagesFullName[comboBox_Second_hand_imageCentr.SelectedIndex]);
+                        //gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Second_handX_centr.Value,
+                        //    (int)numericUpDown_Second_handY_centr.Value, src.Width, src.Height));
+                        Draw_image(gPanel, comboBox_Second_hand_imageCentr.SelectedIndex,
+                            (int)numericUpDown_Second_handX_centr.Value, (int)numericUpDown_Second_handY_centr.Value);
+                    }
+                }
+            }
+            #endregion
+
+            ImageMagick.MagickImage image = new ImageMagick.MagickImage(src);
+            image.Composite(combineMask, ImageMagick.CompositeOperator.In, ImageMagick.Channels.Alpha);
+
+            return image.ToBitmap();
+            //return src;
+        }
+
+        private void Draw_image(Graphics graphics, int image_index, int x, int y)
+        {
+            if (image_index >=0 && image_index < ListImagesFullName.Count)
+            {
+                Bitmap src = OpenFileStream(ListImagesFullName[image_index]);
+                graphics.DrawImage(src, x, y);
+                src.Dispose();
+            }
         }
     }
 }

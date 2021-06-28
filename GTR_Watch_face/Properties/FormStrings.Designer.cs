@@ -592,6 +592,15 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Информация.
+        /// </summary>
+        public static string Message_Information_Caption {
+            get {
+                return ResourceManager.GetString("Message_Information_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Неверный JSON файл..
         /// </summary>
         public static string Message_JsonError_Text {
@@ -745,6 +754,51 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавлена первая редактируемая зона..
+        /// </summary>
+        public static string Message_Warning_Add_FirstWidget1 {
+            get {
+                return ResourceManager.GetString("Message_Warning_Add_FirstWidget1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Не забудьте настроить верхнюю и нижнюю маски на экране редактирования..
+        /// </summary>
+        public static string Message_Warning_Add_FirstWidget2 {
+            get {
+                return ResourceManager.GetString("Message_Warning_Add_FirstWidget2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Настройте все изображения необходимые для редактируемой зоны..
+        /// </summary>
+        public static string Message_Warning_Add_Widget {
+            get {
+                return ResourceManager.GetString("Message_Warning_Add_Widget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавьте данные для отображения в редактируемой зоне..
+        /// </summary>
+        public static string Message_Warning_AddData_WidgetElement {
+            get {
+                return ResourceManager.GetString("Message_Warning_AddData_WidgetElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавьте изображение предпросмотра для выбранного элемента..
+        /// </summary>
+        public static string Message_Warning_AddPreview_WidgetElement {
+            get {
+                return ResourceManager.GetString("Message_Warning_AddPreview_WidgetElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Предупреждение.
         /// </summary>
         public static string Message_Warning_Caption {
@@ -759,6 +813,15 @@ namespace AmazFit_Watchface_2.Properties {
         public static string Message_Warning_Information {
             get {
                 return ResourceManager.GetString("Message_Warning_Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Для начала добавьте хотя бы одну редактируемую зону..
+        /// </summary>
+        public static string Message_Warning_No_Widget {
+            get {
+                return ResourceManager.GetString("Message_Warning_No_Widget", resourceCulture);
             }
         }
         
@@ -930,6 +993,15 @@ namespace AmazFit_Watchface_2.Properties {
         public static string Message_WarningWeatherError {
             get {
                 return ResourceManager.GetString("Message_WarningWeatherError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дата.
+        /// </summary>
+        public static string WidgeDescription_Date {
+            get {
+                return ResourceManager.GetString("WidgeDescription_Date", resourceCulture);
             }
         }
         
