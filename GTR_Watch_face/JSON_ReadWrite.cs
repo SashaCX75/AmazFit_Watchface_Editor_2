@@ -6892,6 +6892,7 @@ namespace AmazFit_Watchface_2
 
             userControl_previewWidget.ComboBoxAddItems(ListImages);
             userControl_picturesWidget.ComboBoxAddItems(ListImages);
+            userControl_pictures_weatherWidget.ComboBoxAddItems(ListImages);
             userControl_textWidget.ComboBoxAddItems(ListImages);
             userControl_text_goalWidget.ComboBoxAddItems(ListImages);
             userControl_text_weatherWidgetCur.ComboBoxAddItems(ListImages);
@@ -6922,6 +6923,7 @@ namespace AmazFit_Watchface_2
 
             userControl_previewWidgetAdd.ComboBoxAddItems(ListImages);
             userControl_picturesWidgetAdd.ComboBoxAddItems(ListImages);
+            userControl_pictures_weatherWidgetAdd.ComboBoxAddItems(ListImages);
             userControl_textWidgetAdd.ComboBoxAddItems(ListImages);
             userControl_text_goalWidgetAdd.ComboBoxAddItems(ListImages);
             userControl_text_weatherWidgetCurAdd.ComboBoxAddItems(ListImages);
@@ -7270,6 +7272,7 @@ namespace AmazFit_Watchface_2
 
             userControl_previewWidget.SettingsClear();
             userControl_picturesWidget.SettingsClear();
+            userControl_pictures_weatherWidget.SettingsClear();
             userControl_textWidget.SettingsClear();
             userControl_text_goalWidget.SettingsClear();
             userControl_text_weatherWidgetCur.SettingsClear();
@@ -7304,6 +7307,7 @@ namespace AmazFit_Watchface_2
 
             userControl_previewWidgetAdd.SettingsClear();
             userControl_picturesWidgetAdd.SettingsClear();
+            userControl_pictures_weatherWidgetAdd.SettingsClear();
             userControl_textWidgetAdd.SettingsClear();
             userControl_text_goalWidgetAdd.SettingsClear();
             userControl_text_weatherWidgetCurAdd.SettingsClear();

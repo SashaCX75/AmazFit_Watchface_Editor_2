@@ -353,8 +353,8 @@ namespace AmazFit_Watchface_2
                 comboBox_scaleCircle_image_background.Items.Clear(); 
             }
 
-            comboBox_scaleCircle_image.Text = "";
-            comboBox_scaleCircle_image_background.Text = "";
+            comboBox_scaleCircle_image.Text = null;
+            comboBox_scaleCircle_image_background.Text = null;
 
             numericUpDown_scaleCircleX.Value = 0;
             numericUpDown_scaleCircleY.Value = 0;

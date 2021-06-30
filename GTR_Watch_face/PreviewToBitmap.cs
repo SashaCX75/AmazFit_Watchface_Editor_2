@@ -32,10 +32,26 @@ namespace AmazFit_Watchface_2
             bool showCentrHend, bool showWidgetsArea, int link)
         {
 
-            if (tabControl1.SelectedTab.Name == "tabPage_Widgets" && radioButton_WidgetPreviewEdit.Checked)
+            //if (tabControl1.SelectedTab.Name == "tabPage_Widgets" && radioButton_WidgetPreviewEdit.Checked)
+            //{
+            //    DrawWidgetEditScreen(gPanel, showWidgetsArea);
+            //    return;
+            //}
+
+            if (tabControl1.SelectedTab.Name == "tabPage_Widgets")
             {
-                DrawWidgetEditScreen(gPanel, showWidgetsArea);
-                return;
+                if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetsEdit" && radioButton_WidgetPreviewEdit.Checked)
+                {
+                    int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+                    DrawWidgetEditScreen(gPanel, crop, showWidgetsArea, widgetIndex);
+                    return;
+                }
+                if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" && radioButton_WidgetAdd.Checked)
+                {
+                    int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+                    DrawWidgetEditScreen(gPanel, crop, showWidgetsArea, widgetIndex);
+                    return;
+                }
             }
 
             Logger.WriteLine("* PreviewToBitmap");
@@ -2368,7 +2384,7 @@ namespace AmazFit_Watchface_2
                 int angle = (int)numericUpDown_angle.Value;
                 int spasing = (int)numericUpDown_spacing.Value;
                 int unitCheck = userControl_SystemFont.checkBoxGetUnit();
-                if (activity == "Battery") unitCheck = 1;
+                if (activity == "Battery" || activity == "Humidity") unitCheck = 1;
                 //bool follow = checkBox_follow.Checked;
                 bool addZero = checkBox_add_zero.Checked; 
                 bool separator = checkBox_separator.Checked;
@@ -2438,7 +2454,7 @@ namespace AmazFit_Watchface_2
                     int angle = (int)numericUpDown_angle.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int unitCheck = userControl_SystemFontGoal.checkBoxGetUnit();
-                    if (activity == "Battery") unitCheck = 1;
+                    if (activity == "Battery" || activity == "Humidity") unitCheck = 1;
                     bool addZero = checkBox_add_zero.Checked;
                     bool separator = checkBox_separator.Checked;
                     string sValue = goal.ToString();
@@ -2477,7 +2493,7 @@ namespace AmazFit_Watchface_2
                 int radius = (int)numericUpDown_radius.Value;
                 int spasing = (int)numericUpDown_spacing.Value;
                 int unitCheck = userControl_FontRotate.checkBoxGetUnit();
-                if (activity == "Battery") unitCheck = 1;
+                if (activity == "Battery" || activity == "Humidity") unitCheck = 1;
                 //bool follow = checkBox_follow.Checked;
                 bool addZero = checkBox_add_zero.Checked;
                 bool separator = checkBox_separator.Checked;
@@ -2543,7 +2559,7 @@ namespace AmazFit_Watchface_2
                     int radius = (int)numericUpDown_radius.Value;
                     int spasing = (int)numericUpDown_spacing.Value;
                     int unitCheck = userControl_FontRotateGoal.checkBoxGetUnit();
-                    if (activity == "Battery") unitCheck = 1;
+                    if (activity == "Battery" || activity == "Humidity") unitCheck = 1;
                     bool addZero = checkBox_add_zero.Checked;
                     bool separator = checkBox_separator.Checked;
                     int rotate_direction = userControl_FontRotateGoal.radioButtonGetRotateDirection();

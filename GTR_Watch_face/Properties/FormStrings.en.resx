@@ -426,14 +426,14 @@
   <data name="Message_Warning_No_Widget" xml:space="preserve">
     <value>First, add at least one editable zone.</value>
   </data>
-  <data name="WidgeDescription_Date" xml:space="preserve">
+  <data name="WidgetDescription_Date" xml:space="preserve">
     <value>Date</value>
   </data>
   <data name="WidgetName_ActivityGoal" xml:space="preserve">
-    <value>Activity goal</value>
+    <value>Climbing</value>
   </data>
   <data name="WidgetName_AirPressure" xml:space="preserve">
-    <value>Air pressure</value>
+    <value>Air Pressure</value>
   </data>
   <data name="WidgetName_AirQuality" xml:space="preserve">
     <value>Air Quality</value>
@@ -457,7 +457,7 @@
     <value>Fat-burning</value>
   </data>
   <data name="WidgetName_HeartRate" xml:space="preserve">
-    <value>Heart rate</value>
+    <value>Heart Rate</value>
   </data>
   <data name="WidgetName_Humidity" xml:space="preserve">
     <value>Humidity</value>
@@ -466,7 +466,7 @@
     <value>PAI</value>
   </data>
   <data name="WidgetName_StandUp" xml:space="preserve">
-    <value>Stand up</value>
+    <value>Stand</value>
   </data>
   <data name="WidgetName_Steps" xml:space="preserve">
     <value>Steps</value>
@@ -475,15 +475,15 @@
     <value>Stress</value>
   </data>
   <data name="WidgetName_Sunrise" xml:space="preserve">
-    <value>Sunrise</value>
+    <value>Sunrise and sunset</value>
   </data>
   <data name="WidgetName_UVindex" xml:space="preserve">
-    <value>UV Index</value>
+    <value>UV ray</value>
   </data>
   <data name="WidgetName_Weather" xml:space="preserve">
     <value>Weather</value>
   </data>
   <data name="WidgetName_WindForce" xml:space="preserve">
-    <value>Wind force</value>
+    <value>Wind speed or direction</value>
   </data>
 </root>

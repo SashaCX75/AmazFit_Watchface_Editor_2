@@ -3476,6 +3476,7 @@ namespace AmazFit_Watchface_2
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
+                    // основной экран
                     for (int i = 0; i < 13; i++)
                     {
                         save = false;
@@ -3592,7 +3593,7 @@ namespace AmazFit_Watchface_2
                     }
 
                     Logger.WriteLine("SaveGIF_AOD");
-
+                    // AOD
                     if (Watch_Face.ScreenIdle != null)
                     {
 
@@ -3636,6 +3637,24 @@ namespace AmazFit_Watchface_2
                         collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
                     }
 
+                    if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
+                    {
+                        if (comboBox_WidgetNumber.Items.Count > 0)
+                        {
+                            for (int i = 0; i < comboBox_WidgetNumber.Items.Count; i++)
+                            {
+                                bitmap = bitmapTemp;
+                                gPanel = Graphics.FromImage(bitmap);
+                                DrawWidgetEditScreen(gPanel, false, false, i, true);
+
+                                if (checkBox_WatchSkin_Use.Checked) bitmap = ApplyWatchSkin(bitmap);
+                                else if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+                                MagickImage item = new MagickImage(bitmap);
+                                collection.Add(item);
+                                collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
+                            }
+                        }
+                    }
 
                     // Optionally reduce colors
                     QuantizeSettings settings = new QuantizeSettings();

@@ -424,11 +424,11 @@ namespace AmazFit_Watchface_2
                 comboBox_imageDecimalPoint.Items.Clear(); 
             }
 
-            comboBox_image.Text = "";
-            comboBox_icon.Text = "";
-            comboBox_unit.Text = "";
-            comboBox_imageError.Text = "";
-            comboBox_imageDecimalPoint.Text = "";
+            comboBox_image.Text = null;
+            comboBox_icon.Text = null;
+            comboBox_unit.Text = null;
+            comboBox_imageError.Text = null;
+            comboBox_imageDecimalPoint.Text = null;
 
             numericUpDown_imageX.Value = 0;
             numericUpDown_imageY.Value = 0;

@@ -999,14 +999,14 @@ namespace AmazFit_Watchface_2.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Дата.
         /// </summary>
-        public static string WidgeDescription_Date {
+        public static string WidgetDescription_Date {
             get {
-                return ResourceManager.GetString("WidgeDescription_Date", resourceCulture);
+                return ResourceManager.GetString("WidgetDescription_Date", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Активность.
+        ///   Ищет локализованную строку, похожую на Альпинизм.
         /// </summary>
         public static string WidgetName_ActivityGoal {
             get {
@@ -1015,7 +1015,7 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Давление.
+        ///   Ищет локализованную строку, похожую на Давление воздуха.
         /// </summary>
         public static string WidgetName_AirPressure {
             get {
@@ -1069,7 +1069,7 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Путь.
+        ///   Ищет локализованную строку, похожую на Расстояние.
         /// </summary>
         public static string WidgetName_Distance {
             get {
@@ -1114,7 +1114,7 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Разминка.
+        ///   Ищет локализованную строку, похожую на Стоя.
         /// </summary>
         public static string WidgetName_StandUp {
             get {
@@ -1141,7 +1141,7 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Восход.
+        ///   Ищет локализованную строку, похожую на Восход и закат солнца.
         /// </summary>
         public static string WidgetName_Sunrise {
             get {
@@ -1150,7 +1150,7 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на УФ индекс.
+        ///   Ищет локализованную строку, похожую на УФ-лучи.
         /// </summary>
         public static string WidgetName_UVindex {
             get {
@@ -1168,7 +1168,7 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ветер.
+        ///   Ищет локализованную строку, похожую на Скорость и направление ветра.
         /// </summary>
         public static string WidgetName_WindForce {
             get {

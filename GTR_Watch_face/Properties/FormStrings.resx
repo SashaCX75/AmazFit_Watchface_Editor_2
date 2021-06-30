@@ -409,10 +409,10 @@
     <value>Выбор файла изображения часов</value>
   </data>
   <data name="WidgetName_ActivityGoal" xml:space="preserve">
-    <value>Активность</value>
+    <value>Альпинизм</value>
   </data>
   <data name="WidgetName_AirPressure" xml:space="preserve">
-    <value>Давление</value>
+    <value>Давление воздуха</value>
   </data>
   <data name="WidgetName_AirQuality" xml:space="preserve">
     <value>Качество воздуха</value>
@@ -430,7 +430,7 @@
     <value>Дата</value>
   </data>
   <data name="WidgetName_Distance" xml:space="preserve">
-    <value>Путь</value>
+    <value>Расстояние</value>
   </data>
   <data name="WidgetName_FatBurning" xml:space="preserve">
     <value>Жиросжигание</value>
@@ -445,7 +445,7 @@
     <value>PAI</value>
   </data>
   <data name="WidgetName_StandUp" xml:space="preserve">
-    <value>Разминка</value>
+    <value>Стоя</value>
   </data>
   <data name="WidgetName_Steps" xml:space="preserve">
     <value>Шаги</value>
@@ -454,16 +454,16 @@
     <value>Уровень стресса</value>
   </data>
   <data name="WidgetName_Sunrise" xml:space="preserve">
-    <value>Восход</value>
+    <value>Восход и закат солнца</value>
   </data>
   <data name="WidgetName_UVindex" xml:space="preserve">
-    <value>УФ индекс</value>
+    <value>УФ-лучи</value>
   </data>
   <data name="WidgetName_Weather" xml:space="preserve">
     <value>Погода</value>
   </data>
   <data name="WidgetName_WindForce" xml:space="preserve">
-    <value>Ветер</value>
+    <value>Скорость и направление ветра</value>
   </data>
   <data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
     <value>Добавьте данные для отображения в редактируемой зоне.</value>
@@ -480,7 +480,7 @@
   <data name="Message_Warning_No_Widget" xml:space="preserve">
     <value>Для начала добавьте хотя бы одну редактируемую зону.</value>
   </data>
-  <data name="WidgeDescription_Date" xml:space="preserve">
+  <data name="WidgetDescription_Date" xml:space="preserve">
     <value>Дата</value>
   </data>
   <data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">

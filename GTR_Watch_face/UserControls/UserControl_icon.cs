@@ -255,8 +255,8 @@ namespace AmazFit_Watchface_2
                 comboBox_icon_image.Items.Clear();
                 comboBox_icon_image2.Items.Clear(); 
             }
-            comboBox_icon_image.Text = "";
-            comboBox_icon_image2.Text = "";
+            comboBox_icon_image.Text = null;
+            comboBox_icon_image2.Text = null;
 
             numericUpDown_iconX.Value = 0;
             numericUpDown_iconY.Value = 0;

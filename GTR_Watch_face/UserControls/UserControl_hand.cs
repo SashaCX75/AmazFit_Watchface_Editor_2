@@ -263,9 +263,9 @@ namespace AmazFit_Watchface_2
                 comboBox_hand_imageBackground.Items.Clear(); 
             }
 
-            comboBox_hand_image.Text = "";
-            comboBox_hand_imageCentr.Text = "";
-            comboBox_hand_imageBackground.Text = "";
+            comboBox_hand_image.Text = null;
+            comboBox_hand_imageCentr.Text = null;
+            comboBox_hand_imageBackground.Text = null;
 
             numericUpDown_handX.Value = 0;
             numericUpDown_handY.Value = 0;

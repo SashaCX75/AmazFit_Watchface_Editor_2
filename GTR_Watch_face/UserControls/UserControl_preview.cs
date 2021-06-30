@@ -170,7 +170,7 @@ namespace AmazFit_Watchface_2
             {
                 comboBox_icon_image.Items.Clear();
             }
-            comboBox_icon_image.Text = "";
+            comboBox_icon_image.Text = null;
 
             setValue = false;
         }
