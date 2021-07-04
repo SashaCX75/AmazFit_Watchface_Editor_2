@@ -117,4 +117,171 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;comboBox_imageError.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label04.Name" xml:space="preserve">
+    <value>label04</value>
+  </data>
+  <data name="&gt;&gt;comboBox_imageError.Name" xml:space="preserve">
+    <value>comboBox_imageError</value>
+  </data>
+  <data name="&gt;&gt;label1084.Name" xml:space="preserve">
+    <value>label1084</value>
+  </data>
+  <data name="&gt;&gt;label08.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;label06.Name" xml:space="preserve">
+    <value>label06</value>
+  </data>
+  <data name="&gt;&gt;label07.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1084.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Name" xml:space="preserve">
+    <value>checkBox_follow</value>
+  </data>
+  <data name="&gt;&gt;label08.Name" xml:space="preserve">
+    <value>label08</value>
+  </data>
+  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserControl_text_date</value>
+  </data>
+  <data name="label04.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;label02.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_addZero.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label07.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;button_text.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;label1084.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;button_text.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_follow.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label06.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;label02.Name" xml:space="preserve">
+    <value>label02</value>
+  </data>
+  <data name="&gt;&gt;label1084.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label07.Name" xml:space="preserve">
+    <value>label07</value>
+  </data>
+  <data name="&gt;&gt;label1085.Name" xml:space="preserve">
+    <value>label1085</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label02.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;label06.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;comboBox_imageError.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label04.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label04.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 88</value>
+  </data>
+  <data name="label04.Text" xml:space="preserve">
+    <value>Единицы измерения</value>
+  </data>
+  <data name="&gt;&gt;label04.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="label08.Text" xml:space="preserve">
+    <value>Разделитель</value>
+  </data>
+  <data name="&gt;&gt;checkBox_addZero.Name" xml:space="preserve">
+    <value>checkBox_addZero</value>
+  </data>
+  <data name="&gt;&gt;label04.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label06.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_imageError.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label1085.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;label1085.Parent" xml:space="preserve">
+    <value>panel_text</value>
+  </data>
+  <data name="&gt;&gt;checkBox_addZero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label08.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 30</value>
+  </data>
+  <data name="&gt;&gt;button_text.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label04.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1085.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_text.Name" xml:space="preserve">
+    <value>button_text</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

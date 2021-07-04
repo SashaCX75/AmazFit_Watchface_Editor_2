@@ -865,6 +865,108 @@ namespace AmazFit_Watchface_2
             // дата
             else if(widgetElement.Date != null)
             {
+
+                // день недели стрелкой
+                if (widgetElement.Date.DateClockHand != null && widgetElement.Date.DateClockHand.WeekDayClockHand != null)
+                {
+                    int _imageIndex = -1;
+                    int _centrImageIndex = -1;
+                    int _backgroundImageIndex = -1;
+                    int _x = -1;
+                    int _y = -1;
+                    int _startAngle = 0;
+                    int _endAngle = 0;
+                    int _offsetX = 0;
+                    int _offsetY = 0;
+                    int _X_centr = 0;
+                    int _Y_centr = 0;
+                    int _X_background = 0;
+                    int _Y_background = 0;
+
+
+                    _x = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.X;
+                    _y = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Y;
+                    _startAngle = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.StartAngle;
+                    _endAngle = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.EndAngle;
+                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer != null)
+                    {
+                        _imageIndex = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.ImageIndex - 1;
+                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates != null)
+                        {
+                            _offsetX = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates.X;
+                            _offsetY = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates.Y;
+                        }
+                    }
+
+                    // центральное изображение
+                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Cover != null)
+                    {
+                        _centrImageIndex = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.ImageIndex - 1;
+                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates != null)
+                        {
+                            _X_centr = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.Coordinates.X;
+                            _Y_centr = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.Coordinates.Y;
+                        }
+                    }
+
+                    // фон
+                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Scale != null &&
+                        widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.ImageSet != null)
+                    {
+                        foreach (MultilangImage multilangImage in widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.ImageSet)
+                        {
+                            if (multilangImage.LangCode == "All")
+                                _backgroundImageIndex = (int)multilangImage.ImageSet.ImageIndex - 1;
+                        }
+                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates != null)
+                        {
+                            _X_background = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates.X;
+                            _Y_background = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates.Y;
+                        }
+                    }
+
+                    if (_backgroundImageIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[_backgroundImageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(_X_background, _Y_background, src.Width, src.Height));
+                    }
+                    int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
+                    WeekDay--;
+                    if (WeekDay < 0) WeekDay = 6;
+                    float angle = _startAngle + WeekDay * (_endAngle - _startAngle) / 6;
+                    DrawAnalogClock(gPanel, _x, _y, _offsetX, _offsetY, _imageIndex, angle, showCentrHend);
+
+                    if (_centrImageIndex >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[_centrImageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(_X_centr, _Y_centr, src.Width, src.Height));
+                    }
+                }
+
+                // день недели картинкой
+                if (widgetElement.Date.WeeksDigits != null)
+                {
+                    if (widgetElement.Date.WeeksDigits.Digit != null)
+                    {
+                        if (widgetElement.Date.WeeksDigits.Digit.Image != null)
+                        {
+                            int _x = (int)widgetElement.Date.WeeksDigits.Digit.Image.X;
+                            int _y = (int)widgetElement.Date.WeeksDigits.Digit.Image.Y;
+                            int _imageIndex = -1;
+                            foreach (MultilangImage multilangImage in widgetElement.Date.WeeksDigits.Digit.Image.MultilangImage)
+                            {
+                                if (multilangImage.LangCode == "All")
+                                    _imageIndex = (int)(multilangImage.ImageSet.ImageIndex - 1);
+                            }
+                            if (_imageIndex >= 0 && _imageIndex < ListImagesFullName.Count)
+                            {
+                                src = OpenFileStream(ListImagesFullName[_imageIndex]);
+                                gPanel.DrawImage(src, new Rectangle(_x, _y, src.Width, src.Height));
+                            }
+                        }
+                    }
+                }
+                
                 // надпись или картинка месяца
                 if (widgetElement.Date.DateDigits != null && widgetElement.Date.DateDigits.Count > 0)
                 {
@@ -1341,107 +1443,6 @@ namespace AmazFit_Watchface_2
                         gPanel.DrawImage(src, new Rectangle(_X_centr, _Y_centr, src.Width, src.Height));
                     }
                 }
-
-                // день недели стрелкой
-                if (widgetElement.Date.DateClockHand != null && widgetElement.Date.DateClockHand.WeekDayClockHand != null)
-                {
-                    int _imageIndex = -1;
-                    int _centrImageIndex = -1;
-                    int _backgroundImageIndex = -1;
-                    int _x = -1;
-                    int _y = -1;
-                    int _startAngle = 0;
-                    int _endAngle = 0;
-                    int _offsetX = 0;
-                    int _offsetY = 0;
-                    int _X_centr = 0;
-                    int _Y_centr = 0;
-                    int _X_background = 0;
-                    int _Y_background = 0;
-
-
-                    _x = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.X;
-                    _y = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Y;
-                    _startAngle = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.StartAngle;
-                    _endAngle = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.EndAngle;
-                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer != null)
-                    {
-                        _imageIndex = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.ImageIndex - 1;
-                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates != null)
-                        {
-                            _offsetX = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates.X;
-                            _offsetY = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates.Y;
-                        }
-                    }
-
-                    // центральное изображение
-                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Cover != null)
-                    {
-                        _centrImageIndex = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.ImageIndex - 1;
-                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Pointer.Coordinates != null)
-                        {
-                            _X_centr = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.Coordinates.X;
-                            _Y_centr = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Cover.Coordinates.Y;
-                        }
-                    }
-
-                    // фон
-                    if (widgetElement.Date.DateClockHand.WeekDayClockHand.Scale != null &&
-                        widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.ImageSet != null)
-                    {
-                        foreach (MultilangImage multilangImage in widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.ImageSet)
-                        {
-                            if (multilangImage.LangCode == "All")
-                                _backgroundImageIndex = (int)multilangImage.ImageSet.ImageIndex - 1;
-                        }
-                        if (widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates != null)
-                        {
-                            _X_background = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates.X;
-                            _Y_background = (int)widgetElement.Date.DateClockHand.WeekDayClockHand.Scale.Coordinates.Y;
-                        }
-                    }
-
-                    if (_backgroundImageIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[_backgroundImageIndex]);
-                        gPanel.DrawImage(src, new Rectangle(_X_background, _Y_background, src.Width, src.Height));
-                    }
-                    int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
-                    WeekDay--;
-                    if (WeekDay < 0) WeekDay = 6;
-                    float angle = _startAngle + WeekDay * (_endAngle - _startAngle) / 6;
-                    DrawAnalogClock(gPanel, _x, _y, _offsetX, _offsetY, _imageIndex, angle, showCentrHend);
-
-                    if (_centrImageIndex >= 0)
-                    {
-                        src = OpenFileStream(ListImagesFullName[_centrImageIndex]);
-                        gPanel.DrawImage(src, new Rectangle(_X_centr, _Y_centr, src.Width, src.Height));
-                    }
-                }
-
-                // день недели картинкой
-                if (widgetElement.Date.WeeksDigits != null)
-                {
-                    if (widgetElement.Date.WeeksDigits.Digit != null)
-                    {
-                        if (widgetElement.Date.WeeksDigits.Digit.Image != null)
-                        {
-                            int _x = (int)widgetElement.Date.WeeksDigits.Digit.Image.X;
-                            int _y = (int)widgetElement.Date.WeeksDigits.Digit.Image.Y;
-                            int _imageIndex = -1;
-                            foreach (MultilangImage multilangImage in widgetElement.Date.WeeksDigits.Digit.Image.MultilangImage)
-                            {
-                                if (multilangImage.LangCode == "All")
-                                    _imageIndex = (int)(multilangImage.ImageSet.ImageIndex-1);
-                            }
-                            if (_imageIndex >= 0 && _imageIndex < ListImagesFullName.Count)
-                            {
-                                src = OpenFileStream(ListImagesFullName[_imageIndex]);
-                                gPanel.DrawImage(src, new Rectangle(_x, _y, src.Width, src.Height));
-                            }
-                        }
-                    }
-                }
             }
 
             src.Dispose();
@@ -1463,8 +1464,11 @@ namespace AmazFit_Watchface_2
                         if (index >= 0)
                         {
                             src = OpenFileStream(ListImagesFullName[index]);
-                            x = x + (width - src.Width) / 2;
-                            y = y + (height - src.Height) / 2;
+                            if (src.Width < width)
+                            {
+                                x = x + (width - src.Width + 1) / 2;
+                                y = y + (height - src.Height + 1) / 2;
+                            }
                             gPanel.DrawImage(src, x, y); 
                         }
                     }

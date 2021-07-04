@@ -105,6 +105,54 @@ namespace AmazFit_Watchface_2
                     showShortcutsBorder, showAnimation, showProgressArea, showCentrHend, showWidgetsArea);
 
             #region дата 
+
+            // день недели картинкой
+            if (checkBox_DOW_pictures_Use.Checked && comboBox_DOW_pictures_image.SelectedIndex >= 0)
+            {
+                int imageIndex = comboBox_DOW_pictures_image.SelectedIndex;
+                int x = (int)numericUpDown_DOW_picturesX.Value;
+                int y = (int)numericUpDown_DOW_picturesY.Value;
+                imageIndex = imageIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
+
+                if (imageIndex < ListImagesFullName.Count)
+                {
+                    src = OpenFileStream(ListImagesFullName[imageIndex]);
+                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+            }
+
+            // день недели стрелкой
+            if (checkBox_DOW_hand_Use.Checked && comboBox_DOW_hand_image.SelectedIndex >= 0)
+            {
+                if (comboBox_DOW_hand_imageBackground.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageBackground.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_background.Value,
+                        (int)numericUpDown_DOW_handY_background.Value, src.Width, src.Height));
+                }
+
+                int x = (int)numericUpDown_DOW_handX.Value;
+                int y = (int)numericUpDown_DOW_handY.Value;
+                int offsetX = (int)numericUpDown_DOW_handX_offset.Value;
+                int offsetY = (int)numericUpDown_DOW_handY_offset.Value;
+                int image_index = comboBox_DOW_hand_image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_DOW_hand_startAngle.Value);
+                float endAngle = (float)(numericUpDown_DOW_hand_endAngle.Value);
+                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
+                WeekDay--;
+                if (WeekDay < 0) WeekDay = 6;
+                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
+                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
+
+                if (comboBox_DOW_hand_imageCentr.SelectedIndex >= 0)
+                {
+                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageCentr.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_centr.Value,
+                        (int)numericUpDown_DOW_handY_centr.Value, src.Width, src.Height));
+                }
+
+            }
+
             int date_offsetX = -1;
             int date_offsetY = -1;
             int spasing_offset = 0;
@@ -861,53 +909,6 @@ namespace AmazFit_Watchface_2
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Month_handX_centr.Value,
                         (int)numericUpDown_Month_handY_centr.Value, src.Width, src.Height));
                 }
-            }
-
-            // день недели картинкой
-            if (checkBox_DOW_pictures_Use.Checked && comboBox_DOW_pictures_image.SelectedIndex >= 0)
-            {
-                int imageIndex = comboBox_DOW_pictures_image.SelectedIndex;
-                int x = (int)numericUpDown_DOW_picturesX.Value;
-                int y = (int)numericUpDown_DOW_picturesY.Value;
-                imageIndex = imageIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
-
-                if (imageIndex < ListImagesFullName.Count)
-                {
-                    src = OpenFileStream(ListImagesFullName[imageIndex]);
-                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                }
-            }
-
-            // день недели стрелкой
-            if (checkBox_DOW_hand_Use.Checked && comboBox_DOW_hand_image.SelectedIndex >= 0)
-            {
-                if (comboBox_DOW_hand_imageBackground.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageBackground.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_background.Value,
-                        (int)numericUpDown_DOW_handY_background.Value, src.Width, src.Height));
-                }
-
-                int x = (int)numericUpDown_DOW_handX.Value;
-                int y = (int)numericUpDown_DOW_handY.Value;
-                int offsetX = (int)numericUpDown_DOW_handX_offset.Value;
-                int offsetY = (int)numericUpDown_DOW_handY_offset.Value;
-                int image_index = comboBox_DOW_hand_image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_DOW_hand_startAngle.Value);
-                float endAngle = (float)(numericUpDown_DOW_hand_endAngle.Value);
-                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
-                WeekDay--;
-                if (WeekDay < 0) WeekDay = 6;
-                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
-                DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
-
-                if (comboBox_DOW_hand_imageCentr.SelectedIndex >= 0)
-                {
-                    src = OpenFileStream(ListImagesFullName[comboBox_DOW_hand_imageCentr.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DOW_handX_centr.Value,
-                        (int)numericUpDown_DOW_handY_centr.Value, src.Width, src.Height));
-                }
-
             }
             #endregion
 
