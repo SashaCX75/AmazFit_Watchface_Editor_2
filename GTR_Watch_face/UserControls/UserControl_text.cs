@@ -616,12 +616,15 @@ namespace AmazFit_Watchface_2
                 controlCollection[i].Enabled = b;
             }
 
-            b = !checkBox_follow.Checked;
-            label02.Enabled = b;
-            label1084.Enabled = b;
-            label1085.Enabled = b;
-            numericUpDown_imageX.Enabled = b;
-            numericUpDown_imageY.Enabled = b;
+            if (b)
+            {
+                b = !checkBox_follow.Checked;
+                label02.Enabled = b;
+                label1084.Enabled = b;
+                label1085.Enabled = b;
+                numericUpDown_imageX.Enabled = b;
+                numericUpDown_imageY.Enabled = b; 
+            }
         }
 
         private void checkBox_follow_CheckedChanged(object sender, EventArgs e)
