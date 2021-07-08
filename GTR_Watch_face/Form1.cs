@@ -43,6 +43,7 @@ namespace AmazFit_Watchface_2
 
         int offSet_X = 227;
         int offSet_Y = 227;
+        string oldTabName = "";
 
 
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
@@ -419,7 +420,26 @@ namespace AmazFit_Watchface_2
                         break;
                 }
             }
-            //dataGridView_ScreenNormalLayer.Rows[0].Visible = false;
+
+
+            for (int i = 1; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        dataGridView_Widget_DateAdd.Rows.Add("Day", Properties.FormStrings.DateName_Day);
+                        //dataGridView_Widget_DateAdd.Rows[dataGridView_Widget_DateAdd.RowCount - 1].Visible = false;
+                        break;
+                    case 2:
+                        dataGridView_Widget_DateAdd.Rows.Add("Month", Properties.FormStrings.DateName_Month);
+                        //dataGridView_Widget_DateAdd.Rows[dataGridView_Widget_DateAdd.RowCount - 1].Visible = false;
+                        break;
+                    case 3:
+                        dataGridView_Widget_DateAdd.Rows.Add("Year", Properties.FormStrings.DateName_Year);
+                        //dataGridView_Widget_DateAdd.Rows[dataGridView_Widget_DateAdd.RowCount - 1].Visible = false;
+                        break;
+                }
+            }
 
         }
 
@@ -558,6 +578,7 @@ namespace AmazFit_Watchface_2
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
             checkBox_CircleScaleImage.Checked = Program_Settings.Show_CircleScale_Area;
             checkBox_center_marker.Checked = Program_Settings.Shortcuts_Center_marker;
+            checkBox_WidgetsArea.Checked = Program_Settings.Show_Widgets_Area;
 
             comboBox_Hour_alignment.SelectedIndex = 0;
             comboBox_Minute_alignment.SelectedIndex = 0;
@@ -590,6 +611,9 @@ namespace AmazFit_Watchface_2
             tabPage_Activity_AOD.ImageIndex = 3;
             tabPage_Air_AOD.ImageIndex = 4;
             tabPage_System_AOD.ImageIndex = 5;
+
+            tabPage_WidgetsEdit.ImageIndex = 0;
+            tabPage_WidgetAdd.ImageIndex = 1;
 
 
 
@@ -675,6 +699,7 @@ namespace AmazFit_Watchface_2
             //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
             //}
             button_CreatePreview.Location= new Point(5, 563);
+            //HideWidgetEditElement();
             Logger.WriteLine("* Form1_Shown(end)");
         }
 
@@ -2255,7 +2280,7 @@ namespace AmazFit_Watchface_2
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
                 checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 
-                checkBox_center_marker.Checked, link);
+                checkBox_center_marker.Checked, checkBox_WidgetsArea.Checked, link);
             pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -2370,7 +2395,7 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Activity.PAI = PAI;
             Watch_Face_Preview_Set.Activity.StandUp = StandUp;
             Watch_Face_Preview_Set.Activity.Stress = Stress;
-            Watch_Face_Preview_Set.Activity.ActivityGoal = ActivityGoal;
+            //Watch_Face_Preview_Set.Activity.ActivityGoal = ActivityGoal;
             Watch_Face_Preview_Set.Activity.FatBurning = FatBurning;
 
             Watch_Face_Preview_Set.Status.Bluetooth = Bluetooth;
@@ -2453,7 +2478,8 @@ namespace AmazFit_Watchface_2
         private void groupBox_Paint(object sender, PaintEventArgs e)
         {
             GroupBox box = sender as GroupBox;
-            DrawGroupBox(box, e.Graphics, Color.Black, Color.DarkGray);
+            if(box.Enabled) DrawGroupBox(box, e.Graphics, Color.Black, Color.DarkGray);
+            else DrawGroupBox(box, e.Graphics, Color.DarkGray, Color.DarkGray);
         }
         private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
         {
@@ -2662,7 +2688,7 @@ namespace AmazFit_Watchface_2
                     PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
                         checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true,
-                        checkBox_CircleScaleImage.Checked, checkBox_center_marker.Checked, link_aod);
+                        checkBox_CircleScaleImage.Checked, checkBox_center_marker.Checked, checkBox_WidgetsArea.Checked, link_aod);
                     formPreview.pictureBox_Preview.BackgroundImage = bitmapPreviewResize;
                     gPanelPreviewResize.Dispose();
                 };
@@ -2723,7 +2749,7 @@ namespace AmazFit_Watchface_2
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
                 checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked,
-                checkBox_center_marker.Checked, link);
+                checkBox_center_marker.Checked, checkBox_WidgetsArea.Checked, link);
             formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -2748,6 +2774,7 @@ namespace AmazFit_Watchface_2
             {
                 string fullfilename = openFileDialog.FileName;
                 JsonPreview_Read(fullfilename);
+                PreviewImage();
             }
         }
 
@@ -2928,7 +2955,7 @@ namespace AmazFit_Watchface_2
             if (!userControl_Set11.Collapsed) SetPreferences(userControl_Set11);
 
             PreviewView = true;
-            PreviewImage();
+            //PreviewImage();
         }
 
         // записываем параметры в JsonPreview
@@ -3408,7 +3435,7 @@ namespace AmazFit_Watchface_2
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, false, link);
                 if (checkBox_WatchSkin_Use.Checked) bitmap = ApplyWatchSkin(bitmap);
                 else if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
@@ -3449,6 +3476,7 @@ namespace AmazFit_Watchface_2
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
+                    // основной экран
                     for (int i = 0; i < 13; i++)
                     {
                         save = false;
@@ -3546,7 +3574,8 @@ namespace AmazFit_Watchface_2
 
                             //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                             int link = 0;
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 
+                                false, false, false, link);
                             //if (checkBox_crop.Checked) {
                             //    bitmap = ApplyMask(bitmap, mask);
                             //    gPanel = Graphics.FromImage(bitmap);
@@ -3564,7 +3593,7 @@ namespace AmazFit_Watchface_2
                     }
 
                     Logger.WriteLine("SaveGIF_AOD");
-
+                    // AOD
                     if (Watch_Face.ScreenIdle != null)
                     {
 
@@ -3572,7 +3601,8 @@ namespace AmazFit_Watchface_2
                         gPanel = Graphics.FromImage(bitmap);
                         //int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                         int link_AOD = 1;
-                        PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
+                        PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 
+                            false, false, false, link_AOD);
                         //if (checkBox_crop.Checked)
                         //{
                         //    bitmap = ApplyMask(bitmap, mask);
@@ -3591,7 +3621,8 @@ namespace AmazFit_Watchface_2
                         SetPreferences(userControl_Set1);
                         bitmap = bitmapTemp;
                         gPanel = Graphics.FromImage(bitmap);
-                        PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link_AOD);
+                        PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 
+                            false, false, false, link_AOD);
                         //if (checkBox_crop.Checked)
                         //{
                         //    bitmap = ApplyMask(bitmap, mask);
@@ -3606,6 +3637,24 @@ namespace AmazFit_Watchface_2
                         collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
                     }
 
+                    if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
+                    {
+                        if (comboBox_WidgetNumber.Items.Count > 0)
+                        {
+                            for (int i = 0; i < comboBox_WidgetNumber.Items.Count; i++)
+                            {
+                                bitmap = bitmapTemp;
+                                gPanel = Graphics.FromImage(bitmap);
+                                DrawWidgetEditScreen(gPanel, false, false, i, true);
+
+                                if (checkBox_WatchSkin_Use.Checked) bitmap = ApplyWatchSkin(bitmap);
+                                else if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+                                MagickImage item = new MagickImage(bitmap);
+                                collection.Add(item);
+                                collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
+                            }
+                        }
+                    }
 
                     // Optionally reduce colors
                     QuantizeSettings settings = new QuantizeSettings();
@@ -4048,24 +4097,7 @@ namespace AmazFit_Watchface_2
 
         private void numericUpDown_OffSetX_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (MouseСoordinates.X < 0) return;
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            if (e.X <= numericUpDown.Controls[1].Width + 1)
-            {
-                // Click is in text area
-                //numericUpDown.Value = MouseСoordinates.X - offSet_X;
-            }
-            else
-            {
-                if (e.Y <= numericUpDown.Controls[1].Height / 2)
-                {
-                    // Click is on Up arrow
-                }
-                else
-                {
-                    // Click is on Down arrow
-                }
-            }
+
         }
 
         private void numericUpDown_OffSetY_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -4147,9 +4179,9 @@ namespace AmazFit_Watchface_2
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
-        private void checkBox_Show_Shortcuts_CheckedChanged(object sender, EventArgs e)
+        private void checkBox_WidgetsArea_CheckedChanged(object sender, EventArgs e)
         {
-            Program_Settings.Show_Shortcuts = checkBox_Show_Shortcuts.Checked;
+            Program_Settings.Show_Widgets_Area = checkBox_WidgetsArea.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -4170,6 +4202,16 @@ namespace AmazFit_Watchface_2
         private void checkBox_center_marker_CheckedChanged(object sender, EventArgs e)
         {
             Program_Settings.Shortcuts_Center_marker = checkBox_center_marker.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+        private void checkBox_Show_Shortcuts_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Show_Shortcuts = checkBox_Show_Shortcuts.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -5745,7 +5787,7 @@ namespace AmazFit_Watchface_2
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, false, link);
                 if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
 
 
@@ -5819,7 +5861,7 @@ namespace AmazFit_Watchface_2
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, link);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, false, link);
                 if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 float scale = (float)PreviewHeight / bitmap.Height;
                 bitmap = ResizeImage(bitmap, scale);
@@ -7749,6 +7791,8 @@ namespace AmazFit_Watchface_2
             int goal = rnd.Next(0, 15000);
             int pai = rnd.Next(0, 150);
             int standUp = rnd.Next(0, 13);
+            int stress = rnd.Next(0, 13);
+            int fatBurning = rnd.Next(0, 13);
             bool bluetooth = rnd.Next(2) == 0 ? false : true;
             bool alarm = rnd.Next(2) == 0 ? false : true;
             bool unlocked = rnd.Next(2) == 0 ? false : true;
@@ -7760,6 +7804,13 @@ namespace AmazFit_Watchface_2
             int temperatureIcon = rnd.Next(0, 29);
             bool showTemperature = rnd.Next(7) == 0 ? false : true;
 
+            int airPressure = rnd.Next(800, 1200);
+            int airQuality = rnd.Next(0, 650);
+            int altitude = rnd.Next(0, 100);
+            int humidity = rnd.Next(0, 100);
+            int UVindex = rnd.Next(0, 13);
+            int windForce = rnd.Next(0, 13);
+
             Watch_Face_Preview_Set.Date.Year = year;
             Watch_Face_Preview_Set.Date.Month = month;
             Watch_Face_Preview_Set.Date.Day = day;
@@ -7770,13 +7821,15 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Time.Seconds = sec;
 
             Watch_Face_Preview_Set.Battery = battery;
-            Watch_Face_Preview_Set.Activity.Calories = calories;
-            Watch_Face_Preview_Set.Activity.HeartRate = pulse;
-            Watch_Face_Preview_Set.Activity.Distance = distance;
             Watch_Face_Preview_Set.Activity.Steps = steps;
             Watch_Face_Preview_Set.Activity.StepsGoal = goal;
+            Watch_Face_Preview_Set.Activity.Calories = calories;
+            Watch_Face_Preview_Set.Activity.HeartRate = pulse;
             Watch_Face_Preview_Set.Activity.PAI = pai;
+            Watch_Face_Preview_Set.Activity.Distance = distance;
             Watch_Face_Preview_Set.Activity.StandUp = standUp;
+            Watch_Face_Preview_Set.Activity.Stress = stress;
+            Watch_Face_Preview_Set.Activity.FatBurning = fatBurning;
 
             Watch_Face_Preview_Set.Status.Bluetooth = bluetooth;
             Watch_Face_Preview_Set.Status.Alarm = alarm;
@@ -7788,6 +7841,13 @@ namespace AmazFit_Watchface_2
             Watch_Face_Preview_Set.Weather.TemperatureMax = temperatureMax;
             Watch_Face_Preview_Set.Weather.Icon = temperatureIcon;
             Watch_Face_Preview_Set.Weather.showTemperature = showTemperature;
+
+            Watch_Face_Preview_Set.Weather.AirPressure = airPressure;
+            Watch_Face_Preview_Set.Weather.AirQuality = airQuality;
+            Watch_Face_Preview_Set.Weather.Altitude = altitude;
+            Watch_Face_Preview_Set.Weather.Humidity = humidity;
+            Watch_Face_Preview_Set.Weather.UVindex = UVindex;
+            Watch_Face_Preview_Set.Weather.WindForce = windForce;
             PreviewImage();
 
         }
@@ -10737,13 +10797,783 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        private void button_WidgetElement_Start_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullUp(dataGridView_WidgetElement, rowIndex);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
 
+        private void button_WidgetElement_Up_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Up(dataGridView_WidgetElement, rowIndex);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
 
+        private void button_WidgetElement_Down_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Down(dataGridView_WidgetElement, rowIndex);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
 
+        private void button_WidgetElement_End_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullDown(dataGridView_WidgetElement, rowIndex);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
 
+        private void WidgetRow_FullUp(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
+        {
+            if (rowIndex == 0) return;
+            try
+            {
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                dgv.Rows.RemoveAt(rowIndex);
+                dgv.Rows.Insert(0, selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[0].Selected = true;
 
+                if (removWidgetElement)
+                {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(0, selectedWidgetElement); 
+                }
+            }
+            catch { }
 
+            JSON_write();
+        }
 
+        private void WidgetRow_Up(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
+        {
+            if (rowIndex == 0) return;
+            try
+            {
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                dgv.Rows.RemoveAt(rowIndex);
+                dgv.Rows.Insert(rowIndex - 1, selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[rowIndex - 1].Selected = true;
+
+                if (removWidgetElement)
+                {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex - 1, selectedWidgetElement); 
+                }
+            }
+            catch { }
+
+            JSON_write();
+        }
+
+        private void WidgetRow_Down(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
+        {
+            int totalRows = dgv.Rows.Count;
+            if (rowIndex == totalRows - 1) return;
+            try
+            {
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                dgv.Rows.RemoveAt(rowIndex);
+                dgv.Rows.Insert(rowIndex + 1, selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[rowIndex + 1].Selected = true;
+
+                if (removWidgetElement)
+                {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Insert(rowIndex + 1, selectedWidgetElement); 
+                }
+            }
+            catch { }
+
+            JSON_write();
+        }
+
+        private void WidgetRow_FullDown(DataGridView dgv, int rowIndex, bool removWidgetElement = true)
+        {
+            int totalRows = dgv.Rows.Count;
+            if (rowIndex == totalRows - 1) return;
+            try
+            {
+                DataGridViewRow selectedRow = dgv.Rows[rowIndex];
+                dgv.Rows.RemoveAt(rowIndex);
+                dgv.Rows.Add(selectedRow);
+                dgv.ClearSelection();
+                dgv.Rows[totalRows - 1].Selected = true;
+
+                if (removWidgetElement)
+                {
+                    int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                    if (selectedWidget < 0) return;
+                    WidgetElement selectedWidgetElement = WidgetsTemp.Widget[selectedWidget].WidgetElement[rowIndex];
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.RemoveAt(rowIndex);
+                    WidgetsTemp.Widget[selectedWidget].WidgetElement.Add(selectedWidgetElement); 
+                }
+            }
+            catch { }
+
+            JSON_write();
+        }
+
+        private void dataGridView_WidgetElement_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Up(dataGridView_WidgetElement, rowIndex);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Down(dataGridView_WidgetElement, rowIndex);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullUp(dataGridView_WidgetElement, rowIndex);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_WidgetElement.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullDown(dataGridView_WidgetElement, rowIndex);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.Delete)
+            {
+                e.SuppressKeyPress = true;
+                try
+                {
+                    if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+                    {
+                        int selectedWidget = comboBox_WidgetNumber.SelectedIndex;
+                        int RowIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
+                        WidgetElementDel(selectedWidget, RowIndex);
+                    }
+                }
+                catch { }
+            }
+        }
+
+        private void comboBox_WidgetNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool widgetsExist = false;
+            bool PreviewViewTemp = PreviewView;
+            PreviewView = false;
+            tabControl_Widget.TabStop = true;
+            SelectWidgetElementAdd("Steps");
+            dataGridView_WidgetElement.Rows.Clear();
+            int selectedIndex = comboBox_WidgetNumber.SelectedIndex;
+            if (selectedIndex >= 0)
+            {
+                if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null &&
+                    Watch_Face.Widgets.Widget.Count > selectedIndex)
+                {
+                    widgetsExist = true;
+                    JSON_read_widgetElement_order(Watch_Face.Widgets.Widget[selectedIndex]);
+
+                    numericUpDown_WidgetX.Value = Watch_Face.Widgets.Widget[selectedIndex].X;
+                    numericUpDown_WidgetY.Value = Watch_Face.Widgets.Widget[selectedIndex].Y;
+                    numericUpDown_WidgetWidth.Value = Watch_Face.Widgets.Widget[selectedIndex].Width;
+                    numericUpDown_WidgetHeight.Value = Watch_Face.Widgets.Widget[selectedIndex].Height;
+
+                    if (Watch_Face.Widgets.Widget[selectedIndex].DescriptionImageBackground != null)
+                    {
+                        comboBoxSetText(comboBox_WidgetDescriptionBackground,
+                                        Watch_Face.Widgets.Widget[selectedIndex].DescriptionImageBackground.ImageIndex);
+                        if (Watch_Face.Widgets.Widget[selectedIndex].DescriptionImageBackground.Coordinates != null)
+                        {
+                            numericUpDown_WidgetDescriptionBackgroundX.Value =
+                                                Watch_Face.Widgets.Widget[selectedIndex].DescriptionImageBackground.Coordinates.X;
+                            numericUpDown_WidgetDescriptionBackgroundY.Value =
+                                                Watch_Face.Widgets.Widget[selectedIndex].DescriptionImageBackground.Coordinates.Y;
+                        }
+                    }
+                    else
+                    {
+
+                        comboBox_WidgetDescriptionBackground.Items.Clear();
+                        comboBox_WidgetDescriptionBackground.Text = "";
+                        numericUpDown_WidgetDescriptionBackgroundX.Value = 0;
+                        numericUpDown_WidgetDescriptionBackgroundY.Value = 0;
+                    }
+                    numericUpDown_WidgetDescriptionLenght.Value = Watch_Face.Widgets.Widget[selectedIndex].DescriptionWidthCheck;
+                    comboBoxSetText(comboBox_WidgetBorderActiv,
+                                        Watch_Face.Widgets.Widget[selectedIndex].BorderActivImageIndex);
+                    comboBoxSetText(comboBox_WidgetBorderInactiv,
+                                        Watch_Face.Widgets.Widget[selectedIndex].BorderInactivImageIndex);
+                }
+            }
+            PreviewView = PreviewViewTemp;
+
+            button_WidgetDel.Enabled = widgetsExist;
+            numericUpDown_WidgetX.Enabled = widgetsExist;
+            numericUpDown_WidgetY.Enabled = widgetsExist;
+            numericUpDown_WidgetWidth.Enabled = widgetsExist;
+            numericUpDown_WidgetHeight.Enabled = widgetsExist;
+            comboBox_WidgetDescriptionBackground.Enabled = widgetsExist;
+            numericUpDown_WidgetDescriptionBackgroundX.Enabled = widgetsExist;
+            numericUpDown_WidgetDescriptionBackgroundY.Enabled = widgetsExist;
+            numericUpDown_WidgetDescriptionLenght.Enabled = widgetsExist;
+            comboBox_WidgetBorderActiv.Enabled = widgetsExist;
+            comboBox_WidgetBorderInactiv.Enabled = widgetsExist;
+
+            label02.Enabled = widgetsExist;
+            label05.Enabled = widgetsExist;
+            label2.Enabled = widgetsExist;
+            label6.Enabled = widgetsExist;
+            label8.Enabled = widgetsExist;
+            label9.Enabled = widgetsExist;
+            label10.Enabled = widgetsExist;
+            label11.Enabled = widgetsExist;
+            label1083.Enabled = widgetsExist;
+            label1084.Enabled = widgetsExist;
+            label1085.Enabled = widgetsExist;
+            label1086.Enabled = widgetsExist;
+
+            groupBox_WidgetElement.Enabled = widgetsExist;
+
+        }
+
+        private void button_WidgetDel_Click(object sender, EventArgs e)
+        {
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            if (widgetIndex >= 0)
+            {
+                if (Watch_Face != null && Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null &&
+                    Watch_Face.Widgets.Widget.Count > widgetIndex) WidgetDel(widgetIndex);
+            }
+        }
+
+        private void button_WidgetElementDel_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+            {
+                int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+                int widgetElementIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
+                WidgetElementDel(widgetIndex, widgetElementIndex);
+            }
+        }
+
+        private void comboBox_WidgetsMask_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_WidgetsUnderMask.SelectedIndex >= 0)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.UnderMaskImageIndex = Int32.Parse(comboBox_WidgetsUnderMask.Text);
+            }
+            if (comboBox_WidgetsTopMask.SelectedIndex >= 0)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.TopMaskImageIndex = Int32.Parse(comboBox_WidgetsTopMask.Text);
+            }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void dataGridView_Widget_Date_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Up(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Down(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullUp(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_Date.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullDown(dataGridView_Widget_Date, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+        }
+
+        private void dataGridView_Widget_DateAdd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.PageUp)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Up(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.PageDown)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_Down(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.Home)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullUp(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+            if (e.KeyCode == Keys.End)
+            {
+                e.SuppressKeyPress = true;
+                PreviewView = false;
+                try
+                {
+                    if (dataGridView_Widget_DateAdd.SelectedCells.Count > 0)
+                    {
+                        int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                        WidgetRow_FullDown(dataGridView_Widget_DateAdd, rowIndex, false);
+                    }
+                }
+                catch { }
+                PreviewView = true;
+                userControl_Widget_ValueChanged(sender, e);
+                PreviewImage();
+                return;
+            }
+        }
+
+        private void button_Widget_Date_Start_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullUp(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_Up_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Up(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_Down_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Down(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_End_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_Date.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullDown(dataGridView_Widget_Date, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            userControl_Widget_ValueChanged(sender, e);
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_StartAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullUp(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_UpAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Up(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_DownAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_Down(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
+        private void button_Widget_Date_EndAdd_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            try
+            {
+                int rowIndex = dataGridView_Widget_DateAdd.SelectedCells[0].OwningRow.Index;
+                WidgetRow_FullDown(dataGridView_Widget_DateAdd, rowIndex, false);
+            }
+            catch { }
+            PreviewView = true;
+            PreviewImage();
+        }
+
+        private void checkBox_TimeOnWidgetEdit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_TimeOnWidgetEdit.Checked)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.Unknown4 = 1;
+            }
+            else
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.Unknown4 = 0;
+            }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void numericUpDown_Widget_ValueChanged(object sender, EventArgs e)
+        {
+            if (!PreviewView) return;
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            WidgetEdit(widgetIndex);
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void comboBox_Widget_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!PreviewView) return;
+            int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+            WidgetEdit(widgetIndex);
+
+            if (comboBox_WidgetsUnderMask.SelectedIndex >= 0)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.UnderMaskImageIndex = Int32.Parse(comboBox_WidgetsUnderMask.Text);
+            }
+            if (comboBox_WidgetsTopMask.SelectedIndex >= 0)
+            {
+                if (WidgetsTemp != null && WidgetsTemp.Widget != null) WidgetsTemp.TopMaskImageIndex = Int32.Parse(comboBox_WidgetsTopMask.Text);
+            }
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void userControl_Widget_ValueChanged(object sender, EventArgs eventArgs)
+        {
+            if (!PreviewView) return;
+            if (dataGridView_WidgetElement.SelectedCells.Count > 0)
+            {
+                int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
+                int widgetElementIndex = dataGridView_WidgetElement.SelectedCells[0].RowIndex;
+                WidgetElementEdit(widgetIndex, widgetElementIndex);
+            }
+        }
+
+        private void radioButton_WidgetAdd_CheckedChanged(object sender, EventArgs e)
+        {
+            groupBox_WidgetNumberAdd.Enabled = radioButton_WidgetAdd.Checked;
+            PreviewImage();
+        }
+
+        private void radioButton_WidgetAddType_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (!radioButton.Checked) return;
+            string name = null;
+            switch (radioButton.Name)
+            {
+                case "radioButton_DateWidgetAdd":
+                    name = "Date";
+                    break;
+                case "radioButton_StepsWidgetAdd":
+                    name = "Steps";
+                    break;
+                case "radioButton_CaloriesWidgetAdd":
+                    name = "Calories";
+                    break;
+                case "radioButton_HeartRateWidgetAdd":
+                    name = "HeartRate";
+                    break;
+                case "radioButton_PAIWidgetAdd":
+                    name = "PAI";
+                    break;
+                case "radioButton_DistanceWidgetAdd":
+                    name = "Distance";
+                    break;
+                case "radioButton_StandUpWidgetAdd":
+                    name = "StandUp";
+                    break;
+                case "radioButton_ActivityGoalWidgetAdd":
+                    name = "ActivityGoal";
+                    break;
+                case "radioButton_FatBurningWidgetAdd":
+                    name = "FatBurning";
+                    break;
+                case "radioButton_WeatherWidgetAdd":
+                    name = "Weather";
+                    break;
+                case "radioButton_UVindexWidgetAdd":
+                    name = "UVindex";
+                    break;
+                case "radioButton_HumidityWidgetAdd":
+                    name = "Humidity";
+                    break;
+                case "radioButton_SunriseWidgetAdd":
+                    name = "Sunrise";
+                    break;
+                case "radioButton_WindForceWidgetAdd":
+                    name = "WindForce";
+                    break;
+                case "radioButton_AirPressureWidgetAdd":
+                    name = "AirPressure";
+                    break;
+                case "radioButton_BatteryWidgetAdd":
+                    name = "Battery";
+                    break;
+            }
+            SelectWidgetElementAdd(name);
+            PreviewImage();
+        }
+
+        private void userControl_WidgetAdd_ValueChanged(object sender, EventArgs eventArgs)
+        {
+            if (PreviewView) PreviewImage();
+        }
+
+        private void tabControl_Widget_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void tabControl_Widget_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!tabControl_Widget.TabStop) 
+            {
+                tabControl_Widget.TabStop = true;
+                HideWidgetEditElement();
+            }
+        }
+
+        private void button_WidgetAdd_Click(object sender, EventArgs e)
+        {
+            if (radioButton_WidgetAdd.Checked) AddWidget();
+            else if (radioButton_WidgetElementAdd.Checked) AddWidgetElement();
+        }
+
+        private void WidgetAdd_ValueChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void radioButton_WidgetPreviewNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tabName = tabControl1.SelectedTab.Name;
+            if(tabName == "tabPage_Widgets" || oldTabName == "tabPage_Widgets") PreviewImage();
+            oldTabName = tabName;
+        }
 
 
 

@@ -189,7 +189,7 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Отображение поля изображения при ошибке</summary>
-        public bool ImageError
+        public virtual bool ImageError
         {
             get
             {
@@ -204,7 +204,7 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Отображение поля изображения десятичного разделителя</summary>
-        public bool OptionalSymbol
+        public virtual bool OptionalSymbol
         {
             get
             {
@@ -409,26 +409,26 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Очищает выпадающие списки с картинками, сбрасывает данные на значения по умолчанию</summary>
-        internal void SettingsClear()
+        internal void SettingsClear(bool full = true)
         {
             setValue = true;
 
             checkBox_Use.Checked = false;
 
-            comboBox_image.Items.Clear();
-            comboBox_image.Text = "";
+            if (full)
+            {
+                comboBox_image.Items.Clear();
+                comboBox_icon.Items.Clear();
+                comboBox_unit.Items.Clear();
+                comboBox_imageError.Items.Clear();
+                comboBox_imageDecimalPoint.Items.Clear(); 
+            }
 
-            comboBox_icon.Items.Clear();
-            comboBox_icon.Text = "";
-
-            comboBox_unit.Items.Clear();
-            comboBox_unit.Text = "";
-
-            comboBox_imageError.Items.Clear();
-            comboBox_imageError.Text = "";
-
-            comboBox_imageDecimalPoint.Items.Clear();
-            comboBox_imageDecimalPoint.Text = "";
+            comboBox_image.Text = null;
+            comboBox_icon.Text = null;
+            comboBox_unit.Text = null;
+            comboBox_imageError.Text = null;
+            comboBox_imageDecimalPoint.Text = null;
 
             numericUpDown_imageX.Value = 0;
             numericUpDown_imageY.Value = 0;
@@ -616,12 +616,15 @@ namespace AmazFit_Watchface_2
                 controlCollection[i].Enabled = b;
             }
 
-            b = !checkBox_follow.Checked;
-            label02.Enabled = b;
-            label1084.Enabled = b;
-            label1085.Enabled = b;
-            numericUpDown_imageX.Enabled = b;
-            numericUpDown_imageY.Enabled = b;
+            if (b)
+            {
+                b = !checkBox_follow.Checked;
+                label02.Enabled = b;
+                label1084.Enabled = b;
+                label1085.Enabled = b;
+                numericUpDown_imageX.Enabled = b;
+                numericUpDown_imageY.Enabled = b; 
+            }
         }
 
         private void checkBox_follow_CheckedChanged(object sender, EventArgs e)

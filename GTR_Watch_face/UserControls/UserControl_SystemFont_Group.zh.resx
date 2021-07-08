@@ -120,4 +120,22 @@
   <data name="button_SystemFont.Text" xml:space="preserve">
     <value>系统字体</value>
   </data>
+  <data name="userControl_FontRotate.FollowText" xml:space="preserve">
+    <value>跟随</value>
+  </data>
+  <data name="userControl_FontRotate_goal.ButtonText" xml:space="preserve">
+    <value>圆形系统字体（目标）</value>
+  </data>
+  <data name="userControl_FontRotate_goal.FollowText" xml:space="preserve">
+    <value>跟随</value>
+  </data>
+  <data name="userControl_SystemFont.FollowText" xml:space="preserve">
+    <value>跟随</value>
+  </data>
+  <data name="userControl_SystemFont_goal.ButtonText" xml:space="preserve">
+    <value>旋转系统字体（目标）</value>
+  </data>
+  <data name="userControl_SystemFont_goal.FollowText" xml:space="preserve">
+    <value>跟随</value>
+  </data>
 </root>

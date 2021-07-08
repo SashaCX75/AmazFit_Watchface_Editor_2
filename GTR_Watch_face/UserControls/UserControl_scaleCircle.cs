@@ -341,17 +341,20 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Очищает выпадающие списки с картинками, сбрасывает данные на значения по умолчанию</summary>
-        internal void SettingsClear()
+        internal void SettingsClear(bool full = true)
         {
             setValue = true;
 
             checkBox_scaleCircle_Use.Checked = false;
 
-            comboBox_scaleCircle_image.Items.Clear();
-            comboBox_scaleCircle_image.Text = "";
+            if (full)
+            {
+                comboBox_scaleCircle_image.Items.Clear();
+                comboBox_scaleCircle_image_background.Items.Clear(); 
+            }
 
-            comboBox_scaleCircle_image_background.Items.Clear();
-            comboBox_scaleCircle_image_background.Text = "";
+            comboBox_scaleCircle_image.Text = null;
+            comboBox_scaleCircle_image_background.Text = null;
 
             numericUpDown_scaleCircleX.Value = 0;
             numericUpDown_scaleCircleY.Value = 0;

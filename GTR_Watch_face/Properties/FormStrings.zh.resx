@@ -339,4 +339,70 @@
   <data name="Message_WarningWeatherError" xml:space="preserve">
     <value>如果没有当前温度数据，则可能错误地指定错误符号的图像。</value>
   </data>
+  <data name="ActivityName_ActivityGoal" xml:space="preserve">
+    <value>活动目标</value>
+  </data>
+  <data name="ActivityName_AirPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="ActivityName_AirQuality" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="ActivityName_Altitude" xml:space="preserve">
+    <value>海拔高度</value>
+  </data>
+  <data name="ActivityName_Battery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="ActivityName_Calories" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="ActivityName_Distance" xml:space="preserve">
+    <value>距离</value>
+  </data>
+  <data name="ActivityName_FatBurning" xml:space="preserve">
+    <value>脂肪燃烧</value>
+  </data>
+  <data name="ActivityName_HeartRate" xml:space="preserve">
+    <value>心率</value>
+  </data>
+  <data name="ActivityName_Humidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="ActivityName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="ActivityName_StandUp" xml:space="preserve">
+    <value>站立</value>
+  </data>
+  <data name="ActivityName_Steps" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="ActivityName_Stress" xml:space="preserve">
+    <value>压力</value>
+  </data>
+  <data name="ActivityName_Sunrise" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="ActivityName_UVindex" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="ActivityName_Weather" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="ActivityName_WindForce" xml:space="preserve">
+    <value>风力</value>
+  </data>
+  <data name="DateName_Day" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="DateName_Month" xml:space="preserve">
+    <value>月份</value>
+  </data>
+  <data name="DateName_Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Dialog_Title_WatchSkin" xml:space="preserve">
+    <value>选择一个表盘图像文件</value>
+  </data>
 </root>

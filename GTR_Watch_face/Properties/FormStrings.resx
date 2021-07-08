@@ -408,4 +408,85 @@
   <data name="Dialog_Title_WatchSkin" xml:space="preserve">
     <value>Выбор файла изображения часов</value>
   </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>Альпинизм</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>Давление воздуха</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>Качество воздуха</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>Высота</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>Батарея</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>Калории</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>Расстояние</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>Жиросжигание</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>Пульс</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>Влажность</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>Стоя</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>Шаги</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>Уровень стресса</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>Восход и закат солнца</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>УФ-лучи</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>Погода</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>Скорость и направление ветра</value>
+  </data>
+  <data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
+    <value>Добавьте данные для отображения в редактируемой зоне.</value>
+  </data>
+  <data name="Message_Warning_AddPreview_WidgetElement" xml:space="preserve">
+    <value>Добавьте изображение предпросмотра для выбранного элемента.</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget2" xml:space="preserve">
+    <value>Не забудьте настроить верхнюю и нижнюю маски на экране редактирования.</value>
+  </data>
+  <data name="Message_Warning_Add_Widget" xml:space="preserve">
+    <value>Настройте все изображения необходимые для редактируемой зоны.</value>
+  </data>
+  <data name="Message_Warning_No_Widget" xml:space="preserve">
+    <value>Для начала добавьте хотя бы одну редактируемую зону.</value>
+  </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">
+    <value>Добавлена первая редактируемая зона.</value>
+  </data>
+  <data name="Message_Information_Caption" xml:space="preserve">
+    <value>Информация</value>
+  </data>
 </root>

@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.richTextBox_JsonText = new System.Windows.Forms.RichTextBox();
             this.treeView_JsonTree = new System.Windows.Forms.TreeView();
@@ -1186,6 +1188,192 @@
             this.button_SNL_Activity_Start = new System.Windows.Forms.Button();
             this.button_SNL_Activity_Up = new System.Windows.Forms.Button();
             this.button_SNL_Activity_Down = new System.Windows.Forms.Button();
+            this.tabPage_Widgets = new System.Windows.Forms.TabPage();
+            this.tabControl_Widget = new System.Windows.Forms.TabControl();
+            this.tabPage_WidgetsEdit = new System.Windows.Forms.TabPage();
+            this.checkBox_TimeOnWidgetEdit = new System.Windows.Forms.CheckBox();
+            this.groupBox_WidgetPreview = new System.Windows.Forms.GroupBox();
+            this.radioButton_WidgetPreviewEdit = new System.Windows.Forms.RadioButton();
+            this.radioButton_WidgetPreviewNormal = new System.Windows.Forms.RadioButton();
+            this.groupBox_WidgetElementSettings = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl_DateWidget = new System.Windows.Forms.TabControl();
+            this.tabPage_DayWidget = new System.Windows.Forms.TabPage();
+            this.userControl_SystemFont_Group_DayWidget = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_hand_DayWidget = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_date_DayWidget = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage_MonthWidget = new System.Windows.Forms.TabPage();
+            this.userControl_SystemFont_Group_MonthWidget = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_hand_MonthWidget = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_date_MonthWidget = new AmazFit_Watchface_2.UserControl_text_date();
+            this.userControl_pictures_MonthWidget = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage_YearWidget = new System.Windows.Forms.TabPage();
+            this.userControl_SystemFont_Group_YearWidget = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_text_date_YearWidget = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage_DOWWidget = new System.Windows.Forms.TabPage();
+            this.userControl_hand_DOWWidget = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_pictures_DOWWidget = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage_DateLayerWidget = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dataGridView_Widget_Date = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_Widget_Date_End = new System.Windows.Forms.Button();
+            this.button_Widget_Date_Start = new System.Windows.Forms.Button();
+            this.button_Widget_Date_Up = new System.Windows.Forms.Button();
+            this.button_Widget_Date_Down = new System.Windows.Forms.Button();
+            this.userControl_iconWidget = new AmazFit_Watchface_2.UserControl_icon();
+            this.userControl_SystemFont_GroupSunriseWidget = new AmazFit_Watchface_2.UserControl_SystemFont_GroupSunrise();
+            this.userControl_SystemFont_GroupWeatherWidget = new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather();
+            this.userControl_SystemFont_GroupWidget = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_scaleLinearWidget = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircleWidget = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_handWidget = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_goalWidgetSunset = new AmazFit_Watchface_2.UserControl_text_goal();
+            this.userControl_text_goalWidgetSunrise = new AmazFit_Watchface_2.UserControl_text_goal();
+            this.userControl_text_weatherWidgetMax = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weatherWidgetMin = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weatherWidgetCur = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_goalWidget = new AmazFit_Watchface_2.UserControl_text_goal();
+            this.userControl_textWidget = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_weatherWidget = new AmazFit_Watchface_2.UserControl_pictures_weather();
+            this.userControl_picturesWidget = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_previewWidget = new AmazFit_Watchface_2.UserControl_preview();
+            this.comboBox_WidgetsTopMask = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetsUnderMask = new System.Windows.Forms.ComboBox();
+            this.label01 = new System.Windows.Forms.Label();
+            this.groupBox_WidgetNumber = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetDescriptionLenght = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_WidgetBorderInactiv = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetBorderActiv = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetDescriptionBackground = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_WidgetDescriptionBackgroundX = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetDescriptionBackgroundY = new System.Windows.Forms.NumericUpDown();
+            this.label02 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1084 = new System.Windows.Forms.Label();
+            this.label1085 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetWidth = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetHeight = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetX = new System.Windows.Forms.NumericUpDown();
+            this.button_WidgetDel = new System.Windows.Forms.Button();
+            this.numericUpDown_WidgetY = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_WidgetNumber = new System.Windows.Forms.ComboBox();
+            this.label05 = new System.Windows.Forms.Label();
+            this.label1083 = new System.Windows.Forms.Label();
+            this.label1086 = new System.Windows.Forms.Label();
+            this.groupBox_WidgetElement = new System.Windows.Forms.GroupBox();
+            this.button_WidgetElementDel = new System.Windows.Forms.Button();
+            this.button_WidgetElement_End = new System.Windows.Forms.Button();
+            this.button_WidgetElement_Start = new System.Windows.Forms.Button();
+            this.button_WidgetElement_Up = new System.Windows.Forms.Button();
+            this.button_WidgetElement_Down = new System.Windows.Forms.Button();
+            this.dataGridView_WidgetElement = new System.Windows.Forms.DataGridView();
+            this.WidgetsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WidgetElement = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WidgetElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage_WidgetAdd = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.groupBox_WidgetTypeAdd = new System.Windows.Forms.GroupBox();
+            this.radioButton_BatteryWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.label28 = new System.Windows.Forms.Label();
+            this.radioButton_AirPressureWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_WindForceWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_SunriseWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_HumidityWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_UVindexWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_WeatherWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.label27 = new System.Windows.Forms.Label();
+            this.radioButton_FatBurningWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_ActivityGoalWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_StandUpWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_DistanceWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_PAIWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_HeartRateWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_CaloriesWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.label26 = new System.Windows.Forms.Label();
+            this.radioButton_StepsWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_DateWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.groupBox_WdgetAdd = new System.Windows.Forms.GroupBox();
+            this.button_WidgetAdd = new System.Windows.Forms.Button();
+            this.radioButton_WidgetElementAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_WidgetAdd = new System.Windows.Forms.RadioButton();
+            this.groupBox_WidgetElementAdd = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabControl_DateWidgetAdd = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.userControl_SystemFont_Group_DayWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_hand_DayWidgetAdd = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_date_DayWidgetAdd = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.userControl_SystemFont_Group_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_hand_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_date_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_text_date();
+            this.userControl_pictures_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.userControl_SystemFont_Group_YearWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_text_date_YearWidgetAdd = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.userControl_hand_DOWWidgetAdd = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_pictures_DOWWidgetAdd = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView_Widget_DateAdd = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_Widget_Date_EndAdd = new System.Windows.Forms.Button();
+            this.button_Widget_Date_StartAdd = new System.Windows.Forms.Button();
+            this.button_Widget_Date_UpAdd = new System.Windows.Forms.Button();
+            this.button_Widget_Date_DownAdd = new System.Windows.Forms.Button();
+            this.userControl_iconWidgetAdd = new AmazFit_Watchface_2.UserControl_icon();
+            this.userControl_SystemFont_GroupSunriseWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_GroupSunrise();
+            this.userControl_SystemFont_GroupWeatherWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather();
+            this.userControl_SystemFont_GroupWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
+            this.userControl_scaleLinearWidgetAdd = new AmazFit_Watchface_2.UserControl_scaleLinear();
+            this.userControl_scaleCircleWidgetAdd = new AmazFit_Watchface_2.UserControl_scaleCircle();
+            this.userControl_handWidgetAdd = new AmazFit_Watchface_2.UserControl_hand();
+            this.userControl_text_goalWidgetSunsetAdd = new AmazFit_Watchface_2.UserControl_text_goal();
+            this.userControl_text_goalWidgetSunriseAdd = new AmazFit_Watchface_2.UserControl_text_goal();
+            this.userControl_text_weatherWidgetMaxAdd = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weatherWidgetMinAdd = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_weatherWidgetCurAdd = new AmazFit_Watchface_2.UserControl_text_weather();
+            this.userControl_text_goalWidgetAdd = new AmazFit_Watchface_2.UserControl_text_goal();
+            this.userControl_textWidgetAdd = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_pictures_weatherWidgetAdd = new AmazFit_Watchface_2.UserControl_pictures_weather();
+            this.userControl_picturesWidgetAdd = new AmazFit_Watchface_2.UserControl_pictures();
+            this.userControl_previewWidgetAdd = new AmazFit_Watchface_2.UserControl_preview();
+            this.groupBox_WidgetNumberAdd = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetDescriptionLenghtAdd = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_WidgetBorderInactivAdd = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetBorderActivAdd = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetDescriptionBackgroundAdd = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetWidthAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetHeightAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetXAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetYAdd = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.tabPageConverting = new System.Windows.Forms.TabPage();
             this.label489 = new System.Windows.Forms.Label();
             this.label488 = new System.Windows.Forms.Label();
@@ -1295,6 +1483,7 @@
             this.radioButton_TRex_pro = new System.Windows.Forms.RadioButton();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox_Preview = new System.Windows.Forms.PictureBox();
+            this.checkBox_WidgetsArea = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -1600,6 +1789,49 @@
             this.groupBox_SNL_Date.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Date)).BeginInit();
             this.groupBox_SNL_Activity.SuspendLayout();
+            this.tabPage_Widgets.SuspendLayout();
+            this.tabControl_Widget.SuspendLayout();
+            this.tabPage_WidgetsEdit.SuspendLayout();
+            this.groupBox_WidgetPreview.SuspendLayout();
+            this.groupBox_WidgetElementSettings.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabControl_DateWidget.SuspendLayout();
+            this.tabPage_DayWidget.SuspendLayout();
+            this.tabPage_MonthWidget.SuspendLayout();
+            this.tabPage_YearWidget.SuspendLayout();
+            this.tabPage_DOWWidget.SuspendLayout();
+            this.tabPage_DateLayerWidget.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_Date)).BeginInit();
+            this.groupBox_WidgetNumber.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenght)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetY)).BeginInit();
+            this.groupBox_WidgetElement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_WidgetElement)).BeginInit();
+            this.tabPage_WidgetAdd.SuspendLayout();
+            this.groupBox_WidgetTypeAdd.SuspendLayout();
+            this.groupBox_WdgetAdd.SuspendLayout();
+            this.groupBox_WidgetElementAdd.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabControl_DateWidgetAdd.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_DateAdd)).BeginInit();
+            this.groupBox_WidgetNumberAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenghtAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundXAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundYAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidthAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeightAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetXAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetYAdd)).BeginInit();
             this.tabPageConverting.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingOutput_Custom)).BeginInit();
@@ -8720,7 +8952,7 @@
             this.userControl_SystemFont_Group_Humidity.Padding_zero = true;
             this.userControl_SystemFont_Group_Humidity.Separator = true;
             this.userControl_SystemFont_Group_Humidity.ShowGoal = false;
-            this.userControl_SystemFont_Group_Humidity.ShowUnit = true;
+            this.userControl_SystemFont_Group_Humidity.ShowUnit = false;
             this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_Humidity, resources.GetString("userControl_SystemFont_Group_Humidity.ToolTip"));
             this.userControl_SystemFont_Group_Humidity.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_ValueChanged);
             // 
@@ -16416,7 +16648,7 @@
             this.userControl_SystemFont_Group_Humidity_AOD.Padding_zero = true;
             this.userControl_SystemFont_Group_Humidity_AOD.Separator = true;
             this.userControl_SystemFont_Group_Humidity_AOD.ShowGoal = false;
-            this.userControl_SystemFont_Group_Humidity_AOD.ShowUnit = true;
+            this.userControl_SystemFont_Group_Humidity_AOD.ShowUnit = false;
             this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_Humidity_AOD, resources.GetString("userControl_SystemFont_Group_Humidity_AOD.ToolTip"));
             this.userControl_SystemFont_Group_Humidity_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_ValueChanged);
             this.userControl_SystemFont_Group_Humidity_AOD.AOD_Copy_SystemFont += new AmazFit_Watchface_2.UserControl_SystemFont_Group.AOD_CopyHandler(this.userControl_SystemFont_Group_Humidity_AOD_Copy);
@@ -17208,6 +17440,7 @@
             this.tabControl1.Controls.Add(this.tabPage_Show);
             this.tabControl1.Controls.Add(this.tabPage_Edit);
             this.tabControl1.Controls.Add(this.tabPage_LayerOrder);
+            this.tabControl1.Controls.Add(this.tabPage_Widgets);
             this.tabControl1.Controls.Add(this.tabPageConverting);
             this.tabControl1.Controls.Add(this.tabPage_Settings);
             this.tabControl1.Controls.Add(this.tabPage_About);
@@ -17217,6 +17450,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.toolTip_Weather.SetToolTip(this.tabControl1, resources.GetString("tabControl1.ToolTip"));
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tabPage_Show
@@ -18067,6 +18301,2626 @@
             this.toolTip_Weather.SetToolTip(this.button_SNL_Activity_Down, resources.GetString("button_SNL_Activity_Down.ToolTip"));
             this.button_SNL_Activity_Down.UseVisualStyleBackColor = true;
             this.button_SNL_Activity_Down.Click += new System.EventHandler(this.button_SNL_Activity_Down_Click);
+            // 
+            // tabPage_Widgets
+            // 
+            resources.ApplyResources(this.tabPage_Widgets, "tabPage_Widgets");
+            this.tabPage_Widgets.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Widgets.Controls.Add(this.tabControl_Widget);
+            this.errorProvider1.SetError(this.tabPage_Widgets, resources.GetString("tabPage_Widgets.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_Widgets, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_Widgets.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_Widgets, ((int)(resources.GetObject("tabPage_Widgets.IconPadding"))));
+            this.tabPage_Widgets.Name = "tabPage_Widgets";
+            this.toolTip_Weather.SetToolTip(this.tabPage_Widgets, resources.GetString("tabPage_Widgets.ToolTip"));
+            // 
+            // tabControl_Widget
+            // 
+            resources.ApplyResources(this.tabControl_Widget, "tabControl_Widget");
+            this.tabControl_Widget.Controls.Add(this.tabPage_WidgetsEdit);
+            this.tabControl_Widget.Controls.Add(this.tabPage_WidgetAdd);
+            this.errorProvider1.SetError(this.tabControl_Widget, resources.GetString("tabControl_Widget.Error"));
+            this.tabControl_Widget.HotTrack = true;
+            this.errorProvider1.SetIconAlignment(this.tabControl_Widget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabControl_Widget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabControl_Widget, ((int)(resources.GetObject("tabControl_Widget.IconPadding"))));
+            this.tabControl_Widget.ImageList = this.imageList2;
+            this.tabControl_Widget.Multiline = true;
+            this.tabControl_Widget.Name = "tabControl_Widget";
+            this.tabControl_Widget.SelectedIndex = 0;
+            this.tabControl_Widget.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl_Widget.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.tabControl_Widget, resources.GetString("tabControl_Widget.ToolTip"));
+            this.tabControl_Widget.SelectedIndexChanged += new System.EventHandler(this.tabControl_Widget_SelectedIndexChanged);
+            this.tabControl_Widget.VisibleChanged += new System.EventHandler(this.tabControl_Widget_VisibleChanged);
+            // 
+            // tabPage_WidgetsEdit
+            // 
+            resources.ApplyResources(this.tabPage_WidgetsEdit, "tabPage_WidgetsEdit");
+            this.tabPage_WidgetsEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_WidgetsEdit.Controls.Add(this.checkBox_TimeOnWidgetEdit);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetPreview);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetElementSettings);
+            this.tabPage_WidgetsEdit.Controls.Add(this.comboBox_WidgetsTopMask);
+            this.tabPage_WidgetsEdit.Controls.Add(this.label7);
+            this.tabPage_WidgetsEdit.Controls.Add(this.comboBox_WidgetsUnderMask);
+            this.tabPage_WidgetsEdit.Controls.Add(this.label01);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetNumber);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetElement);
+            this.errorProvider1.SetError(this.tabPage_WidgetsEdit, resources.GetString("tabPage_WidgetsEdit.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_WidgetsEdit, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_WidgetsEdit.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_WidgetsEdit, ((int)(resources.GetObject("tabPage_WidgetsEdit.IconPadding"))));
+            this.tabPage_WidgetsEdit.Name = "tabPage_WidgetsEdit";
+            this.toolTip_Weather.SetToolTip(this.tabPage_WidgetsEdit, resources.GetString("tabPage_WidgetsEdit.ToolTip"));
+            // 
+            // checkBox_TimeOnWidgetEdit
+            // 
+            resources.ApplyResources(this.checkBox_TimeOnWidgetEdit, "checkBox_TimeOnWidgetEdit");
+            this.errorProvider1.SetError(this.checkBox_TimeOnWidgetEdit, resources.GetString("checkBox_TimeOnWidgetEdit.Error"));
+            this.errorProvider1.SetIconAlignment(this.checkBox_TimeOnWidgetEdit, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("checkBox_TimeOnWidgetEdit.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.checkBox_TimeOnWidgetEdit, ((int)(resources.GetObject("checkBox_TimeOnWidgetEdit.IconPadding"))));
+            this.checkBox_TimeOnWidgetEdit.Name = "checkBox_TimeOnWidgetEdit";
+            this.toolTip_Weather.SetToolTip(this.checkBox_TimeOnWidgetEdit, resources.GetString("checkBox_TimeOnWidgetEdit.ToolTip"));
+            this.checkBox_TimeOnWidgetEdit.UseVisualStyleBackColor = true;
+            this.checkBox_TimeOnWidgetEdit.CheckedChanged += new System.EventHandler(this.checkBox_TimeOnWidgetEdit_CheckedChanged);
+            // 
+            // groupBox_WidgetPreview
+            // 
+            resources.ApplyResources(this.groupBox_WidgetPreview, "groupBox_WidgetPreview");
+            this.groupBox_WidgetPreview.Controls.Add(this.radioButton_WidgetPreviewEdit);
+            this.groupBox_WidgetPreview.Controls.Add(this.radioButton_WidgetPreviewNormal);
+            this.errorProvider1.SetError(this.groupBox_WidgetPreview, resources.GetString("groupBox_WidgetPreview.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WidgetPreview, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WidgetPreview.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WidgetPreview, ((int)(resources.GetObject("groupBox_WidgetPreview.IconPadding"))));
+            this.groupBox_WidgetPreview.Name = "groupBox_WidgetPreview";
+            this.groupBox_WidgetPreview.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WidgetPreview, resources.GetString("groupBox_WidgetPreview.ToolTip"));
+            this.groupBox_WidgetPreview.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_WidgetPreviewEdit
+            // 
+            resources.ApplyResources(this.radioButton_WidgetPreviewEdit, "radioButton_WidgetPreviewEdit");
+            this.errorProvider1.SetError(this.radioButton_WidgetPreviewEdit, resources.GetString("radioButton_WidgetPreviewEdit.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_WidgetPreviewEdit, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_WidgetPreviewEdit.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_WidgetPreviewEdit, ((int)(resources.GetObject("radioButton_WidgetPreviewEdit.IconPadding"))));
+            this.radioButton_WidgetPreviewEdit.Name = "radioButton_WidgetPreviewEdit";
+            this.toolTip_Weather.SetToolTip(this.radioButton_WidgetPreviewEdit, resources.GetString("radioButton_WidgetPreviewEdit.ToolTip"));
+            this.radioButton_WidgetPreviewEdit.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_WidgetPreviewNormal
+            // 
+            resources.ApplyResources(this.radioButton_WidgetPreviewNormal, "radioButton_WidgetPreviewNormal");
+            this.radioButton_WidgetPreviewNormal.Checked = true;
+            this.errorProvider1.SetError(this.radioButton_WidgetPreviewNormal, resources.GetString("radioButton_WidgetPreviewNormal.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_WidgetPreviewNormal, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_WidgetPreviewNormal.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_WidgetPreviewNormal, ((int)(resources.GetObject("radioButton_WidgetPreviewNormal.IconPadding"))));
+            this.radioButton_WidgetPreviewNormal.Name = "radioButton_WidgetPreviewNormal";
+            this.radioButton_WidgetPreviewNormal.TabStop = true;
+            this.toolTip_Weather.SetToolTip(this.radioButton_WidgetPreviewNormal, resources.GetString("radioButton_WidgetPreviewNormal.ToolTip"));
+            this.radioButton_WidgetPreviewNormal.UseVisualStyleBackColor = true;
+            this.radioButton_WidgetPreviewNormal.CheckedChanged += new System.EventHandler(this.radioButton_WidgetPreviewNormal_CheckedChanged);
+            // 
+            // groupBox_WidgetElementSettings
+            // 
+            resources.ApplyResources(this.groupBox_WidgetElementSettings, "groupBox_WidgetElementSettings");
+            this.groupBox_WidgetElementSettings.Controls.Add(this.panel1);
+            this.errorProvider1.SetError(this.groupBox_WidgetElementSettings, resources.GetString("groupBox_WidgetElementSettings.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WidgetElementSettings, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WidgetElementSettings.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WidgetElementSettings, ((int)(resources.GetObject("groupBox_WidgetElementSettings.IconPadding"))));
+            this.groupBox_WidgetElementSettings.Name = "groupBox_WidgetElementSettings";
+            this.groupBox_WidgetElementSettings.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WidgetElementSettings, resources.GetString("groupBox_WidgetElementSettings.ToolTip"));
+            this.groupBox_WidgetElementSettings.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.tabControl_DateWidget);
+            this.panel1.Controls.Add(this.userControl_iconWidget);
+            this.panel1.Controls.Add(this.userControl_SystemFont_GroupSunriseWidget);
+            this.panel1.Controls.Add(this.userControl_SystemFont_GroupWeatherWidget);
+            this.panel1.Controls.Add(this.userControl_SystemFont_GroupWidget);
+            this.panel1.Controls.Add(this.userControl_scaleLinearWidget);
+            this.panel1.Controls.Add(this.userControl_scaleCircleWidget);
+            this.panel1.Controls.Add(this.userControl_handWidget);
+            this.panel1.Controls.Add(this.userControl_text_goalWidgetSunset);
+            this.panel1.Controls.Add(this.userControl_text_goalWidgetSunrise);
+            this.panel1.Controls.Add(this.userControl_text_weatherWidgetMax);
+            this.panel1.Controls.Add(this.userControl_text_weatherWidgetMin);
+            this.panel1.Controls.Add(this.userControl_text_weatherWidgetCur);
+            this.panel1.Controls.Add(this.userControl_text_goalWidget);
+            this.panel1.Controls.Add(this.userControl_textWidget);
+            this.panel1.Controls.Add(this.userControl_pictures_weatherWidget);
+            this.panel1.Controls.Add(this.userControl_picturesWidget);
+            this.panel1.Controls.Add(this.userControl_previewWidget);
+            this.errorProvider1.SetError(this.panel1, resources.GetString("panel1.Error"));
+            this.errorProvider1.SetIconAlignment(this.panel1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.panel1, ((int)(resources.GetObject("panel1.IconPadding"))));
+            this.panel1.Name = "panel1";
+            this.toolTip_Weather.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
+            // 
+            // tabControl_DateWidget
+            // 
+            resources.ApplyResources(this.tabControl_DateWidget, "tabControl_DateWidget");
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_DayWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_MonthWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_YearWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_DOWWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_DateLayerWidget);
+            this.errorProvider1.SetError(this.tabControl_DateWidget, resources.GetString("tabControl_DateWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabControl_DateWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabControl_DateWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabControl_DateWidget, ((int)(resources.GetObject("tabControl_DateWidget.IconPadding"))));
+            this.tabControl_DateWidget.Name = "tabControl_DateWidget";
+            this.tabControl_DateWidget.SelectedIndex = 0;
+            this.toolTip_Weather.SetToolTip(this.tabControl_DateWidget, resources.GetString("tabControl_DateWidget.ToolTip"));
+            // 
+            // tabPage_DayWidget
+            // 
+            resources.ApplyResources(this.tabPage_DayWidget, "tabPage_DayWidget");
+            this.tabPage_DayWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_DayWidget.Controls.Add(this.userControl_SystemFont_Group_DayWidget);
+            this.tabPage_DayWidget.Controls.Add(this.userControl_hand_DayWidget);
+            this.tabPage_DayWidget.Controls.Add(this.userControl_text_date_DayWidget);
+            this.errorProvider1.SetError(this.tabPage_DayWidget, resources.GetString("tabPage_DayWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_DayWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_DayWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_DayWidget, ((int)(resources.GetObject("tabPage_DayWidget.IconPadding"))));
+            this.tabPage_DayWidget.Name = "tabPage_DayWidget";
+            this.toolTip_Weather.SetToolTip(this.tabPage_DayWidget, resources.GetString("tabPage_DayWidget.ToolTip"));
+            // 
+            // userControl_SystemFont_Group_DayWidget
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_Group_DayWidget, "userControl_SystemFont_Group_DayWidget");
+            this.userControl_SystemFont_Group_DayWidget.AOD = false;
+            this.userControl_SystemFont_Group_DayWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_Group_DayWidget, resources.GetString("userControl_SystemFont_Group_DayWidget.Error"));
+            this.userControl_SystemFont_Group_DayWidget.Follow = true;
+            this.userControl_SystemFont_Group_DayWidget.FollowGoal = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_Group_DayWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_Group_DayWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_Group_DayWidget, ((int)(resources.GetObject("userControl_SystemFont_Group_DayWidget.IconPadding"))));
+            this.userControl_SystemFont_Group_DayWidget.Name = "userControl_SystemFont_Group_DayWidget";
+            this.userControl_SystemFont_Group_DayWidget.Padding_zero = true;
+            this.userControl_SystemFont_Group_DayWidget.Separator = true;
+            this.userControl_SystemFont_Group_DayWidget.ShowGoal = false;
+            this.userControl_SystemFont_Group_DayWidget.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_DayWidget, resources.GetString("userControl_SystemFont_Group_DayWidget.ToolTip"));
+            this.userControl_SystemFont_Group_DayWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_hand_DayWidget
+            // 
+            resources.ApplyResources(this.userControl_hand_DayWidget, "userControl_hand_DayWidget");
+            this.userControl_hand_DayWidget.AOD = false;
+            this.userControl_hand_DayWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_hand_DayWidget, resources.GetString("userControl_hand_DayWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_hand_DayWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_hand_DayWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_hand_DayWidget, ((int)(resources.GetObject("userControl_hand_DayWidget.IconPadding"))));
+            this.userControl_hand_DayWidget.Name = "userControl_hand_DayWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_hand_DayWidget, resources.GetString("userControl_hand_DayWidget.ToolTip"));
+            this.userControl_hand_DayWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_date_DayWidget
+            // 
+            resources.ApplyResources(this.userControl_text_date_DayWidget, "userControl_text_date_DayWidget");
+            this.userControl_text_date_DayWidget.AOD = false;
+            this.userControl_text_date_DayWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_date_DayWidget, resources.GetString("userControl_text_date_DayWidget.Error"));
+            this.userControl_text_date_DayWidget.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_date_DayWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_date_DayWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_date_DayWidget, ((int)(resources.GetObject("userControl_text_date_DayWidget.IconPadding"))));
+            this.userControl_text_date_DayWidget.ImageError = false;
+            this.userControl_text_date_DayWidget.Name = "userControl_text_date_DayWidget";
+            this.userControl_text_date_DayWidget.OptionalSymbol = false;
+            this.userControl_text_date_DayWidget.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_date_DayWidget, resources.GetString("userControl_text_date_DayWidget.ToolTip"));
+            this.userControl_text_date_DayWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // tabPage_MonthWidget
+            // 
+            resources.ApplyResources(this.tabPage_MonthWidget, "tabPage_MonthWidget");
+            this.tabPage_MonthWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_SystemFont_Group_MonthWidget);
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_hand_MonthWidget);
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_text_date_MonthWidget);
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_pictures_MonthWidget);
+            this.errorProvider1.SetError(this.tabPage_MonthWidget, resources.GetString("tabPage_MonthWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_MonthWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_MonthWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_MonthWidget, ((int)(resources.GetObject("tabPage_MonthWidget.IconPadding"))));
+            this.tabPage_MonthWidget.Name = "tabPage_MonthWidget";
+            this.toolTip_Weather.SetToolTip(this.tabPage_MonthWidget, resources.GetString("tabPage_MonthWidget.ToolTip"));
+            // 
+            // userControl_SystemFont_Group_MonthWidget
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_Group_MonthWidget, "userControl_SystemFont_Group_MonthWidget");
+            this.userControl_SystemFont_Group_MonthWidget.AOD = false;
+            this.userControl_SystemFont_Group_MonthWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_Group_MonthWidget, resources.GetString("userControl_SystemFont_Group_MonthWidget.Error"));
+            this.userControl_SystemFont_Group_MonthWidget.Follow = true;
+            this.userControl_SystemFont_Group_MonthWidget.FollowGoal = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_Group_MonthWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_Group_MonthWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_Group_MonthWidget, ((int)(resources.GetObject("userControl_SystemFont_Group_MonthWidget.IconPadding"))));
+            this.userControl_SystemFont_Group_MonthWidget.Name = "userControl_SystemFont_Group_MonthWidget";
+            this.userControl_SystemFont_Group_MonthWidget.Padding_zero = true;
+            this.userControl_SystemFont_Group_MonthWidget.Separator = true;
+            this.userControl_SystemFont_Group_MonthWidget.ShowGoal = false;
+            this.userControl_SystemFont_Group_MonthWidget.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_MonthWidget, resources.GetString("userControl_SystemFont_Group_MonthWidget.ToolTip"));
+            this.userControl_SystemFont_Group_MonthWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_hand_MonthWidget
+            // 
+            resources.ApplyResources(this.userControl_hand_MonthWidget, "userControl_hand_MonthWidget");
+            this.userControl_hand_MonthWidget.AOD = false;
+            this.userControl_hand_MonthWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_hand_MonthWidget, resources.GetString("userControl_hand_MonthWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_hand_MonthWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_hand_MonthWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_hand_MonthWidget, ((int)(resources.GetObject("userControl_hand_MonthWidget.IconPadding"))));
+            this.userControl_hand_MonthWidget.Name = "userControl_hand_MonthWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_hand_MonthWidget, resources.GetString("userControl_hand_MonthWidget.ToolTip"));
+            this.userControl_hand_MonthWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_date_MonthWidget
+            // 
+            resources.ApplyResources(this.userControl_text_date_MonthWidget, "userControl_text_date_MonthWidget");
+            this.userControl_text_date_MonthWidget.AOD = false;
+            this.userControl_text_date_MonthWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_date_MonthWidget, resources.GetString("userControl_text_date_MonthWidget.Error"));
+            this.userControl_text_date_MonthWidget.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_date_MonthWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_date_MonthWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_date_MonthWidget, ((int)(resources.GetObject("userControl_text_date_MonthWidget.IconPadding"))));
+            this.userControl_text_date_MonthWidget.ImageError = false;
+            this.userControl_text_date_MonthWidget.Name = "userControl_text_date_MonthWidget";
+            this.userControl_text_date_MonthWidget.OptionalSymbol = false;
+            this.userControl_text_date_MonthWidget.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_date_MonthWidget, resources.GetString("userControl_text_date_MonthWidget.ToolTip"));
+            this.userControl_text_date_MonthWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_pictures_MonthWidget
+            // 
+            resources.ApplyResources(this.userControl_pictures_MonthWidget, "userControl_pictures_MonthWidget");
+            this.userControl_pictures_MonthWidget.AOD = false;
+            this.userControl_pictures_MonthWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_pictures_MonthWidget, resources.GetString("userControl_pictures_MonthWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_pictures_MonthWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_pictures_MonthWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_pictures_MonthWidget, ((int)(resources.GetObject("userControl_pictures_MonthWidget.IconPadding"))));
+            this.userControl_pictures_MonthWidget.ImagesCount = 12;
+            this.userControl_pictures_MonthWidget.Name = "userControl_pictures_MonthWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_pictures_MonthWidget, resources.GetString("userControl_pictures_MonthWidget.ToolTip"));
+            this.userControl_pictures_MonthWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // tabPage_YearWidget
+            // 
+            resources.ApplyResources(this.tabPage_YearWidget, "tabPage_YearWidget");
+            this.tabPage_YearWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_YearWidget.Controls.Add(this.userControl_SystemFont_Group_YearWidget);
+            this.tabPage_YearWidget.Controls.Add(this.userControl_text_date_YearWidget);
+            this.errorProvider1.SetError(this.tabPage_YearWidget, resources.GetString("tabPage_YearWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_YearWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_YearWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_YearWidget, ((int)(resources.GetObject("tabPage_YearWidget.IconPadding"))));
+            this.tabPage_YearWidget.Name = "tabPage_YearWidget";
+            this.toolTip_Weather.SetToolTip(this.tabPage_YearWidget, resources.GetString("tabPage_YearWidget.ToolTip"));
+            // 
+            // userControl_SystemFont_Group_YearWidget
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_Group_YearWidget, "userControl_SystemFont_Group_YearWidget");
+            this.userControl_SystemFont_Group_YearWidget.AOD = false;
+            this.userControl_SystemFont_Group_YearWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_Group_YearWidget, resources.GetString("userControl_SystemFont_Group_YearWidget.Error"));
+            this.userControl_SystemFont_Group_YearWidget.Follow = true;
+            this.userControl_SystemFont_Group_YearWidget.FollowGoal = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_Group_YearWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_Group_YearWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_Group_YearWidget, ((int)(resources.GetObject("userControl_SystemFont_Group_YearWidget.IconPadding"))));
+            this.userControl_SystemFont_Group_YearWidget.Name = "userControl_SystemFont_Group_YearWidget";
+            this.userControl_SystemFont_Group_YearWidget.Padding_zero = true;
+            this.userControl_SystemFont_Group_YearWidget.Separator = true;
+            this.userControl_SystemFont_Group_YearWidget.ShowGoal = false;
+            this.userControl_SystemFont_Group_YearWidget.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_YearWidget, resources.GetString("userControl_SystemFont_Group_YearWidget.ToolTip"));
+            this.userControl_SystemFont_Group_YearWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_date_YearWidget
+            // 
+            resources.ApplyResources(this.userControl_text_date_YearWidget, "userControl_text_date_YearWidget");
+            this.userControl_text_date_YearWidget.AOD = false;
+            this.userControl_text_date_YearWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_date_YearWidget, resources.GetString("userControl_text_date_YearWidget.Error"));
+            this.userControl_text_date_YearWidget.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_date_YearWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_date_YearWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_date_YearWidget, ((int)(resources.GetObject("userControl_text_date_YearWidget.IconPadding"))));
+            this.userControl_text_date_YearWidget.ImageError = false;
+            this.userControl_text_date_YearWidget.Name = "userControl_text_date_YearWidget";
+            this.userControl_text_date_YearWidget.OptionalSymbol = false;
+            this.userControl_text_date_YearWidget.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_date_YearWidget, resources.GetString("userControl_text_date_YearWidget.ToolTip"));
+            this.userControl_text_date_YearWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // tabPage_DOWWidget
+            // 
+            resources.ApplyResources(this.tabPage_DOWWidget, "tabPage_DOWWidget");
+            this.tabPage_DOWWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_DOWWidget.Controls.Add(this.userControl_hand_DOWWidget);
+            this.tabPage_DOWWidget.Controls.Add(this.userControl_pictures_DOWWidget);
+            this.errorProvider1.SetError(this.tabPage_DOWWidget, resources.GetString("tabPage_DOWWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_DOWWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_DOWWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_DOWWidget, ((int)(resources.GetObject("tabPage_DOWWidget.IconPadding"))));
+            this.tabPage_DOWWidget.Name = "tabPage_DOWWidget";
+            this.toolTip_Weather.SetToolTip(this.tabPage_DOWWidget, resources.GetString("tabPage_DOWWidget.ToolTip"));
+            // 
+            // userControl_hand_DOWWidget
+            // 
+            resources.ApplyResources(this.userControl_hand_DOWWidget, "userControl_hand_DOWWidget");
+            this.userControl_hand_DOWWidget.AOD = false;
+            this.userControl_hand_DOWWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_hand_DOWWidget, resources.GetString("userControl_hand_DOWWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_hand_DOWWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_hand_DOWWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_hand_DOWWidget, ((int)(resources.GetObject("userControl_hand_DOWWidget.IconPadding"))));
+            this.userControl_hand_DOWWidget.Name = "userControl_hand_DOWWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_hand_DOWWidget, resources.GetString("userControl_hand_DOWWidget.ToolTip"));
+            this.userControl_hand_DOWWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_pictures_DOWWidget
+            // 
+            resources.ApplyResources(this.userControl_pictures_DOWWidget, "userControl_pictures_DOWWidget");
+            this.userControl_pictures_DOWWidget.AOD = false;
+            this.userControl_pictures_DOWWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_pictures_DOWWidget, resources.GetString("userControl_pictures_DOWWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_pictures_DOWWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_pictures_DOWWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_pictures_DOWWidget, ((int)(resources.GetObject("userControl_pictures_DOWWidget.IconPadding"))));
+            this.userControl_pictures_DOWWidget.ImagesCount = 7;
+            this.userControl_pictures_DOWWidget.Name = "userControl_pictures_DOWWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_pictures_DOWWidget, resources.GetString("userControl_pictures_DOWWidget.ToolTip"));
+            this.userControl_pictures_DOWWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // tabPage_DateLayerWidget
+            // 
+            resources.ApplyResources(this.tabPage_DateLayerWidget, "tabPage_DateLayerWidget");
+            this.tabPage_DateLayerWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_DateLayerWidget.Controls.Add(this.label12);
+            this.tabPage_DateLayerWidget.Controls.Add(this.dataGridView_Widget_Date);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_End);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Start);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Up);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Down);
+            this.errorProvider1.SetError(this.tabPage_DateLayerWidget, resources.GetString("tabPage_DateLayerWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_DateLayerWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_DateLayerWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_DateLayerWidget, ((int)(resources.GetObject("tabPage_DateLayerWidget.IconPadding"))));
+            this.tabPage_DateLayerWidget.Name = "tabPage_DateLayerWidget";
+            this.toolTip_Weather.SetToolTip(this.tabPage_DateLayerWidget, resources.GetString("tabPage_DateLayerWidget.ToolTip"));
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.errorProvider1.SetError(this.label12, resources.GetString("label12.Error"));
+            this.errorProvider1.SetIconAlignment(this.label12, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label12.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label12, ((int)(resources.GetObject("label12.IconPadding"))));
+            this.label12.Name = "label12";
+            this.toolTip_Weather.SetToolTip(this.label12, resources.GetString("label12.ToolTip"));
+            // 
+            // dataGridView_Widget_Date
+            // 
+            resources.ApplyResources(this.dataGridView_Widget_Date, "dataGridView_Widget_Date");
+            this.dataGridView_Widget_Date.AllowUserToAddRows = false;
+            this.dataGridView_Widget_Date.AllowUserToDeleteRows = false;
+            this.dataGridView_Widget_Date.AllowUserToResizeRows = false;
+            this.dataGridView_Widget_Date.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Widget_Date.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.errorProvider1.SetError(this.dataGridView_Widget_Date, resources.GetString("dataGridView_Widget_Date.Error"));
+            this.errorProvider1.SetIconAlignment(this.dataGridView_Widget_Date, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dataGridView_Widget_Date.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.dataGridView_Widget_Date, ((int)(resources.GetObject("dataGridView_Widget_Date.IconPadding"))));
+            this.dataGridView_Widget_Date.MultiSelect = false;
+            this.dataGridView_Widget_Date.Name = "dataGridView_Widget_Date";
+            this.dataGridView_Widget_Date.ReadOnly = true;
+            this.dataGridView_Widget_Date.RowHeadersVisible = false;
+            this.dataGridView_Widget_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.toolTip_Weather.SetToolTip(this.dataGridView_Widget_Date, resources.GetString("dataGridView_Widget_Date.ToolTip"));
+            this.dataGridView_Widget_Date.SelectionChanged += new System.EventHandler(this.dataGridView_Widget_Date_SelectionChanged);
+            this.dataGridView_Widget_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_Widget_Date_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn7.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // button_Widget_Date_End
+            // 
+            resources.ApplyResources(this.button_Widget_Date_End, "button_Widget_Date_End");
+            this.errorProvider1.SetError(this.button_Widget_Date_End, resources.GetString("button_Widget_Date_End.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_End, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_End.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_End, ((int)(resources.GetObject("button_Widget_Date_End.IconPadding"))));
+            this.button_Widget_Date_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_Widget_Date_End.Name = "button_Widget_Date_End";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_End, resources.GetString("button_Widget_Date_End.ToolTip"));
+            this.button_Widget_Date_End.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_End.Click += new System.EventHandler(this.button_Widget_Date_End_Click);
+            // 
+            // button_Widget_Date_Start
+            // 
+            resources.ApplyResources(this.button_Widget_Date_Start, "button_Widget_Date_Start");
+            this.errorProvider1.SetError(this.button_Widget_Date_Start, resources.GetString("button_Widget_Date_Start.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_Start, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_Start.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_Start, ((int)(resources.GetObject("button_Widget_Date_Start.IconPadding"))));
+            this.button_Widget_Date_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_Widget_Date_Start.Name = "button_Widget_Date_Start";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_Start, resources.GetString("button_Widget_Date_Start.ToolTip"));
+            this.button_Widget_Date_Start.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_Start.Click += new System.EventHandler(this.button_Widget_Date_Start_Click);
+            // 
+            // button_Widget_Date_Up
+            // 
+            resources.ApplyResources(this.button_Widget_Date_Up, "button_Widget_Date_Up");
+            this.errorProvider1.SetError(this.button_Widget_Date_Up, resources.GetString("button_Widget_Date_Up.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_Up, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_Up.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_Up, ((int)(resources.GetObject("button_Widget_Date_Up.IconPadding"))));
+            this.button_Widget_Date_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_Widget_Date_Up.Name = "button_Widget_Date_Up";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_Up, resources.GetString("button_Widget_Date_Up.ToolTip"));
+            this.button_Widget_Date_Up.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_Up.Click += new System.EventHandler(this.button_Widget_Date_Up_Click);
+            // 
+            // button_Widget_Date_Down
+            // 
+            resources.ApplyResources(this.button_Widget_Date_Down, "button_Widget_Date_Down");
+            this.errorProvider1.SetError(this.button_Widget_Date_Down, resources.GetString("button_Widget_Date_Down.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_Down, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_Down.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_Down, ((int)(resources.GetObject("button_Widget_Date_Down.IconPadding"))));
+            this.button_Widget_Date_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_Widget_Date_Down.Name = "button_Widget_Date_Down";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_Down, resources.GetString("button_Widget_Date_Down.ToolTip"));
+            this.button_Widget_Date_Down.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_Down.Click += new System.EventHandler(this.button_Widget_Date_Down_Click);
+            // 
+            // userControl_iconWidget
+            // 
+            resources.ApplyResources(this.userControl_iconWidget, "userControl_iconWidget");
+            this.userControl_iconWidget.AOD = false;
+            this.userControl_iconWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_iconWidget, resources.GetString("userControl_iconWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_iconWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_iconWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_iconWidget, ((int)(resources.GetObject("userControl_iconWidget.IconPadding"))));
+            this.userControl_iconWidget.Image2 = false;
+            this.userControl_iconWidget.Name = "userControl_iconWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_iconWidget, resources.GetString("userControl_iconWidget.ToolTip"));
+            this.userControl_iconWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_icon.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_SystemFont_GroupSunriseWidget
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_GroupSunriseWidget, "userControl_SystemFont_GroupSunriseWidget");
+            this.userControl_SystemFont_GroupSunriseWidget.AOD = false;
+            this.userControl_SystemFont_GroupSunriseWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_GroupSunriseWidget, resources.GetString("userControl_SystemFont_GroupSunriseWidget.Error"));
+            this.userControl_SystemFont_GroupSunriseWidget.Follow = false;
+            this.userControl_SystemFont_GroupSunriseWidget.FollowMax = true;
+            this.userControl_SystemFont_GroupSunriseWidget.FollowMin = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_GroupSunriseWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_GroupSunriseWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_GroupSunriseWidget, ((int)(resources.GetObject("userControl_SystemFont_GroupSunriseWidget.IconPadding"))));
+            this.userControl_SystemFont_GroupSunriseWidget.Name = "userControl_SystemFont_GroupSunriseWidget";
+            this.userControl_SystemFont_GroupSunriseWidget.Padding_zero = true;
+            this.userControl_SystemFont_GroupSunriseWidget.Separator = true;
+            this.userControl_SystemFont_GroupSunriseWidget.ShowMax = true;
+            this.userControl_SystemFont_GroupSunriseWidget.ShowMin = true;
+            this.userControl_SystemFont_GroupSunriseWidget.ShowUnit = false;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_GroupSunriseWidget, resources.GetString("userControl_SystemFont_GroupSunriseWidget.ToolTip"));
+            this.userControl_SystemFont_GroupSunriseWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_SystemFont_GroupWeatherWidget
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_GroupWeatherWidget, "userControl_SystemFont_GroupWeatherWidget");
+            this.userControl_SystemFont_GroupWeatherWidget.AOD = false;
+            this.userControl_SystemFont_GroupWeatherWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_GroupWeatherWidget, resources.GetString("userControl_SystemFont_GroupWeatherWidget.Error"));
+            this.userControl_SystemFont_GroupWeatherWidget.Follow = false;
+            this.userControl_SystemFont_GroupWeatherWidget.FollowMax = true;
+            this.userControl_SystemFont_GroupWeatherWidget.FollowMin = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_GroupWeatherWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_GroupWeatherWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_GroupWeatherWidget, ((int)(resources.GetObject("userControl_SystemFont_GroupWeatherWidget.IconPadding"))));
+            this.userControl_SystemFont_GroupWeatherWidget.Name = "userControl_SystemFont_GroupWeatherWidget";
+            this.userControl_SystemFont_GroupWeatherWidget.Padding_zero = true;
+            this.userControl_SystemFont_GroupWeatherWidget.Separator = true;
+            this.userControl_SystemFont_GroupWeatherWidget.ShowMax = true;
+            this.userControl_SystemFont_GroupWeatherWidget.ShowMin = true;
+            this.userControl_SystemFont_GroupWeatherWidget.ShowUnit = false;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_GroupWeatherWidget, resources.GetString("userControl_SystemFont_GroupWeatherWidget.ToolTip"));
+            this.userControl_SystemFont_GroupWeatherWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_SystemFont_GroupWidget
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_GroupWidget, "userControl_SystemFont_GroupWidget");
+            this.userControl_SystemFont_GroupWidget.AOD = false;
+            this.userControl_SystemFont_GroupWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_GroupWidget, resources.GetString("userControl_SystemFont_GroupWidget.Error"));
+            this.userControl_SystemFont_GroupWidget.Follow = false;
+            this.userControl_SystemFont_GroupWidget.FollowGoal = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_GroupWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_GroupWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_GroupWidget, ((int)(resources.GetObject("userControl_SystemFont_GroupWidget.IconPadding"))));
+            this.userControl_SystemFont_GroupWidget.Name = "userControl_SystemFont_GroupWidget";
+            this.userControl_SystemFont_GroupWidget.Padding_zero = true;
+            this.userControl_SystemFont_GroupWidget.Separator = true;
+            this.userControl_SystemFont_GroupWidget.ShowGoal = true;
+            this.userControl_SystemFont_GroupWidget.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_GroupWidget, resources.GetString("userControl_SystemFont_GroupWidget.ToolTip"));
+            this.userControl_SystemFont_GroupWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_scaleLinearWidget
+            // 
+            resources.ApplyResources(this.userControl_scaleLinearWidget, "userControl_scaleLinearWidget");
+            this.userControl_scaleLinearWidget.AOD = false;
+            this.userControl_scaleLinearWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_scaleLinearWidget, resources.GetString("userControl_scaleLinearWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_scaleLinearWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_scaleLinearWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_scaleLinearWidget, ((int)(resources.GetObject("userControl_scaleLinearWidget.IconPadding"))));
+            this.userControl_scaleLinearWidget.Name = "userControl_scaleLinearWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_scaleLinearWidget, resources.GetString("userControl_scaleLinearWidget.ToolTip"));
+            this.userControl_scaleLinearWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_scaleCircleWidget
+            // 
+            resources.ApplyResources(this.userControl_scaleCircleWidget, "userControl_scaleCircleWidget");
+            this.userControl_scaleCircleWidget.AOD = false;
+            this.userControl_scaleCircleWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_scaleCircleWidget, resources.GetString("userControl_scaleCircleWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_scaleCircleWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_scaleCircleWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_scaleCircleWidget, ((int)(resources.GetObject("userControl_scaleCircleWidget.IconPadding"))));
+            this.userControl_scaleCircleWidget.Name = "userControl_scaleCircleWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_scaleCircleWidget, resources.GetString("userControl_scaleCircleWidget.ToolTip"));
+            this.userControl_scaleCircleWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_handWidget
+            // 
+            resources.ApplyResources(this.userControl_handWidget, "userControl_handWidget");
+            this.userControl_handWidget.AOD = false;
+            this.userControl_handWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_handWidget, resources.GetString("userControl_handWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_handWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_handWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_handWidget, ((int)(resources.GetObject("userControl_handWidget.IconPadding"))));
+            this.userControl_handWidget.Name = "userControl_handWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_handWidget, resources.GetString("userControl_handWidget.ToolTip"));
+            this.userControl_handWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_goalWidgetSunset
+            // 
+            resources.ApplyResources(this.userControl_text_goalWidgetSunset, "userControl_text_goalWidgetSunset");
+            this.userControl_text_goalWidgetSunset.AOD = false;
+            this.userControl_text_goalWidgetSunset.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_goalWidgetSunset, resources.GetString("userControl_text_goalWidgetSunset.Error"));
+            this.userControl_text_goalWidgetSunset.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_goalWidgetSunset, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_goalWidgetSunset.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_goalWidgetSunset, ((int)(resources.GetObject("userControl_text_goalWidgetSunset.IconPadding"))));
+            this.userControl_text_goalWidgetSunset.ImageError = true;
+            this.userControl_text_goalWidgetSunset.Name = "userControl_text_goalWidgetSunset";
+            this.userControl_text_goalWidgetSunset.OptionalSymbol = true;
+            this.userControl_text_goalWidgetSunset.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_goalWidgetSunset, resources.GetString("userControl_text_goalWidgetSunset.ToolTip"));
+            this.userControl_text_goalWidgetSunset.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_goalWidgetSunrise
+            // 
+            resources.ApplyResources(this.userControl_text_goalWidgetSunrise, "userControl_text_goalWidgetSunrise");
+            this.userControl_text_goalWidgetSunrise.AOD = false;
+            this.userControl_text_goalWidgetSunrise.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_goalWidgetSunrise, resources.GetString("userControl_text_goalWidgetSunrise.Error"));
+            this.userControl_text_goalWidgetSunrise.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_goalWidgetSunrise, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_goalWidgetSunrise.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_goalWidgetSunrise, ((int)(resources.GetObject("userControl_text_goalWidgetSunrise.IconPadding"))));
+            this.userControl_text_goalWidgetSunrise.ImageError = true;
+            this.userControl_text_goalWidgetSunrise.Name = "userControl_text_goalWidgetSunrise";
+            this.userControl_text_goalWidgetSunrise.OptionalSymbol = true;
+            this.userControl_text_goalWidgetSunrise.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_goalWidgetSunrise, resources.GetString("userControl_text_goalWidgetSunrise.ToolTip"));
+            this.userControl_text_goalWidgetSunrise.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_weatherWidgetMax
+            // 
+            resources.ApplyResources(this.userControl_text_weatherWidgetMax, "userControl_text_weatherWidgetMax");
+            this.userControl_text_weatherWidgetMax.AOD = false;
+            this.userControl_text_weatherWidgetMax.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_weatherWidgetMax, resources.GetString("userControl_text_weatherWidgetMax.Error"));
+            this.userControl_text_weatherWidgetMax.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_weatherWidgetMax, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_weatherWidgetMax.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_weatherWidgetMax, ((int)(resources.GetObject("userControl_text_weatherWidgetMax.IconPadding"))));
+            this.userControl_text_weatherWidgetMax.ImageError = true;
+            this.userControl_text_weatherWidgetMax.Name = "userControl_text_weatherWidgetMax";
+            this.userControl_text_weatherWidgetMax.OptionalSymbol = true;
+            this.userControl_text_weatherWidgetMax.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_weatherWidgetMax, resources.GetString("userControl_text_weatherWidgetMax.ToolTip"));
+            this.userControl_text_weatherWidgetMax.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_weatherWidgetMin
+            // 
+            resources.ApplyResources(this.userControl_text_weatherWidgetMin, "userControl_text_weatherWidgetMin");
+            this.userControl_text_weatherWidgetMin.AOD = false;
+            this.userControl_text_weatherWidgetMin.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_weatherWidgetMin, resources.GetString("userControl_text_weatherWidgetMin.Error"));
+            this.userControl_text_weatherWidgetMin.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_weatherWidgetMin, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_weatherWidgetMin.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_weatherWidgetMin, ((int)(resources.GetObject("userControl_text_weatherWidgetMin.IconPadding"))));
+            this.userControl_text_weatherWidgetMin.ImageError = true;
+            this.userControl_text_weatherWidgetMin.Name = "userControl_text_weatherWidgetMin";
+            this.userControl_text_weatherWidgetMin.OptionalSymbol = true;
+            this.userControl_text_weatherWidgetMin.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_weatherWidgetMin, resources.GetString("userControl_text_weatherWidgetMin.ToolTip"));
+            this.userControl_text_weatherWidgetMin.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_weatherWidgetCur
+            // 
+            resources.ApplyResources(this.userControl_text_weatherWidgetCur, "userControl_text_weatherWidgetCur");
+            this.userControl_text_weatherWidgetCur.AOD = false;
+            this.userControl_text_weatherWidgetCur.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_weatherWidgetCur, resources.GetString("userControl_text_weatherWidgetCur.Error"));
+            this.userControl_text_weatherWidgetCur.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_weatherWidgetCur, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_weatherWidgetCur.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_weatherWidgetCur, ((int)(resources.GetObject("userControl_text_weatherWidgetCur.IconPadding"))));
+            this.userControl_text_weatherWidgetCur.ImageError = true;
+            this.userControl_text_weatherWidgetCur.Name = "userControl_text_weatherWidgetCur";
+            this.userControl_text_weatherWidgetCur.OptionalSymbol = true;
+            this.userControl_text_weatherWidgetCur.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_weatherWidgetCur, resources.GetString("userControl_text_weatherWidgetCur.ToolTip"));
+            this.userControl_text_weatherWidgetCur.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_text_goalWidget
+            // 
+            resources.ApplyResources(this.userControl_text_goalWidget, "userControl_text_goalWidget");
+            this.userControl_text_goalWidget.AOD = false;
+            this.userControl_text_goalWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_goalWidget, resources.GetString("userControl_text_goalWidget.Error"));
+            this.userControl_text_goalWidget.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_goalWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_goalWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_goalWidget, ((int)(resources.GetObject("userControl_text_goalWidget.IconPadding"))));
+            this.userControl_text_goalWidget.ImageError = true;
+            this.userControl_text_goalWidget.Name = "userControl_text_goalWidget";
+            this.userControl_text_goalWidget.OptionalSymbol = false;
+            this.userControl_text_goalWidget.Padding_zero = false;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_goalWidget, resources.GetString("userControl_text_goalWidget.ToolTip"));
+            this.userControl_text_goalWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_textWidget
+            // 
+            resources.ApplyResources(this.userControl_textWidget, "userControl_textWidget");
+            this.userControl_textWidget.AOD = false;
+            this.userControl_textWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_textWidget, resources.GetString("userControl_textWidget.Error"));
+            this.userControl_textWidget.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_textWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_textWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_textWidget, ((int)(resources.GetObject("userControl_textWidget.IconPadding"))));
+            this.userControl_textWidget.ImageError = true;
+            this.userControl_textWidget.Name = "userControl_textWidget";
+            this.userControl_textWidget.OptionalSymbol = false;
+            this.userControl_textWidget.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_textWidget, resources.GetString("userControl_textWidget.ToolTip"));
+            this.userControl_textWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_pictures_weatherWidget
+            // 
+            resources.ApplyResources(this.userControl_pictures_weatherWidget, "userControl_pictures_weatherWidget");
+            this.userControl_pictures_weatherWidget.AOD = false;
+            this.userControl_pictures_weatherWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_pictures_weatherWidget, resources.GetString("userControl_pictures_weatherWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_pictures_weatherWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_pictures_weatherWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_pictures_weatherWidget, ((int)(resources.GetObject("userControl_pictures_weatherWidget.IconPadding"))));
+            this.userControl_pictures_weatherWidget.ImagesCount = 29;
+            this.userControl_pictures_weatherWidget.Name = "userControl_pictures_weatherWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_pictures_weatherWidget, resources.GetString("userControl_pictures_weatherWidget.ToolTip"));
+            this.userControl_pictures_weatherWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_picturesWidget
+            // 
+            resources.ApplyResources(this.userControl_picturesWidget, "userControl_picturesWidget");
+            this.userControl_picturesWidget.AOD = false;
+            this.userControl_picturesWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_picturesWidget, resources.GetString("userControl_picturesWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_picturesWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_picturesWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_picturesWidget, ((int)(resources.GetObject("userControl_picturesWidget.IconPadding"))));
+            this.userControl_picturesWidget.ImagesCount = 10;
+            this.userControl_picturesWidget.Name = "userControl_picturesWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_picturesWidget, resources.GetString("userControl_picturesWidget.ToolTip"));
+            this.userControl_picturesWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // userControl_previewWidget
+            // 
+            resources.ApplyResources(this.userControl_previewWidget, "userControl_previewWidget");
+            this.userControl_previewWidget.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_previewWidget, resources.GetString("userControl_previewWidget.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_previewWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_previewWidget.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_previewWidget, ((int)(resources.GetObject("userControl_previewWidget.IconPadding"))));
+            this.userControl_previewWidget.Name = "userControl_previewWidget";
+            this.toolTip_Weather.SetToolTip(this.userControl_previewWidget, resources.GetString("userControl_previewWidget.ToolTip"));
+            this.userControl_previewWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_preview.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // comboBox_WidgetsTopMask
+            // 
+            resources.ApplyResources(this.comboBox_WidgetsTopMask, "comboBox_WidgetsTopMask");
+            this.comboBox_WidgetsTopMask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetsTopMask.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetsTopMask, resources.GetString("comboBox_WidgetsTopMask.Error"));
+            this.comboBox_WidgetsTopMask.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetsTopMask, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetsTopMask.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetsTopMask, ((int)(resources.GetObject("comboBox_WidgetsTopMask.IconPadding"))));
+            this.comboBox_WidgetsTopMask.Name = "comboBox_WidgetsTopMask";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetsTopMask, resources.GetString("comboBox_WidgetsTopMask.ToolTip"));
+            this.comboBox_WidgetsTopMask.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetsTopMask.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetsTopMask.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetsMask_SelectedIndexChanged);
+            this.comboBox_WidgetsTopMask.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetsTopMask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.errorProvider1.SetError(this.label7, resources.GetString("label7.Error"));
+            this.errorProvider1.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding"))));
+            this.label7.Name = "label7";
+            this.toolTip_Weather.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
+            // 
+            // comboBox_WidgetsUnderMask
+            // 
+            resources.ApplyResources(this.comboBox_WidgetsUnderMask, "comboBox_WidgetsUnderMask");
+            this.comboBox_WidgetsUnderMask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetsUnderMask.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetsUnderMask, resources.GetString("comboBox_WidgetsUnderMask.Error"));
+            this.comboBox_WidgetsUnderMask.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetsUnderMask, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetsUnderMask.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetsUnderMask, ((int)(resources.GetObject("comboBox_WidgetsUnderMask.IconPadding"))));
+            this.comboBox_WidgetsUnderMask.Name = "comboBox_WidgetsUnderMask";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetsUnderMask, resources.GetString("comboBox_WidgetsUnderMask.ToolTip"));
+            this.comboBox_WidgetsUnderMask.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetsUnderMask.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetsUnderMask.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetsMask_SelectedIndexChanged);
+            this.comboBox_WidgetsUnderMask.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetsUnderMask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label01
+            // 
+            resources.ApplyResources(this.label01, "label01");
+            this.errorProvider1.SetError(this.label01, resources.GetString("label01.Error"));
+            this.errorProvider1.SetIconAlignment(this.label01, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label01.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label01, ((int)(resources.GetObject("label01.IconPadding"))));
+            this.label01.Name = "label01";
+            this.toolTip_Weather.SetToolTip(this.label01, resources.GetString("label01.ToolTip"));
+            // 
+            // groupBox_WidgetNumber
+            // 
+            resources.ApplyResources(this.groupBox_WidgetNumber, "groupBox_WidgetNumber");
+            this.groupBox_WidgetNumber.Controls.Add(this.label11);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionLenght);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetBorderInactiv);
+            this.groupBox_WidgetNumber.Controls.Add(this.label10);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetBorderActiv);
+            this.groupBox_WidgetNumber.Controls.Add(this.label9);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetDescriptionBackground);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundX);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundY);
+            this.groupBox_WidgetNumber.Controls.Add(this.label02);
+            this.groupBox_WidgetNumber.Controls.Add(this.label8);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1084);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1085);
+            this.groupBox_WidgetNumber.Controls.Add(this.label6);
+            this.groupBox_WidgetNumber.Controls.Add(this.label2);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetWidth);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetHeight);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetX);
+            this.groupBox_WidgetNumber.Controls.Add(this.button_WidgetDel);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetY);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetNumber);
+            this.groupBox_WidgetNumber.Controls.Add(this.label05);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1083);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1086);
+            this.errorProvider1.SetError(this.groupBox_WidgetNumber, resources.GetString("groupBox_WidgetNumber.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WidgetNumber, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WidgetNumber.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WidgetNumber, ((int)(resources.GetObject("groupBox_WidgetNumber.IconPadding"))));
+            this.groupBox_WidgetNumber.Name = "groupBox_WidgetNumber";
+            this.groupBox_WidgetNumber.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WidgetNumber, resources.GetString("groupBox_WidgetNumber.ToolTip"));
+            this.groupBox_WidgetNumber.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.errorProvider1.SetError(this.label11, resources.GetString("label11.Error"));
+            this.errorProvider1.SetIconAlignment(this.label11, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label11.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label11, ((int)(resources.GetObject("label11.IconPadding"))));
+            this.label11.Name = "label11";
+            this.toolTip_Weather.SetToolTip(this.label11, resources.GetString("label11.ToolTip"));
+            // 
+            // numericUpDown_WidgetDescriptionLenght
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionLenght, "numericUpDown_WidgetDescriptionLenght");
+            this.numericUpDown_WidgetDescriptionLenght.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetDescriptionLenght, resources.GetString("numericUpDown_WidgetDescriptionLenght.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetDescriptionLenght, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetDescriptionLenght.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetDescriptionLenght, ((int)(resources.GetObject("numericUpDown_WidgetDescriptionLenght.IconPadding"))));
+            this.numericUpDown_WidgetDescriptionLenght.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenght.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionLenght.Name = "numericUpDown_WidgetDescriptionLenght";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetDescriptionLenght, resources.GetString("numericUpDown_WidgetDescriptionLenght.ToolTip"));
+            this.numericUpDown_WidgetDescriptionLenght.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenght.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            // 
+            // comboBox_WidgetBorderInactiv
+            // 
+            resources.ApplyResources(this.comboBox_WidgetBorderInactiv, "comboBox_WidgetBorderInactiv");
+            this.comboBox_WidgetBorderInactiv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderInactiv.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetBorderInactiv, resources.GetString("comboBox_WidgetBorderInactiv.Error"));
+            this.comboBox_WidgetBorderInactiv.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetBorderInactiv, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetBorderInactiv.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetBorderInactiv, ((int)(resources.GetObject("comboBox_WidgetBorderInactiv.IconPadding"))));
+            this.comboBox_WidgetBorderInactiv.Name = "comboBox_WidgetBorderInactiv";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetBorderInactiv, resources.GetString("comboBox_WidgetBorderInactiv.ToolTip"));
+            this.comboBox_WidgetBorderInactiv.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderInactiv.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderInactiv.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
+            this.comboBox_WidgetBorderInactiv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderInactiv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.errorProvider1.SetError(this.label10, resources.GetString("label10.Error"));
+            this.errorProvider1.SetIconAlignment(this.label10, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label10.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label10, ((int)(resources.GetObject("label10.IconPadding"))));
+            this.label10.Name = "label10";
+            this.toolTip_Weather.SetToolTip(this.label10, resources.GetString("label10.ToolTip"));
+            // 
+            // comboBox_WidgetBorderActiv
+            // 
+            resources.ApplyResources(this.comboBox_WidgetBorderActiv, "comboBox_WidgetBorderActiv");
+            this.comboBox_WidgetBorderActiv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderActiv.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetBorderActiv, resources.GetString("comboBox_WidgetBorderActiv.Error"));
+            this.comboBox_WidgetBorderActiv.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetBorderActiv, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetBorderActiv.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetBorderActiv, ((int)(resources.GetObject("comboBox_WidgetBorderActiv.IconPadding"))));
+            this.comboBox_WidgetBorderActiv.Name = "comboBox_WidgetBorderActiv";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetBorderActiv, resources.GetString("comboBox_WidgetBorderActiv.ToolTip"));
+            this.comboBox_WidgetBorderActiv.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderActiv.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderActiv.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
+            this.comboBox_WidgetBorderActiv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderActiv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.errorProvider1.SetError(this.label9, resources.GetString("label9.Error"));
+            this.errorProvider1.SetIconAlignment(this.label9, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label9.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label9, ((int)(resources.GetObject("label9.IconPadding"))));
+            this.label9.Name = "label9";
+            this.toolTip_Weather.SetToolTip(this.label9, resources.GetString("label9.ToolTip"));
+            // 
+            // comboBox_WidgetDescriptionBackground
+            // 
+            resources.ApplyResources(this.comboBox_WidgetDescriptionBackground, "comboBox_WidgetDescriptionBackground");
+            this.comboBox_WidgetDescriptionBackground.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetDescriptionBackground.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetDescriptionBackground, resources.GetString("comboBox_WidgetDescriptionBackground.Error"));
+            this.comboBox_WidgetDescriptionBackground.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetDescriptionBackground, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetDescriptionBackground.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetDescriptionBackground, ((int)(resources.GetObject("comboBox_WidgetDescriptionBackground.IconPadding"))));
+            this.comboBox_WidgetDescriptionBackground.Name = "comboBox_WidgetDescriptionBackground";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetDescriptionBackground, resources.GetString("comboBox_WidgetDescriptionBackground.ToolTip"));
+            this.comboBox_WidgetDescriptionBackground.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetDescriptionBackground.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetDescriptionBackground.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
+            this.comboBox_WidgetDescriptionBackground.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetDescriptionBackground.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundX
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundX, "numericUpDown_WidgetDescriptionBackgroundX");
+            this.numericUpDown_WidgetDescriptionBackgroundX.ContextMenuStrip = this.contextMenuStrip_X;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetDescriptionBackgroundX, resources.GetString("numericUpDown_WidgetDescriptionBackgroundX.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetDescriptionBackgroundX, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundX.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetDescriptionBackgroundX, ((int)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundX.IconPadding"))));
+            this.numericUpDown_WidgetDescriptionBackgroundX.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundX.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundX.Name = "numericUpDown_WidgetDescriptionBackgroundX";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetDescriptionBackgroundX, resources.GetString("numericUpDown_WidgetDescriptionBackgroundX.ToolTip"));
+            this.numericUpDown_WidgetDescriptionBackgroundX.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundY
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundY, "numericUpDown_WidgetDescriptionBackgroundY");
+            this.numericUpDown_WidgetDescriptionBackgroundY.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetDescriptionBackgroundY, resources.GetString("numericUpDown_WidgetDescriptionBackgroundY.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetDescriptionBackgroundY, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundY.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetDescriptionBackgroundY, ((int)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundY.IconPadding"))));
+            this.numericUpDown_WidgetDescriptionBackgroundY.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundY.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundY.Name = "numericUpDown_WidgetDescriptionBackgroundY";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetDescriptionBackgroundY, resources.GetString("numericUpDown_WidgetDescriptionBackgroundY.ToolTip"));
+            this.numericUpDown_WidgetDescriptionBackgroundY.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // label02
+            // 
+            resources.ApplyResources(this.label02, "label02");
+            this.errorProvider1.SetError(this.label02, resources.GetString("label02.Error"));
+            this.errorProvider1.SetIconAlignment(this.label02, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label02.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label02, ((int)(resources.GetObject("label02.IconPadding"))));
+            this.label02.Name = "label02";
+            this.toolTip_Weather.SetToolTip(this.label02, resources.GetString("label02.ToolTip"));
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.errorProvider1.SetError(this.label8, resources.GetString("label8.Error"));
+            this.errorProvider1.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding"))));
+            this.label8.Name = "label8";
+            this.toolTip_Weather.SetToolTip(this.label8, resources.GetString("label8.ToolTip"));
+            // 
+            // label1084
+            // 
+            resources.ApplyResources(this.label1084, "label1084");
+            this.errorProvider1.SetError(this.label1084, resources.GetString("label1084.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1084, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1084.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1084, ((int)(resources.GetObject("label1084.IconPadding"))));
+            this.label1084.Name = "label1084";
+            this.toolTip_Weather.SetToolTip(this.label1084, resources.GetString("label1084.ToolTip"));
+            // 
+            // label1085
+            // 
+            resources.ApplyResources(this.label1085, "label1085");
+            this.errorProvider1.SetError(this.label1085, resources.GetString("label1085.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1085, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1085.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1085, ((int)(resources.GetObject("label1085.IconPadding"))));
+            this.label1085.Name = "label1085";
+            this.toolTip_Weather.SetToolTip(this.label1085, resources.GetString("label1085.ToolTip"));
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.errorProvider1.SetError(this.label6, resources.GetString("label6.Error"));
+            this.errorProvider1.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding"))));
+            this.label6.Name = "label6";
+            this.toolTip_Weather.SetToolTip(this.label6, resources.GetString("label6.ToolTip"));
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.errorProvider1.SetError(this.label2, resources.GetString("label2.Error"));
+            this.errorProvider1.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
+            this.label2.Name = "label2";
+            this.toolTip_Weather.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
+            // 
+            // numericUpDown_WidgetWidth
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetWidth, "numericUpDown_WidgetWidth");
+            this.errorProvider1.SetError(this.numericUpDown_WidgetWidth, resources.GetString("numericUpDown_WidgetWidth.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetWidth, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetWidth.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetWidth, ((int)(resources.GetObject("numericUpDown_WidgetWidth.IconPadding"))));
+            this.numericUpDown_WidgetWidth.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetWidth.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetWidth.Name = "numericUpDown_WidgetWidth";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetWidth, resources.GetString("numericUpDown_WidgetWidth.ToolTip"));
+            this.numericUpDown_WidgetWidth.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            // 
+            // numericUpDown_WidgetHeight
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetHeight, "numericUpDown_WidgetHeight");
+            this.errorProvider1.SetError(this.numericUpDown_WidgetHeight, resources.GetString("numericUpDown_WidgetHeight.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetHeight, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetHeight.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetHeight, ((int)(resources.GetObject("numericUpDown_WidgetHeight.IconPadding"))));
+            this.numericUpDown_WidgetHeight.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetHeight.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetHeight.Name = "numericUpDown_WidgetHeight";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetHeight, resources.GetString("numericUpDown_WidgetHeight.ToolTip"));
+            this.numericUpDown_WidgetHeight.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            // 
+            // numericUpDown_WidgetX
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetX, "numericUpDown_WidgetX");
+            this.numericUpDown_WidgetX.ContextMenuStrip = this.contextMenuStrip_X;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetX, resources.GetString("numericUpDown_WidgetX.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetX, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetX.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetX, ((int)(resources.GetObject("numericUpDown_WidgetX.IconPadding"))));
+            this.numericUpDown_WidgetX.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetX.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetX.Name = "numericUpDown_WidgetX";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetX, resources.GetString("numericUpDown_WidgetX.ToolTip"));
+            this.numericUpDown_WidgetX.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // button_WidgetDel
+            // 
+            resources.ApplyResources(this.button_WidgetDel, "button_WidgetDel");
+            this.errorProvider1.SetError(this.button_WidgetDel, resources.GetString("button_WidgetDel.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_WidgetDel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_WidgetDel.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_WidgetDel, ((int)(resources.GetObject("button_WidgetDel.IconPadding"))));
+            this.button_WidgetDel.Name = "button_WidgetDel";
+            this.toolTip_Weather.SetToolTip(this.button_WidgetDel, resources.GetString("button_WidgetDel.ToolTip"));
+            this.button_WidgetDel.UseVisualStyleBackColor = true;
+            this.button_WidgetDel.Click += new System.EventHandler(this.button_WidgetDel_Click);
+            // 
+            // numericUpDown_WidgetY
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetY, "numericUpDown_WidgetY");
+            this.numericUpDown_WidgetY.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetY, resources.GetString("numericUpDown_WidgetY.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetY, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetY.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetY, ((int)(resources.GetObject("numericUpDown_WidgetY.IconPadding"))));
+            this.numericUpDown_WidgetY.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetY.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetY.Name = "numericUpDown_WidgetY";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetY, resources.GetString("numericUpDown_WidgetY.ToolTip"));
+            this.numericUpDown_WidgetY.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // comboBox_WidgetNumber
+            // 
+            resources.ApplyResources(this.comboBox_WidgetNumber, "comboBox_WidgetNumber");
+            this.comboBox_WidgetNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.errorProvider1.SetError(this.comboBox_WidgetNumber, resources.GetString("comboBox_WidgetNumber.Error"));
+            this.comboBox_WidgetNumber.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetNumber, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetNumber.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetNumber, ((int)(resources.GetObject("comboBox_WidgetNumber.IconPadding"))));
+            this.comboBox_WidgetNumber.Name = "comboBox_WidgetNumber";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetNumber, resources.GetString("comboBox_WidgetNumber.ToolTip"));
+            this.comboBox_WidgetNumber.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetNumber_SelectedIndexChanged);
+            // 
+            // label05
+            // 
+            resources.ApplyResources(this.label05, "label05");
+            this.errorProvider1.SetError(this.label05, resources.GetString("label05.Error"));
+            this.errorProvider1.SetIconAlignment(this.label05, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label05.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label05, ((int)(resources.GetObject("label05.IconPadding"))));
+            this.label05.Name = "label05";
+            this.toolTip_Weather.SetToolTip(this.label05, resources.GetString("label05.ToolTip"));
+            // 
+            // label1083
+            // 
+            resources.ApplyResources(this.label1083, "label1083");
+            this.errorProvider1.SetError(this.label1083, resources.GetString("label1083.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1083, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1083.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1083, ((int)(resources.GetObject("label1083.IconPadding"))));
+            this.label1083.Name = "label1083";
+            this.toolTip_Weather.SetToolTip(this.label1083, resources.GetString("label1083.ToolTip"));
+            // 
+            // label1086
+            // 
+            resources.ApplyResources(this.label1086, "label1086");
+            this.errorProvider1.SetError(this.label1086, resources.GetString("label1086.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1086, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1086.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1086, ((int)(resources.GetObject("label1086.IconPadding"))));
+            this.label1086.Name = "label1086";
+            this.toolTip_Weather.SetToolTip(this.label1086, resources.GetString("label1086.ToolTip"));
+            // 
+            // groupBox_WidgetElement
+            // 
+            resources.ApplyResources(this.groupBox_WidgetElement, "groupBox_WidgetElement");
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElementDel);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_End);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Start);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Up);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Down);
+            this.groupBox_WidgetElement.Controls.Add(this.dataGridView_WidgetElement);
+            this.errorProvider1.SetError(this.groupBox_WidgetElement, resources.GetString("groupBox_WidgetElement.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WidgetElement, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WidgetElement.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WidgetElement, ((int)(resources.GetObject("groupBox_WidgetElement.IconPadding"))));
+            this.groupBox_WidgetElement.Name = "groupBox_WidgetElement";
+            this.groupBox_WidgetElement.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WidgetElement, resources.GetString("groupBox_WidgetElement.ToolTip"));
+            this.groupBox_WidgetElement.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // button_WidgetElementDel
+            // 
+            resources.ApplyResources(this.button_WidgetElementDel, "button_WidgetElementDel");
+            this.errorProvider1.SetError(this.button_WidgetElementDel, resources.GetString("button_WidgetElementDel.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_WidgetElementDel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_WidgetElementDel.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_WidgetElementDel, ((int)(resources.GetObject("button_WidgetElementDel.IconPadding"))));
+            this.button_WidgetElementDel.Name = "button_WidgetElementDel";
+            this.toolTip_Weather.SetToolTip(this.button_WidgetElementDel, resources.GetString("button_WidgetElementDel.ToolTip"));
+            this.button_WidgetElementDel.UseVisualStyleBackColor = true;
+            this.button_WidgetElementDel.Click += new System.EventHandler(this.button_WidgetElementDel_Click);
+            // 
+            // button_WidgetElement_End
+            // 
+            resources.ApplyResources(this.button_WidgetElement_End, "button_WidgetElement_End");
+            this.errorProvider1.SetError(this.button_WidgetElement_End, resources.GetString("button_WidgetElement_End.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_WidgetElement_End, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_WidgetElement_End.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_WidgetElement_End, ((int)(resources.GetObject("button_WidgetElement_End.IconPadding"))));
+            this.button_WidgetElement_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_WidgetElement_End.Name = "button_WidgetElement_End";
+            this.toolTip_Weather.SetToolTip(this.button_WidgetElement_End, resources.GetString("button_WidgetElement_End.ToolTip"));
+            this.button_WidgetElement_End.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_End.Click += new System.EventHandler(this.button_WidgetElement_End_Click);
+            // 
+            // button_WidgetElement_Start
+            // 
+            resources.ApplyResources(this.button_WidgetElement_Start, "button_WidgetElement_Start");
+            this.errorProvider1.SetError(this.button_WidgetElement_Start, resources.GetString("button_WidgetElement_Start.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_WidgetElement_Start, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_WidgetElement_Start.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_WidgetElement_Start, ((int)(resources.GetObject("button_WidgetElement_Start.IconPadding"))));
+            this.button_WidgetElement_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_WidgetElement_Start.Name = "button_WidgetElement_Start";
+            this.toolTip_Weather.SetToolTip(this.button_WidgetElement_Start, resources.GetString("button_WidgetElement_Start.ToolTip"));
+            this.button_WidgetElement_Start.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_Start.Click += new System.EventHandler(this.button_WidgetElement_Start_Click);
+            // 
+            // button_WidgetElement_Up
+            // 
+            resources.ApplyResources(this.button_WidgetElement_Up, "button_WidgetElement_Up");
+            this.errorProvider1.SetError(this.button_WidgetElement_Up, resources.GetString("button_WidgetElement_Up.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_WidgetElement_Up, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_WidgetElement_Up.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_WidgetElement_Up, ((int)(resources.GetObject("button_WidgetElement_Up.IconPadding"))));
+            this.button_WidgetElement_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_WidgetElement_Up.Name = "button_WidgetElement_Up";
+            this.toolTip_Weather.SetToolTip(this.button_WidgetElement_Up, resources.GetString("button_WidgetElement_Up.ToolTip"));
+            this.button_WidgetElement_Up.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_Up.Click += new System.EventHandler(this.button_WidgetElement_Up_Click);
+            // 
+            // button_WidgetElement_Down
+            // 
+            resources.ApplyResources(this.button_WidgetElement_Down, "button_WidgetElement_Down");
+            this.errorProvider1.SetError(this.button_WidgetElement_Down, resources.GetString("button_WidgetElement_Down.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_WidgetElement_Down, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_WidgetElement_Down.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_WidgetElement_Down, ((int)(resources.GetObject("button_WidgetElement_Down.IconPadding"))));
+            this.button_WidgetElement_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_WidgetElement_Down.Name = "button_WidgetElement_Down";
+            this.toolTip_Weather.SetToolTip(this.button_WidgetElement_Down, resources.GetString("button_WidgetElement_Down.ToolTip"));
+            this.button_WidgetElement_Down.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_Down.Click += new System.EventHandler(this.button_WidgetElement_Down_Click);
+            // 
+            // dataGridView_WidgetElement
+            // 
+            resources.ApplyResources(this.dataGridView_WidgetElement, "dataGridView_WidgetElement");
+            this.dataGridView_WidgetElement.AllowUserToAddRows = false;
+            this.dataGridView_WidgetElement.AllowUserToDeleteRows = false;
+            this.dataGridView_WidgetElement.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_WidgetElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_WidgetElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.WidgetsID,
+            this.WidgetElement,
+            this.WidgetElementName});
+            this.dataGridView_WidgetElement.EnableHeadersVisualStyles = false;
+            this.errorProvider1.SetError(this.dataGridView_WidgetElement, resources.GetString("dataGridView_WidgetElement.Error"));
+            this.errorProvider1.SetIconAlignment(this.dataGridView_WidgetElement, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dataGridView_WidgetElement.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.dataGridView_WidgetElement, ((int)(resources.GetObject("dataGridView_WidgetElement.IconPadding"))));
+            this.dataGridView_WidgetElement.MultiSelect = false;
+            this.dataGridView_WidgetElement.Name = "dataGridView_WidgetElement";
+            this.dataGridView_WidgetElement.ReadOnly = true;
+            this.dataGridView_WidgetElement.RowHeadersVisible = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkGray;
+            this.dataGridView_WidgetElement.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView_WidgetElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.toolTip_Weather.SetToolTip(this.dataGridView_WidgetElement, resources.GetString("dataGridView_WidgetElement.ToolTip"));
+            this.dataGridView_WidgetElement.SelectionChanged += new System.EventHandler(this.dataGridView_WidgetElement_SelectionChanged);
+            this.dataGridView_WidgetElement.EnabledChanged += new System.EventHandler(this.dataGridView_WidgetElement_EnabledChanged);
+            this.dataGridView_WidgetElement.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_WidgetElement_KeyDown);
+            // 
+            // WidgetsID
+            // 
+            this.WidgetsID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.WidgetsID.Frozen = true;
+            resources.ApplyResources(this.WidgetsID, "WidgetsID");
+            this.WidgetsID.Name = "WidgetsID";
+            this.WidgetsID.ReadOnly = true;
+            this.WidgetsID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.WidgetsID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // WidgetElement
+            // 
+            this.WidgetElement.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.WidgetElement, "WidgetElement");
+            this.WidgetElement.Name = "WidgetElement";
+            this.WidgetElement.ReadOnly = true;
+            this.WidgetElement.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.WidgetElement.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // WidgetElementName
+            // 
+            resources.ApplyResources(this.WidgetElementName, "WidgetElementName");
+            this.WidgetElementName.Name = "WidgetElementName";
+            this.WidgetElementName.ReadOnly = true;
+            // 
+            // tabPage_WidgetAdd
+            // 
+            resources.ApplyResources(this.tabPage_WidgetAdd, "tabPage_WidgetAdd");
+            this.tabPage_WidgetAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_WidgetAdd.Controls.Add(this.label31);
+            this.tabPage_WidgetAdd.Controls.Add(this.label30);
+            this.tabPage_WidgetAdd.Controls.Add(this.label29);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetTypeAdd);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WdgetAdd);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetElementAdd);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetNumberAdd);
+            this.errorProvider1.SetError(this.tabPage_WidgetAdd, resources.GetString("tabPage_WidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage_WidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage_WidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage_WidgetAdd, ((int)(resources.GetObject("tabPage_WidgetAdd.IconPadding"))));
+            this.tabPage_WidgetAdd.Name = "tabPage_WidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.tabPage_WidgetAdd, resources.GetString("tabPage_WidgetAdd.ToolTip"));
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.errorProvider1.SetError(this.label31, resources.GetString("label31.Error"));
+            this.errorProvider1.SetIconAlignment(this.label31, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label31.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label31, ((int)(resources.GetObject("label31.IconPadding"))));
+            this.label31.Name = "label31";
+            this.toolTip_Weather.SetToolTip(this.label31, resources.GetString("label31.ToolTip"));
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.errorProvider1.SetError(this.label30, resources.GetString("label30.Error"));
+            this.errorProvider1.SetIconAlignment(this.label30, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label30.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label30, ((int)(resources.GetObject("label30.IconPadding"))));
+            this.label30.Name = "label30";
+            this.toolTip_Weather.SetToolTip(this.label30, resources.GetString("label30.ToolTip"));
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.errorProvider1.SetError(this.label29, resources.GetString("label29.Error"));
+            this.errorProvider1.SetIconAlignment(this.label29, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label29.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label29, ((int)(resources.GetObject("label29.IconPadding"))));
+            this.label29.Name = "label29";
+            this.toolTip_Weather.SetToolTip(this.label29, resources.GetString("label29.ToolTip"));
+            // 
+            // groupBox_WidgetTypeAdd
+            // 
+            resources.ApplyResources(this.groupBox_WidgetTypeAdd, "groupBox_WidgetTypeAdd");
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_BatteryWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.label28);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_AirPressureWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_WindForceWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_SunriseWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_HumidityWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_UVindexWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_WeatherWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.label27);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_FatBurningWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_ActivityGoalWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_StandUpWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_DistanceWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_PAIWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_HeartRateWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_CaloriesWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.label26);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_StepsWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_DateWidgetAdd);
+            this.errorProvider1.SetError(this.groupBox_WidgetTypeAdd, resources.GetString("groupBox_WidgetTypeAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WidgetTypeAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WidgetTypeAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WidgetTypeAdd, ((int)(resources.GetObject("groupBox_WidgetTypeAdd.IconPadding"))));
+            this.groupBox_WidgetTypeAdd.Name = "groupBox_WidgetTypeAdd";
+            this.groupBox_WidgetTypeAdd.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WidgetTypeAdd, resources.GetString("groupBox_WidgetTypeAdd.ToolTip"));
+            this.groupBox_WidgetTypeAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_BatteryWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_BatteryWidgetAdd, "radioButton_BatteryWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_BatteryWidgetAdd, resources.GetString("radioButton_BatteryWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_BatteryWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_BatteryWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_BatteryWidgetAdd, ((int)(resources.GetObject("radioButton_BatteryWidgetAdd.IconPadding"))));
+            this.radioButton_BatteryWidgetAdd.Name = "radioButton_BatteryWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_BatteryWidgetAdd, resources.GetString("radioButton_BatteryWidgetAdd.ToolTip"));
+            this.radioButton_BatteryWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_BatteryWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.errorProvider1.SetError(this.label28, resources.GetString("label28.Error"));
+            this.errorProvider1.SetIconAlignment(this.label28, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label28.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label28, ((int)(resources.GetObject("label28.IconPadding"))));
+            this.label28.Name = "label28";
+            this.toolTip_Weather.SetToolTip(this.label28, resources.GetString("label28.ToolTip"));
+            // 
+            // radioButton_AirPressureWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_AirPressureWidgetAdd, "radioButton_AirPressureWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_AirPressureWidgetAdd, resources.GetString("radioButton_AirPressureWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_AirPressureWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_AirPressureWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_AirPressureWidgetAdd, ((int)(resources.GetObject("radioButton_AirPressureWidgetAdd.IconPadding"))));
+            this.radioButton_AirPressureWidgetAdd.Name = "radioButton_AirPressureWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_AirPressureWidgetAdd, resources.GetString("radioButton_AirPressureWidgetAdd.ToolTip"));
+            this.radioButton_AirPressureWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_AirPressureWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_WindForceWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_WindForceWidgetAdd, "radioButton_WindForceWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_WindForceWidgetAdd, resources.GetString("radioButton_WindForceWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_WindForceWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_WindForceWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_WindForceWidgetAdd, ((int)(resources.GetObject("radioButton_WindForceWidgetAdd.IconPadding"))));
+            this.radioButton_WindForceWidgetAdd.Name = "radioButton_WindForceWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_WindForceWidgetAdd, resources.GetString("radioButton_WindForceWidgetAdd.ToolTip"));
+            this.radioButton_WindForceWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_WindForceWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_SunriseWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_SunriseWidgetAdd, "radioButton_SunriseWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_SunriseWidgetAdd, resources.GetString("radioButton_SunriseWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_SunriseWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_SunriseWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_SunriseWidgetAdd, ((int)(resources.GetObject("radioButton_SunriseWidgetAdd.IconPadding"))));
+            this.radioButton_SunriseWidgetAdd.Name = "radioButton_SunriseWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_SunriseWidgetAdd, resources.GetString("radioButton_SunriseWidgetAdd.ToolTip"));
+            this.radioButton_SunriseWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_SunriseWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_HumidityWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_HumidityWidgetAdd, "radioButton_HumidityWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_HumidityWidgetAdd, resources.GetString("radioButton_HumidityWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_HumidityWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_HumidityWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_HumidityWidgetAdd, ((int)(resources.GetObject("radioButton_HumidityWidgetAdd.IconPadding"))));
+            this.radioButton_HumidityWidgetAdd.Name = "radioButton_HumidityWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_HumidityWidgetAdd, resources.GetString("radioButton_HumidityWidgetAdd.ToolTip"));
+            this.radioButton_HumidityWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_HumidityWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_UVindexWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_UVindexWidgetAdd, "radioButton_UVindexWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_UVindexWidgetAdd, resources.GetString("radioButton_UVindexWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_UVindexWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_UVindexWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_UVindexWidgetAdd, ((int)(resources.GetObject("radioButton_UVindexWidgetAdd.IconPadding"))));
+            this.radioButton_UVindexWidgetAdd.Name = "radioButton_UVindexWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_UVindexWidgetAdd, resources.GetString("radioButton_UVindexWidgetAdd.ToolTip"));
+            this.radioButton_UVindexWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_UVindexWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_WeatherWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_WeatherWidgetAdd, "radioButton_WeatherWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_WeatherWidgetAdd, resources.GetString("radioButton_WeatherWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_WeatherWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_WeatherWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_WeatherWidgetAdd, ((int)(resources.GetObject("radioButton_WeatherWidgetAdd.IconPadding"))));
+            this.radioButton_WeatherWidgetAdd.Name = "radioButton_WeatherWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_WeatherWidgetAdd, resources.GetString("radioButton_WeatherWidgetAdd.ToolTip"));
+            this.radioButton_WeatherWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_WeatherWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.errorProvider1.SetError(this.label27, resources.GetString("label27.Error"));
+            this.errorProvider1.SetIconAlignment(this.label27, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label27.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label27, ((int)(resources.GetObject("label27.IconPadding"))));
+            this.label27.Name = "label27";
+            this.toolTip_Weather.SetToolTip(this.label27, resources.GetString("label27.ToolTip"));
+            // 
+            // radioButton_FatBurningWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_FatBurningWidgetAdd, "radioButton_FatBurningWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_FatBurningWidgetAdd, resources.GetString("radioButton_FatBurningWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_FatBurningWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_FatBurningWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_FatBurningWidgetAdd, ((int)(resources.GetObject("radioButton_FatBurningWidgetAdd.IconPadding"))));
+            this.radioButton_FatBurningWidgetAdd.Name = "radioButton_FatBurningWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_FatBurningWidgetAdd, resources.GetString("radioButton_FatBurningWidgetAdd.ToolTip"));
+            this.radioButton_FatBurningWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_FatBurningWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_ActivityGoalWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_ActivityGoalWidgetAdd, "radioButton_ActivityGoalWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_ActivityGoalWidgetAdd, resources.GetString("radioButton_ActivityGoalWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_ActivityGoalWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_ActivityGoalWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_ActivityGoalWidgetAdd, ((int)(resources.GetObject("radioButton_ActivityGoalWidgetAdd.IconPadding"))));
+            this.radioButton_ActivityGoalWidgetAdd.Name = "radioButton_ActivityGoalWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_ActivityGoalWidgetAdd, resources.GetString("radioButton_ActivityGoalWidgetAdd.ToolTip"));
+            this.radioButton_ActivityGoalWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_ActivityGoalWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_StandUpWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_StandUpWidgetAdd, "radioButton_StandUpWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_StandUpWidgetAdd, resources.GetString("radioButton_StandUpWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_StandUpWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_StandUpWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_StandUpWidgetAdd, ((int)(resources.GetObject("radioButton_StandUpWidgetAdd.IconPadding"))));
+            this.radioButton_StandUpWidgetAdd.Name = "radioButton_StandUpWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_StandUpWidgetAdd, resources.GetString("radioButton_StandUpWidgetAdd.ToolTip"));
+            this.radioButton_StandUpWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_StandUpWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_DistanceWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_DistanceWidgetAdd, "radioButton_DistanceWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_DistanceWidgetAdd, resources.GetString("radioButton_DistanceWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_DistanceWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_DistanceWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_DistanceWidgetAdd, ((int)(resources.GetObject("radioButton_DistanceWidgetAdd.IconPadding"))));
+            this.radioButton_DistanceWidgetAdd.Name = "radioButton_DistanceWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_DistanceWidgetAdd, resources.GetString("radioButton_DistanceWidgetAdd.ToolTip"));
+            this.radioButton_DistanceWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_DistanceWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_PAIWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_PAIWidgetAdd, "radioButton_PAIWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_PAIWidgetAdd, resources.GetString("radioButton_PAIWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_PAIWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_PAIWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_PAIWidgetAdd, ((int)(resources.GetObject("radioButton_PAIWidgetAdd.IconPadding"))));
+            this.radioButton_PAIWidgetAdd.Name = "radioButton_PAIWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_PAIWidgetAdd, resources.GetString("radioButton_PAIWidgetAdd.ToolTip"));
+            this.radioButton_PAIWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_PAIWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_HeartRateWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_HeartRateWidgetAdd, "radioButton_HeartRateWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_HeartRateWidgetAdd, resources.GetString("radioButton_HeartRateWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_HeartRateWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_HeartRateWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_HeartRateWidgetAdd, ((int)(resources.GetObject("radioButton_HeartRateWidgetAdd.IconPadding"))));
+            this.radioButton_HeartRateWidgetAdd.Name = "radioButton_HeartRateWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_HeartRateWidgetAdd, resources.GetString("radioButton_HeartRateWidgetAdd.ToolTip"));
+            this.radioButton_HeartRateWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_HeartRateWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_CaloriesWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_CaloriesWidgetAdd, "radioButton_CaloriesWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_CaloriesWidgetAdd, resources.GetString("radioButton_CaloriesWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_CaloriesWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_CaloriesWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_CaloriesWidgetAdd, ((int)(resources.GetObject("radioButton_CaloriesWidgetAdd.IconPadding"))));
+            this.radioButton_CaloriesWidgetAdd.Name = "radioButton_CaloriesWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_CaloriesWidgetAdd, resources.GetString("radioButton_CaloriesWidgetAdd.ToolTip"));
+            this.radioButton_CaloriesWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_CaloriesWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.errorProvider1.SetError(this.label26, resources.GetString("label26.Error"));
+            this.errorProvider1.SetIconAlignment(this.label26, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label26.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label26, ((int)(resources.GetObject("label26.IconPadding"))));
+            this.label26.Name = "label26";
+            this.toolTip_Weather.SetToolTip(this.label26, resources.GetString("label26.ToolTip"));
+            // 
+            // radioButton_StepsWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_StepsWidgetAdd, "radioButton_StepsWidgetAdd");
+            this.radioButton_StepsWidgetAdd.Checked = true;
+            this.errorProvider1.SetError(this.radioButton_StepsWidgetAdd, resources.GetString("radioButton_StepsWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_StepsWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_StepsWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_StepsWidgetAdd, ((int)(resources.GetObject("radioButton_StepsWidgetAdd.IconPadding"))));
+            this.radioButton_StepsWidgetAdd.Name = "radioButton_StepsWidgetAdd";
+            this.radioButton_StepsWidgetAdd.TabStop = true;
+            this.toolTip_Weather.SetToolTip(this.radioButton_StepsWidgetAdd, resources.GetString("radioButton_StepsWidgetAdd.ToolTip"));
+            this.radioButton_StepsWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_StepsWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_DateWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_DateWidgetAdd, "radioButton_DateWidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_DateWidgetAdd, resources.GetString("radioButton_DateWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_DateWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_DateWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_DateWidgetAdd, ((int)(resources.GetObject("radioButton_DateWidgetAdd.IconPadding"))));
+            this.radioButton_DateWidgetAdd.Name = "radioButton_DateWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_DateWidgetAdd, resources.GetString("radioButton_DateWidgetAdd.ToolTip"));
+            this.radioButton_DateWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_DateWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // groupBox_WdgetAdd
+            // 
+            resources.ApplyResources(this.groupBox_WdgetAdd, "groupBox_WdgetAdd");
+            this.groupBox_WdgetAdd.Controls.Add(this.button_WidgetAdd);
+            this.groupBox_WdgetAdd.Controls.Add(this.radioButton_WidgetElementAdd);
+            this.groupBox_WdgetAdd.Controls.Add(this.radioButton_WidgetAdd);
+            this.errorProvider1.SetError(this.groupBox_WdgetAdd, resources.GetString("groupBox_WdgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WdgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WdgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WdgetAdd, ((int)(resources.GetObject("groupBox_WdgetAdd.IconPadding"))));
+            this.groupBox_WdgetAdd.Name = "groupBox_WdgetAdd";
+            this.groupBox_WdgetAdd.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WdgetAdd, resources.GetString("groupBox_WdgetAdd.ToolTip"));
+            this.groupBox_WdgetAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // button_WidgetAdd
+            // 
+            resources.ApplyResources(this.button_WidgetAdd, "button_WidgetAdd");
+            this.errorProvider1.SetError(this.button_WidgetAdd, resources.GetString("button_WidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_WidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_WidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_WidgetAdd, ((int)(resources.GetObject("button_WidgetAdd.IconPadding"))));
+            this.button_WidgetAdd.Name = "button_WidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.button_WidgetAdd, resources.GetString("button_WidgetAdd.ToolTip"));
+            this.button_WidgetAdd.UseVisualStyleBackColor = true;
+            this.button_WidgetAdd.Click += new System.EventHandler(this.button_WidgetAdd_Click);
+            // 
+            // radioButton_WidgetElementAdd
+            // 
+            resources.ApplyResources(this.radioButton_WidgetElementAdd, "radioButton_WidgetElementAdd");
+            this.radioButton_WidgetElementAdd.Checked = true;
+            this.errorProvider1.SetError(this.radioButton_WidgetElementAdd, resources.GetString("radioButton_WidgetElementAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_WidgetElementAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_WidgetElementAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_WidgetElementAdd, ((int)(resources.GetObject("radioButton_WidgetElementAdd.IconPadding"))));
+            this.radioButton_WidgetElementAdd.Name = "radioButton_WidgetElementAdd";
+            this.radioButton_WidgetElementAdd.TabStop = true;
+            this.toolTip_Weather.SetToolTip(this.radioButton_WidgetElementAdd, resources.GetString("radioButton_WidgetElementAdd.ToolTip"));
+            this.radioButton_WidgetElementAdd.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_WidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_WidgetAdd, "radioButton_WidgetAdd");
+            this.errorProvider1.SetError(this.radioButton_WidgetAdd, resources.GetString("radioButton_WidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.radioButton_WidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("radioButton_WidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.radioButton_WidgetAdd, ((int)(resources.GetObject("radioButton_WidgetAdd.IconPadding"))));
+            this.radioButton_WidgetAdd.Name = "radioButton_WidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.radioButton_WidgetAdd, resources.GetString("radioButton_WidgetAdd.ToolTip"));
+            this.radioButton_WidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_WidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAdd_CheckedChanged);
+            // 
+            // groupBox_WidgetElementAdd
+            // 
+            resources.ApplyResources(this.groupBox_WidgetElementAdd, "groupBox_WidgetElementAdd");
+            this.groupBox_WidgetElementAdd.Controls.Add(this.panel2);
+            this.errorProvider1.SetError(this.groupBox_WidgetElementAdd, resources.GetString("groupBox_WidgetElementAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WidgetElementAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WidgetElementAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WidgetElementAdd, ((int)(resources.GetObject("groupBox_WidgetElementAdd.IconPadding"))));
+            this.groupBox_WidgetElementAdd.Name = "groupBox_WidgetElementAdd";
+            this.groupBox_WidgetElementAdd.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WidgetElementAdd, resources.GetString("groupBox_WidgetElementAdd.ToolTip"));
+            this.groupBox_WidgetElementAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.tabControl_DateWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_iconWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_SystemFont_GroupSunriseWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_SystemFont_GroupWeatherWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_SystemFont_GroupWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_scaleLinearWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_scaleCircleWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_handWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_text_goalWidgetSunsetAdd);
+            this.panel2.Controls.Add(this.userControl_text_goalWidgetSunriseAdd);
+            this.panel2.Controls.Add(this.userControl_text_weatherWidgetMaxAdd);
+            this.panel2.Controls.Add(this.userControl_text_weatherWidgetMinAdd);
+            this.panel2.Controls.Add(this.userControl_text_weatherWidgetCurAdd);
+            this.panel2.Controls.Add(this.userControl_text_goalWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_textWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_pictures_weatherWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_picturesWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_previewWidgetAdd);
+            this.errorProvider1.SetError(this.panel2, resources.GetString("panel2.Error"));
+            this.errorProvider1.SetIconAlignment(this.panel2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("panel2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.panel2, ((int)(resources.GetObject("panel2.IconPadding"))));
+            this.panel2.Name = "panel2";
+            this.toolTip_Weather.SetToolTip(this.panel2, resources.GetString("panel2.ToolTip"));
+            // 
+            // tabControl_DateWidgetAdd
+            // 
+            resources.ApplyResources(this.tabControl_DateWidgetAdd, "tabControl_DateWidgetAdd");
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage1);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage2);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage3);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage4);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage5);
+            this.errorProvider1.SetError(this.tabControl_DateWidgetAdd, resources.GetString("tabControl_DateWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabControl_DateWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabControl_DateWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabControl_DateWidgetAdd, ((int)(resources.GetObject("tabControl_DateWidgetAdd.IconPadding"))));
+            this.tabControl_DateWidgetAdd.Name = "tabControl_DateWidgetAdd";
+            this.tabControl_DateWidgetAdd.SelectedIndex = 0;
+            this.toolTip_Weather.SetToolTip(this.tabControl_DateWidgetAdd, resources.GetString("tabControl_DateWidgetAdd.ToolTip"));
+            // 
+            // tabPage1
+            // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.userControl_SystemFont_Group_DayWidgetAdd);
+            this.tabPage1.Controls.Add(this.userControl_hand_DayWidgetAdd);
+            this.tabPage1.Controls.Add(this.userControl_text_date_DayWidgetAdd);
+            this.errorProvider1.SetError(this.tabPage1, resources.GetString("tabPage1.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage1, ((int)(resources.GetObject("tabPage1.IconPadding"))));
+            this.tabPage1.Name = "tabPage1";
+            this.toolTip_Weather.SetToolTip(this.tabPage1, resources.GetString("tabPage1.ToolTip"));
+            // 
+            // userControl_SystemFont_Group_DayWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_Group_DayWidgetAdd, "userControl_SystemFont_Group_DayWidgetAdd");
+            this.userControl_SystemFont_Group_DayWidgetAdd.AOD = false;
+            this.userControl_SystemFont_Group_DayWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_Group_DayWidgetAdd, resources.GetString("userControl_SystemFont_Group_DayWidgetAdd.Error"));
+            this.userControl_SystemFont_Group_DayWidgetAdd.Follow = true;
+            this.userControl_SystemFont_Group_DayWidgetAdd.FollowGoal = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_Group_DayWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_Group_DayWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_Group_DayWidgetAdd, ((int)(resources.GetObject("userControl_SystemFont_Group_DayWidgetAdd.IconPadding"))));
+            this.userControl_SystemFont_Group_DayWidgetAdd.Name = "userControl_SystemFont_Group_DayWidgetAdd";
+            this.userControl_SystemFont_Group_DayWidgetAdd.Padding_zero = true;
+            this.userControl_SystemFont_Group_DayWidgetAdd.Separator = true;
+            this.userControl_SystemFont_Group_DayWidgetAdd.ShowGoal = false;
+            this.userControl_SystemFont_Group_DayWidgetAdd.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_DayWidgetAdd, resources.GetString("userControl_SystemFont_Group_DayWidgetAdd.ToolTip"));
+            this.userControl_SystemFont_Group_DayWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_hand_DayWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_hand_DayWidgetAdd, "userControl_hand_DayWidgetAdd");
+            this.userControl_hand_DayWidgetAdd.AOD = false;
+            this.userControl_hand_DayWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_hand_DayWidgetAdd, resources.GetString("userControl_hand_DayWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_hand_DayWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_hand_DayWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_hand_DayWidgetAdd, ((int)(resources.GetObject("userControl_hand_DayWidgetAdd.IconPadding"))));
+            this.userControl_hand_DayWidgetAdd.Name = "userControl_hand_DayWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_hand_DayWidgetAdd, resources.GetString("userControl_hand_DayWidgetAdd.ToolTip"));
+            this.userControl_hand_DayWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_date_DayWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_text_date_DayWidgetAdd, "userControl_text_date_DayWidgetAdd");
+            this.userControl_text_date_DayWidgetAdd.AOD = false;
+            this.userControl_text_date_DayWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_date_DayWidgetAdd, resources.GetString("userControl_text_date_DayWidgetAdd.Error"));
+            this.userControl_text_date_DayWidgetAdd.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_date_DayWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_date_DayWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_date_DayWidgetAdd, ((int)(resources.GetObject("userControl_text_date_DayWidgetAdd.IconPadding"))));
+            this.userControl_text_date_DayWidgetAdd.ImageError = false;
+            this.userControl_text_date_DayWidgetAdd.Name = "userControl_text_date_DayWidgetAdd";
+            this.userControl_text_date_DayWidgetAdd.OptionalSymbol = false;
+            this.userControl_text_date_DayWidgetAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_date_DayWidgetAdd, resources.GetString("userControl_text_date_DayWidgetAdd.ToolTip"));
+            this.userControl_text_date_DayWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.userControl_SystemFont_Group_MonthWidgetAdd);
+            this.tabPage2.Controls.Add(this.userControl_hand_MonthWidgetAdd);
+            this.tabPage2.Controls.Add(this.userControl_text_date_MonthWidgetAdd);
+            this.tabPage2.Controls.Add(this.userControl_pictures_MonthWidgetAdd);
+            this.errorProvider1.SetError(this.tabPage2, resources.GetString("tabPage2.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage2, ((int)(resources.GetObject("tabPage2.IconPadding"))));
+            this.tabPage2.Name = "tabPage2";
+            this.toolTip_Weather.SetToolTip(this.tabPage2, resources.GetString("tabPage2.ToolTip"));
+            // 
+            // userControl_SystemFont_Group_MonthWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_Group_MonthWidgetAdd, "userControl_SystemFont_Group_MonthWidgetAdd");
+            this.userControl_SystemFont_Group_MonthWidgetAdd.AOD = false;
+            this.userControl_SystemFont_Group_MonthWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_Group_MonthWidgetAdd, resources.GetString("userControl_SystemFont_Group_MonthWidgetAdd.Error"));
+            this.userControl_SystemFont_Group_MonthWidgetAdd.Follow = true;
+            this.userControl_SystemFont_Group_MonthWidgetAdd.FollowGoal = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_Group_MonthWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_Group_MonthWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_Group_MonthWidgetAdd, ((int)(resources.GetObject("userControl_SystemFont_Group_MonthWidgetAdd.IconPadding"))));
+            this.userControl_SystemFont_Group_MonthWidgetAdd.Name = "userControl_SystemFont_Group_MonthWidgetAdd";
+            this.userControl_SystemFont_Group_MonthWidgetAdd.Padding_zero = true;
+            this.userControl_SystemFont_Group_MonthWidgetAdd.Separator = true;
+            this.userControl_SystemFont_Group_MonthWidgetAdd.ShowGoal = false;
+            this.userControl_SystemFont_Group_MonthWidgetAdd.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_MonthWidgetAdd, resources.GetString("userControl_SystemFont_Group_MonthWidgetAdd.ToolTip"));
+            this.userControl_SystemFont_Group_MonthWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_hand_MonthWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_hand_MonthWidgetAdd, "userControl_hand_MonthWidgetAdd");
+            this.userControl_hand_MonthWidgetAdd.AOD = false;
+            this.userControl_hand_MonthWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_hand_MonthWidgetAdd, resources.GetString("userControl_hand_MonthWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_hand_MonthWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_hand_MonthWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_hand_MonthWidgetAdd, ((int)(resources.GetObject("userControl_hand_MonthWidgetAdd.IconPadding"))));
+            this.userControl_hand_MonthWidgetAdd.Name = "userControl_hand_MonthWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_hand_MonthWidgetAdd, resources.GetString("userControl_hand_MonthWidgetAdd.ToolTip"));
+            this.userControl_hand_MonthWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_date_MonthWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_text_date_MonthWidgetAdd, "userControl_text_date_MonthWidgetAdd");
+            this.userControl_text_date_MonthWidgetAdd.AOD = false;
+            this.userControl_text_date_MonthWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_date_MonthWidgetAdd, resources.GetString("userControl_text_date_MonthWidgetAdd.Error"));
+            this.userControl_text_date_MonthWidgetAdd.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_date_MonthWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_date_MonthWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_date_MonthWidgetAdd, ((int)(resources.GetObject("userControl_text_date_MonthWidgetAdd.IconPadding"))));
+            this.userControl_text_date_MonthWidgetAdd.ImageError = false;
+            this.userControl_text_date_MonthWidgetAdd.Name = "userControl_text_date_MonthWidgetAdd";
+            this.userControl_text_date_MonthWidgetAdd.OptionalSymbol = false;
+            this.userControl_text_date_MonthWidgetAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_date_MonthWidgetAdd, resources.GetString("userControl_text_date_MonthWidgetAdd.ToolTip"));
+            this.userControl_text_date_MonthWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_pictures_MonthWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_pictures_MonthWidgetAdd, "userControl_pictures_MonthWidgetAdd");
+            this.userControl_pictures_MonthWidgetAdd.AOD = false;
+            this.userControl_pictures_MonthWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_pictures_MonthWidgetAdd, resources.GetString("userControl_pictures_MonthWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_pictures_MonthWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_pictures_MonthWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_pictures_MonthWidgetAdd, ((int)(resources.GetObject("userControl_pictures_MonthWidgetAdd.IconPadding"))));
+            this.userControl_pictures_MonthWidgetAdd.ImagesCount = 12;
+            this.userControl_pictures_MonthWidgetAdd.Name = "userControl_pictures_MonthWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_pictures_MonthWidgetAdd, resources.GetString("userControl_pictures_MonthWidgetAdd.ToolTip"));
+            this.userControl_pictures_MonthWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // tabPage3
+            // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.userControl_SystemFont_Group_YearWidgetAdd);
+            this.tabPage3.Controls.Add(this.userControl_text_date_YearWidgetAdd);
+            this.errorProvider1.SetError(this.tabPage3, resources.GetString("tabPage3.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage3.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage3, ((int)(resources.GetObject("tabPage3.IconPadding"))));
+            this.tabPage3.Name = "tabPage3";
+            this.toolTip_Weather.SetToolTip(this.tabPage3, resources.GetString("tabPage3.ToolTip"));
+            // 
+            // userControl_SystemFont_Group_YearWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_Group_YearWidgetAdd, "userControl_SystemFont_Group_YearWidgetAdd");
+            this.userControl_SystemFont_Group_YearWidgetAdd.AOD = false;
+            this.userControl_SystemFont_Group_YearWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_Group_YearWidgetAdd, resources.GetString("userControl_SystemFont_Group_YearWidgetAdd.Error"));
+            this.userControl_SystemFont_Group_YearWidgetAdd.Follow = true;
+            this.userControl_SystemFont_Group_YearWidgetAdd.FollowGoal = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_Group_YearWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_Group_YearWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_Group_YearWidgetAdd, ((int)(resources.GetObject("userControl_SystemFont_Group_YearWidgetAdd.IconPadding"))));
+            this.userControl_SystemFont_Group_YearWidgetAdd.Name = "userControl_SystemFont_Group_YearWidgetAdd";
+            this.userControl_SystemFont_Group_YearWidgetAdd.Padding_zero = true;
+            this.userControl_SystemFont_Group_YearWidgetAdd.Separator = true;
+            this.userControl_SystemFont_Group_YearWidgetAdd.ShowGoal = false;
+            this.userControl_SystemFont_Group_YearWidgetAdd.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_Group_YearWidgetAdd, resources.GetString("userControl_SystemFont_Group_YearWidgetAdd.ToolTip"));
+            this.userControl_SystemFont_Group_YearWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_date_YearWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_text_date_YearWidgetAdd, "userControl_text_date_YearWidgetAdd");
+            this.userControl_text_date_YearWidgetAdd.AOD = false;
+            this.userControl_text_date_YearWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_date_YearWidgetAdd, resources.GetString("userControl_text_date_YearWidgetAdd.Error"));
+            this.userControl_text_date_YearWidgetAdd.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_date_YearWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_date_YearWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_date_YearWidgetAdd, ((int)(resources.GetObject("userControl_text_date_YearWidgetAdd.IconPadding"))));
+            this.userControl_text_date_YearWidgetAdd.ImageError = false;
+            this.userControl_text_date_YearWidgetAdd.Name = "userControl_text_date_YearWidgetAdd";
+            this.userControl_text_date_YearWidgetAdd.OptionalSymbol = false;
+            this.userControl_text_date_YearWidgetAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_date_YearWidgetAdd, resources.GetString("userControl_text_date_YearWidgetAdd.ToolTip"));
+            this.userControl_text_date_YearWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // tabPage4
+            // 
+            resources.ApplyResources(this.tabPage4, "tabPage4");
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.userControl_hand_DOWWidgetAdd);
+            this.tabPage4.Controls.Add(this.userControl_pictures_DOWWidgetAdd);
+            this.errorProvider1.SetError(this.tabPage4, resources.GetString("tabPage4.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage4.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage4, ((int)(resources.GetObject("tabPage4.IconPadding"))));
+            this.tabPage4.Name = "tabPage4";
+            this.toolTip_Weather.SetToolTip(this.tabPage4, resources.GetString("tabPage4.ToolTip"));
+            // 
+            // userControl_hand_DOWWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_hand_DOWWidgetAdd, "userControl_hand_DOWWidgetAdd");
+            this.userControl_hand_DOWWidgetAdd.AOD = false;
+            this.userControl_hand_DOWWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_hand_DOWWidgetAdd, resources.GetString("userControl_hand_DOWWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_hand_DOWWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_hand_DOWWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_hand_DOWWidgetAdd, ((int)(resources.GetObject("userControl_hand_DOWWidgetAdd.IconPadding"))));
+            this.userControl_hand_DOWWidgetAdd.Name = "userControl_hand_DOWWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_hand_DOWWidgetAdd, resources.GetString("userControl_hand_DOWWidgetAdd.ToolTip"));
+            this.userControl_hand_DOWWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_pictures_DOWWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_pictures_DOWWidgetAdd, "userControl_pictures_DOWWidgetAdd");
+            this.userControl_pictures_DOWWidgetAdd.AOD = false;
+            this.userControl_pictures_DOWWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_pictures_DOWWidgetAdd, resources.GetString("userControl_pictures_DOWWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_pictures_DOWWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_pictures_DOWWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_pictures_DOWWidgetAdd, ((int)(resources.GetObject("userControl_pictures_DOWWidgetAdd.IconPadding"))));
+            this.userControl_pictures_DOWWidgetAdd.ImagesCount = 7;
+            this.userControl_pictures_DOWWidgetAdd.Name = "userControl_pictures_DOWWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_pictures_DOWWidgetAdd, resources.GetString("userControl_pictures_DOWWidgetAdd.ToolTip"));
+            this.userControl_pictures_DOWWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // tabPage5
+            // 
+            resources.ApplyResources(this.tabPage5, "tabPage5");
+            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.dataGridView_Widget_DateAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_EndAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_StartAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_UpAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_DownAdd);
+            this.errorProvider1.SetError(this.tabPage5, resources.GetString("tabPage5.Error"));
+            this.errorProvider1.SetIconAlignment(this.tabPage5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage5.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.tabPage5, ((int)(resources.GetObject("tabPage5.IconPadding"))));
+            this.tabPage5.Name = "tabPage5";
+            this.toolTip_Weather.SetToolTip(this.tabPage5, resources.GetString("tabPage5.ToolTip"));
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.errorProvider1.SetError(this.label13, resources.GetString("label13.Error"));
+            this.errorProvider1.SetIconAlignment(this.label13, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label13.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label13, ((int)(resources.GetObject("label13.IconPadding"))));
+            this.label13.Name = "label13";
+            this.toolTip_Weather.SetToolTip(this.label13, resources.GetString("label13.ToolTip"));
+            // 
+            // dataGridView_Widget_DateAdd
+            // 
+            resources.ApplyResources(this.dataGridView_Widget_DateAdd, "dataGridView_Widget_DateAdd");
+            this.dataGridView_Widget_DateAdd.AllowUserToAddRows = false;
+            this.dataGridView_Widget_DateAdd.AllowUserToDeleteRows = false;
+            this.dataGridView_Widget_DateAdd.AllowUserToResizeRows = false;
+            this.dataGridView_Widget_DateAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Widget_DateAdd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.errorProvider1.SetError(this.dataGridView_Widget_DateAdd, resources.GetString("dataGridView_Widget_DateAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.dataGridView_Widget_DateAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dataGridView_Widget_DateAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.dataGridView_Widget_DateAdd, ((int)(resources.GetObject("dataGridView_Widget_DateAdd.IconPadding"))));
+            this.dataGridView_Widget_DateAdd.MultiSelect = false;
+            this.dataGridView_Widget_DateAdd.Name = "dataGridView_Widget_DateAdd";
+            this.dataGridView_Widget_DateAdd.ReadOnly = true;
+            this.dataGridView_Widget_DateAdd.RowHeadersVisible = false;
+            this.dataGridView_Widget_DateAdd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.toolTip_Weather.SetToolTip(this.dataGridView_Widget_DateAdd, resources.GetString("dataGridView_Widget_DateAdd.ToolTip"));
+            this.dataGridView_Widget_DateAdd.SelectionChanged += new System.EventHandler(this.dataGridView_Widget_DateAdd_SelectionChanged);
+            this.dataGridView_Widget_DateAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_Widget_DateAdd_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn9.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // button_Widget_Date_EndAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_EndAdd, "button_Widget_Date_EndAdd");
+            this.errorProvider1.SetError(this.button_Widget_Date_EndAdd, resources.GetString("button_Widget_Date_EndAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_EndAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_EndAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_EndAdd, ((int)(resources.GetObject("button_Widget_Date_EndAdd.IconPadding"))));
+            this.button_Widget_Date_EndAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_Widget_Date_EndAdd.Name = "button_Widget_Date_EndAdd";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_EndAdd, resources.GetString("button_Widget_Date_EndAdd.ToolTip"));
+            this.button_Widget_Date_EndAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_EndAdd.Click += new System.EventHandler(this.button_Widget_Date_EndAdd_Click);
+            // 
+            // button_Widget_Date_StartAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_StartAdd, "button_Widget_Date_StartAdd");
+            this.errorProvider1.SetError(this.button_Widget_Date_StartAdd, resources.GetString("button_Widget_Date_StartAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_StartAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_StartAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_StartAdd, ((int)(resources.GetObject("button_Widget_Date_StartAdd.IconPadding"))));
+            this.button_Widget_Date_StartAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_Widget_Date_StartAdd.Name = "button_Widget_Date_StartAdd";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_StartAdd, resources.GetString("button_Widget_Date_StartAdd.ToolTip"));
+            this.button_Widget_Date_StartAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_StartAdd.Click += new System.EventHandler(this.button_Widget_Date_StartAdd_Click);
+            // 
+            // button_Widget_Date_UpAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_UpAdd, "button_Widget_Date_UpAdd");
+            this.errorProvider1.SetError(this.button_Widget_Date_UpAdd, resources.GetString("button_Widget_Date_UpAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_UpAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_UpAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_UpAdd, ((int)(resources.GetObject("button_Widget_Date_UpAdd.IconPadding"))));
+            this.button_Widget_Date_UpAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_Widget_Date_UpAdd.Name = "button_Widget_Date_UpAdd";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_UpAdd, resources.GetString("button_Widget_Date_UpAdd.ToolTip"));
+            this.button_Widget_Date_UpAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_UpAdd.Click += new System.EventHandler(this.button_Widget_Date_UpAdd_Click);
+            // 
+            // button_Widget_Date_DownAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_DownAdd, "button_Widget_Date_DownAdd");
+            this.errorProvider1.SetError(this.button_Widget_Date_DownAdd, resources.GetString("button_Widget_Date_DownAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.button_Widget_Date_DownAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button_Widget_Date_DownAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.button_Widget_Date_DownAdd, ((int)(resources.GetObject("button_Widget_Date_DownAdd.IconPadding"))));
+            this.button_Widget_Date_DownAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_Widget_Date_DownAdd.Name = "button_Widget_Date_DownAdd";
+            this.toolTip_Weather.SetToolTip(this.button_Widget_Date_DownAdd, resources.GetString("button_Widget_Date_DownAdd.ToolTip"));
+            this.button_Widget_Date_DownAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_DownAdd.Click += new System.EventHandler(this.button_Widget_Date_DownAdd_Click);
+            // 
+            // userControl_iconWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_iconWidgetAdd, "userControl_iconWidgetAdd");
+            this.userControl_iconWidgetAdd.AOD = false;
+            this.userControl_iconWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_iconWidgetAdd, resources.GetString("userControl_iconWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_iconWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_iconWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_iconWidgetAdd, ((int)(resources.GetObject("userControl_iconWidgetAdd.IconPadding"))));
+            this.userControl_iconWidgetAdd.Image2 = false;
+            this.userControl_iconWidgetAdd.Name = "userControl_iconWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_iconWidgetAdd, resources.GetString("userControl_iconWidgetAdd.ToolTip"));
+            this.userControl_iconWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_icon.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_SystemFont_GroupSunriseWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_GroupSunriseWidgetAdd, "userControl_SystemFont_GroupSunriseWidgetAdd");
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.AOD = false;
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_GroupSunriseWidgetAdd, resources.GetString("userControl_SystemFont_GroupSunriseWidgetAdd.Error"));
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.Follow = false;
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.FollowMax = true;
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.FollowMin = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_GroupSunriseWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_GroupSunriseWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_GroupSunriseWidgetAdd, ((int)(resources.GetObject("userControl_SystemFont_GroupSunriseWidgetAdd.IconPadding"))));
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.Name = "userControl_SystemFont_GroupSunriseWidgetAdd";
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.Padding_zero = true;
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.Separator = true;
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.ShowMax = true;
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.ShowMin = true;
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.ShowUnit = false;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_GroupSunriseWidgetAdd, resources.GetString("userControl_SystemFont_GroupSunriseWidgetAdd.ToolTip"));
+            this.userControl_SystemFont_GroupSunriseWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_SystemFont_GroupWeatherWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_GroupWeatherWidgetAdd, "userControl_SystemFont_GroupWeatherWidgetAdd");
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.AOD = false;
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_GroupWeatherWidgetAdd, resources.GetString("userControl_SystemFont_GroupWeatherWidgetAdd.Error"));
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.Follow = false;
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.FollowMax = true;
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.FollowMin = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_GroupWeatherWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_GroupWeatherWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_GroupWeatherWidgetAdd, ((int)(resources.GetObject("userControl_SystemFont_GroupWeatherWidgetAdd.IconPadding"))));
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.Name = "userControl_SystemFont_GroupWeatherWidgetAdd";
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.Padding_zero = true;
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.Separator = true;
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.ShowMax = true;
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.ShowMin = true;
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.ShowUnit = false;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_GroupWeatherWidgetAdd, resources.GetString("userControl_SystemFont_GroupWeatherWidgetAdd.ToolTip"));
+            this.userControl_SystemFont_GroupWeatherWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_SystemFont_GroupWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_SystemFont_GroupWidgetAdd, "userControl_SystemFont_GroupWidgetAdd");
+            this.userControl_SystemFont_GroupWidgetAdd.AOD = false;
+            this.userControl_SystemFont_GroupWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_SystemFont_GroupWidgetAdd, resources.GetString("userControl_SystemFont_GroupWidgetAdd.Error"));
+            this.userControl_SystemFont_GroupWidgetAdd.Follow = false;
+            this.userControl_SystemFont_GroupWidgetAdd.FollowGoal = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_SystemFont_GroupWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_SystemFont_GroupWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_SystemFont_GroupWidgetAdd, ((int)(resources.GetObject("userControl_SystemFont_GroupWidgetAdd.IconPadding"))));
+            this.userControl_SystemFont_GroupWidgetAdd.Name = "userControl_SystemFont_GroupWidgetAdd";
+            this.userControl_SystemFont_GroupWidgetAdd.Padding_zero = true;
+            this.userControl_SystemFont_GroupWidgetAdd.Separator = true;
+            this.userControl_SystemFont_GroupWidgetAdd.ShowGoal = true;
+            this.userControl_SystemFont_GroupWidgetAdd.ShowUnit = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_SystemFont_GroupWidgetAdd, resources.GetString("userControl_SystemFont_GroupWidgetAdd.ToolTip"));
+            this.userControl_SystemFont_GroupWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_SystemFont_Group.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_scaleLinearWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_scaleLinearWidgetAdd, "userControl_scaleLinearWidgetAdd");
+            this.userControl_scaleLinearWidgetAdd.AOD = false;
+            this.userControl_scaleLinearWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_scaleLinearWidgetAdd, resources.GetString("userControl_scaleLinearWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_scaleLinearWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_scaleLinearWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_scaleLinearWidgetAdd, ((int)(resources.GetObject("userControl_scaleLinearWidgetAdd.IconPadding"))));
+            this.userControl_scaleLinearWidgetAdd.Name = "userControl_scaleLinearWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_scaleLinearWidgetAdd, resources.GetString("userControl_scaleLinearWidgetAdd.ToolTip"));
+            this.userControl_scaleLinearWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleLinear.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_scaleCircleWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_scaleCircleWidgetAdd, "userControl_scaleCircleWidgetAdd");
+            this.userControl_scaleCircleWidgetAdd.AOD = false;
+            this.userControl_scaleCircleWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_scaleCircleWidgetAdd, resources.GetString("userControl_scaleCircleWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_scaleCircleWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_scaleCircleWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_scaleCircleWidgetAdd, ((int)(resources.GetObject("userControl_scaleCircleWidgetAdd.IconPadding"))));
+            this.userControl_scaleCircleWidgetAdd.Name = "userControl_scaleCircleWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_scaleCircleWidgetAdd, resources.GetString("userControl_scaleCircleWidgetAdd.ToolTip"));
+            this.userControl_scaleCircleWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_scaleCircle.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_handWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_handWidgetAdd, "userControl_handWidgetAdd");
+            this.userControl_handWidgetAdd.AOD = false;
+            this.userControl_handWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_handWidgetAdd, resources.GetString("userControl_handWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_handWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_handWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_handWidgetAdd, ((int)(resources.GetObject("userControl_handWidgetAdd.IconPadding"))));
+            this.userControl_handWidgetAdd.Name = "userControl_handWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_handWidgetAdd, resources.GetString("userControl_handWidgetAdd.ToolTip"));
+            this.userControl_handWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_hand.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_goalWidgetSunsetAdd
+            // 
+            resources.ApplyResources(this.userControl_text_goalWidgetSunsetAdd, "userControl_text_goalWidgetSunsetAdd");
+            this.userControl_text_goalWidgetSunsetAdd.AOD = false;
+            this.userControl_text_goalWidgetSunsetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_goalWidgetSunsetAdd, resources.GetString("userControl_text_goalWidgetSunsetAdd.Error"));
+            this.userControl_text_goalWidgetSunsetAdd.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_goalWidgetSunsetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_goalWidgetSunsetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_goalWidgetSunsetAdd, ((int)(resources.GetObject("userControl_text_goalWidgetSunsetAdd.IconPadding"))));
+            this.userControl_text_goalWidgetSunsetAdd.ImageError = true;
+            this.userControl_text_goalWidgetSunsetAdd.Name = "userControl_text_goalWidgetSunsetAdd";
+            this.userControl_text_goalWidgetSunsetAdd.OptionalSymbol = true;
+            this.userControl_text_goalWidgetSunsetAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_goalWidgetSunsetAdd, resources.GetString("userControl_text_goalWidgetSunsetAdd.ToolTip"));
+            this.userControl_text_goalWidgetSunsetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_goalWidgetSunriseAdd
+            // 
+            resources.ApplyResources(this.userControl_text_goalWidgetSunriseAdd, "userControl_text_goalWidgetSunriseAdd");
+            this.userControl_text_goalWidgetSunriseAdd.AOD = false;
+            this.userControl_text_goalWidgetSunriseAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_goalWidgetSunriseAdd, resources.GetString("userControl_text_goalWidgetSunriseAdd.Error"));
+            this.userControl_text_goalWidgetSunriseAdd.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_goalWidgetSunriseAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_goalWidgetSunriseAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_goalWidgetSunriseAdd, ((int)(resources.GetObject("userControl_text_goalWidgetSunriseAdd.IconPadding"))));
+            this.userControl_text_goalWidgetSunriseAdd.ImageError = true;
+            this.userControl_text_goalWidgetSunriseAdd.Name = "userControl_text_goalWidgetSunriseAdd";
+            this.userControl_text_goalWidgetSunriseAdd.OptionalSymbol = true;
+            this.userControl_text_goalWidgetSunriseAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_goalWidgetSunriseAdd, resources.GetString("userControl_text_goalWidgetSunriseAdd.ToolTip"));
+            this.userControl_text_goalWidgetSunriseAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_weatherWidgetMaxAdd
+            // 
+            resources.ApplyResources(this.userControl_text_weatherWidgetMaxAdd, "userControl_text_weatherWidgetMaxAdd");
+            this.userControl_text_weatherWidgetMaxAdd.AOD = false;
+            this.userControl_text_weatherWidgetMaxAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_weatherWidgetMaxAdd, resources.GetString("userControl_text_weatherWidgetMaxAdd.Error"));
+            this.userControl_text_weatherWidgetMaxAdd.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_weatherWidgetMaxAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_weatherWidgetMaxAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_weatherWidgetMaxAdd, ((int)(resources.GetObject("userControl_text_weatherWidgetMaxAdd.IconPadding"))));
+            this.userControl_text_weatherWidgetMaxAdd.ImageError = true;
+            this.userControl_text_weatherWidgetMaxAdd.Name = "userControl_text_weatherWidgetMaxAdd";
+            this.userControl_text_weatherWidgetMaxAdd.OptionalSymbol = true;
+            this.userControl_text_weatherWidgetMaxAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_weatherWidgetMaxAdd, resources.GetString("userControl_text_weatherWidgetMaxAdd.ToolTip"));
+            this.userControl_text_weatherWidgetMaxAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_weatherWidgetMinAdd
+            // 
+            resources.ApplyResources(this.userControl_text_weatherWidgetMinAdd, "userControl_text_weatherWidgetMinAdd");
+            this.userControl_text_weatherWidgetMinAdd.AOD = false;
+            this.userControl_text_weatherWidgetMinAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_weatherWidgetMinAdd, resources.GetString("userControl_text_weatherWidgetMinAdd.Error"));
+            this.userControl_text_weatherWidgetMinAdd.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_weatherWidgetMinAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_weatherWidgetMinAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_weatherWidgetMinAdd, ((int)(resources.GetObject("userControl_text_weatherWidgetMinAdd.IconPadding"))));
+            this.userControl_text_weatherWidgetMinAdd.ImageError = true;
+            this.userControl_text_weatherWidgetMinAdd.Name = "userControl_text_weatherWidgetMinAdd";
+            this.userControl_text_weatherWidgetMinAdd.OptionalSymbol = true;
+            this.userControl_text_weatherWidgetMinAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_weatherWidgetMinAdd, resources.GetString("userControl_text_weatherWidgetMinAdd.ToolTip"));
+            this.userControl_text_weatherWidgetMinAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_weatherWidgetCurAdd
+            // 
+            resources.ApplyResources(this.userControl_text_weatherWidgetCurAdd, "userControl_text_weatherWidgetCurAdd");
+            this.userControl_text_weatherWidgetCurAdd.AOD = false;
+            this.userControl_text_weatherWidgetCurAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_weatherWidgetCurAdd, resources.GetString("userControl_text_weatherWidgetCurAdd.Error"));
+            this.userControl_text_weatherWidgetCurAdd.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_weatherWidgetCurAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_weatherWidgetCurAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_weatherWidgetCurAdd, ((int)(resources.GetObject("userControl_text_weatherWidgetCurAdd.IconPadding"))));
+            this.userControl_text_weatherWidgetCurAdd.ImageError = true;
+            this.userControl_text_weatherWidgetCurAdd.Name = "userControl_text_weatherWidgetCurAdd";
+            this.userControl_text_weatherWidgetCurAdd.OptionalSymbol = true;
+            this.userControl_text_weatherWidgetCurAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_weatherWidgetCurAdd, resources.GetString("userControl_text_weatherWidgetCurAdd.ToolTip"));
+            this.userControl_text_weatherWidgetCurAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_text_goalWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_text_goalWidgetAdd, "userControl_text_goalWidgetAdd");
+            this.userControl_text_goalWidgetAdd.AOD = false;
+            this.userControl_text_goalWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_text_goalWidgetAdd, resources.GetString("userControl_text_goalWidgetAdd.Error"));
+            this.userControl_text_goalWidgetAdd.Follow = true;
+            this.errorProvider1.SetIconAlignment(this.userControl_text_goalWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_text_goalWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_text_goalWidgetAdd, ((int)(resources.GetObject("userControl_text_goalWidgetAdd.IconPadding"))));
+            this.userControl_text_goalWidgetAdd.ImageError = true;
+            this.userControl_text_goalWidgetAdd.Name = "userControl_text_goalWidgetAdd";
+            this.userControl_text_goalWidgetAdd.OptionalSymbol = false;
+            this.userControl_text_goalWidgetAdd.Padding_zero = false;
+            this.toolTip_Weather.SetToolTip(this.userControl_text_goalWidgetAdd, resources.GetString("userControl_text_goalWidgetAdd.ToolTip"));
+            this.userControl_text_goalWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_textWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_textWidgetAdd, "userControl_textWidgetAdd");
+            this.userControl_textWidgetAdd.AOD = false;
+            this.userControl_textWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_textWidgetAdd, resources.GetString("userControl_textWidgetAdd.Error"));
+            this.userControl_textWidgetAdd.Follow = false;
+            this.errorProvider1.SetIconAlignment(this.userControl_textWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_textWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_textWidgetAdd, ((int)(resources.GetObject("userControl_textWidgetAdd.IconPadding"))));
+            this.userControl_textWidgetAdd.ImageError = true;
+            this.userControl_textWidgetAdd.Name = "userControl_textWidgetAdd";
+            this.userControl_textWidgetAdd.OptionalSymbol = false;
+            this.userControl_textWidgetAdd.Padding_zero = true;
+            this.toolTip_Weather.SetToolTip(this.userControl_textWidgetAdd, resources.GetString("userControl_textWidgetAdd.ToolTip"));
+            this.userControl_textWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_pictures_weatherWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_pictures_weatherWidgetAdd, "userControl_pictures_weatherWidgetAdd");
+            this.userControl_pictures_weatherWidgetAdd.AOD = false;
+            this.userControl_pictures_weatherWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_pictures_weatherWidgetAdd, resources.GetString("userControl_pictures_weatherWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_pictures_weatherWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_pictures_weatherWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_pictures_weatherWidgetAdd, ((int)(resources.GetObject("userControl_pictures_weatherWidgetAdd.IconPadding"))));
+            this.userControl_pictures_weatherWidgetAdd.ImagesCount = 29;
+            this.userControl_pictures_weatherWidgetAdd.Name = "userControl_pictures_weatherWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_pictures_weatherWidgetAdd, resources.GetString("userControl_pictures_weatherWidgetAdd.ToolTip"));
+            this.userControl_pictures_weatherWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_picturesWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_picturesWidgetAdd, "userControl_picturesWidgetAdd");
+            this.userControl_picturesWidgetAdd.AOD = false;
+            this.userControl_picturesWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_picturesWidgetAdd, resources.GetString("userControl_picturesWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_picturesWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_picturesWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_picturesWidgetAdd, ((int)(resources.GetObject("userControl_picturesWidgetAdd.IconPadding"))));
+            this.userControl_picturesWidgetAdd.ImagesCount = 10;
+            this.userControl_picturesWidgetAdd.Name = "userControl_picturesWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_picturesWidgetAdd, resources.GetString("userControl_picturesWidgetAdd.ToolTip"));
+            this.userControl_picturesWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // userControl_previewWidgetAdd
+            // 
+            resources.ApplyResources(this.userControl_previewWidgetAdd, "userControl_previewWidgetAdd");
+            this.userControl_previewWidgetAdd.Collapsed = true;
+            this.errorProvider1.SetError(this.userControl_previewWidgetAdd, resources.GetString("userControl_previewWidgetAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.userControl_previewWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_previewWidgetAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.userControl_previewWidgetAdd, ((int)(resources.GetObject("userControl_previewWidgetAdd.IconPadding"))));
+            this.userControl_previewWidgetAdd.Name = "userControl_previewWidgetAdd";
+            this.toolTip_Weather.SetToolTip(this.userControl_previewWidgetAdd, resources.GetString("userControl_previewWidgetAdd.ToolTip"));
+            this.userControl_previewWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_preview.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // groupBox_WidgetNumberAdd
+            // 
+            resources.ApplyResources(this.groupBox_WidgetNumberAdd, "groupBox_WidgetNumberAdd");
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label14);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionLenghtAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetBorderInactivAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label15);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetBorderActivAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label16);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetDescriptionBackgroundAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundXAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundYAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label17);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label18);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label19);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label20);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label21);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label22);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetWidthAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetHeightAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetXAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetYAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label23);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label24);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label25);
+            this.errorProvider1.SetError(this.groupBox_WidgetNumberAdd, resources.GetString("groupBox_WidgetNumberAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox_WidgetNumberAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox_WidgetNumberAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox_WidgetNumberAdd, ((int)(resources.GetObject("groupBox_WidgetNumberAdd.IconPadding"))));
+            this.groupBox_WidgetNumberAdd.Name = "groupBox_WidgetNumberAdd";
+            this.groupBox_WidgetNumberAdd.TabStop = false;
+            this.toolTip_Weather.SetToolTip(this.groupBox_WidgetNumberAdd, resources.GetString("groupBox_WidgetNumberAdd.ToolTip"));
+            this.groupBox_WidgetNumberAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.errorProvider1.SetError(this.label14, resources.GetString("label14.Error"));
+            this.errorProvider1.SetIconAlignment(this.label14, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label14.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label14, ((int)(resources.GetObject("label14.IconPadding"))));
+            this.label14.Name = "label14";
+            this.toolTip_Weather.SetToolTip(this.label14, resources.GetString("label14.ToolTip"));
+            // 
+            // numericUpDown_WidgetDescriptionLenghtAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionLenghtAdd, "numericUpDown_WidgetDescriptionLenghtAdd");
+            this.numericUpDown_WidgetDescriptionLenghtAdd.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetDescriptionLenghtAdd, resources.GetString("numericUpDown_WidgetDescriptionLenghtAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetDescriptionLenghtAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetDescriptionLenghtAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetDescriptionLenghtAdd, ((int)(resources.GetObject("numericUpDown_WidgetDescriptionLenghtAdd.IconPadding"))));
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Name = "numericUpDown_WidgetDescriptionLenghtAdd";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetDescriptionLenghtAdd, resources.GetString("numericUpDown_WidgetDescriptionLenghtAdd.ToolTip"));
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenghtAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            // 
+            // comboBox_WidgetBorderInactivAdd
+            // 
+            resources.ApplyResources(this.comboBox_WidgetBorderInactivAdd, "comboBox_WidgetBorderInactivAdd");
+            this.comboBox_WidgetBorderInactivAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderInactivAdd.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetBorderInactivAdd, resources.GetString("comboBox_WidgetBorderInactivAdd.Error"));
+            this.comboBox_WidgetBorderInactivAdd.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetBorderInactivAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetBorderInactivAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetBorderInactivAdd, ((int)(resources.GetObject("comboBox_WidgetBorderInactivAdd.IconPadding"))));
+            this.comboBox_WidgetBorderInactivAdd.Name = "comboBox_WidgetBorderInactivAdd";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetBorderInactivAdd, resources.GetString("comboBox_WidgetBorderInactivAdd.ToolTip"));
+            this.comboBox_WidgetBorderInactivAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderInactivAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderInactivAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.comboBox_WidgetBorderInactivAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderInactivAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.errorProvider1.SetError(this.label15, resources.GetString("label15.Error"));
+            this.errorProvider1.SetIconAlignment(this.label15, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label15.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label15, ((int)(resources.GetObject("label15.IconPadding"))));
+            this.label15.Name = "label15";
+            this.toolTip_Weather.SetToolTip(this.label15, resources.GetString("label15.ToolTip"));
+            // 
+            // comboBox_WidgetBorderActivAdd
+            // 
+            resources.ApplyResources(this.comboBox_WidgetBorderActivAdd, "comboBox_WidgetBorderActivAdd");
+            this.comboBox_WidgetBorderActivAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderActivAdd.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetBorderActivAdd, resources.GetString("comboBox_WidgetBorderActivAdd.Error"));
+            this.comboBox_WidgetBorderActivAdd.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetBorderActivAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetBorderActivAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetBorderActivAdd, ((int)(resources.GetObject("comboBox_WidgetBorderActivAdd.IconPadding"))));
+            this.comboBox_WidgetBorderActivAdd.Name = "comboBox_WidgetBorderActivAdd";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetBorderActivAdd, resources.GetString("comboBox_WidgetBorderActivAdd.ToolTip"));
+            this.comboBox_WidgetBorderActivAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderActivAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderActivAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.comboBox_WidgetBorderActivAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderActivAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.errorProvider1.SetError(this.label16, resources.GetString("label16.Error"));
+            this.errorProvider1.SetIconAlignment(this.label16, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label16.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label16, ((int)(resources.GetObject("label16.IconPadding"))));
+            this.label16.Name = "label16";
+            this.toolTip_Weather.SetToolTip(this.label16, resources.GetString("label16.ToolTip"));
+            // 
+            // comboBox_WidgetDescriptionBackgroundAdd
+            // 
+            resources.ApplyResources(this.comboBox_WidgetDescriptionBackgroundAdd, "comboBox_WidgetDescriptionBackgroundAdd");
+            this.comboBox_WidgetDescriptionBackgroundAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetDescriptionBackgroundAdd.DropDownWidth = 75;
+            this.errorProvider1.SetError(this.comboBox_WidgetDescriptionBackgroundAdd, resources.GetString("comboBox_WidgetDescriptionBackgroundAdd.Error"));
+            this.comboBox_WidgetDescriptionBackgroundAdd.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.comboBox_WidgetDescriptionBackgroundAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox_WidgetDescriptionBackgroundAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.comboBox_WidgetDescriptionBackgroundAdd, ((int)(resources.GetObject("comboBox_WidgetDescriptionBackgroundAdd.IconPadding"))));
+            this.comboBox_WidgetDescriptionBackgroundAdd.Name = "comboBox_WidgetDescriptionBackgroundAdd";
+            this.toolTip_Weather.SetToolTip(this.comboBox_WidgetDescriptionBackgroundAdd, resources.GetString("comboBox_WidgetDescriptionBackgroundAdd.ToolTip"));
+            this.comboBox_WidgetDescriptionBackgroundAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetDescriptionBackgroundAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetDescriptionBackgroundAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.comboBox_WidgetDescriptionBackgroundAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetDescriptionBackgroundAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundXAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundXAdd, "numericUpDown_WidgetDescriptionBackgroundXAdd");
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.ContextMenuStrip = this.contextMenuStrip_X;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetDescriptionBackgroundXAdd, resources.GetString("numericUpDown_WidgetDescriptionBackgroundXAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetDescriptionBackgroundXAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundXAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetDescriptionBackgroundXAdd, ((int)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundXAdd.IconPadding"))));
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Name = "numericUpDown_WidgetDescriptionBackgroundXAdd";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetDescriptionBackgroundXAdd, resources.GetString("numericUpDown_WidgetDescriptionBackgroundXAdd.ToolTip"));
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundYAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundYAdd, "numericUpDown_WidgetDescriptionBackgroundYAdd");
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetDescriptionBackgroundYAdd, resources.GetString("numericUpDown_WidgetDescriptionBackgroundYAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetDescriptionBackgroundYAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundYAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetDescriptionBackgroundYAdd, ((int)(resources.GetObject("numericUpDown_WidgetDescriptionBackgroundYAdd.IconPadding"))));
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Name = "numericUpDown_WidgetDescriptionBackgroundYAdd";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetDescriptionBackgroundYAdd, resources.GetString("numericUpDown_WidgetDescriptionBackgroundYAdd.ToolTip"));
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.errorProvider1.SetError(this.label17, resources.GetString("label17.Error"));
+            this.errorProvider1.SetIconAlignment(this.label17, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label17.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label17, ((int)(resources.GetObject("label17.IconPadding"))));
+            this.label17.Name = "label17";
+            this.toolTip_Weather.SetToolTip(this.label17, resources.GetString("label17.ToolTip"));
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.errorProvider1.SetError(this.label18, resources.GetString("label18.Error"));
+            this.errorProvider1.SetIconAlignment(this.label18, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label18.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label18, ((int)(resources.GetObject("label18.IconPadding"))));
+            this.label18.Name = "label18";
+            this.toolTip_Weather.SetToolTip(this.label18, resources.GetString("label18.ToolTip"));
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.errorProvider1.SetError(this.label19, resources.GetString("label19.Error"));
+            this.errorProvider1.SetIconAlignment(this.label19, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label19.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label19, ((int)(resources.GetObject("label19.IconPadding"))));
+            this.label19.Name = "label19";
+            this.toolTip_Weather.SetToolTip(this.label19, resources.GetString("label19.ToolTip"));
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.errorProvider1.SetError(this.label20, resources.GetString("label20.Error"));
+            this.errorProvider1.SetIconAlignment(this.label20, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label20.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label20, ((int)(resources.GetObject("label20.IconPadding"))));
+            this.label20.Name = "label20";
+            this.toolTip_Weather.SetToolTip(this.label20, resources.GetString("label20.ToolTip"));
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.errorProvider1.SetError(this.label21, resources.GetString("label21.Error"));
+            this.errorProvider1.SetIconAlignment(this.label21, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label21.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label21, ((int)(resources.GetObject("label21.IconPadding"))));
+            this.label21.Name = "label21";
+            this.toolTip_Weather.SetToolTip(this.label21, resources.GetString("label21.ToolTip"));
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.errorProvider1.SetError(this.label22, resources.GetString("label22.Error"));
+            this.errorProvider1.SetIconAlignment(this.label22, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label22.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label22, ((int)(resources.GetObject("label22.IconPadding"))));
+            this.label22.Name = "label22";
+            this.toolTip_Weather.SetToolTip(this.label22, resources.GetString("label22.ToolTip"));
+            // 
+            // numericUpDown_WidgetWidthAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetWidthAdd, "numericUpDown_WidgetWidthAdd");
+            this.errorProvider1.SetError(this.numericUpDown_WidgetWidthAdd, resources.GetString("numericUpDown_WidgetWidthAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetWidthAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetWidthAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetWidthAdd, ((int)(resources.GetObject("numericUpDown_WidgetWidthAdd.IconPadding"))));
+            this.numericUpDown_WidgetWidthAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetWidthAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetWidthAdd.Name = "numericUpDown_WidgetWidthAdd";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetWidthAdd, resources.GetString("numericUpDown_WidgetWidthAdd.ToolTip"));
+            this.numericUpDown_WidgetWidthAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            // 
+            // numericUpDown_WidgetHeightAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetHeightAdd, "numericUpDown_WidgetHeightAdd");
+            this.errorProvider1.SetError(this.numericUpDown_WidgetHeightAdd, resources.GetString("numericUpDown_WidgetHeightAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetHeightAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetHeightAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetHeightAdd, ((int)(resources.GetObject("numericUpDown_WidgetHeightAdd.IconPadding"))));
+            this.numericUpDown_WidgetHeightAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetHeightAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetHeightAdd.Name = "numericUpDown_WidgetHeightAdd";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetHeightAdd, resources.GetString("numericUpDown_WidgetHeightAdd.ToolTip"));
+            this.numericUpDown_WidgetHeightAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            // 
+            // numericUpDown_WidgetXAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetXAdd, "numericUpDown_WidgetXAdd");
+            this.numericUpDown_WidgetXAdd.ContextMenuStrip = this.contextMenuStrip_X;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetXAdd, resources.GetString("numericUpDown_WidgetXAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetXAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetXAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetXAdd, ((int)(resources.GetObject("numericUpDown_WidgetXAdd.IconPadding"))));
+            this.numericUpDown_WidgetXAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetXAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetXAdd.Name = "numericUpDown_WidgetXAdd";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetXAdd, resources.GetString("numericUpDown_WidgetXAdd.ToolTip"));
+            this.numericUpDown_WidgetXAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetXAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_WidgetYAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetYAdd, "numericUpDown_WidgetYAdd");
+            this.numericUpDown_WidgetYAdd.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.errorProvider1.SetError(this.numericUpDown_WidgetYAdd, resources.GetString("numericUpDown_WidgetYAdd.Error"));
+            this.errorProvider1.SetIconAlignment(this.numericUpDown_WidgetYAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numericUpDown_WidgetYAdd.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.numericUpDown_WidgetYAdd, ((int)(resources.GetObject("numericUpDown_WidgetYAdd.IconPadding"))));
+            this.numericUpDown_WidgetYAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetYAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetYAdd.Name = "numericUpDown_WidgetYAdd";
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_WidgetYAdd, resources.GetString("numericUpDown_WidgetYAdd.ToolTip"));
+            this.numericUpDown_WidgetYAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetYAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.errorProvider1.SetError(this.label23, resources.GetString("label23.Error"));
+            this.errorProvider1.SetIconAlignment(this.label23, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label23.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label23, ((int)(resources.GetObject("label23.IconPadding"))));
+            this.label23.Name = "label23";
+            this.toolTip_Weather.SetToolTip(this.label23, resources.GetString("label23.ToolTip"));
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.errorProvider1.SetError(this.label24, resources.GetString("label24.Error"));
+            this.errorProvider1.SetIconAlignment(this.label24, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label24.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label24, ((int)(resources.GetObject("label24.IconPadding"))));
+            this.label24.Name = "label24";
+            this.toolTip_Weather.SetToolTip(this.label24, resources.GetString("label24.ToolTip"));
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.errorProvider1.SetError(this.label25, resources.GetString("label25.Error"));
+            this.errorProvider1.SetIconAlignment(this.label25, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label25.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label25, ((int)(resources.GetObject("label25.IconPadding"))));
+            this.label25.Name = "label25";
+            this.toolTip_Weather.SetToolTip(this.label25, resources.GetString("label25.ToolTip"));
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "Programming-Edit-Property-icon.png");
+            this.imageList2.Images.SetKeyName(1, "Data-Add-Column-icon.png");
+            this.imageList2.Images.SetKeyName(2, "Data-Add-Row-icon.png");
+            this.imageList2.Images.SetKeyName(3, "Files-Add-List-icon.png");
+            this.imageList2.Images.SetKeyName(4, "Add-icon.png");
             // 
             // tabPageConverting
             // 
@@ -19291,6 +22145,20 @@
             this.pictureBox_Preview.MouseLeave += new System.EventHandler(this.pictureBox_Preview_MouseLeave);
             this.pictureBox_Preview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_Preview_MouseMove);
             // 
+            // checkBox_WidgetsArea
+            // 
+            resources.ApplyResources(this.checkBox_WidgetsArea, "checkBox_WidgetsArea");
+            this.checkBox_WidgetsArea.Checked = true;
+            this.checkBox_WidgetsArea.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.errorProvider1.SetError(this.checkBox_WidgetsArea, resources.GetString("checkBox_WidgetsArea.Error"));
+            this.errorProvider1.SetIconAlignment(this.checkBox_WidgetsArea, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("checkBox_WidgetsArea.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.checkBox_WidgetsArea, ((int)(resources.GetObject("checkBox_WidgetsArea.IconPadding"))));
+            this.checkBox_WidgetsArea.Name = "checkBox_WidgetsArea";
+            this.toolTip_Weather.SetToolTip(this.checkBox_WidgetsArea, resources.GetString("checkBox_WidgetsArea.ToolTip"));
+            this.checkBox_WidgetsArea.UseVisualStyleBackColor = true;
+            this.checkBox_WidgetsArea.CheckedChanged += new System.EventHandler(this.checkBox_WidgetsArea_CheckedChanged);
+            this.checkBox_WidgetsArea.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -19300,6 +22168,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.checkBox_WidgetsArea);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.radioButton_TRex_pro);
             this.Controls.Add(this.radioButton_GTR2e);
@@ -19721,6 +22590,62 @@
             this.groupBox_SNL_Date.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Date)).EndInit();
             this.groupBox_SNL_Activity.ResumeLayout(false);
+            this.tabPage_Widgets.ResumeLayout(false);
+            this.tabControl_Widget.ResumeLayout(false);
+            this.tabPage_WidgetsEdit.ResumeLayout(false);
+            this.groupBox_WidgetPreview.ResumeLayout(false);
+            this.groupBox_WidgetElementSettings.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tabControl_DateWidget.ResumeLayout(false);
+            this.tabPage_DayWidget.ResumeLayout(false);
+            this.tabPage_DayWidget.PerformLayout();
+            this.tabPage_MonthWidget.ResumeLayout(false);
+            this.tabPage_MonthWidget.PerformLayout();
+            this.tabPage_YearWidget.ResumeLayout(false);
+            this.tabPage_YearWidget.PerformLayout();
+            this.tabPage_DOWWidget.ResumeLayout(false);
+            this.tabPage_DOWWidget.PerformLayout();
+            this.tabPage_DateLayerWidget.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_Date)).EndInit();
+            this.groupBox_WidgetNumber.ResumeLayout(false);
+            this.groupBox_WidgetNumber.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenght)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetY)).EndInit();
+            this.groupBox_WidgetElement.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_WidgetElement)).EndInit();
+            this.tabPage_WidgetAdd.ResumeLayout(false);
+            this.groupBox_WidgetTypeAdd.ResumeLayout(false);
+            this.groupBox_WidgetTypeAdd.PerformLayout();
+            this.groupBox_WdgetAdd.ResumeLayout(false);
+            this.groupBox_WidgetElementAdd.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.tabControl_DateWidgetAdd.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_DateAdd)).EndInit();
+            this.groupBox_WidgetNumberAdd.ResumeLayout(false);
+            this.groupBox_WidgetNumberAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenghtAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundXAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundYAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidthAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeightAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetXAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetYAdd)).EndInit();
             this.tabPageConverting.ResumeLayout(false);
             this.tabPageConverting.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -21017,10 +23942,197 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ActivityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TabPage tabPage_Widgets;
+        private System.Windows.Forms.GroupBox groupBox_WidgetNumber;
+        private System.Windows.Forms.ComboBox comboBox_WidgetNumber;
+        private System.Windows.Forms.Button button_WidgetDel;
+        private System.Windows.Forms.GroupBox groupBox_WidgetElement;
+        private System.Windows.Forms.DataGridView dataGridView_WidgetElement;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.TabControl tabControl_Widget;
+        private System.Windows.Forms.TabPage tabPage_WidgetsEdit;
+        private System.Windows.Forms.Button button_WidgetElement_End;
+        private System.Windows.Forms.Button button_WidgetElement_Start;
+        private System.Windows.Forms.Button button_WidgetElement_Up;
+        private System.Windows.Forms.Button button_WidgetElement_Down;
+        private System.Windows.Forms.TabPage tabPage_WidgetAdd;
+        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetWidth;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetHeight;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetX;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetY;
+        private System.Windows.Forms.Label label05;
+        private System.Windows.Forms.Label label1083;
+        private System.Windows.Forms.Label label1086;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox_WidgetsTopMask;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox_WidgetsUnderMask;
+        private System.Windows.Forms.Label label01;
+        private System.Windows.Forms.CheckBox checkBox_WidgetsArea;
+        private System.Windows.Forms.Button button_WidgetElementDel;
+        private System.Windows.Forms.ComboBox comboBox_WidgetBorderInactiv;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox_WidgetBorderActiv;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox_WidgetDescriptionBackground;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetDescriptionBackgroundX;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetDescriptionBackgroundY;
+        protected System.Windows.Forms.Label label02;
+        private System.Windows.Forms.Label label8;
+        protected System.Windows.Forms.Label label1084;
+        protected System.Windows.Forms.Label label1085;
+        private System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetDescriptionLenght;
+        private System.Windows.Forms.GroupBox groupBox_WidgetElementSettings;
+        private System.Windows.Forms.GroupBox groupBox_WidgetPreview;
+        private System.Windows.Forms.RadioButton radioButton_WidgetPreviewNormal;
+        private System.Windows.Forms.RadioButton radioButton_WidgetPreviewEdit;
+        private System.Windows.Forms.Panel panel1;
+        private UserControl_SystemFont_Group userControl_SystemFont_GroupWidget;
+        private UserControl_scaleLinear userControl_scaleLinearWidget;
+        private UserControl_scaleCircle userControl_scaleCircleWidget;
+        private UserControl_hand userControl_handWidget;
+        private UserControl_text_goal userControl_text_goalWidget;
+        private UserControl_text userControl_textWidget;
+        private UserControl_pictures userControl_picturesWidget;
+        private UserControl_preview userControl_previewWidget;
+        private UserControl_SystemFont_GroupSunrise userControl_SystemFont_GroupSunriseWidget;
+        private UserControl_SystemFont_GroupWeather userControl_SystemFont_GroupWeatherWidget;
+        private UserControl_text_goal userControl_text_goalWidgetSunset;
+        private UserControl_text_goal userControl_text_goalWidgetSunrise;
+        private UserControl_text_weather userControl_text_weatherWidgetMax;
+        private UserControl_text_weather userControl_text_weatherWidgetMin;
+        private UserControl_text_weather userControl_text_weatherWidgetCur;
+        private UserControl_icon userControl_iconWidget;
+        private System.Windows.Forms.TabControl tabControl_DateWidget;
+        private System.Windows.Forms.TabPage tabPage_DayWidget;
+        private System.Windows.Forms.TabPage tabPage_MonthWidget;
+        private System.Windows.Forms.TabPage tabPage_YearWidget;
+        private System.Windows.Forms.TabPage tabPage_DOWWidget;
+        private System.Windows.Forms.TabPage tabPage_DateLayerWidget;
+        private UserControl_pictures_weather userControl_pictures_weatherWidget;
+        private UserControl_text_date userControl_text_date_DayWidget;
+        private UserControl_SystemFont_Group userControl_SystemFont_Group_DayWidget;
+        private UserControl_hand userControl_hand_DayWidget;
+        private UserControl_SystemFont_Group userControl_SystemFont_Group_MonthWidget;
+        private UserControl_hand userControl_hand_MonthWidget;
+        private UserControl_text_date userControl_text_date_MonthWidget;
+        private UserControl_pictures userControl_pictures_MonthWidget;
+        private UserControl_SystemFont_Group userControl_SystemFont_Group_YearWidget;
+        private UserControl_text_date userControl_text_date_YearWidget;
+        private UserControl_hand userControl_hand_DOWWidget;
+        private UserControl_pictures userControl_pictures_DOWWidget;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView_Widget_Date;
+        private System.Windows.Forms.Button button_Widget_Date_End;
+        private System.Windows.Forms.Button button_Widget_Date_Start;
+        private System.Windows.Forms.Button button_Widget_Date_Up;
+        private System.Windows.Forms.Button button_Widget_Date_Down;
+        private System.Windows.Forms.CheckBox checkBox_TimeOnWidgetEdit;
+        private System.Windows.Forms.GroupBox groupBox_WidgetTypeAdd;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.RadioButton radioButton_StepsWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_DateWidgetAdd;
+        private System.Windows.Forms.GroupBox groupBox_WdgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_WidgetElementAdd;
+        private System.Windows.Forms.RadioButton radioButton_WidgetAdd;
+        private System.Windows.Forms.GroupBox groupBox_WidgetElementAdd;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabControl tabControl_DateWidgetAdd;
+        private System.Windows.Forms.TabPage tabPage1;
+        private UserControl_SystemFont_Group userControl_SystemFont_Group_DayWidgetAdd;
+        private UserControl_hand userControl_hand_DayWidgetAdd;
+        private UserControl_text_date userControl_text_date_DayWidgetAdd;
+        private System.Windows.Forms.TabPage tabPage2;
+        private UserControl_SystemFont_Group userControl_SystemFont_Group_MonthWidgetAdd;
+        private UserControl_hand userControl_hand_MonthWidgetAdd;
+        private UserControl_text_date userControl_text_date_MonthWidgetAdd;
+        private UserControl_pictures userControl_pictures_MonthWidgetAdd;
+        private System.Windows.Forms.TabPage tabPage3;
+        private UserControl_SystemFont_Group userControl_SystemFont_Group_YearWidgetAdd;
+        private UserControl_text_date userControl_text_date_YearWidgetAdd;
+        private System.Windows.Forms.TabPage tabPage4;
+        private UserControl_hand userControl_hand_DOWWidgetAdd;
+        private UserControl_pictures userControl_pictures_DOWWidgetAdd;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dataGridView_Widget_DateAdd;
+        private System.Windows.Forms.Button button_Widget_Date_EndAdd;
+        private System.Windows.Forms.Button button_Widget_Date_StartAdd;
+        private System.Windows.Forms.Button button_Widget_Date_UpAdd;
+        private System.Windows.Forms.Button button_Widget_Date_DownAdd;
+        private UserControl_icon userControl_iconWidgetAdd;
+        private UserControl_SystemFont_GroupSunrise userControl_SystemFont_GroupSunriseWidgetAdd;
+        private UserControl_SystemFont_GroupWeather userControl_SystemFont_GroupWeatherWidgetAdd;
+        private UserControl_SystemFont_Group userControl_SystemFont_GroupWidgetAdd;
+        private UserControl_scaleLinear userControl_scaleLinearWidgetAdd;
+        private UserControl_scaleCircle userControl_scaleCircleWidgetAdd;
+        private UserControl_hand userControl_handWidgetAdd;
+        private UserControl_text_goal userControl_text_goalWidgetSunsetAdd;
+        private UserControl_text_goal userControl_text_goalWidgetSunriseAdd;
+        private UserControl_text_weather userControl_text_weatherWidgetMaxAdd;
+        private UserControl_text_weather userControl_text_weatherWidgetMinAdd;
+        private UserControl_text_weather userControl_text_weatherWidgetCurAdd;
+        private UserControl_text_goal userControl_text_goalWidgetAdd;
+        private UserControl_text userControl_textWidgetAdd;
+        private UserControl_pictures_weather userControl_pictures_weatherWidgetAdd;
+        private UserControl_pictures userControl_picturesWidgetAdd;
+        private UserControl_preview userControl_previewWidgetAdd;
+        private System.Windows.Forms.GroupBox groupBox_WidgetNumberAdd;
+        private System.Windows.Forms.Label label14;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetDescriptionLenghtAdd;
+        private System.Windows.Forms.ComboBox comboBox_WidgetBorderInactivAdd;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox_WidgetBorderActivAdd;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBox_WidgetDescriptionBackgroundAdd;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetDescriptionBackgroundXAdd;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetDescriptionBackgroundYAdd;
+        protected System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        protected System.Windows.Forms.Label label19;
+        protected System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetWidthAdd;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetHeightAdd;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetXAdd;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_WidgetYAdd;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.RadioButton radioButton_AirPressureWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_WindForceWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_SunriseWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_HumidityWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_UVindexWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_WeatherWidgetAdd;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.RadioButton radioButton_FatBurningWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_ActivityGoalWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_StandUpWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_DistanceWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_PAIWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_HeartRateWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_CaloriesWidgetAdd;
+        private System.Windows.Forms.RadioButton radioButton_BatteryWidgetAdd;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button_WidgetAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WidgetsID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WidgetElement;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WidgetElementName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }
 

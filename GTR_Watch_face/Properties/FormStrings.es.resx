@@ -288,6 +288,9 @@
   <data name="Message_GoToFile_Text" xml:space="preserve">
     <value>Ir al archivo?</value>
   </data>
+  <data name="Message_Information_Caption" xml:space="preserve">
+    <value>Información</value>
+  </data>
   <data name="Message_JsonError_Text" xml:space="preserve">
     <value>Archivo JSON no válido</value>
   </data>
@@ -369,10 +372,88 @@
   <data name="Message_WarningTensOnes_Text" xml:space="preserve">
     <value>No se admiten diferentes valores de ImageIndex para decenas y unidades.</value>
   </data>
+  <data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
+    <value>Agregue datos para mostrar en la zona editable.</value>
+  </data>
+  <data name="Message_Warning_AddPreview_WidgetElement" xml:space="preserve">
+    <value>Agrega una imagen de vista previa para el elemento seleccionado.</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">
+    <value>Se agregó la primera zona editable.</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget2" xml:space="preserve">
+    <value>No olvide ajustar las máscaras superior e inferior en la pantalla de edición.</value>
+  </data>
+  <data name="Message_Warning_Add_Widget" xml:space="preserve">
+    <value>Personaliza todas las imágenes necesarias para la zona editable.</value>
+  </data>
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>Advertencia</value>
   </data>
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>Información</value>
+  </data>
+  <data name="Message_Warning_No_Widget" xml:space="preserve">
+    <value>Primero, agregue al menos una zona editable.</value>
+  </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>Escalada</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>Presion del aire</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>Calidad del aire</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>Altitud</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>Bateria</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>Calorias</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>Distancia</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>Quema de grasa</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>Ritmo cardiaco</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>Humedad</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>Pararse</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>Pasos</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>Stres</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>Amanecer y Atardecer</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>Rayos UV</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>Tiempo</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>Velocidade del viento</value>
   </data>
 </root>

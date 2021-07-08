@@ -1807,7 +1807,7 @@ namespace AmazFit_Watchface_2
                     // иконки
                     if (userControl_icon != null)
                     {
-                        if (activity.Icon != null)
+                        if (activity.Icon != null && activity.Icon.Coordinates != null)
 
                         {
                             userControl_icon.checkBox_icon_Use.Checked = true;
@@ -2248,8 +2248,8 @@ namespace AmazFit_Watchface_2
 
                         DigitalDateDigit digitalDateDigit = new DigitalDateDigit();
                         digitalDateDigit.DateType = "Year";
-                        digitalDateDigit.CombingMode = "Single";
-                        //digitalDateDigit.CombingMode = checkBox_Year_follow.Checked ? "Follow" : "Single";
+                        //digitalDateDigit.CombingMode = "Single";
+                        digitalDateDigit.CombingMode = checkBox_Year_follow_AOD.Checked ? "Follow" : "Single";
                         digitalDateDigit.Digit = new Text();
                         digitalDateDigit.Digit.Image = new ImageAmazfit();
                         digitalDateDigit.Digit.Image.X = (long)numericUpDown_YearX_AOD.Value;

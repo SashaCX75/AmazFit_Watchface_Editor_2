@@ -224,6 +224,26 @@ namespace AmazFit_Watchface_2
             {
                 controlCollection[i].Enabled = b;
             }
+
+            if (b)
+            {
+                b = !checkBox_follow.Checked;
+                label01.Enabled = b;
+                label02.Enabled = b;
+                label03.Enabled = b;
+                label04.Enabled = b;
+                label05.Enabled = b;
+                label06.Enabled = b;
+                label07.Enabled = b;
+
+                numericUpDown_SystemFontX.Enabled = b;
+                numericUpDown_SystemFontY.Enabled = b;
+
+                numericUpDown_SystemFont_size.Enabled = b;
+                numericUpDown_SystemFont_angle.Enabled = b;
+                numericUpDown_SystemFont_spacing.Enabled = b;
+                comboBox_SystemFont_color.Enabled = b; 
+            }
         }
         private void comboBox_color_Click(object sender, EventArgs e)
         {

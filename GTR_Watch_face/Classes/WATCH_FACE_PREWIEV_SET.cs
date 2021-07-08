@@ -37,7 +37,6 @@
         public int Distance { get; set; }
         public int StandUp { get; set; }
         public int Stress { get; set; }
-        public int ActivityGoal { get; set; }
         public int FatBurning { get; set; }
     }
 

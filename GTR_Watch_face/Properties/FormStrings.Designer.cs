@@ -592,6 +592,15 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Информация.
+        /// </summary>
+        public static string Message_Information_Caption {
+            get {
+                return ResourceManager.GetString("Message_Information_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Неверный JSON файл..
         /// </summary>
         public static string Message_JsonError_Text {
@@ -745,6 +754,51 @@ namespace AmazFit_Watchface_2.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавлена первая редактируемая зона..
+        /// </summary>
+        public static string Message_Warning_Add_FirstWidget1 {
+            get {
+                return ResourceManager.GetString("Message_Warning_Add_FirstWidget1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Не забудьте настроить верхнюю и нижнюю маски на экране редактирования..
+        /// </summary>
+        public static string Message_Warning_Add_FirstWidget2 {
+            get {
+                return ResourceManager.GetString("Message_Warning_Add_FirstWidget2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Настройте все изображения необходимые для редактируемой зоны..
+        /// </summary>
+        public static string Message_Warning_Add_Widget {
+            get {
+                return ResourceManager.GetString("Message_Warning_Add_Widget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавьте данные для отображения в редактируемой зоне..
+        /// </summary>
+        public static string Message_Warning_AddData_WidgetElement {
+            get {
+                return ResourceManager.GetString("Message_Warning_AddData_WidgetElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавьте изображение предпросмотра для выбранного элемента..
+        /// </summary>
+        public static string Message_Warning_AddPreview_WidgetElement {
+            get {
+                return ResourceManager.GetString("Message_Warning_AddPreview_WidgetElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Предупреждение.
         /// </summary>
         public static string Message_Warning_Caption {
@@ -759,6 +813,15 @@ namespace AmazFit_Watchface_2.Properties {
         public static string Message_Warning_Information {
             get {
                 return ResourceManager.GetString("Message_Warning_Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Для начала добавьте хотя бы одну редактируемую зону..
+        /// </summary>
+        public static string Message_Warning_No_Widget {
+            get {
+                return ResourceManager.GetString("Message_Warning_No_Widget", resourceCulture);
             }
         }
         
@@ -930,6 +993,186 @@ namespace AmazFit_Watchface_2.Properties {
         public static string Message_WarningWeatherError {
             get {
                 return ResourceManager.GetString("Message_WarningWeatherError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дата.
+        /// </summary>
+        public static string WidgetDescription_Date {
+            get {
+                return ResourceManager.GetString("WidgetDescription_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Альпинизм.
+        /// </summary>
+        public static string WidgetName_ActivityGoal {
+            get {
+                return ResourceManager.GetString("WidgetName_ActivityGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Давление воздуха.
+        /// </summary>
+        public static string WidgetName_AirPressure {
+            get {
+                return ResourceManager.GetString("WidgetName_AirPressure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Качество воздуха.
+        /// </summary>
+        public static string WidgetName_AirQuality {
+            get {
+                return ResourceManager.GetString("WidgetName_AirQuality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Высота.
+        /// </summary>
+        public static string WidgetName_Altitude {
+            get {
+                return ResourceManager.GetString("WidgetName_Altitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Батарея.
+        /// </summary>
+        public static string WidgetName_Battery {
+            get {
+                return ResourceManager.GetString("WidgetName_Battery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Калории.
+        /// </summary>
+        public static string WidgetName_Calories {
+            get {
+                return ResourceManager.GetString("WidgetName_Calories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дата.
+        /// </summary>
+        public static string WidgetName_Date {
+            get {
+                return ResourceManager.GetString("WidgetName_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Расстояние.
+        /// </summary>
+        public static string WidgetName_Distance {
+            get {
+                return ResourceManager.GetString("WidgetName_Distance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Жиросжигание.
+        /// </summary>
+        public static string WidgetName_FatBurning {
+            get {
+                return ResourceManager.GetString("WidgetName_FatBurning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пульс.
+        /// </summary>
+        public static string WidgetName_HeartRate {
+            get {
+                return ResourceManager.GetString("WidgetName_HeartRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Влажность.
+        /// </summary>
+        public static string WidgetName_Humidity {
+            get {
+                return ResourceManager.GetString("WidgetName_Humidity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PAI.
+        /// </summary>
+        public static string WidgetName_PAI {
+            get {
+                return ResourceManager.GetString("WidgetName_PAI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Стоя.
+        /// </summary>
+        public static string WidgetName_StandUp {
+            get {
+                return ResourceManager.GetString("WidgetName_StandUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Шаги.
+        /// </summary>
+        public static string WidgetName_Steps {
+            get {
+                return ResourceManager.GetString("WidgetName_Steps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Уровень стресса.
+        /// </summary>
+        public static string WidgetName_Stress {
+            get {
+                return ResourceManager.GetString("WidgetName_Stress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Восход и закат солнца.
+        /// </summary>
+        public static string WidgetName_Sunrise {
+            get {
+                return ResourceManager.GetString("WidgetName_Sunrise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на УФ-лучи.
+        /// </summary>
+        public static string WidgetName_UVindex {
+            get {
+                return ResourceManager.GetString("WidgetName_UVindex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Погода.
+        /// </summary>
+        public static string WidgetName_Weather {
+            get {
+                return ResourceManager.GetString("WidgetName_Weather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Скорость и направление ветра.
+        /// </summary>
+        public static string WidgetName_WindForce {
+            get {
+                return ResourceManager.GetString("WidgetName_WindForce", resourceCulture);
             }
         }
     }

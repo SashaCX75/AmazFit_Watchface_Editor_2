@@ -405,4 +405,85 @@
   <data name="Dialog_Title_WatchSkin" xml:space="preserve">
     <value>Selecting a watch image file</value>
   </data>
+  <data name="Message_Information_Caption" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
+    <value>Add data to display in the editable zone.</value>
+  </data>
+  <data name="Message_Warning_AddPreview_WidgetElement" xml:space="preserve">
+    <value>Add a preview image for the selected element.</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">
+    <value>Added first editable zone.</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget2" xml:space="preserve">
+    <value>Don't forget to adjust the top and bottom masks in the edit screen.</value>
+  </data>
+  <data name="Message_Warning_Add_Widget" xml:space="preserve">
+    <value>Customize all the images needed for the editable zone.</value>
+  </data>
+  <data name="Message_Warning_No_Widget" xml:space="preserve">
+    <value>First, add at least one editable zone.</value>
+  </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>Climbing</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>Air Pressure</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>Air Quality</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>Fat-burning</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>Heart Rate</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>Stand</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>Stress</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>Sunrise and sunset</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>UV ray</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>Wind speed or direction</value>
+  </data>
 </root>
