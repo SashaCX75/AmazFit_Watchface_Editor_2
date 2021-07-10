@@ -906,10 +906,10 @@
   <data name="tabPage_Time.Text" xml:space="preserve">
     <value>时间</value>
   </data>
-  <data name="checkBox_Day_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_日期_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Day_hand_Use.Text" xml:space="preserve">
+  <data name="checkBox_日期_hand_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label609.AutoSize" type="System.Boolean, mscorlib">
@@ -990,13 +990,13 @@
   <data name="label717.Text" xml:space="preserve">
     <value>背景图像</value>
   </data>
-  <data name="button_Day_hand.Text" xml:space="preserve">
+  <data name="button_日期_hand.Text" xml:space="preserve">
     <value>指针</value>
   </data>
-  <data name="checkBox_Day_Use.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_日期_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Day_Use.Text" xml:space="preserve">
+  <data name="checkBox_日期_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label576.Size" type="System.Drawing.Size, System.Drawing">
@@ -1011,7 +1011,7 @@
   <data name="label586.Text" xml:space="preserve">
     <value>分隔符</value>
   </data>
-  <data name="checkBox_Day_add_zero.Text" xml:space="preserve">
+  <data name="checkBox_日期_add_zero.Text" xml:space="preserve">
     <value>前面加0</value>
   </data>
   <data name="label585.AutoSize" type="System.Boolean, mscorlib">
@@ -1026,13 +1026,13 @@
   <data name="label585.Text" xml:space="preserve">
     <value>单位</value>
   </data>
-  <data name="comboBox_Day_alignment.Items" xml:space="preserve">
+  <data name="comboBox_日期_alignment.Items" xml:space="preserve">
     <value>左对齐</value>
   </data>
-  <data name="comboBox_Day_alignment.Items1" xml:space="preserve">
+  <data name="comboBox_日期_alignment.Items1" xml:space="preserve">
     <value>右对齐</value>
   </data>
-  <data name="comboBox_Day_alignment.Items2" xml:space="preserve">
+  <data name="comboBox_日期_alignment.Items2" xml:space="preserve">
     <value>居中对齐</value>
   </data>
   <data name="label577.AutoSize" type="System.Boolean, mscorlib">
@@ -1071,13 +1071,13 @@
   <data name="label583.Text" xml:space="preserve">
     <value>间距</value>
   </data>
-  <data name="checkBox_Day_follow.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_日期_follow.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
   </data>
-  <data name="button_Day_text.Text" xml:space="preserve">
+  <data name="button_日期_text.Text" xml:space="preserve">
     <value>数字</value>
   </data>
-  <data name="tabPage_Day.Text" xml:space="preserve">
+  <data name="tabPage_日期.Text" xml:space="preserve">
     <value>日期</value>
   </data>
   <data name="label706.Text" xml:space="preserve">
@@ -1086,10 +1086,10 @@
   <data name="label709.Text" xml:space="preserve">
     <value>背景图像</value>
   </data>
-  <data name="checkBox_Month_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_月份_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Month_hand_Use.Text" xml:space="preserve">
+  <data name="checkBox_月份_hand_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label626.Location" type="System.Drawing.Point, System.Drawing">
@@ -1146,13 +1146,13 @@
   <data name="label638.Text" xml:space="preserve">
     <value>中心图像</value>
   </data>
-  <data name="button_Month_hand.Text" xml:space="preserve">
+  <data name="button_月份_hand.Text" xml:space="preserve">
     <value>指针</value>
   </data>
-  <data name="checkBox_Month_Use.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_月份_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Month_Use.Text" xml:space="preserve">
+  <data name="checkBox_月份_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label587.Size" type="System.Drawing.Size, System.Drawing">
@@ -1167,7 +1167,7 @@
   <data name="label597.Text" xml:space="preserve">
     <value>分隔符</value>
   </data>
-  <data name="checkBox_Month_add_zero.Text" xml:space="preserve">
+  <data name="checkBox_月份_add_zero.Text" xml:space="preserve">
     <value>前面加0</value>
   </data>
   <data name="label596.AutoSize" type="System.Boolean, mscorlib">
@@ -1182,13 +1182,13 @@
   <data name="label596.Text" xml:space="preserve">
     <value>单位</value>
   </data>
-  <data name="comboBox_Month_alignment.Items" xml:space="preserve">
+  <data name="comboBox_月份_alignment.Items" xml:space="preserve">
     <value>左对齐</value>
   </data>
-  <data name="comboBox_Month_alignment.Items1" xml:space="preserve">
+  <data name="comboBox_月份_alignment.Items1" xml:space="preserve">
     <value>右对齐</value>
   </data>
-  <data name="comboBox_Month_alignment.Items2" xml:space="preserve">
+  <data name="comboBox_月份_alignment.Items2" xml:space="preserve">
     <value>居中对齐</value>
   </data>
   <data name="label588.AutoSize" type="System.Boolean, mscorlib">
@@ -1227,10 +1227,10 @@
   <data name="label594.Text" xml:space="preserve">
     <value>间距</value>
   </data>
-  <data name="checkBox_Month_follow.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_月份_follow.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
   </data>
-  <data name="button_Month_text.Text" xml:space="preserve">
+  <data name="button_月份_text.Text" xml:space="preserve">
     <value>数字</value>
   </data>
   <data name="label613.Size" type="System.Drawing.Size, System.Drawing">
@@ -1239,10 +1239,10 @@
   <data name="label613.Text" xml:space="preserve">
     <value>坐标</value>
   </data>
-  <data name="checkBox_Month_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_月份_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Month_pictures_Use.Text" xml:space="preserve">
+  <data name="checkBox_月份_pictures_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label614.AutoSize" type="System.Boolean, mscorlib">
@@ -1257,19 +1257,19 @@
   <data name="label614.Text" xml:space="preserve">
     <value>起始图像</value>
   </data>
-  <data name="button_Month_pictures.Text" xml:space="preserve">
+  <data name="button_月份_pictures.Text" xml:space="preserve">
     <value>图像进度</value>
   </data>
-  <data name="tabPage_Month.Text" xml:space="preserve">
+  <data name="tabPage_月份.Text" xml:space="preserve">
     <value>月份</value>
   </data>
-  <data name="button_Year_hand.Text" xml:space="preserve">
+  <data name="button_年份_hand.Text" xml:space="preserve">
     <value>指针</value>
   </data>
-  <data name="checkBox_Year_text_Use.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_年份_text_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Year_text_Use.Text" xml:space="preserve">
+  <data name="checkBox_年份_text_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label598.Size" type="System.Drawing.Size, System.Drawing">
@@ -1284,7 +1284,7 @@
   <data name="label608.Text" xml:space="preserve">
     <value>分隔符</value>
   </data>
-  <data name="checkBox_Year_add_zero.Text" xml:space="preserve">
+  <data name="checkBox_年份_add_zero.Text" xml:space="preserve">
     <value>两位数年份</value>
   </data>
   <data name="label607.AutoSize" type="System.Boolean, mscorlib">
@@ -1299,13 +1299,13 @@
   <data name="label607.Text" xml:space="preserve">
     <value>单位</value>
   </data>
-  <data name="comboBox_Year_alignment.Items" xml:space="preserve">
+  <data name="comboBox_年份_alignment.Items" xml:space="preserve">
     <value>左对齐</value>
   </data>
-  <data name="comboBox_Year_alignment.Items1" xml:space="preserve">
+  <data name="comboBox_年份_alignment.Items1" xml:space="preserve">
     <value>右对齐</value>
   </data>
-  <data name="comboBox_Year_alignment.Items2" xml:space="preserve">
+  <data name="comboBox_年份_alignment.Items2" xml:space="preserve">
     <value>居中对齐</value>
   </data>
   <data name="label599.AutoSize" type="System.Boolean, mscorlib">
@@ -1344,10 +1344,10 @@
   <data name="label605.Text" xml:space="preserve">
     <value>间距</value>
   </data>
-  <data name="button_Year_text.Text" xml:space="preserve">
+  <data name="button_年份_text.Text" xml:space="preserve">
     <value>数字</value>
   </data>
-  <data name="tabPage_Year.Text" xml:space="preserve">
+  <data name="tabPage_年份.Text" xml:space="preserve">
     <value>年</value>
   </data>
   <data name="label710.Text" xml:space="preserve">
@@ -1458,7 +1458,7 @@
   <data name="button_DOW_image.Text" xml:space="preserve">
     <value>图像</value>
   </data>
-  <data name="tabPage_Day_of_week.Text" xml:space="preserve">
+  <data name="tabPage_日期_of_week.Text" xml:space="preserve">
     <value>星期</value>
   </data>
   <data name="tabPage_Date.Text" xml:space="preserve">
@@ -1785,7 +1785,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
-        DQAAAk1TRnQBSQFMAgEBBgEAAYgBBAGQAQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAYgBBAGYAQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -2059,13 +2059,13 @@
   <data name="tabPage_Time_AOD.Text" xml:space="preserve">
     <value>时间</value>
   </data>
-  <data name="button_Copy_Day_hand_AOD.Text" xml:space="preserve">
+  <data name="button_Copy_日期_hand_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
-  <data name="checkBox_Day_hand_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_日期_hand_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Day_hand_Use_AOD.Text" xml:space="preserve">
+  <data name="checkBox_日期_hand_Use_AOD.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label363.Text" xml:space="preserve">
@@ -2095,28 +2095,28 @@
   <data name="label379.Text" xml:space="preserve">
     <value>端角</value>
   </data>
-  <data name="button_Day_hand_AOD.Text" xml:space="preserve">
+  <data name="button_日期_hand_AOD.Text" xml:space="preserve">
     <value>指针</value>
   </data>
-  <data name="button_Copy_Day_text_AOD.Text" xml:space="preserve">
+  <data name="button_Copy_日期_text_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
-  <data name="checkBox_Day_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_日期_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Day_Use_AOD.Text" xml:space="preserve">
+  <data name="checkBox_日期_Use_AOD.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="comboBox_Day_alignment_AOD.Items" xml:space="preserve">
+  <data name="comboBox_日期_alignment_AOD.Items" xml:space="preserve">
     <value>左对齐</value>
   </data>
-  <data name="comboBox_Day_alignment_AOD.Items1" xml:space="preserve">
+  <data name="comboBox_日期_alignment_AOD.Items1" xml:space="preserve">
     <value>右对齐</value>
   </data>
-  <data name="comboBox_Day_alignment_AOD.Items2" xml:space="preserve">
+  <data name="comboBox_日期_alignment_AOD.Items2" xml:space="preserve">
     <value>居中对齐</value>
   </data>
-  <data name="checkBox_Day_add_zero_AOD.Text" xml:space="preserve">
+  <data name="checkBox_日期_add_zero_AOD.Text" xml:space="preserve">
     <value>前面加0</value>
   </data>
   <data name="label380.Size" type="System.Drawing.Size, System.Drawing">
@@ -2152,19 +2152,19 @@
   <data name="label386.Text" xml:space="preserve">
     <value>间距</value>
   </data>
-  <data name="button_Day_text_AOD.Text" xml:space="preserve">
+  <data name="button_日期_text_AOD.Text" xml:space="preserve">
     <value>数字</value>
   </data>
-  <data name="tabPage_Day_AOD.Text" xml:space="preserve">
+  <data name="tabPage_日期_AOD.Text" xml:space="preserve">
     <value>日期</value>
   </data>
-  <data name="button_Copy_Month_hand_AOD.Text" xml:space="preserve">
+  <data name="button_Copy_月份_hand_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
-  <data name="checkBox_Month_hand_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_月份_hand_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Month_hand_Use_AOD.Text" xml:space="preserve">
+  <data name="checkBox_月份_hand_Use_AOD.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label391.Text" xml:space="preserve">
@@ -2194,28 +2194,28 @@
   <data name="label416.Text" xml:space="preserve">
     <value>中心图像</value>
   </data>
-  <data name="button_Month_hand_AOD.Text" xml:space="preserve">
+  <data name="button_月份_hand_AOD.Text" xml:space="preserve">
     <value>指针</value>
   </data>
-  <data name="button_Copy_Month_text_AOD.Text" xml:space="preserve">
+  <data name="button_Copy_月份_text_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
-  <data name="checkBox_Month_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_月份_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Month_Use_AOD.Text" xml:space="preserve">
+  <data name="checkBox_月份_Use_AOD.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="checkBox_Month_add_zero_AOD.Text" xml:space="preserve">
+  <data name="checkBox_月份_add_zero_AOD.Text" xml:space="preserve">
     <value>前面加0</value>
   </data>
-  <data name="comboBox_Month_alignment_AOD.Items" xml:space="preserve">
+  <data name="comboBox_月份_alignment_AOD.Items" xml:space="preserve">
     <value>左对齐</value>
   </data>
-  <data name="comboBox_Month_alignment_AOD.Items1" xml:space="preserve">
+  <data name="comboBox_月份_alignment_AOD.Items1" xml:space="preserve">
     <value>右对齐</value>
   </data>
-  <data name="comboBox_Month_alignment_AOD.Items2" xml:space="preserve">
+  <data name="comboBox_月份_alignment_AOD.Items2" xml:space="preserve">
     <value>居中对齐</value>
   </data>
   <data name="label417.Size" type="System.Drawing.Size, System.Drawing">
@@ -2251,16 +2251,16 @@
   <data name="label423.Text" xml:space="preserve">
     <value>间距</value>
   </data>
-  <data name="button_Month_text_AOD.Text" xml:space="preserve">
+  <data name="button_月份_text_AOD.Text" xml:space="preserve">
     <value>数值</value>
   </data>
-  <data name="button_Copy_Month_pictures_AOD.Text" xml:space="preserve">
+  <data name="button_Copy_月份_pictures_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
-  <data name="checkBox_Month_pictures_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_月份_pictures_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Month_pictures_Use_AOD.Text" xml:space="preserve">
+  <data name="checkBox_月份_pictures_Use_AOD.Text" xml:space="preserve">
     <value>启用</value>
   </data>
   <data name="label428.Size" type="System.Drawing.Size, System.Drawing">
@@ -2272,34 +2272,34 @@
   <data name="label429.Text" xml:space="preserve">
     <value>起始图像</value>
   </data>
-  <data name="button_Month_pictures_AOD.Text" xml:space="preserve">
+  <data name="button_月份_pictures_AOD.Text" xml:space="preserve">
     <value>图像进度</value>
   </data>
-  <data name="tabPage_Month_AOD.Text" xml:space="preserve">
+  <data name="tabPage_月份_AOD.Text" xml:space="preserve">
     <value>月份</value>
   </data>
   <data name="button13.Text" xml:space="preserve">
     <value>指针</value>
   </data>
-  <data name="button_Copy_Year_text_AOD.Text" xml:space="preserve">
+  <data name="button_Copy_年份_text_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
-  <data name="checkBox_Year_text_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="checkBox_年份_text_Use_AOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
-  <data name="checkBox_Year_text_Use_AOD.Text" xml:space="preserve">
+  <data name="checkBox_年份_text_Use_AOD.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="checkBox_Year_add_zero_AOD.Text" xml:space="preserve">
+  <data name="checkBox_年份_add_zero_AOD.Text" xml:space="preserve">
     <value>前面加0</value>
   </data>
-  <data name="comboBox_Year_alignment_AOD.Items" xml:space="preserve">
+  <data name="comboBox_年份_alignment_AOD.Items" xml:space="preserve">
     <value>左对齐</value>
   </data>
-  <data name="comboBox_Year_alignment_AOD.Items1" xml:space="preserve">
+  <data name="comboBox_年份_alignment_AOD.Items1" xml:space="preserve">
     <value>右对齐</value>
   </data>
-  <data name="comboBox_Year_alignment_AOD.Items2" xml:space="preserve">
+  <data name="comboBox_年份_alignment_AOD.Items2" xml:space="preserve">
     <value>居中对齐</value>
   </data>
   <data name="label432.Size" type="System.Drawing.Size, System.Drawing">
@@ -2335,10 +2335,10 @@
   <data name="label438.Text" xml:space="preserve">
     <value>间距</value>
   </data>
-  <data name="button_Year_text_AOD.Text" xml:space="preserve">
+  <data name="button_年份_text_AOD.Text" xml:space="preserve">
     <value>数值</value>
   </data>
-  <data name="tabPage_Year_AOD.Text" xml:space="preserve">
+  <data name="tabPage_年份_AOD.Text" xml:space="preserve">
     <value>年</value>
   </data>
   <data name="button_Copy_DOW_hand_AOD.Text" xml:space="preserve">
@@ -2401,7 +2401,7 @@
   <data name="button_DOW_image_AOD.Text" xml:space="preserve">
     <value>图像</value>
   </data>
-  <data name="tabPage_Day_of_week_AOD.Text" xml:space="preserve">
+  <data name="tabPage_日期_of_week_AOD.Text" xml:space="preserve">
     <value>星期</value>
   </data>
   <data name="tabPage_Date_AOD.Text" xml:space="preserve">
@@ -5933,25 +5933,25 @@
   <data name="button_WatchSkin_PathGet.Text" xml:space="preserve">
     <value>浏览</value>
   </data>
-  <data name="checkBox_Day_follow.Text" xml:space="preserve">
+  <data name="checkBox_日期_follow.Text" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="checkBox_Day_follow_AOD.Text" xml:space="preserve">
+  <data name="checkBox_日期_follow_AOD.Text" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="checkBox_Month_follow.Text" xml:space="preserve">
+  <data name="checkBox_月份_follow.Text" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="checkBox_Month_follow_AOD.Text" xml:space="preserve">
+  <data name="checkBox_月份_follow_AOD.Text" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
   <data name="checkBox_WatchSkin_Use.Text" xml:space="preserve">
     <value>保存 *.png 和 *.gif 时使用手表框</value>
   </data>
-  <data name="checkBox_Year_follow.Text" xml:space="preserve">
+  <data name="checkBox_年份_follow.Text" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="checkBox_Year_follow_AOD.Text" xml:space="preserve">
+  <data name="checkBox_年份_follow_AOD.Text" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
   <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
@@ -6011,40 +6011,417 @@
   <data name="userControl_SystemFont_GroupTime_AOD.FollowText_Min" xml:space="preserve">
     <value>跟随小时</value>
   </data>
-  <data name="userControl_SystemFont_Group_Day.FollowRotateText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_日期.FollowRotateText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Day.FollowText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_日期.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Day_AOD.FollowRotateText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_日期_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Day_AOD.FollowText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_日期_AOD.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Month.FollowRotateText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_月份.FollowRotateText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Month.FollowText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_月份.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Month_AOD.FollowRotateText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_月份_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Month_AOD.FollowText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_月份_AOD.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Year.FollowRotateText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_年份.FollowRotateText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Year.FollowText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_年份.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Year_AOD.FollowRotateText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_年份_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
-  <data name="userControl_SystemFont_Group_Year_AOD.FollowText" xml:space="preserve">
+  <data name="userControl_SystemFont_Group_年份_AOD.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
+  </data>
+  <data name="groupBox_WidgetPreview.Text" xml:space="preserve">
+    <value>预览模式</value>
+  </data>
+  <data name="radioButton_WidgetPreviewEdit.Text" xml:space="preserve">
+    <value>选择模式</value>
+  </data>
+  <data name="radioButton_WidgetPreviewNormal.Text" xml:space="preserve">
+    <value>正常模式</value>
+  </data>
+  <data name="tabPage_Widgets.Text" xml:space="preserve">
+    <value>编辑项目</value>
+  </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>攀登</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>海拔高度</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>距离</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>脂肪燃烧</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>心率</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>站立</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>压力</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>日出日落</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>风速或风向</value>
+  </data>
+  <data name="button_WidgetAdd.Text" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="button_WidgetDel.Text" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="button_WidgetElementDel.Text" xml:space="preserve">
+    <value>删除选中元素</value>
+  </data>
+  <data name="checkBox_TimeOnWidgetEdit.Text" xml:space="preserve">
+    <value>编辑屏幕上的时间</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>元素</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>元素</value>
+  </data>
+  <data name="groupBox_WdgetAdd.Text" xml:space="preserve">
+    <value>添加元素</value>
+  </data>
+  <data name="groupBox_WidgetElement.Text" xml:space="preserve">
+    <value>选定区域中的元素</value>
+  </data>
+  <data name="groupBox_WidgetElementAdd.Text" xml:space="preserve">
+    <value>设置选中的元素</value>
+  </data>
+  <data name="groupBox_WidgetElementSettings.Text" xml:space="preserve">
+    <value>设置选中的元素</value>
+  </data>
+  <data name="groupBox_WidgetNumber.Text" xml:space="preserve">
+    <value>可编辑区域</value>
+  </data>
+  <data name="groupBox_WidgetNumberAdd.Text" xml:space="preserve">
+    <value>可编辑区域</value>
+  </data>
+  <data name="groupBox_WidgetTypeAdd.Text" xml:space="preserve">
+    <value>添加元素的类型</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>顶部遮罩</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>描述坐标</value>
+  </data>
+  <data name="label05.Text" xml:space="preserve">
+    <value>区域坐标</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>未选定
+区域框架</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>描述长度</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>*影响数值的显示顺序和“跟随前置项”选项的行为。</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>*影响数值的显示顺序和“跟随前置项”选项的行为。</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>描述长度</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>未选定
+区域框架</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>突出显示
+区域框架</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>描述坐标</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>描述背景</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>区域坐标</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>要添加新元素，您需要配置要在其中显示的数据。</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>要添加新的可编辑区域，您需要为其显示配置数据，并配置其中至少一个元素的显示。</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>添加第一个可编辑区域后，需要在编辑屏幕上设置顶部和底部遮罩。</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>底部遮罩</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>描述背景</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>突出显示
+区域框架</value>
+  </data>
+  <data name="radioButton_ActivityGoalWidgetAdd.Text" xml:space="preserve">
+    <value>活动目标</value>
+  </data>
+  <data name="radioButton_AirPressureWidgetAdd.Text" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="radioButton_BatteryWidgetAdd.Text" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="radioButton_CaloriesWidgetAdd.Text" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="radioButton_DateWidgetAdd.Text" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="radioButton_DistanceWidgetAdd.Text" xml:space="preserve">
+    <value>距离</value>
+  </data>
+  <data name="radioButton_FatBurningWidgetAdd.Text" xml:space="preserve">
+    <value>脂肪燃烧</value>
+  </data>
+  <data name="radioButton_HeartRateWidgetAdd.Text" xml:space="preserve">
+    <value>心率</value>
+  </data>
+  <data name="radioButton_HumidityWidgetAdd.Text" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="radioButton_StandUpWidgetAdd.Text" xml:space="preserve">
+    <value>站立</value>
+  </data>
+  <data name="radioButton_StepsWidgetAdd.Text" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="radioButton_SunriseWidgetAdd.Text" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="radioButton_UVindexWidgetAdd.Text" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="radioButton_WeatherWidgetAdd.Text" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="radioButton_WidgetAdd.Text" xml:space="preserve">
+    <value>添加可编辑区域</value>
+  </data>
+  <data name="radioButton_WidgetElementAdd.Text" xml:space="preserve">
+    <value>添加新元素
+到区域</value>
+  </data>
+  <data name="radioButton_WindForceWidgetAdd.Text" xml:space="preserve">
+    <value>风力</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>月份</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>年份</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>元素顺序</value>
+  </data>
+  <data name="tabPage_DateLayerWidget.Text" xml:space="preserve">
+    <value>元素顺序</value>
+  </data>
+  <data name="tabPage_日期Widget.Text" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="tabPage_DOWWidget.Text" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="tabPage_月份Widget.Text" xml:space="preserve">
+    <value>月份</value>
+  </data>
+  <data name="tabPage_WidgetAdd.Text" xml:space="preserve">
+    <value>添加ing</value>
+  </data>
+  <data name="tabPage_WidgetsEdit.Text" xml:space="preserve">
+    <value>编辑ing</value>
+  </data>
+  <data name="tabPage_年份Widget.Text" xml:space="preserve">
+    <value>年份</value>
+  </data>
+  <data name="userControl_SystemFont_Group_日期Widget.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_日期Widget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_日期WidgetAdd.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_日期WidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_月份Widget.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_月份Widget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_月份WidgetAdd.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_月份WidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_年份Widget.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_年份Widget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_年份WidgetAdd.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_年份WidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_日期Widget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_日期WidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_月份Widget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_月份WidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_年份Widget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_年份WidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunrise.ButtonText" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunriseAdd.ButtonText" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunset.ButtonText" xml:space="preserve">
+    <value>日落</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunset.FollowText" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunsetAdd.ButtonText" xml:space="preserve">
+    <value>日落</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunsetAdd.FollowText" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_text_weatherWidgetCur.ButtonText" xml:space="preserve">
+    <value>当前温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetCurAdd.ButtonText" xml:space="preserve">
+    <value>当前温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMax.ButtonText" xml:space="preserve">
+    <value>最高温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMax.FollowText" xml:space="preserve">
+    <value>跟随最低温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMaxAdd.ButtonText" xml:space="preserve">
+    <value>最高温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMaxAdd.FollowText" xml:space="preserve">
+    <value>跟随最低温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMin.ButtonText" xml:space="preserve">
+    <value>最低温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMinAdd.ButtonText" xml:space="preserve">
+    <value>最低温度</value>
+  </data>
+  <data name="WidgetElement.HeaderText" xml:space="preserve">
+    <value>元素</value>
+  </data>
+  <data name="WidgetElementName.HeaderText" xml:space="preserve">
+    <value>元素名称</value>
+  </data>
+  <data name="checkBox_WidgetsArea.Text" xml:space="preserve">
+    <value>高亮显示可编辑区域</value>
   </data>
 </root>

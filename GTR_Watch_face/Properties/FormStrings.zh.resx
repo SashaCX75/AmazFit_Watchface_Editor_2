@@ -405,4 +405,28 @@
   <data name="Dialog_Title_WatchSkin" xml:space="preserve">
     <value>选择一个表盘图像文件</value>
   </data>
+  <data name="Message_Information_Caption" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
+    <value>添加要在可编辑区域中显示的数据。</value>
+  </data>
+  <data name="Message_Warning_AddPreview_WidgetElement" xml:space="preserve">
+    <value>为所选元素添加预览图像。</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">
+    <value>添加了第一个可编辑区域。</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget2" xml:space="preserve">
+    <value>别忘了在编辑屏幕中调整顶部和底部遮罩。</value>
+  </data>
+  <data name="Message_Warning_Add_Widget" xml:space="preserve">
+    <value>自定义可编辑区域所需的所有图像。</value>
+  </data>
+  <data name="Message_Warning_No_Widget" xml:space="preserve">
+    <value>首先，至少添加一个可编辑区域。</value>
+  </data>
 </root>
