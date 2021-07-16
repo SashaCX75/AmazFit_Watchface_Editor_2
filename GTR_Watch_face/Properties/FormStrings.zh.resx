@@ -429,4 +429,64 @@
   <data name="Message_Warning_No_Widget" xml:space="preserve">
     <value>首先，至少添加一个可编辑区域。</value>
   </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>登山</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>海拔高度</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>距离</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>脂肪燃烧</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>心率</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>站立</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>压力</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>日出日落</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>紫外线</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>风速或风向</value>
+  </data>
 </root>
