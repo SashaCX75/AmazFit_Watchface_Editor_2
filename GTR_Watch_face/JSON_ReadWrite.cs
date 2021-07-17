@@ -4776,6 +4776,14 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            if (activityPictures != null)
+            {
+                activityPictures.Type = "Weather";
+                if (Watch_Face.System == null) Watch_Face.System = new SystemAmazfit();
+                if (Watch_Face.System.Activity == null) Watch_Face.System.Activity = new List<Activity>();
+                Watch_Face.System.Activity.Add(activityPictures);
+            }
+
             if (activity != null)
             {
                 activity.Type = "Weather";
@@ -4798,14 +4806,6 @@ namespace AmazFit_Watchface_2
                 if (Watch_Face.System == null) Watch_Face.System = new SystemAmazfit();
                 if (Watch_Face.System.Activity == null) Watch_Face.System.Activity = new List<Activity>();
                 Watch_Face.System.Activity.Add(activityMax);
-            }
-
-            if (activityPictures != null)
-            {
-                activityPictures.Type = "Weather";
-                if (Watch_Face.System == null) Watch_Face.System = new SystemAmazfit();
-                if (Watch_Face.System.Activity == null) Watch_Face.System.Activity = new List<Activity>();
-                Watch_Face.System.Activity.Add(activityPictures);
             }
         }
 

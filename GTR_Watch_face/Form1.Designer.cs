@@ -19034,8 +19034,11 @@
             this.errorProvider1.SetIconAlignment(this.userControl_previewWidget, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_previewWidget.IconAlignment"))));
             this.errorProvider1.SetIconPadding(this.userControl_previewWidget, ((int)(resources.GetObject("userControl_previewWidget.IconPadding"))));
             this.userControl_previewWidget.Name = "userControl_previewWidget";
+            this.userControl_previewWidget.Preview = true;
             this.toolTip_Weather.SetToolTip(this.userControl_previewWidget, resources.GetString("userControl_previewWidget.ToolTip"));
             this.userControl_previewWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_preview.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            this.userControl_previewWidget.CreatePreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidget_CreatePreview);
+            this.userControl_previewWidget.RefreshPreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidget_RefreshPreview);
             // 
             // comboBox_WidgetsTopMask
             // 
@@ -20563,8 +20566,11 @@
             this.errorProvider1.SetIconAlignment(this.userControl_previewWidgetAdd, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("userControl_previewWidgetAdd.IconAlignment"))));
             this.errorProvider1.SetIconPadding(this.userControl_previewWidgetAdd, ((int)(resources.GetObject("userControl_previewWidgetAdd.IconPadding"))));
             this.userControl_previewWidgetAdd.Name = "userControl_previewWidgetAdd";
+            this.userControl_previewWidgetAdd.Preview = true;
             this.toolTip_Weather.SetToolTip(this.userControl_previewWidgetAdd, resources.GetString("userControl_previewWidgetAdd.ToolTip"));
             this.userControl_previewWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_preview.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            this.userControl_previewWidgetAdd.CreatePreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidgetAdd_CreatePreview);
+            this.userControl_previewWidgetAdd.RefreshPreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidgetAdd_RefreshPreview);
             // 
             // groupBox_WidgetNumberAdd
             // 

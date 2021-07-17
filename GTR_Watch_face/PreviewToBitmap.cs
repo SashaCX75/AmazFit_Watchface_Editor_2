@@ -1865,6 +1865,7 @@ namespace AmazFit_Watchface_2
 
             #endregion
 
+            if (link < 0) goto TimeEnd;
             #region цифровое время
             int time_offsetX = -1;
             int time_offsetY = -1;
@@ -2132,8 +2133,8 @@ namespace AmazFit_Watchface_2
                     }
                 } 
             }
-            #endregion
-
+        #endregion
+            TimeEnd:
 
             #region Mesh
             Logger.WriteLine("PreviewToBitmap (Mesh)");

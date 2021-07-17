@@ -445,6 +445,7 @@ namespace AmazFit_Watchface_2
 
         private void SplashScreenStart()
         {
+            Logger.WriteLine("* SplashScreenStart");
             string splashScreenPath = Application.StartupPath + @"\Tools\SplashScreen.exe";
             if (File.Exists(splashScreenPath))
             {
@@ -454,6 +455,7 @@ namespace AmazFit_Watchface_2
 
                 exeProcess.Dispose();
                 //exeProcess.CloseMainWindow();
+                Logger.WriteLine("* SplashScreenStart (end)");
             }
 
         }
@@ -528,10 +530,11 @@ namespace AmazFit_Watchface_2
         const UInt32 WM_CLOSE = 0x0010;
         private void Form1_Load(object sender, EventArgs e)
         {
-            Logger.WriteLine("* Form1_Load ");
+            Logger.WriteLine("* Form1_Load");
             IntPtr windowPtr = FindWindowByCaption(IntPtr.Zero, "AmazFit WatchFace editor SplashScreen");
             if (windowPtr != IntPtr.Zero)
             {
+                Logger.WriteLine("* SplashScreen_CLOSE");
                 SendMessage(windowPtr, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
             }
 
@@ -539,7 +542,7 @@ namespace AmazFit_Watchface_2
             //Logger.WriteLine("Form1_Load");
 
             string subPath = Application.StartupPath + @"\Tools\main.exe";
-            Logger.WriteLine("Set textBox.Text");
+            //Logger.WriteLine("Set textBox.Text");
             if (Program_Settings.pack_unpack_dir == null)
             {
                 Program_Settings.pack_unpack_dir = subPath;
@@ -551,7 +554,7 @@ namespace AmazFit_Watchface_2
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
             PreviewView = false;
-            Logger.WriteLine("Set Model");
+            Logger.WriteLine("Set Model_Watch");
             if (Program_Settings.Model_GTR2)
             {
                 radioButton_GTR2.Checked = true;
@@ -3736,6 +3739,20 @@ namespace AmazFit_Watchface_2
             return image.ToBitmap();
         }
 
+        public Bitmap ApplyWidgetMask(Bitmap inputImage, int maskIndex)
+        {
+            Logger.WriteLine("* ApplyWidgetMask");
+            ImageMagick.MagickImage image = new ImageMagick.MagickImage(inputImage);
+            if (maskIndex >= 0 && maskIndex < ListImagesFullName.Count)
+            {
+                ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(ListImagesFullName[maskIndex]);
+                image.Composite(combineMask, ImageMagick.CompositeOperator.Xor, Channels.Alpha); 
+            }
+
+            Logger.WriteLine("* ApplyWidgetMask (end)");
+            return image.ToBitmap();
+        }
+
         // изменили модель часов
         private void radioButton_Model_Changed(object sender, EventArgs e)
         {
@@ -5810,16 +5827,16 @@ namespace AmazFit_Watchface_2
                 bitmap = ResizeImage(bitmap, scale);
                 //bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
 
-                MagickImage item_AOD = new MagickImage(bitmap);
+                MagickImage optimizedBitmap = new MagickImage(bitmap);
 
                 QuantizeSettings settings = new QuantizeSettings();
                 settings.Colors = 256;
-                item_AOD.Quantize(settings);
+                optimizedBitmap.Quantize(settings);
 
                 // Optionally optimize the images (images should have the same size).
 
-                item_AOD.Format = MagickFormat.Png;
-                item_AOD.Write(ListImagesFullName[i]);
+                optimizedBitmap.Format = MagickFormat.Png;
+                optimizedBitmap.Write(ListImagesFullName[i]);
 
 
 
@@ -11573,6 +11590,243 @@ namespace AmazFit_Watchface_2
             string tabName = tabControl1.SelectedTab.Name;
             if(tabName == "tabPage_Widgets" || oldTabName == "tabPage_Widgets") PreviewImage();
             oldTabName = tabName;
+        }
+
+        /// <summary>формируем изображение для предпросмотра редактируемых зон</summary>
+        /// <param name="type">1-если редактируем елемент;
+        /// 2-если добавляем новый элемент.</param>
+        private Bitmap PreviewWidgetAdd(int type)
+        {
+            // формируем картинку для предпросмотра
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+            //int PreviewHeight = 306;
+            if (radioButton_GTS2.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+                //PreviewHeight = 323;
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                //PreviewHeight = 220;
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            int link = -1;
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, false, link);
+            bitmap = ApplyWidgetMask(bitmap, comboBox_WidgetsTopMask.SelectedIndex);
+            if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+            int x = 0;
+            int y = 0;
+            int width = 0;
+            int height = 0;
+            if (type == 1)
+            {
+                x = (int)numericUpDown_WidgetX.Value;
+                y = (int)numericUpDown_WidgetY.Value;
+                width = (int)numericUpDown_WidgetWidth.Value;
+                height = (int)numericUpDown_WidgetHeight.Value;
+            }
+            if (type == 2)
+            {
+                if (radioButton_WidgetAdd.Checked)
+                {
+                    x = (int)numericUpDown_WidgetXAdd.Value;
+                    y = (int)numericUpDown_WidgetYAdd.Value;
+                    width = (int)numericUpDown_WidgetWidthAdd.Value;
+                    height = (int)numericUpDown_WidgetHeightAdd.Value;
+                }
+                else
+                {
+                    x = (int)numericUpDown_WidgetX.Value;
+                    y = (int)numericUpDown_WidgetY.Value;
+                    width = (int)numericUpDown_WidgetWidth.Value;
+                    height = (int)numericUpDown_WidgetHeight.Value;
+                } 
+            }
+            if (width > 1 && height > 1)
+            {
+                Rectangle cropRect = new Rectangle(x, y, width, height);
+                Bitmap tempBitmap = new Bitmap(width, height);
+                using (Graphics g = Graphics.FromImage(tempBitmap))
+                {
+                    g.DrawImage(bitmap, new Rectangle(0, 0, tempBitmap.Width, tempBitmap.Height),
+                                     cropRect,
+                                     GraphicsUnit.Pixel);
+                }
+                bitmap = tempBitmap;
+            }
+            return bitmap;
+        }
+        
+        private void userControl_previewWidgetAdd_CreatePreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidgetAdd.comboBoxGetImage() >= 0) return;
+            if ((numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2) 
+                && radioButton_WidgetElementAdd.Checked) return;
+            if ((numericUpDown_WidgetWidthAdd.Value < 2 || numericUpDown_WidgetHeightAdd.Value < 2)
+                && radioButton_WidgetAdd.Checked) return;
+            if (FileName != null && FullFileDir != null) // проект уже сохранен
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(2);
+                // определяем имя файла для сохранения и сохраняем файл
+                string NamePreview = "0001.png";
+                string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                int index = 1;
+                if (ListImagesFullName.Count > 0)
+                {
+                    Int32.TryParse(Path.GetFileNameWithoutExtension(ListImagesFullName.Last()), out index);
+                    index++;
+                    NamePreview = index.ToString() + ".png";
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                while (PathPreview.Length < ListImagesFullName[0].Length)
+                {
+                    NamePreview = "0" + NamePreview;
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                if (File.Exists(PathPreview)) return;
+                bitmap.Save(PathPreview, ImageFormat.Png);
+
+                PreviewView = false;
+                ListImages.Add(index.ToString());
+                ListImagesFullName.Add(PathPreview);
+
+                // добавляем строки в таблицу
+                string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                Image PreviewImage = null;
+                using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                {
+                    PreviewImage = Image.FromStream(stream);
+                }
+                var RowNew = new DataGridViewRow();
+                DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                    ZoomType = DataGridViewImageCellLayout.Normal;
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() });
+                //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() + "*" });
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                RowNew.Cells.Add(new DataGridViewImageCell()
+                {
+                    Value = PreviewImage,
+                    ImageLayout = ZoomType
+                });
+                RowNew.Height = 45;
+                dataGridView_ImagesList.Rows.Add( RowNew);
+
+                userControl_preview.comboBox_image.Items.Add(index.ToString());
+                //userControl_preview.comboBoxSetImage(index);
+                PreviewView = true;
+                userControl_preview.comboBoxSetImage(index);
+                JSON_Modified = true;
+                FormText();
+
+                bitmap.Dispose();
+
+            }
+        }
+
+        private void userControl_previewWidgetAdd_RefreshPreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidgetAdd.comboBoxGetImage() < 0) return;
+            if ((numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2)
+                && radioButton_WidgetElementAdd.Checked) return;
+            if ((numericUpDown_WidgetWidthAdd.Value < 2 || numericUpDown_WidgetHeightAdd.Value < 2)
+                && radioButton_WidgetAdd.Checked) return;
+            if (FileName != null && FullFileDir != null)
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(2);
+                int i = userControl_preview.comboBoxGetSelectedIndexImage();
+                bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+                bitmap.Dispose();
+
+            }
+        }
+
+        private void userControl_previewWidget_CreatePreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidget.comboBoxGetImage() >= 0) return;
+            if(radioButton_WidgetPreviewEdit.Checked) return;
+            if (numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2) return;
+            if (FileName != null && FullFileDir != null) // проект уже сохранен
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(1);
+                // определяем имя файла для сохранения и сохраняем файл
+                string NamePreview = "0001.png";
+                string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                int index = 1;
+                if (ListImagesFullName.Count > 0)
+                {
+                    Int32.TryParse(Path.GetFileNameWithoutExtension(ListImagesFullName.Last()), out index);
+                    index++;
+                    NamePreview = index.ToString() + ".png";
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                while (PathPreview.Length < ListImagesFullName[0].Length)
+                {
+                    NamePreview = "0" + NamePreview;
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                if (File.Exists(PathPreview)) return;
+                bitmap.Save(PathPreview, ImageFormat.Png);
+
+                PreviewView = false;
+                ListImages.Add(index.ToString());
+                ListImagesFullName.Add(PathPreview);
+
+                // добавляем строки в таблицу
+                string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                Image PreviewImage = null;
+                using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                {
+                    PreviewImage = Image.FromStream(stream);
+                }
+                var RowNew = new DataGridViewRow();
+                DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                    ZoomType = DataGridViewImageCellLayout.Normal;
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() });
+                //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() + "*" });
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                RowNew.Cells.Add(new DataGridViewImageCell()
+                {
+                    Value = PreviewImage,
+                    ImageLayout = ZoomType
+                });
+                RowNew.Height = 45;
+                dataGridView_ImagesList.Rows.Add(RowNew);
+
+                userControl_preview.comboBox_image.Items.Add(index.ToString());
+                //userControl_preview.comboBoxSetImage(index);
+                PreviewView = true;
+                userControl_preview.comboBoxSetImage(index);
+                JSON_Modified = true;
+                FormText();
+
+                bitmap.Dispose();
+
+            }
+        }
+
+        private void userControl_previewWidget_RefreshPreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidget.comboBoxGetImage() < 0) return;
+            if (radioButton_WidgetPreviewEdit.Checked) return;
+            if (numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2) return;
+            if (FileName != null && FullFileDir != null)
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(1);
+                int i = userControl_preview.comboBoxGetSelectedIndexImage();
+                bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+                bitmap.Dispose();
+
+            }
         }
 
 

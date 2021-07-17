@@ -14,10 +14,30 @@ namespace AmazFit_Watchface_2
     public partial class UserControl_preview : UserControl
     {
         private bool setValue;
+        private bool button_Preview = false;
         public UserControl_preview()
         {
             InitializeComponent();
             setValue = false;
+
+            if (!button_Preview)
+            {
+                button_CreatePreview.Visible = false;
+                button_RefreshPreview.Visible = false;
+            }
+            else
+            {
+                if (comboBox_image.SelectedIndex < 0)
+                {
+                    button_CreatePreview.Visible = true;
+                    button_RefreshPreview.Visible = false;
+                }
+                else
+                {
+                    button_CreatePreview.Visible = false;
+                    button_RefreshPreview.Visible = true;
+                }
+            }
         }
 
         [Browsable(true)]
@@ -27,6 +47,11 @@ namespace AmazFit_Watchface_2
         [Browsable(true)]
         public event ValueChangedHandler ValueChanged;
         public delegate void ValueChangedHandler(object sender, EventArgs eventArgs);
+
+        [Browsable(true)]
+        public event ButtonClickHandler CreatePreview;
+        public event ButtonClickHandler RefreshPreview;
+        public delegate void ButtonClickHandler(object sender, EventArgs eventArgs);
 
 
         /// <summary>Возвращает true если панель свернута</summary>
@@ -42,6 +67,37 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        [Description("Отображение кнопки обновления/создания предпросмотра")]
+        public bool Preview
+        {
+            get
+            {
+                return button_Preview;
+            }
+            set
+            {
+                button_Preview = value;
+                if (!button_Preview)
+                {
+                    button_CreatePreview.Visible = false;
+                    button_RefreshPreview.Visible = false;
+                }
+                else
+                {
+                    if (comboBox_image.SelectedIndex < 0)
+                    {
+                        button_CreatePreview.Visible = true;
+                        button_RefreshPreview.Visible = false;
+                    }
+                    else
+                    {
+                        button_CreatePreview.Visible = false;
+                        button_RefreshPreview.Visible = true;
+                    }
+                }
+            }
+        }
+
         private void button_preview_Click(object sender, EventArgs e)
         {
             panel_preview.Visible = !panel_preview.Visible;
@@ -54,23 +110,23 @@ namespace AmazFit_Watchface_2
 
         internal void comboBoxSetImage(long value)
         {
-            comboBox_icon_image.Text = value.ToString();
-            if (comboBox_icon_image.SelectedIndex < 0) comboBox_icon_image.Text = "";
+            comboBox_image.Text = value.ToString();
+            if (comboBox_image.SelectedIndex < 0) comboBox_image.Text = "";
         }
 
         /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
         internal int comboBoxGetImage()
         {
-            if (comboBox_icon_image.SelectedIndex < 0) return -1;
+            if (comboBox_image.SelectedIndex < 0) return -1;
             int value = -1;
-            Int32.TryParse(comboBox_icon_image.Text, out value);
+            Int32.TryParse(comboBox_image.Text, out value);
             return value;
         }
 
         /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
         internal int comboBoxGetSelectedIndexImage()
         {
-            return comboBox_icon_image.SelectedIndex;
+            return comboBox_image.SelectedIndex;
         }
 
         #region Standard events
@@ -146,6 +202,25 @@ namespace AmazFit_Watchface_2
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (!button_Preview)
+            {
+                button_CreatePreview.Visible = false;
+                button_RefreshPreview.Visible = false;
+            }
+            else
+            {
+                if (comboBox_image.SelectedIndex < 0)
+                {
+                    button_CreatePreview.Visible = true;
+                    button_RefreshPreview.Visible = false;
+                }
+                else
+                {
+                    button_CreatePreview.Visible = false;
+                    button_RefreshPreview.Visible = true;
+                }
+            }
+
             if (ValueChanged != null && !setValue)
             {
                 EventArgs eventArgs = new EventArgs();
@@ -158,7 +233,7 @@ namespace AmazFit_Watchface_2
         /// <summary>Добавляет ссылки на картинки в выпадающие списки</summary>
         internal void ComboBoxAddItems(List<string> ListImages)
         {
-            comboBox_icon_image.Items.AddRange(ListImages.ToArray());
+            comboBox_image.Items.AddRange(ListImages.ToArray());
         }
 
         /// <summary>Очищает выпадающие списки с картинками, сбрасывает данные на значения по умолчанию</summary>
@@ -168,12 +243,30 @@ namespace AmazFit_Watchface_2
 
             if (full)
             {
-                comboBox_icon_image.Items.Clear();
+                comboBox_image.Items.Clear();
             }
-            comboBox_icon_image.Text = null;
+            comboBox_image.Text = null;
 
             setValue = false;
         }
         #endregion
+
+        private void button_CreatePreview_Click(object sender, EventArgs e)
+        {
+            if (CreatePreview != null)
+            {
+                EventArgs eventArgs = new EventArgs();
+                CreatePreview(this, eventArgs);
+            }
+        }
+
+        private void button_RefreshPreview_Click(object sender, EventArgs e)
+        {
+            if (RefreshPreview != null)
+            {
+                EventArgs eventArgs = new EventArgs();
+                RefreshPreview(this, eventArgs);
+            }
+        }
     }
 }

@@ -4887,6 +4887,13 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            if (activityPictures != null)
+            {
+                activityPictures.Type = "Weather";
+                if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
+                ScreenIdle.Activity.Add(activityPictures);
+            }
+
             if (activity != null)
             {
                 activity.Type = "Weather";
@@ -4906,13 +4913,6 @@ namespace AmazFit_Watchface_2
                 activityMax.Type = "Weather";
                 if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
                 ScreenIdle.Activity.Add(activityMax);
-            }
-
-            if (activityPictures != null)
-            {
-                activityPictures.Type = "Weather";
-                if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
-                ScreenIdle.Activity.Add(activityPictures);
             }
         }
 
