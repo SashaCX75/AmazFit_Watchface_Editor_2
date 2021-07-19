@@ -127,4 +127,10 @@
   <data name="button_preview.Text" xml:space="preserve">
     <value>预览</value>
   </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>创建预览</value>
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>刷新预览</value>
+  </data>
 </root>
