@@ -1634,11 +1634,39 @@ namespace AmazFit_Watchface_2
                         if (File.Exists(newFullName_bin))
                         {
                             Logger.WriteLine("newFullName_bin");
-                            if (checkBox_UseID.Checked)
+
+                            int ID = 0;
+                            try
+                            {
+                                string text = File.ReadAllText(fullfilename);
+                                WATCH_FACE_JSON Watch_Face_temp = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
+                                {
+                                    DefaultValueHandling = DefaultValueHandling.Ignore,
+                                    NullValueHandling = NullValueHandling.Ignore
+                                });
+                                if (Watch_Face_temp != null && Watch_Face_temp.Info != null &&
+                                    Watch_Face_temp.Info.WatchFaceId != null) ID = (int)Watch_Face_temp.Info.WatchFaceId;
+                                using (FileStream fileStream = File.OpenWrite(newFullName_bin))
+                                {
+                                    if (ID >= 1000)
+                                    {
+                                        byte[] arr = BitConverter.GetBytes(ID);
+                                        fileStream.Position = 18;
+                                        fileStream.WriteByte(arr[0]);
+                                        fileStream.WriteByte(arr[1]);
+                                        fileStream.WriteByte(arr[2]);
+                                        fileStream.WriteByte(arr[3]);
+                                        fileStream.Flush();
+                                    }
+                                }
+                            }
+                            catch {}
+
+                            if (ID < 1000 && checkBox_UseID.Checked)
                             {
                                 using (FileStream fileStream = File.OpenWrite(newFullName_bin))
                                 {
-                                    int ID = 0;
+                                    //int ID = 0;
                                     Int32.TryParse(textBox_WatchfaceID.Text, out ID);
                                     if (ID >= 1000)
                                     {
