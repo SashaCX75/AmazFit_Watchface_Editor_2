@@ -706,6 +706,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mask\mask_zepp_e.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="WatchSkin\gtr2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

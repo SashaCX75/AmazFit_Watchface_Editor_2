@@ -2339,6 +2339,11 @@ namespace AmazFit_Watchface_2
                 Watch_Face.Info = new Device_Id();
                 Watch_Face.Info.DeviceId = 83;
             }
+            if (radioButton_ZeppE.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 60;
+            }
             //if (radioButton_Verge.Checked)
             //{
             //    Watch_Face.Info = new Device_Id();
@@ -7350,6 +7355,9 @@ namespace AmazFit_Watchface_2
                     case 83:
                         radioButton_TRex_pro.Checked = true;
                         break;
+                    case 60:
+                        radioButton_ZeppE.Checked = true;
+                        break;
                     default:
                         return;
                 }
@@ -7386,6 +7394,14 @@ namespace AmazFit_Watchface_2
                     pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                     Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
                 }
+                else if (radioButton_ZeppE.Checked)
+                {
+                    this.Text = "Zepp E Circle watch face editor";
+                    //pictureBox_Preview.Height = 224;
+                    //pictureBox_Preview.Width = 177;
+                    pictureBox_Preview.Size = new Size((int)(211 * currentDPI), (int)(211 * currentDPI));
+                    Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+                }
 
                 if ((formPreview != null) && (formPreview.Visible))
                 {
@@ -7393,12 +7409,14 @@ namespace AmazFit_Watchface_2
                     Form_Preview.Model_Wath.model_GTR2e = radioButton_GTR2e.Checked;
                     Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
                     Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
+                    Form_Preview.Model_Wath.model_Zepp_E = radioButton_ZeppE.Checked;
                 }
 
                 Program_Settings.Model_GTR2 = radioButton_GTR2.Checked;
                 Program_Settings.Model_GTR2e = radioButton_GTR2e.Checked;
                 Program_Settings.Model_GTS2 = radioButton_GTS2.Checked;
                 Program_Settings.Model_TRex_pro = radioButton_TRex_pro.Checked;
+                Program_Settings.Model_Zepp_E = radioButton_ZeppE.Checked;
                 string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
                 {
                     //DefaultValueHandling = DefaultValueHandling.Ignore,

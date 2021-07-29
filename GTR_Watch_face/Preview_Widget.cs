@@ -7215,6 +7215,10 @@ namespace AmazFit_Watchface_2
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
             }
+            if (radioButton_ZeppE.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+            }
             gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
             //src.Dispose();
             #endregion
@@ -7673,6 +7677,10 @@ namespace AmazFit_Watchface_2
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
+                if (radioButton_ZeppE.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+                }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
                 mask.Dispose();
@@ -7716,6 +7724,11 @@ namespace AmazFit_Watchface_2
             {
                 src = new Bitmap(360, 360);
                 combineMask = new ImageMagick.MagickImage(colorMask, 360, 360);
+            }
+            if (radioButton_ZeppE.Checked)
+            {
+                src = new Bitmap(416, 416);
+                combineMask = new ImageMagick.MagickImage(colorMask, 416, 416);
             }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
@@ -7882,6 +7895,11 @@ namespace AmazFit_Watchface_2
             {
                 centerX = 180;
                 centerY = 180;
+            }
+            if (radioButton_ZeppE.Checked)
+            {
+                centerX = 208;
+                centerY = 208;
             }
 
             int Hour_X = (int)numericUpDown_Hour_handX.Value;

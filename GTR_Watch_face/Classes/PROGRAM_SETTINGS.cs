@@ -22,6 +22,7 @@
         public bool Model_GTR2e = false;
         public bool Model_GTS2 = false;
         public bool Model_TRex_pro = false;
+        public bool Model_Zepp_E = false;
 
         public bool ShowBorder = false;
         public bool Crop = true;
@@ -53,6 +54,7 @@
         public string WatchSkin_GTR_2 = @"WatchSkin\WatchSkin_GTR_2e.json";
         public string WatchSkin_GTS_2 = @"WatchSkin\WatchSkin_GTS_2.json";
         public string WatchSkin_TRex_pro = @"WatchSkin\WatchSkin_TRex_Pro.json";
+        public string WatchSkin_Zepp_E = @"WatchSkin\WatchSkin_Zepp_E.json";
         public bool WatchSkin_Use = false;
 
     }
