@@ -335,6 +335,9 @@
     <EmbeddedResource Include="FormFileExists.es.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.fr.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFileExists.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
     </EmbeddedResource>
@@ -466,6 +469,9 @@
       <DependentUpon>UserControl_preview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_preview.fr.resx">
+      <DependentUpon>UserControl_preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_preview.zh.resx">
       <DependentUpon>UserControl_preview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleCircle.en.resx">
@@ -693,6 +699,9 @@
     <None Include="WatchSkin\WatchSkin_TRex_Pro.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="WatchSkin\WatchSkin_Zepp_E.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -700,6 +709,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mask\mask_zepp_e.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="WatchSkin\gtr2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -710,6 +722,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="WatchSkin\t-rex-pro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WatchSkin\zepp-e.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\OpenSans-Regular.ttf" />

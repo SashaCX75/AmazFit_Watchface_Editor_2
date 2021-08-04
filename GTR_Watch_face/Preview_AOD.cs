@@ -55,6 +55,10 @@ namespace AmazFit_Watchface_2
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
             }
+            if (radioButton_ZeppE.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+            }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
             gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
@@ -2045,6 +2049,10 @@ namespace AmazFit_Watchface_2
                 {
                     mask = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
+                if (radioButton_ZeppE.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+                }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
                 mask.Dispose();
@@ -2087,6 +2095,10 @@ namespace AmazFit_Watchface_2
             if (radioButton_TRex_pro.Checked)
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+            }
+            if (radioButton_ZeppE.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_zepp_e.png");
             }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
@@ -2296,6 +2308,10 @@ namespace AmazFit_Watchface_2
                 if (radioButton_TRex_pro.Checked)
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                }
+                if (radioButton_ZeppE.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
                 }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));

@@ -1785,7 +1785,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
-        DQAAAk1TRnQBSQFMAgEBBgEAAYgBBAGQAQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAYgBBAGYAQQBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -6046,5 +6046,382 @@
   </data>
   <data name="userControl_SystemFont_Group_Year_AOD.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
+  </data>
+  <data name="groupBox_WidgetPreview.Text" xml:space="preserve">
+    <value>预览模式</value>
+  </data>
+  <data name="radioButton_WidgetPreviewEdit.Text" xml:space="preserve">
+    <value>选择模式</value>
+  </data>
+  <data name="radioButton_WidgetPreviewNormal.Text" xml:space="preserve">
+    <value>正常模式</value>
+  </data>
+  <data name="tabPage_Widgets.Text" xml:space="preserve">
+    <value>编辑项目</value>
+  </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>攀登</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>海拔高度</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>距离</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>脂肪燃烧</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>心率</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>站立</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>压力</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>日出日落</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>风速或风向</value>
+  </data>
+  <data name="button_WidgetAdd.Text" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="button_WidgetDel.Text" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="button_WidgetElementDel.Text" xml:space="preserve">
+    <value>删除选中元素</value>
+  </data>
+  <data name="checkBox_TimeOnWidgetEdit.Text" xml:space="preserve">
+    <value>编辑屏幕上的时间</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>元素</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>元素</value>
+  </data>
+  <data name="groupBox_WdgetAdd.Text" xml:space="preserve">
+    <value>添加元素</value>
+  </data>
+  <data name="groupBox_WidgetElement.Text" xml:space="preserve">
+    <value>选定区域中的元素</value>
+  </data>
+  <data name="groupBox_WidgetElementAdd.Text" xml:space="preserve">
+    <value>设置选中的元素</value>
+  </data>
+  <data name="groupBox_WidgetElementSettings.Text" xml:space="preserve">
+    <value>设置选中的元素</value>
+  </data>
+  <data name="groupBox_WidgetNumber.Text" xml:space="preserve">
+    <value>可编辑区域</value>
+  </data>
+  <data name="groupBox_WidgetNumberAdd.Text" xml:space="preserve">
+    <value>可编辑区域</value>
+  </data>
+  <data name="groupBox_WidgetTypeAdd.Text" xml:space="preserve">
+    <value>添加元素的类型</value>
+  </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>顶部遮罩</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>描述坐标</value>
+  </data>
+  <data name="label05.Text" xml:space="preserve">
+    <value>区域坐标</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>未选定
+区域框架</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>描述长度</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>*影响数值的显示顺序和“跟随前置项”选项的行为。</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>*影响数值的显示顺序和“跟随前置项”选项的行为。</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>描述长度</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>未选定
+区域框架</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>突出显示
+区域框架</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>描述坐标</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>描述背景</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>区域坐标</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>要添加新元素，您需要配置要在其中显示的数据。</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>要添加新的可编辑区域，您需要为其显示配置数据，并配置其中至少一个元素的显示。</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>添加第一个可编辑区域后，需要在编辑屏幕上设置顶部和底部遮罩。</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>底部遮罩</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>描述背景</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>突出显示
+区域框架</value>
+  </data>
+  <data name="radioButton_ActivityGoalWidgetAdd.Text" xml:space="preserve">
+    <value>活动目标</value>
+  </data>
+  <data name="radioButton_AirPressureWidgetAdd.Text" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="radioButton_BatteryWidgetAdd.Text" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="radioButton_CaloriesWidgetAdd.Text" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="radioButton_DateWidgetAdd.Text" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="radioButton_DistanceWidgetAdd.Text" xml:space="preserve">
+    <value>距离</value>
+  </data>
+  <data name="radioButton_FatBurningWidgetAdd.Text" xml:space="preserve">
+    <value>脂肪燃烧</value>
+  </data>
+  <data name="radioButton_HeartRateWidgetAdd.Text" xml:space="preserve">
+    <value>心率</value>
+  </data>
+  <data name="radioButton_HumidityWidgetAdd.Text" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="radioButton_StandUpWidgetAdd.Text" xml:space="preserve">
+    <value>站立</value>
+  </data>
+  <data name="radioButton_StepsWidgetAdd.Text" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="radioButton_SunriseWidgetAdd.Text" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="radioButton_UVindexWidgetAdd.Text" xml:space="preserve">
+    <value>紫外线指数</value>
+  </data>
+  <data name="radioButton_WeatherWidgetAdd.Text" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="radioButton_WidgetAdd.Text" xml:space="preserve">
+    <value>添加可编辑区域</value>
+  </data>
+  <data name="radioButton_WidgetElementAdd.Text" xml:space="preserve">
+    <value>添加新元素
+到区域</value>
+  </data>
+  <data name="radioButton_WindForceWidgetAdd.Text" xml:space="preserve">
+    <value>风力</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>月份</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>年份</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>元素顺序</value>
+  </data>
+  <data name="tabPage_DateLayerWidget.Text" xml:space="preserve">
+    <value>元素顺序</value>
+  </data>
+  <data name="tabPage_DayWidget.Text" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="tabPage_DOWWidget.Text" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="tabPage_MonthWidget.Text" xml:space="preserve">
+    <value>月份</value>
+  </data>
+  <data name="tabPage_WidgetAdd.Text" xml:space="preserve">
+    <value>添加ing</value>
+  </data>
+  <data name="tabPage_WidgetsEdit.Text" xml:space="preserve">
+    <value>编辑ing</value>
+  </data>
+  <data name="tabPage_YearWidget.Text" xml:space="preserve">
+    <value>年份</value>
+  </data>
+  <data name="userControl_SystemFont_Group_DayWidget.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_DayWidget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_DayWidgetAdd.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_DayWidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_MonthWidget.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_MonthWidget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_MonthWidgetAdd.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_MonthWidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_YearWidget.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_YearWidget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_YearWidgetAdd.FollowRotateText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_YearWidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_DayWidget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_DayWidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_MonthWidget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_MonthWidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_YearWidget.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_date_YearWidgetAdd.FollowText" xml:space="preserve">
+    <value>追随前辈</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunrise.ButtonText" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunriseAdd.ButtonText" xml:space="preserve">
+    <value>日出</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunset.ButtonText" xml:space="preserve">
+    <value>日落</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunset.FollowText" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunsetAdd.ButtonText" xml:space="preserve">
+    <value>日落</value>
+  </data>
+  <data name="userControl_text_goalWidgetSunsetAdd.FollowText" xml:space="preserve">
+    <value>跟随日出</value>
+  </data>
+  <data name="userControl_text_weatherWidgetCur.ButtonText" xml:space="preserve">
+    <value>当前温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetCurAdd.ButtonText" xml:space="preserve">
+    <value>当前温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMax.ButtonText" xml:space="preserve">
+    <value>最高温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMax.FollowText" xml:space="preserve">
+    <value>跟随最低温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMaxAdd.ButtonText" xml:space="preserve">
+    <value>最高温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMaxAdd.FollowText" xml:space="preserve">
+    <value>跟随最低温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMin.ButtonText" xml:space="preserve">
+    <value>最低温度</value>
+  </data>
+  <data name="userControl_text_weatherWidgetMinAdd.ButtonText" xml:space="preserve">
+    <value>最低温度</value>
+  </data>
+  <data name="WidgetElement.HeaderText" xml:space="preserve">
+    <value>元素</value>
+  </data>
+  <data name="WidgetElementName.HeaderText" xml:space="preserve">
+    <value>元素名称</value>
+  </data>
+  <data name="checkBox_WidgetsArea.Text" xml:space="preserve">
+    <value>高亮显示可编辑区域</value>
   </data>
 </root>

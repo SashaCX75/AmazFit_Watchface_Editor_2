@@ -155,7 +155,7 @@ namespace AmazFit_Watchface_2
             //    MessageBox.Show(currentDPI.ToString());
             //}
             currentDPI = tabControl1.Height / 670f;
-            tabControl1.TabPages["tabPageConverting"].Parent = null;
+            //tabControl1.TabPages["tabPageConverting"].Parent = null;
 
             userControl_SystemFont_Group_Year.userControl_SystemFont.checkBox_addZero.Text =
                 checkBox_Year_add_zero.Text;
@@ -169,7 +169,7 @@ namespace AmazFit_Watchface_2
 
             AddDataDataGridView();
 #if DEBUG
-            tabControl1.SelectTab(1);
+            tabControl1.SelectTab("tabPageConverting");
             tabControl_EditParameters.SelectTab(4);
 #endif
 
@@ -445,6 +445,7 @@ namespace AmazFit_Watchface_2
 
         private void SplashScreenStart()
         {
+            Logger.WriteLine("* SplashScreenStart");
             string splashScreenPath = Application.StartupPath + @"\Tools\SplashScreen.exe";
             if (File.Exists(splashScreenPath))
             {
@@ -454,6 +455,7 @@ namespace AmazFit_Watchface_2
 
                 exeProcess.Dispose();
                 //exeProcess.CloseMainWindow();
+                Logger.WriteLine("* SplashScreenStart (end)");
             }
 
         }
@@ -528,10 +530,11 @@ namespace AmazFit_Watchface_2
         const UInt32 WM_CLOSE = 0x0010;
         private void Form1_Load(object sender, EventArgs e)
         {
-            Logger.WriteLine("* Form1_Load ");
+            Logger.WriteLine("* Form1_Load");
             IntPtr windowPtr = FindWindowByCaption(IntPtr.Zero, "AmazFit WatchFace editor SplashScreen");
             if (windowPtr != IntPtr.Zero)
             {
+                Logger.WriteLine("* SplashScreen_CLOSE");
                 SendMessage(windowPtr, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
             }
 
@@ -539,7 +542,7 @@ namespace AmazFit_Watchface_2
             //Logger.WriteLine("Form1_Load");
 
             string subPath = Application.StartupPath + @"\Tools\main.exe";
-            Logger.WriteLine("Set textBox.Text");
+            //Logger.WriteLine("Set textBox.Text");
             if (Program_Settings.pack_unpack_dir == null)
             {
                 Program_Settings.pack_unpack_dir = subPath;
@@ -551,7 +554,7 @@ namespace AmazFit_Watchface_2
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
             PreviewView = false;
-            Logger.WriteLine("Set Model");
+            Logger.WriteLine("Set Model_Watch");
             if (Program_Settings.Model_GTR2)
             {
                 radioButton_GTR2.Checked = true;
@@ -569,6 +572,12 @@ namespace AmazFit_Watchface_2
                 radioButton_TRex_pro.Checked = true;
                 Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
                 textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_TRex_pro;
+            }
+            else if (Program_Settings.Model_Zepp_E)
+            {
+                radioButton_ZeppE.Checked = true;
+                Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_Zepp_E;
             }
             checkBox_WatchSkin_Use.Checked = Program_Settings.WatchSkin_Use;
 
@@ -1631,11 +1640,39 @@ namespace AmazFit_Watchface_2
                         if (File.Exists(newFullName_bin))
                         {
                             Logger.WriteLine("newFullName_bin");
-                            if (checkBox_UseID.Checked)
+
+                            int ID = 0;
+                            try
+                            {
+                                string text = File.ReadAllText(fullfilename);
+                                WATCH_FACE_JSON Watch_Face_temp = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
+                                {
+                                    DefaultValueHandling = DefaultValueHandling.Ignore,
+                                    NullValueHandling = NullValueHandling.Ignore
+                                });
+                                if (Watch_Face_temp != null && Watch_Face_temp.Info != null &&
+                                    Watch_Face_temp.Info.WatchFaceId != null) ID = (int)Watch_Face_temp.Info.WatchFaceId;
+                                using (FileStream fileStream = File.OpenWrite(newFullName_bin))
+                                {
+                                    if (ID >= 1000)
+                                    {
+                                        byte[] arr = BitConverter.GetBytes(ID);
+                                        fileStream.Position = 18;
+                                        fileStream.WriteByte(arr[0]);
+                                        fileStream.WriteByte(arr[1]);
+                                        fileStream.WriteByte(arr[2]);
+                                        fileStream.WriteByte(arr[3]);
+                                        fileStream.Flush();
+                                    }
+                                }
+                            }
+                            catch {}
+
+                            if (ID < 1000 && checkBox_UseID.Checked)
                             {
                                 using (FileStream fileStream = File.OpenWrite(newFullName_bin))
                                 {
-                                    int ID = 0;
+                                    //int ID = 0;
                                     Int32.TryParse(textBox_WatchfaceID.Text, out ID);
                                     if (ID >= 1000)
                                     {
@@ -2272,6 +2309,10 @@ namespace AmazFit_Watchface_2
             {
                 bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
             }
+            if (radioButton_ZeppE.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
+            }
             Graphics gPanel = Graphics.FromImage(bitmap);
 #endregion
 
@@ -2654,6 +2695,8 @@ namespace AmazFit_Watchface_2
                         Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
                     if (Form_Preview.Model_Wath.model_TRex_pro != radioButton_TRex_pro.Checked)
                         Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
+                    if (Form_Preview.Model_Wath.model_Zepp_E != radioButton_ZeppE.Checked)
+                        Form_Preview.Model_Wath.model_Zepp_E = radioButton_ZeppE.Checked;
                     //Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
                     //gPanelPreviewResize.Clear(panel_Preview.BackColor);
                     //formPreview.radioButton_CheckedChanged(sender, e);
@@ -2680,6 +2723,10 @@ namespace AmazFit_Watchface_2
                     if (radioButton_TRex_pro.Checked)
                     {
                         bitmapPreviewResize = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_ZeppE.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
                     }
                     Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
                     #endregion
@@ -2729,6 +2776,8 @@ namespace AmazFit_Watchface_2
                 Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
             if (Form_Preview.Model_Wath.model_TRex_pro != radioButton_TRex_pro.Checked)
                 Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
+            if (Form_Preview.Model_Wath.model_Zepp_E != radioButton_ZeppE.Checked)
+                Form_Preview.Model_Wath.model_Zepp_E = radioButton_ZeppE.Checked;
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
 
@@ -2741,6 +2790,10 @@ namespace AmazFit_Watchface_2
             if (radioButton_TRex_pro.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_ZeppE.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
             #endregion
@@ -3433,6 +3486,11 @@ namespace AmazFit_Watchface_2
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
+                if (radioButton_ZeppE.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, false, link);
@@ -3466,6 +3524,11 @@ namespace AmazFit_Watchface_2
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                }
+                if (radioButton_ZeppE.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
                 }
                 Bitmap bitmapTemp = new Bitmap(bitmap.Width, bitmap.Height, PixelFormat.Format32bppArgb);
                 Graphics gPanel = Graphics.FromImage(bitmap);
@@ -3736,6 +3799,20 @@ namespace AmazFit_Watchface_2
             return image.ToBitmap();
         }
 
+        public Bitmap ApplyWidgetMask(Bitmap inputImage, int maskIndex)
+        {
+            Logger.WriteLine("* ApplyWidgetMask");
+            ImageMagick.MagickImage image = new ImageMagick.MagickImage(inputImage);
+            if (maskIndex >= 0 && maskIndex < ListImagesFullName.Count)
+            {
+                ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(ListImagesFullName[maskIndex]);
+                image.Composite(combineMask, ImageMagick.CompositeOperator.Xor, Channels.Alpha); 
+            }
+
+            Logger.WriteLine("* ApplyWidgetMask (end)");
+            return image.ToBitmap();
+        }
+
         // изменили модель часов
         private void radioButton_Model_Changed(object sender, EventArgs e)
         {
@@ -3759,6 +3836,12 @@ namespace AmazFit_Watchface_2
                 Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
                 textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_TRex_pro;
             }
+            else if (radioButton_ZeppE.Checked)
+            {
+                pictureBox_Preview.Size = new Size((int)(211 * currentDPI), (int)(211 * currentDPI));
+                Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+                textBox_WatchSkin_Path.Text = Program_Settings.WatchSkin_Zepp_E;
+            }
 
             // изменяем размер панели для предпросмотра если она не влазит
             if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_GTR2.Top)
@@ -3780,6 +3863,8 @@ namespace AmazFit_Watchface_2
                     Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
                 if (Form_Preview.Model_Wath.model_TRex_pro != radioButton_TRex_pro.Checked)
                     Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
+                if (Form_Preview.Model_Wath.model_Zepp_E != radioButton_ZeppE.Checked)
+                    Form_Preview.Model_Wath.model_Zepp_E = radioButton_ZeppE.Checked;
                 formPreview.radioButton_CheckedChanged(sender, e);
             }
 
@@ -3787,6 +3872,7 @@ namespace AmazFit_Watchface_2
             Program_Settings.Model_GTR2e = radioButton_GTR2e.Checked;
             Program_Settings.Model_GTS2 = radioButton_GTS2.Checked;
             Program_Settings.Model_TRex_pro = radioButton_TRex_pro.Checked;
+            Program_Settings.Model_Zepp_E = radioButton_ZeppE.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -3823,6 +3909,10 @@ namespace AmazFit_Watchface_2
             else if (radioButton_TRex_pro.Checked)
             {
                 FormName = "T-Rex Pro watch face editor";
+            }
+            else if (radioButton_ZeppE.Checked)
+            {
+                FormName = "Zepp E Circle watch face editor";
             }
 
             if (FormNameSufix.Length == 0)
@@ -4882,25 +4972,30 @@ namespace AmazFit_Watchface_2
 
         private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            //if(e.TabPage.Name == "tabPageConverting")
-            //{
-            //    if (radioButton_GTR2.Checked)
-            //    {
-            //        radioButton_ConvertingInput_GTR47.Checked = true;
-            //        numericUpDown_ConvertingInput_Custom.Value = 454;
-            //    }
-            //    numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
-            //}
-            //if (FileName != null && FullFileDir != null)
-            //{
-            //    button_Converting.Enabled = true;
-            //    label486.Visible = false;
-            //}
-            //else
-            //{
-            //    button_Converting.Enabled = false;
-            //    label486.Visible = true;
-            //}
+            if (e.TabPage.Name == "tabPageConverting")
+            {
+                if (radioButton_GTR2.Checked)
+                {
+                    radioButton_ConvertingInput_GTR2.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 454;
+                }
+                if (radioButton_TRex_pro.Checked)
+                {
+                    radioButton_ConvertingInput_TRexPro.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 360;
+                }
+                numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
+            }
+            if (FileName != null && FullFileDir != null)
+            {
+                button_Converting.Enabled = true;
+                label486.Visible = false;
+            }
+            else
+            {
+                button_Converting.Enabled = false;
+                label486.Visible = true;
+            }
         }
 
         private void radioButton_ConvertingInput_Custom_CheckedChanged(object sender, EventArgs e)
@@ -4936,67 +5031,26 @@ namespace AmazFit_Watchface_2
                     }
                 }
                 
-                int DeviceId = 40;
-                string suffix = "_GTR_47";
+                int DeviceId = 59;
+                string suffix = "_GTR_2";
                 float scale = 1;
-                if (radioButton_ConvertingOutput_GTR42.Checked)
+                if (radioButton_ConvertingOutput_TRexPro.Checked)
                 {
-                    suffix = "_GTR_42";
-                    DeviceId = 42;
+                    suffix = "_T-Rex_Pro";
+                    DeviceId = 83;
                 }
-                if (radioButton_ConvertingOutput_TRex.Checked)
+                if (radioButton_ConvertingOutput_ZeppE.Checked)
                 {
-                    suffix = "_T-Rex";
-                    DeviceId = 52;
-                }
-                if (radioButton_ConvertingOutput_Verge.Checked)
-                {
-                    suffix = "_Verge_Lite";
-                    DeviceId = 32;
+                    suffix = "_Zepp_E";
+                    DeviceId = 60;
                 }
                 if (radioButton_ConvertingOutput_Custom.Checked)
                 {
-                    suffix = "_Custom";
+                    suffix = "_Custom_" + numericUpDown_ConvertingOutput_Custom.Value.ToString();
                     DeviceId = 0;
                 }
 
-                if (radioButton_ConvertingInput_GTR47.Checked)
-                {
-                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 454f;
-                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 454f;
-                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 454f;
-                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 454f;
-                    if (radioButton_ConvertingOutput_Custom.Checked)
-                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 454);
-                }
-                if (radioButton_ConvertingInput_GTR42.Checked)
-                {
-                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 390f;
-                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 390f;
-                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 390f;
-                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 390f;
-                    if (radioButton_ConvertingOutput_Custom.Checked)
-                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 390);
-                }
-                if (radioButton_ConvertingInput_TRex.Checked || radioButton_ConvertingInput_Verge.Checked)
-                {
-                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 360f;
-                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 360f;
-                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 360f;
-                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 360f;
-                    if (radioButton_ConvertingOutput_Custom.Checked)
-                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 360);
-                }
-                if (radioButton_ConvertingInput_Custom.Checked)
-                {
-                    float value = (float)numericUpDown_ConvertingInput_Custom.Value;
-                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / value;
-                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / value;
-                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / value;
-                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / value;
-                    if (radioButton_ConvertingOutput_Custom.Checked)
-                        scale = (float)numericUpDown_ConvertingOutput_Custom.Value / value;
-                }
+                scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / numericUpDown_ConvertingInput_Custom.Value);
 
                 string newFullDirName = FullFileDir + suffix;
                 string newDirName = Path.GetFileName(newFullDirName);
@@ -5087,684 +5141,860 @@ namespace AmazFit_Watchface_2
 
         private void JSON_Scale(float scale, int DeviceId)
         {
-            //if (Watch_Face == null) return;
-            //if (DeviceId != 0)
-            //{
-            //    if (Watch_Face.Info == null) Watch_Face.Info = new Device_Id();
-            //    Watch_Face.Info.DeviceId = DeviceId;
-            //}
-
-            //#region Time
-            //if (Watch_Face.Time != null)
-            //{
-            //    if (Watch_Face.Time.Hours != null)
-            //    {
-            //        if (Watch_Face.Time.Hours.Tens != null)
-            //        {
-            //            Watch_Face.Time.Hours.Tens.X = (int)Math.Round(Watch_Face.Time.Hours.Tens.X * scale);
-            //            Watch_Face.Time.Hours.Tens.Y = (int)Math.Round(Watch_Face.Time.Hours.Tens.Y * scale); 
-            //        }
-
-            //        if (Watch_Face.Time.Hours.Ones != null)
-            //        {
-            //            Watch_Face.Time.Hours.Ones.X = (int)Math.Round(Watch_Face.Time.Hours.Ones.X * scale);
-            //            Watch_Face.Time.Hours.Ones.Y = (int)Math.Round(Watch_Face.Time.Hours.Ones.Y * scale); 
-            //        }
-            //    }
-
-            //    if (Watch_Face.Time.Minutes != null)
-            //    {
-            //        if (Watch_Face.Time.Minutes.Tens != null)
-            //        {
-            //            Watch_Face.Time.Minutes.Tens.X = (int)Math.Round(Watch_Face.Time.Minutes.Tens.X * scale);
-            //            Watch_Face.Time.Minutes.Tens.Y = (int)Math.Round(Watch_Face.Time.Minutes.Tens.Y * scale); 
-            //        }
-
-            //        if (Watch_Face.Time.Minutes.Ones != null)
-            //        {
-            //            Watch_Face.Time.Minutes.Ones.X = (int)Math.Round(Watch_Face.Time.Minutes.Ones.X * scale);
-            //            Watch_Face.Time.Minutes.Ones.Y = (int)Math.Round(Watch_Face.Time.Minutes.Ones.Y * scale); 
-            //        }
-            //    }
-
-            //    if (Watch_Face.Time.Seconds != null)
-            //    {
-            //        if (Watch_Face.Time.Seconds.Tens != null)
-            //        {
-            //            Watch_Face.Time.Seconds.Tens.X = (int)Math.Round(Watch_Face.Time.Seconds.Tens.X * scale);
-            //            Watch_Face.Time.Seconds.Tens.Y = (int)Math.Round(Watch_Face.Time.Seconds.Tens.Y * scale); 
-            //        }
-
-            //        if (Watch_Face.Time.Seconds.Ones != null)
-            //        {
-            //            Watch_Face.Time.Seconds.Ones.X = (int)Math.Round(Watch_Face.Time.Seconds.Ones.X * scale);
-            //            Watch_Face.Time.Seconds.Ones.Y = (int)Math.Round(Watch_Face.Time.Seconds.Ones.Y * scale); 
-            //        }
-            //    }
-
-            //    if (Watch_Face.Time.Delimiter != null)
-            //    {
-            //        Watch_Face.Time.Delimiter.X = (int)Math.Round(Watch_Face.Time.Delimiter.X * scale);
-            //        Watch_Face.Time.Delimiter.Y = (int)Math.Round(Watch_Face.Time.Delimiter.Y * scale);
-            //    }
-
-            //    if (Watch_Face.Time.AmPm != null)
-            //    {
-            //        Watch_Face.Time.AmPm.X = (int)Math.Round(Watch_Face.Time.AmPm.X * scale);
-            //        Watch_Face.Time.AmPm.Y = (int)Math.Round(Watch_Face.Time.AmPm.Y * scale);
-            //    }
-            //}
-            //#endregion
-
-            //#region DateAmazfit
-            //if (Watch_Face.DateAmazfit != null)
-            //{
-            //    if (Watch_Face.DateAmazfit.WeekDay != null)
-            //    {
-            //        Watch_Face.DateAmazfit.WeekDay.X = (int)Math.Round(Watch_Face.DateAmazfit.WeekDay.X * scale);
-            //        Watch_Face.DateAmazfit.WeekDay.Y = (int)Math.Round(Watch_Face.DateAmazfit.WeekDay.Y * scale);
-            //    }
-
-            //    if ((Watch_Face.DateAmazfit.WeekDayProgress != null) && (Watch_Face.DateAmazfit.WeekDayProgress.Coordinates != null))
-            //    {
-            //        foreach (Coordinates coordinates in Watch_Face.DateAmazfit.WeekDayProgress.Coordinates)
-            //        {
-            //            coordinates.X = (int)Math.Round(coordinates.X * scale);
-            //            coordinates.Y = (int)Math.Round(coordinates.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.DateAmazfit.MonthAndDay != null)
-            //    {
-            //        if ((Watch_Face.DateAmazfit.MonthAndDay.OneLine != null) && (Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number != null))
-            //        {
-            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftX =
-            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftX * scale);
-            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftY =
-            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.TopLeftY * scale);
-            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightX =
-            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightX * scale);
-            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightY =
-            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.BottomRightY * scale);
-            //            Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.Spacing =
-            //                (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.OneLine.Number.Spacing * scale);
-            //        }
-
-            //        if (Watch_Face.DateAmazfit.MonthAndDay.Separate != null)
-            //        {
-            //            if (Watch_Face.DateAmazfit.MonthAndDay.Separate.Day != null)
-            //            {
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftX =
-            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftX * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftY =
-            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.TopLeftY * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightX =
-            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightX * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightY =
-            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.BottomRightY * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.Spacing =
-            //                     (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Day.Spacing * scale);
-            //            }
-
-            //            if (Watch_Face.DateAmazfit.MonthAndDay.Separate.Month != null)
-            //            {
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftX =
-            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftX * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftY =
-            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.TopLeftY * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightX =
-            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightX * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightY =
-            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.BottomRightY * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.Spacing =
-            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.Month.Spacing * scale);
-            //            }
-
-            //            if (Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName != null)
-            //            {
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.X = 
-            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.X * scale);
-            //                Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.Y = 
-            //                    (int)Math.Round(Watch_Face.DateAmazfit.MonthAndDay.Separate.MonthName.Y * scale);
-            //            }
-            //        }
-
-            //    }
-
-            //    if (Watch_Face.DateAmazfit.Year != null)
-            //    {
-            //        if ((Watch_Face.DateAmazfit.Year.OneLine != null) && (Watch_Face.DateAmazfit.Year.OneLine.Number != null))
-            //        {
-            //            Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftX = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftX * scale);
-            //            Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftY = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.TopLeftY * scale);
-            //            Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightX = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightX * scale);
-            //            Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightY = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.BottomRightY * scale);
-            //            Watch_Face.DateAmazfit.Year.OneLine.Number.Spacing = (int)Math.Round(Watch_Face.DateAmazfit.Year.OneLine.Number.Spacing * scale);
-            //        }
-            //    }
-            //}
-            //#endregion
-
-            //#region AnalogDate
-            //if (Watch_Face.DaysProgress != null)
-            //{
-            //    if ((Watch_Face.DaysProgress.UnknownField2 != null) && (Watch_Face.DaysProgress.UnknownField2.Image != null))
-            //    {
-            //        Watch_Face.DaysProgress.UnknownField2.Image.X = (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.Image.X * scale);
-            //        Watch_Face.DaysProgress.UnknownField2.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.Image.Y * scale);
-            //        if (Watch_Face.DaysProgress.UnknownField2.CenterOffset != null)
-            //        {
-            //            Watch_Face.DaysProgress.UnknownField2.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.CenterOffset.X * scale);
-            //            Watch_Face.DaysProgress.UnknownField2.CenterOffset.Y = 
-            //                (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.CenterOffset.Y * scale);
-
-            //        }
-            //    }
-
-            //    if ((Watch_Face.DaysProgress.AnalogDOW != null) && (Watch_Face.DaysProgress.AnalogDOW.Image != null))
-            //    {
-            //        Watch_Face.DaysProgress.AnalogDOW.Image.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.Image.X * scale);
-            //        Watch_Face.DaysProgress.AnalogDOW.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.Image.Y * scale);
-            //        if (Watch_Face.DaysProgress.AnalogDOW.CenterOffset != null)
-            //        {
-            //            Watch_Face.DaysProgress.AnalogDOW.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.CenterOffset.X * scale);
-            //            Watch_Face.DaysProgress.AnalogDOW.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.CenterOffset.Y * scale);
-
-            //        }
-            //    }
-
-            //    if ((Watch_Face.DaysProgress.AnalogMonth != null) && (Watch_Face.DaysProgress.AnalogMonth.Image != null))
-            //    {
-            //        Watch_Face.DaysProgress.AnalogMonth.Image.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.Image.X * scale);
-            //        Watch_Face.DaysProgress.AnalogMonth.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.Image.Y * scale);
-            //        if (Watch_Face.DaysProgress.AnalogMonth.CenterOffset != null)
-            //        {
-            //            Watch_Face.DaysProgress.AnalogMonth.CenterOffset.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.CenterOffset.X * scale);
-            //            Watch_Face.DaysProgress.AnalogMonth.CenterOffset.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //}
-            //#endregion
-
-            //#region StepsProgress
-            //if (Watch_Face.StepsProgress != null)
-            //{
-            //    if (Watch_Face.StepsProgress.WeekDayProgressBar != null)
-            //    {
-            //        Watch_Face.StepsProgress.WeekDayProgressBar.CenterX = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.CenterX * scale);
-            //        Watch_Face.StepsProgress.WeekDayProgressBar.CenterY = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.CenterY * scale);
-            //        Watch_Face.StepsProgress.WeekDayProgressBar.RadiusX = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.RadiusX * scale);
-            //        Watch_Face.StepsProgress.WeekDayProgressBar.RadiusY = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.RadiusY * scale);
-            //        Watch_Face.StepsProgress.WeekDayProgressBar.Width = (int)Math.Round(Watch_Face.StepsProgress.WeekDayProgressBar.Width * scale);
-            //        if (Watch_Face.StepsProgress.WeekDayProgressBar.ImageIndex != null)
-            //        {
-            //            int x = 0;
-            //            int y = 0;
-            //            Color new_color = ColorRead(Watch_Face.StepsProgress.WeekDayProgressBar.Color);
-            //            ColorToCoodinates(new_color, out x, out y);
-            //            x = (int)Math.Round(x * scale);
-            //            y = (int)Math.Round(y * scale);
-            //            string colorStr = CoodinatesToColor(x, y);
-            //            Watch_Face.StepsProgress.WeekDayProgressBar.Color = colorStr;
-            //        }
-            //    }
-
-            //    if ((Watch_Face.StepsProgress.WeekDayClockHand != null) && (Watch_Face.StepsProgress.WeekDayClockHand.Image != null))
-            //    {
-            //        Watch_Face.StepsProgress.WeekDayClockHand.Image.X = (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.Image.X * scale);
-            //        Watch_Face.StepsProgress.WeekDayClockHand.Image.Y = (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.Image.Y * scale);
-            //        if (Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset != null)
-            //        {
-            //            Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.X * scale);
-            //            Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.StepsProgress.WeekDayClockHand.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //    if ((Watch_Face.StepsProgress.Sliced != null) && (Watch_Face.StepsProgress.Sliced.Coordinates != null))
-            //    {
-            //        foreach (Coordinates coordinates in Watch_Face.StepsProgress.Sliced.Coordinates)
-            //        {
-            //            coordinates.X = (int)Math.Round(coordinates.X * scale);
-            //            coordinates.Y = (int)Math.Round(coordinates.Y * scale);
-            //        }
-            //    }
-            //}
-            //#endregion
-
-            //#region Activity
-            //if (Watch_Face.Activity != null)
-            //{
-            //    if ((Watch_Face.Activity.StepsGoal != null))
-            //    {
-            //        Watch_Face.Activity.StepsGoal.TopLeftX = (int)Math.Round(Watch_Face.Activity.StepsGoal.TopLeftX * scale);
-            //        Watch_Face.Activity.StepsGoal.TopLeftY = (int)Math.Round(Watch_Face.Activity.StepsGoal.TopLeftY * scale);
-            //        Watch_Face.Activity.StepsGoal.BottomRightX = (int)Math.Round(Watch_Face.Activity.StepsGoal.BottomRightX * scale);
-            //        Watch_Face.Activity.StepsGoal.BottomRightY = (int)Math.Round(Watch_Face.Activity.StepsGoal.BottomRightY * scale);
-            //        Watch_Face.Activity.StepsGoal.Spacing = (int)Math.Round(Watch_Face.Activity.StepsGoal.Spacing * scale);
-            //    }
-
-            //    if ((Watch_Face.Activity.Steps != null) && (Watch_Face.Activity.Steps.Step != null))
-            //    {
-            //        Watch_Face.Activity.Steps.Step.TopLeftX = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftX * scale);
-            //        Watch_Face.Activity.Steps.Step.TopLeftY = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftY * scale);
-            //        Watch_Face.Activity.Steps.Step.BottomRightX = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightX * scale);
-            //        Watch_Face.Activity.Steps.Step.BottomRightY = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightY * scale);
-            //        Watch_Face.Activity.Steps.Step.Spacing = (int)Math.Round(Watch_Face.Activity.Steps.Step.Spacing * scale);
-            //    }
-
-            //    if ((Watch_Face.Activity.Distance != null) && (Watch_Face.Activity.Distance.Number != null))
-            //    {
-            //        Watch_Face.Activity.Distance.Number.TopLeftX = (int)Math.Round(Watch_Face.Activity.Distance.Number.TopLeftX * scale);
-            //        Watch_Face.Activity.Distance.Number.TopLeftY = (int)Math.Round(Watch_Face.Activity.Distance.Number.TopLeftY * scale);
-            //        Watch_Face.Activity.Distance.Number.BottomRightX = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightX * scale);
-            //        Watch_Face.Activity.Distance.Number.BottomRightY = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightY * scale);
-            //        Watch_Face.Activity.Distance.Number.Spacing = (int)Math.Round(Watch_Face.Activity.Distance.Number.Spacing * scale);
-            //    }
-
-            //    if (Watch_Face.Activity.HeartRate != null)
-            //    {
-            //        Watch_Face.Activity.HeartRate.TopLeftX = (int)Math.Round(Watch_Face.Activity.HeartRate.TopLeftX * scale);
-            //        Watch_Face.Activity.HeartRate.TopLeftY = (int)Math.Round(Watch_Face.Activity.HeartRate.TopLeftY * scale);
-            //        Watch_Face.Activity.HeartRate.BottomRightX = (int)Math.Round(Watch_Face.Activity.HeartRate.BottomRightX * scale);
-            //        Watch_Face.Activity.HeartRate.BottomRightY = (int)Math.Round(Watch_Face.Activity.HeartRate.BottomRightY * scale);
-            //        Watch_Face.Activity.HeartRate.Spacing = (int)Math.Round(Watch_Face.Activity.HeartRate.Spacing * scale);
-            //    }
-
-            //    if (Watch_Face.Activity.PulseMeter != null)
-            //    {
-            //        Watch_Face.Activity.PulseMeter.CenterX = (int)Math.Round(Watch_Face.Activity.PulseMeter.CenterX * scale);
-            //        Watch_Face.Activity.PulseMeter.CenterY = (int)Math.Round(Watch_Face.Activity.PulseMeter.CenterY * scale);
-            //        Watch_Face.Activity.PulseMeter.RadiusX = (int)Math.Round(Watch_Face.Activity.PulseMeter.RadiusX * scale);
-            //        Watch_Face.Activity.PulseMeter.RadiusY = (int)Math.Round(Watch_Face.Activity.PulseMeter.RadiusY * scale);
-            //        Watch_Face.Activity.PulseMeter.Width = (int)Math.Round(Watch_Face.Activity.PulseMeter.Width * scale);
-            //        if (Watch_Face.Activity.PulseMeter.ImageIndex != null)
-            //        {
-            //            int x = 0;
-            //            int y = 0;
-            //            Color new_color = ColorRead(Watch_Face.Activity.PulseMeter.Color);
-            //            ColorToCoodinates(new_color, out x, out y);
-            //            x = (int)Math.Round(x * scale);
-            //            y = (int)Math.Round(y * scale);
-            //            string colorStr = CoodinatesToColor(x, y);
-            //            Watch_Face.Activity.PulseMeter.Color = colorStr;
-            //        }
-            //    }
-
-            //    if ((Watch_Face.Activity.PulseGraph != null) &&
-            //        (Watch_Face.Activity.PulseGraph.WeekDayClockHand != null) &&
-            //        (Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image != null))
-            //    {
-            //        Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.X * scale);
-            //        Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.Image.Y * scale);
-            //        if (Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset != null)
-            //        {
-            //            Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.X * scale);
-            //            Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.Activity.PulseGraph.WeekDayClockHand.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //    if ((Watch_Face.Activity.ColouredSquares != null) &&
-            //        (Watch_Face.Activity.ColouredSquares.Coordinates != null))
-            //    {
-            //        foreach (Coordinates coordinates in Watch_Face.Activity.ColouredSquares.Coordinates)
-            //        {
-            //            coordinates.X = (int)Math.Round(coordinates.X * scale);
-            //            coordinates.Y = (int)Math.Round(coordinates.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.Activity.Calories != null)
-            //    {
-            //        Watch_Face.Activity.Calories.TopLeftX = (int)Math.Round(Watch_Face.Activity.Calories.TopLeftX * scale);
-            //        Watch_Face.Activity.Calories.TopLeftY = (int)Math.Round(Watch_Face.Activity.Calories.TopLeftY * scale);
-            //        Watch_Face.Activity.Calories.BottomRightX = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightX * scale);
-            //        Watch_Face.Activity.Calories.BottomRightY = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightY * scale);
-            //        Watch_Face.Activity.Calories.Spacing = (int)Math.Round(Watch_Face.Activity.Calories.Spacing * scale);
-            //    }
-                
-            //    if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar != null)
-            //    {
-            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterX * scale);
-            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.CenterY * scale);
-            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusX * scale);
-            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.RadiusY * scale);
-            //        Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Width = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Width * scale);
-            //        if (Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.ImageIndex != null)
-            //        {
-            //            int x = 0;
-            //            int y = 0;
-            //            Color new_color = ColorRead(Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Color);
-            //            ColorToCoodinates(new_color, out x, out y);
-            //            x = (int)Math.Round(x * scale);
-            //            y = (int)Math.Round(y * scale);
-            //            string colorStr = CoodinatesToColor(x, y);
-            //            Watch_Face.Activity.CaloriesGraph.WeekDayProgressBar.Color = colorStr;
-            //        }
-            //    }
-
-            //    if ((Watch_Face.Activity.CaloriesGraph != null) &&
-            //        (Watch_Face.Activity.CaloriesGraph.WeekDayClockHand != null) &&
-            //        (Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image != null))
-            //    {
-            //        Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.X * scale);
-            //        Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.Image.Y * scale);
-            //        if (Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset != null)
-            //        {
-            //            Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.X * scale);
-            //            Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.Activity.CaloriesGraph.WeekDayClockHand.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.Activity.StarImage != null)
-            //    {
-            //        Watch_Face.Activity.StarImage.X = (int)Math.Round(Watch_Face.Activity.StarImage.X * scale);
-            //        Watch_Face.Activity.StarImage.Y = (int)Math.Round(Watch_Face.Activity.StarImage.Y * scale);
-            //    }
-            //}
-            //#endregion
-
-            //#region Status
-            //if (Watch_Face.Status != null)
-            //{
-            //    if (Watch_Face.Status.Bluetooth != null)
-            //    {
-            //        if (Watch_Face.Status.Bluetooth.Coordinates != null)
-            //        {
-            //            Watch_Face.Status.Bluetooth.Coordinates.X = (int)Math.Round(Watch_Face.Status.Bluetooth.Coordinates.X * scale);
-            //            Watch_Face.Status.Bluetooth.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Bluetooth.Coordinates.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.Status.Alarm != null)
-            //    {
-            //        if (Watch_Face.Status.Alarm.Coordinates != null)
-            //        {
-            //            Watch_Face.Status.Alarm.Coordinates.X = (int)Math.Round(Watch_Face.Status.Alarm.Coordinates.X * scale);
-            //            Watch_Face.Status.Alarm.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Alarm.Coordinates.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.Status.Lock != null)
-            //    {
-            //        if (Watch_Face.Status.Lock.Coordinates != null)
-            //        {
-            //            Watch_Face.Status.Lock.Coordinates.X = (int)Math.Round(Watch_Face.Status.Lock.Coordinates.X * scale);
-            //            Watch_Face.Status.Lock.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Lock.Coordinates.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.Status.DoNotDisturb != null)
-            //    {
-            //        if (Watch_Face.Status.DoNotDisturb.Coordinates != null)
-            //        {
-            //            Watch_Face.Status.DoNotDisturb.Coordinates.X = (int)Math.Round(Watch_Face.Status.DoNotDisturb.Coordinates.X * scale);
-            //            Watch_Face.Status.DoNotDisturb.Coordinates.Y = (int)Math.Round(Watch_Face.Status.DoNotDisturb.Coordinates.Y * scale);
-            //        }
-            //    }
-            //}
-            //#endregion
-
-            //#region Battery
-            //if (Watch_Face.Battery != null)
-            //{
-            //    if (Watch_Face.Battery.Text != null)
-            //    {
-            //        Watch_Face.Battery.Text.TopLeftX = (int)Math.Round(Watch_Face.Battery.Text.TopLeftX * scale);
-            //        Watch_Face.Battery.Text.TopLeftY = (int)Math.Round(Watch_Face.Battery.Text.TopLeftY * scale);
-            //        Watch_Face.Battery.Text.BottomRightX = (int)Math.Round(Watch_Face.Battery.Text.BottomRightX * scale);
-            //        Watch_Face.Battery.Text.BottomRightY = (int)Math.Round(Watch_Face.Battery.Text.BottomRightY * scale);
-            //        Watch_Face.Battery.Text.Spacing = (int)Math.Round(Watch_Face.Battery.Text.Spacing * scale);
-            //    }
-
-            //    if (Watch_Face.Battery.Images != null)
-            //    {
-            //        Watch_Face.Battery.Images.X = (int)Math.Round(Watch_Face.Battery.Images.X * scale);
-            //        Watch_Face.Battery.Images.Y = (int)Math.Round(Watch_Face.Battery.Images.Y * scale);
-            //    }
-
-            //    if ((Watch_Face.Battery.Unknown4 != null) && (Watch_Face.Battery.Unknown4.Image != null))
-            //    {
-            //        Watch_Face.Battery.Unknown4.Image.X = (int)Math.Round(Watch_Face.Battery.Unknown4.Image.X * scale);
-            //        Watch_Face.Battery.Unknown4.Image.Y = (int)Math.Round(Watch_Face.Battery.Unknown4.Image.Y * scale);
-            //        if (Watch_Face.Battery.Unknown4.CenterOffset != null)
-            //        {
-            //            Watch_Face.Battery.Unknown4.CenterOffset.X =
-            //                 (int)Math.Round(Watch_Face.Battery.Unknown4.CenterOffset.X * scale);
-            //            Watch_Face.Battery.Unknown4.CenterOffset.Y =
-            //                 (int)Math.Round(Watch_Face.Battery.Unknown4.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.Battery.Percent != null)
-            //    {
-            //        Watch_Face.Battery.Percent.X = (int)Math.Round(Watch_Face.Battery.Percent.X * scale);
-            //        Watch_Face.Battery.Percent.Y = (int)Math.Round(Watch_Face.Battery.Percent.Y * scale);
-            //    }
-
-            //    if (Watch_Face.Battery.Scale != null)
-            //    {
-            //        Watch_Face.Battery.Scale.CenterX = (int)Math.Round(Watch_Face.Battery.Scale.CenterX * scale);
-            //        Watch_Face.Battery.Scale.CenterY = (int)Math.Round(Watch_Face.Battery.Scale.CenterY * scale);
-            //        Watch_Face.Battery.Scale.RadiusX = (int)Math.Round(Watch_Face.Battery.Scale.RadiusX * scale);
-            //        Watch_Face.Battery.Scale.RadiusY = (int)Math.Round(Watch_Face.Battery.Scale.RadiusY * scale);
-            //        Watch_Face.Battery.Scale.Width = (int)Math.Round(Watch_Face.Battery.Scale.Width * scale);
-            //        if (Watch_Face.Battery.Scale.ImageIndex != null)
-            //        {
-            //            int x = 0;
-            //            int y = 0;
-            //            Color new_color = ColorRead(Watch_Face.Battery.Scale.Color);
-            //            ColorToCoodinates(new_color, out x, out y);
-            //            x = (int)Math.Round(x * scale);
-            //            y = (int)Math.Round(y * scale);
-            //            string colorStr = CoodinatesToColor(x, y);
-            //            Watch_Face.Battery.Scale.Color = colorStr;
-            //        }
-            //    }
-
-            //    if ((Watch_Face.Battery.Icons != null) && (Watch_Face.Battery.Icons.Coordinates != null))
-            //    {
-            //        foreach (Coordinates coordinates in Watch_Face.Battery.Icons.Coordinates)
-            //        {
-            //            coordinates.X = (int)Math.Round(coordinates.X * scale);
-            //            coordinates.Y = (int)Math.Round(coordinates.Y * scale);
-            //        }
-            //    }
-            //}
-            //#endregion
-
-            //#region MonthClockHand
-            //if (Watch_Face.MonthClockHand != null)
-            //{
-            //    if ((Watch_Face.MonthClockHand.Hours != null) && (Watch_Face.MonthClockHand.Hours.Image != null))
-            //    {
-            //        Watch_Face.MonthClockHand.Hours.Image.X = (int)Math.Round(Watch_Face.MonthClockHand.Hours.Image.X * scale);
-            //        Watch_Face.MonthClockHand.Hours.Image.Y = (int)Math.Round(Watch_Face.MonthClockHand.Hours.Image.Y * scale);
-
-            //        if (Watch_Face.MonthClockHand.Hours.CenterOffset != null)
-            //        {
-            //            Watch_Face.MonthClockHand.Hours.CenterOffset.X = 
-            //                (int)Math.Round(Watch_Face.MonthClockHand.Hours.CenterOffset.X * scale);
-            //            Watch_Face.MonthClockHand.Hours.CenterOffset.Y = 
-            //                (int)Math.Round(Watch_Face.MonthClockHand.Hours.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //    if ((Watch_Face.MonthClockHand.Minutes != null) && (Watch_Face.MonthClockHand.Minutes.Image != null))
-            //    {
-            //        Watch_Face.MonthClockHand.Minutes.Image.X = (int)Math.Round(Watch_Face.MonthClockHand.Minutes.Image.X * scale);
-            //        Watch_Face.MonthClockHand.Minutes.Image.Y = (int)Math.Round(Watch_Face.MonthClockHand.Minutes.Image.Y * scale);
-
-            //        if (Watch_Face.MonthClockHand.Minutes.CenterOffset != null)
-            //        {
-            //            Watch_Face.MonthClockHand.Minutes.CenterOffset.X =
-            //                 (int)Math.Round(Watch_Face.MonthClockHand.Minutes.CenterOffset.X * scale);
-            //            Watch_Face.MonthClockHand.Minutes.CenterOffset.Y =
-            //                 (int)Math.Round(Watch_Face.MonthClockHand.Minutes.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //    if ((Watch_Face.MonthClockHand.Seconds != null) && (Watch_Face.MonthClockHand.Seconds.Image != null))
-            //    {
-            //        Watch_Face.MonthClockHand.Seconds.Image.X = (int)Math.Round(Watch_Face.MonthClockHand.Seconds.Image.X * scale);
-            //        Watch_Face.MonthClockHand.Seconds.Image.Y = (int)Math.Round(Watch_Face.MonthClockHand.Seconds.Image.Y * scale);
-
-            //        if (Watch_Face.MonthClockHand.Seconds.CenterOffset != null)
-            //        {
-            //            Watch_Face.MonthClockHand.Seconds.CenterOffset.X =
-            //                (int)Math.Round(Watch_Face.MonthClockHand.Seconds.CenterOffset.X * scale);
-            //            Watch_Face.MonthClockHand.Seconds.CenterOffset.Y =
-            //                (int)Math.Round(Watch_Face.MonthClockHand.Seconds.CenterOffset.Y * scale);
-            //        }
-            //    }
-
-            //    if (Watch_Face.MonthClockHand.HourCenterImage != null)
-            //    {
-            //        Watch_Face.MonthClockHand.HourCenterImage.X = (int)Math.Round(Watch_Face.MonthClockHand.HourCenterImage.X * scale);
-            //        Watch_Face.MonthClockHand.HourCenterImage.Y = (int)Math.Round(Watch_Face.MonthClockHand.HourCenterImage.Y * scale);
-            //    }
-
-            //    if (Watch_Face.MonthClockHand.MinCenterImage != null)
-            //    {
-            //        Watch_Face.MonthClockHand.MinCenterImage.X = (int)Math.Round(Watch_Face.MonthClockHand.MinCenterImage.X * scale);
-            //        Watch_Face.MonthClockHand.MinCenterImage.Y = (int)Math.Round(Watch_Face.MonthClockHand.MinCenterImage.Y * scale);
-            //    }
-
-            //    if (Watch_Face.MonthClockHand.SecCenterImage != null)
-            //    {
-            //        Watch_Face.MonthClockHand.SecCenterImage.X = (int)Math.Round(Watch_Face.MonthClockHand.SecCenterImage.X * scale);
-            //        Watch_Face.MonthClockHand.SecCenterImage.Y = (int)Math.Round(Watch_Face.MonthClockHand.SecCenterImage.Y * scale);
-            //    }
-            //}
-            //#endregion
-
-            //#region Weather
-            //if (Watch_Face.Weather != null)
-            //{
-            //    if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Current != null))
-            //    {
-            //        Watch_Face.Weather.Temperature.Current.TopLeftX = (int)Math.Round(Watch_Face.Weather.Temperature.Current.TopLeftX * scale);
-            //        Watch_Face.Weather.Temperature.Current.TopLeftY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.TopLeftY * scale);
-            //        Watch_Face.Weather.Temperature.Current.BottomRightX = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightX * scale);
-            //        Watch_Face.Weather.Temperature.Current.BottomRightY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightY * scale);
-            //        Watch_Face.Weather.Temperature.Current.Spacing = (int)Math.Round(Watch_Face.Weather.Temperature.Current.Spacing * scale);
-            //    }
-
-            //    if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Today != null))
-            //    {
-            //        if ((Watch_Face.Weather.Temperature.Today.Separate != null) &&
-            //            (Watch_Face.Weather.Temperature.Today.Separate.Day != null))
-            //        {
-            //            Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftX =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftX * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftY =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftY * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightX =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightX * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Day.Spacing =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.Spacing * scale);
-            //        }
-
-            //        if ((Watch_Face.Weather.Temperature.Today.Separate != null) &&
-            //            (Watch_Face.Weather.Temperature.Today.Separate.Night != null))
-            //        {
-            //            Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftX =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftX * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftY =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftY * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightX =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightX * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY * scale);
-            //            Watch_Face.Weather.Temperature.Today.Separate.Night.Spacing =
-            //                (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.Spacing * scale);
-            //        }
-            //    }
-
-            //    if ((Watch_Face.Weather.Icon != null) && (Watch_Face.Weather.Icon.Images != null))
-            //    {
-            //        Watch_Face.Weather.Icon.Images.X = (int)Math.Round(Watch_Face.Weather.Icon.Images.X * scale);
-            //        Watch_Face.Weather.Icon.Images.Y = (int)Math.Round(Watch_Face.Weather.Icon.Images.Y * scale);
-            //    }
-            //}
-            //#endregion
-
-            //#region Shortcuts
-            //if (Watch_Face.Shortcuts != null)
-            //{
-            //    if (Watch_Face.Shortcuts.State != null && Watch_Face.Shortcuts.State.Element != null)
-            //    {
-            //        Watch_Face.Shortcuts.State.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.State.Element.TopLeftX * scale);
-            //        Watch_Face.Shortcuts.State.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.State.Element.TopLeftY * scale);
-            //        Watch_Face.Shortcuts.State.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.State.Element.Width * scale);
-            //        Watch_Face.Shortcuts.State.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.State.Element.Height * scale);
-            //    }
-
-            //    if (Watch_Face.Shortcuts.HeartRate != null && Watch_Face.Shortcuts.HeartRate.Element != null)
-            //    {
-            //        Watch_Face.Shortcuts.HeartRate.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.TopLeftX * scale);
-            //        Watch_Face.Shortcuts.HeartRate.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.TopLeftY * scale);
-            //        Watch_Face.Shortcuts.HeartRate.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.Width * scale);
-            //        Watch_Face.Shortcuts.HeartRate.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.HeartRate.Element.Height * scale);
-            //    }
-
-            //    if (Watch_Face.Shortcuts.Weather != null && Watch_Face.Shortcuts.Weather.Element != null)
-            //    {
-            //        Watch_Face.Shortcuts.Weather.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.TopLeftX * scale);
-            //        Watch_Face.Shortcuts.Weather.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.TopLeftY * scale);
-            //        Watch_Face.Shortcuts.Weather.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.Width * scale);
-            //        Watch_Face.Shortcuts.Weather.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.Height * scale);
-            //    }
-
-            //    if (Watch_Face.Shortcuts.Unknown4 != null && Watch_Face.Shortcuts.Unknown4.Element != null)
-            //    {
-            //        Watch_Face.Shortcuts.Unknown4.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftX * scale);
-            //        Watch_Face.Shortcuts.Unknown4.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftY * scale);
-            //        Watch_Face.Shortcuts.Unknown4.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Width * scale);
-            //        Watch_Face.Shortcuts.Unknown4.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Height * scale);
-            //    }
-            //}
-            //#endregion
-
-            //#region Animation
-            //if (Watch_Face.Unknown11 != null)
-            //{
-            //    // покадровая анимация
-            //    if (Watch_Face.Unknown11.Unknown11_2 != null && Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 != null)
-            //    {
-            //        Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X = (int)Math.Round(Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X * scale);
-            //        Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y = (int)Math.Round(Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y * scale);
-            //    }
-
-            //    // перемещение между координатами
-            //    if (Watch_Face.Unknown11.Unknown11_1 != null)
-            //    {
-            //        foreach (MotiomAnimation MotiomAnimation in Watch_Face.Unknown11.Unknown11_1)
-            //        {
-            //            if (MotiomAnimation.Unknown11d1p2 != null && MotiomAnimation.Unknown11d1p3 != null)
-            //            {
-            //                MotiomAnimation.Unknown11d1p2.X = (int)Math.Round(MotiomAnimation.Unknown11d1p2.X * scale);
-            //                MotiomAnimation.Unknown11d1p2.Y = (int)Math.Round(MotiomAnimation.Unknown11d1p2.Y * scale);
-            //                MotiomAnimation.Unknown11d1p3.X = (int)Math.Round(MotiomAnimation.Unknown11d1p3.X * scale);
-            //                MotiomAnimation.Unknown11d1p3.Y = (int)Math.Round(MotiomAnimation.Unknown11d1p3.Y * scale);
-            //            }
-            //        }
-            //    }
-            //}
-            //#endregion
+            if (Watch_Face == null) return;
+            if (DeviceId != 0)
+            {
+                if (Watch_Face.Info == null) Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = DeviceId;
+            }
+
+            #region Time
+            if (Watch_Face.DialFace != null)
+            {
+                if (Watch_Face.DialFace.AnalogDialFace != null)
+                {
+                    if (Watch_Face.DialFace.AnalogDialFace.Hours != null) Watch_Face.DialFace.AnalogDialFace.Hours =
+                            ClockHand_Scale(Watch_Face.DialFace.AnalogDialFace.Hours, scale);
+
+                    if (Watch_Face.DialFace.AnalogDialFace.Minutes != null) Watch_Face.DialFace.AnalogDialFace.Minutes =
+                            ClockHand_Scale(Watch_Face.DialFace.AnalogDialFace.Minutes, scale);
+
+                    if (Watch_Face.DialFace.AnalogDialFace.Seconds != null) Watch_Face.DialFace.AnalogDialFace.Seconds = 
+                            ClockHand_Scale(Watch_Face.DialFace.AnalogDialFace.Seconds, scale);
+                }
+
+                if (Watch_Face.DialFace.DigitalDialFace != null)
+                {
+                    if(Watch_Face.DialFace.DigitalDialFace.Digits != null)
+                    {
+                        foreach (DigitalTimeDigit digitalTimeDigit in Watch_Face.DialFace.DigitalDialFace.Digits)
+                        {
+                            if(digitalTimeDigit.Digit != null)
+                            {
+                                if (digitalTimeDigit.Digit.Image != null) 
+                                {
+                                    if(digitalTimeDigit.Digit.Image.DecimalPointImageIndex != null)
+                                        digitalTimeDigit.Digit.Image.DecimalPointImageIndex =
+                                            (int)Math.Round((int)digitalTimeDigit.Digit.Image.DecimalPointImageIndex * 
+                                            scale, MidpointRounding.AwayFromZero);
+                                    if (digitalTimeDigit.Digit.Image.DelimiterImageIndex != null)
+                                        digitalTimeDigit.Digit.Image.DelimiterImageIndex =
+                                            (int)Math.Round((int)digitalTimeDigit.Digit.Image.DelimiterImageIndex *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    if (digitalTimeDigit.Digit.Image.NoDataImageIndex != null)
+                                        digitalTimeDigit.Digit.Image.NoDataImageIndex =
+                                            (int)Math.Round((int)digitalTimeDigit.Digit.Image.NoDataImageIndex *
+                                            scale, MidpointRounding.AwayFromZero);
+
+                                    digitalTimeDigit.Digit.Image.X =
+                                        (int)Math.Round(digitalTimeDigit.Digit.Image.X * scale, MidpointRounding.AwayFromZero);
+                                    digitalTimeDigit.Digit.Image.Y =
+                                        (int)Math.Round(digitalTimeDigit.Digit.Image.Y * scale, MidpointRounding.AwayFromZero);
+
+                                }
+
+                                if (digitalTimeDigit.Digit.Spacing != null)
+                                    digitalTimeDigit.Digit.Spacing =
+                                        (int)Math.Round((int)digitalTimeDigit.Digit.Spacing * scale, MidpointRounding.AwayFromZero);
+
+                                if (digitalTimeDigit.Digit.SystemFont != null)
+                                {
+                                    digitalTimeDigit.Digit.SystemFont.Size = 
+                                        (int)Math.Round(digitalTimeDigit.Digit.SystemFont.Size * scale, MidpointRounding.AwayFromZero);
+
+                                    if (digitalTimeDigit.Digit.SystemFont.Coordinates != null)
+                                    {
+                                        digitalTimeDigit.Digit.SystemFont.Coordinates.X = 
+                                            (int)Math.Round(digitalTimeDigit.Digit.SystemFont.Coordinates.X * 
+                                            scale, MidpointRounding.AwayFromZero);
+                                        digitalTimeDigit.Digit.SystemFont.Coordinates.Y =
+                                            (int)Math.Round(digitalTimeDigit.Digit.SystemFont.Coordinates.Y *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    }
+
+                                    if (digitalTimeDigit.Digit.SystemFont.FontRotate != null)
+                                    {
+                                        digitalTimeDigit.Digit.SystemFont.FontRotate.Radius =
+                                            (int)Math.Round(digitalTimeDigit.Digit.SystemFont.FontRotate.Radius * 
+                                            scale, MidpointRounding.AwayFromZero);
+                                        digitalTimeDigit.Digit.SystemFont.FontRotate.X =
+                                            (int)Math.Round(digitalTimeDigit.Digit.SystemFont.FontRotate.X *
+                                            scale, MidpointRounding.AwayFromZero);
+                                        digitalTimeDigit.Digit.SystemFont.FontRotate.Y =
+                                            (int)Math.Round(digitalTimeDigit.Digit.SystemFont.FontRotate.Y *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    }
+                                }
+                            }
+
+                            if (digitalTimeDigit.Separator != null && digitalTimeDigit.Separator.Coordinates != null)
+                            {
+                                digitalTimeDigit.Separator.Coordinates.X =
+                                    (int)Math.Round(digitalTimeDigit.Separator.Coordinates.X *
+                                    scale, MidpointRounding.AwayFromZero);
+                                digitalTimeDigit.Separator.Coordinates.Y =
+                                    (int)Math.Round(digitalTimeDigit.Separator.Coordinates.Y *
+                                    scale, MidpointRounding.AwayFromZero);
+                            }
+                        }
+                    }
+                    
+                    if (Watch_Face.DialFace.DigitalDialFace.AM != null)
+                    {
+                        if (Watch_Face.DialFace.DigitalDialFace.AM.Coordinates != null)
+                        {
+                            Watch_Face.DialFace.DigitalDialFace.AM.Coordinates.X =
+                                (int)Math.Round(Watch_Face.DialFace.DigitalDialFace.AM.Coordinates.X *
+                                scale, MidpointRounding.AwayFromZero);
+                            Watch_Face.DialFace.DigitalDialFace.AM.Coordinates.Y =
+                                (int)Math.Round(Watch_Face.DialFace.DigitalDialFace.AM.Coordinates.Y *
+                                scale, MidpointRounding.AwayFromZero);
+                        }
+
+                    }
+
+                    if (Watch_Face.DialFace.DigitalDialFace.PM != null)
+                    {
+                        if (Watch_Face.DialFace.DigitalDialFace.PM.Coordinates != null)
+                        {
+                            Watch_Face.DialFace.DigitalDialFace.PM.Coordinates.X =
+                                (int)Math.Round(Watch_Face.DialFace.DigitalDialFace.PM.Coordinates.X *
+                                scale, MidpointRounding.AwayFromZero);
+                            Watch_Face.DialFace.DigitalDialFace.PM.Coordinates.Y =
+                                (int)Math.Round(Watch_Face.DialFace.DigitalDialFace.PM.Coordinates.Y *
+                                scale, MidpointRounding.AwayFromZero);
+                        }
+
+                    }
+                }
+            }
+            #endregion
+
+            #region Date
+            if (Watch_Face.System != null && Watch_Face.System.Date != null)
+            {
+                if (Watch_Face.System.Date.DateClockHand != null)
+                {
+                    if (Watch_Face.System.Date.DateClockHand.DayClockHand != null)
+                        Watch_Face.System.Date.DateClockHand.DayClockHand = 
+                            ClockHand_Scale(Watch_Face.System.Date.DateClockHand.DayClockHand, scale);
+
+                    if (Watch_Face.System.Date.DateClockHand.MonthClockHand != null)
+                        Watch_Face.System.Date.DateClockHand.MonthClockHand =
+                            ClockHand_Scale(Watch_Face.System.Date.DateClockHand.MonthClockHand, scale);
+
+                    if (Watch_Face.System.Date.DateClockHand.WeekDayClockHand != null)
+                        Watch_Face.System.Date.DateClockHand.WeekDayClockHand =
+                            ClockHand_Scale(Watch_Face.System.Date.DateClockHand.WeekDayClockHand, scale);
+                }
+
+                if (Watch_Face.System.Date.DateDigits != null)
+                {
+                    foreach (DigitalDateDigit digitalDateDigit in Watch_Face.System.Date.DateDigits)
+                    {
+                        if (digitalDateDigit.Digit != null)
+                        {
+                            if (digitalDateDigit.Digit.Image != null)
+                            {
+                                if (digitalDateDigit.Digit.Image.DecimalPointImageIndex != null)
+                                    digitalDateDigit.Digit.Image.DecimalPointImageIndex =
+                                        (int)Math.Round((int)digitalDateDigit.Digit.Image.DecimalPointImageIndex *
+                                        scale, MidpointRounding.AwayFromZero);
+                                if (digitalDateDigit.Digit.Image.DelimiterImageIndex != null)
+                                    digitalDateDigit.Digit.Image.DelimiterImageIndex =
+                                        (int)Math.Round((int)digitalDateDigit.Digit.Image.DelimiterImageIndex *
+                                        scale, MidpointRounding.AwayFromZero);
+                                if (digitalDateDigit.Digit.Image.NoDataImageIndex != null)
+                                    digitalDateDigit.Digit.Image.NoDataImageIndex =
+                                        (int)Math.Round((int)digitalDateDigit.Digit.Image.NoDataImageIndex *
+                                        scale, MidpointRounding.AwayFromZero);
+
+                                digitalDateDigit.Digit.Image.X =
+                                    (int)Math.Round(digitalDateDigit.Digit.Image.X * scale, MidpointRounding.AwayFromZero);
+                                digitalDateDigit.Digit.Image.Y =
+                                    (int)Math.Round(digitalDateDigit.Digit.Image.Y * scale, MidpointRounding.AwayFromZero);
+
+                            }
+
+                            if (digitalDateDigit.Digit.Spacing != null)
+                                digitalDateDigit.Digit.Spacing =
+                                    (int)Math.Round((int)digitalDateDigit.Digit.Spacing * scale, MidpointRounding.AwayFromZero);
+
+                            if (digitalDateDigit.Digit.SystemFont != null)
+                            {
+                                digitalDateDigit.Digit.SystemFont.Size =
+                                    (int)Math.Round(digitalDateDigit.Digit.SystemFont.Size * scale, MidpointRounding.AwayFromZero);
+
+                                if (digitalDateDigit.Digit.SystemFont.Coordinates != null)
+                                {
+                                    digitalDateDigit.Digit.SystemFont.Coordinates.X =
+                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.Coordinates.X *
+                                        scale, MidpointRounding.AwayFromZero);
+                                    digitalDateDigit.Digit.SystemFont.Coordinates.Y =
+                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.Coordinates.Y *
+                                        scale, MidpointRounding.AwayFromZero);
+                                }
+
+                                if (digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                {
+                                    digitalDateDigit.Digit.SystemFont.FontRotate.Radius =
+                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.Radius *
+                                        scale, MidpointRounding.AwayFromZero);
+                                    digitalDateDigit.Digit.SystemFont.FontRotate.X =
+                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.X *
+                                        scale, MidpointRounding.AwayFromZero);
+                                    digitalDateDigit.Digit.SystemFont.FontRotate.Y =
+                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.Y *
+                                        scale, MidpointRounding.AwayFromZero);
+                                }
+                            }
+                        }
+                        if (digitalDateDigit.Separator != null && digitalDateDigit.Separator.Coordinates != null)
+                        {
+                            digitalDateDigit.Separator.Coordinates.X =
+                                (int)Math.Round(digitalDateDigit.Separator.Coordinates.X *
+                                scale, MidpointRounding.AwayFromZero);
+                            digitalDateDigit.Separator.Coordinates.Y =
+                                (int)Math.Round(digitalDateDigit.Separator.Coordinates.Y *
+                                scale, MidpointRounding.AwayFromZero);
+                        }
+                    }
+                }
+
+                if (Watch_Face.System.Date.WeeksDigits != null)
+                {
+                    if (Watch_Face.System.Date.WeeksDigits.Digit != null) Watch_Face.System.Date.WeeksDigits.Digit =
+                            Digits_Scale(Watch_Face.System.Date.WeeksDigits.Digit, scale);
+
+                    if(Watch_Face.System.Date.WeeksDigits.Separator != null && 
+                        Watch_Face.System.Date.WeeksDigits.Separator.Coordinates != null)
+                    {
+                        Watch_Face.System.Date.WeeksDigits.Separator.Coordinates.X =
+                            (int)Math.Round(Watch_Face.System.Date.WeeksDigits.Separator.Coordinates.X * 
+                            scale, MidpointRounding.AwayFromZero);
+                        Watch_Face.System.Date.WeeksDigits.Separator.Coordinates.Y =
+                            (int)Math.Round(Watch_Face.System.Date.WeeksDigits.Separator.Coordinates.Y * 
+                            scale, MidpointRounding.AwayFromZero);
+                    }
+                }
+            }
+            #endregion
+
+            #region Status
+            if (Watch_Face.System != null && Watch_Face.System.Status != null)
+            {
+                if (Watch_Face.System.Status.Alarm != null &&
+                        Watch_Face.System.Status.Alarm.Coordinates != null)
+                {
+                    Watch_Face.System.Status.Alarm.Coordinates.X =
+                        (int)Math.Round(Watch_Face.System.Status.Alarm.Coordinates.X *
+                        scale, MidpointRounding.AwayFromZero);
+                    Watch_Face.System.Status.Alarm.Coordinates.Y =
+                        (int)Math.Round(Watch_Face.System.Status.Alarm.Coordinates.Y *
+                        scale, MidpointRounding.AwayFromZero);
+                }
+
+                if (Watch_Face.System.Status.Bluetooth != null &&
+                        Watch_Face.System.Status.Bluetooth.Coordinates != null)
+                {
+                    Watch_Face.System.Status.Bluetooth.Coordinates.X =
+                        (int)Math.Round(Watch_Face.System.Status.Bluetooth.Coordinates.X *
+                        scale, MidpointRounding.AwayFromZero);
+                    Watch_Face.System.Status.Bluetooth.Coordinates.Y =
+                        (int)Math.Round(Watch_Face.System.Status.Bluetooth.Coordinates.Y *
+                        scale, MidpointRounding.AwayFromZero);
+                }
+
+                if (Watch_Face.System.Status.DoNotDisturb != null &&
+                        Watch_Face.System.Status.DoNotDisturb.Coordinates != null)
+                {
+                    Watch_Face.System.Status.DoNotDisturb.Coordinates.X =
+                        (int)Math.Round(Watch_Face.System.Status.DoNotDisturb.Coordinates.X *
+                        scale, MidpointRounding.AwayFromZero);
+                    Watch_Face.System.Status.DoNotDisturb.Coordinates.Y =
+                        (int)Math.Round(Watch_Face.System.Status.DoNotDisturb.Coordinates.Y *
+                        scale, MidpointRounding.AwayFromZero);
+                }
+
+                if (Watch_Face.System.Status.Lock != null &&
+                        Watch_Face.System.Status.Lock.Coordinates != null)
+                {
+                    Watch_Face.System.Status.Lock.Coordinates.X =
+                        (int)Math.Round(Watch_Face.System.Status.Lock.Coordinates.X *
+                        scale, MidpointRounding.AwayFromZero);
+                    Watch_Face.System.Status.Lock.Coordinates.Y =
+                        (int)Math.Round(Watch_Face.System.Status.Lock.Coordinates.Y *
+                        scale, MidpointRounding.AwayFromZero);
+                }
+            }
+            #endregion
+
+            #region Activity 
+            if (Watch_Face.System != null && Watch_Face.System.Activity != null)
+            {
+                foreach (Activity activity in Watch_Face.System.Activity)
+                {
+                    Activity_Scale(activity, scale);
+                }
+            }
+            #endregion
+
+            #region Widgets 
+            if (Watch_Face.Widgets != null && Watch_Face.Widgets.Widget != null)
+            {
+                foreach (Widget widget in Watch_Face.Widgets.Widget)
+                {
+                    widget.Height = (int)Math.Round(widget.Height * scale, MidpointRounding.AwayFromZero);
+                    widget.Width = (int)Math.Round(widget.Width * scale, MidpointRounding.AwayFromZero);
+                    widget.X = (int)Math.Round(widget.X * scale, MidpointRounding.AwayFromZero);
+                    widget.Y = (int)Math.Round(widget.Y * scale, MidpointRounding.AwayFromZero);
+                    if(widget.WidgetElement != null)
+                    {
+                        foreach (WidgetElement widgetElement in widget.WidgetElement)
+                        {
+                            if(widgetElement.Activity != null)
+                                foreach (Activity activity in widgetElement.Activity)
+                                {
+                                    Activity_Scale(activity, scale);
+                                }
+
+                            if (widgetElement.Date != null)
+                            {
+                                if (widgetElement.Date.DateClockHand != null)
+                                {
+                                    if (widgetElement.Date.DateClockHand.DayClockHand != null)
+                                        widgetElement.Date.DateClockHand.DayClockHand =
+                                            ClockHand_Scale(widgetElement.Date.DateClockHand.DayClockHand, scale);
+
+                                    if (widgetElement.Date.DateClockHand.MonthClockHand != null)
+                                        widgetElement.Date.DateClockHand.MonthClockHand =
+                                            ClockHand_Scale(widgetElement.Date.DateClockHand.MonthClockHand, scale);
+
+                                    if (widgetElement.Date.DateClockHand.WeekDayClockHand != null)
+                                        widgetElement.Date.DateClockHand.WeekDayClockHand =
+                                            ClockHand_Scale(widgetElement.Date.DateClockHand.WeekDayClockHand, scale);
+                                }
+
+                                if (widgetElement.Date.DateDigits != null)
+                                {
+                                    foreach (DigitalDateDigit digitalDateDigit in widgetElement.Date.DateDigits)
+                                    {
+                                        if (digitalDateDigit.Digit != null)
+                                        {
+                                            if (digitalDateDigit.Digit.Image != null)
+                                            {
+                                                if (digitalDateDigit.Digit.Image.DecimalPointImageIndex != null)
+                                                    digitalDateDigit.Digit.Image.DecimalPointImageIndex =
+                                                        (int)Math.Round((int)digitalDateDigit.Digit.Image.DecimalPointImageIndex *
+                                                        scale, MidpointRounding.AwayFromZero);
+                                                if (digitalDateDigit.Digit.Image.DelimiterImageIndex != null)
+                                                    digitalDateDigit.Digit.Image.DelimiterImageIndex =
+                                                        (int)Math.Round((int)digitalDateDigit.Digit.Image.DelimiterImageIndex *
+                                                        scale, MidpointRounding.AwayFromZero);
+                                                if (digitalDateDigit.Digit.Image.NoDataImageIndex != null)
+                                                    digitalDateDigit.Digit.Image.NoDataImageIndex =
+                                                        (int)Math.Round((int)digitalDateDigit.Digit.Image.NoDataImageIndex *
+                                                        scale, MidpointRounding.AwayFromZero);
+
+                                                digitalDateDigit.Digit.Image.X =
+                                                    (int)Math.Round(digitalDateDigit.Digit.Image.X * scale, MidpointRounding.AwayFromZero);
+                                                digitalDateDigit.Digit.Image.Y =
+                                                    (int)Math.Round(digitalDateDigit.Digit.Image.Y * scale, MidpointRounding.AwayFromZero);
+
+                                            }
+
+                                            if (digitalDateDigit.Digit.Spacing != null)
+                                                digitalDateDigit.Digit.Spacing =
+                                                    (int)Math.Round((int)digitalDateDigit.Digit.Spacing * scale, MidpointRounding.AwayFromZero);
+
+                                            if (digitalDateDigit.Digit.SystemFont != null)
+                                            {
+                                                digitalDateDigit.Digit.SystemFont.Size =
+                                                    (int)Math.Round(digitalDateDigit.Digit.SystemFont.Size * scale, MidpointRounding.AwayFromZero);
+
+                                                if (digitalDateDigit.Digit.SystemFont.Coordinates != null)
+                                                {
+                                                    digitalDateDigit.Digit.SystemFont.Coordinates.X =
+                                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.Coordinates.X *
+                                                        scale, MidpointRounding.AwayFromZero);
+                                                    digitalDateDigit.Digit.SystemFont.Coordinates.Y =
+                                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.Coordinates.Y *
+                                                        scale, MidpointRounding.AwayFromZero);
+                                                }
+
+                                                if (digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                                {
+                                                    digitalDateDigit.Digit.SystemFont.FontRotate.Radius =
+                                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.Radius *
+                                                        scale, MidpointRounding.AwayFromZero);
+                                                    digitalDateDigit.Digit.SystemFont.FontRotate.X =
+                                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.X *
+                                                        scale, MidpointRounding.AwayFromZero);
+                                                    digitalDateDigit.Digit.SystemFont.FontRotate.Y =
+                                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.Y *
+                                                        scale, MidpointRounding.AwayFromZero);
+                                                }
+                                            }
+                                        }
+                                        if (digitalDateDigit.Separator != null && digitalDateDigit.Separator.Coordinates != null)
+                                        {
+                                            digitalDateDigit.Separator.Coordinates.X =
+                                                (int)Math.Round(digitalDateDigit.Separator.Coordinates.X *
+                                                scale, MidpointRounding.AwayFromZero);
+                                            digitalDateDigit.Separator.Coordinates.Y =
+                                                (int)Math.Round(digitalDateDigit.Separator.Coordinates.Y *
+                                                scale, MidpointRounding.AwayFromZero);
+                                        }
+                                    }
+                                }
+
+                                if (widgetElement.Date.WeeksDigits != null)
+                                {
+                                    if (widgetElement.Date.WeeksDigits.Digit != null) widgetElement.Date.WeeksDigits.Digit =
+                                            Digits_Scale(widgetElement.Date.WeeksDigits.Digit, scale);
+
+                                    if (widgetElement.Date.WeeksDigits.Separator != null &&
+                                        widgetElement.Date.WeeksDigits.Separator.Coordinates != null)
+                                    {
+                                        widgetElement.Date.WeeksDigits.Separator.Coordinates.X =
+                                            (int)Math.Round(widgetElement.Date.WeeksDigits.Separator.Coordinates.X *
+                                            scale, MidpointRounding.AwayFromZero);
+                                        widgetElement.Date.WeeksDigits.Separator.Coordinates.Y =
+                                            (int)Math.Round(widgetElement.Date.WeeksDigits.Separator.Coordinates.Y *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            #endregion
+
+            if (Watch_Face.ScreenIdle != null)
+            {
+                #region Time
+                if (Watch_Face.ScreenIdle.DialFace != null)
+                {
+                    if (Watch_Face.ScreenIdle.DialFace.AnalogDialFace != null)
+                    {
+                        if (Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Hours != null) Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Hours =
+                                ClockHand_Scale(Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Hours, scale);
+
+                        if (Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Minutes != null) Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Minutes =
+                                ClockHand_Scale(Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Minutes, scale);
+
+                        if (Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Seconds != null) Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Seconds =
+                                ClockHand_Scale(Watch_Face.ScreenIdle.DialFace.AnalogDialFace.Seconds, scale);
+                    }
+
+                    if (Watch_Face.ScreenIdle.DialFace.DigitalDialFace != null)
+                    {
+                        if (Watch_Face.ScreenIdle.DialFace.DigitalDialFace.Digits != null)
+                        {
+                            foreach (DigitalTimeDigit digitalTimeDigit in Watch_Face.ScreenIdle.DialFace.DigitalDialFace.Digits)
+                            {
+                                if (digitalTimeDigit.Digit != null)
+                                {
+                                    if (digitalTimeDigit.Digit.Image != null)
+                                    {
+                                        if (digitalTimeDigit.Digit.Image.DecimalPointImageIndex != null)
+                                            digitalTimeDigit.Digit.Image.DecimalPointImageIndex =
+                                                (int)Math.Round((int)digitalTimeDigit.Digit.Image.DecimalPointImageIndex *
+                                                scale, MidpointRounding.AwayFromZero);
+                                        if (digitalTimeDigit.Digit.Image.DelimiterImageIndex != null)
+                                            digitalTimeDigit.Digit.Image.DelimiterImageIndex =
+                                                (int)Math.Round((int)digitalTimeDigit.Digit.Image.DelimiterImageIndex *
+                                                scale, MidpointRounding.AwayFromZero);
+                                        if (digitalTimeDigit.Digit.Image.NoDataImageIndex != null)
+                                            digitalTimeDigit.Digit.Image.NoDataImageIndex =
+                                                (int)Math.Round((int)digitalTimeDigit.Digit.Image.NoDataImageIndex *
+                                                scale, MidpointRounding.AwayFromZero);
+
+                                        digitalTimeDigit.Digit.Image.X =
+                                            (int)Math.Round(digitalTimeDigit.Digit.Image.X * scale, MidpointRounding.AwayFromZero);
+                                        digitalTimeDigit.Digit.Image.Y =
+                                            (int)Math.Round(digitalTimeDigit.Digit.Image.Y * scale, MidpointRounding.AwayFromZero);
+
+                                    }
+
+                                    if (digitalTimeDigit.Digit.Spacing != null)
+                                        digitalTimeDigit.Digit.Spacing =
+                                            (int)Math.Round((int)digitalTimeDigit.Digit.Spacing * scale, MidpointRounding.AwayFromZero);
+
+                                    if (digitalTimeDigit.Digit.SystemFont != null)
+                                    {
+                                        digitalTimeDigit.Digit.SystemFont.Size =
+                                            (int)Math.Round(digitalTimeDigit.Digit.SystemFont.Size * scale, MidpointRounding.AwayFromZero);
+
+                                        if (digitalTimeDigit.Digit.SystemFont.Coordinates != null)
+                                        {
+                                            digitalTimeDigit.Digit.SystemFont.Coordinates.X =
+                                                (int)Math.Round(digitalTimeDigit.Digit.SystemFont.Coordinates.X *
+                                                scale, MidpointRounding.AwayFromZero);
+                                            digitalTimeDigit.Digit.SystemFont.Coordinates.Y =
+                                                (int)Math.Round(digitalTimeDigit.Digit.SystemFont.Coordinates.Y *
+                                                scale, MidpointRounding.AwayFromZero);
+                                        }
+
+                                        if (digitalTimeDigit.Digit.SystemFont.FontRotate != null)
+                                        {
+                                            digitalTimeDigit.Digit.SystemFont.FontRotate.Radius =
+                                                (int)Math.Round(digitalTimeDigit.Digit.SystemFont.FontRotate.Radius *
+                                                scale, MidpointRounding.AwayFromZero);
+                                            digitalTimeDigit.Digit.SystemFont.FontRotate.X =
+                                                (int)Math.Round(digitalTimeDigit.Digit.SystemFont.FontRotate.X *
+                                                scale, MidpointRounding.AwayFromZero);
+                                            digitalTimeDigit.Digit.SystemFont.FontRotate.Y =
+                                                (int)Math.Round(digitalTimeDigit.Digit.SystemFont.FontRotate.Y *
+                                                scale, MidpointRounding.AwayFromZero);
+                                        }
+                                    }
+                                }
+
+                                if (digitalTimeDigit.Separator != null && digitalTimeDigit.Separator.Coordinates != null)
+                                {
+                                    digitalTimeDigit.Separator.Coordinates.X =
+                                        (int)Math.Round(digitalTimeDigit.Separator.Coordinates.X *
+                                        scale, MidpointRounding.AwayFromZero);
+                                    digitalTimeDigit.Separator.Coordinates.Y =
+                                        (int)Math.Round(digitalTimeDigit.Separator.Coordinates.Y *
+                                        scale, MidpointRounding.AwayFromZero);
+                                }
+                            }
+                        }
+
+                        if (Watch_Face.ScreenIdle.DialFace.DigitalDialFace.AM != null)
+                        {
+                            if (Watch_Face.ScreenIdle.DialFace.DigitalDialFace.AM.Coordinates != null)
+                            {
+                                Watch_Face.ScreenIdle.DialFace.DigitalDialFace.AM.Coordinates.X =
+                                    (int)Math.Round(Watch_Face.ScreenIdle.DialFace.DigitalDialFace.AM.Coordinates.X *
+                                    scale, MidpointRounding.AwayFromZero);
+                                Watch_Face.ScreenIdle.DialFace.DigitalDialFace.AM.Coordinates.Y =
+                                    (int)Math.Round(Watch_Face.ScreenIdle.DialFace.DigitalDialFace.AM.Coordinates.Y *
+                                    scale, MidpointRounding.AwayFromZero);
+                            }
+
+                        }
+
+                        if (Watch_Face.ScreenIdle.DialFace.DigitalDialFace.PM != null)
+                        {
+                            if (Watch_Face.ScreenIdle.DialFace.DigitalDialFace.PM.Coordinates != null)
+                            {
+                                Watch_Face.ScreenIdle.DialFace.DigitalDialFace.PM.Coordinates.X =
+                                    (int)Math.Round(Watch_Face.ScreenIdle.DialFace.DigitalDialFace.PM.Coordinates.X *
+                                    scale, MidpointRounding.AwayFromZero);
+                                Watch_Face.ScreenIdle.DialFace.DigitalDialFace.PM.Coordinates.Y =
+                                    (int)Math.Round(Watch_Face.ScreenIdle.DialFace.DigitalDialFace.PM.Coordinates.Y *
+                                    scale, MidpointRounding.AwayFromZero);
+                            }
+
+                        }
+                    }
+                }
+                #endregion
+
+                #region Date
+                if (Watch_Face.ScreenIdle.Date != null)
+                {
+                    if (Watch_Face.ScreenIdle.Date.DateClockHand != null)
+                    {
+                        if (Watch_Face.ScreenIdle.Date.DateClockHand.DayClockHand != null)
+                            Watch_Face.ScreenIdle.Date.DateClockHand.DayClockHand =
+                                ClockHand_Scale(Watch_Face.ScreenIdle.Date.DateClockHand.DayClockHand, scale);
+
+                        if (Watch_Face.ScreenIdle.Date.DateClockHand.MonthClockHand != null)
+                            Watch_Face.ScreenIdle.Date.DateClockHand.MonthClockHand =
+                                ClockHand_Scale(Watch_Face.ScreenIdle.Date.DateClockHand.MonthClockHand, scale);
+
+                        if (Watch_Face.ScreenIdle.Date.DateClockHand.WeekDayClockHand != null)
+                            Watch_Face.ScreenIdle.Date.DateClockHand.WeekDayClockHand =
+                                ClockHand_Scale(Watch_Face.ScreenIdle.Date.DateClockHand.WeekDayClockHand, scale);
+                    }
+
+                    if (Watch_Face.ScreenIdle.Date.DateDigits != null)
+                    {
+                        foreach (DigitalDateDigit digitalDateDigit in Watch_Face.ScreenIdle.Date.DateDigits)
+                        {
+                            if (digitalDateDigit.Digit != null)
+                            {
+                                if (digitalDateDigit.Digit.Image != null)
+                                {
+                                    if (digitalDateDigit.Digit.Image.DecimalPointImageIndex != null)
+                                        digitalDateDigit.Digit.Image.DecimalPointImageIndex =
+                                            (int)Math.Round((int)digitalDateDigit.Digit.Image.DecimalPointImageIndex *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    if (digitalDateDigit.Digit.Image.DelimiterImageIndex != null)
+                                        digitalDateDigit.Digit.Image.DelimiterImageIndex =
+                                            (int)Math.Round((int)digitalDateDigit.Digit.Image.DelimiterImageIndex *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    if (digitalDateDigit.Digit.Image.NoDataImageIndex != null)
+                                        digitalDateDigit.Digit.Image.NoDataImageIndex =
+                                            (int)Math.Round((int)digitalDateDigit.Digit.Image.NoDataImageIndex *
+                                            scale, MidpointRounding.AwayFromZero);
+
+                                    digitalDateDigit.Digit.Image.X =
+                                        (int)Math.Round(digitalDateDigit.Digit.Image.X * scale, MidpointRounding.AwayFromZero);
+                                    digitalDateDigit.Digit.Image.Y =
+                                        (int)Math.Round(digitalDateDigit.Digit.Image.Y * scale, MidpointRounding.AwayFromZero);
+
+                                }
+
+                                if (digitalDateDigit.Digit.Spacing != null)
+                                    digitalDateDigit.Digit.Spacing =
+                                        (int)Math.Round((int)digitalDateDigit.Digit.Spacing * scale, MidpointRounding.AwayFromZero);
+
+                                if (digitalDateDigit.Digit.SystemFont != null)
+                                {
+                                    digitalDateDigit.Digit.SystemFont.Size =
+                                        (int)Math.Round(digitalDateDigit.Digit.SystemFont.Size * scale, MidpointRounding.AwayFromZero);
+
+                                    if (digitalDateDigit.Digit.SystemFont.Coordinates != null)
+                                    {
+                                        digitalDateDigit.Digit.SystemFont.Coordinates.X =
+                                            (int)Math.Round(digitalDateDigit.Digit.SystemFont.Coordinates.X *
+                                            scale, MidpointRounding.AwayFromZero);
+                                        digitalDateDigit.Digit.SystemFont.Coordinates.Y =
+                                            (int)Math.Round(digitalDateDigit.Digit.SystemFont.Coordinates.Y *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    }
+
+                                    if (digitalDateDigit.Digit.SystemFont.FontRotate != null)
+                                    {
+                                        digitalDateDigit.Digit.SystemFont.FontRotate.Radius =
+                                            (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.Radius *
+                                            scale, MidpointRounding.AwayFromZero);
+                                        digitalDateDigit.Digit.SystemFont.FontRotate.X =
+                                            (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.X *
+                                            scale, MidpointRounding.AwayFromZero);
+                                        digitalDateDigit.Digit.SystemFont.FontRotate.Y =
+                                            (int)Math.Round(digitalDateDigit.Digit.SystemFont.FontRotate.Y *
+                                            scale, MidpointRounding.AwayFromZero);
+                                    }
+                                }
+                            }
+                            if (digitalDateDigit.Separator != null && digitalDateDigit.Separator.Coordinates != null)
+                            {
+                                digitalDateDigit.Separator.Coordinates.X =
+                                    (int)Math.Round(digitalDateDigit.Separator.Coordinates.X *
+                                    scale, MidpointRounding.AwayFromZero);
+                                digitalDateDigit.Separator.Coordinates.Y =
+                                    (int)Math.Round(digitalDateDigit.Separator.Coordinates.Y *
+                                    scale, MidpointRounding.AwayFromZero);
+                            }
+                        }
+                    }
+
+                    if (Watch_Face.ScreenIdle.Date.WeeksDigits != null)
+                    {
+                        if (Watch_Face.ScreenIdle.Date.WeeksDigits.Digit != null) Watch_Face.ScreenIdle.Date.WeeksDigits.Digit =
+                                Digits_Scale(Watch_Face.ScreenIdle.Date.WeeksDigits.Digit, scale);
+
+                        if (Watch_Face.ScreenIdle.Date.WeeksDigits.Separator != null &&
+                            Watch_Face.ScreenIdle.Date.WeeksDigits.Separator.Coordinates != null)
+                        {
+                            Watch_Face.ScreenIdle.Date.WeeksDigits.Separator.Coordinates.X =
+                                (int)Math.Round(Watch_Face.ScreenIdle.Date.WeeksDigits.Separator.Coordinates.X *
+                                scale, MidpointRounding.AwayFromZero);
+                            Watch_Face.ScreenIdle.Date.WeeksDigits.Separator.Coordinates.Y =
+                                (int)Math.Round(Watch_Face.ScreenIdle.Date.WeeksDigits.Separator.Coordinates.Y *
+                                scale, MidpointRounding.AwayFromZero);
+                        }
+                    }
+                }
+                #endregion
+
+                #region Activity 
+                if (Watch_Face.System != null && Watch_Face.ScreenIdle.Activity != null)
+                {
+                    foreach (Activity activity in Watch_Face.ScreenIdle.Activity)
+                    {
+                        Activity_Scale(activity, scale);
+                    }
+                }
+                #endregion
+            }
         }
-        
+
+        private ClockHand ClockHand_Scale(ClockHand clockHand, float scale)
+        {
+            if (clockHand.Cover != null && clockHand.Cover.Coordinates != null)
+            {
+                clockHand.Cover.Coordinates.X =
+                    (int)Math.Round(clockHand.Cover.Coordinates.X * scale, MidpointRounding.AwayFromZero);
+                clockHand.Cover.Coordinates.Y =
+                    (int)Math.Round(clockHand.Cover.Coordinates.Y * scale, MidpointRounding.AwayFromZero);
+            }
+
+            if (clockHand.Pointer != null && clockHand.Pointer.Coordinates != null)
+            {
+                clockHand.Pointer.Coordinates.X =
+                    (int)Math.Round(clockHand.Pointer.Coordinates.X * scale, MidpointRounding.AwayFromZero);
+                clockHand.Pointer.Coordinates.Y =
+                    (int)Math.Round(clockHand.Pointer.Coordinates.Y * scale, MidpointRounding.AwayFromZero);
+            }
+
+            if (clockHand.Scale != null  && clockHand.Scale.Coordinates != null)
+            {
+                clockHand.Scale.Coordinates.X =
+                    (int)Math.Round(clockHand.Scale.Coordinates.X * scale, MidpointRounding.AwayFromZero);
+                clockHand.Scale.Coordinates.Y =
+                    (int)Math.Round(clockHand.Scale.Coordinates.Y * scale, MidpointRounding.AwayFromZero);
+            }
+
+            clockHand.X = (int)Math.Round(clockHand.X * scale, MidpointRounding.AwayFromZero);
+            clockHand.Y = (int)Math.Round(clockHand.Y * scale, MidpointRounding.AwayFromZero);
+
+            return clockHand;
+        }
+
+        private Text Digits_Scale(Text digit, float scale)
+        {
+            if (digit != null)
+            {
+                if (digit.Image != null)
+                {
+                    //if (digit.Image.DecimalPointImageIndex != null)
+                    //    digit.Image.DecimalPointImageIndex =
+                    //        (int)Math.Round((int)digit.Image.DecimalPointImageIndex *
+                    //        scale, MidpointRounding.AwayFromZero);
+                    //if (digit.Image.DelimiterImageIndex != null)
+                    //    digit.Image.DelimiterImageIndex =
+                    //        (int)Math.Round((int)digit.Image.DelimiterImageIndex *
+                    //        scale, MidpointRounding.AwayFromZero);
+                    //if (digit.Image.NoDataImageIndex != null)
+                    //    digit.Image.NoDataImageIndex =
+                    //        (int)Math.Round((int)digit.Image.NoDataImageIndex *
+                    //        scale, MidpointRounding.AwayFromZero);
+
+                    digit.Image.X =
+                        (int)Math.Round(digit.Image.X * scale, MidpointRounding.AwayFromZero);
+                    digit.Image.Y =
+                        (int)Math.Round(digit.Image.Y * scale, MidpointRounding.AwayFromZero);
+
+                }
+
+                if (digit.Spacing != null)
+                    digit.Spacing =
+                        (int)Math.Round((int)digit.Spacing * scale, MidpointRounding.AwayFromZero);
+
+                if (digit.SystemFont != null)
+                {
+                    digit.SystemFont.Size =
+                        (int)Math.Round(digit.SystemFont.Size * scale, MidpointRounding.AwayFromZero);
+
+                    if (digit.SystemFont.Coordinates != null)
+                    {
+                        digit.SystemFont.Coordinates.X =
+                            (int)Math.Round(digit.SystemFont.Coordinates.X *
+                            scale, MidpointRounding.AwayFromZero);
+                        digit.SystemFont.Coordinates.Y =
+                            (int)Math.Round(digit.SystemFont.Coordinates.Y *
+                            scale, MidpointRounding.AwayFromZero);
+                    }
+
+                    if (digit.SystemFont.FontRotate != null)
+                    {
+                        digit.SystemFont.FontRotate.Radius =
+                            (int)Math.Round(digit.SystemFont.FontRotate.Radius *
+                            scale, MidpointRounding.AwayFromZero);
+                        digit.SystemFont.FontRotate.X =
+                            (int)Math.Round(digit.SystemFont.FontRotate.X *
+                            scale, MidpointRounding.AwayFromZero);
+                        digit.SystemFont.FontRotate.Y =
+                            (int)Math.Round(digit.SystemFont.FontRotate.Y *
+                            scale, MidpointRounding.AwayFromZero);
+                    }
+                }
+            }
+
+            return digit;
+        }
+
+        private AngleSettings AngleSettings_Scale(AngleSettings angleSettings, float scale)
+        {
+            angleSettings.Radius = (int)Math.Round(angleSettings.Radius * scale, MidpointRounding.AwayFromZero);
+
+            angleSettings.X = (int)Math.Round(angleSettings.X * scale, MidpointRounding.AwayFromZero);
+            angleSettings.Y = (int)Math.Round(angleSettings.Y * scale, MidpointRounding.AwayFromZero);
+            return angleSettings;
+        }
+
+        private LinearSettings LinearSettings_Scale(LinearSettings linearSettings, float scale)
+        {
+            linearSettings.StartX = (int)Math.Round(linearSettings.StartX * scale, MidpointRounding.AwayFromZero);
+            linearSettings.StartY = (int)Math.Round(linearSettings.StartY * scale, MidpointRounding.AwayFromZero);
+            linearSettings.EndX = (int)Math.Round(linearSettings.EndX * scale, MidpointRounding.AwayFromZero);
+            linearSettings.EndY = (int)Math.Round(linearSettings.EndY * scale, MidpointRounding.AwayFromZero);
+            return linearSettings;
+        }
+
+        private void Activity_Scale(Activity activity, float scale)
+        {
+            if (activity.Digits != null && activity.Digits.Count > 0)
+            {
+                foreach (DigitalCommonDigit digitalCommonDigit in activity.Digits)
+                {
+                    if (digitalCommonDigit.Digit != null) digitalCommonDigit.Digit =
+                            Digits_Scale(digitalCommonDigit.Digit, scale);
+
+                    if (digitalCommonDigit.Separator != null && digitalCommonDigit.Separator.Coordinates != null)
+                    {
+                        digitalCommonDigit.Separator.Coordinates.X =
+                            (int)Math.Round(digitalCommonDigit.Separator.Coordinates.X * scale, MidpointRounding.AwayFromZero);
+                        digitalCommonDigit.Separator.Coordinates.Y =
+                            (int)Math.Round(digitalCommonDigit.Separator.Coordinates.Y * scale, MidpointRounding.AwayFromZero);
+                    }
+                }
+            }
+
+            if (activity.Icon != null && activity.Icon.Coordinates != null)
+            {
+                activity.Icon.Coordinates.X =
+                            (int)Math.Round(activity.Icon.Coordinates.X * scale, MidpointRounding.AwayFromZero);
+                activity.Icon.Coordinates.Y =
+                    (int)Math.Round(activity.Icon.Coordinates.Y * scale, MidpointRounding.AwayFromZero);
+            }
+
+            if (activity.ImageProgress != null && activity.ImageProgress.Coordinates != null)
+            {
+                foreach (Coordinates coordinate in activity.ImageProgress.Coordinates)
+                {
+                    coordinate.X = (int)Math.Round(coordinate.X * scale, MidpointRounding.AwayFromZero);
+                    coordinate.Y = (int)Math.Round(coordinate.Y * scale, MidpointRounding.AwayFromZero);
+                }
+            }
+
+            if (activity.PointerProgress != null)
+                activity.PointerProgress = ClockHand_Scale(activity.PointerProgress, scale);
+
+            if (activity.ProgressBar != null)
+            {
+                if (activity.ProgressBar.AngleSettings != null)
+                    activity.ProgressBar.AngleSettings = AngleSettings_Scale(activity.ProgressBar.AngleSettings, scale);
+
+                if (activity.ProgressBar.LinearSettings != null)
+                    activity.ProgressBar.LinearSettings = LinearSettings_Scale(activity.ProgressBar.LinearSettings, scale);
+
+                activity.ProgressBar.Width =
+                    (int)Math.Round(activity.ProgressBar.Width * scale, MidpointRounding.AwayFromZero);
+            }
+
+            if (activity.Shortcut != null && activity.Shortcut.BoxElement != null)
+            {
+                activity.Shortcut.BoxElement.TopLeftX =
+                    (int)Math.Round(activity.Shortcut.BoxElement.TopLeftX * scale, MidpointRounding.AwayFromZero);
+                activity.Shortcut.BoxElement.TopLeftY =
+                    (int)Math.Round(activity.Shortcut.BoxElement.TopLeftY * scale, MidpointRounding.AwayFromZero);
+                activity.Shortcut.BoxElement.Height =
+                    (int)Math.Round(activity.Shortcut.BoxElement.Height * scale, MidpointRounding.AwayFromZero);
+                activity.Shortcut.BoxElement.Width =
+                    (int)Math.Round(activity.Shortcut.BoxElement.Width * scale, MidpointRounding.AwayFromZero);
+            }
+        }
+
         private void button_RefreshPreview_Click(object sender, EventArgs e)
         {
             if (FileName == null || FullFileDir == null) return;
@@ -5784,6 +6014,12 @@ namespace AmazFit_Watchface_2
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                     PreviewHeight = 220;
+                }
+                if (radioButton_ZeppE.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+                    PreviewHeight = 280;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
@@ -5810,16 +6046,16 @@ namespace AmazFit_Watchface_2
                 bitmap = ResizeImage(bitmap, scale);
                 //bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
 
-                MagickImage item_AOD = new MagickImage(bitmap);
+                MagickImage optimizedBitmap = new MagickImage(bitmap);
 
                 QuantizeSettings settings = new QuantizeSettings();
                 settings.Colors = 256;
-                item_AOD.Quantize(settings);
+                optimizedBitmap.Quantize(settings);
 
                 // Optionally optimize the images (images should have the same size).
 
-                item_AOD.Format = MagickFormat.Png;
-                item_AOD.Write(ListImagesFullName[i]);
+                optimizedBitmap.Format = MagickFormat.Png;
+                optimizedBitmap.Write(ListImagesFullName[i]);
 
 
 
@@ -5858,6 +6094,12 @@ namespace AmazFit_Watchface_2
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                     PreviewHeight = 220;
+                }
+                if (radioButton_ZeppE.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+                    PreviewHeight = 280;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 int link = radioButton_ScreenNormal.Checked ? 0 : 1;
@@ -10406,6 +10648,10 @@ namespace AmazFit_Watchface_2
             {
                 Program_Settings.WatchSkin_TRex_pro = textBox_WatchSkin_Path.Text;
             }
+            else if (radioButton_ZeppE.Checked)
+            {
+                Program_Settings.WatchSkin_Zepp_E = textBox_WatchSkin_Path.Text;
+            }
 
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
@@ -10444,6 +10690,10 @@ namespace AmazFit_Watchface_2
                 else if (radioButton_TRex_pro.Checked)
                 {
                     Program_Settings.WatchSkin_TRex_pro = textBox_WatchSkin_Path.Text;
+                }
+                else if (radioButton_ZeppE.Checked)
+                {
+                    Program_Settings.WatchSkin_Zepp_E = textBox_WatchSkin_Path.Text;
                 }
 
                 string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
@@ -11573,6 +11823,281 @@ namespace AmazFit_Watchface_2
             string tabName = tabControl1.SelectedTab.Name;
             if(tabName == "tabPage_Widgets" || oldTabName == "tabPage_Widgets") PreviewImage();
             oldTabName = tabName;
+        }
+
+        /// <summary>формируем изображение для предпросмотра редактируемых зон</summary>
+        /// <param name="type">1-если редактируем елемент;
+        /// 2-если добавляем новый элемент.</param>
+        private Bitmap PreviewWidgetAdd(int type)
+        {
+            // формируем картинку для предпросмотра
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+            //int PreviewHeight = 306;
+            if (radioButton_GTS2.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+                //PreviewHeight = 323;
+            }
+            if (radioButton_TRex_pro.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+                //PreviewHeight = 220;
+            }
+            if (radioButton_ZeppE.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(416), Convert.ToInt32(416), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+                //PreviewHeight = 220;
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            int link = -1;
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, false, false, link);
+            bitmap = ApplyWidgetMask(bitmap, comboBox_WidgetsTopMask.SelectedIndex);
+            if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+            int x = 0;
+            int y = 0;
+            int width = 0;
+            int height = 0;
+            if (type == 1)
+            {
+                x = (int)numericUpDown_WidgetX.Value;
+                y = (int)numericUpDown_WidgetY.Value;
+                width = (int)numericUpDown_WidgetWidth.Value;
+                height = (int)numericUpDown_WidgetHeight.Value;
+            }
+            if (type == 2)
+            {
+                if (radioButton_WidgetAdd.Checked)
+                {
+                    x = (int)numericUpDown_WidgetXAdd.Value;
+                    y = (int)numericUpDown_WidgetYAdd.Value;
+                    width = (int)numericUpDown_WidgetWidthAdd.Value;
+                    height = (int)numericUpDown_WidgetHeightAdd.Value;
+                }
+                else
+                {
+                    x = (int)numericUpDown_WidgetX.Value;
+                    y = (int)numericUpDown_WidgetY.Value;
+                    width = (int)numericUpDown_WidgetWidth.Value;
+                    height = (int)numericUpDown_WidgetHeight.Value;
+                } 
+            }
+            if (width > 1 && height > 1)
+            {
+                Rectangle cropRect = new Rectangle(x, y, width, height);
+                Bitmap tempBitmap = new Bitmap(width, height);
+                using (Graphics g = Graphics.FromImage(tempBitmap))
+                {
+                    g.DrawImage(bitmap, new Rectangle(0, 0, tempBitmap.Width, tempBitmap.Height),
+                                     cropRect,
+                                     GraphicsUnit.Pixel);
+                }
+                bitmap = tempBitmap;
+            }
+            return bitmap;
+        }
+        
+        private void userControl_previewWidgetAdd_CreatePreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidgetAdd.comboBoxGetImage() >= 0) return;
+            if ((numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2) 
+                && radioButton_WidgetElementAdd.Checked) return;
+            if ((numericUpDown_WidgetWidthAdd.Value < 2 || numericUpDown_WidgetHeightAdd.Value < 2)
+                && radioButton_WidgetAdd.Checked) return;
+            if (FileName != null && FullFileDir != null) // проект уже сохранен
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(2);
+                // определяем имя файла для сохранения и сохраняем файл
+                string NamePreview = "0001.png";
+                string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                int index = 1;
+                if (ListImagesFullName.Count > 0)
+                {
+                    Int32.TryParse(Path.GetFileNameWithoutExtension(ListImagesFullName.Last()), out index);
+                    index++;
+                    NamePreview = index.ToString() + ".png";
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                while (PathPreview.Length < ListImagesFullName[0].Length)
+                {
+                    NamePreview = "0" + NamePreview;
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                if (File.Exists(PathPreview)) return;
+                bitmap.Save(PathPreview, ImageFormat.Png);
+
+                PreviewView = false;
+                ListImages.Add(index.ToString());
+                ListImagesFullName.Add(PathPreview);
+
+                // добавляем строки в таблицу
+                string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                Image PreviewImage = null;
+                using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                {
+                    PreviewImage = Image.FromStream(stream);
+                }
+                var RowNew = new DataGridViewRow();
+                DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                    ZoomType = DataGridViewImageCellLayout.Normal;
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() });
+                //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() + "*" });
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                RowNew.Cells.Add(new DataGridViewImageCell()
+                {
+                    Value = PreviewImage,
+                    ImageLayout = ZoomType
+                });
+                RowNew.Height = 45;
+                dataGridView_ImagesList.Rows.Add( RowNew);
+
+                userControl_preview.comboBox_image.Items.Add(index.ToString());
+                //userControl_preview.comboBoxSetImage(index);
+                PreviewView = true;
+                userControl_preview.comboBoxSetImage(index);
+                JSON_Modified = true;
+                FormText();
+
+                bitmap.Dispose();
+
+            }
+        }
+
+        private void userControl_previewWidgetAdd_RefreshPreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidgetAdd.comboBoxGetImage() < 0) return;
+            if ((numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2)
+                && radioButton_WidgetElementAdd.Checked) return;
+            if ((numericUpDown_WidgetWidthAdd.Value < 2 || numericUpDown_WidgetHeightAdd.Value < 2)
+                && radioButton_WidgetAdd.Checked) return;
+            if (FileName != null && FullFileDir != null)
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(2);
+                int i = userControl_preview.comboBoxGetSelectedIndexImage();
+                bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+                bitmap.Dispose();
+
+            }
+        }
+
+        private void userControl_previewWidget_CreatePreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidget.comboBoxGetImage() >= 0) return;
+            if(radioButton_WidgetPreviewEdit.Checked) return;
+            if (numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2) return;
+            if (FileName != null && FullFileDir != null) // проект уже сохранен
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(1);
+                // определяем имя файла для сохранения и сохраняем файл
+                string NamePreview = "0001.png";
+                string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                int index = 1;
+                if (ListImagesFullName.Count > 0)
+                {
+                    Int32.TryParse(Path.GetFileNameWithoutExtension(ListImagesFullName.Last()), out index);
+                    index++;
+                    NamePreview = index.ToString() + ".png";
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                while (PathPreview.Length < ListImagesFullName[0].Length)
+                {
+                    NamePreview = "0" + NamePreview;
+                    PathPreview = Path.Combine(FullFileDir, NamePreview);
+                }
+                if (File.Exists(PathPreview)) return;
+                bitmap.Save(PathPreview, ImageFormat.Png);
+
+                PreviewView = false;
+                ListImages.Add(index.ToString());
+                ListImagesFullName.Add(PathPreview);
+
+                // добавляем строки в таблицу
+                string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                Image PreviewImage = null;
+                using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                {
+                    PreviewImage = Image.FromStream(stream);
+                }
+                var RowNew = new DataGridViewRow();
+                DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                    ZoomType = DataGridViewImageCellLayout.Normal;
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() });
+                //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() + "*" });
+                RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                RowNew.Cells.Add(new DataGridViewImageCell()
+                {
+                    Value = PreviewImage,
+                    ImageLayout = ZoomType
+                });
+                RowNew.Height = 45;
+                dataGridView_ImagesList.Rows.Add(RowNew);
+
+                userControl_preview.comboBox_image.Items.Add(index.ToString());
+                //userControl_preview.comboBoxSetImage(index);
+                PreviewView = true;
+                userControl_preview.comboBoxSetImage(index);
+                JSON_Modified = true;
+                FormText();
+
+                bitmap.Dispose();
+
+            }
+        }
+
+        private void userControl_previewWidget_RefreshPreview(object sender, EventArgs eventArgs)
+        {
+            if (userControl_previewWidget.comboBoxGetImage() < 0) return;
+            if (radioButton_WidgetPreviewEdit.Checked) return;
+            if (numericUpDown_WidgetWidth.Value < 2 || numericUpDown_WidgetHeight.Value < 2) return;
+            if (FileName != null && FullFileDir != null)
+            {
+                UserControl_preview userControl_preview = sender as UserControl_preview;
+                Bitmap bitmap = PreviewWidgetAdd(1);
+                int i = userControl_preview.comboBoxGetSelectedIndexImage();
+                bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+                bitmap.Dispose();
+
+            }
+        }
+
+        private void radioButton_ConvertingInput_GTR2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton_ConvertingInput_GTR2.Checked)
+            {
+                numericUpDown_ConvertingInput_Custom.Value = 454;
+            }
+            if (radioButton_ConvertingInput_TRexPro.Checked)
+            {
+                numericUpDown_ConvertingInput_Custom.Value = 360;
+            }
+            if (radioButton_ConvertingInput_ZeppE.Checked)
+            {
+                numericUpDown_ConvertingInput_Custom.Value = 416;
+            }
+        }
+
+        private void radioButton_ConvertingOutput_GTR2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton_ConvertingOutput_GTR2.Checked)
+            {
+                numericUpDown_ConvertingOutput_Custom.Value = 454;
+            }
+            if (radioButton_ConvertingOutput_TRexPro.Checked)
+            {
+                numericUpDown_ConvertingOutput_Custom.Value = 360;
+            }
+            if (radioButton_ConvertingOutput_ZeppE.Checked)
+            {
+                numericUpDown_ConvertingOutput_Custom.Value = 416;
+            }
         }
 
 

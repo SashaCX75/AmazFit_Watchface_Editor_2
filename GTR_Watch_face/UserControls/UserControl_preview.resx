@@ -121,14 +121,29 @@
     <value>button_preview</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button_CreatePreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 23</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;button_RefreshPreview.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="&gt;&gt;comboBox_image.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label01.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomLeft</value>
   </data>
-  <data name="&gt;&gt;comboBox_icon_image.Name" xml:space="preserve">
-    <value>comboBox_icon_image</value>
+  <data name="&gt;&gt;button_CreatePreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="comboBox_image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -143,15 +158,14 @@
   <data name="button_preview.Text" xml:space="preserve">
     <value>Предпросмотр</value>
   </data>
-  <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 7</value>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Создать Preview</value>
   </data>
   <data name="&gt;&gt;panel_preview.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="comboBox_icon_image.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
+  <data name="button_RefreshPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 23</value>
   </data>
   <data name="&gt;&gt;panel_preview.Parent" xml:space="preserve">
     <value>$this</value>
@@ -159,14 +173,29 @@
   <data name="panel_preview.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 23</value>
   </data>
+  <data name="&gt;&gt;button_CreatePreview.Parent" xml:space="preserve">
+    <value>panel_preview</value>
+  </data>
   <data name="&gt;&gt;label01.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox_icon_image.Parent" xml:space="preserve">
+  <data name="button_CreatePreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;button_RefreshPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_RefreshPreview.Parent" xml:space="preserve">
     <value>panel_preview</value>
   </data>
-  <data name="comboBox_icon_image.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
+  <data name="&gt;&gt;button_RefreshPreview.Name" xml:space="preserve">
+    <value>button_RefreshPreview</value>
+  </data>
+  <data name="button_RefreshPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Обновить Preview</value>
   </data>
   <data name="&gt;&gt;button_preview.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -174,23 +203,36 @@
   <data name="&gt;&gt;panel_preview.Name" xml:space="preserve">
     <value>panel_preview</value>
   </data>
-  <data name="comboBox_icon_image.MaxDropDownItems" type="System.Int32, mscorlib">
+  <data name="button_CreatePreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 21</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="comboBox_image.MaxDropDownItems" type="System.Int32, mscorlib">
     <value>25</value>
+  </data>
+  <data name="&gt;&gt;button_CreatePreview.Name" xml:space="preserve">
+    <value>button_CreatePreview</value>
   </data>
   <data name="panel_preview.TabIndex" type="System.Int32, mscorlib">
     <value>160</value>
   </data>
+  <data name="button_preview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;label01.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;button_preview.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;comboBox_image.Parent" xml:space="preserve">
+    <value>panel_preview</value>
+  </data>
   <data name="&gt;&gt;panel_preview.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="comboBox_icon_image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 21</value>
+  <data name="&gt;&gt;label01.Parent" xml:space="preserve">
+    <value>panel_preview</value>
   </data>
   <data name="button_preview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -201,11 +243,17 @@
   <data name="&gt;&gt;label01.Name" xml:space="preserve">
     <value>label01</value>
   </data>
-  <data name="&gt;&gt;comboBox_icon_image.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button_RefreshPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 21</value>
   </data>
   <data name="panel_preview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
+  </data>
+  <data name="&gt;&gt;button_CreatePreview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBox_image.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
   <data name="panel_preview.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 55</value>
@@ -213,11 +261,14 @@
   <data name="button_preview.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;label01.Parent" xml:space="preserve">
-    <value>panel_preview</value>
+  <data name="button_RefreshPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
   </data>
   <data name="label01.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
+  </data>
+  <data name="comboBox_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 21</value>
   </data>
   <data name="label01.Text" xml:space="preserve">
     <value>Изображение</value>
@@ -225,14 +276,20 @@
   <data name="button_preview.TabIndex" type="System.Int32, mscorlib">
     <value>159</value>
   </data>
-  <data name="&gt;&gt;comboBox_icon_image.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;comboBox_image.Name" xml:space="preserve">
+    <value>comboBox_image</value>
+  </data>
+  <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="button_RefreshPreview.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="button_preview.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 23</value>
   </data>
-  <data name="button_preview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;comboBox_image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 150</value>
@@ -240,8 +297,8 @@
   <data name="&gt;&gt;button_preview.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
+  <data name="button_CreatePreview.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

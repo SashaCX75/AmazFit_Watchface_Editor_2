@@ -405,4 +405,88 @@
   <data name="Dialog_Title_WatchSkin" xml:space="preserve">
     <value>选择一个表盘图像文件</value>
   </data>
+  <data name="Message_Information_Caption" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
+    <value>添加要在可编辑区域中显示的数据。</value>
+  </data>
+  <data name="Message_Warning_AddPreview_WidgetElement" xml:space="preserve">
+    <value>为所选元素添加预览图像。</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">
+    <value>添加了第一个可编辑区域。</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget2" xml:space="preserve">
+    <value>别忘了在编辑屏幕中调整顶部和底部遮罩。</value>
+  </data>
+  <data name="Message_Warning_Add_Widget" xml:space="preserve">
+    <value>自定义可编辑区域所需的所有图像。</value>
+  </data>
+  <data name="Message_Warning_No_Widget" xml:space="preserve">
+    <value>首先，至少添加一个可编辑区域。</value>
+  </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>登山</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>气压</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>空气质量</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>海拔高度</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>卡路里</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>距离</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>脂肪燃烧</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>心率</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>湿度</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>站立</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>步数</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>压力</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>日出日落</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>紫外线</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>天气</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>风速或风向</value>
+  </data>
 </root>

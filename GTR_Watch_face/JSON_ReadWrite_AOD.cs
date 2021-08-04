@@ -4105,7 +4105,7 @@ namespace AmazFit_Watchface_2
             Activity activity = null;
             Activity activityMin = null;
             Activity activityMax = null;
-            Activity activityPictures = null;
+            //Activity activityPictures = null;
 
             // данные картинками
             if (panel_pictures.checkBox_pictures_Use.Checked)
@@ -4115,17 +4115,17 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDownX = panel_pictures.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = panel_pictures.numericUpDown_picturesY;
 
-                    if (activityPictures == null) activityPictures = new Activity();
-                    activityPictures.ImageProgress = new ImageProgress();
-                    activityPictures.ImageProgress.ImageSet = new ImageSetGTR2();
-                    activityPictures.ImageProgress.Coordinates = new List<Coordinates>();
-                    activityPictures.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
-                    activityPictures.ImageProgress.ImageSet.ImagesCount = 29;
-                    //activityPictures.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    if (activity == null) activity = new Activity();
+                    activity.ImageProgress = new ImageProgress();
+                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activity.ImageProgress.Coordinates = new List<Coordinates>();
+                    activity.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
+                    activity.ImageProgress.ImageSet.ImagesCount = 29;
+                    //activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
                     Coordinates coordinates = new Coordinates();
                     coordinates.X = (long)numericUpDownX.Value;
                     coordinates.Y = (long)numericUpDownY.Value;
-                    activityPictures.ImageProgress.Coordinates.Add(coordinates);
+                    activity.ImageProgress.Coordinates.Add(coordinates);
                 }
             }
 
@@ -4887,6 +4887,13 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            //if (activityPictures != null)
+            //{
+            //    activityPictures.Type = "Weather";
+            //    if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
+            //    ScreenIdle.Activity.Add(activityPictures);
+            //}
+
             if (activity != null)
             {
                 activity.Type = "Weather";
@@ -4906,13 +4913,6 @@ namespace AmazFit_Watchface_2
                 activityMax.Type = "Weather";
                 if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
                 ScreenIdle.Activity.Add(activityMax);
-            }
-
-            if (activityPictures != null)
-            {
-                activityPictures.Type = "Weather";
-                if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
-                ScreenIdle.Activity.Add(activityPictures);
             }
         }
 

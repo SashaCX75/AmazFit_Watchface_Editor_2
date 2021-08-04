@@ -1,0 +1,9 @@
+{
+  "Background": {
+    "Path": "WatchSkin\\zepp-e.png",
+    "ImageHeight": 600
+  },
+  "Image": {
+    "ImageHeight": 360
+  }
+}

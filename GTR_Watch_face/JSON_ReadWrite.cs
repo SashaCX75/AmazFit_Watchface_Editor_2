@@ -2339,6 +2339,11 @@ namespace AmazFit_Watchface_2
                 Watch_Face.Info = new Device_Id();
                 Watch_Face.Info.DeviceId = 83;
             }
+            if (radioButton_ZeppE.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 60;
+            }
             //if (radioButton_Verge.Checked)
             //{
             //    Watch_Face.Info = new Device_Id();
@@ -3994,7 +3999,7 @@ namespace AmazFit_Watchface_2
             Activity activity = null;
             Activity activityMin = null;
             Activity activityMax = null;
-            Activity activityPictures = null;
+            //Activity activityPictures = null;
 
             // данные картинками
             if (panel_pictures.checkBox_pictures_Use.Checked)
@@ -4004,17 +4009,17 @@ namespace AmazFit_Watchface_2
                     NumericUpDown numericUpDownX = panel_pictures.numericUpDown_picturesX;
                     NumericUpDown numericUpDownY = panel_pictures.numericUpDown_picturesY;
 
-                    if (activityPictures == null) activityPictures = new Activity();
-                    activityPictures.ImageProgress = new ImageProgress();
-                    activityPictures.ImageProgress.ImageSet = new ImageSetGTR2();
-                    activityPictures.ImageProgress.Coordinates = new List<Coordinates>();
-                    activityPictures.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
-                    activityPictures.ImageProgress.ImageSet.ImagesCount = 29;
+                    if (activity == null) activity = new Activity();
+                    activity.ImageProgress = new ImageProgress();
+                    activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                    activity.ImageProgress.Coordinates = new List<Coordinates>();
+                    activity.ImageProgress.ImageSet.ImageIndex = panel_pictures.comboBoxGetImage();
+                    activity.ImageProgress.ImageSet.ImagesCount = 29;
                     //activityPictures.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
                     Coordinates coordinates = new Coordinates();
                     coordinates.X = (long)numericUpDownX.Value;
                     coordinates.Y = (long)numericUpDownY.Value;
-                    activityPictures.ImageProgress.Coordinates.Add(coordinates);
+                    activity.ImageProgress.Coordinates.Add(coordinates);
                 }
             }
 
@@ -4776,6 +4781,14 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            //if (activityPictures != null)
+            //{
+            //    activityPictures.Type = "Weather";
+            //    if (Watch_Face.System == null) Watch_Face.System = new SystemAmazfit();
+            //    if (Watch_Face.System.Activity == null) Watch_Face.System.Activity = new List<Activity>();
+            //    Watch_Face.System.Activity.Add(activityPictures);
+            //}
+
             if (activity != null)
             {
                 activity.Type = "Weather";
@@ -4798,14 +4811,6 @@ namespace AmazFit_Watchface_2
                 if (Watch_Face.System == null) Watch_Face.System = new SystemAmazfit();
                 if (Watch_Face.System.Activity == null) Watch_Face.System.Activity = new List<Activity>();
                 Watch_Face.System.Activity.Add(activityMax);
-            }
-
-            if (activityPictures != null)
-            {
-                activityPictures.Type = "Weather";
-                if (Watch_Face.System == null) Watch_Face.System = new SystemAmazfit();
-                if (Watch_Face.System.Activity == null) Watch_Face.System.Activity = new List<Activity>();
-                Watch_Face.System.Activity.Add(activityPictures);
             }
         }
 
@@ -7350,6 +7355,9 @@ namespace AmazFit_Watchface_2
                     case 83:
                         radioButton_TRex_pro.Checked = true;
                         break;
+                    case 60:
+                        radioButton_ZeppE.Checked = true;
+                        break;
                     default:
                         return;
                 }
@@ -7386,6 +7394,14 @@ namespace AmazFit_Watchface_2
                     pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                     Program_Settings.unpack_command = Program_Settings.unpack_command_TRex_pro;
                 }
+                else if (radioButton_ZeppE.Checked)
+                {
+                    this.Text = "Zepp E Circle watch face editor";
+                    //pictureBox_Preview.Height = 224;
+                    //pictureBox_Preview.Width = 177;
+                    pictureBox_Preview.Size = new Size((int)(211 * currentDPI), (int)(211 * currentDPI));
+                    Program_Settings.unpack_command = Program_Settings.unpack_command_GTR_2;
+                }
 
                 if ((formPreview != null) && (formPreview.Visible))
                 {
@@ -7393,12 +7409,14 @@ namespace AmazFit_Watchface_2
                     Form_Preview.Model_Wath.model_GTR2e = radioButton_GTR2e.Checked;
                     Form_Preview.Model_Wath.model_GTS2 = radioButton_GTS2.Checked;
                     Form_Preview.Model_Wath.model_TRex_pro = radioButton_TRex_pro.Checked;
+                    Form_Preview.Model_Wath.model_Zepp_E = radioButton_ZeppE.Checked;
                 }
 
                 Program_Settings.Model_GTR2 = radioButton_GTR2.Checked;
                 Program_Settings.Model_GTR2e = radioButton_GTR2e.Checked;
                 Program_Settings.Model_GTS2 = radioButton_GTS2.Checked;
                 Program_Settings.Model_TRex_pro = radioButton_TRex_pro.Checked;
+                Program_Settings.Model_Zepp_E = radioButton_ZeppE.Checked;
                 string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
                 {
                     //DefaultValueHandling = DefaultValueHandling.Ignore,

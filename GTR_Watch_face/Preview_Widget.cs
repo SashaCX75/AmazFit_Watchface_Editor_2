@@ -317,11 +317,14 @@ namespace AmazFit_Watchface_2
                         int _imagesCount = (int)activity.ImageProgress.ImageSet.ImagesCount;
 
                         int offSet = (int)((_imagesCount + 1) * progress);
+                        if (activity.Type == "Weather") offSet = Watch_Face_Preview_Set.Weather.Icon;
                         if (offSet < 0) offSet = 0;
                         if (offSet >= _imagesCount) offSet = (int)(_imagesCount - 1);
                         int imageIndex = _imageIndex + offSet;
 
-                        if (imageIndex < ListImagesFullName.Count)
+                        if (activity.Type == "Weather") imageIndex--;
+
+                        if (imageIndex >=0 && imageIndex < ListImagesFullName.Count)
                         {
                             src = OpenFileStream(ListImagesFullName[imageIndex]);
                             gPanel.DrawImage(src, new Rectangle(_x, _y, src.Width, src.Height));
@@ -579,8 +582,47 @@ namespace AmazFit_Watchface_2
 
                                         if (showTemperature)
                                         {
-                                            _offsetX = Draw_weather_text(gPanel, _imageIndex, _x, _y,
-                                                _spacing, _alignment, (int)value, _addZero, _imageDecimalIndex, _imageUnitIndex, BBorder);
+                                            // если имеется иконка
+                                            int centr_alignment = -1;
+                                            if (activity.ImageProgress != null && activity.ImageProgress.ImageSet != null &&
+                                                    activity.ImageProgress.Coordinates != null && OneCoordinates(activity.ImageProgress.Coordinates))
+
+                                            {
+                                                int imageIndex = (int)activity.ImageProgress.ImageSet.ImageIndex - 1;
+                                                int _image_x = (int)activity.ImageProgress.Coordinates[0].X;
+
+                                                if (imageIndex < ListImagesFullName.Count)
+                                                {
+                                                    src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                    centr_alignment = _image_x + src.Width / 2;
+                                                }
+
+                                            }
+
+                                            // если имеется иконка на основном экране
+                                            if (Watch_Face != null && Watch_Face.System != null && Watch_Face.System.Activity != null)
+                                            {
+                                                foreach (Activity activity_main in Watch_Face.System.Activity)
+                                                {
+                                                    if (activity_main.Type == "Weather" && activity_main.ImageProgress != null && activity_main.ImageProgress.ImageSet != null &&
+                                                    activity_main.ImageProgress.Coordinates != null && OneCoordinates(activity_main.ImageProgress.Coordinates))
+
+                                                    {
+                                                        int imageIndex = (int)activity_main.ImageProgress.ImageSet.ImageIndex - 1;
+                                                        int _image_x = (int)activity_main.ImageProgress.Coordinates[0].X;
+
+                                                        if (imageIndex < ListImagesFullName.Count)
+                                                        {
+                                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                            centr_alignment = _image_x + src.Width / 2;
+                                                        }
+
+                                                    }
+                                                }
+                                            }
+
+                                            _offsetX = Draw_weather_text(gPanel, _imageIndex, _x, _y, _spacing, _alignment, 
+                                                (int)value, _addZero, _imageDecimalIndex, _imageUnitIndex, BBorder, -1, false, centr_alignment);
                                         }
                                         else if (imageError_index >= 0)
                                         {
@@ -7215,6 +7257,10 @@ namespace AmazFit_Watchface_2
             {
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex_pro.png");
             }
+            if (radioButton_ZeppE.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+            }
             gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
             //src.Dispose();
             #endregion
@@ -7673,6 +7719,10 @@ namespace AmazFit_Watchface_2
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
                 }
+                if (radioButton_ZeppE.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+                }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
                 mask.Dispose();
@@ -7716,6 +7766,11 @@ namespace AmazFit_Watchface_2
             {
                 src = new Bitmap(360, 360);
                 combineMask = new ImageMagick.MagickImage(colorMask, 360, 360);
+            }
+            if (radioButton_ZeppE.Checked)
+            {
+                src = new Bitmap(416, 416);
+                combineMask = new ImageMagick.MagickImage(colorMask, 416, 416);
             }
             offSet_X = src.Width / 2;
             offSet_Y = src.Height / 2;
@@ -7882,6 +7937,11 @@ namespace AmazFit_Watchface_2
             {
                 centerX = 180;
                 centerY = 180;
+            }
+            if (radioButton_ZeppE.Checked)
+            {
+                centerX = 208;
+                centerY = 208;
             }
 
             int Hour_X = (int)numericUpDown_Hour_handX.Value;
