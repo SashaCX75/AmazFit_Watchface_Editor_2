@@ -5039,6 +5039,11 @@ namespace AmazFit_Watchface_2
                     suffix = "_T-Rex_Pro";
                     DeviceId = 83;
                 }
+                if (radioButton_ConvertingOutput_ZeppE.Checked)
+                {
+                    suffix = "_Zepp_E";
+                    DeviceId = 60;
+                }
                 if (radioButton_ConvertingOutput_Custom.Checked)
                 {
                     suffix = "_Custom_" + numericUpDown_ConvertingOutput_Custom.Value.ToString();
@@ -5839,6 +5844,9 @@ namespace AmazFit_Watchface_2
                     (int)Math.Round(clockHand.Scale.Coordinates.Y * scale, MidpointRounding.AwayFromZero);
             }
 
+            clockHand.X = (int)Math.Round(clockHand.X * scale, MidpointRounding.AwayFromZero);
+            clockHand.Y = (int)Math.Round(clockHand.Y * scale, MidpointRounding.AwayFromZero);
+
             return clockHand;
         }
 
@@ -5848,18 +5856,18 @@ namespace AmazFit_Watchface_2
             {
                 if (digit.Image != null)
                 {
-                    if (digit.Image.DecimalPointImageIndex != null)
-                        digit.Image.DecimalPointImageIndex =
-                            (int)Math.Round((int)digit.Image.DecimalPointImageIndex *
-                            scale, MidpointRounding.AwayFromZero);
-                    if (digit.Image.DelimiterImageIndex != null)
-                        digit.Image.DelimiterImageIndex =
-                            (int)Math.Round((int)digit.Image.DelimiterImageIndex *
-                            scale, MidpointRounding.AwayFromZero);
-                    if (digit.Image.NoDataImageIndex != null)
-                        digit.Image.NoDataImageIndex =
-                            (int)Math.Round((int)digit.Image.NoDataImageIndex *
-                            scale, MidpointRounding.AwayFromZero);
+                    //if (digit.Image.DecimalPointImageIndex != null)
+                    //    digit.Image.DecimalPointImageIndex =
+                    //        (int)Math.Round((int)digit.Image.DecimalPointImageIndex *
+                    //        scale, MidpointRounding.AwayFromZero);
+                    //if (digit.Image.DelimiterImageIndex != null)
+                    //    digit.Image.DelimiterImageIndex =
+                    //        (int)Math.Round((int)digit.Image.DelimiterImageIndex *
+                    //        scale, MidpointRounding.AwayFromZero);
+                    //if (digit.Image.NoDataImageIndex != null)
+                    //    digit.Image.NoDataImageIndex =
+                    //        (int)Math.Round((int)digit.Image.NoDataImageIndex *
+                    //        scale, MidpointRounding.AwayFromZero);
 
                     digit.Image.X =
                         (int)Math.Round(digit.Image.X * scale, MidpointRounding.AwayFromZero);
