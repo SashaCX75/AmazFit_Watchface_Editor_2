@@ -2732,35 +2732,10 @@ namespace AmazFit_Watchface_2
                     int imageError_index = userPanel_text.comboBoxGetSelectedIndexImageError();
                     int imageMinus_index = userPanel_text.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
 
-                    // если имеется иконка
-                    int centr_alignment = -1;
-
-                    // если имеется иконка на основном экране
-                    if (Watch_Face != null && Watch_Face.System != null && Watch_Face.System.Activity != null)
-                    {
-                        foreach (Activity activity_main in Watch_Face.System.Activity)
-                        {
-                            if (activity_main.Type == "Weather" && activity_main.ImageProgress != null && activity_main.ImageProgress.ImageSet != null &&
-                            activity_main.ImageProgress.Coordinates != null && OneCoordinates(activity_main.ImageProgress.Coordinates))
-
-                            {
-                                int imageIndexWeather = (int)activity_main.ImageProgress.ImageSet.ImageIndex - 1;
-                                int _image_x = (int)activity_main.ImageProgress.Coordinates[0].X;
-
-                                if (imageIndexWeather < ListImagesFullName.Count)
-                                {
-                                    src = OpenFileStream(ListImagesFullName[imageIndexWeather]);
-                                    centr_alignment = _image_x + src.Width / 2;
-                                }
-
-                            }
-                        }
-                    }
-
                     if (showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder, -1, false, centr_alignment);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder);
                     }
                     else if (imageError_index >= 0)
                     {
@@ -2769,7 +2744,7 @@ namespace AmazFit_Watchface_2
 
                         Draw_weather_text(gPanel, imageIndex, x, y,
                                         spasing, alignment, value, addZero, imageMinus_index, separator_index,
-                                        BBorder, imageError_index, !showTemperature, centr_alignment);
+                                        BBorder, imageError_index, !showTemperature);
                     }
 
                     if (userPanel_text.comboBoxGetSelectedIndexIcon() >= 0)
