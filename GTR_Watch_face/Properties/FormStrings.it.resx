@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,281 +59,431 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="Dialog_Title_Image" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Dialog_Title_Image" xml:space="preserve">
     <value>Seleziona immagine</value>
   </data>
-  <data name="Dialog_Title_Pack" xml:space="preserve">
+	<data name="Dialog_Title_Pack" xml:space="preserve">
     <value>Seleziona file JSON</value>
   </data>
-  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
+	<data name="Dialog_Title_PackUnpack" xml:space="preserve">
     <value>Percorso programma di compilazione file</value>
   </data>
-  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
+	<data name="Dialog_Title_PreviewStates" xml:space="preserve">
     <value>Seleziona file impostazioni anteprima </value>
   </data>
-  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
+	<data name="Dialog_Title_SaveGIF" xml:space="preserve">
     <value>Salva anteprima animata</value>
   </data>
-  <data name="Dialog_Title_SavePNG" xml:space="preserve">
+	<data name="Dialog_Title_SavePNG" xml:space="preserve">
     <value>Salva anteprima</value>
   </data>
-  <data name="Dialog_Title_Unpack" xml:space="preserve">
+	<data name="Dialog_Title_Unpack" xml:space="preserve">
     <value>Seleziona watchface</value>
   </data>
-  <data name="FilterBin" xml:space="preserve">
+	<data name="FilterBin" xml:space="preserve">
     <value>File binario (*.bin)|*.bin</value>
   </data>
-  <data name="FilterGif" xml:space="preserve">
+	<data name="FilterGif" xml:space="preserve">
     <value>File GIF (*.gif)|*.gif</value>
   </data>
-  <data name="FilterJson" xml:space="preserve">
+	<data name="FilterJson" xml:space="preserve">
     <value>File Json (*.json) | *.json</value>
   </data>
-  <data name="FilterPng" xml:space="preserve">
+	<data name="FilterPng" xml:space="preserve">
     <value>File PNG (*.png)|*.png</value>
   </data>
-  <data name="Form_Preview" xml:space="preserve">
+	<data name="Form_Preview" xml:space="preserve">
     <value>Anteprima</value>
   </data>
-  <data name="Form_PreviewX" xml:space="preserve">
+	<data name="Form_PreviewX" xml:space="preserve">
     <value>Anteprima [X =</value>
   </data>
-  <data name="Message_bigFile_Caption" xml:space="preserve">
+	<data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Dimensione del file eccessiva</value>
   </data>
-  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
+	<data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>Il file decompresso è maggiore di 1,95MB.</value>
   </data>
-  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+	<data name="Message_bigFile_Text1_gts" xml:space="preserve">
     <value>Il file decompresso è maggiore di 1,55MB.</value>
   </data>
-  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+	<data name="Message_bigFile_Text1_trex" xml:space="preserve">
     <value>Il file decompresso è maggiore di 5,5MB.</value>
   </data>
-  <data name="Message_bigFile_Text2" xml:space="preserve">
+	<data name="Message_bigFile_Text2" xml:space="preserve">
     <value>La watchface potrebbe non funzionare correttamente.</value>
   </data>
-  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+	<data name="Message_ConvertingCompleted_Text" xml:space="preserve">
     <value>È stata creata una nuova watchface.</value>
   </data>
-  <data name="Message_CopyCoord" xml:space="preserve">
+	<data name="Message_CopyCoord" xml:space="preserve">
     <value>Coordinate copiate</value>
   </data>
-  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+	<data name="Message_ErrorImage_Text1" xml:space="preserve">
     <value>Alcune immagini causano degli errori (</value>
   </data>
-  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+	<data name="Message_ErrorImage_Text2" xml:space="preserve">
     <value>Vuoi provare a risolverli?</value>
   </data>
-  <data name="Message_Error_Caption" xml:space="preserve">
+	<data name="Message_Error_Caption" xml:space="preserve">
     <value>Errore</value>
   </data>
-  <data name="Message_error_Image_Text1" xml:space="preserve">
+	<data name="Message_error_Image_Text1" xml:space="preserve">
     <value>Non è possibile aprire l'immagine:</value>
   </data>
-  <data name="Message_error_Image_Text2" xml:space="preserve">
+	<data name="Message_error_Image_Text2" xml:space="preserve">
     <value>Non hai i permessi per leggere il file oppure il file è danneggiato.</value>
   </data>
-  <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
+	<data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
     <value>File non trovato</value>
   </data>
-  <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
+	<data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
     <value>Il percorso [</value>
   </data>
-  <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
+	<data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
     <value>] dello strumento di compilazione/decompilazione è errato.</value>
   </data>
-  <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
+	<data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
     <value>Selezionare il percorso corretto per lo strumento di compilazione/decompilazione.</value>
   </data>
-  <data name="Message_error_respackerPath_Text1" xml:space="preserve">
+	<data name="Message_error_respackerPath_Text1" xml:space="preserve">
     <value>Mancano componenti necessari per il corretto funzionamento del programma.</value>
   </data>
-  <data name="Message_error_respackerPath_Text2" xml:space="preserve">
+	<data name="Message_error_respackerPath_Text2" xml:space="preserve">
     <value>Non è stato trovato lo strumento di compressione dei file bin nel percorso [</value>
   </data>
-  <data name="Message_error_respackerPath_Text3" xml:space="preserve">
+	<data name="Message_error_respackerPath_Text3" xml:space="preserve">
     <value>Verifica il percorso dello strumento di compressione dei file bin.</value>
   </data>
-  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+	<data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>Il percorso del programma non può contenere spazi. Si consiglia di posizionare il programma nella cartella principale del dsico.</value>
   </data>
-  <data name="Message_GoToFile_Caption" xml:space="preserve">
+	<data name="Message_GoToFile_Caption" xml:space="preserve">
     <value>Vai al file</value>
   </data>
-  <data name="Message_GoToFile_Text" xml:space="preserve">
+	<data name="Message_GoToFile_Text" xml:space="preserve">
     <value>Vuoi aprire il file?</value>
   </data>
-  <data name="Message_JsonError_Text" xml:space="preserve">
+	<data name="Message_JsonError_Text" xml:space="preserve">
     <value>File JSON non valido.</value>
   </data>
-  <data name="Message_JsonReadError_Text" xml:space="preserve">
+	<data name="Message_JsonReadError_Text" xml:space="preserve">
     <value>Errore di lettura file JSON.</value>
   </data>
-  <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
+	<data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
     <value>Carica valori</value>
   </data>
-  <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
+	<data name="Message_LoadPreviewStates_Text" xml:space="preserve">
     <value>Caricare un file esistente (PreviewStates.json) con i valori preimpostati?</value>
   </data>
-  <data name="Message_openProject_Caption" xml:space="preserve">
+	<data name="Message_openProject_Caption" xml:space="preserve">
     <value>Apertura progetto</value>
   </data>
-  <data name="Message_openProject_Text" xml:space="preserve">
+	<data name="Message_openProject_Text" xml:space="preserve">
     <value>Aprire un progetto decompresso?</value>
   </data>
-  <data name="Message_PNGFromOne_Text" xml:space="preserve">
+	<data name="Message_PNGFromOne_Text" xml:space="preserve">
     <value>I files PNG devono essere numerati a partire da 1.</value>
   </data>
-  <data name="Message_PNGmissing_Text1" xml:space="preserve">
+	<data name="Message_PNGmissing_Text1" xml:space="preserve">
     <value>I file PNG non sono ordinati correttamente o manca qualche file.</value>
   </data>
-  <data name="Message_PNGmissing_Text2" xml:space="preserve">
+	<data name="Message_PNGmissing_Text2" xml:space="preserve">
     <value>Assegna i nomi ai file PNG in ordine crescente.</value>
   </data>
-  <data name="Message_Restart_Caption" xml:space="preserve">
+	<data name="Message_Restart_Caption" xml:space="preserve">
     <value>Riavvia</value>
   </data>
-  <data name="Message_Restart_Text1" xml:space="preserve">
+	<data name="Message_Restart_Text1" xml:space="preserve">
     <value>Per applicare le impostazioni occorre riavviare il programma.</value>
   </data>
-  <data name="Message_Restart_Text2" xml:space="preserve">
+	<data name="Message_Restart_Text2" xml:space="preserve">
     <value>Riavviare il programma?</value>
   </data>
-  <data name="Message_SaveOnly1234_Text" xml:space="preserve">
+	<data name="Message_SaveOnly1234_Text" xml:space="preserve">
     <value>Per salvare i parametri occorre impostare il campo "Calorie" con un valore diverso da "1234".</value>
   </data>
-  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+	<data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
     <value>Salva progetto</value>
   </data>
-  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+	<data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
     <value>Salvare le modifiche al progetto</value>
   </data>
-  <data name="Message_Save_new_JSON" xml:space="preserve">
+	<data name="Message_Save_new_JSON" xml:space="preserve">
     <value>Il progetto corrente non è stato ancora salvato. Salvare il progetto?</value>
   </data>
-  <data name="Message_Warning3clockHand_Text" xml:space="preserve">
+	<data name="Message_Warning3clockHand_Text" xml:space="preserve">
     <value>Il mancato utilizzo di tutte le lancette dell'orologio analogico potrebbe causare problemi.</value>
   </data>
-  <data name="Message_WarningActivityError" xml:space="preserve">
+	<data name="Message_WarningActivityError" xml:space="preserve">
     <value>È consigliabile utilizzare un'immagine che indichi l'assenza di attività per questo simbolo.</value>
   </data>
-  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+	<data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
     <value>Il numero di elementi per l'animazione non può essere superiore a 4.</value>
   </data>
-  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+	<data name="Message_WarningAnimationLastImage" xml:space="preserve">
     <value>L'immagine per l'animazione non può essere l'ultima nell'elenco delle immagini.</value>
   </data>
-  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+	<data name="Message_WarningBatteryCount_Text" xml:space="preserve">
     <value>È consigliabile non utilizzare più di 10 immagini per la carica della batteria.</value>
   </data>
-  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+	<data name="Message_WarningBatterySegment_Text" xml:space="preserve">
     <value>Non è consigliabile utilizzare le immagini e l'indicatore di avanzamento per lo stesso tipo di valore. Questo potrebbe causare anomalie nella visualizzazione.</value>
   </data>
-  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+	<data name="Message_WarningConverting_Text1" xml:space="preserve">
     <value>Cartella </value>
   </data>
-  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+	<data name="Message_WarningConverting_Text2" xml:space="preserve">
     <value> esiste già. Vuoi sostituirlo?</value>
   </data>
-  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
-    <value>La visualizzazione della data in blocchi separati non funziona insieme alla visualizzazione della data su una riga.</value>
-  </data>
-  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
+	<data name="Message_WarningDistanceSuffix" xml:space="preserve">
     <value>Non è consigliabile impostare la distanza senza il suffisso.</value>
   </data>
-  <data name="Message_WarningMonthName" xml:space="preserve">
+	<data name="Message_WarningMonthName" xml:space="preserve">
     <value>Non è possbile visualizzare contemporaneamente il numero del mese e il nome del mese.</value>
   </data>
-  <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
+	<data name="Message_WarningOnlyMin_Text" xml:space="preserve">
     <value>Non è consigliabile utilizzare i minuti senza utilizzare le ore quando si utilizza l'orario in formato digitale.</value>
   </data>
-  <data name="Message_WarningOnlySec_Text" xml:space="preserve">
+	<data name="Message_WarningOnlySec_Text" xml:space="preserve">
     <value>Non è consigliabile utilizzare i secondi senza utilizzare le ore e i minuti quando si utilizza l'orario in formato digitale.</value>
   </data>
-  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+	<data name="Message_WarningPreview_Text1" xml:space="preserve">
     <value>Le dimensioni delle immagini per l'anteprima differiscono da quelle standard.</value>
   </data>
-  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+	<data name="Message_WarningPreview_Text2" xml:space="preserve">
     <value>Utilizzare le dimensioni esistenti?</value>
   </data>
-  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
-    <value>Per visualizzare la frequenza cardiaca si consiglia di utilizzare 6 elementi.</value>
+	<data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>Per visualizzare il battito cardiacoa usa 6 elementi.</value>
   </data>
-  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+	<data name="Message_WarningSpaceInName_Text" xml:space="preserve">
     <value>Il nome e il percorso del file non devono contenere spazi.</value>
   </data>
-  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+	<data name="Message_WarningTemperature_Text" xml:space="preserve">
     <value>La  temperatura corrente potrebbe non funzionare correttamente se non si seleziona anche la temperatura notturna e diurna.</value>
   </data>
-  <data name="Message_WarningTensOnes_Text" xml:space="preserve">
+	<data name="Message_WarningTensOnes_Text" xml:space="preserve">
     <value>I valori di ImageIndex differenti per decine ed unità non sono supportati.</value>
   </data>
-  <data name="Message_WarningWeatherError" xml:space="preserve">
+	<data name="Message_WarningWeatherError" xml:space="preserve">
     <value>Quando non viene impostata l'immagine del simbolo di errore per la temperatura corrente, potrebbero essere visualizzati dati errati.</value>
   </data>
-  <data name="Message_Warning_Caption" xml:space="preserve">
+	<data name="Message_Warning_Caption" xml:space="preserve">
     <value>Attenzione</value>
   </data>
-  <data name="Message_Warning_Information" xml:space="preserve">
+	<data name="Message_Warning_Information" xml:space="preserve">
     <value>Informazione</value>
+  </data>
+	<data name="ActivityName_ActivityGoal" xml:space="preserve">
+		<value>Obiettivo attività</value>
+	</data>
+	<data name="ActivityName_AirPressure" xml:space="preserve">
+		<value>Pressione aria</value>
+	</data>
+	<data name="ActivityName_AirQuality" xml:space="preserve">
+		<value>Qualità aria</value>
+	</data>
+	<data name="ActivityName_Altitude" xml:space="preserve">
+		<value>Altitudine</value>
+	</data>
+	<data name="ActivityName_Battery" xml:space="preserve">
+		<value>Batteria</value>
+	</data>
+	<data name="ActivityName_Calories" xml:space="preserve">
+		<value>Calorie</value>
+	</data>
+	<data name="ActivityName_Distance" xml:space="preserve">
+		<value>Distanza</value>
+	</data>
+	<data name="ActivityName_FatBurning" xml:space="preserve">
+		<value>Brucia grassi</value>
+	</data>
+	<data name="ActivityName_HeartRate" xml:space="preserve">
+		<value>Battito cardiaco</value>
+	</data>
+	<data name="ActivityName_Humidity" xml:space="preserve">
+		<value>Umidità</value>
+	</data>
+	<data name="ActivityName_PAI" xml:space="preserve">
+		<value>PAI</value>
+	</data>
+	<data name="ActivityName_StandUp" xml:space="preserve">
+		<value>In piedi</value>
+	</data>
+	<data name="ActivityName_Steps" xml:space="preserve">
+		<value>Passi</value>
+	</data>
+	<data name="ActivityName_Stress" xml:space="preserve">
+		<value>Stress</value>
+	</data>
+	<data name="ActivityName_Sunrise" xml:space="preserve">
+		<value>Alba</value>
+	</data>
+	<data name="ActivityName_UVindex" xml:space="preserve">
+		<value>Indice UV</value>
+	</data>
+	<data name="ActivityName_Weather" xml:space="preserve">
+		<value>Previsioni</value>
+	</data>
+	<data name="ActivityName_WindForce" xml:space="preserve">
+		<value>Forza vento</value>
+	</data>
+	<data name="DateName_Day" xml:space="preserve">
+		<value>Giorno</value>
+	</data>
+	<data name="DateName_Month" xml:space="preserve">
+		<value>Mese</value>
+	</data>
+	<data name="DateName_Year" xml:space="preserve">
+		<value>Anno</value>
+	</data>
+	<data name="Dialog_Title_WatchSkin" xml:space="preserve">
+		<value>Seleziona immagine orologio</value>
+	</data>
+	<data name="WidgetName_ActivityGoal" xml:space="preserve">
+		<value>Arrampicata</value>
+	</data>
+	<data name="WidgetName_AirPressure" xml:space="preserve">
+		<value>Pressione aria</value>
+	</data>
+	<data name="WidgetName_AirQuality" xml:space="preserve">
+		<value>Qualità aria</value>
+	</data>
+	<data name="WidgetName_Altitude" xml:space="preserve">
+		<value>Altitudine</value>
+	</data>
+	<data name="WidgetName_Battery" xml:space="preserve">
+		<value>Batteria</value>
+	</data>
+	<data name="WidgetName_Calories" xml:space="preserve">
+		<value>Calorie</value>
+	</data>
+	<data name="WidgetName_Date" xml:space="preserve">
+		<value>Data</value>
+	</data>
+	<data name="WidgetName_Distance" xml:space="preserve">
+		<value>Distanza</value>
+	</data>
+	<data name="WidgetName_FatBurning" xml:space="preserve">
+		<value>Brucia grassi</value>
+	</data>
+	<data name="WidgetName_HeartRate" xml:space="preserve">
+		<value>Battito cardiaco</value>
+	</data>
+	<data name="WidgetName_Humidity" xml:space="preserve">
+		<value>Umidità</value>
+	</data>
+	<data name="WidgetName_PAI" xml:space="preserve">
+		<value>PAI</value>
+	</data>
+	<data name="WidgetName_StandUp" xml:space="preserve">
+		<value>In piedi</value>
+	</data>
+	<data name="WidgetName_Steps" xml:space="preserve">
+		<value>Passi</value>
+	</data>
+	<data name="WidgetName_Stress" xml:space="preserve">
+		<value>Stress</value>
+	</data>
+	<data name="WidgetName_Sunrise" xml:space="preserve">
+		<value>Alba e tramonto</value>
+	</data>
+	<data name="WidgetName_UVindex" xml:space="preserve">
+		<value>Raggi UV</value>
+	</data>
+	<data name="WidgetName_Weather" xml:space="preserve">
+		<value>Previsioni</value>
+	</data>
+	<data name="WidgetName_WindForce" xml:space="preserve">
+		<value>Velocità e direzione vento</value>
+	</data>
+	<data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
+		<value>Aggiungi data display in zona modificabile</value>
+	</data>
+	<data name="Message_Warning_AddPreview_WidgetElement" xml:space="preserve">
+		<value>Aggiungi anteprima immagine per elementi selezionati.</value>
+	</data>
+	<data name="Message_Warning_Add_FirstWidget2" xml:space="preserve">
+		<value>Non dimenticare di regolare le maschere superiore e inferiore nella schermata di modifica.</value>
+	</data>
+	<data name="Message_Warning_Add_Widget" xml:space="preserve">
+		<value>Personalizza tutte le immagini necessarie per la zona modificabile.</value>
+	</data>
+	<data name="Message_Warning_No_Widget" xml:space="preserve">
+		<value>Innanzitutto, aggiungi almeno una zona modificabile.</value>
+	</data>
+	<data name="WidgetDescription_Date" xml:space="preserve">
+		<value>Data</value>
+	</data>
+	<data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">
+		<value>Aggiungi prima zona modificabile.</value>
+	</data>
+	<data name="File_ReadMy" xml:space="preserve">
+		<value>\Manual\readme_en.chm</value>
+	</data>
+	<data name="File_ReadMy_Start" xml:space="preserve">
+		<value>quick_guide.htm</value>
+	</data>
+	<data name="Message_Information_Caption" xml:space="preserve">
+    <value>Informazioni</value>
   </data>
 </root>
