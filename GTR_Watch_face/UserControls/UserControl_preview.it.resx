@@ -117,22 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema de rotacion (horas)</value>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Refresh Preview</value>
   </data>
-  <data name="userControl_FontRotate_weather_Max.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema del círculo (segundos)</value>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Genera anteprima</value>
   </data>
-  <data name="userControl_FontRotate_weather_Min.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema del círculo (minutos)</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
   </data>
-  <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema del círculo (horas)</value>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Immagine</value>
   </data>
-  <data name="userControl_SystemFont_weather_Max.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema de rotacion (segundos)</value>
-  </data>
-  <data name="userControl_SystemFont_weather_Min.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema de rotacion (minutos)</value>
+  <data name="button_preview.Text" xml:space="preserve">
+    <value>Anteprima</value>
   </data>
 </root>

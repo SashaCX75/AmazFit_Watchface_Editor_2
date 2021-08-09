@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema del círculo (amanecer/atardecer)</value>
+  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
+    <value>Fuente del sistema de rotacion (amanecer/atardecer)</value>
   </data>
   <data name="userControl_FontRotate_weather_Max.ButtonText" xml:space="preserve">
     <value>Fuente del sistema del círculo (atardecer)</value>
@@ -126,8 +126,8 @@
   <data name="userControl_FontRotate_weather_Min.ButtonText" xml:space="preserve">
     <value>Fuente del sistema del círculo (amanecer)</value>
   </data>
-  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema de rotacion (amanecer/atardecer)</value>
+  <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
+    <value>Fuente del sistema del círculo (amanecer/atardecer)</value>
   </data>
   <data name="userControl_SystemFont_weather_Max.ButtonText" xml:space="preserve">
     <value>Fuente del sistema de rotacion (atardecer)</value>

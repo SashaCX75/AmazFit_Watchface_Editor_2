@@ -169,7 +169,7 @@
     <value>3</value>
   </data>
   <data name="&gt;&gt;userControl_FontRotate.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_FontRotate, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_FontRotate, AmazFit_Watchface_Editor_2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_FontRotate_goal.Name" xml:space="preserve">
     <value>userControl_FontRotate_goal</value>
@@ -190,7 +190,7 @@
     <value>Следовать за</value>
   </data>
   <data name="&gt;&gt;userControl_SystemFont.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_SystemFont, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_SystemFont, AmazFit_Watchface_Editor_2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_SystemFont_goal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -199,7 +199,7 @@
     <value>Следовать за</value>
   </data>
   <data name="&gt;&gt;userControl_FontRotate_goal.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_SystemFont_goal.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -232,7 +232,7 @@
     <value>Top</value>
   </data>
   <data name="&gt;&gt;userControl_SystemFont_goal.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="button_SystemFont.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 23</value>
@@ -320,5 +320,8 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>it</value>
   </metadata>
 </root>

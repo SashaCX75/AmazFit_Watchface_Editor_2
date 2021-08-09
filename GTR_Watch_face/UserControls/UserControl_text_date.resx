@@ -218,7 +218,7 @@
     <value>label1085</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_text, AmazFit_Watchface_Editor_2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label02.Parent" xml:space="preserve">
     <value>panel_text</value>
@@ -283,5 +283,8 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>it</value>
   </metadata>
 </root>

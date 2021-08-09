@@ -53,7 +53,6 @@ namespace AmazFit_Watchface_2.UserControls
             // 
             // panel_pictures
             // 
-            resources.ApplyResources(this.panel_pictures, "panel_pictures");
             this.panel_pictures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_pictures.Controls.Add(this.checkBox_pictures_Use);
             this.panel_pictures.Controls.Add(this.comboBox_pictures_image);
@@ -61,6 +60,7 @@ namespace AmazFit_Watchface_2.UserControls
             this.panel_pictures.Controls.Add(this.label01);
             this.panel_pictures.Controls.Add(this.label02);
             this.panel_pictures.Controls.Add(this.button_Copy_pictures);
+            resources.ApplyResources(this.panel_pictures, "panel_pictures");
             this.panel_pictures.Name = "panel_pictures";
             // 
             // checkBox_pictures_Use
@@ -73,9 +73,9 @@ namespace AmazFit_Watchface_2.UserControls
             // 
             // comboBox_pictures_image
             // 
-            resources.ApplyResources(this.comboBox_pictures_image, "comboBox_pictures_image");
             this.comboBox_pictures_image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_pictures_image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_pictures_image, "comboBox_pictures_image");
             this.comboBox_pictures_image.FormattingEnabled = true;
             this.comboBox_pictures_image.Name = "comboBox_pictures_image";
             this.comboBox_pictures_image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_DrawItem);
@@ -86,8 +86,8 @@ namespace AmazFit_Watchface_2.UserControls
             // 
             // dataGridView_coordinates_set
             // 
-            resources.ApplyResources(this.dataGridView_coordinates_set, "dataGridView_coordinates_set");
             this.dataGridView_coordinates_set.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            resources.ApplyResources(this.dataGridView_coordinates_set, "dataGridView_coordinates_set");
             this.dataGridView_coordinates_set.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
@@ -120,7 +120,6 @@ namespace AmazFit_Watchface_2.UserControls
             // 
             // contextMenuStrip_XY_InTable
             // 
-            resources.ApplyResources(this.contextMenuStrip_XY_InTable, "contextMenuStrip_XY_InTable");
             this.contextMenuStrip_XY_InTable.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_XY_InTable.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатыToolStripMenuItem,
@@ -128,34 +127,35 @@ namespace AmazFit_Watchface_2.UserControls
             this.вставитьToolStripMenuItem,
             this.удалитьСтрокуToolStripMenuItem});
             this.contextMenuStrip_XY_InTable.Name = "contextMenuStrip_XY_InTable";
+            resources.ApplyResources(this.contextMenuStrip_XY_InTable, "contextMenuStrip_XY_InTable");
             this.contextMenuStrip_XY_InTable.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_XY_InTable_Opening);
             // 
             // вставитьКоординатыToolStripMenuItem
             // 
-            resources.ApplyResources(this.вставитьКоординатыToolStripMenuItem, "вставитьКоординатыToolStripMenuItem");
             this.вставитьКоординатыToolStripMenuItem.Image = global::AmazFit_Watchface_2.Properties.Resources.Actions_insert_text_icon;
             this.вставитьКоординатыToolStripMenuItem.Name = "вставитьКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьКоординатыToolStripMenuItem, "вставитьКоординатыToolStripMenuItem");
             this.вставитьКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатыToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem
             // 
-            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
             this.копироватьToolStripMenuItem.Image = global::AmazFit_Watchface_2.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
+            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
             this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItem
             // 
-            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
             this.вставитьToolStripMenuItem.Image = global::AmazFit_Watchface_2.Properties.Resources.Files_Clipboard_icon;
             this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
+            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
             this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // удалитьСтрокуToolStripMenuItem
             // 
-            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem, "удалитьСтрокуToolStripMenuItem");
             this.удалитьСтрокуToolStripMenuItem.Image = global::AmazFit_Watchface_2.Properties.Resources.table_row_delete_icon;
             this.удалитьСтрокуToolStripMenuItem.Name = "удалитьСтрокуToolStripMenuItem";
+            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem, "удалитьСтрокуToolStripMenuItem");
             this.удалитьСтрокуToolStripMenuItem.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
             // 
             // label01

@@ -124,14 +124,14 @@
   <data name="button_CreatePreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 23</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;button_preview.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;button_RefreshPreview.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="panel_preview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 55</value>
   </data>
-  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
+  <data name="button_preview.Text" xml:space="preserve">
+    <value>Предпросмотр</value>
   </data>
   <data name="&gt;&gt;comboBox_image.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -155,8 +155,9 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl_preview</value>
   </data>
-  <data name="button_preview.Text" xml:space="preserve">
-    <value>Предпросмотр</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="comboBox_image.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
   <data name="button_CreatePreview.Text" xml:space="preserve">
     <value>Создать Preview</value>
@@ -197,8 +198,11 @@
   <data name="button_RefreshPreview.Text" xml:space="preserve">
     <value>Обновить Preview</value>
   </data>
-  <data name="&gt;&gt;button_preview.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="button_preview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;label01.Parent" xml:space="preserve">
+    <value>panel_preview</value>
   </data>
   <data name="&gt;&gt;panel_preview.Name" xml:space="preserve">
     <value>panel_preview</value>
@@ -206,7 +210,6 @@
   <data name="button_CreatePreview.Location" type="System.Drawing.Point, System.Drawing">
     <value>217, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="comboBox_image.MaxDropDownItems" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -231,8 +234,8 @@
   <data name="&gt;&gt;panel_preview.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;label01.Parent" xml:space="preserve">
-    <value>panel_preview</value>
+  <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
   <data name="button_preview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -252,14 +255,11 @@
   <data name="&gt;&gt;button_CreatePreview.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="comboBox_image.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
+  <data name="&gt;&gt;button_RefreshPreview.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="panel_preview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 55</value>
-  </data>
-  <data name="button_preview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="button_RefreshPreview.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
