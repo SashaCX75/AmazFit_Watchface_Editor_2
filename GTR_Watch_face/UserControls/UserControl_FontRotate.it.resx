@@ -118,24 +118,6 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-	<data name="checkBox_scaleLinear_Use.Size" type="System.Drawing.Size, System.Drawing">
-		<value>53, 17</value>
-	</data>
-	<data name="checkBox_scaleLinear_Use.Text" xml:space="preserve">
-    <value>Attiva</value>
-  </data>
-	<data name="radioButton_scaleLinear_image.Size" type="System.Drawing.Size, System.Drawing">
-		<value>70, 17</value>
-	</data>
-	<data name="radioButton_scaleLinear_image.Text" xml:space="preserve">
-    <value>Immagine</value>
-  </data>
-	<data name="radioButton_scaleLinear_color.Size" type="System.Drawing.Size, System.Drawing">
-		<value>55, 17</value>
-	</data>
-	<data name="radioButton_scaleLinear_color.Text" xml:space="preserve">
-    <value>Colore</value>
-  </data>
 	<data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -151,10 +133,10 @@
 </value>
 	</data>
 	<data name="вставитьКоординатуХToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-		<value>183, 26</value>
+		<value>176, 26</value>
 	</data>
 	<data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>Incolla coordinata X</value>
+    <value>Incolla coordinate X</value>
   </data>
 	<data name="копироватьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
@@ -173,7 +155,7 @@
 </value>
 	</data>
 	<data name="копироватьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
-		<value>183, 26</value>
+		<value>176, 26</value>
 	</data>
 	<data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
     <value>Copia</value>
@@ -196,13 +178,13 @@
 </value>
 	</data>
 	<data name="вставитьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
-		<value>183, 26</value>
+		<value>176, 26</value>
 	</data>
 	<data name="вставитьToolStripMenuItemX.Text" xml:space="preserve">
     <value>Incolla</value>
   </data>
 	<data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-		<value>184, 82</value>
+		<value>177, 82</value>
 	</data>
 	<data name="вставитьКоординатуYToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
@@ -219,10 +201,10 @@
 </value>
 	</data>
 	<data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-		<value>183, 26</value>
+		<value>176, 26</value>
 	</data>
 	<data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
-    <value>Incolla coordinata Y</value>
+    <value>Incolla coordinate Y</value>
   </data>
 	<data name="копироватьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
 		<value>
@@ -241,7 +223,7 @@
 </value>
 	</data>
 	<data name="копироватьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
-		<value>183, 26</value>
+		<value>176, 26</value>
 	</data>
 	<data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
     <value>Copia</value>
@@ -264,51 +246,84 @@
 </value>
 	</data>
 	<data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
-		<value>183, 26</value>
+		<value>176, 26</value>
 	</data>
 	<data name="вставитьToolStripMenuItemY.Text" xml:space="preserve">
     <value>Incolla</value>
   </data>
 	<data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-		<value>184, 82</value>
+		<value>177, 82</value>
 	</data>
-	<data name="comboBox_scaleLinear_flatness.Items" xml:space="preserve">
-    <value>Arrotondata</value>
+	<data name="checkBox_Use.Size" type="System.Drawing.Size, System.Drawing">
+		<value>45, 17</value>
+	</data>
+	<data name="checkBox_Use.Text" xml:space="preserve">
+    <value>Attiva</value>
   </data>
-	<data name="comboBox_scaleLinear_flatness.Items1" xml:space="preserve">
-    <value>Piatta</value>
+	<data name="checkBox_addZero.Text" xml:space="preserve">
+    <value>Aggiungi zeri iniziali</value>
   </data>
-	<data name="label02.Text" xml:space="preserve">
-    <value>Estremità</value>
+	<data name="checkBox_follow.Text" xml:space="preserve">
+    <value>Monitora</value>
+  </data>
+	<data name="checkBox_FontRotate_unit.Text" xml:space="preserve">
+    <value>Unità</value>
+  </data>
+	<data name="checkBox_separator.Text" xml:space="preserve">
+    <value>Separatore</value>
+  </data>
+	<data name="radioButton_CtrlClockwise.Size" type="System.Drawing.Size, System.Drawing">
+		<value>112, 17</value>
+	</data>
+	<data name="radioButton_CtrlClockwise.Text" xml:space="preserve">
+    <value>Antiorario</value>
+  </data>
+	<data name="radioButton_Clockwise.Size" type="System.Drawing.Size, System.Drawing">
+		<value>73, 17</value>
+	</data>
+	<data name="radioButton_Clockwise.Text" xml:space="preserve">
+    <value>Orario</value>
+  </data>
+	<data name="groupBox_FontRotate_RotateDirection.Text" xml:space="preserve">
+    <value>Direzione testo</value>
   </data>
 	<data name="label01.Size" type="System.Drawing.Size, System.Drawing">
-		<value>143, 13</value>
+		<value>63, 13</value>
 	</data>
 	<data name="label01.Text" xml:space="preserve">
-    <value>Coordinate punto di partenza</value>
+    <value>Coordinate</value>
   </data>
-	<data name="label06.Text" xml:space="preserve">
-    <value>Spessore</value>
-  </data>
-	<data name="label05.Text" xml:space="preserve">
-    <value>Lunghezza</value>
-  </data>
-	<data name="label07.Location" type="System.Drawing.Point, System.Drawing">
-		<value>152, 88</value>
+	<data name="label02.Size" type="System.Drawing.Size, System.Drawing">
+		<value>27, 13</value>
 	</data>
-	<data name="label07.Size" type="System.Drawing.Size, System.Drawing">
-		<value>111, 30</value>
+	<data name="label02.Text" xml:space="preserve">
+    <value>Dimensione</value>
+  </data>
+	<data name="label03.Size" type="System.Drawing.Size, System.Drawing">
+		<value>34, 13</value>
 	</data>
+	<data name="label03.Text" xml:space="preserve">
+    <value>Angolo</value>
+  </data>
+	<data name="label04.Size" type="System.Drawing.Size, System.Drawing">
+		<value>46, 13</value>
+	</data>
+	<data name="label04.Text" xml:space="preserve">
+    <value>Spaziatura</value>
+  </data>
 	<data name="label07.Text" xml:space="preserve">
-    <value>Immagine puntatore avanzamento</value>
+    <value>Colore</value>
   </data>
+	<data name="label08.Size" type="System.Drawing.Size, System.Drawing">
+		<value>40, 13</value>
+	</data>
 	<data name="label08.Text" xml:space="preserve">
-    <value>Immagine sfondo</value>
+    <value>Raggio</value>
   </data>
-	<data name="button_Copy_scaleLinear.Text" xml:space="preserve">
-    <value>Copia dalla schermata principale</value>
+	<data name="button_Copy_FontRotate.Text" xml:space="preserve">
+    <value>Copia dalla schermo principale</value>
   </data>
-	<data name="button_scaleLinear.Text" xml:space="preserve">
-    <value>Barra avanzamento lineare</value>
+	<data name="button_FontRotate.Text" xml:space="preserve">
+    <value>System font in a circle</value>
   </data>
 </root>
