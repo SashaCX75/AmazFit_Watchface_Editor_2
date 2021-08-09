@@ -117,14 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBox_WidgetsArea.Error" xml:space="preserve">
+  <data name="radioButton_ZeppE.Error" xml:space="preserve">
     <value />
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="checkBox_WidgetsArea.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ZeppE.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radioButton_ZeppE.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton_ZeppE.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox_WidgetsArea.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox_WidgetsArea.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
   <data name="checkBox_WidgetsArea.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -9913,7 +9925,7 @@ The data is not displayed correctly for all cities.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAdABBQHQAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAdgBBQHYAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -20753,7 +20765,7 @@ zone frame</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAU
-        DQAAAk1TRnQBSQFMAgEBBQEAATwBBAE8AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBQEAAUQBBAFEAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -20949,52 +20961,40 @@ zone frame</value>
   <data name="radioButton_ConvertingOutput_Custom.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_TRexPro.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingOutput_TRexPro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingOutput_TRexPro.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_TRexPro.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_ZeppE.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingOutput_ZeppE.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingOutput_ZeppE.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_ZeppE.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_GTR2.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingOutput_GTR2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingOutput_GTR2.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_GTR2.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="groupBox10.Error" xml:space="preserve">
@@ -21045,52 +21045,40 @@ zone frame</value>
   <data name="radioButton_ConvertingInput_Custom.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_Verge.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_TRexPro.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_Verge.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingInput_TRexPro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingInput_Verge.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingInput_TRexPro.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingInput_Verge.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_TRexPro.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_TRex.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_ZeppE.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_TRex.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingInput_ZeppE.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingInput_TRex.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingInput_ZeppE.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingInput_TRex.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_ZeppE.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_GTR2.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingInput_GTR2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingInput_GTR2.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_GTR2.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="groupBox9.Error" xml:space="preserve">

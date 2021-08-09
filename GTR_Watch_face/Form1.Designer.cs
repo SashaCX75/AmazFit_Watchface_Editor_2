@@ -433,6 +433,7 @@
             this.userControl_hand_Steps = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_text_goal_Steps = new AmazFit_Watchface_2.UserControl_text_goal();
             this.userControl_text_Steps = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_segments_Steps = new AmazFit_Watchface_2.UserControls.UserControl_segments();
             this.userControl_pictures_Steps = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_Calories = new System.Windows.Forms.TabPage();
             this.userControl_icon_Calories = new AmazFit_Watchface_2.UserControl_icon();
@@ -442,6 +443,7 @@
             this.userControl_hand_Calories = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_text_goal_Calories = new AmazFit_Watchface_2.UserControl_text_goal();
             this.userControl_text_Calories = new AmazFit_Watchface_2.UserControl_text();
+            this.userControl_segments_Calories = new AmazFit_Watchface_2.UserControls.UserControl_segments();
             this.userControl_pictures_Calories = new AmazFit_Watchface_2.UserControl_pictures();
             this.tabPage_HeartRate = new System.Windows.Forms.TabPage();
             this.userControl_icon_HeartRate = new AmazFit_Watchface_2.UserControl_icon();
@@ -1482,8 +1484,36 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox_Preview = new System.Windows.Forms.PictureBox();
             this.checkBox_WidgetsArea = new System.Windows.Forms.CheckBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.radioButton_ZeppE = new System.Windows.Forms.RadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.userControl_segments_HeartRate = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_PAI = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_StandUp = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Stress = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_ActivityGoal = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_FatBurning = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_UVindex = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_AirQuality = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Humidity = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Sunrise = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_WindForce = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Altitude = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_AirPressure = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Steps_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Calories_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_HeartRate_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_PAI_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_StandUp_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Stress_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_ActivityGoal_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_FatBurning_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_UVindex_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_AirQuality_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Humidity_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Sunrise_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_WindForce_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_Altitude_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
+            this.userControl_segments_AirPressure_AOD = new AmazFit_Watchface_2.UserControls.UserControl_segments();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -5869,6 +5899,7 @@
             this.tabPage_Steps.Controls.Add(this.userControl_hand_Steps);
             this.tabPage_Steps.Controls.Add(this.userControl_text_goal_Steps);
             this.tabPage_Steps.Controls.Add(this.userControl_text_Steps);
+            this.tabPage_Steps.Controls.Add(this.userControl_segments_Steps);
             this.tabPage_Steps.Controls.Add(this.userControl_pictures_Steps);
             this.tabPage_Steps.Name = "tabPage_Steps";
             // 
@@ -5943,6 +5974,15 @@
             this.userControl_text_Steps.Padding_zero = true;
             this.userControl_text_Steps.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
             // 
+            // userControl_segments_Steps
+            // 
+            this.userControl_segments_Steps.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Steps, "userControl_segments_Steps");
+            this.userControl_segments_Steps.Collapsed = true;
+            this.userControl_segments_Steps.FixedRowsCount = false;
+            this.userControl_segments_Steps.ImagesCount = -1;
+            this.userControl_segments_Steps.Name = "userControl_segments_Steps";
+            // 
             // userControl_pictures_Steps
             // 
             this.userControl_pictures_Steps.AOD = false;
@@ -5963,6 +6003,7 @@
             this.tabPage_Calories.Controls.Add(this.userControl_hand_Calories);
             this.tabPage_Calories.Controls.Add(this.userControl_text_goal_Calories);
             this.tabPage_Calories.Controls.Add(this.userControl_text_Calories);
+            this.tabPage_Calories.Controls.Add(this.userControl_segments_Calories);
             this.tabPage_Calories.Controls.Add(this.userControl_pictures_Calories);
             this.tabPage_Calories.Name = "tabPage_Calories";
             // 
@@ -6036,6 +6077,15 @@
             this.userControl_text_Calories.Padding_zero = true;
             this.userControl_text_Calories.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_ValueChanged);
             // 
+            // userControl_segments_Calories
+            // 
+            this.userControl_segments_Calories.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Calories, "userControl_segments_Calories");
+            this.userControl_segments_Calories.Collapsed = true;
+            this.userControl_segments_Calories.FixedRowsCount = false;
+            this.userControl_segments_Calories.ImagesCount = -1;
+            this.userControl_segments_Calories.Name = "userControl_segments_Calories";
+            // 
             // userControl_pictures_Calories
             // 
             this.userControl_pictures_Calories.AOD = false;
@@ -6055,6 +6105,7 @@
             this.tabPage_HeartRate.Controls.Add(this.userControl_scaleCircle_HeartRate);
             this.tabPage_HeartRate.Controls.Add(this.userControl_hand_HeartRate);
             this.tabPage_HeartRate.Controls.Add(this.userControl_text_HeartRate);
+            this.tabPage_HeartRate.Controls.Add(this.userControl_segments_HeartRate);
             this.tabPage_HeartRate.Controls.Add(this.userControl_pictures_HeartRate);
             this.tabPage_HeartRate.Name = "tabPage_HeartRate";
             // 
@@ -6136,6 +6187,7 @@
             this.tabPage_PAI.Controls.Add(this.userControl_scaleCircle_PAI);
             this.tabPage_PAI.Controls.Add(this.userControl_hand_PAI);
             this.tabPage_PAI.Controls.Add(this.userControl_text_PAI);
+            this.tabPage_PAI.Controls.Add(this.userControl_segments_PAI);
             this.tabPage_PAI.Controls.Add(this.userControl_pictures_PAI);
             this.tabPage_PAI.Name = "tabPage_PAI";
             // 
@@ -6262,6 +6314,7 @@
             this.tabPage_StandUp.Controls.Add(this.userControl_hand_StandUp);
             this.tabPage_StandUp.Controls.Add(this.userControl_text_goal_StandUp);
             this.tabPage_StandUp.Controls.Add(this.userControl_text_StandUp);
+            this.tabPage_StandUp.Controls.Add(this.userControl_segments_StandUp);
             this.tabPage_StandUp.Controls.Add(this.userControl_pictures_StandUp);
             this.tabPage_StandUp.Name = "tabPage_StandUp";
             // 
@@ -6355,6 +6408,7 @@
             this.tabPage_Stress.Controls.Add(this.userControl_scaleCircle_Stress);
             this.tabPage_Stress.Controls.Add(this.userControl_hand_Stress);
             this.tabPage_Stress.Controls.Add(this.userControl_text_Stress);
+            this.tabPage_Stress.Controls.Add(this.userControl_segments_Stress);
             this.tabPage_Stress.Controls.Add(this.userControl_pictures_Stress);
             this.tabPage_Stress.Name = "tabPage_Stress";
             // 
@@ -6438,6 +6492,7 @@
             this.tabPage_ActivityGoal.Controls.Add(this.userControl_hand_ActivityGoal);
             this.tabPage_ActivityGoal.Controls.Add(this.userControl_text_goal_ActivityGoal);
             this.tabPage_ActivityGoal.Controls.Add(this.userControl_text_ActivityGoal);
+            this.tabPage_ActivityGoal.Controls.Add(this.userControl_segments_ActivityGoal);
             this.tabPage_ActivityGoal.Controls.Add(this.userControl_pictures_ActivityGoal);
             this.tabPage_ActivityGoal.Name = "tabPage_ActivityGoal";
             // 
@@ -6556,6 +6611,7 @@
             this.tabPage_FatBurning.Controls.Add(this.userControl_hand_FatBurning);
             this.tabPage_FatBurning.Controls.Add(this.userControl_text_goal_FatBurning);
             this.tabPage_FatBurning.Controls.Add(this.userControl_text_FatBurning);
+            this.tabPage_FatBurning.Controls.Add(this.userControl_segments_FatBurning);
             this.tabPage_FatBurning.Controls.Add(this.userControl_pictures_FatBurning);
             this.tabPage_FatBurning.Name = "tabPage_FatBurning";
             // 
@@ -6779,6 +6835,7 @@
             this.tabPage_UVindex.Controls.Add(this.userControl_scaleCircle_UVindex);
             this.tabPage_UVindex.Controls.Add(this.userControl_hand_UVindex);
             this.tabPage_UVindex.Controls.Add(this.userControl_text_UVindex);
+            this.tabPage_UVindex.Controls.Add(this.userControl_segments_UVindex);
             this.tabPage_UVindex.Controls.Add(this.userControl_pictures_UVindex);
             this.tabPage_UVindex.Name = "tabPage_UVindex";
             // 
@@ -6860,6 +6917,7 @@
             this.tabPage_AirQuality.Controls.Add(this.userControl_scaleCircle_AirQuality);
             this.tabPage_AirQuality.Controls.Add(this.userControl_hand_AirQuality);
             this.tabPage_AirQuality.Controls.Add(this.userControl_text_AirQuality);
+            this.tabPage_AirQuality.Controls.Add(this.userControl_segments_AirQuality);
             this.tabPage_AirQuality.Controls.Add(this.userControl_pictures_AirQuality);
             this.tabPage_AirQuality.Name = "tabPage_AirQuality";
             // 
@@ -6941,6 +6999,7 @@
             this.tabPage_Humidity.Controls.Add(this.userControl_scaleCircle_Humidity);
             this.tabPage_Humidity.Controls.Add(this.userControl_hand_Humidity);
             this.tabPage_Humidity.Controls.Add(this.userControl_text_Humidity);
+            this.tabPage_Humidity.Controls.Add(this.userControl_segments_Humidity);
             this.tabPage_Humidity.Controls.Add(this.userControl_pictures_Humidity);
             this.tabPage_Humidity.Name = "tabPage_Humidity";
             // 
@@ -7025,6 +7084,7 @@
             this.tabPage_Sunrise.Controls.Add(this.userControl_text_Sunset);
             this.tabPage_Sunrise.Controls.Add(this.userControl_text_Sunrise);
             this.tabPage_Sunrise.Controls.Add(this.userControl_text_SunriseSunset);
+            this.tabPage_Sunrise.Controls.Add(this.userControl_segments_Sunrise);
             this.tabPage_Sunrise.Controls.Add(this.userControl_pictures_Sunrise);
             this.tabPage_Sunrise.Name = "tabPage_Sunrise";
             // 
@@ -7137,6 +7197,7 @@
             this.tabPage_WindForce.Controls.Add(this.userControl_scaleCircle_WindForce);
             this.tabPage_WindForce.Controls.Add(this.userControl_hand_WindForce);
             this.tabPage_WindForce.Controls.Add(this.userControl_text_WindForce);
+            this.tabPage_WindForce.Controls.Add(this.userControl_segments_WindForce);
             this.tabPage_WindForce.Controls.Add(this.userControl_pictures_WindForce);
             this.tabPage_WindForce.Name = "tabPage_WindForce";
             // 
@@ -7218,6 +7279,7 @@
             this.tabPage_Altitude.Controls.Add(this.userControl_scaleCircle_Altitude);
             this.tabPage_Altitude.Controls.Add(this.userControl_hand_Altitude);
             this.tabPage_Altitude.Controls.Add(this.userControl_text_Altitude);
+            this.tabPage_Altitude.Controls.Add(this.userControl_segments_Altitude);
             this.tabPage_Altitude.Controls.Add(this.userControl_pictures_Altitude);
             this.tabPage_Altitude.Name = "tabPage_Altitude";
             // 
@@ -7299,6 +7361,7 @@
             this.tabPage_AirPressure.Controls.Add(this.userControl_scaleCircle_AirPressure);
             this.tabPage_AirPressure.Controls.Add(this.userControl_hand_AirPressure);
             this.tabPage_AirPressure.Controls.Add(this.userControl_text_AirPressure);
+            this.tabPage_AirPressure.Controls.Add(this.userControl_segments_AirPressure);
             this.tabPage_AirPressure.Controls.Add(this.userControl_pictures_AirPressure);
             this.tabPage_AirPressure.Name = "tabPage_AirPressure";
             // 
@@ -11346,6 +11409,7 @@
             this.tabPage_Steps_AOD.Controls.Add(this.userControl_hand_Steps_AOD);
             this.tabPage_Steps_AOD.Controls.Add(this.userControl_text_goal_Steps_AOD);
             this.tabPage_Steps_AOD.Controls.Add(this.userControl_text_Steps_AOD);
+            this.tabPage_Steps_AOD.Controls.Add(this.userControl_segments_Steps_AOD);
             this.tabPage_Steps_AOD.Controls.Add(this.userControl_pictures_Steps_AOD);
             this.tabPage_Steps_AOD.Name = "tabPage_Steps_AOD";
             // 
@@ -11448,6 +11512,7 @@
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_hand_Calories_AOD);
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_text_goal_Calories_AOD);
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_text_Calories_AOD);
+            this.tabPage_Calories_AOD.Controls.Add(this.userControl_segments_Calories_AOD);
             this.tabPage_Calories_AOD.Controls.Add(this.userControl_pictures_Calories_AOD);
             this.tabPage_Calories_AOD.Name = "tabPage_Calories_AOD";
             // 
@@ -11549,6 +11614,7 @@
             this.tabPage_HeartRate_AOD.Controls.Add(this.userControl_scaleCircle_HeartRate_AOD);
             this.tabPage_HeartRate_AOD.Controls.Add(this.userControl_hand_HeartRate_AOD);
             this.tabPage_HeartRate_AOD.Controls.Add(this.userControl_text_HeartRate_AOD);
+            this.tabPage_HeartRate_AOD.Controls.Add(this.userControl_segments_HeartRate_AOD);
             this.tabPage_HeartRate_AOD.Controls.Add(this.userControl_pictures_HeartRate_AOD);
             this.tabPage_HeartRate_AOD.Name = "tabPage_HeartRate_AOD";
             // 
@@ -11631,13 +11697,14 @@
             // 
             resources.ApplyResources(this.tabPage_PAI_AOD, "tabPage_PAI_AOD");
             this.tabPage_PAI_AOD.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_PAI_AOD.Controls.Add(this.userControl_pictures_PAI_AOD);
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_icon_PAI_AOD);
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_SystemFont_Group_PAI_AOD);
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_scaleLinear_PAI_AOD);
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_scaleCircle_PAI_AOD);
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_hand_PAI_AOD);
+            this.tabPage_PAI_AOD.Controls.Add(this.userControl_segments_PAI_AOD);
             this.tabPage_PAI_AOD.Controls.Add(this.userControl_text_PAI_AOD);
-            this.tabPage_PAI_AOD.Controls.Add(this.userControl_pictures_PAI_AOD);
             this.tabPage_PAI_AOD.Name = "tabPage_PAI_AOD";
             // 
             // userControl_icon_PAI_AOD
@@ -11773,6 +11840,7 @@
             this.tabPage_StandUp_AOD.Controls.Add(this.userControl_hand_StandUp_AOD);
             this.tabPage_StandUp_AOD.Controls.Add(this.userControl_text_goal_StandUp_AOD);
             this.tabPage_StandUp_AOD.Controls.Add(this.userControl_text_StandUp_AOD);
+            this.tabPage_StandUp_AOD.Controls.Add(this.userControl_segments_StandUp_AOD);
             this.tabPage_StandUp_AOD.Controls.Add(this.userControl_pictures_StandUp_AOD);
             this.tabPage_StandUp_AOD.Name = "tabPage_StandUp_AOD";
             // 
@@ -11874,6 +11942,7 @@
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_scaleCircle_Stress_AOD);
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_hand_Stress_AOD);
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_text_Stress_AOD);
+            this.tabPage_Stress_AOD.Controls.Add(this.userControl_segments_Stress_AOD);
             this.tabPage_Stress_AOD.Controls.Add(this.userControl_pictures_Stress_AOD);
             this.tabPage_Stress_AOD.Name = "tabPage_Stress_AOD";
             // 
@@ -11964,6 +12033,7 @@
             this.tabPage_ActivityGoal_AOD.Controls.Add(this.userControl_hand_ActivityGoal_AOD);
             this.tabPage_ActivityGoal_AOD.Controls.Add(this.userControl_text_goal_ActivityGoal_AOD);
             this.tabPage_ActivityGoal_AOD.Controls.Add(this.userControl_text_ActivityGoal_AOD);
+            this.tabPage_ActivityGoal_AOD.Controls.Add(this.userControl_segments_ActivityGoal_AOD);
             this.tabPage_ActivityGoal_AOD.Controls.Add(this.userControl_pictures_ActivityGoal_AOD);
             this.tabPage_ActivityGoal_AOD.Name = "tabPage_ActivityGoal_AOD";
             // 
@@ -12089,6 +12159,7 @@
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_hand_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_text_goal_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_text_FatBurning_AOD);
+            this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_segments_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Controls.Add(this.userControl_pictures_FatBurning_AOD);
             this.tabPage_FatBurning_AOD.Name = "tabPage_FatBurning_AOD";
             // 
@@ -12328,6 +12399,7 @@
             this.tabPage_UVindex_AOD.Controls.Add(this.userControl_scaleCircle_UVindex_AOD);
             this.tabPage_UVindex_AOD.Controls.Add(this.userControl_hand_UVindex_AOD);
             this.tabPage_UVindex_AOD.Controls.Add(this.userControl_text_UVindex_AOD);
+            this.tabPage_UVindex_AOD.Controls.Add(this.userControl_segments_UVindex_AOD);
             this.tabPage_UVindex_AOD.Controls.Add(this.userControl_pictures_UVindex_AOD);
             this.tabPage_UVindex_AOD.Name = "tabPage_UVindex_AOD";
             // 
@@ -12416,6 +12488,7 @@
             this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_scaleCircle_AirQuality_AOD);
             this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_hand_AirQuality_AOD);
             this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_text_AirQuality_AOD);
+            this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_segments_AirQuality_AOD);
             this.tabPage_AirQuality_AOD.Controls.Add(this.userControl_pictures_AirQuality_AOD);
             this.tabPage_AirQuality_AOD.Name = "tabPage_AirQuality_AOD";
             // 
@@ -12504,6 +12577,7 @@
             this.tabPage_Humidity_AOD.Controls.Add(this.userControl_scaleCircle_Humidity_AOD);
             this.tabPage_Humidity_AOD.Controls.Add(this.userControl_hand_Humidity_AOD);
             this.tabPage_Humidity_AOD.Controls.Add(this.userControl_text_Humidity_AOD);
+            this.tabPage_Humidity_AOD.Controls.Add(this.userControl_segments_Humidity_AOD);
             this.tabPage_Humidity_AOD.Controls.Add(this.userControl_pictures_Humidity_AOD);
             this.tabPage_Humidity_AOD.Name = "tabPage_Humidity_AOD";
             // 
@@ -12594,6 +12668,7 @@
             this.tabPage_Sunrise_AOD.Controls.Add(this.userControl_text_Sunset_AOD);
             this.tabPage_Sunrise_AOD.Controls.Add(this.userControl_text_Sunrise_AOD);
             this.tabPage_Sunrise_AOD.Controls.Add(this.userControl_text_SunriseSunset_AOD);
+            this.tabPage_Sunrise_AOD.Controls.Add(this.userControl_segments_Sunrise_AOD);
             this.tabPage_Sunrise_AOD.Controls.Add(this.userControl_pictures_Sunrise_AOD);
             resources.ApplyResources(this.tabPage_Sunrise_AOD, "tabPage_Sunrise_AOD");
             this.tabPage_Sunrise_AOD.Name = "tabPage_Sunrise_AOD";
@@ -12716,6 +12791,7 @@
             this.tabPage_WindForce_AOD.Controls.Add(this.userControl_scaleCircle_WindForce_AOD);
             this.tabPage_WindForce_AOD.Controls.Add(this.userControl_hand_WindForce_AOD);
             this.tabPage_WindForce_AOD.Controls.Add(this.userControl_text_WindForce_AOD);
+            this.tabPage_WindForce_AOD.Controls.Add(this.userControl_segments_WindForce_AOD);
             this.tabPage_WindForce_AOD.Controls.Add(this.userControl_pictures_WindForce_AOD);
             this.tabPage_WindForce_AOD.Name = "tabPage_WindForce_AOD";
             // 
@@ -12804,6 +12880,7 @@
             this.tabPage_Altitude_AOD.Controls.Add(this.userControl_scaleCircle_Altitude_AOD);
             this.tabPage_Altitude_AOD.Controls.Add(this.userControl_hand_Altitude_AOD);
             this.tabPage_Altitude_AOD.Controls.Add(this.userControl_text_Altitude_AOD);
+            this.tabPage_Altitude_AOD.Controls.Add(this.userControl_segments_Altitude_AOD);
             this.tabPage_Altitude_AOD.Controls.Add(this.userControl_pictures_Altitude_AOD);
             this.tabPage_Altitude_AOD.Name = "tabPage_Altitude_AOD";
             // 
@@ -12892,6 +12969,7 @@
             this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_scaleCircle_AirPressure_AOD);
             this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_hand_AirPressure_AOD);
             this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_text_AirPressure_AOD);
+            this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_segments_AirPressure_AOD);
             this.tabPage_AirPressure_AOD.Controls.Add(this.userControl_pictures_AirPressure_AOD);
             this.tabPage_AirPressure_AOD.Name = "tabPage_AirPressure_AOD";
             // 
@@ -16507,16 +16585,268 @@
             this.checkBox_WidgetsArea.CheckedChanged += new System.EventHandler(this.checkBox_WidgetsArea_CheckedChanged);
             this.checkBox_WidgetsArea.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // radioButton_ZeppE
             // 
             resources.ApplyResources(this.radioButton_ZeppE, "radioButton_ZeppE");
             this.radioButton_ZeppE.Name = "radioButton_ZeppE";
             this.radioButton_ZeppE.UseVisualStyleBackColor = true;
             this.radioButton_ZeppE.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // userControl_segments_HeartRate
+            // 
+            this.userControl_segments_HeartRate.AOD = false;
+            resources.ApplyResources(this.userControl_segments_HeartRate, "userControl_segments_HeartRate");
+            this.userControl_segments_HeartRate.Collapsed = true;
+            this.userControl_segments_HeartRate.FixedRowsCount = false;
+            this.userControl_segments_HeartRate.ImagesCount = -1;
+            this.userControl_segments_HeartRate.Name = "userControl_segments_HeartRate";
+            // 
+            // userControl_segments_PAI
+            // 
+            this.userControl_segments_PAI.AOD = false;
+            resources.ApplyResources(this.userControl_segments_PAI, "userControl_segments_PAI");
+            this.userControl_segments_PAI.Collapsed = true;
+            this.userControl_segments_PAI.FixedRowsCount = false;
+            this.userControl_segments_PAI.ImagesCount = -1;
+            this.userControl_segments_PAI.Name = "userControl_segments_PAI";
+            // 
+            // userControl_segments_StandUp
+            // 
+            this.userControl_segments_StandUp.AOD = false;
+            resources.ApplyResources(this.userControl_segments_StandUp, "userControl_segments_StandUp");
+            this.userControl_segments_StandUp.Collapsed = true;
+            this.userControl_segments_StandUp.FixedRowsCount = false;
+            this.userControl_segments_StandUp.ImagesCount = -1;
+            this.userControl_segments_StandUp.Name = "userControl_segments_StandUp";
+            // 
+            // userControl_segments_Stress
+            // 
+            this.userControl_segments_Stress.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Stress, "userControl_segments_Stress");
+            this.userControl_segments_Stress.Collapsed = true;
+            this.userControl_segments_Stress.FixedRowsCount = false;
+            this.userControl_segments_Stress.ImagesCount = -1;
+            this.userControl_segments_Stress.Name = "userControl_segments_Stress";
+            // 
+            // userControl_segments_ActivityGoal
+            // 
+            this.userControl_segments_ActivityGoal.AOD = false;
+            resources.ApplyResources(this.userControl_segments_ActivityGoal, "userControl_segments_ActivityGoal");
+            this.userControl_segments_ActivityGoal.Collapsed = true;
+            this.userControl_segments_ActivityGoal.FixedRowsCount = false;
+            this.userControl_segments_ActivityGoal.ImagesCount = -1;
+            this.userControl_segments_ActivityGoal.Name = "userControl_segments_ActivityGoal";
+            // 
+            // userControl_segments_FatBurning
+            // 
+            this.userControl_segments_FatBurning.AOD = false;
+            resources.ApplyResources(this.userControl_segments_FatBurning, "userControl_segments_FatBurning");
+            this.userControl_segments_FatBurning.Collapsed = true;
+            this.userControl_segments_FatBurning.FixedRowsCount = false;
+            this.userControl_segments_FatBurning.ImagesCount = -1;
+            this.userControl_segments_FatBurning.Name = "userControl_segments_FatBurning";
+            // 
+            // userControl_segments_UVindex
+            // 
+            this.userControl_segments_UVindex.AOD = false;
+            resources.ApplyResources(this.userControl_segments_UVindex, "userControl_segments_UVindex");
+            this.userControl_segments_UVindex.Collapsed = true;
+            this.userControl_segments_UVindex.FixedRowsCount = false;
+            this.userControl_segments_UVindex.ImagesCount = -1;
+            this.userControl_segments_UVindex.Name = "userControl_segments_UVindex";
+            // 
+            // userControl_segments_AirQuality
+            // 
+            this.userControl_segments_AirQuality.AOD = false;
+            resources.ApplyResources(this.userControl_segments_AirQuality, "userControl_segments_AirQuality");
+            this.userControl_segments_AirQuality.Collapsed = true;
+            this.userControl_segments_AirQuality.FixedRowsCount = false;
+            this.userControl_segments_AirQuality.ImagesCount = -1;
+            this.userControl_segments_AirQuality.Name = "userControl_segments_AirQuality";
+            // 
+            // userControl_segments_Humidity
+            // 
+            this.userControl_segments_Humidity.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Humidity, "userControl_segments_Humidity");
+            this.userControl_segments_Humidity.Collapsed = true;
+            this.userControl_segments_Humidity.FixedRowsCount = false;
+            this.userControl_segments_Humidity.ImagesCount = -1;
+            this.userControl_segments_Humidity.Name = "userControl_segments_Humidity";
+            // 
+            // userControl_segments_Sunrise
+            // 
+            this.userControl_segments_Sunrise.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Sunrise, "userControl_segments_Sunrise");
+            this.userControl_segments_Sunrise.Collapsed = true;
+            this.userControl_segments_Sunrise.FixedRowsCount = true;
+            this.userControl_segments_Sunrise.ImagesCount = 2;
+            this.userControl_segments_Sunrise.Name = "userControl_segments_Sunrise";
+            // 
+            // userControl_segments_WindForce
+            // 
+            this.userControl_segments_WindForce.AOD = false;
+            resources.ApplyResources(this.userControl_segments_WindForce, "userControl_segments_WindForce");
+            this.userControl_segments_WindForce.Collapsed = true;
+            this.userControl_segments_WindForce.FixedRowsCount = false;
+            this.userControl_segments_WindForce.ImagesCount = -1;
+            this.userControl_segments_WindForce.Name = "userControl_segments_WindForce";
+            // 
+            // userControl_segments_Altitude
+            // 
+            this.userControl_segments_Altitude.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Altitude, "userControl_segments_Altitude");
+            this.userControl_segments_Altitude.Collapsed = true;
+            this.userControl_segments_Altitude.FixedRowsCount = false;
+            this.userControl_segments_Altitude.ImagesCount = -1;
+            this.userControl_segments_Altitude.Name = "userControl_segments_Altitude";
+            // 
+            // userControl_segments_AirPressure
+            // 
+            this.userControl_segments_AirPressure.AOD = false;
+            resources.ApplyResources(this.userControl_segments_AirPressure, "userControl_segments_AirPressure");
+            this.userControl_segments_AirPressure.Collapsed = true;
+            this.userControl_segments_AirPressure.FixedRowsCount = false;
+            this.userControl_segments_AirPressure.ImagesCount = -1;
+            this.userControl_segments_AirPressure.Name = "userControl_segments_AirPressure";
+            // 
+            // userControl_segments_Steps_AOD
+            // 
+            this.userControl_segments_Steps_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Steps_AOD, "userControl_segments_Steps_AOD");
+            this.userControl_segments_Steps_AOD.Collapsed = true;
+            this.userControl_segments_Steps_AOD.FixedRowsCount = false;
+            this.userControl_segments_Steps_AOD.ImagesCount = -1;
+            this.userControl_segments_Steps_AOD.Name = "userControl_segments_Steps_AOD";
+            // 
+            // userControl_segments_Calories_AOD
+            // 
+            this.userControl_segments_Calories_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Calories_AOD, "userControl_segments_Calories_AOD");
+            this.userControl_segments_Calories_AOD.Collapsed = true;
+            this.userControl_segments_Calories_AOD.FixedRowsCount = false;
+            this.userControl_segments_Calories_AOD.ImagesCount = -1;
+            this.userControl_segments_Calories_AOD.Name = "userControl_segments_Calories_AOD";
+            // 
+            // userControl_segments_HeartRate_AOD
+            // 
+            this.userControl_segments_HeartRate_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_HeartRate_AOD, "userControl_segments_HeartRate_AOD");
+            this.userControl_segments_HeartRate_AOD.Collapsed = true;
+            this.userControl_segments_HeartRate_AOD.FixedRowsCount = false;
+            this.userControl_segments_HeartRate_AOD.ImagesCount = -1;
+            this.userControl_segments_HeartRate_AOD.Name = "userControl_segments_HeartRate_AOD";
+            // 
+            // userControl_segments_PAI_AOD
+            // 
+            this.userControl_segments_PAI_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_PAI_AOD, "userControl_segments_PAI_AOD");
+            this.userControl_segments_PAI_AOD.Collapsed = true;
+            this.userControl_segments_PAI_AOD.FixedRowsCount = false;
+            this.userControl_segments_PAI_AOD.ImagesCount = -1;
+            this.userControl_segments_PAI_AOD.Name = "userControl_segments_PAI_AOD";
+            // 
+            // userControl_segments_StandUp_AOD
+            // 
+            this.userControl_segments_StandUp_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_StandUp_AOD, "userControl_segments_StandUp_AOD");
+            this.userControl_segments_StandUp_AOD.Collapsed = true;
+            this.userControl_segments_StandUp_AOD.FixedRowsCount = false;
+            this.userControl_segments_StandUp_AOD.ImagesCount = -1;
+            this.userControl_segments_StandUp_AOD.Name = "userControl_segments_StandUp_AOD";
+            // 
+            // userControl_segments_Stress_AOD
+            // 
+            this.userControl_segments_Stress_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Stress_AOD, "userControl_segments_Stress_AOD");
+            this.userControl_segments_Stress_AOD.Collapsed = true;
+            this.userControl_segments_Stress_AOD.FixedRowsCount = false;
+            this.userControl_segments_Stress_AOD.ImagesCount = -1;
+            this.userControl_segments_Stress_AOD.Name = "userControl_segments_Stress_AOD";
+            // 
+            // userControl_segments_ActivityGoal_AOD
+            // 
+            this.userControl_segments_ActivityGoal_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_ActivityGoal_AOD, "userControl_segments_ActivityGoal_AOD");
+            this.userControl_segments_ActivityGoal_AOD.Collapsed = true;
+            this.userControl_segments_ActivityGoal_AOD.FixedRowsCount = false;
+            this.userControl_segments_ActivityGoal_AOD.ImagesCount = -1;
+            this.userControl_segments_ActivityGoal_AOD.Name = "userControl_segments_ActivityGoal_AOD";
+            // 
+            // userControl_segments_FatBurning_AOD
+            // 
+            this.userControl_segments_FatBurning_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_FatBurning_AOD, "userControl_segments_FatBurning_AOD");
+            this.userControl_segments_FatBurning_AOD.Collapsed = true;
+            this.userControl_segments_FatBurning_AOD.FixedRowsCount = false;
+            this.userControl_segments_FatBurning_AOD.ImagesCount = -1;
+            this.userControl_segments_FatBurning_AOD.Name = "userControl_segments_FatBurning_AOD";
+            // 
+            // userControl_segments_UVindex_AOD
+            // 
+            this.userControl_segments_UVindex_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_UVindex_AOD, "userControl_segments_UVindex_AOD");
+            this.userControl_segments_UVindex_AOD.Collapsed = true;
+            this.userControl_segments_UVindex_AOD.FixedRowsCount = false;
+            this.userControl_segments_UVindex_AOD.ImagesCount = -1;
+            this.userControl_segments_UVindex_AOD.Name = "userControl_segments_UVindex_AOD";
+            // 
+            // userControl_segments_AirQuality_AOD
+            // 
+            this.userControl_segments_AirQuality_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_AirQuality_AOD, "userControl_segments_AirQuality_AOD");
+            this.userControl_segments_AirQuality_AOD.Collapsed = true;
+            this.userControl_segments_AirQuality_AOD.FixedRowsCount = false;
+            this.userControl_segments_AirQuality_AOD.ImagesCount = -1;
+            this.userControl_segments_AirQuality_AOD.Name = "userControl_segments_AirQuality_AOD";
+            // 
+            // userControl_segments_Humidity_AOD
+            // 
+            this.userControl_segments_Humidity_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Humidity_AOD, "userControl_segments_Humidity_AOD");
+            this.userControl_segments_Humidity_AOD.Collapsed = true;
+            this.userControl_segments_Humidity_AOD.FixedRowsCount = false;
+            this.userControl_segments_Humidity_AOD.ImagesCount = -1;
+            this.userControl_segments_Humidity_AOD.Name = "userControl_segments_Humidity_AOD";
+            // 
+            // userControl_segments_Sunrise_AOD
+            // 
+            this.userControl_segments_Sunrise_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Sunrise_AOD, "userControl_segments_Sunrise_AOD");
+            this.userControl_segments_Sunrise_AOD.Collapsed = true;
+            this.userControl_segments_Sunrise_AOD.FixedRowsCount = true;
+            this.userControl_segments_Sunrise_AOD.ImagesCount = 2;
+            this.userControl_segments_Sunrise_AOD.Name = "userControl_segments_Sunrise_AOD";
+            // 
+            // userControl_segments_WindForce_AOD
+            // 
+            this.userControl_segments_WindForce_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_WindForce_AOD, "userControl_segments_WindForce_AOD");
+            this.userControl_segments_WindForce_AOD.Collapsed = true;
+            this.userControl_segments_WindForce_AOD.FixedRowsCount = false;
+            this.userControl_segments_WindForce_AOD.ImagesCount = -1;
+            this.userControl_segments_WindForce_AOD.Name = "userControl_segments_WindForce_AOD";
+            // 
+            // userControl_segments_Altitude_AOD
+            // 
+            this.userControl_segments_Altitude_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_Altitude_AOD, "userControl_segments_Altitude_AOD");
+            this.userControl_segments_Altitude_AOD.Collapsed = true;
+            this.userControl_segments_Altitude_AOD.FixedRowsCount = false;
+            this.userControl_segments_Altitude_AOD.ImagesCount = -1;
+            this.userControl_segments_Altitude_AOD.Name = "userControl_segments_Altitude_AOD";
+            // 
+            // userControl_segments_AirPressure_AOD
+            // 
+            this.userControl_segments_AirPressure_AOD.AOD = false;
+            resources.ApplyResources(this.userControl_segments_AirPressure_AOD, "userControl_segments_AirPressure_AOD");
+            this.userControl_segments_AirPressure_AOD.Collapsed = true;
+            this.userControl_segments_AirPressure_AOD.FixedRowsCount = false;
+            this.userControl_segments_AirPressure_AOD.ImagesCount = -1;
+            this.userControl_segments_AirPressure_AOD.Name = "userControl_segments_AirPressure_AOD";
             // 
             // Form1
             // 
@@ -18486,6 +18816,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.RadioButton radioButton_ZeppE;
+        private UserControls.UserControl_segments userControl_segments_Steps;
+        private UserControls.UserControl_segments userControl_segments_Calories;
+        private UserControls.UserControl_segments userControl_segments_HeartRate;
+        private UserControls.UserControl_segments userControl_segments_PAI;
+        private UserControls.UserControl_segments userControl_segments_StandUp;
+        private UserControls.UserControl_segments userControl_segments_Stress;
+        private UserControls.UserControl_segments userControl_segments_ActivityGoal;
+        private UserControls.UserControl_segments userControl_segments_FatBurning;
+        private UserControls.UserControl_segments userControl_segments_UVindex;
+        private UserControls.UserControl_segments userControl_segments_AirQuality;
+        private UserControls.UserControl_segments userControl_segments_Humidity;
+        private UserControls.UserControl_segments userControl_segments_Sunrise;
+        private UserControls.UserControl_segments userControl_segments_WindForce;
+        private UserControls.UserControl_segments userControl_segments_Altitude;
+        private UserControls.UserControl_segments userControl_segments_AirPressure;
+        private UserControls.UserControl_segments userControl_segments_Steps_AOD;
+        private UserControls.UserControl_segments userControl_segments_Calories_AOD;
+        private UserControls.UserControl_segments userControl_segments_HeartRate_AOD;
+        private UserControls.UserControl_segments userControl_segments_PAI_AOD;
+        private UserControls.UserControl_segments userControl_segments_StandUp_AOD;
+        private UserControls.UserControl_segments userControl_segments_Stress_AOD;
+        private UserControls.UserControl_segments userControl_segments_ActivityGoal_AOD;
+        private UserControls.UserControl_segments userControl_segments_FatBurning_AOD;
+        private UserControls.UserControl_segments userControl_segments_UVindex_AOD;
+        private UserControls.UserControl_segments userControl_segments_AirQuality_AOD;
+        private UserControls.UserControl_segments userControl_segments_Humidity_AOD;
+        private UserControls.UserControl_segments userControl_segments_Sunrise_AOD;
+        private UserControls.UserControl_segments userControl_segments_WindForce_AOD;
+        private UserControls.UserControl_segments userControl_segments_Altitude_AOD;
+        private UserControls.UserControl_segments userControl_segments_AirPressure_AOD;
     }
 }
 

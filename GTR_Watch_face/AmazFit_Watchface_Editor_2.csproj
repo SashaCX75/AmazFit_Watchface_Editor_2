@@ -185,6 +185,12 @@
     <Compile Include="UserControls\UserControl_pictures_weather.Designer.cs">
       <DependentUpon>UserControl_pictures_weather.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_segments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_segments.Designer.cs">
+      <DependentUpon>UserControl_segments.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_Set.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -503,6 +509,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_scaleLinear.zh.resx">
       <DependentUpon>UserControl_scaleLinear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_segments.en.resx">
+      <DependentUpon>UserControl_segments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_segments.es.resx">
+      <DependentUpon>UserControl_segments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_segments.fr.resx">
+      <DependentUpon>UserControl_segments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_segments.resx">
+      <DependentUpon>UserControl_segments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_segments.zh.resx">
+      <DependentUpon>UserControl_segments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Set.en.resx">
       <DependentUpon>UserControl_Set.cs</DependentUpon>
