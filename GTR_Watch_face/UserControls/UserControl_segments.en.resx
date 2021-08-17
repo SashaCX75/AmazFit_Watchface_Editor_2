@@ -125,31 +125,46 @@
     <value>Use</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
+    <value>171, 26</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>Paste coordinates</value>
   </data>
   <data name="копироватьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
+    <value>171, 26</value>
   </data>
   <data name="копироватьToolStripMenuItem.Text" xml:space="preserve">
     <value>Copy</value>
   </data>
   <data name="вставитьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
+    <value>171, 26</value>
   </data>
   <data name="вставитьToolStripMenuItem.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
+    <value>171, 26</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete row</value>
   </data>
   <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 108</value>
+  </data>
+  <data name="radioButton_Continuous.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 17</value>
+  </data>
+  <data name="radioButton_Continuous.Text" xml:space="preserve">
+    <value>Continuous</value>
+  </data>
+  <data name="radioButton_Single.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton_Single.Text" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="groupBox_DisplayType.Text" xml:space="preserve">
+    <value>Display mode</value>
   </data>
   <data name="label01.Text" xml:space="preserve">
     <value>First Image</value>

@@ -946,9 +946,11 @@ namespace AmazFit_Watchface_2
             #region активности 
             if (Watch_Face.ScreenIdle != null && Watch_Face.ScreenIdle.Activity != null)
             {
+                int weatherAlignmentFix_AOD = 0;
                 foreach (Activity activity in Watch_Face.ScreenIdle.Activity)
                 {
                     UserControl_pictures userPanel_pictures = null;
+                    UserControl_segments userControl_segments = null;
                     UserControl_text userPanel_text = null;
                     UserControl_text userPanel_textGoal = null;
                     UserControl_hand userPanel_hand = null;
@@ -970,6 +972,7 @@ namespace AmazFit_Watchface_2
                     {
                         case "Battery":
                             userPanel_pictures = userControl_pictures_Battery_AOD;
+                            userControl_segments = userControl_segments_Battery_AOD;
                             userPanel_text = userControl_text_Battery_AOD;
                             userPanel_hand = userControl_hand_Battery_AOD;
                             userPanel_scaleCircle = userControl_scaleCircle_Battery_AOD;
@@ -979,6 +982,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "Steps":
                             userPanel_pictures = userControl_pictures_Steps_AOD;
+                            userControl_segments = userControl_segments_Steps_AOD;
                             userPanel_text = userControl_text_Steps_AOD;
                             userPanel_textGoal = userControl_text_goal_Steps_AOD;
                             userPanel_hand = userControl_hand_Steps_AOD;
@@ -989,6 +993,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "Calories":
                             userPanel_pictures = userControl_pictures_Calories_AOD;
+                            userControl_segments = userControl_segments_Calories_AOD;
                             userPanel_text = userControl_text_Calories_AOD;
                             userPanel_textGoal = userControl_text_goal_Calories_AOD;
                             userPanel_hand = userControl_hand_Calories_AOD;
@@ -999,6 +1004,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "HeartRate":
                             userPanel_pictures = userControl_pictures_HeartRate_AOD;
+                            userControl_segments = userControl_segments_HeartRate_AOD;
                             userPanel_text = userControl_text_HeartRate_AOD;
                             userPanel_hand = userControl_hand_HeartRate_AOD;
                             userPanel_scaleCircle = userControl_scaleCircle_HeartRate_AOD;
@@ -1008,6 +1014,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "PAI":
                             userPanel_pictures = userControl_pictures_PAI_AOD;
+                            userControl_segments = userControl_segments_PAI_AOD;
                             userPanel_text = userControl_text_PAI_AOD;
                             userPanel_hand = userControl_hand_PAI_AOD;
                             userPanel_scaleCircle = userControl_scaleCircle_PAI_AOD;
@@ -1022,6 +1029,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "StandUp":
                             userPanel_pictures = userControl_pictures_StandUp_AOD;
+                            userControl_segments = userControl_segments_StandUp_AOD;
                             userPanel_text = userControl_text_StandUp_AOD;
                             userPanel_textGoal = userControl_text_goal_StandUp_AOD;
                             userPanel_hand = userControl_hand_StandUp_AOD;
@@ -1037,6 +1045,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "UVindex":
                             userPanel_pictures = userControl_pictures_UVindex_AOD;
+                            userControl_segments = userControl_segments_UVindex_AOD;
                             userPanel_text = userControl_text_UVindex_AOD;
                             userPanel_hand = userControl_hand_UVindex_AOD;
                             userPanel_scaleCircle = userControl_scaleCircle_UVindex_AOD;
@@ -1046,6 +1055,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "AirQuality":
                             //userPanel_pictures = userControl_pictures_AirQuality_AOD;
+                            //userControl_segments = userControl_segments_AirQuality_AOD;
                             //userPanel_text = userControl_text_AirQuality_AOD;
                             //userPanel_hand = userControl_hand_AirQuality_AOD;
                             //userPanel_scaleCircle = userControl_scaleCircle_AirQuality_AOD;
@@ -1055,6 +1065,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "Humidity":
                             userPanel_pictures = userControl_pictures_Humidity_AOD;
+                            userControl_segments = userControl_segments_Humidity_AOD;
                             userPanel_text = userControl_text_Humidity_AOD;
                             userPanel_hand = userControl_hand_Humidity_AOD;
                             userPanel_scaleCircle = userControl_scaleCircle_Humidity_AOD;
@@ -1072,6 +1083,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "WindForce":
                             userPanel_pictures = userControl_pictures_WindForce_AOD;
+                            userControl_segments = userControl_segments_WindForce_AOD;
                             userPanel_text = userControl_text_WindForce_AOD;
                             userPanel_hand = userControl_hand_WindForce_AOD;
                             userPanel_scaleCircle = userControl_scaleCircle_WindForce_AOD;
@@ -1081,6 +1093,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "Altitude":
                             //userPanel_pictures = userControl_pictures_Altitude_AOD;
+                            //userControl_segments = userControl_segments_Altitude_AOD;
                             //userPanel_text = userControl_text_Altitude_AOD;
                             //userPanel_hand = userControl_hand_Altitude_AOD;
                             //userPanel_scaleCircle = userControl_scaleCircle_Altitude_AOD;
@@ -1090,6 +1103,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "AirPressure":
                             userPanel_pictures = userControl_pictures_AirPressure_AOD;
+                            userControl_segments = userControl_segments_AirPressure_AOD;
                             userPanel_text = userControl_text_AirPressure_AOD;
                             userPanel_hand = userControl_hand_AirPressure_AOD;
                             userPanel_scaleCircle = userControl_scaleCircle_AirPressure_AOD;
@@ -1099,6 +1113,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "Stress":
                             //userPanel_pictures = userControl_pictures_Stress_AOD;
+                            //userControl_segments = userControl_segments_Stress_AOD;
                             //userPanel_text = userControl_text_Stress_AOD;
                             //userPanel_hand = userControl_hand_Stress_AOD;
                             //userPanel_scaleCircle = userControl_scaleCircle_Stress_AOD;
@@ -1108,6 +1123,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "ActivityGoal":
                             userPanel_pictures = userControl_pictures_ActivityGoal_AOD;
+                            userControl_segments = userControl_segments_ActivityGoal_AOD;
                             userPanel_text = userControl_text_ActivityGoal_AOD;
                             userPanel_textGoal = userControl_text_goal_ActivityGoal_AOD;
                             userPanel_hand = userControl_hand_ActivityGoal_AOD;
@@ -1118,6 +1134,7 @@ namespace AmazFit_Watchface_2
                             break;
                         case "FatBurning":
                             userPanel_pictures = userControl_pictures_FatBurning_AOD;
+                            userControl_segments = userControl_segments_FatBurning_AOD;
                             userPanel_text = userControl_text_FatBurning_AOD;
                             userPanel_textGoal = userControl_text_goal_FatBurning_AOD;
                             userPanel_hand = userControl_hand_FatBurning_AOD;
@@ -1145,6 +1162,11 @@ namespace AmazFit_Watchface_2
                         //activity.ImageProgress.Coordinates != null && activity.ImageProgress.Coordinates.Count == 1)
                         {
                             userPanel_pictures.checkBox_pictures_Use.Checked = true;
+                            if (activity.Type == "Weather" && weatherAlignmentFix_AOD == 0)
+                            {
+                                weatherAlignmentFix_AOD = 1;
+                                checkBox_weatherAlignmentFix_AOD.Checked = true;
+                            }
 
                             //comboBoxSetText(comboBox_image, activity.ImageProgress.ImageSet.ImageIndex);
                             long numericUpDown_count = activity.ImageProgress.ImageSet.ImagesCount;
@@ -1155,6 +1177,19 @@ namespace AmazFit_Watchface_2
                             userPanel_pictures.numericUpDown_picturesX.Value = numericUpDownX;
                             userPanel_pictures.numericUpDown_picturesY.Value = numericUpDownY;
                             userPanel_pictures.numericUpDown_pictures_count.Value = numericUpDown_count;
+                        }
+                    }
+
+                    // сегменты
+                    if (userControl_segments != null)
+                    {
+                        if (activity.ImageProgress != null && activity.ImageProgress.ImageSet != null &&
+                            activity.ImageProgress.Coordinates != null && !OneCoordinates(activity.ImageProgress.Coordinates))
+                        {
+                            userControl_segments.checkBox_pictures_Use.Checked = true;
+                            userControl_segments.comboBoxSetImage(activity.ImageProgress.ImageSet.ImageIndex);
+                            userControl_segments.SetCoordinates(activity.ImageProgress.Coordinates);
+                            userControl_segments.radioButtonSetDisplayType(activity.ImageProgress.DisplayType);
                         }
                     }
 
@@ -1481,6 +1516,12 @@ namespace AmazFit_Watchface_2
 
 
                             }
+                        }
+
+                        if (weatherAlignmentFix_AOD == 0)
+                        {
+                            weatherAlignmentFix_AOD = -1;
+                            checkBox_weatherAlignmentFix_AOD.Checked = false;
                         }
                     }
                     else if (activity.Type == "Sunrise")
@@ -2897,6 +2938,7 @@ namespace AmazFit_Watchface_2
             #region активности
 
             UserControl_pictures userPanel_pictures;
+            UserControl_segments userControl_segments = null;
             UserControl_text userPanel_text;
             UserControl_text userPanel_textGoal = null;
             UserControl_hand userPanel_hand;
@@ -2914,6 +2956,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Battery")
                 {
                     userPanel_pictures = userControl_pictures_Battery_AOD;
+                    userControl_segments = userControl_segments_Battery_AOD;
                     userPanel_text = userControl_text_Battery_AOD;
                     userPanel_hand = userControl_hand_Battery_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_Battery_AOD;
@@ -2921,7 +2964,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_Battery_AOD;
                     userControl_icon = userControl_icon_Battery_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "Battery"); 
                 }
@@ -2933,6 +2976,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Steps")
                 {
                     userPanel_pictures = userControl_pictures_Steps_AOD;
+                    userControl_segments = userControl_segments_Steps_AOD;
                     userPanel_text = userControl_text_Steps_AOD;
                     userPanel_textGoal = userControl_text_goal_Steps_AOD;
                     userPanel_hand = userControl_hand_Steps_AOD;
@@ -2941,7 +2985,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_Steps_AOD;
                     userControl_icon = userControl_icon_Steps_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "Steps");
 
@@ -2954,6 +2998,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Calories")
                 {
                     userPanel_pictures = userControl_pictures_Calories_AOD;
+                    userControl_segments = userControl_segments_Calories_AOD;
                     userPanel_text = userControl_text_Calories_AOD;
                     userPanel_textGoal = userControl_text_goal_Calories_AOD;
                     userPanel_hand = userControl_hand_Calories_AOD;
@@ -2962,7 +3007,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_Calories_AOD;
                     userControl_icon = userControl_icon_Calories_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "Calories");
 
@@ -2975,6 +3020,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "HeartRate")
                 {
                     userPanel_pictures = userControl_pictures_HeartRate_AOD;
+                    userControl_segments = userControl_segments_HeartRate_AOD;
                     userPanel_text = userControl_text_HeartRate_AOD;
                     userPanel_hand = userControl_hand_HeartRate_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_HeartRate_AOD;
@@ -2982,7 +3028,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_HeartRate_AOD;
                     userControl_icon = userControl_icon_HeartRate_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "HeartRate"); 
                 }
@@ -2994,6 +3040,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "PAI")
                 {
                     userPanel_pictures = userControl_pictures_PAI_AOD;
+                    userControl_segments = userControl_segments_PAI_AOD;
                     userPanel_text = userControl_text_PAI_AOD;
                     userPanel_hand = userControl_hand_PAI_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_PAI_AOD;
@@ -3001,7 +3048,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_PAI_AOD;
                     userControl_icon = userControl_icon_PAI_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "PAI"); 
                 }
@@ -3013,6 +3060,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Distance")
                 {
                     userPanel_pictures = null;
+                    userControl_segments = null;
                     userPanel_text = userControl_text_Distance_AOD;
                     userPanel_hand = null;
                     userPanel_scaleCircle = null;
@@ -3020,7 +3068,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_Distance_AOD;
                     userControl_icon = userControl_icon_Distance_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "Distance"); 
                 }
@@ -3032,6 +3080,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "StandUp")
                 {
                     userPanel_pictures = userControl_pictures_StandUp_AOD;
+                    userControl_segments = userControl_segments_StandUp_AOD;
                     userPanel_text = userControl_text_StandUp_AOD;
                     userPanel_textGoal = userControl_text_goal_StandUp_AOD;
                     userPanel_hand = userControl_hand_StandUp_AOD;
@@ -3040,7 +3089,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_StandUp_AOD;
                     userControl_icon = userControl_icon_StandUp_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "StandUp");
 
@@ -3074,6 +3123,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "UVindex")
                 {
                     userPanel_pictures = userControl_pictures_UVindex_AOD;
+                    userControl_segments = userControl_segments_UVindex_AOD;
                     userPanel_text = userControl_text_UVindex_AOD;
                     userPanel_hand = userControl_hand_UVindex_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_UVindex_AOD;
@@ -3081,7 +3131,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_UVindex_AOD;
                     userControl_icon = userControl_icon_UVindex_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "UVindex"); 
                 }
@@ -3093,6 +3143,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "AirQuality")
                 {
                     userPanel_pictures = userControl_pictures_AirQuality_AOD;
+                    userControl_segments = userControl_segments_AirQuality_AOD;
                     userPanel_text = userControl_text_AirQuality_AOD;
                     userPanel_hand = userControl_hand_AirQuality_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_AirQuality_AOD;
@@ -3100,7 +3151,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_AirQuality_AOD;
                     userControl_icon = userControl_icon_AirQuality_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "AirQuality"); 
                 }
@@ -3112,6 +3163,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Humidity")
                 {
                     userPanel_pictures = userControl_pictures_Humidity_AOD;
+                    userControl_segments = userControl_segments_Humidity_AOD;
                     userPanel_text = userControl_text_Humidity_AOD;
                     userPanel_hand = userControl_hand_Humidity_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_Humidity_AOD;
@@ -3119,7 +3171,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_Humidity_AOD;
                     userControl_icon = userControl_icon_Humidity_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "Humidity"); 
                 }
@@ -3142,6 +3194,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "WindForce")
                 {
                     userPanel_pictures = userControl_pictures_WindForce_AOD;
+                    userControl_segments = userControl_segments_WindForce_AOD;
                     userPanel_text = userControl_text_WindForce_AOD;
                     userPanel_hand = userControl_hand_WindForce_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_WindForce_AOD;
@@ -3149,7 +3202,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_WindForce_AOD;
                     userControl_icon = userControl_icon_WindForce_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "WindForce"); 
                 }
@@ -3161,6 +3214,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Altitude")
                 {
                     userPanel_pictures = userControl_pictures_Altitude_AOD;
+                    userControl_segments = userControl_segments_Altitude_AOD;
                     userPanel_text = userControl_text_Altitude_AOD;
                     userPanel_hand = userControl_hand_Altitude_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_Altitude_AOD;
@@ -3168,7 +3222,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_Altitude_AOD;
                     userControl_icon = userControl_icon_Altitude_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "Altitude"); 
                 }
@@ -3180,6 +3234,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "AirPressure")
                 {
                     userPanel_pictures = userControl_pictures_AirPressure_AOD;
+                    userControl_segments = userControl_segments_AirPressure_AOD;
                     userPanel_text = userControl_text_AirPressure_AOD;
                     userPanel_hand = userControl_hand_AirPressure_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_AirPressure_AOD;
@@ -3187,7 +3242,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_AirPressure_AOD;
                     userControl_icon = userControl_icon_AirPressure_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "AirPressure"); 
                 }
@@ -3199,6 +3254,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Stress")
                 {
                     userPanel_pictures = userControl_pictures_Stress_AOD;
+                    userControl_segments = userControl_segments_Stress_AOD;
                     userPanel_text = userControl_text_Stress_AOD;
                     userPanel_hand = userControl_hand_Stress_AOD;
                     userPanel_scaleCircle = userControl_scaleCircle_Stress_AOD;
@@ -3206,7 +3262,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_Stress_AOD;
                     userControl_icon = userControl_icon_Stress_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "Stress"); 
                 }
@@ -3218,6 +3274,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "ActivityGoal")
                 {
                     userPanel_pictures = userControl_pictures_ActivityGoal_AOD;
+                    userControl_segments = userControl_segments_ActivityGoal_AOD;
                     userPanel_text = userControl_text_ActivityGoal_AOD;
                     userPanel_textGoal = userControl_text_goal_ActivityGoal_AOD;
                     userPanel_hand = userControl_hand_ActivityGoal_AOD;
@@ -3226,7 +3283,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_ActivityGoal_AOD;
                     userControl_icon = userControl_icon_ActivityGoal_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "ActivityGoal");
 
@@ -3239,6 +3296,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "FatBurning")
                 {
                     userPanel_pictures = userControl_pictures_FatBurning_AOD;
+                    userControl_segments = userControl_segments_FatBurning_AOD;
                     userPanel_text = userControl_text_FatBurning_AOD;
                     userPanel_textGoal = userControl_text_goal_FatBurning_AOD;
                     userPanel_hand = userControl_hand_FatBurning_AOD;
@@ -3247,7 +3305,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_Group = userControl_SystemFont_Group_FatBurning_AOD;
                     userControl_icon = userControl_icon_FatBurning_AOD;
 
-                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userPanel_text, userPanel_textGoal, userPanel_hand,
+                    AddActivity_AOD(ScreenIdle, userPanel_pictures, userControl_segments, userPanel_text, userPanel_textGoal, userPanel_hand,
                         userPanel_scaleCircle, userPanel_scaleLinear, userControl_SystemFont_Group,
                         userControl_icon, "FatBurning");
 
@@ -3473,7 +3531,7 @@ namespace AmazFit_Watchface_2
             }
         }
 
-        private void AddActivity_AOD(ScreenIdle ScreenIdle, UserControl_pictures panel_pictures, 
+        private void AddActivity_AOD(ScreenIdle ScreenIdle, UserControl_pictures panel_pictures, UserControl_segments userControl_segments,
             UserControl_text panel_text, UserControl_text userPanel_textGoal, UserControl_hand panel_hand,
             UserControl_scaleCircle panel_scaleCircle, UserControl_scaleLinear panel_scaleLinear,
             UserControl_SystemFont_Group userControl_SystemFont_Group,
@@ -3510,6 +3568,27 @@ namespace AmazFit_Watchface_2
                     coordinates.X = (long)numericUpDownX.Value;
                     coordinates.Y = (long)numericUpDownY.Value;
                     activity.ImageProgress.Coordinates.Add(coordinates);
+                }
+            }
+
+            // данные сегментами
+            if (userControl_segments != null && userControl_segments.checkBox_pictures_Use.Checked)
+            {
+                int image = userControl_segments.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                    if (coordinates != null)
+                    {
+                        if (activityMin == null) activityMin = new Activity();
+                        activityMin.ImageProgress = new ImageProgress();
+                        //activityMin.ImageProgress.DisplayType = "Single"; //"Single" = 0, "Continuous" = 1
+                        activityMin.ImageProgress.DisplayType = userControl_segments.radioButtonGetDisplayType();
+                        activityMin.ImageProgress.ImageSet = new ImageSetGTR2();
+                        activityMin.ImageProgress.Coordinates = coordinates;
+                        activityMin.ImageProgress.ImageSet.ImageIndex = image;
+                        activityMin.ImageProgress.ImageSet.ImagesCount = coordinates.Count;
+                    }
                 }
             }
 
@@ -4887,6 +4966,17 @@ namespace AmazFit_Watchface_2
                 }
             }
 
+            if (checkBox_weatherAlignmentFix_AOD.Checked)
+            {
+                if (activityPictures != null)
+                {
+                    activityPictures.Type = "Weather";
+                    //activity.WeatherAlignmentFix = true;
+                    if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
+                    ScreenIdle.Activity.Add(activityPictures);
+                }
+            }
+
             if (activity != null)
             {
                 activity.Type = "Weather";
@@ -4908,11 +4998,14 @@ namespace AmazFit_Watchface_2
                 ScreenIdle.Activity.Add(activityMax);
             }
 
-            if (activityPictures != null)
+            if (!checkBox_weatherAlignmentFix_AOD.Checked)
             {
-                activityPictures.Type = "Weather";
-                if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
-                ScreenIdle.Activity.Add(activityPictures);
+                if (activityPictures != null)
+                {
+                    activityPictures.Type = "Weather";
+                    if (ScreenIdle.Activity == null) ScreenIdle.Activity = new List<Activity>();
+                    ScreenIdle.Activity.Add(activityPictures);
+                } 
             }
         }
 
@@ -6099,6 +6192,7 @@ namespace AmazFit_Watchface_2
 
 
             userControl_pictures_Battery_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_Battery_AOD.ComboBoxAddItems(ListImages);
             userControl_text_Battery_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_Battery_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_Battery_AOD.ComboBoxAddItems(ListImages);
@@ -6107,6 +6201,7 @@ namespace AmazFit_Watchface_2
             progressBar1.Value = 65;
 
             userControl_pictures_Steps_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_Steps_AOD.ComboBoxAddItems(ListImages);
             userControl_text_Steps_AOD.ComboBoxAddItems(ListImages);
             userControl_text_goal_Steps_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_Steps_AOD.ComboBoxAddItems(ListImages);
@@ -6115,6 +6210,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Steps_AOD.ComboBoxAddItems(ListImages);
 
             userControl_pictures_Calories_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_Calories_AOD.ComboBoxAddItems(ListImages);
             userControl_text_Calories_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_Calories_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_Calories_AOD.ComboBoxAddItems(ListImages);
@@ -6123,6 +6219,7 @@ namespace AmazFit_Watchface_2
             progressBar1.Value = 70;
 
             userControl_pictures_HeartRate_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_HeartRate_AOD.ComboBoxAddItems(ListImages);
             userControl_text_HeartRate_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_HeartRate_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_HeartRate_AOD.ComboBoxAddItems(ListImages);
@@ -6130,6 +6227,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_HeartRate_AOD.ComboBoxAddItems(ListImages);
 
             userControl_pictures_PAI_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_PAI_AOD.ComboBoxAddItems(ListImages);
             userControl_text_PAI_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_PAI_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_PAI_AOD.ComboBoxAddItems(ListImages);
@@ -6141,6 +6239,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Distance_AOD.ComboBoxAddItems(ListImages);
 
             userControl_pictures_StandUp_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_StandUp_AOD.ComboBoxAddItems(ListImages);
             userControl_text_StandUp_AOD.ComboBoxAddItems(ListImages);
             userControl_text_goal_StandUp_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_StandUp_AOD.ComboBoxAddItems(ListImages);
@@ -6159,6 +6258,7 @@ namespace AmazFit_Watchface_2
             progressBar1.Value = 80;
 
             userControl_pictures_UVindex_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_UVindex_AOD.ComboBoxAddItems(ListImages);
             userControl_text_UVindex_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_UVindex_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_UVindex_AOD.ComboBoxAddItems(ListImages);
@@ -6166,6 +6266,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_UVindex_AOD.ComboBoxAddItems(ListImages);
 
             //userControl_pictures_AirQuality_AOD.ComboBoxAddItems(ListImages);
+            //userControl_segments_AirQuality_AOD.ComboBoxAddItems(ListImages);
             //userControl_text_AirQuality_AOD.ComboBoxAddItems(ListImages);
             //userControl_hand_AirQuality_AOD.ComboBoxAddItems(ListImages);
             //userControl_scaleCircle_AirQuality_AOD.ComboBoxAddItems(ListImages);
@@ -6174,6 +6275,7 @@ namespace AmazFit_Watchface_2
             progressBar1.Value = 85;
 
             userControl_pictures_Humidity_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_Humidity_AOD.ComboBoxAddItems(ListImages);
             userControl_text_Humidity_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_Humidity_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_Humidity_AOD.ComboBoxAddItems(ListImages);
@@ -6181,6 +6283,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Humidity_AOD.ComboBoxAddItems(ListImages);
 
             userControl_pictures_Sunrise_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_Sunrise_AOD.ComboBoxAddItems(ListImages);
             userControl_text_SunriseSunset_AOD.ComboBoxAddItems(ListImages);
             userControl_text_Sunrise_AOD.ComboBoxAddItems(ListImages);
             userControl_text_Sunset_AOD.ComboBoxAddItems(ListImages);
@@ -6190,6 +6293,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Sunrise_AOD.ComboBoxAddItems(ListImages);
 
             userControl_pictures_WindForce_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_WindForce_AOD.ComboBoxAddItems(ListImages);
             userControl_text_WindForce_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_WindForce_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_WindForce_AOD.ComboBoxAddItems(ListImages);
@@ -6198,6 +6302,7 @@ namespace AmazFit_Watchface_2
             progressBar1.Value = 90;
 
             //userControl_pictures_Altitude_AOD.ComboBoxAddItems(ListImages);
+            //userControl_segments_Altitude_AOD.ComboBoxAddItems(ListImages);
             //userControl_text_Altitude_AOD.ComboBoxAddItems(ListImages);
             //userControl_hand_Altitude_AOD.ComboBoxAddItems(ListImages);
             //userControl_scaleCircle_Altitude_AOD.ComboBoxAddItems(ListImages);
@@ -6205,6 +6310,7 @@ namespace AmazFit_Watchface_2
             //userControl_icon_Altitude_AOD.ComboBoxAddItems(ListImages);
 
             userControl_pictures_AirPressure_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_AirPressure_AOD.ComboBoxAddItems(ListImages);
             userControl_text_AirPressure_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_AirPressure_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_AirPressure_AOD.ComboBoxAddItems(ListImages);
@@ -6213,6 +6319,7 @@ namespace AmazFit_Watchface_2
             progressBar1.Value = 95;
 
             //userControl_pictures_Stress_AOD.ComboBoxAddItems(ListImages);
+            //userControl_segments_Stress_AOD.ComboBoxAddItems(ListImages);
             //userControl_text_Stress_AOD.ComboBoxAddItems(ListImages);
             //userControl_hand_Stress_AOD.ComboBoxAddItems(ListImages);
             //userControl_scaleCircle_Stress_AOD.ComboBoxAddItems(ListImages);
@@ -6220,6 +6327,7 @@ namespace AmazFit_Watchface_2
             //userControl_icon_Stress_AOD.ComboBoxAddItems(ListImages);
 
             userControl_pictures_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
             userControl_text_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
             userControl_text_goal_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_ActivityGoal_AOD.ComboBoxAddItems(ListImages);
@@ -6229,6 +6337,7 @@ namespace AmazFit_Watchface_2
             progressBar1.Value = 100;
 
             userControl_pictures_FatBurning_AOD.ComboBoxAddItems(ListImages);
+            userControl_segments_FatBurning_AOD.ComboBoxAddItems(ListImages);
             userControl_text_FatBurning_AOD.ComboBoxAddItems(ListImages);
             userControl_hand_FatBurning_AOD.ComboBoxAddItems(ListImages);
             userControl_scaleCircle_FatBurning_AOD.ComboBoxAddItems(ListImages);
@@ -6344,6 +6453,7 @@ namespace AmazFit_Watchface_2
             comboBox_DOW_hand_imageBackground_AOD.Text = "";
 
             userControl_pictures_Battery_AOD.SettingsClear();
+            userControl_segments_Battery_AOD.SettingsClear();
             userControl_text_Battery_AOD.SettingsClear();
             userControl_hand_Battery_AOD.SettingsClear();
             userControl_scaleCircle_Battery_AOD.SettingsClear();
@@ -6352,6 +6462,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Battery_AOD.SettingsClear();
 
             userControl_pictures_Steps_AOD.SettingsClear();
+            userControl_segments_Steps_AOD.SettingsClear();
             userControl_text_Steps_AOD.SettingsClear();
             userControl_text_goal_Steps_AOD.SettingsClear();
             userControl_hand_Steps_AOD.SettingsClear();
@@ -6361,6 +6472,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Steps_AOD.SettingsClear();
 
             userControl_pictures_Calories_AOD.SettingsClear();
+            userControl_segments_Calories_AOD.SettingsClear();
             userControl_text_Calories_AOD.SettingsClear();
             userControl_text_goal_Calories_AOD.SettingsClear();
             userControl_hand_Calories_AOD.SettingsClear();
@@ -6370,6 +6482,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Calories_AOD.SettingsClear();
 
             userControl_pictures_HeartRate_AOD.SettingsClear();
+            userControl_segments_HeartRate_AOD.SettingsClear();
             userControl_text_HeartRate_AOD.SettingsClear();
             userControl_hand_HeartRate_AOD.SettingsClear();
             userControl_scaleCircle_HeartRate_AOD.SettingsClear();
@@ -6378,6 +6491,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_HeartRate_AOD.SettingsClear();
 
             userControl_pictures_PAI_AOD.SettingsClear();
+            userControl_segments_PAI_AOD.SettingsClear();
             userControl_text_PAI_AOD.SettingsClear();
             userControl_hand_PAI_AOD.SettingsClear();
             userControl_scaleCircle_PAI_AOD.SettingsClear();
@@ -6392,6 +6506,7 @@ namespace AmazFit_Watchface_2
 
 
             userControl_pictures_StandUp_AOD.SettingsClear();
+            userControl_segments_StandUp_AOD.SettingsClear();
             userControl_text_StandUp_AOD.SettingsClear();
             userControl_text_goal_StandUp_AOD.SettingsClear();
             userControl_hand_StandUp_AOD.SettingsClear();
@@ -6411,6 +6526,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Weather_AOD.SettingsClear();
 
             userControl_pictures_UVindex_AOD.SettingsClear();
+            userControl_segments_UVindex_AOD.SettingsClear();
             userControl_text_UVindex_AOD.SettingsClear();
             userControl_hand_UVindex_AOD.SettingsClear();
             userControl_scaleCircle_UVindex_AOD.SettingsClear();
@@ -6419,6 +6535,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_UVindex_AOD.SettingsClear();
 
             //userControl_pictures_AirQuality_AOD.SettingsClear();
+            //userControl_segments_AirQuality_AOD.SettingsClear();
             //userControl_text_AirQuality_AOD.SettingsClear();
             //userControl_hand_AirQuality_AOD.SettingsClear();
             //userControl_scaleCircle_AirQuality_AOD.SettingsClear();
@@ -6428,6 +6545,7 @@ namespace AmazFit_Watchface_2
             //userControl_icon_AirQuality_AOD.SettingsClear();
 
             userControl_pictures_Humidity_AOD.SettingsClear();
+            userControl_segments_Humidity_AOD.SettingsClear();
             userControl_text_Humidity_AOD.SettingsClear();
             userControl_hand_Humidity_AOD.SettingsClear();
             userControl_scaleCircle_Humidity_AOD.SettingsClear();
@@ -6436,6 +6554,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Humidity_AOD.SettingsClear();
 
             userControl_pictures_Sunrise_AOD.SettingsClear();
+            userControl_segments_Sunrise_AOD.SettingsClear();
             userControl_text_SunriseSunset_AOD.SettingsClear();
             userControl_text_Sunrise_AOD.SettingsClear();
             userControl_text_Sunset_AOD.SettingsClear();
@@ -6453,6 +6572,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_Sunrise_AOD.SettingsClear();
 
             userControl_pictures_WindForce_AOD.SettingsClear();
+            userControl_segments_WindForce_AOD.SettingsClear();
             userControl_text_WindForce_AOD.SettingsClear();
             userControl_hand_WindForce_AOD.SettingsClear();
             userControl_scaleCircle_WindForce_AOD.SettingsClear();
@@ -6461,6 +6581,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_WindForce_AOD.SettingsClear();
 
             //userControl_pictures_Altitude_AOD.SettingsClear();
+            //userControl_segments_Altitude_AOD.SettingsClear();
             //userControl_text_Altitude_AOD.SettingsClear();
             //userControl_hand_Altitude_AOD.SettingsClear();
             //userControl_scaleCircle_Altitude_AOD.SettingsClear();
@@ -6470,6 +6591,7 @@ namespace AmazFit_Watchface_2
             //userControl_icon_Altitude_AOD.SettingsClear();
 
             userControl_pictures_AirPressure_AOD.SettingsClear();
+            userControl_segments_AirPressure_AOD.SettingsClear();
             userControl_text_AirPressure_AOD.SettingsClear();
             userControl_hand_AirPressure_AOD.SettingsClear();
             userControl_scaleCircle_AirPressure_AOD.SettingsClear();
@@ -6478,6 +6600,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_AirPressure_AOD.SettingsClear();
 
             //userControl_pictures_Stress_AOD.SettingsClear();
+            //userControl_segments_Stress_AOD.SettingsClear();
             //userControl_text_Stress_AOD.SettingsClear();
             //userControl_hand_Stress_AOD.SettingsClear();
             //userControl_scaleCircle_Stress_AOD.SettingsClear();
@@ -6487,6 +6610,7 @@ namespace AmazFit_Watchface_2
             //userControl_icon_Stress_AOD.SettingsClear();
 
             userControl_pictures_ActivityGoal_AOD.SettingsClear();
+            userControl_segments_ActivityGoal_AOD.SettingsClear();
             userControl_text_ActivityGoal_AOD.SettingsClear();
             userControl_text_goal_ActivityGoal_AOD.SettingsClear();
             userControl_hand_ActivityGoal_AOD.SettingsClear();
@@ -6496,6 +6620,7 @@ namespace AmazFit_Watchface_2
             userControl_icon_ActivityGoal_AOD.SettingsClear();
 
             userControl_pictures_FatBurning_AOD.SettingsClear();
+            userControl_segments_FatBurning_AOD.SettingsClear();
             userControl_text_FatBurning_AOD.SettingsClear();
             userControl_text_goal_FatBurning_AOD.SettingsClear();
             userControl_hand_FatBurning_AOD.SettingsClear();

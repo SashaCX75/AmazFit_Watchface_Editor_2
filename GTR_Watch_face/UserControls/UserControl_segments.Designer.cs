@@ -1,5 +1,5 @@
 ﻿
-namespace AmazFit_Watchface_2.UserControls
+namespace AmazFit_Watchface_2
 {
     partial class UserControl_segments
     {
@@ -42,6 +42,9 @@ namespace AmazFit_Watchface_2.UserControls
             this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьСтрокуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox_DisplayType = new System.Windows.Forms.GroupBox();
+            this.radioButton_Continuous = new System.Windows.Forms.RadioButton();
+            this.radioButton_Single = new System.Windows.Forms.RadioButton();
             this.label01 = new System.Windows.Forms.Label();
             this.label02 = new System.Windows.Forms.Label();
             this.button_Copy_pictures = new System.Windows.Forms.Button();
@@ -49,6 +52,7 @@ namespace AmazFit_Watchface_2.UserControls
             this.panel_pictures.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_coordinates_set)).BeginInit();
             this.contextMenuStrip_XY_InTable.SuspendLayout();
+            this.groupBox_DisplayType.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_pictures
@@ -57,6 +61,7 @@ namespace AmazFit_Watchface_2.UserControls
             this.panel_pictures.Controls.Add(this.checkBox_pictures_Use);
             this.panel_pictures.Controls.Add(this.comboBox_pictures_image);
             this.panel_pictures.Controls.Add(this.dataGridView_coordinates_set);
+            this.panel_pictures.Controls.Add(this.groupBox_DisplayType);
             this.panel_pictures.Controls.Add(this.label01);
             this.panel_pictures.Controls.Add(this.label02);
             this.panel_pictures.Controls.Add(this.button_Copy_pictures);
@@ -158,6 +163,30 @@ namespace AmazFit_Watchface_2.UserControls
             resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem, "удалитьСтрокуToolStripMenuItem");
             this.удалитьСтрокуToolStripMenuItem.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
             // 
+            // groupBox_DisplayType
+            // 
+            this.groupBox_DisplayType.Controls.Add(this.radioButton_Continuous);
+            this.groupBox_DisplayType.Controls.Add(this.radioButton_Single);
+            resources.ApplyResources(this.groupBox_DisplayType, "groupBox_DisplayType");
+            this.groupBox_DisplayType.Name = "groupBox_DisplayType";
+            this.groupBox_DisplayType.TabStop = false;
+            this.groupBox_DisplayType.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_Continuous
+            // 
+            resources.ApplyResources(this.radioButton_Continuous, "radioButton_Continuous");
+            this.radioButton_Continuous.Name = "radioButton_Continuous";
+            this.radioButton_Continuous.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_Single
+            // 
+            resources.ApplyResources(this.radioButton_Single, "radioButton_Single");
+            this.radioButton_Single.Checked = true;
+            this.radioButton_Single.Name = "radioButton_Single";
+            this.radioButton_Single.TabStop = true;
+            this.radioButton_Single.UseVisualStyleBackColor = true;
+            this.radioButton_Single.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
             // label01
             // 
             resources.ApplyResources(this.label01, "label01");
@@ -194,6 +223,8 @@ namespace AmazFit_Watchface_2.UserControls
             this.panel_pictures.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_coordinates_set)).EndInit();
             this.contextMenuStrip_XY_InTable.ResumeLayout(false);
+            this.groupBox_DisplayType.ResumeLayout(false);
+            this.groupBox_DisplayType.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +246,8 @@ namespace AmazFit_Watchface_2.UserControls
         private System.Windows.Forms.Button button_pictures;
         private System.Windows.Forms.Label label02;
         private System.Windows.Forms.DataGridView dataGridView_coordinates_set;
+        private System.Windows.Forms.GroupBox groupBox_DisplayType;
+        private System.Windows.Forms.RadioButton radioButton_Continuous;
+        private System.Windows.Forms.RadioButton radioButton_Single;
     }
 }

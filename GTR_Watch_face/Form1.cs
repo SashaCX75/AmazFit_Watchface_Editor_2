@@ -169,8 +169,8 @@ namespace AmazFit_Watchface_2
 
             AddDataDataGridView();
 #if DEBUG
-            tabControl1.SelectTab("tabPageConverting");
-            tabControl_EditParameters.SelectTab(4);
+            tabControl1.SelectTab("tabPage_Edit");
+            tabControl_EditParameters.SelectTab(3);
 #endif
 
 #if !DEBUG
@@ -8117,6 +8117,7 @@ namespace AmazFit_Watchface_2
 
 
             Copy_pictures_AOD(userControl_pictures_Battery, userControl_pictures_Battery_AOD);
+            Copy_segments_AOD(userControl_segments_Battery, userControl_segments_Battery_AOD);
             Copy_text_AOD(userControl_text_Battery, userControl_text_Battery_AOD);
             Copy_hand_AOD(userControl_hand_Battery, userControl_hand_Battery_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Battery, userControl_scaleCircle_Battery_AOD);
@@ -8125,6 +8126,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Battery, userControl_icon_Battery_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Steps, userControl_pictures_Steps_AOD);
+            Copy_segments_AOD(userControl_segments_Steps, userControl_segments_Steps_AOD);
             Copy_text_AOD(userControl_text_Steps, userControl_text_Steps_AOD);
             Copy_text_AOD(userControl_text_goal_Steps_AOD, userControl_text_goal_Steps_AOD);
             Copy_hand_AOD(userControl_hand_Steps, userControl_hand_Steps_AOD);
@@ -8134,6 +8136,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Steps, userControl_icon_Steps_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Calories, userControl_pictures_Calories_AOD);
+            Copy_segments_AOD(userControl_segments_Calories, userControl_segments_Calories_AOD);
             Copy_text_AOD(userControl_text_Calories, userControl_text_Calories_AOD);
             Copy_text_AOD(userControl_text_goal_Calories_AOD, userControl_text_goal_Calories_AOD);
             Copy_hand_AOD(userControl_hand_Calories, userControl_hand_Calories_AOD);
@@ -8143,6 +8146,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Calories, userControl_icon_Calories_AOD);
 
             Copy_pictures_AOD(userControl_pictures_HeartRate, userControl_pictures_HeartRate_AOD);
+            Copy_segments_AOD(userControl_segments_HeartRate, userControl_segments_HeartRate_AOD);
             Copy_text_AOD(userControl_text_HeartRate, userControl_text_HeartRate_AOD);
             Copy_hand_AOD(userControl_hand_HeartRate, userControl_hand_HeartRate_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_HeartRate, userControl_scaleCircle_HeartRate_AOD);
@@ -8151,6 +8155,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_HeartRate, userControl_icon_HeartRate_AOD);
 
             Copy_pictures_AOD(userControl_pictures_PAI, userControl_pictures_PAI_AOD);
+            Copy_segments_AOD(userControl_segments_PAI, userControl_segments_PAI_AOD);
             Copy_text_AOD(userControl_text_PAI, userControl_text_PAI_AOD);
             Copy_hand_AOD(userControl_hand_PAI, userControl_hand_PAI_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_PAI, userControl_scaleCircle_PAI_AOD);
@@ -8163,6 +8168,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Distance, userControl_icon_Distance_AOD);
 
             Copy_pictures_AOD(userControl_pictures_StandUp, userControl_pictures_StandUp_AOD);
+            Copy_segments_AOD(userControl_segments_StandUp, userControl_segments_StandUp_AOD);
             Copy_text_AOD(userControl_text_StandUp, userControl_text_StandUp_AOD);
             Copy_text_AOD(userControl_text_goal_StandUp_AOD, userControl_text_goal_StandUp_AOD);
             Copy_hand_AOD(userControl_hand_StandUp, userControl_hand_StandUp_AOD);
@@ -8182,6 +8188,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Weather, userControl_icon_Weather_AOD);
 
             Copy_pictures_AOD(userControl_pictures_UVindex, userControl_pictures_UVindex_AOD);
+            Copy_segments_AOD(userControl_segments_UVindex, userControl_segments_UVindex_AOD);
             Copy_text_AOD(userControl_text_UVindex, userControl_text_UVindex_AOD);
             Copy_hand_AOD(userControl_hand_UVindex, userControl_hand_UVindex_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_UVindex, userControl_scaleCircle_UVindex_AOD);
@@ -8190,6 +8197,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_UVindex, userControl_icon_UVindex_AOD);
 
             Copy_pictures_AOD(userControl_pictures_AirQuality, userControl_pictures_AirQuality_AOD);
+            Copy_segments_AOD(userControl_segments_AirQuality, userControl_segments_AirQuality_AOD);
             Copy_text_AOD(userControl_text_AirQuality, userControl_text_AirQuality_AOD);
             Copy_hand_AOD(userControl_hand_AirQuality, userControl_hand_AirQuality_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_AirQuality, userControl_scaleCircle_AirQuality_AOD);
@@ -8198,6 +8206,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_AirQuality, userControl_icon_AirQuality_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Humidity, userControl_pictures_Humidity_AOD);
+            Copy_segments_AOD(userControl_segments_Humidity, userControl_segments_Humidity_AOD);
             Copy_text_AOD(userControl_text_Humidity, userControl_text_Humidity_AOD);
             Copy_hand_AOD(userControl_hand_Humidity, userControl_hand_Humidity_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Humidity, userControl_scaleCircle_Humidity_AOD);
@@ -8206,6 +8215,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Humidity, userControl_icon_Humidity_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Sunrise, userControl_pictures_Sunrise_AOD);
+            Copy_segments_AOD(userControl_segments_Sunrise, userControl_segments_Sunrise_AOD);
             Copy_text_AOD(userControl_text_SunriseSunset, userControl_text_SunriseSunset_AOD);
             Copy_text_AOD(userControl_text_Sunrise, userControl_text_Sunrise_AOD);
             Copy_text_AOD(userControl_text_Sunset, userControl_text_Sunset_AOD);
@@ -8216,6 +8226,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Sunrise, userControl_icon_Sunrise_AOD);
 
             Copy_pictures_AOD(userControl_pictures_WindForce, userControl_pictures_WindForce_AOD);
+            Copy_segments_AOD(userControl_segments_WindForce, userControl_segments_WindForce_AOD);
             Copy_text_AOD(userControl_text_WindForce, userControl_text_WindForce_AOD);
             Copy_hand_AOD(userControl_hand_WindForce, userControl_hand_WindForce_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_WindForce, userControl_scaleCircle_WindForce_AOD);
@@ -8224,6 +8235,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_WindForce, userControl_icon_WindForce_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Altitude, userControl_pictures_Altitude_AOD);
+            Copy_segments_AOD(userControl_segments_Altitude, userControl_segments_Altitude_AOD);
             Copy_text_AOD(userControl_text_Altitude, userControl_text_Altitude_AOD);
             Copy_hand_AOD(userControl_hand_Altitude, userControl_hand_Altitude_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Altitude, userControl_scaleCircle_Altitude_AOD);
@@ -8232,6 +8244,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Altitude, userControl_icon_Altitude_AOD);
 
             Copy_pictures_AOD(userControl_pictures_AirPressure, userControl_pictures_AirPressure_AOD);
+            Copy_segments_AOD(userControl_segments_AirPressure, userControl_segments_AirPressure_AOD);
             Copy_text_AOD(userControl_text_AirPressure, userControl_text_AirPressure_AOD);
             Copy_hand_AOD(userControl_hand_AirPressure, userControl_hand_AirPressure_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_AirPressure, userControl_scaleCircle_AirPressure_AOD);
@@ -8240,6 +8253,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_AirPressure, userControl_icon_AirPressure_AOD);
 
             Copy_pictures_AOD(userControl_pictures_Stress, userControl_pictures_Stress_AOD);
+            Copy_segments_AOD(userControl_segments_Stress, userControl_segments_Stress_AOD);
             Copy_text_AOD(userControl_text_Stress, userControl_text_Stress_AOD);
             Copy_hand_AOD(userControl_hand_Stress, userControl_hand_Stress_AOD);
             Copy_scaleCircle_AOD(userControl_scaleCircle_Stress, userControl_scaleCircle_Stress_AOD);
@@ -8248,6 +8262,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_Stress, userControl_icon_Stress_AOD);
 
             Copy_pictures_AOD(userControl_pictures_ActivityGoal, userControl_pictures_ActivityGoal_AOD);
+            Copy_segments_AOD(userControl_segments_ActivityGoal, userControl_segments_ActivityGoal_AOD);
             Copy_text_AOD(userControl_text_ActivityGoal, userControl_text_ActivityGoal_AOD);
             Copy_text_AOD(userControl_text_goal_ActivityGoal_AOD, userControl_text_goal_StandUp_AOD);
             Copy_hand_AOD(userControl_hand_ActivityGoal, userControl_hand_ActivityGoal_AOD);
@@ -8257,6 +8272,7 @@ namespace AmazFit_Watchface_2
             Copy_icon_AOD(userControl_icon_ActivityGoal, userControl_icon_ActivityGoal_AOD);
 
             Copy_pictures_AOD(userControl_pictures_FatBurning, userControl_pictures_FatBurning_AOD);
+            Copy_segments_AOD(userControl_segments_FatBurning, userControl_segments_FatBurning_AOD);
             Copy_text_AOD(userControl_text_FatBurning, userControl_text_FatBurning_AOD);
             Copy_text_AOD(userControl_text_goal_FatBurning_AOD, userControl_text_goal_StandUp_AOD);
             Copy_hand_AOD(userControl_hand_FatBurning, userControl_hand_FatBurning_AOD);
@@ -8285,6 +8301,13 @@ namespace AmazFit_Watchface_2
             userControl_pictures_AOD.numericUpDown_picturesX.Value = userControl_pictures.numericUpDown_picturesX.Value;
             userControl_pictures_AOD.numericUpDown_picturesY.Value = userControl_pictures.numericUpDown_picturesY.Value;
             userControl_pictures_AOD.numericUpDown_pictures_count.Value = userControl_pictures.numericUpDown_pictures_count.Value;
+        }
+        private void Copy_segments_AOD(UserControl_segments userControl_segments, UserControl_segments userControl_segments_AOD)
+        {
+            userControl_segments_AOD.checkBox_pictures_Use.Checked = userControl_segments.checkBox_pictures_Use.Checked;
+            userControl_segments_AOD.comboBoxSetImage(userControl_segments.comboBoxGetImage());
+            userControl_segments_AOD.radioButtonSetDisplayType(userControl_segments.radioButtonGetDisplayType());
+            userControl_segments_AOD.SetCoordinates(userControl_segments.GetCoordinates());
         }
         private void Copy_text_AOD(UserControl_text userControl_text, UserControl_text userControl_text_AOD)
         {
@@ -12099,6 +12122,137 @@ namespace AmazFit_Watchface_2
                 numericUpDown_ConvertingOutput_Custom.Value = 416;
             }
         }
+
+        private void userControl_segments_Battery_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_Battery, userControl_segments_Battery_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_Steps_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_Steps, userControl_segments_Steps_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_Calories_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_Calories, userControl_segments_Calories_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_HeartRate_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_HeartRate, userControl_segments_HeartRate_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_PAI_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_PAI, userControl_segments_PAI_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_StandUp_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_StandUp, userControl_segments_StandUp_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_UVindex_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_UVindex, userControl_segments_UVindex_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_AirQuality_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_AirQuality, userControl_segments_AirQuality_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_Humidity_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_Humidity, userControl_segments_Humidity_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_Sunrise_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_Sunrise, userControl_segments_Sunrise_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_WindForce_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_WindForce, userControl_segments_WindForce_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_Altitude_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_Altitude, userControl_segments_Altitude_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_AirPressure_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_AirPressure, userControl_segments_AirPressure_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_Stress_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_Stress, userControl_segments_Stress_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_ActivityGoal_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_ActivityGoal, userControl_segments_ActivityGoal_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+        private void userControl_segments_FatBurning_AOD_Copy(object sender, EventArgs eventArgs)
+        {
+            PreviewView = false;
+            Copy_segments_AOD(userControl_segments_FatBurning, userControl_segments_FatBurning_AOD);
+            PreviewView = true;
+            JSON_write();
+            PreviewImage();
+        }
+
+
 
 
 

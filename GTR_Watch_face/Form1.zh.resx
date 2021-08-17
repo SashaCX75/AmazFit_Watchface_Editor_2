@@ -438,7 +438,7 @@
     <value>坐标</value>
   </data>
   <data name="panel_AM_PM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 81</value>
+    <value>432, 81</value>
   </data>
   <data name="userControl_SystemFont_GroupTime.FollowRotatText_Max" xml:space="preserve">
     <value>跟随分钟</value>
@@ -453,7 +453,7 @@
     <value>跟随小时</value>
   </data>
   <data name="userControl_SystemFont_GroupTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 23</value>
+    <value>432, 23</value>
   </data>
   <data name="label534.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -541,10 +541,10 @@
     <value>分隔符</value>
   </data>
   <data name="panel_Second.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 1</value>
+    <value>432, 1</value>
   </data>
   <data name="button_Second.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 23</value>
+    <value>432, 23</value>
   </data>
   <data name="button_Second.Text" xml:space="preserve">
     <value>秒钟</value>
@@ -634,10 +634,10 @@
     <value>分隔符</value>
   </data>
   <data name="panel_Minute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 1</value>
+    <value>432, 1</value>
   </data>
   <data name="button_Minute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 23</value>
+    <value>432, 23</value>
   </data>
   <data name="button_Minute.Text" xml:space="preserve">
     <value>分钟</value>
@@ -721,16 +721,16 @@
     <value>分隔符</value>
   </data>
   <data name="panel_Hour.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 1</value>
+    <value>432, 1</value>
   </data>
   <data name="button_Hour.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 23</value>
+    <value>432, 23</value>
   </data>
   <data name="button_Hour.Text" xml:space="preserve">
     <value>小时</value>
   </data>
   <data name="tabPage_Digital_time.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 170</value>
+    <value>438, 286</value>
   </data>
   <data name="tabPage_Digital_time.Text" xml:space="preserve">
     <value>数字时钟</value>
@@ -801,6 +801,12 @@
   <data name="checkBox_Second_hand_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="panel_Second_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Second_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Second_hand.Text" xml:space="preserve">
     <value>秒钟</value>
   </data>
@@ -869,6 +875,12 @@
   </data>
   <data name="checkBox_Minute_hand_Use.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="panel_Minute_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Minute_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="button_Minute_hand.Text" xml:space="preserve">
     <value>分钟</value>
@@ -939,17 +951,26 @@
   <data name="checkBox_Hour_hand_Use.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="panel_Hour_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Hour_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Hour_hand.Text" xml:space="preserve">
     <value>小时</value>
+  </data>
+  <data name="tabPage_Analog_time.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 286</value>
   </data>
   <data name="tabPage_Analog_time.Text" xml:space="preserve">
     <value>模拟时钟</value>
   </data>
   <data name="tabControl_time.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 196</value>
+    <value>446, 312</value>
   </data>
   <data name="tabPage_Time.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 196</value>
+    <value>446, 312</value>
   </data>
   <data name="tabPage_Time.Text" xml:space="preserve">
     <value>时间</value>
@@ -1150,7 +1171,7 @@
     <value>数字</value>
   </data>
   <data name="tabPage_Day.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 170</value>
+    <value>438, 286</value>
   </data>
   <data name="tabPage_Day.Text" xml:space="preserve">
     <value>日期</value>
@@ -1160,6 +1181,9 @@
   </data>
   <data name="userControl_SystemFont_Group_Month.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="label706.Text" xml:space="preserve">
     <value>背景图像坐标</value>
@@ -1226,6 +1250,12 @@
   </data>
   <data name="label638.Text" xml:space="preserve">
     <value>中心图像</value>
+  </data>
+  <data name="panel_Month_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Month_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
   </data>
   <data name="button_Month_hand.Text" xml:space="preserve">
     <value>指针</value>
@@ -1314,6 +1344,12 @@
   <data name="checkBox_Month_follow.Text" xml:space="preserve">
     <value>跟随前辈</value>
   </data>
+  <data name="panel_Month_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Month_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Month_text.Text" xml:space="preserve">
     <value>数字</value>
   </data>
@@ -1341,8 +1377,17 @@
   <data name="label614.Text" xml:space="preserve">
     <value>起始图像</value>
   </data>
+  <data name="panel_Month_pictures.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_Month_pictures.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_Month_pictures.Text" xml:space="preserve">
     <value>图像进度</value>
+  </data>
+  <data name="tabPage_Month.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 286</value>
   </data>
   <data name="tabPage_Month.Text" xml:space="preserve">
     <value>月份</value>
@@ -1352,6 +1397,15 @@
   </data>
   <data name="userControl_SystemFont_Group_Year.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 23</value>
+  </data>
+  <data name="panel_Year_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 30</value>
+  </data>
+  <data name="button_Year_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 23</value>
   </data>
   <data name="button_Year_hand.Text" xml:space="preserve">
     <value>指针</value>
@@ -1437,8 +1491,17 @@
   <data name="label605.Text" xml:space="preserve">
     <value>间距</value>
   </data>
+  <data name="panel_Year_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 215</value>
+  </data>
+  <data name="button_Year_text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 23</value>
+  </data>
   <data name="button_Year_text.Text" xml:space="preserve">
     <value>数字</value>
+  </data>
+  <data name="tabPage_Year.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 286</value>
   </data>
   <data name="tabPage_Year.Text" xml:space="preserve">
     <value>年</value>
@@ -1527,6 +1590,12 @@
   <data name="label655.Text" xml:space="preserve">
     <value>中心图像</value>
   </data>
+  <data name="panel_DOW_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_DOW_hand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_DOW_hand.Text" xml:space="preserve">
     <value>指针</value>
   </data>
@@ -1548,23 +1617,29 @@
   <data name="label640.Text" xml:space="preserve">
     <value>起始图像</value>
   </data>
+  <data name="panel_DOW_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 1</value>
+  </data>
+  <data name="button_DOW_image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 23</value>
+  </data>
   <data name="button_DOW_image.Text" xml:space="preserve">
     <value>图像</value>
+  </data>
+  <data name="tabPage_Day_of_week.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 286</value>
   </data>
   <data name="tabPage_Day_of_week.Text" xml:space="preserve">
     <value>星期</value>
   </data>
   <data name="tabControl_date.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 196</value>
+    <value>446, 312</value>
   </data>
   <data name="tabPage_Date.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 196</value>
+    <value>446, 312</value>
   </data>
   <data name="tabPage_Date.Text" xml:space="preserve">
     <value>日期</value>
-  </data>
-  <data name="userControl_icon_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Steps.FollowRotateText" xml:space="preserve">
     <value>跟随步数</value>
@@ -1575,38 +1650,14 @@
   <data name="userControl_SystemFont_Group_Steps.FontRotateText" xml:space="preserve">
     <value>圆形系统字体（目标步数）</value>
   </data>
-  <data name="userControl_SystemFont_Group_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
-  </data>
   <data name="userControl_SystemFont_Group_Steps.SystemFontText" xml:space="preserve">
     <value>旋转系统字体（目标步数）</value>
-  </data>
-  <data name="userControl_scaleLinear_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
-  </data>
-  <data name="userControl_scaleCircle_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
-  </data>
-  <data name="userControl_hand_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
   </data>
   <data name="userControl_text_goal_Steps.ButtonText" xml:space="preserve">
     <value>数值（目标步数）</value>
   </data>
   <data name="userControl_text_goal_Steps.FollowText" xml:space="preserve">
     <value>跟随步数</value>
-  </data>
-  <data name="userControl_text_goal_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
-  </data>
-  <data name="userControl_text_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
-  </data>
-  <data name="userControl_pictures_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 23</value>
-  </data>
-  <data name="tabPage_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 170</value>
   </data>
   <data name="tabPage_Steps.Text" xml:space="preserve">
     <value>步数</value>
@@ -1718,12 +1769,6 @@
   </data>
   <data name="tabPage_FatBurning.Text" xml:space="preserve">
     <value>燃烧脂肪</value>
-  </data>
-  <data name="tabControl_SystemActivity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 196</value>
-  </data>
-  <data name="tabPage_Activity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 196</value>
   </data>
   <data name="tabPage_Activity.Text" xml:space="preserve">
     <value>活动</value>
@@ -1917,7 +1962,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAagBBAGoAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAbABBAGwAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -2009,7 +2054,7 @@
     <value>坐标</value>
   </data>
   <data name="panel_AM_PM_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 115</value>
+    <value>413, 115</value>
   </data>
   <data name="userControl_SystemFont_GroupTime_AOD.FollowRotatText_Max" xml:space="preserve">
     <value>跟随分钟</value>
@@ -2024,7 +2069,7 @@
     <value>跟随小时</value>
   </data>
   <data name="userControl_SystemFont_GroupTime_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="button_Copy_Minute_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
@@ -2087,10 +2132,10 @@
     <value>分隔符</value>
   </data>
   <data name="panel_Minute_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 1</value>
+    <value>413, 1</value>
   </data>
   <data name="button_Minute_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="button_Minute_AOD.Text" xml:space="preserve">
     <value>分钟</value>
@@ -2150,16 +2195,16 @@
     <value>分隔符</value>
   </data>
   <data name="panel_Hour_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 1</value>
+    <value>413, 1</value>
   </data>
   <data name="button_Hour_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="button_Hour_AOD.Text" xml:space="preserve">
     <value>时钟</value>
   </data>
   <data name="tabPage_Digital_time_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 368</value>
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Digital_time_AOD.Text" xml:space="preserve">
     <value>数字时钟</value>
@@ -2188,6 +2233,12 @@
   <data name="label349.Text" xml:space="preserve">
     <value>中心图像</value>
   </data>
+  <data name="panel_Minute_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Minute_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Minute_hand_AOD.Text" xml:space="preserve">
     <value>分针</value>
   </data>
@@ -2215,17 +2266,26 @@
   <data name="label362.Text" xml:space="preserve">
     <value>中心图像</value>
   </data>
+  <data name="panel_Hour_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Hour_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Hour_hand_AOD.Text" xml:space="preserve">
     <value>时针</value>
+  </data>
+  <data name="tabPage_Analog_time_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Analog_time_AOD.Text" xml:space="preserve">
     <value>模拟时钟</value>
   </data>
   <data name="tabControl_time_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 394</value>
+    <value>427, 278</value>
   </data>
   <data name="tabPage_Time_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 394</value>
+    <value>427, 278</value>
   </data>
   <data name="tabPage_Time_AOD.Text" xml:space="preserve">
     <value>时间</value>
@@ -2237,7 +2297,7 @@
     <value>跟随前辈</value>
   </data>
   <data name="userControl_SystemFont_Group_Day_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="button_Copy_Day_hand_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
@@ -2276,10 +2336,10 @@
     <value>端角</value>
   </data>
   <data name="panel_Day_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 1</value>
+    <value>413, 1</value>
   </data>
   <data name="button_Day_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="button_Day_hand_AOD.Text" xml:space="preserve">
     <value>指针</value>
@@ -2345,16 +2405,16 @@
     <value>间距</value>
   </data>
   <data name="panel_Day_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 1</value>
+    <value>413, 1</value>
   </data>
   <data name="button_Day_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="button_Day_text_AOD.Text" xml:space="preserve">
     <value>数字</value>
   </data>
   <data name="tabPage_Day_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 368</value>
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Day_AOD.Text" xml:space="preserve">
     <value>日期</value>
@@ -2364,6 +2424,9 @@
   </data>
   <data name="userControl_SystemFont_Group_Month_AOD.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Month_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="button_Copy_Month_hand_AOD.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
@@ -2400,6 +2463,12 @@
   </data>
   <data name="label416.Text" xml:space="preserve">
     <value>中心图像</value>
+  </data>
+  <data name="panel_Month_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Month_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="button_Month_hand_AOD.Text" xml:space="preserve">
     <value>指针</value>
@@ -2464,6 +2533,12 @@
   <data name="label423.Text" xml:space="preserve">
     <value>间距</value>
   </data>
+  <data name="panel_Month_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Month_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Month_text_AOD.Text" xml:space="preserve">
     <value>数值</value>
   </data>
@@ -2485,8 +2560,17 @@
   <data name="label429.Text" xml:space="preserve">
     <value>起始图像</value>
   </data>
+  <data name="panel_Month_pictures_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_Month_pictures_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_Month_pictures_AOD.Text" xml:space="preserve">
     <value>图像进度</value>
+  </data>
+  <data name="tabPage_Month_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Month_AOD.Text" xml:space="preserve">
     <value>月份</value>
@@ -2496,6 +2580,15 @@
   </data>
   <data name="userControl_SystemFont_Group_Year_AOD.FollowText" xml:space="preserve">
     <value>跟随前辈</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Year_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="panel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 30</value>
+  </data>
+  <data name="button13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
   </data>
   <data name="button13.Text" xml:space="preserve">
     <value>指针</value>
@@ -2557,8 +2650,17 @@
   <data name="label438.Text" xml:space="preserve">
     <value>间距</value>
   </data>
+  <data name="panel_Year_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 215</value>
+  </data>
+  <data name="button_Year_text_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
   <data name="button_Year_text_AOD.Text" xml:space="preserve">
     <value>数值</value>
+  </data>
+  <data name="tabPage_Year_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Year_AOD.Text" xml:space="preserve">
     <value>年</value>
@@ -2599,6 +2701,12 @@
   <data name="label459.Text" xml:space="preserve">
     <value>中心图像</value>
   </data>
+  <data name="panel_DOW_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_DOW_hand_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_DOW_hand_AOD.Text" xml:space="preserve">
     <value>指针</value>
   </data>
@@ -2620,23 +2728,32 @@
   <data name="label461.Text" xml:space="preserve">
     <value>起始图像</value>
   </data>
+  <data name="panel_DOW_image_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 1</value>
+  </data>
+  <data name="button_DOW_image_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="button_DOW_image_AOD.Text" xml:space="preserve">
     <value>图像</value>
+  </data>
+  <data name="tabPage_Day_of_week_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Day_of_week_AOD.Text" xml:space="preserve">
     <value>星期</value>
   </data>
   <data name="tabControl_date_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 394</value>
+    <value>427, 278</value>
   </data>
   <data name="tabPage_Date_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 394</value>
+    <value>427, 278</value>
   </data>
   <data name="tabPage_Date_AOD.Text" xml:space="preserve">
     <value>日期</value>
   </data>
   <data name="userControl_icon_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Steps_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随步数</value>
@@ -2648,19 +2765,19 @@
     <value>圆形系统字体（目标步数）</value>
   </data>
   <data name="userControl_SystemFont_Group_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Steps_AOD.SystemFontText" xml:space="preserve">
     <value>旋转系统字体（目标步数）</value>
   </data>
   <data name="userControl_scaleLinear_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="userControl_hand_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_Steps_AOD.ButtonText" xml:space="preserve">
     <value>数值（站立数目标）</value>
@@ -2669,19 +2786,25 @@
     <value>跟随步数</value>
   </data>
   <data name="userControl_text_goal_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 23</value>
+    <value>413, 23</value>
   </data>
   <data name="tabPage_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 368</value>
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Steps_AOD.Text" xml:space="preserve">
     <value>步数</value>
+  </data>
+  <data name="userControl_icon_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Calories_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随卡路里</value>
@@ -2692,8 +2815,20 @@
   <data name="userControl_SystemFont_Group_Calories_AOD.FontRotateText" xml:space="preserve">
     <value>圆形系统字体（卡路里）</value>
   </data>
+  <data name="userControl_SystemFont_Group_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_Calories_AOD.SystemFontText" xml:space="preserve">
     <value>旋转系统字体（卡路里）</value>
+  </data>
+  <data name="userControl_scaleLinear_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_Calories_AOD.ButtonText" xml:space="preserve">
     <value>数值（卡路里目标）</value>
@@ -2701,14 +2836,98 @@
   <data name="userControl_text_goal_Calories_AOD.FollowText" xml:space="preserve">
     <value>跟随卡路里</value>
   </data>
+  <data name="userControl_text_goal_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
+  </data>
   <data name="tabPage_Calories_AOD.Text" xml:space="preserve">
     <value>卡路里</value>
+  </data>
+  <data name="userControl_icon_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
   </data>
   <data name="tabPage_HeartRate_AOD.Text" xml:space="preserve">
     <value>心率</value>
   </data>
+  <data name="userControl_pictures_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_icon_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
+  </data>
+  <data name="userControl_icon_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
+  </data>
   <data name="tabPage_Distance_AOD.Text" xml:space="preserve">
     <value>距离</value>
+  </data>
+  <data name="userControl_icon_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_StandUp_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随基础数值</value>
@@ -2719,8 +2938,20 @@
   <data name="userControl_SystemFont_Group_StandUp_AOD.FontRotateText" xml:space="preserve">
     <value>圆形系统字体（站立数）</value>
   </data>
+  <data name="userControl_SystemFont_Group_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_StandUp_AOD.SystemFontText" xml:space="preserve">
     <value>旋转系统字体（站立数）</value>
+  </data>
+  <data name="userControl_scaleLinear_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_StandUp_AOD.ButtonText" xml:space="preserve">
     <value>数值（站立数）</value>
@@ -2728,8 +2959,50 @@
   <data name="userControl_text_goal_StandUp_AOD.FollowText" xml:space="preserve">
     <value>跟随基础数值</value>
   </data>
+  <data name="userControl_text_goal_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
+  </data>
   <data name="tabPage_StandUp_AOD.Text" xml:space="preserve">
     <value>站立</value>
+  </data>
+  <data name="userControl_icon_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_SystemFont_Group_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleLinear_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
   </data>
   <data name="tabPage_Stress_AOD.Text" xml:space="preserve">
     <value>压力</value>
@@ -2746,8 +3019,14 @@
   <data name="radioButton_ActivityGoal_Steps_AOD.Text" xml:space="preserve">
     <value>步数</value>
   </data>
+  <data name="groupBox_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 45</value>
+  </data>
   <data name="groupBox_ActivityGoal_AOD.Text" xml:space="preserve">
     <value>*根据手表设置显示步数或卡路里。</value>
+  </data>
+  <data name="userControl_icon_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随基础数值</value>
@@ -2758,8 +3037,20 @@
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.FontRotateText" xml:space="preserve">
     <value>圆形系统字体（活动目标）</value>
   </data>
+  <data name="userControl_SystemFont_Group_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.SystemFontText" xml:space="preserve">
     <value>旋转系统字体（活动目标）</value>
+  </data>
+  <data name="userControl_scaleLinear_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_hand_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
   </data>
   <data name="userControl_text_goal_ActivityGoal_AOD.ButtonText" xml:space="preserve">
     <value>数值（活动目标）</value>
@@ -2767,8 +3058,26 @@
   <data name="userControl_text_goal_ActivityGoal_AOD.FollowText" xml:space="preserve">
     <value>跟随基础数值</value>
   </data>
+  <data name="userControl_text_goal_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_text_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_segments_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_pictures_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="tabPage_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
+  </data>
   <data name="tabPage_ActivityGoal_AOD.Text" xml:space="preserve">
     <value>活动目标</value>
+  </data>
+  <data name="userControl_icon_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_FatBurning_AOD.FollowRotateText" xml:space="preserve">
     <value>跟随基础数值</value>
@@ -2779,8 +3088,20 @@
   <data name="userControl_SystemFont_Group_FatBurning_AOD.FontRotateText" xml:space="preserve">
     <value>圆形系统字体（脂肪燃烧目标）</value>
   </data>
+  <data name="userControl_SystemFont_Group_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
   <data name="userControl_SystemFont_Group_FatBurning_AOD.SystemFontText" xml:space="preserve">
     <value>旋转系统字体（脂肪燃烧目标）</value>
+  </data>
+  <data name="userControl_scaleLinear_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_scaleCircle_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_hand_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
   </data>
   <data name="userControl_text_goal_FatBurning_AOD.ButtonText" xml:space="preserve">
     <value>数值脂（肪燃烧目标）</value>
@@ -2788,14 +3109,29 @@
   <data name="userControl_text_goal_FatBurning_AOD.FollowText" xml:space="preserve">
     <value>跟随基础数值</value>
   </data>
+  <data name="userControl_text_goal_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_text_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="tabPage_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 252</value>
+  </data>
   <data name="tabPage_FatBurning_AOD.Text" xml:space="preserve">
     <value>燃烧脂肪</value>
   </data>
   <data name="tabControl_SystemActivity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 394</value>
+    <value>427, 278</value>
   </data>
   <data name="tabPage_Activity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 394</value>
+    <value>427, 278</value>
   </data>
   <data name="tabPage_Activity_AOD.Text" xml:space="preserve">
     <value>活动</value>
@@ -3312,7 +3648,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAU
-        DQAAAk1TRnQBSQFMAgEBBQEAAdwBBgHcAQYBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBQEAAeQBBgHkAQYBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -3485,7 +3821,7 @@
     <value>保存JSON文件时显示警告</value>
   </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 289</value>
+    <value>45, 269</value>
   </data>
   <data name="label356.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
@@ -6597,10 +6933,6 @@
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>GTR 2 表盘编辑器</value>

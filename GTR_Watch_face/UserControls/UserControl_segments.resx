@@ -232,7 +232,7 @@
     <value>False</value>
   </data>
   <data name="dataGridView_coordinates_set.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 24</value>
+    <value>174, 24</value>
   </data>
   <data name="dataGridView_coordinates_set.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>45</value>
@@ -254,6 +254,93 @@
   </data>
   <data name="&gt;&gt;dataGridView_coordinates_set.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="radioButton_Continuous.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_Continuous.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_Continuous.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 49</value>
+  </data>
+  <data name="radioButton_Continuous.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 17</value>
+  </data>
+  <data name="radioButton_Continuous.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButton_Continuous.Text" xml:space="preserve">
+    <value>Непрерывный</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Continuous.Name" xml:space="preserve">
+    <value>radioButton_Continuous</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Continuous.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Continuous.Parent" xml:space="preserve">
+    <value>groupBox_DisplayType</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Continuous.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton_Single.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_Single.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_Single.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 26</value>
+  </data>
+  <data name="radioButton_Single.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 17</value>
+  </data>
+  <data name="radioButton_Single.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton_Single.Text" xml:space="preserve">
+    <value>Одиночный</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Single.Name" xml:space="preserve">
+    <value>radioButton_Single</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Single.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Single.Parent" xml:space="preserve">
+    <value>groupBox_DisplayType</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Single.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox_DisplayType.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="groupBox_DisplayType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 85</value>
+  </data>
+  <data name="groupBox_DisplayType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 80</value>
+  </data>
+  <data name="groupBox_DisplayType.TabIndex" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="groupBox_DisplayType.Text" xml:space="preserve">
+    <value>Режим отображения</value>
+  </data>
+  <data name="&gt;&gt;groupBox_DisplayType.Name" xml:space="preserve">
+    <value>groupBox_DisplayType</value>
+  </data>
+  <data name="&gt;&gt;groupBox_DisplayType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox_DisplayType.Parent" xml:space="preserve">
+    <value>panel_pictures</value>
+  </data>
+  <data name="&gt;&gt;groupBox_DisplayType.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label01.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -286,7 +373,7 @@
     <value>panel_pictures</value>
   </data>
   <data name="&gt;&gt;label01.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label02.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -298,7 +385,7 @@
     <value>NoControl</value>
   </data>
   <data name="label02.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 6</value>
+    <value>171, 6</value>
   </data>
   <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 13</value>
@@ -322,13 +409,13 @@
     <value>panel_pictures</value>
   </data>
   <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="button_Copy_pictures.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_Copy_pictures.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 243</value>
+    <value>159, 243</value>
   </data>
   <data name="button_Copy_pictures.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 23</value>
@@ -349,7 +436,7 @@
     <value>panel_pictures</value>
   </data>
   <data name="&gt;&gt;button_Copy_pictures.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="panel_pictures.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

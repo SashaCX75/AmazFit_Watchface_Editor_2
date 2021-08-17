@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AmazFit_Watchface_2.UserControls
+namespace AmazFit_Watchface_2
 {
     public partial class UserControl_segments : UserControl
     {
@@ -159,6 +159,26 @@ namespace AmazFit_Watchface_2.UserControls
             return comboBox_pictures_image.SelectedIndex;
         }
 
+        internal void radioButtonSetDisplayType(string type)
+        {
+            if (type == "Single")
+            {
+                radioButton_Single.Checked = true;
+            }
+            else
+            {
+                radioButton_Continuous.Checked = true;
+            }
+        }
+
+        /// <summary>Возвращает Continuous / Single</summary>
+        internal string radioButtonGetDisplayType()
+        {
+            string value = "Single";
+            if (radioButton_Continuous.Checked) value = "Continuous";
+            return value;
+        }
+
         #region Standard events
         private void comboBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -238,6 +258,46 @@ namespace AmazFit_Watchface_2.UserControls
                 ValueChanged(this, eventArgs);
             }
         }
+
+        // меняем цвет текста и рамки для groupBox
+        private void groupBox_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = sender as GroupBox;
+            if (box.Enabled) DrawGroupBox(box, e.Graphics, Color.Black, Color.DarkGray);
+            else DrawGroupBox(box, e.Graphics, Color.DarkGray, Color.DarkGray);
+        }
+        private void DrawGroupBox(GroupBox box, Graphics g, Color textColor, Color borderColor)
+        {
+            if (box != null)
+            {
+                Brush textBrush = new SolidBrush(textColor);
+                Brush borderBrush = new SolidBrush(borderColor);
+                Pen borderPen = new Pen(borderBrush);
+                SizeF strSize = g.MeasureString(box.Text, box.Font);
+                Rectangle rect = new Rectangle(box.ClientRectangle.X,
+                                               box.ClientRectangle.Y + (int)(strSize.Height / 2),
+                                               box.ClientRectangle.Width - 1,
+                                               box.ClientRectangle.Height - (int)(strSize.Height / 2) - 5);
+
+                // Clear text and border
+                g.Clear(panel_pictures.BackColor);
+
+                // Draw text
+                g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
+
+                // Drawing Border
+                //Left
+                g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
+                //Right
+                g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Bottom
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
+                //Top1
+                g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
+                //Top2
+                g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
+            }
+        }
         #endregion
 
         #region Settings Set/Clear
@@ -269,6 +329,8 @@ namespace AmazFit_Watchface_2.UserControls
                     dataGridView_coordinates_set.Rows.Add(null, null);
                 }
             }
+
+            radioButton_Single.Checked = true;
 
             setValue = false;
         }
@@ -306,6 +368,8 @@ namespace AmazFit_Watchface_2.UserControls
 
         private void dataGridView_coordinates_set_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (e.ColumnIndex < 0 || e.RowIndex < 0) return;
+
             DataGridView dataGridView = sender as DataGridView;
             if (e.ColumnIndex == 0 && MouseСoordinates.X >= 0)
             {
@@ -314,6 +378,12 @@ namespace AmazFit_Watchface_2.UserControls
             if (e.ColumnIndex == 1 && MouseСoordinates.Y >= 0)
             {
                 dataGridView.Rows[e.RowIndex].Cells[1].Value = MouseСoordinates.Y;
+            }
+
+            if (ValueChanged != null && !setValue)
+            {
+                EventArgs eventArgs = new EventArgs();
+                ValueChanged(this, eventArgs);
             }
         }
 
@@ -434,7 +504,10 @@ namespace AmazFit_Watchface_2.UserControls
                     if (x < 0) x = 0;
                     if (y < 0) y = 0;
 
-                    if (y == dataGridView.Rows.Count-1 && !fixedRowsCount && y < imagesCount-1) dataGridView.Rows.Add(null, null);
+                    if (y == dataGridView.Rows.Count-1 && !fixedRowsCount)
+                    {
+                        if ((imagesCount > 0 && y < imagesCount - 1) || (imagesCount <= 0)) dataGridView.Rows.Add(null, null);
+                    }
                     dataGridView.Rows[y].Cells[0].Value = MouseСoordinates.X;
                     dataGridView.Rows[y].Cells[1].Value = MouseСoordinates.Y;
                     //dataGridView.Rows.InsertCopy(y, 0);
@@ -555,10 +628,7 @@ namespace AmazFit_Watchface_2.UserControls
                             }
                             else
                             {
-                                //dataGridView_coordinates_set.AllowUserToAddRows = true;
                                 dataGridView.Rows.RemoveAt(rowIndex);
-                                //dataGridView.CurrentCell = dataGridView.Rows[dataGridView.Rows.Count - 1].Cells[1];
-                                //dataGridView.BeginEdit(false);
                                 if (rowCount == imagesCount)
                                 {
                                     object value1 = dataGridView.Rows[rowCount - 2].Cells[0].Value;
@@ -568,11 +638,14 @@ namespace AmazFit_Watchface_2.UserControls
                                     dataGridView.Rows[rowCount - 1].Cells[0].Value = null;
                                     dataGridView.Rows[rowCount - 1].Cells[1].Value = null;
                                 }
-                                //if (rowCount == imagesCount) dataGridView.Rows.Add(null, null);
-                                //dataGridView.Rows.RemoveAt(rowIndex);
                             }
                         }
 
+                        if (ValueChanged != null && !setValue)
+                        {
+                            EventArgs eventArgs = new EventArgs();
+                            ValueChanged(this, eventArgs);
+                        }
                     }
                     catch (Exception)
                     {
@@ -687,6 +760,7 @@ namespace AmazFit_Watchface_2.UserControls
             }
             
         }
+
         /// <summary>Получаем набор координат</summary>
         public List<Coordinates> GetCoordinates()
         {
@@ -702,7 +776,17 @@ namespace AmazFit_Watchface_2.UserControls
                 coord.Y = y;
                 if ((row.Cells[0].Value != null || row.Cells[1].Value != null)|| fixedRowsCount) coordinates.Add(coord);
             }
+            if (coordinates.Count == 0) coordinates = null;
             return coordinates;
+        }
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ValueChanged != null && !setValue)
+            {
+                EventArgs eventArgs = new EventArgs();
+                ValueChanged(this, eventArgs);
+            }
         }
     }
 }
