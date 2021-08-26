@@ -157,4 +157,19 @@
   <data name="button_Copy_pictures.Text" xml:space="preserve">
     <value>Copiar de la pantalla principal</value>
   </data>
+  <data name="button_pictures.Text" xml:space="preserve">
+    <value>Progreso de la imagen (coordenadas independientes)</value>
+  </data>
+  <data name="groupBox_DisplayType.Text" xml:space="preserve">
+    <value>Modo de visualización</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>Conjunto de coordenadas</value>
+  </data>
+  <data name="radioButton_Continuous.Text" xml:space="preserve">
+    <value>Continuo</value>
+  </data>
+  <data name="radioButton_Single.Text" xml:space="preserve">
+    <value>Solo</value>
+  </data>
 </root>

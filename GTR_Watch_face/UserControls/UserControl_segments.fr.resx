@@ -157,4 +157,25 @@
   <data name="button_Copy_pictures.Text" xml:space="preserve">
     <value>Copier depuis le cadran principal</value>
   </data>
+  <data name="button_pictures.Text" xml:space="preserve">
+    <value>Image de progression (coordonnées différentes)</value>
+  </data>
+  <data name="groupBox_DisplayType.Text" xml:space="preserve">
+    <value>Type d'affichage</value>
+  </data>
+  <data name="label01.Text1" xml:space="preserve">
+    <value>Première image</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>Coordonnées</value>
+  </data>
+  <data name="radioButton_Continuous.Text" xml:space="preserve">
+    <value>Continu</value>
+  </data>
+  <data name="radioButton_Single.Text" xml:space="preserve">
+    <value>Unique</value>
+  </data>
+  <data name="вставитьКоординатыToolStripMenuItem.Text1" xml:space="preserve">
+    <value>Coller coordonnées</value>
+  </data>
 </root>

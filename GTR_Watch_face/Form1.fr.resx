@@ -1847,8 +1847,8 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAagBEQGoAREBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACm
+        DQAAAk1TRnQBSQFMAgEBBgEAAagBEQGsAREBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1906,7 +1906,7 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
         AX4B4QEPAQ0BhgGAAQEBPgF+AfABDwEGAcICAAI+AfgBHwFDAWABAAEgAT8BPgH4AT8BYQGwAQABQAE/
         AR4B4AEnATAB2AEAAYABPAEeAeEBAwFYAWwBAQEAATwBHgHhAQcBbAE2AQEBAAE/Af4B4QEfATYBGgEB
         AwAB8AEfAQsBDAQAAfgBPwFNAYYBgAEBAgAB/AE/AQIBwgGAAQEBBAEAAf4BHwFDAWABwAEDAYQBAAH+
-        AZ8CAAHwAQ8B9wHnAf4BHws=
+        AZ8CAAHwAQ8B9wHnAf4BHxYACw==
 </value>
   </data>
   <data name="label284.Size" type="System.Drawing.Size, System.Drawing">
@@ -3826,8 +3826,8 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAU
-        DQAAAk1TRnQBSQFMAgEBBQEAASwBBQEsAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAW
+        DQAAAk1TRnQBSQFMAgEBBQEAASwBBQEwAQUBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -3882,7 +3882,7 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
         AfwWAAH/AQ8BAAF/A/8BwQEAAQcBAAF/Af4BfwKAAQABgwE+AX8B+AEfAgABPwGBAT4BHwHwAQ8CAAEg
         AQABPgEHAfABDwEIAQABIAEAATwBAwHgAQcCAAEgAQgBOAEDAeABBwEAAQEBIAEJATgBAQIAASwBAQEg
         AQkBOAEBAwABAQEgAQkBOAEDATABDAEAAQEBIAEJATwBAwI8AT8B+QEgAQkBPgEHAT8B/AEAAQEBPwH5
-        AT4BHwE/AfwBAAEBAQABAQE+AX8BPwH8AT8B+QEAAQEBAAF/AwABAQEAAQEBAAF/AwABAQs=
+        AT4BHwE/AfwBAAEBAQABAQE+AX8BPwH8AT8B+QEAAQEBAAF/AwABAQEAAQEBAAF/AwABARYACw==
 </value>
   </data>
   <data name="tabPage_Widgets.Text" xml:space="preserve">
@@ -7169,5 +7169,13 @@ Les données ne sont pas correctement affichées pour toutes les villes.</value>
   </data>
   <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 92</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix.Text" xml:space="preserve">
+    <value>Position corrrecte de la température lors de l'utilisation de la position "centre"
+(la température sera affichée sous l'icône météo)</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix_AOD.Text" xml:space="preserve">
+    <value>Position corrrecte de la température lors de l'utilisation de la position "centre"
+(la température sera affichée sous l'icône météo)</value>
   </data>
 </root>
