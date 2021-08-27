@@ -37,6 +37,7 @@ namespace AmazFit_Watchface_2
             this.comboBox_image = new System.Windows.Forms.ComboBox();
             this.comboBox_icon = new System.Windows.Forms.ComboBox();
             this.comboBox_unit = new System.Windows.Forms.ComboBox();
+            this.comboBox_unit_miles = new System.Windows.Forms.ComboBox();
             this.numericUpDown_imageX = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,19 +56,20 @@ namespace AmazFit_Watchface_2
             this.comboBox_imageError = new System.Windows.Forms.ComboBox();
             this.comboBox_imageDecimalPoint = new System.Windows.Forms.ComboBox();
             this.checkBox_follow = new System.Windows.Forms.CheckBox();
-            this.label02 = new System.Windows.Forms.Label();
-            this.label08 = new System.Windows.Forms.Label();
-            this.label04 = new System.Windows.Forms.Label();
             this.label01 = new System.Windows.Forms.Label();
-            this.label05 = new System.Windows.Forms.Label();
-            this.label09 = new System.Windows.Forms.Label();
+            this.label02 = new System.Windows.Forms.Label();
             this.label03 = new System.Windows.Forms.Label();
+            this.label04 = new System.Windows.Forms.Label();
+            this.label05 = new System.Windows.Forms.Label();
+            this.label06 = new System.Windows.Forms.Label();
+            this.label07 = new System.Windows.Forms.Label();
+            this.label08 = new System.Windows.Forms.Label();
+            this.label09 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label1083 = new System.Windows.Forms.Label();
             this.label1084 = new System.Windows.Forms.Label();
             this.label1085 = new System.Windows.Forms.Label();
             this.label1086 = new System.Windows.Forms.Label();
-            this.label06 = new System.Windows.Forms.Label();
-            this.label07 = new System.Windows.Forms.Label();
             this.button_Copy_text = new System.Windows.Forms.Button();
             this.panel_text.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_imageX)).BeginInit();
@@ -93,6 +95,7 @@ namespace AmazFit_Watchface_2
             this.panel_text.Controls.Add(this.comboBox_image);
             this.panel_text.Controls.Add(this.comboBox_icon);
             this.panel_text.Controls.Add(this.comboBox_unit);
+            this.panel_text.Controls.Add(this.comboBox_unit_miles);
             this.panel_text.Controls.Add(this.numericUpDown_imageX);
             this.panel_text.Controls.Add(this.numericUpDown_imageY);
             this.panel_text.Controls.Add(this.numericUpDown_iconX);
@@ -103,19 +106,20 @@ namespace AmazFit_Watchface_2
             this.panel_text.Controls.Add(this.comboBox_imageError);
             this.panel_text.Controls.Add(this.comboBox_imageDecimalPoint);
             this.panel_text.Controls.Add(this.checkBox_follow);
-            this.panel_text.Controls.Add(this.label02);
-            this.panel_text.Controls.Add(this.label08);
-            this.panel_text.Controls.Add(this.label04);
             this.panel_text.Controls.Add(this.label01);
-            this.panel_text.Controls.Add(this.label05);
-            this.panel_text.Controls.Add(this.label09);
+            this.panel_text.Controls.Add(this.label02);
             this.panel_text.Controls.Add(this.label03);
+            this.panel_text.Controls.Add(this.label04);
+            this.panel_text.Controls.Add(this.label05);
+            this.panel_text.Controls.Add(this.label06);
+            this.panel_text.Controls.Add(this.label07);
+            this.panel_text.Controls.Add(this.label08);
+            this.panel_text.Controls.Add(this.label09);
+            this.panel_text.Controls.Add(this.label10);
             this.panel_text.Controls.Add(this.label1083);
             this.panel_text.Controls.Add(this.label1084);
             this.panel_text.Controls.Add(this.label1085);
             this.panel_text.Controls.Add(this.label1086);
-            this.panel_text.Controls.Add(this.label06);
-            this.panel_text.Controls.Add(this.label07);
             this.panel_text.Controls.Add(this.button_Copy_text);
             resources.ApplyResources(this.panel_text, "panel_text");
             this.panel_text.Name = "panel_text";
@@ -166,6 +170,19 @@ namespace AmazFit_Watchface_2
             this.comboBox_unit.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             this.comboBox_unit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
             this.comboBox_unit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // comboBox_unit_miles
+            // 
+            this.comboBox_unit_miles.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_unit_miles.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_unit_miles, "comboBox_unit_miles");
+            this.comboBox_unit_miles.FormattingEnabled = true;
+            this.comboBox_unit_miles.Name = "comboBox_unit_miles";
+            this.comboBox_unit_miles.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_DrawItem);
+            this.comboBox_unit_miles.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_MeasureItem);
+            this.comboBox_unit_miles.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_unit_miles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_unit_miles.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_imageX
             // 
@@ -366,40 +383,55 @@ namespace AmazFit_Watchface_2
             this.checkBox_follow.CheckedChanged += new System.EventHandler(this.checkBox_follow_CheckedChanged);
             this.checkBox_follow.Click += new System.EventHandler(this.checkBox_Click);
             // 
+            // label01
+            // 
+            resources.ApplyResources(this.label01, "label01");
+            this.label01.Name = "label01";
+            // 
             // label02
             // 
             resources.ApplyResources(this.label02, "label02");
             this.label02.Name = "label02";
             // 
-            // label08
+            // label03
             // 
-            resources.ApplyResources(this.label08, "label08");
-            this.label08.Name = "label08";
+            resources.ApplyResources(this.label03, "label03");
+            this.label03.Name = "label03";
             // 
             // label04
             // 
             resources.ApplyResources(this.label04, "label04");
             this.label04.Name = "label04";
             // 
-            // label01
-            // 
-            resources.ApplyResources(this.label01, "label01");
-            this.label01.Name = "label01";
-            // 
             // label05
             // 
             resources.ApplyResources(this.label05, "label05");
             this.label05.Name = "label05";
+            // 
+            // label06
+            // 
+            resources.ApplyResources(this.label06, "label06");
+            this.label06.Name = "label06";
+            // 
+            // label07
+            // 
+            resources.ApplyResources(this.label07, "label07");
+            this.label07.Name = "label07";
+            // 
+            // label08
+            // 
+            resources.ApplyResources(this.label08, "label08");
+            this.label08.Name = "label08";
             // 
             // label09
             // 
             resources.ApplyResources(this.label09, "label09");
             this.label09.Name = "label09";
             // 
-            // label03
+            // label10
             // 
-            resources.ApplyResources(this.label03, "label03");
-            this.label03.Name = "label03";
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
             // 
             // label1083
             // 
@@ -420,16 +452,6 @@ namespace AmazFit_Watchface_2
             // 
             resources.ApplyResources(this.label1086, "label1086");
             this.label1086.Name = "label1086";
-            // 
-            // label06
-            // 
-            resources.ApplyResources(this.label06, "label06");
-            this.label06.Name = "label06";
-            // 
-            // label07
-            // 
-            resources.ApplyResources(this.label07, "label07");
-            this.label07.Name = "label07";
             // 
             // button_Copy_text
             // 
@@ -459,12 +481,9 @@ namespace AmazFit_Watchface_2
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel_text;
         private System.Windows.Forms.ComboBox comboBox_image;
         private System.Windows.Forms.ComboBox comboBox_icon;
-        private System.Windows.Forms.ComboBox comboBox_unit;
         private System.Windows.Forms.ComboBox comboBox_alignment;
-        private System.Windows.Forms.ComboBox comboBox_imageDecimalPoint;
         private System.Windows.Forms.Label label01;
         private System.Windows.Forms.Label label05;
         private System.Windows.Forms.Label label09;
@@ -484,7 +503,6 @@ namespace AmazFit_Watchface_2
         internal System.Windows.Forms.NumericUpDown numericUpDown_iconY;
         internal System.Windows.Forms.NumericUpDown numericUpDown_spacing;
         internal System.Windows.Forms.CheckBox checkBox_Use;
-        protected System.Windows.Forms.Label label08;
         protected System.Windows.Forms.Label label06;
         protected System.Windows.Forms.Label label07;
         protected System.Windows.Forms.Label label02;
@@ -497,5 +515,11 @@ namespace AmazFit_Watchface_2
         public System.Windows.Forms.CheckBox checkBox_addZero;
         protected System.Windows.Forms.Label label04;
         protected System.Windows.Forms.ComboBox comboBox_imageError;
+        protected System.Windows.Forms.ComboBox comboBox_imageDecimalPoint;
+        protected System.Windows.Forms.Panel panel_text;
+        protected System.Windows.Forms.ComboBox comboBox_unit_miles;
+        protected System.Windows.Forms.Label label10;
+        protected System.Windows.Forms.Label label08;
+        protected System.Windows.Forms.ComboBox comboBox_unit;
     }
 }

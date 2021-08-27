@@ -1477,7 +1477,7 @@ namespace AmazFit_Watchface_2
                                         digitalCommonDigit.CombingMode == "Follow") checkBox_follow.Checked = true;
 
                                         // десятичный разделитель
-                                        if (activity.Type == "Distance")
+                                    if (activity.Type == "Distance")
                                     {
                                         //ComboBox comboBox_DecimalPoint = (ComboBox)panel_text.Controls[12];
                                         if (digitalCommonDigit.Digit.Image.DecimalPointImageIndex != null)
@@ -1499,6 +1499,18 @@ namespace AmazFit_Watchface_2
                                                 userPanel_text_Activity.comboBoxSetUnit((int)multilangImage.ImageSet.ImageIndex);
                                         }
                                     }
+                                    if (activity.Type == "Distance")
+                                    {
+                                        if (digitalCommonDigit.Digit.Image.MultilangImageUnitMile != null)
+                                        {
+                                            foreach (MultilangImage multilangImage in digitalCommonDigit.Digit.Image.MultilangImageUnitMile)
+                                            {
+                                                if (multilangImage.LangCode == "All")
+                                                    userPanel_text_Activity.comboBoxSetUnitMile((int)multilangImage.ImageSet.ImageIndex);
+                                            }
+                                        }
+                                    }
+
                                     userPanel_text_Activity.comboBoxSetAlignment(digitalCommonDigit.Digit.Alignment);
                                     if (digitalCommonDigit.Digit.Spacing != null)
                                         numericUpDown_spacing.Value = (decimal)digitalCommonDigit.Digit.Spacing;
@@ -6096,6 +6108,7 @@ namespace AmazFit_Watchface_2
                     //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
                     int unit = panel_text.comboBoxGetIcon();
                     int separator = panel_text.comboBoxGetUnit();
+                    int separatorMile = panel_text.comboBoxGetUnitMile();
                     NumericUpDown numericUpDownX = panel_text.numericUpDown_imageX;
                     NumericUpDown numericUpDownY = panel_text.numericUpDown_imageY;
                     NumericUpDown numericUpDown_unitX = panel_text.numericUpDown_iconX;
@@ -6127,6 +6140,17 @@ namespace AmazFit_Watchface_2
                         if (DecimalPoint >= 0)
                         {
                             digitalCommonDigit.Digit.Image.DecimalPointImageIndex = DecimalPoint;
+                        }
+
+                        if (separatorMile >= 0)
+                        {
+                            digitalCommonDigit.Digit.Image.MultilangImageUnitMile = new List<MultilangImage>();
+                            MultilangImage multilangImageMile = new MultilangImage();
+                            multilangImageMile.LangCode = "All";
+                            multilangImageMile.ImageSet = new ImageSetGTR2();
+                            multilangImageMile.ImageSet.ImagesCount = 1;
+                            multilangImageMile.ImageSet.ImageIndex = separatorMile;
+                            digitalCommonDigit.Digit.Image.MultilangImageUnitMile.Add(multilangImageMile);
                         }
                     }
                     digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();

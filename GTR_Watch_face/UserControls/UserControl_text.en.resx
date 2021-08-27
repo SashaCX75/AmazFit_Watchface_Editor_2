@@ -275,35 +275,14 @@
   <data name="checkBox_addZero.Text" xml:space="preserve">
     <value>Add leading zeros</value>
   </data>
+  <data name="label01.Text" xml:space="preserve">
+    <value>First Image</value>
+  </data>
   <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
   </data>
   <data name="label02.Text" xml:space="preserve">
     <value>Coordinates</value>
-  </data>
-  <data name="label08.Text" xml:space="preserve">
-    <value>Unit</value>
-  </data>
-  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 13</value>
-  </data>
-  <data name="label04.Text" xml:space="preserve">
-    <value>Icon</value>
-  </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>First Image</value>
-  </data>
-  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="label05.Text" xml:space="preserve">
-    <value>Icon coordinates</value>
-  </data>
-  <data name="label09.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="label09.Text" xml:space="preserve">
-    <value>Alignment</value>
   </data>
   <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
@@ -311,11 +290,35 @@
   <data name="label03.Text" xml:space="preserve">
     <value>Spacing</value>
   </data>
+  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="label04.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="label05.Text" xml:space="preserve">
+    <value>Icon coordinates</value>
+  </data>
   <data name="label06.Text" xml:space="preserve">
     <value>Error image</value>
   </data>
   <data name="label07.Text" xml:space="preserve">
     <value>Decimal separator</value>
+  </data>
+  <data name="label08.Text" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="label09.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="label09.Text" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Unit (ml)</value>
   </data>
   <data name="button_Copy_text.Text" xml:space="preserve">
     <value>Copy from main screen</value>

@@ -8315,6 +8315,7 @@ namespace AmazFit_Watchface_2
             userControl_text_AOD.comboBoxSetImage(userControl_text.comboBoxGetImage());
             userControl_text_AOD.comboBoxSetIcon(userControl_text.comboBoxGetIcon());
             userControl_text_AOD.comboBoxSetUnit(userControl_text.comboBoxGetUnit());
+            userControl_text_AOD.comboBoxSetUnitMile(userControl_text.comboBoxGetUnitMile());
             userControl_text_AOD.numericUpDown_imageX.Value = userControl_text.numericUpDown_imageX.Value;
             userControl_text_AOD.numericUpDown_imageY.Value = userControl_text.numericUpDown_imageY.Value;
             userControl_text_AOD.numericUpDown_iconX.Value = userControl_text.numericUpDown_iconX.Value;

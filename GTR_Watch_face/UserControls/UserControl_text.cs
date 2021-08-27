@@ -19,6 +19,7 @@ namespace AmazFit_Watchface_2
         private bool OptionalSymbol_mode;
         private bool PaddingZero;
         private bool Follow_mode;
+        private bool Distance_mode;
         public UserControl_text()
         {
             InitializeComponent();
@@ -85,6 +86,25 @@ namespace AmazFit_Watchface_2
         internal int comboBoxGetSelectedIndexUnit()
         {
             return comboBox_unit.SelectedIndex;
+        }
+
+        internal void comboBoxSetUnitMile(int value)
+        {
+            comboBox_unit_miles.Text = value.ToString();
+            if (comboBox_unit_miles.SelectedIndex < 0) comboBox_unit_miles.Text = "";
+        }
+        /// <summary>Возвращает номер выбранной картинки, в случае ошибки возвращает -1</summary>
+        internal int comboBoxGetUnitMile()
+        {
+            if (comboBox_unit_miles.SelectedIndex < 0) return -1;
+            int value = -1;
+            Int32.TryParse(comboBox_unit_miles.Text, out value);
+            return value;
+        }
+        /// <summary>Возвращает SelectedIndex выпадающего списка</summary>
+        internal int comboBoxGetSelectedIndexUnitMile()
+        {
+            return comboBox_unit_miles.SelectedIndex;
         }
 
         internal void comboBoxSetImageError(int value)
@@ -219,7 +239,7 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>Отображение чекбокса добавления нулей в начале</summary>
-        public bool Padding_zero
+        public virtual bool Padding_zero
         {
             get
             {
@@ -232,8 +252,43 @@ namespace AmazFit_Watchface_2
             }
         }
 
+        /// <summary>Режим для дистанции</summary>
+        public virtual bool Distance
+        {
+            get
+            {
+                return Distance_mode;
+            }
+            set
+            {
+                Distance_mode = value;
+                comboBox_unit_miles.Visible = Distance_mode;
+                label10.Visible = Distance_mode;
+                if (Distance_mode)
+                {
+                    Point location1 = comboBox_unit.Location;
+                    Point location2 = comboBox_unit_miles.Location;
+                    Point location3 = comboBox_imageDecimalPoint.Location;
+                    Point location1t = label08.Location; // km
+                    Point location2t = label10.Location; // ml
+                    Point location3t = label07.Location; // десятичный разделитель
+
+                    comboBox_imageDecimalPoint.Location = location1;
+                    comboBox_unit_miles.Location = location3;
+                    comboBox_unit.Location = location2;
+                    label07.Location = location1t;
+                    label10.Location = location3t;
+                    label08.Location = location2t;
+
+                    label08.Text = label08.Text + " (km)";
+                    label08.TextAlign = ContentAlignment.BottomCenter;
+                    label07.TextAlign = ContentAlignment.BottomLeft;
+                }
+            }
+        }
+
         /// <summary>Отображение чекбокса следовать за</summary>
-        public bool Follow
+        public virtual bool Follow
         {
             get
             {
@@ -403,6 +458,7 @@ namespace AmazFit_Watchface_2
             comboBox_image.Items.AddRange(ListImages.ToArray());
             comboBox_icon.Items.AddRange(ListImages.ToArray());
             comboBox_unit.Items.AddRange(ListImages.ToArray());
+            comboBox_unit_miles.Items.AddRange(ListImages.ToArray());
 
             comboBox_imageError.Items.AddRange(ListImages.ToArray());
             comboBox_imageDecimalPoint.Items.AddRange(ListImages.ToArray());
@@ -420,6 +476,7 @@ namespace AmazFit_Watchface_2
                 comboBox_image.Items.Clear();
                 comboBox_icon.Items.Clear();
                 comboBox_unit.Items.Clear();
+                comboBox_unit_miles.Items.Clear();
                 comboBox_imageError.Items.Clear();
                 comboBox_imageDecimalPoint.Items.Clear(); 
             }
