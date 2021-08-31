@@ -721,6 +721,16 @@ namespace AmazFit_Watchface_2
         {
             if (coordinates == null) return;
 
+            dataGridView_coordinates_set.Rows.Clear();
+
+            if (fixedRowsCount && imagesCount > 0)
+            {
+                while (dataGridView_coordinates_set.Rows.Count < imagesCount)
+                {
+                    dataGridView_coordinates_set.Rows.Add(null, null);
+                }
+            }
+
             //if (fixedRowsCount && imagesCount > 0)
             if (imagesCount > 0)
             {

@@ -20,10 +20,26 @@ namespace AmazFit_Watchface_2
         private bool PaddingZero;
         private bool Follow_mode;
         private bool Distance_mode;
+
+        private Point location_unit;
+        private Point location_unit_miles;
+        private Point location_imageDecimalPoint;
+        private Point location_unit_label;
+        private Point location_unit_miles_label;
+        private Point location_imageDecimalPoint_label;
+        private String unit_label_text;
         public UserControl_text()
         {
             InitializeComponent();
             comboBox_alignment.SelectedIndex = 0;
+
+            location_unit = comboBox_unit.Location;
+            location_unit_miles = comboBox_unit_miles.Location;
+            location_imageDecimalPoint = comboBox_imageDecimalPoint.Location;
+            location_unit_label = label08.Location; // km
+            location_unit_miles_label = label10.Location; // ml
+            location_imageDecimalPoint_label = label07.Location; // десятичный разделитель
+            unit_label_text = label08.Text;
         }
 
 
@@ -273,16 +289,29 @@ namespace AmazFit_Watchface_2
                     Point location2t = label10.Location; // ml
                     Point location3t = label07.Location; // десятичный разделитель
 
-                    comboBox_imageDecimalPoint.Location = location1;
-                    comboBox_unit_miles.Location = location3;
-                    comboBox_unit.Location = location2;
-                    label07.Location = location1t;
-                    label10.Location = location3t;
-                    label08.Location = location2t;
+                    comboBox_imageDecimalPoint.Location = location_unit;
+                    comboBox_unit_miles.Location = location_imageDecimalPoint;
+                    comboBox_unit.Location = location_unit_miles;
+                    label07.Location = location_unit_label;
+                    label10.Location = location_imageDecimalPoint_label;
+                    label08.Location = location_unit_miles_label;
 
-                    label08.Text = label08.Text + " (km)";
+                    label08.Text = unit_label_text + " (km)";
                     label08.TextAlign = ContentAlignment.BottomCenter;
                     label07.TextAlign = ContentAlignment.BottomLeft;
+                }
+                else
+                {
+                    comboBox_imageDecimalPoint.Location = location_imageDecimalPoint;
+                    comboBox_unit_miles.Location = location_unit_miles;
+                    comboBox_unit.Location = location_unit;
+                    label07.Location = location_imageDecimalPoint_label;
+                    label10.Location = location_unit_miles_label;
+                    label08.Location = location_unit_label;
+
+                    label08.Text = unit_label_text;
+                    label08.TextAlign = ContentAlignment.BottomLeft;
+                    label07.TextAlign = ContentAlignment.BottomCenter;
                 }
             }
         }

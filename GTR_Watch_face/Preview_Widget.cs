@@ -1879,11 +1879,13 @@ namespace AmazFit_Watchface_2
             userControl_hand_DOWWidget.SettingsClear(false);
 
             userControl_textWidget.OptionalSymbol = false;
+            userControl_textWidget.Distance = false;
             userControl_text_goalWidget.Follow = true;
             userControl_text_goalWidget.OptionalSymbol = false;
             userControl_text_goalWidget.Padding_zero = false;
             userControl_iconWidget.Image2 = false;
-            
+
+
             switch (name)
             {
                 case "Battery":
@@ -2034,6 +2036,7 @@ namespace AmazFit_Watchface_2
 
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
                     userControl_textWidget.OptionalSymbol = true;
+                    userControl_textWidget.Distance = true;
 
                     userPanel_pictures = userControl_picturesWidget;
                     userPanel_text = userControl_textWidget;
@@ -2459,6 +2462,7 @@ namespace AmazFit_Watchface_2
                                     //ComboBox comboBox_DecimalPoint = (ComboBox)panel_text.Controls[12];
                                     if (digitalCommonDigit.Digit.Image.DecimalPointImageIndex != null)
                                         userPanel_text_Activity.comboBoxSetImageDecimalPointOrMinus((int)digitalCommonDigit.Digit.Image.DecimalPointImageIndex);
+                                
                                 }
 
                                 if (digitalCommonDigit.Digit.Image.NoDataImageIndex != null)
@@ -2476,6 +2480,18 @@ namespace AmazFit_Watchface_2
                                             userPanel_text_Activity.comboBoxSetUnit((int)multilangImage.ImageSet.ImageIndex);
                                     }
                                 }
+                                if (activity.Type == "Distance")
+                                {
+                                    if (digitalCommonDigit.Digit.Image.MultilangImageUnitMile != null)
+                                    {
+                                        foreach (MultilangImage multilangImage in digitalCommonDigit.Digit.Image.MultilangImageUnitMile)
+                                        {
+                                            if (multilangImage.LangCode == "All")
+                                                userPanel_text_Activity.comboBoxSetUnitMile((int)multilangImage.ImageSet.ImageIndex);
+                                        }
+                                    }
+                                }
+
                                 userPanel_text_Activity.comboBoxSetAlignment(digitalCommonDigit.Digit.Alignment);
                                 if (digitalCommonDigit.Digit.Spacing != null)
                                     numericUpDown_spacing.Value = (decimal)digitalCommonDigit.Digit.Spacing;
@@ -3777,6 +3793,7 @@ namespace AmazFit_Watchface_2
             userControl_hand_DOWWidgetAdd.checkBox_hand_Use.Checked = false;
 
             userControl_textWidgetAdd.OptionalSymbol = false;
+            userControl_textWidgetAdd.Distance = false;
             userControl_text_goalWidgetAdd.Follow = true;
             userControl_text_goalWidgetAdd.OptionalSymbol = false;
             userControl_text_goalWidgetAdd.Padding_zero = false;
@@ -3887,6 +3904,7 @@ namespace AmazFit_Watchface_2
 
                     userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
                     userControl_textWidgetAdd.OptionalSymbol = true;
+                    userControl_textWidgetAdd.Distance = true;
                     break;
 
                 case "StandUp":
@@ -4495,6 +4513,7 @@ namespace AmazFit_Watchface_2
                     //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
                     int unit = userPanel_text.comboBoxGetIcon();
                     int separator = userPanel_text.comboBoxGetUnit();
+                    int separatorMile = userPanel_text.comboBoxGetUnitMile();
                     NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
                     NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
                     NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
@@ -4526,6 +4545,16 @@ namespace AmazFit_Watchface_2
                         if (DecimalPoint >= 0)
                         {
                             digitalCommonDigit.Digit.Image.DecimalPointImageIndex = DecimalPoint;
+                        }
+                        if (separatorMile >= 0)
+                        {
+                            digitalCommonDigit.Digit.Image.MultilangImageUnitMile = new List<MultilangImage>();
+                            MultilangImage multilangImageMile = new MultilangImage();
+                            multilangImageMile.LangCode = "All";
+                            multilangImageMile.ImageSet = new ImageSetGTR2();
+                            multilangImageMile.ImageSet.ImagesCount = 1;
+                            multilangImageMile.ImageSet.ImageIndex = separatorMile;
+                            digitalCommonDigit.Digit.Image.MultilangImageUnitMile.Add(multilangImageMile);
                         }
                     }
                     digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
