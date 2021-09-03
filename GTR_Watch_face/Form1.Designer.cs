@@ -30,334 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.richTextBox_JsonText = new System.Windows.Forms.RichTextBox();
             this.treeView_JsonTree = new System.Windows.Forms.TreeView();
-            this.contextMenuStrip_Y = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.dataGridView_SNL_Activity = new System.Windows.Forms.DataGridView();
-            this.ActivityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActivityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage_Show = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel_set = new System.Windows.Forms.Panel();
-            this.panel_PreviewStates = new System.Windows.Forms.Panel();
-            this.button_JsonPreview_Random = new System.Windows.Forms.Button();
-            this.button_JsonPreview_Read = new System.Windows.Forms.Button();
-            this.button_JsonPreview_Write = new System.Windows.Forms.Button();
-            this.dataGridView_ImagesList = new System.Windows.Forms.DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.button_images = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button_JSON = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabPage_Edit = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button_RandomPreview = new System.Windows.Forms.Button();
-            this.radioButton_ScreenIdle = new System.Windows.Forms.RadioButton();
-            this.radioButton_ScreenNormal = new System.Windows.Forms.RadioButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button_SaveJson = new System.Windows.Forms.Button();
-            this.button_OpenDir = new System.Windows.Forms.Button();
-            this.tabPage_LayerOrder = new System.Windows.Forms.TabPage();
-            this.groupBox_AODL_Date = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView_AODL_Date = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_AODL_Date_End = new System.Windows.Forms.Button();
-            this.button_AODL_Date_Start = new System.Windows.Forms.Button();
-            this.button_AODL_Date_Up = new System.Windows.Forms.Button();
-            this.button_AODL_Date_Down = new System.Windows.Forms.Button();
-            this.groupBox_AODL_Activity = new System.Windows.Forms.GroupBox();
-            this.dataGridView_AODL_Activity = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_AODL_Activity_End = new System.Windows.Forms.Button();
-            this.button_AODL_Activity_Start = new System.Windows.Forms.Button();
-            this.button_AODL_Activity_Up = new System.Windows.Forms.Button();
-            this.button_AODL_Activity_Down = new System.Windows.Forms.Button();
-            this.groupBox_SNL_Date = new System.Windows.Forms.GroupBox();
-            this.label_SNL_Date = new System.Windows.Forms.Label();
-            this.dataGridView_SNL_Date = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_SNL_Date_End = new System.Windows.Forms.Button();
-            this.button_SNL_Date_Start = new System.Windows.Forms.Button();
-            this.button_SNL_Date_Up = new System.Windows.Forms.Button();
-            this.button_SNL_Date_Down = new System.Windows.Forms.Button();
-            this.groupBox_SNL_Activity = new System.Windows.Forms.GroupBox();
-            this.button_SNL_Activity_End = new System.Windows.Forms.Button();
-            this.button_SNL_Activity_Start = new System.Windows.Forms.Button();
-            this.button_SNL_Activity_Up = new System.Windows.Forms.Button();
-            this.button_SNL_Activity_Down = new System.Windows.Forms.Button();
-            this.tabPage_Widgets = new System.Windows.Forms.TabPage();
-            this.tabControl_Widget = new System.Windows.Forms.TabControl();
-            this.tabPage_WidgetsEdit = new System.Windows.Forms.TabPage();
-            this.checkBox_TimeOnWidgetEdit = new System.Windows.Forms.CheckBox();
-            this.groupBox_WidgetPreview = new System.Windows.Forms.GroupBox();
-            this.radioButton_WidgetPreviewEdit = new System.Windows.Forms.RadioButton();
-            this.radioButton_WidgetPreviewNormal = new System.Windows.Forms.RadioButton();
-            this.groupBox_WidgetElementSettings = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl_DateWidget = new System.Windows.Forms.TabControl();
-            this.tabPage_DayWidget = new System.Windows.Forms.TabPage();
-            this.tabPage_MonthWidget = new System.Windows.Forms.TabPage();
-            this.tabPage_YearWidget = new System.Windows.Forms.TabPage();
-            this.tabPage_DOWWidget = new System.Windows.Forms.TabPage();
-            this.tabPage_DateLayerWidget = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView_Widget_Date = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_Widget_Date_End = new System.Windows.Forms.Button();
-            this.button_Widget_Date_Start = new System.Windows.Forms.Button();
-            this.button_Widget_Date_Up = new System.Windows.Forms.Button();
-            this.button_Widget_Date_Down = new System.Windows.Forms.Button();
-            this.comboBox_WidgetsTopMask = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox_WidgetsUnderMask = new System.Windows.Forms.ComboBox();
-            this.label01 = new System.Windows.Forms.Label();
-            this.groupBox_WidgetNumber = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.numericUpDown_WidgetDescriptionLenght = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_WidgetBorderInactiv = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox_WidgetBorderActiv = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox_WidgetDescriptionBackground = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WidgetDescriptionBackgroundX = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WidgetDescriptionBackgroundY = new System.Windows.Forms.NumericUpDown();
-            this.label02 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1084 = new System.Windows.Forms.Label();
-            this.label1085 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown_WidgetWidth = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WidgetHeight = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WidgetX = new System.Windows.Forms.NumericUpDown();
-            this.button_WidgetDel = new System.Windows.Forms.Button();
-            this.numericUpDown_WidgetY = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_WidgetNumber = new System.Windows.Forms.ComboBox();
-            this.label05 = new System.Windows.Forms.Label();
-            this.label1083 = new System.Windows.Forms.Label();
-            this.label1086 = new System.Windows.Forms.Label();
-            this.groupBox_WidgetElement = new System.Windows.Forms.GroupBox();
-            this.button_WidgetElementDel = new System.Windows.Forms.Button();
-            this.button_WidgetElement_End = new System.Windows.Forms.Button();
-            this.button_WidgetElement_Start = new System.Windows.Forms.Button();
-            this.button_WidgetElement_Up = new System.Windows.Forms.Button();
-            this.button_WidgetElement_Down = new System.Windows.Forms.Button();
-            this.dataGridView_WidgetElement = new System.Windows.Forms.DataGridView();
-            this.WidgetsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WidgetElement = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WidgetElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage_WidgetAdd = new System.Windows.Forms.TabPage();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.groupBox_WidgetTypeAdd = new System.Windows.Forms.GroupBox();
-            this.radioButton_BatteryWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.label28 = new System.Windows.Forms.Label();
-            this.radioButton_AirPressureWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_WindForceWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_SunriseWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_HumidityWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_UVindexWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_WeatherWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.label27 = new System.Windows.Forms.Label();
-            this.radioButton_FatBurningWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_ActivityGoalWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_StandUpWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_DistanceWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_PAIWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_HeartRateWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_CaloriesWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.label26 = new System.Windows.Forms.Label();
-            this.radioButton_StepsWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_DateWidgetAdd = new System.Windows.Forms.RadioButton();
-            this.groupBox_WdgetAdd = new System.Windows.Forms.GroupBox();
-            this.button_WidgetAdd = new System.Windows.Forms.Button();
-            this.radioButton_WidgetElementAdd = new System.Windows.Forms.RadioButton();
-            this.radioButton_WidgetAdd = new System.Windows.Forms.RadioButton();
-            this.groupBox_WidgetElementAdd = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tabControl_DateWidgetAdd = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView_Widget_DateAdd = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_Widget_Date_EndAdd = new System.Windows.Forms.Button();
-            this.button_Widget_Date_StartAdd = new System.Windows.Forms.Button();
-            this.button_Widget_Date_UpAdd = new System.Windows.Forms.Button();
-            this.button_Widget_Date_DownAdd = new System.Windows.Forms.Button();
-            this.groupBox_WidgetNumberAdd = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.numericUpDown_WidgetDescriptionLenghtAdd = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_WidgetBorderInactivAdd = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox_WidgetBorderActivAdd = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBox_WidgetDescriptionBackgroundAdd = new System.Windows.Forms.ComboBox();
-            this.numericUpDown_WidgetDescriptionBackgroundXAdd = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WidgetDescriptionBackgroundYAdd = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.numericUpDown_WidgetWidthAdd = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WidgetHeightAdd = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WidgetXAdd = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WidgetYAdd = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.tabPageConverting = new System.Windows.Forms.TabPage();
-            this.label489 = new System.Windows.Forms.Label();
-            this.label488 = new System.Windows.Forms.Label();
-            this.label487 = new System.Windows.Forms.Label();
-            this.label486 = new System.Windows.Forms.Label();
-            this.button_Converting = new System.Windows.Forms.Button();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown_ConvertingOutput_Custom = new System.Windows.Forms.NumericUpDown();
-            this.radioButton_ConvertingOutput_Custom = new System.Windows.Forms.RadioButton();
-            this.radioButton_ConvertingOutput_TRexPro = new System.Windows.Forms.RadioButton();
-            this.radioButton_ConvertingOutput_ZeppE = new System.Windows.Forms.RadioButton();
-            this.radioButton_ConvertingOutput_GTR2 = new System.Windows.Forms.RadioButton();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown_ConvertingInput_Custom = new System.Windows.Forms.NumericUpDown();
-            this.radioButton_ConvertingInput_Custom = new System.Windows.Forms.RadioButton();
-            this.radioButton_ConvertingInput_TRexPro = new System.Windows.Forms.RadioButton();
-            this.radioButton_ConvertingInput_ZeppE = new System.Windows.Forms.RadioButton();
-            this.radioButton_ConvertingInput_GTR2 = new System.Windows.Forms.RadioButton();
-            this.tabPage_Settings = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button_WatchSkin_PathGet = new System.Windows.Forms.Button();
-            this.textBox_WatchSkin_Path = new System.Windows.Forms.TextBox();
-            this.checkBox_WatchSkin_Use = new System.Windows.Forms.CheckBox();
-            this.numericUpDown_Gif_Speed = new System.Windows.Forms.NumericUpDown();
-            this.label355 = new System.Windows.Forms.Label();
-            this.checkBox_ShowIn12hourFormat = new System.Windows.Forms.CheckBox();
-            this.checkBox_SaveID = new System.Windows.Forms.CheckBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.checkBox_Shortcuts_Border = new System.Windows.Forms.CheckBox();
-            this.checkBox_Shortcuts_Area = new System.Windows.Forms.CheckBox();
-            this.button_Reset = new System.Windows.Forms.Button();
-            this.checkBox_JsonWarnings = new System.Windows.Forms.CheckBox();
-            this.comboBox_Language = new System.Windows.Forms.ComboBox();
-            this.label356 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Settings_Pack_DoNotning = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_Pack_GoToFile = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_Pack_Dialog = new System.Windows.Forms.RadioButton();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Settings_Open_DoNotning = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_Open_Download = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_Open_Dialog = new System.Windows.Forms.RadioButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Settings_AfterUnpack_DoNothing = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_AfterUnpack_Download = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_AfterUnpack_Dialog = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Settings_Unpack_Replace = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_Unpack_Save = new System.Windows.Forms.RadioButton();
-            this.radioButton_Settings_Unpack_Dialog = new System.Windows.Forms.RadioButton();
-            this.tabPage_About = new System.Windows.Forms.TabPage();
-            this.linkLabel_resunpacker_qzip = new System.Windows.Forms.LinkLabel();
-            this.label_TranslateHelp = new System.Windows.Forms.Label();
-            this.label415 = new System.Windows.Forms.Label();
-            this.label414 = new System.Windows.Forms.Label();
-            this.label412 = new System.Windows.Forms.Label();
-            this.label413 = new System.Windows.Forms.Label();
-            this.linkLabel_py_amazfit_tools = new System.Windows.Forms.LinkLabel();
-            this.label410 = new System.Windows.Forms.Label();
-            this.label409 = new System.Windows.Forms.Label();
-            this.label408 = new System.Windows.Forms.Label();
-            this.label407 = new System.Windows.Forms.Label();
-            this.label_version_help = new System.Windows.Forms.Label();
-            this.label406 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.contextMenuStrip_XY_InAnimationTable = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.вставитьНачальныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьКонечныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.копироватьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьСтрокуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip_XY_InTable = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.вставитьКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьСтрокуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_zip_unpack = new System.Windows.Forms.Button();
-            this.button_pack_zip = new System.Windows.Forms.Button();
-            this.label_version = new System.Windows.Forms.Label();
-            this.colorDialog_StepsProgress = new System.Windows.Forms.ColorDialog();
-            this.colorDialog_Battery = new System.Windows.Forms.ColorDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button_PreviewBig = new System.Windows.Forms.Button();
-            this.checkBox_WebW = new System.Windows.Forms.CheckBox();
-            this.checkBox_WebB = new System.Windows.Forms.CheckBox();
-            this.button_SavePNG = new System.Windows.Forms.Button();
-            this.button_SaveGIF = new System.Windows.Forms.Button();
-            this.radioButton_GTR2 = new System.Windows.Forms.RadioButton();
-            this.label_preview_X = new System.Windows.Forms.Label();
-            this.label_preview_Y = new System.Windows.Forms.Label();
-            this.checkBox_border = new System.Windows.Forms.CheckBox();
-            this.radioButton_GTS2 = new System.Windows.Forms.RadioButton();
-            this.checkBox_crop = new System.Windows.Forms.CheckBox();
-            this.checkBox_Show_Shortcuts = new System.Windows.Forms.CheckBox();
-            this.checkBox_CircleScaleImage = new System.Windows.Forms.CheckBox();
-            this.button_RefreshPreview = new System.Windows.Forms.Button();
-            this.button_CreatePreview = new System.Windows.Forms.Button();
-            this.checkBox_center_marker = new System.Windows.Forms.CheckBox();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
-            this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
-            this.toolTip_Weather = new System.Windows.Forms.ToolTip(this.components);
-            this.radioButton_GTR2e = new System.Windows.Forms.RadioButton();
-            this.radioButton_TRex_pro = new System.Windows.Forms.RadioButton();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.pictureBox_Preview = new System.Windows.Forms.PictureBox();
-            this.checkBox_WidgetsArea = new System.Windows.Forms.CheckBox();
-            this.radioButton_ZeppE = new System.Windows.Forms.RadioButton();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.userControl_Set12 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set11 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set10 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set9 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set8 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set7 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set6 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set5 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set4 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set3 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set2 = new AmazFit_Watchface_2.UserControl_Set();
-            this.userControl_Set1 = new AmazFit_Watchface_2.UserControl_Set();
             this.splitContainer_EditParameters = new System.Windows.Forms.SplitContainer();
             this.tabControl_EditParameters = new System.Windows.Forms.TabControl();
             this.tabPage_Background = new System.Windows.Forms.TabPage();
@@ -376,9 +55,17 @@
             this.panel_AM_PM = new System.Windows.Forms.Panel();
             this.checkBox_12h_Use = new System.Windows.Forms.CheckBox();
             this.numericUpDown_AM_Y = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip_Y = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label573 = new System.Windows.Forms.Label();
             this.label572 = new System.Windows.Forms.Label();
             this.numericUpDown_AM_X = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label574 = new System.Windows.Forms.Label();
             this.label571 = new System.Windows.Forms.Label();
             this.comboBox_PM_image = new System.Windows.Forms.ComboBox();
@@ -949,6 +636,7 @@
             this.userControl_text_Battery = new AmazFit_Watchface_2.UserControl_text();
             this.userControl_segments_Battery = new AmazFit_Watchface_2.UserControl_segments();
             this.userControl_pictures_Battery = new AmazFit_Watchface_2.UserControl_pictures();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabControl_EditParameters_AOD = new System.Windows.Forms.TabControl();
             this.tabPage_Background_AOD = new System.Windows.Forms.TabPage();
             this.label284 = new System.Windows.Forms.Label();
@@ -1462,17 +1150,112 @@
             this.userControl_text_Battery_AOD = new AmazFit_Watchface_2.UserControl_text();
             this.userControl_segments_Battery_AOD = new AmazFit_Watchface_2.UserControl_segments();
             this.userControl_pictures_Battery_AOD = new AmazFit_Watchface_2.UserControl_pictures();
+            this.dataGridView_SNL_Activity = new System.Windows.Forms.DataGridView();
+            this.ActivityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActivityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage_Show = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_set = new System.Windows.Forms.Panel();
+            this.userControl_Set12 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set11 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set10 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set9 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set8 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set7 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set6 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set5 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set4 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set3 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set2 = new AmazFit_Watchface_2.UserControl_Set();
+            this.userControl_Set1 = new AmazFit_Watchface_2.UserControl_Set();
+            this.panel_PreviewStates = new System.Windows.Forms.Panel();
+            this.button_JsonPreview_Random = new System.Windows.Forms.Button();
+            this.button_JsonPreview_Read = new System.Windows.Forms.Button();
+            this.button_JsonPreview_Write = new System.Windows.Forms.Button();
+            this.dataGridView_ImagesList = new System.Windows.Forms.DataGridView();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.button_images = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button_JSON = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage_Edit = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button_RandomPreview = new System.Windows.Forms.Button();
+            this.radioButton_ScreenIdle = new System.Windows.Forms.RadioButton();
+            this.radioButton_ScreenNormal = new System.Windows.Forms.RadioButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button_SaveJson = new System.Windows.Forms.Button();
+            this.button_OpenDir = new System.Windows.Forms.Button();
+            this.tabPage_LayerOrder = new System.Windows.Forms.TabPage();
+            this.groupBox_AODL_Date = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView_AODL_Date = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_AODL_Date_End = new System.Windows.Forms.Button();
+            this.button_AODL_Date_Start = new System.Windows.Forms.Button();
+            this.button_AODL_Date_Up = new System.Windows.Forms.Button();
+            this.button_AODL_Date_Down = new System.Windows.Forms.Button();
+            this.groupBox_AODL_Activity = new System.Windows.Forms.GroupBox();
+            this.dataGridView_AODL_Activity = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_AODL_Activity_End = new System.Windows.Forms.Button();
+            this.button_AODL_Activity_Start = new System.Windows.Forms.Button();
+            this.button_AODL_Activity_Up = new System.Windows.Forms.Button();
+            this.button_AODL_Activity_Down = new System.Windows.Forms.Button();
+            this.groupBox_SNL_Date = new System.Windows.Forms.GroupBox();
+            this.label_SNL_Date = new System.Windows.Forms.Label();
+            this.dataGridView_SNL_Date = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_SNL_Date_End = new System.Windows.Forms.Button();
+            this.button_SNL_Date_Start = new System.Windows.Forms.Button();
+            this.button_SNL_Date_Up = new System.Windows.Forms.Button();
+            this.button_SNL_Date_Down = new System.Windows.Forms.Button();
+            this.groupBox_SNL_Activity = new System.Windows.Forms.GroupBox();
+            this.button_SNL_Activity_End = new System.Windows.Forms.Button();
+            this.button_SNL_Activity_Start = new System.Windows.Forms.Button();
+            this.button_SNL_Activity_Up = new System.Windows.Forms.Button();
+            this.button_SNL_Activity_Down = new System.Windows.Forms.Button();
+            this.tabPage_Widgets = new System.Windows.Forms.TabPage();
+            this.tabControl_Widget = new System.Windows.Forms.TabControl();
+            this.tabPage_WidgetsEdit = new System.Windows.Forms.TabPage();
+            this.checkBox_TimeOnWidgetEdit = new System.Windows.Forms.CheckBox();
+            this.groupBox_WidgetPreview = new System.Windows.Forms.GroupBox();
+            this.radioButton_WidgetPreviewEdit = new System.Windows.Forms.RadioButton();
+            this.radioButton_WidgetPreviewNormal = new System.Windows.Forms.RadioButton();
+            this.groupBox_WidgetElementSettings = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl_DateWidget = new System.Windows.Forms.TabControl();
+            this.tabPage_DayWidget = new System.Windows.Forms.TabPage();
             this.userControl_SystemFont_Group_DayWidget = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
             this.userControl_hand_DayWidget = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_text_date_DayWidget = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage_MonthWidget = new System.Windows.Forms.TabPage();
             this.userControl_SystemFont_Group_MonthWidget = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
             this.userControl_hand_MonthWidget = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_text_date_MonthWidget = new AmazFit_Watchface_2.UserControl_text_date();
             this.userControl_pictures_MonthWidget = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage_YearWidget = new System.Windows.Forms.TabPage();
             this.userControl_SystemFont_Group_YearWidget = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
             this.userControl_text_date_YearWidget = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage_DOWWidget = new System.Windows.Forms.TabPage();
             this.userControl_hand_DOWWidget = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_pictures_DOWWidget = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage_DateLayerWidget = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dataGridView_Widget_Date = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_Widget_Date_End = new System.Windows.Forms.Button();
+            this.button_Widget_Date_Start = new System.Windows.Forms.Button();
+            this.button_Widget_Date_Up = new System.Windows.Forms.Button();
+            this.button_Widget_Date_Down = new System.Windows.Forms.Button();
             this.userControl_iconWidget = new AmazFit_Watchface_2.UserControl_icon();
             this.userControl_SystemFont_GroupSunriseWidget = new AmazFit_Watchface_2.UserControl_SystemFont_GroupSunrise();
             this.userControl_SystemFont_GroupWeatherWidget = new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather();
@@ -1491,17 +1274,100 @@
             this.userControl_segmentsWidget = new AmazFit_Watchface_2.UserControl_segments();
             this.userControl_picturesWidget = new AmazFit_Watchface_2.UserControl_pictures();
             this.userControl_previewWidget = new AmazFit_Watchface_2.UserControl_preview();
+            this.comboBox_WidgetsTopMask = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetsUnderMask = new System.Windows.Forms.ComboBox();
+            this.label01 = new System.Windows.Forms.Label();
+            this.groupBox_WidgetNumber = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetDescriptionLenght = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_WidgetBorderInactiv = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetBorderActiv = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetDescriptionBackground = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_WidgetDescriptionBackgroundX = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetDescriptionBackgroundY = new System.Windows.Forms.NumericUpDown();
+            this.label02 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1084 = new System.Windows.Forms.Label();
+            this.label1085 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetWidth = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetHeight = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetX = new System.Windows.Forms.NumericUpDown();
+            this.button_WidgetDel = new System.Windows.Forms.Button();
+            this.numericUpDown_WidgetY = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_WidgetNumber = new System.Windows.Forms.ComboBox();
+            this.label05 = new System.Windows.Forms.Label();
+            this.label1083 = new System.Windows.Forms.Label();
+            this.label1086 = new System.Windows.Forms.Label();
+            this.groupBox_WidgetElement = new System.Windows.Forms.GroupBox();
+            this.button_WidgetElementDel = new System.Windows.Forms.Button();
+            this.button_WidgetElement_End = new System.Windows.Forms.Button();
+            this.button_WidgetElement_Start = new System.Windows.Forms.Button();
+            this.button_WidgetElement_Up = new System.Windows.Forms.Button();
+            this.button_WidgetElement_Down = new System.Windows.Forms.Button();
+            this.dataGridView_WidgetElement = new System.Windows.Forms.DataGridView();
+            this.WidgetsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WidgetElement = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WidgetElementName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage_WidgetAdd = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.groupBox_WidgetTypeAdd = new System.Windows.Forms.GroupBox();
+            this.radioButton_BatteryWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.label28 = new System.Windows.Forms.Label();
+            this.radioButton_AirPressureWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_WindForceWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_SunriseWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_HumidityWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_UVindexWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_WeatherWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.label27 = new System.Windows.Forms.Label();
+            this.radioButton_FatBurningWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_ActivityGoalWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_StandUpWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_DistanceWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_PAIWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_HeartRateWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_CaloriesWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.label26 = new System.Windows.Forms.Label();
+            this.radioButton_StepsWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_DateWidgetAdd = new System.Windows.Forms.RadioButton();
+            this.groupBox_WdgetAdd = new System.Windows.Forms.GroupBox();
+            this.button_WidgetAdd = new System.Windows.Forms.Button();
+            this.radioButton_WidgetElementAdd = new System.Windows.Forms.RadioButton();
+            this.radioButton_WidgetAdd = new System.Windows.Forms.RadioButton();
+            this.groupBox_WidgetElementAdd = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabControl_DateWidgetAdd = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.userControl_SystemFont_Group_DayWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
             this.userControl_hand_DayWidgetAdd = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_text_date_DayWidgetAdd = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.userControl_SystemFont_Group_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
             this.userControl_hand_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_text_date_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_text_date();
             this.userControl_pictures_MonthWidgetAdd = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.userControl_SystemFont_Group_YearWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_Group();
             this.userControl_text_date_YearWidgetAdd = new AmazFit_Watchface_2.UserControl_text_date();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.userControl_hand_DOWWidgetAdd = new AmazFit_Watchface_2.UserControl_hand();
             this.userControl_pictures_DOWWidgetAdd = new AmazFit_Watchface_2.UserControl_pictures();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView_Widget_DateAdd = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_Widget_Date_EndAdd = new System.Windows.Forms.Button();
+            this.button_Widget_Date_StartAdd = new System.Windows.Forms.Button();
+            this.button_Widget_Date_UpAdd = new System.Windows.Forms.Button();
+            this.button_Widget_Date_DownAdd = new System.Windows.Forms.Button();
             this.userControl_iconWidgetAdd = new AmazFit_Watchface_2.UserControl_icon();
             this.userControl_SystemFont_GroupSunriseWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_GroupSunrise();
             this.userControl_SystemFont_GroupWeatherWidgetAdd = new AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather();
@@ -1520,92 +1386,144 @@
             this.userControl_segmentsWidgetAdd = new AmazFit_Watchface_2.UserControl_segments();
             this.userControl_picturesWidgetAdd = new AmazFit_Watchface_2.UserControl_pictures();
             this.userControl_previewWidgetAdd = new AmazFit_Watchface_2.UserControl_preview();
+            this.groupBox_WidgetNumberAdd = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetDescriptionLenghtAdd = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_WidgetBorderInactivAdd = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetBorderActivAdd = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox_WidgetDescriptionBackgroundAdd = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDown_WidgetWidthAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetHeightAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetXAdd = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WidgetYAdd = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.tabPageConverting = new System.Windows.Forms.TabPage();
+            this.label489 = new System.Windows.Forms.Label();
+            this.label488 = new System.Windows.Forms.Label();
+            this.label487 = new System.Windows.Forms.Label();
+            this.label486 = new System.Windows.Forms.Label();
+            this.button_Converting = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_ConvertingOutput_Custom = new System.Windows.Forms.NumericUpDown();
+            this.radioButton_ConvertingOutput_Custom = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingOutput_TRexPro = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingOutput_ZeppE = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingOutput_GTR2 = new System.Windows.Forms.RadioButton();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_ConvertingInput_Custom = new System.Windows.Forms.NumericUpDown();
+            this.radioButton_ConvertingInput_Custom = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingInput_TRexPro = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingInput_ZeppE = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingInput_GTR2 = new System.Windows.Forms.RadioButton();
+            this.tabPage_Settings = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_WatchSkin_PathGet = new System.Windows.Forms.Button();
+            this.textBox_WatchSkin_Path = new System.Windows.Forms.TextBox();
+            this.checkBox_WatchSkin_Use = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_Gif_Speed = new System.Windows.Forms.NumericUpDown();
+            this.label355 = new System.Windows.Forms.Label();
+            this.checkBox_ShowIn12hourFormat = new System.Windows.Forms.CheckBox();
+            this.checkBox_SaveID = new System.Windows.Forms.CheckBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.checkBox_Shortcuts_Border = new System.Windows.Forms.CheckBox();
+            this.checkBox_Shortcuts_Area = new System.Windows.Forms.CheckBox();
+            this.button_Reset = new System.Windows.Forms.Button();
+            this.checkBox_JsonWarnings = new System.Windows.Forms.CheckBox();
+            this.comboBox_Language = new System.Windows.Forms.ComboBox();
+            this.label356 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_Pack_DoNotning = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Pack_GoToFile = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Pack_Dialog = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_Open_DoNotning = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Open_Download = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Open_Dialog = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_AfterUnpack_DoNothing = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_AfterUnpack_Download = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_AfterUnpack_Dialog = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_Unpack_Replace = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Unpack_Save = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Unpack_Dialog = new System.Windows.Forms.RadioButton();
+            this.tabPage_About = new System.Windows.Forms.TabPage();
+            this.linkLabel_resunpacker_qzip = new System.Windows.Forms.LinkLabel();
+            this.label_TranslateHelp = new System.Windows.Forms.Label();
+            this.label415 = new System.Windows.Forms.Label();
+            this.label414 = new System.Windows.Forms.Label();
+            this.label412 = new System.Windows.Forms.Label();
+            this.label413 = new System.Windows.Forms.Label();
+            this.linkLabel_py_amazfit_tools = new System.Windows.Forms.LinkLabel();
+            this.label410 = new System.Windows.Forms.Label();
+            this.label409 = new System.Windows.Forms.Label();
+            this.label408 = new System.Windows.Forms.Label();
+            this.label407 = new System.Windows.Forms.Label();
+            this.label_version_help = new System.Windows.Forms.Label();
+            this.label406 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip_XY_InAnimationTable = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вставитьНачальныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьКонечныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.копироватьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьСтрокуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip_XY_InTable = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вставитьКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьСтрокуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button_zip_unpack = new System.Windows.Forms.Button();
+            this.button_pack_zip = new System.Windows.Forms.Button();
+            this.label_version = new System.Windows.Forms.Label();
+            this.colorDialog_StepsProgress = new System.Windows.Forms.ColorDialog();
+            this.colorDialog_Battery = new System.Windows.Forms.ColorDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button_PreviewBig = new System.Windows.Forms.Button();
+            this.checkBox_WebW = new System.Windows.Forms.CheckBox();
+            this.checkBox_WebB = new System.Windows.Forms.CheckBox();
+            this.button_SavePNG = new System.Windows.Forms.Button();
+            this.button_SaveGIF = new System.Windows.Forms.Button();
+            this.radioButton_GTR2 = new System.Windows.Forms.RadioButton();
+            this.label_preview_X = new System.Windows.Forms.Label();
+            this.label_preview_Y = new System.Windows.Forms.Label();
+            this.checkBox_border = new System.Windows.Forms.CheckBox();
+            this.radioButton_GTS2 = new System.Windows.Forms.RadioButton();
+            this.checkBox_crop = new System.Windows.Forms.CheckBox();
+            this.checkBox_Show_Shortcuts = new System.Windows.Forms.CheckBox();
+            this.checkBox_CircleScaleImage = new System.Windows.Forms.CheckBox();
+            this.button_RefreshPreview = new System.Windows.Forms.Button();
+            this.button_CreatePreview = new System.Windows.Forms.Button();
+            this.checkBox_center_marker = new System.Windows.Forms.CheckBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
+            this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
+            this.toolTip_Weather = new System.Windows.Forms.ToolTip(this.components);
+            this.radioButton_GTR2e = new System.Windows.Forms.RadioButton();
+            this.radioButton_TRex_pro = new System.Windows.Forms.RadioButton();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pictureBox_Preview = new System.Windows.Forms.PictureBox();
+            this.checkBox_WidgetsArea = new System.Windows.Forms.CheckBox();
+            this.radioButton_ZeppE = new System.Windows.Forms.RadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.contextMenuStrip_Y.SuspendLayout();
-            this.contextMenuStrip_X.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Activity)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage_Show.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel_set.SuspendLayout();
-            this.panel_PreviewStates.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).BeginInit();
-            this.tabPage_Edit.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.tabPage_LayerOrder.SuspendLayout();
-            this.groupBox_AODL_Date.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Date)).BeginInit();
-            this.groupBox_AODL_Activity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Activity)).BeginInit();
-            this.groupBox_SNL_Date.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Date)).BeginInit();
-            this.groupBox_SNL_Activity.SuspendLayout();
-            this.tabPage_Widgets.SuspendLayout();
-            this.tabControl_Widget.SuspendLayout();
-            this.tabPage_WidgetsEdit.SuspendLayout();
-            this.groupBox_WidgetPreview.SuspendLayout();
-            this.groupBox_WidgetElementSettings.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tabControl_DateWidget.SuspendLayout();
-            this.tabPage_DayWidget.SuspendLayout();
-            this.tabPage_MonthWidget.SuspendLayout();
-            this.tabPage_YearWidget.SuspendLayout();
-            this.tabPage_DOWWidget.SuspendLayout();
-            this.tabPage_DateLayerWidget.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_Date)).BeginInit();
-            this.groupBox_WidgetNumber.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenght)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetY)).BeginInit();
-            this.groupBox_WidgetElement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_WidgetElement)).BeginInit();
-            this.tabPage_WidgetAdd.SuspendLayout();
-            this.groupBox_WidgetTypeAdd.SuspendLayout();
-            this.groupBox_WdgetAdd.SuspendLayout();
-            this.groupBox_WidgetElementAdd.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tabControl_DateWidgetAdd.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_DateAdd)).BeginInit();
-            this.groupBox_WidgetNumberAdd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenghtAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundXAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundYAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidthAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeightAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetXAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetYAdd)).BeginInit();
-            this.tabPageConverting.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingOutput_Custom)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).BeginInit();
-            this.tabPage_Settings.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).BeginInit();
-            this.groupBox8.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tabPage_About.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.contextMenuStrip_XY_InAnimationTable.SuspendLayout();
-            this.contextMenuStrip_XY_InTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_EditParameters)).BeginInit();
             this.splitContainer_EditParameters.Panel1.SuspendLayout();
             this.splitContainer_EditParameters.Panel2.SuspendLayout();
@@ -1617,7 +1535,9 @@
             this.tabPage_Digital_time.SuspendLayout();
             this.panel_AM_PM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AM_Y)).BeginInit();
+            this.contextMenuStrip_Y.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AM_X)).BeginInit();
+            this.contextMenuStrip_X.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PM_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PM_Y)).BeginInit();
             this.panel_Second.SuspendLayout();
@@ -1886,6 +1806,86 @@
             this.tabPage_System_AOD.SuspendLayout();
             this.tabControl_System_AOD.SuspendLayout();
             this.tabPage_Battery_AOD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Activity)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage_Show.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel_set.SuspendLayout();
+            this.panel_PreviewStates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).BeginInit();
+            this.tabPage_Edit.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.tabPage_LayerOrder.SuspendLayout();
+            this.groupBox_AODL_Date.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Date)).BeginInit();
+            this.groupBox_AODL_Activity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Activity)).BeginInit();
+            this.groupBox_SNL_Date.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Date)).BeginInit();
+            this.groupBox_SNL_Activity.SuspendLayout();
+            this.tabPage_Widgets.SuspendLayout();
+            this.tabControl_Widget.SuspendLayout();
+            this.tabPage_WidgetsEdit.SuspendLayout();
+            this.groupBox_WidgetPreview.SuspendLayout();
+            this.groupBox_WidgetElementSettings.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabControl_DateWidget.SuspendLayout();
+            this.tabPage_DayWidget.SuspendLayout();
+            this.tabPage_MonthWidget.SuspendLayout();
+            this.tabPage_YearWidget.SuspendLayout();
+            this.tabPage_DOWWidget.SuspendLayout();
+            this.tabPage_DateLayerWidget.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_Date)).BeginInit();
+            this.groupBox_WidgetNumber.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenght)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetY)).BeginInit();
+            this.groupBox_WidgetElement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_WidgetElement)).BeginInit();
+            this.tabPage_WidgetAdd.SuspendLayout();
+            this.groupBox_WidgetTypeAdd.SuspendLayout();
+            this.groupBox_WdgetAdd.SuspendLayout();
+            this.groupBox_WidgetElementAdd.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabControl_DateWidgetAdd.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_DateAdd)).BeginInit();
+            this.groupBox_WidgetNumberAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenghtAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundXAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundYAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidthAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeightAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetXAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetYAdd)).BeginInit();
+            this.tabPageConverting.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingOutput_Custom)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).BeginInit();
+            this.tabPage_Settings.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPage_About.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.contextMenuStrip_XY_InAnimationTable.SuspendLayout();
+            this.contextMenuStrip_XY_InTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -1912,2901 +1912,6 @@
             // 
             resources.ApplyResources(this.treeView_JsonTree, "treeView_JsonTree");
             this.treeView_JsonTree.Name = "treeView_JsonTree";
-            // 
-            // contextMenuStrip_Y
-            // 
-            this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.копироватьToolStripMenuItem1,
-            this.вставитьToolStripMenuItem1});
-            this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
-            this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
-            // 
-            // toolStripMenuItem1
-            // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
-            // 
-            // копироватьToolStripMenuItem1
-            // 
-            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
-            this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
-            this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
-            // 
-            // вставитьToolStripMenuItem1
-            // 
-            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
-            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
-            this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
-            // 
-            // contextMenuStrip_X
-            // 
-            this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вставитьКоординатуХToolStripMenuItem,
-            this.копироватьToolStripMenuItem,
-            this.вставитьToolStripMenuItem});
-            this.contextMenuStrip_X.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
-            this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
-            // 
-            // вставитьКоординатуХToolStripMenuItem
-            // 
-            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
-            this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
-            this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
-            // 
-            // копироватьToolStripMenuItem
-            // 
-            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
-            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
-            // 
-            // вставитьToolStripMenuItem
-            // 
-            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
-            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
-            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Background-Icon.png");
-            this.imageList1.Images.SetKeyName(1, "Sidebar-Search-Icon.png");
-            this.imageList1.Images.SetKeyName(2, "Calendar.ico");
-            this.imageList1.Images.SetKeyName(3, "Sports-Walking-Icon.png");
-            this.imageList1.Images.SetKeyName(4, "Weather-Partly-Cloudy-Rain-Icon.png");
-            this.imageList1.Images.SetKeyName(5, "Tools-Icon.png");
-            // 
-            // dataGridView_SNL_Activity
-            // 
-            this.dataGridView_SNL_Activity.AllowUserToAddRows = false;
-            this.dataGridView_SNL_Activity.AllowUserToDeleteRows = false;
-            this.dataGridView_SNL_Activity.AllowUserToResizeRows = false;
-            this.dataGridView_SNL_Activity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_SNL_Activity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ActivityID,
-            this.ActivityName});
-            resources.ApplyResources(this.dataGridView_SNL_Activity, "dataGridView_SNL_Activity");
-            this.dataGridView_SNL_Activity.MultiSelect = false;
-            this.dataGridView_SNL_Activity.Name = "dataGridView_SNL_Activity";
-            this.dataGridView_SNL_Activity.ReadOnly = true;
-            this.dataGridView_SNL_Activity.RowHeadersVisible = false;
-            this.dataGridView_SNL_Activity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_SNL_Activity.SelectionChanged += new System.EventHandler(this.dataGridView_SNL_Activity_SelectionChanged);
-            this.dataGridView_SNL_Activity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_SNL_Activity_KeyDown);
-            // 
-            // ActivityID
-            // 
-            this.ActivityID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ActivityID.Frozen = true;
-            resources.ApplyResources(this.ActivityID, "ActivityID");
-            this.ActivityID.Name = "ActivityID";
-            this.ActivityID.ReadOnly = true;
-            this.ActivityID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ActivityID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ActivityName
-            // 
-            this.ActivityName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.ActivityName, "ActivityName");
-            this.ActivityName.Name = "ActivityName";
-            this.ActivityName.ReadOnly = true;
-            this.ActivityName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ActivityName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage_Show);
-            this.tabControl1.Controls.Add(this.tabPage_Edit);
-            this.tabControl1.Controls.Add(this.tabPage_LayerOrder);
-            this.tabControl1.Controls.Add(this.tabPage_Widgets);
-            this.tabControl1.Controls.Add(this.tabPageConverting);
-            this.tabControl1.Controls.Add(this.tabPage_Settings);
-            this.tabControl1.Controls.Add(this.tabPage_About);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
-            // 
-            // tabPage_Show
-            // 
-            this.tabPage_Show.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Show.Controls.Add(this.panel3);
-            this.tabPage_Show.Controls.Add(this.dataGridView_ImagesList);
-            this.tabPage_Show.Controls.Add(this.button_images);
-            this.tabPage_Show.Controls.Add(this.label5);
-            this.tabPage_Show.Controls.Add(this.button_JSON);
-            this.tabPage_Show.Controls.Add(this.label4);
-            resources.ApplyResources(this.tabPage_Show, "tabPage_Show");
-            this.tabPage_Show.Name = "tabPage_Show";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel_set);
-            this.panel3.Controls.Add(this.panel_PreviewStates);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // panel_set
-            // 
-            this.panel_set.Controls.Add(this.userControl_Set12);
-            this.panel_set.Controls.Add(this.userControl_Set11);
-            this.panel_set.Controls.Add(this.userControl_Set10);
-            this.panel_set.Controls.Add(this.userControl_Set9);
-            this.panel_set.Controls.Add(this.userControl_Set8);
-            this.panel_set.Controls.Add(this.userControl_Set7);
-            this.panel_set.Controls.Add(this.userControl_Set6);
-            this.panel_set.Controls.Add(this.userControl_Set5);
-            this.panel_set.Controls.Add(this.userControl_Set4);
-            this.panel_set.Controls.Add(this.userControl_Set3);
-            this.panel_set.Controls.Add(this.userControl_Set2);
-            this.panel_set.Controls.Add(this.userControl_Set1);
-            resources.ApplyResources(this.panel_set, "panel_set");
-            this.panel_set.Name = "panel_set";
-            // 
-            // panel_PreviewStates
-            // 
-            this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Random);
-            this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Read);
-            this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Write);
-            resources.ApplyResources(this.panel_PreviewStates, "panel_PreviewStates");
-            this.panel_PreviewStates.Name = "panel_PreviewStates";
-            // 
-            // button_JsonPreview_Random
-            // 
-            resources.ApplyResources(this.button_JsonPreview_Random, "button_JsonPreview_Random");
-            this.button_JsonPreview_Random.Name = "button_JsonPreview_Random";
-            this.button_JsonPreview_Random.UseVisualStyleBackColor = true;
-            this.button_JsonPreview_Random.Click += new System.EventHandler(this.button_JsonPreview_Random_Click);
-            // 
-            // button_JsonPreview_Read
-            // 
-            resources.ApplyResources(this.button_JsonPreview_Read, "button_JsonPreview_Read");
-            this.button_JsonPreview_Read.Name = "button_JsonPreview_Read";
-            this.button_JsonPreview_Read.UseVisualStyleBackColor = true;
-            this.button_JsonPreview_Read.Click += new System.EventHandler(this.button_JsonPreview_Read_Click);
-            // 
-            // button_JsonPreview_Write
-            // 
-            resources.ApplyResources(this.button_JsonPreview_Write, "button_JsonPreview_Write");
-            this.button_JsonPreview_Write.Name = "button_JsonPreview_Write";
-            this.button_JsonPreview_Write.UseVisualStyleBackColor = true;
-            this.button_JsonPreview_Write.Click += new System.EventHandler(this.button_JsonPreview_Write_Click);
-            // 
-            // dataGridView_ImagesList
-            // 
-            this.dataGridView_ImagesList.AllowUserToAddRows = false;
-            this.dataGridView_ImagesList.AllowUserToDeleteRows = false;
-            this.dataGridView_ImagesList.AllowUserToResizeRows = false;
-            this.dataGridView_ImagesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ImagesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Number,
-            this.NameFile,
-            this.ColumnImage,
-            this.Column1});
-            resources.ApplyResources(this.dataGridView_ImagesList, "dataGridView_ImagesList");
-            this.dataGridView_ImagesList.Name = "dataGridView_ImagesList";
-            this.dataGridView_ImagesList.RowHeadersVisible = false;
-            // 
-            // Number
-            // 
-            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle25;
-            resources.ApplyResources(this.Number, "Number");
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
-            // 
-            // NameFile
-            // 
-            this.NameFile.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.NameFile, "NameFile");
-            this.NameFile.Name = "NameFile";
-            this.NameFile.ReadOnly = true;
-            // 
-            // ColumnImage
-            // 
-            this.ColumnImage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            resources.ApplyResources(this.ColumnImage, "ColumnImage");
-            this.ColumnImage.Name = "ColumnImage";
-            this.ColumnImage.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle26;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // button_images
-            // 
-            resources.ApplyResources(this.button_images, "button_images");
-            this.button_images.Name = "button_images";
-            this.button_images.UseVisualStyleBackColor = true;
-            this.button_images.Click += new System.EventHandler(this.button_images_Click);
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // button_JSON
-            // 
-            resources.ApplyResources(this.button_JSON, "button_JSON");
-            this.button_JSON.Name = "button_JSON";
-            this.button_JSON.UseVisualStyleBackColor = true;
-            this.button_JSON.Click += new System.EventHandler(this.button_JSON_Click);
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // tabPage_Edit
-            // 
-            this.tabPage_Edit.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Edit.Controls.Add(this.splitContainer_EditParameters);
-            this.tabPage_Edit.Controls.Add(this.panel6);
-            this.tabPage_Edit.Controls.Add(this.panel5);
-            resources.ApplyResources(this.tabPage_Edit, "tabPage_Edit");
-            this.tabPage_Edit.Name = "tabPage_Edit";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.button_RandomPreview);
-            this.panel6.Controls.Add(this.radioButton_ScreenIdle);
-            this.panel6.Controls.Add(this.radioButton_ScreenNormal);
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // button_RandomPreview
-            // 
-            resources.ApplyResources(this.button_RandomPreview, "button_RandomPreview");
-            this.button_RandomPreview.Name = "button_RandomPreview";
-            this.button_RandomPreview.UseVisualStyleBackColor = true;
-            this.button_RandomPreview.Click += new System.EventHandler(this.button_RandomPreview_Click);
-            // 
-            // radioButton_ScreenIdle
-            // 
-            resources.ApplyResources(this.radioButton_ScreenIdle, "radioButton_ScreenIdle");
-            this.radioButton_ScreenIdle.Name = "radioButton_ScreenIdle";
-            this.radioButton_ScreenIdle.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_ScreenNormal
-            // 
-            resources.ApplyResources(this.radioButton_ScreenNormal, "radioButton_ScreenNormal");
-            this.radioButton_ScreenNormal.Checked = true;
-            this.radioButton_ScreenNormal.Name = "radioButton_ScreenNormal";
-            this.radioButton_ScreenNormal.TabStop = true;
-            this.radioButton_ScreenNormal.UseVisualStyleBackColor = true;
-            this.radioButton_ScreenNormal.CheckedChanged += new System.EventHandler(this.radioButton_ScreenNormal_CheckedChanged);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.splitContainer1);
-            this.panel5.Controls.Add(this.button_SaveJson);
-            this.panel5.Controls.Add(this.button_OpenDir);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            // 
-            // button_SaveJson
-            // 
-            resources.ApplyResources(this.button_SaveJson, "button_SaveJson");
-            this.button_SaveJson.Name = "button_SaveJson";
-            this.button_SaveJson.UseVisualStyleBackColor = true;
-            this.button_SaveJson.Click += new System.EventHandler(this.button_SaveJson_Click);
-            // 
-            // button_OpenDir
-            // 
-            resources.ApplyResources(this.button_OpenDir, "button_OpenDir");
-            this.button_OpenDir.Name = "button_OpenDir";
-            this.button_OpenDir.UseVisualStyleBackColor = true;
-            this.button_OpenDir.Click += new System.EventHandler(this.button_OpenDir_Click);
-            // 
-            // tabPage_LayerOrder
-            // 
-            this.tabPage_LayerOrder.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_LayerOrder.Controls.Add(this.groupBox_AODL_Date);
-            this.tabPage_LayerOrder.Controls.Add(this.groupBox_AODL_Activity);
-            this.tabPage_LayerOrder.Controls.Add(this.groupBox_SNL_Date);
-            this.tabPage_LayerOrder.Controls.Add(this.groupBox_SNL_Activity);
-            resources.ApplyResources(this.tabPage_LayerOrder, "tabPage_LayerOrder");
-            this.tabPage_LayerOrder.Name = "tabPage_LayerOrder";
-            // 
-            // groupBox_AODL_Date
-            // 
-            this.groupBox_AODL_Date.Controls.Add(this.label1);
-            this.groupBox_AODL_Date.Controls.Add(this.dataGridView_AODL_Date);
-            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_End);
-            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_Start);
-            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_Up);
-            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_Down);
-            resources.ApplyResources(this.groupBox_AODL_Date, "groupBox_AODL_Date");
-            this.groupBox_AODL_Date.Name = "groupBox_AODL_Date";
-            this.groupBox_AODL_Date.TabStop = false;
-            this.groupBox_AODL_Date.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // dataGridView_AODL_Date
-            // 
-            this.dataGridView_AODL_Date.AllowUserToAddRows = false;
-            this.dataGridView_AODL_Date.AllowUserToDeleteRows = false;
-            this.dataGridView_AODL_Date.AllowUserToResizeRows = false;
-            this.dataGridView_AODL_Date.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_AODL_Date.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            resources.ApplyResources(this.dataGridView_AODL_Date, "dataGridView_AODL_Date");
-            this.dataGridView_AODL_Date.MultiSelect = false;
-            this.dataGridView_AODL_Date.Name = "dataGridView_AODL_Date";
-            this.dataGridView_AODL_Date.ReadOnly = true;
-            this.dataGridView_AODL_Date.RowHeadersVisible = false;
-            this.dataGridView_AODL_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_AODL_Date.SelectionChanged += new System.EventHandler(this.dataGridView_AODL_Date_SelectionChanged);
-            this.dataGridView_AODL_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_AODL_Date_KeyDown);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn5.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // button_AODL_Date_End
-            // 
-            resources.ApplyResources(this.button_AODL_Date_End, "button_AODL_Date_End");
-            this.button_AODL_Date_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
-            this.button_AODL_Date_End.Name = "button_AODL_Date_End";
-            this.button_AODL_Date_End.UseVisualStyleBackColor = true;
-            this.button_AODL_Date_End.Click += new System.EventHandler(this.button_AODL_Date_End_Click);
-            // 
-            // button_AODL_Date_Start
-            // 
-            resources.ApplyResources(this.button_AODL_Date_Start, "button_AODL_Date_Start");
-            this.button_AODL_Date_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
-            this.button_AODL_Date_Start.Name = "button_AODL_Date_Start";
-            this.button_AODL_Date_Start.UseVisualStyleBackColor = true;
-            this.button_AODL_Date_Start.Click += new System.EventHandler(this.button_AODL_Date_Start_Click);
-            // 
-            // button_AODL_Date_Up
-            // 
-            resources.ApplyResources(this.button_AODL_Date_Up, "button_AODL_Date_Up");
-            this.button_AODL_Date_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
-            this.button_AODL_Date_Up.Name = "button_AODL_Date_Up";
-            this.button_AODL_Date_Up.UseVisualStyleBackColor = true;
-            this.button_AODL_Date_Up.Click += new System.EventHandler(this.button_AODL_Date_Up_Click);
-            // 
-            // button_AODL_Date_Down
-            // 
-            resources.ApplyResources(this.button_AODL_Date_Down, "button_AODL_Date_Down");
-            this.button_AODL_Date_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
-            this.button_AODL_Date_Down.Name = "button_AODL_Date_Down";
-            this.button_AODL_Date_Down.UseVisualStyleBackColor = true;
-            this.button_AODL_Date_Down.Click += new System.EventHandler(this.button_AODL_Date_Down_Click);
-            // 
-            // groupBox_AODL_Activity
-            // 
-            this.groupBox_AODL_Activity.Controls.Add(this.dataGridView_AODL_Activity);
-            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_End);
-            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_Start);
-            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_Up);
-            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_Down);
-            resources.ApplyResources(this.groupBox_AODL_Activity, "groupBox_AODL_Activity");
-            this.groupBox_AODL_Activity.Name = "groupBox_AODL_Activity";
-            this.groupBox_AODL_Activity.TabStop = false;
-            this.groupBox_AODL_Activity.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // dataGridView_AODL_Activity
-            // 
-            this.dataGridView_AODL_Activity.AllowUserToAddRows = false;
-            this.dataGridView_AODL_Activity.AllowUserToDeleteRows = false;
-            this.dataGridView_AODL_Activity.AllowUserToResizeRows = false;
-            this.dataGridView_AODL_Activity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_AODL_Activity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            resources.ApplyResources(this.dataGridView_AODL_Activity, "dataGridView_AODL_Activity");
-            this.dataGridView_AODL_Activity.MultiSelect = false;
-            this.dataGridView_AODL_Activity.Name = "dataGridView_AODL_Activity";
-            this.dataGridView_AODL_Activity.ReadOnly = true;
-            this.dataGridView_AODL_Activity.RowHeadersVisible = false;
-            this.dataGridView_AODL_Activity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_AODL_Activity.SelectionChanged += new System.EventHandler(this.dataGridView_AODL_Activity_SelectionChanged);
-            this.dataGridView_AODL_Activity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_AODL_Activity_KeyDown);
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // button_AODL_Activity_End
-            // 
-            resources.ApplyResources(this.button_AODL_Activity_End, "button_AODL_Activity_End");
-            this.button_AODL_Activity_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
-            this.button_AODL_Activity_End.Name = "button_AODL_Activity_End";
-            this.button_AODL_Activity_End.UseVisualStyleBackColor = true;
-            this.button_AODL_Activity_End.Click += new System.EventHandler(this.button_AODL_Activity_End_Click);
-            // 
-            // button_AODL_Activity_Start
-            // 
-            resources.ApplyResources(this.button_AODL_Activity_Start, "button_AODL_Activity_Start");
-            this.button_AODL_Activity_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
-            this.button_AODL_Activity_Start.Name = "button_AODL_Activity_Start";
-            this.button_AODL_Activity_Start.UseVisualStyleBackColor = true;
-            this.button_AODL_Activity_Start.Click += new System.EventHandler(this.button_AODL_Activity_Start_Click);
-            // 
-            // button_AODL_Activity_Up
-            // 
-            resources.ApplyResources(this.button_AODL_Activity_Up, "button_AODL_Activity_Up");
-            this.button_AODL_Activity_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
-            this.button_AODL_Activity_Up.Name = "button_AODL_Activity_Up";
-            this.button_AODL_Activity_Up.UseVisualStyleBackColor = true;
-            this.button_AODL_Activity_Up.Click += new System.EventHandler(this.button_AODL_Activity_Up_Click);
-            // 
-            // button_AODL_Activity_Down
-            // 
-            resources.ApplyResources(this.button_AODL_Activity_Down, "button_AODL_Activity_Down");
-            this.button_AODL_Activity_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
-            this.button_AODL_Activity_Down.Name = "button_AODL_Activity_Down";
-            this.button_AODL_Activity_Down.UseVisualStyleBackColor = true;
-            this.button_AODL_Activity_Down.Click += new System.EventHandler(this.button_AODL_Activity_Down_Click);
-            // 
-            // groupBox_SNL_Date
-            // 
-            this.groupBox_SNL_Date.Controls.Add(this.label_SNL_Date);
-            this.groupBox_SNL_Date.Controls.Add(this.dataGridView_SNL_Date);
-            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_End);
-            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_Start);
-            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_Up);
-            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_Down);
-            resources.ApplyResources(this.groupBox_SNL_Date, "groupBox_SNL_Date");
-            this.groupBox_SNL_Date.Name = "groupBox_SNL_Date";
-            this.groupBox_SNL_Date.TabStop = false;
-            this.groupBox_SNL_Date.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // label_SNL_Date
-            // 
-            resources.ApplyResources(this.label_SNL_Date, "label_SNL_Date");
-            this.label_SNL_Date.Name = "label_SNL_Date";
-            // 
-            // dataGridView_SNL_Date
-            // 
-            this.dataGridView_SNL_Date.AllowUserToAddRows = false;
-            this.dataGridView_SNL_Date.AllowUserToDeleteRows = false;
-            this.dataGridView_SNL_Date.AllowUserToResizeRows = false;
-            this.dataGridView_SNL_Date.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_SNL_Date.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            resources.ApplyResources(this.dataGridView_SNL_Date, "dataGridView_SNL_Date");
-            this.dataGridView_SNL_Date.MultiSelect = false;
-            this.dataGridView_SNL_Date.Name = "dataGridView_SNL_Date";
-            this.dataGridView_SNL_Date.ReadOnly = true;
-            this.dataGridView_SNL_Date.RowHeadersVisible = false;
-            this.dataGridView_SNL_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_SNL_Date.SelectionChanged += new System.EventHandler(this.dataGridView_SNL_Date_SelectionChanged);
-            this.dataGridView_SNL_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_SNL_Date_KeyDown);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // button_SNL_Date_End
-            // 
-            resources.ApplyResources(this.button_SNL_Date_End, "button_SNL_Date_End");
-            this.button_SNL_Date_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
-            this.button_SNL_Date_End.Name = "button_SNL_Date_End";
-            this.button_SNL_Date_End.UseVisualStyleBackColor = true;
-            this.button_SNL_Date_End.Click += new System.EventHandler(this.button_SNL_Date_End_Click);
-            // 
-            // button_SNL_Date_Start
-            // 
-            resources.ApplyResources(this.button_SNL_Date_Start, "button_SNL_Date_Start");
-            this.button_SNL_Date_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
-            this.button_SNL_Date_Start.Name = "button_SNL_Date_Start";
-            this.button_SNL_Date_Start.UseVisualStyleBackColor = true;
-            this.button_SNL_Date_Start.Click += new System.EventHandler(this.button_SNL_Date_Start_Click);
-            // 
-            // button_SNL_Date_Up
-            // 
-            resources.ApplyResources(this.button_SNL_Date_Up, "button_SNL_Date_Up");
-            this.button_SNL_Date_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
-            this.button_SNL_Date_Up.Name = "button_SNL_Date_Up";
-            this.button_SNL_Date_Up.UseVisualStyleBackColor = true;
-            this.button_SNL_Date_Up.Click += new System.EventHandler(this.button_SNL_Date_Up_Click);
-            // 
-            // button_SNL_Date_Down
-            // 
-            resources.ApplyResources(this.button_SNL_Date_Down, "button_SNL_Date_Down");
-            this.button_SNL_Date_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
-            this.button_SNL_Date_Down.Name = "button_SNL_Date_Down";
-            this.button_SNL_Date_Down.UseVisualStyleBackColor = true;
-            this.button_SNL_Date_Down.Click += new System.EventHandler(this.button_SNL_Date_Down_Click);
-            // 
-            // groupBox_SNL_Activity
-            // 
-            this.groupBox_SNL_Activity.Controls.Add(this.dataGridView_SNL_Activity);
-            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_End);
-            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_Start);
-            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_Up);
-            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_Down);
-            resources.ApplyResources(this.groupBox_SNL_Activity, "groupBox_SNL_Activity");
-            this.groupBox_SNL_Activity.Name = "groupBox_SNL_Activity";
-            this.groupBox_SNL_Activity.TabStop = false;
-            this.groupBox_SNL_Activity.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // button_SNL_Activity_End
-            // 
-            resources.ApplyResources(this.button_SNL_Activity_End, "button_SNL_Activity_End");
-            this.button_SNL_Activity_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
-            this.button_SNL_Activity_End.Name = "button_SNL_Activity_End";
-            this.button_SNL_Activity_End.UseVisualStyleBackColor = true;
-            this.button_SNL_Activity_End.Click += new System.EventHandler(this.button_SNL_Activity_End_Click);
-            // 
-            // button_SNL_Activity_Start
-            // 
-            resources.ApplyResources(this.button_SNL_Activity_Start, "button_SNL_Activity_Start");
-            this.button_SNL_Activity_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
-            this.button_SNL_Activity_Start.Name = "button_SNL_Activity_Start";
-            this.button_SNL_Activity_Start.UseVisualStyleBackColor = true;
-            this.button_SNL_Activity_Start.Click += new System.EventHandler(this.button_SNL_Activity_Start_Click);
-            // 
-            // button_SNL_Activity_Up
-            // 
-            resources.ApplyResources(this.button_SNL_Activity_Up, "button_SNL_Activity_Up");
-            this.button_SNL_Activity_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
-            this.button_SNL_Activity_Up.Name = "button_SNL_Activity_Up";
-            this.button_SNL_Activity_Up.UseVisualStyleBackColor = true;
-            this.button_SNL_Activity_Up.Click += new System.EventHandler(this.button_SNL_Activity_Up_Click);
-            // 
-            // button_SNL_Activity_Down
-            // 
-            resources.ApplyResources(this.button_SNL_Activity_Down, "button_SNL_Activity_Down");
-            this.button_SNL_Activity_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
-            this.button_SNL_Activity_Down.Name = "button_SNL_Activity_Down";
-            this.button_SNL_Activity_Down.UseVisualStyleBackColor = true;
-            this.button_SNL_Activity_Down.Click += new System.EventHandler(this.button_SNL_Activity_Down_Click);
-            // 
-            // tabPage_Widgets
-            // 
-            this.tabPage_Widgets.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Widgets.Controls.Add(this.tabControl_Widget);
-            resources.ApplyResources(this.tabPage_Widgets, "tabPage_Widgets");
-            this.tabPage_Widgets.Name = "tabPage_Widgets";
-            // 
-            // tabControl_Widget
-            // 
-            resources.ApplyResources(this.tabControl_Widget, "tabControl_Widget");
-            this.tabControl_Widget.Controls.Add(this.tabPage_WidgetsEdit);
-            this.tabControl_Widget.Controls.Add(this.tabPage_WidgetAdd);
-            this.tabControl_Widget.HotTrack = true;
-            this.tabControl_Widget.ImageList = this.imageList2;
-            this.tabControl_Widget.Multiline = true;
-            this.tabControl_Widget.Name = "tabControl_Widget";
-            this.tabControl_Widget.SelectedIndex = 0;
-            this.tabControl_Widget.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl_Widget.TabStop = false;
-            this.tabControl_Widget.SelectedIndexChanged += new System.EventHandler(this.tabControl_Widget_SelectedIndexChanged);
-            this.tabControl_Widget.VisibleChanged += new System.EventHandler(this.tabControl_Widget_VisibleChanged);
-            // 
-            // tabPage_WidgetsEdit
-            // 
-            this.tabPage_WidgetsEdit.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_WidgetsEdit.Controls.Add(this.checkBox_TimeOnWidgetEdit);
-            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetPreview);
-            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetElementSettings);
-            this.tabPage_WidgetsEdit.Controls.Add(this.comboBox_WidgetsTopMask);
-            this.tabPage_WidgetsEdit.Controls.Add(this.label7);
-            this.tabPage_WidgetsEdit.Controls.Add(this.comboBox_WidgetsUnderMask);
-            this.tabPage_WidgetsEdit.Controls.Add(this.label01);
-            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetNumber);
-            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetElement);
-            resources.ApplyResources(this.tabPage_WidgetsEdit, "tabPage_WidgetsEdit");
-            this.tabPage_WidgetsEdit.Name = "tabPage_WidgetsEdit";
-            // 
-            // checkBox_TimeOnWidgetEdit
-            // 
-            resources.ApplyResources(this.checkBox_TimeOnWidgetEdit, "checkBox_TimeOnWidgetEdit");
-            this.checkBox_TimeOnWidgetEdit.Name = "checkBox_TimeOnWidgetEdit";
-            this.checkBox_TimeOnWidgetEdit.UseVisualStyleBackColor = true;
-            this.checkBox_TimeOnWidgetEdit.CheckedChanged += new System.EventHandler(this.checkBox_TimeOnWidgetEdit_CheckedChanged);
-            // 
-            // groupBox_WidgetPreview
-            // 
-            this.groupBox_WidgetPreview.Controls.Add(this.radioButton_WidgetPreviewEdit);
-            this.groupBox_WidgetPreview.Controls.Add(this.radioButton_WidgetPreviewNormal);
-            resources.ApplyResources(this.groupBox_WidgetPreview, "groupBox_WidgetPreview");
-            this.groupBox_WidgetPreview.Name = "groupBox_WidgetPreview";
-            this.groupBox_WidgetPreview.TabStop = false;
-            this.groupBox_WidgetPreview.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // radioButton_WidgetPreviewEdit
-            // 
-            resources.ApplyResources(this.radioButton_WidgetPreviewEdit, "radioButton_WidgetPreviewEdit");
-            this.radioButton_WidgetPreviewEdit.Name = "radioButton_WidgetPreviewEdit";
-            this.radioButton_WidgetPreviewEdit.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_WidgetPreviewNormal
-            // 
-            this.radioButton_WidgetPreviewNormal.Checked = true;
-            resources.ApplyResources(this.radioButton_WidgetPreviewNormal, "radioButton_WidgetPreviewNormal");
-            this.radioButton_WidgetPreviewNormal.Name = "radioButton_WidgetPreviewNormal";
-            this.radioButton_WidgetPreviewNormal.TabStop = true;
-            this.radioButton_WidgetPreviewNormal.UseVisualStyleBackColor = true;
-            this.radioButton_WidgetPreviewNormal.CheckedChanged += new System.EventHandler(this.radioButton_WidgetPreviewNormal_CheckedChanged);
-            // 
-            // groupBox_WidgetElementSettings
-            // 
-            this.groupBox_WidgetElementSettings.Controls.Add(this.panel1);
-            resources.ApplyResources(this.groupBox_WidgetElementSettings, "groupBox_WidgetElementSettings");
-            this.groupBox_WidgetElementSettings.Name = "groupBox_WidgetElementSettings";
-            this.groupBox_WidgetElementSettings.TabStop = false;
-            this.groupBox_WidgetElementSettings.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // panel1
-            // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.tabControl_DateWidget);
-            this.panel1.Controls.Add(this.userControl_iconWidget);
-            this.panel1.Controls.Add(this.userControl_SystemFont_GroupSunriseWidget);
-            this.panel1.Controls.Add(this.userControl_SystemFont_GroupWeatherWidget);
-            this.panel1.Controls.Add(this.userControl_SystemFont_GroupWidget);
-            this.panel1.Controls.Add(this.userControl_scaleLinearWidget);
-            this.panel1.Controls.Add(this.userControl_scaleCircleWidget);
-            this.panel1.Controls.Add(this.userControl_handWidget);
-            this.panel1.Controls.Add(this.userControl_text_goalWidgetSunset);
-            this.panel1.Controls.Add(this.userControl_text_goalWidgetSunrise);
-            this.panel1.Controls.Add(this.userControl_text_weatherWidgetMax);
-            this.panel1.Controls.Add(this.userControl_text_weatherWidgetMin);
-            this.panel1.Controls.Add(this.userControl_text_weatherWidgetCur);
-            this.panel1.Controls.Add(this.userControl_text_goalWidget);
-            this.panel1.Controls.Add(this.userControl_textWidget);
-            this.panel1.Controls.Add(this.userControl_pictures_weatherWidget);
-            this.panel1.Controls.Add(this.userControl_segmentsWidget);
-            this.panel1.Controls.Add(this.userControl_picturesWidget);
-            this.panel1.Controls.Add(this.userControl_previewWidget);
-            this.panel1.Name = "panel1";
-            // 
-            // tabControl_DateWidget
-            // 
-            this.tabControl_DateWidget.Controls.Add(this.tabPage_DayWidget);
-            this.tabControl_DateWidget.Controls.Add(this.tabPage_MonthWidget);
-            this.tabControl_DateWidget.Controls.Add(this.tabPage_YearWidget);
-            this.tabControl_DateWidget.Controls.Add(this.tabPage_DOWWidget);
-            this.tabControl_DateWidget.Controls.Add(this.tabPage_DateLayerWidget);
-            resources.ApplyResources(this.tabControl_DateWidget, "tabControl_DateWidget");
-            this.tabControl_DateWidget.Name = "tabControl_DateWidget";
-            this.tabControl_DateWidget.SelectedIndex = 0;
-            // 
-            // tabPage_DayWidget
-            // 
-            resources.ApplyResources(this.tabPage_DayWidget, "tabPage_DayWidget");
-            this.tabPage_DayWidget.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_DayWidget.Controls.Add(this.userControl_SystemFont_Group_DayWidget);
-            this.tabPage_DayWidget.Controls.Add(this.userControl_hand_DayWidget);
-            this.tabPage_DayWidget.Controls.Add(this.userControl_text_date_DayWidget);
-            this.tabPage_DayWidget.Name = "tabPage_DayWidget";
-            // 
-            // tabPage_MonthWidget
-            // 
-            resources.ApplyResources(this.tabPage_MonthWidget, "tabPage_MonthWidget");
-            this.tabPage_MonthWidget.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_MonthWidget.Controls.Add(this.userControl_SystemFont_Group_MonthWidget);
-            this.tabPage_MonthWidget.Controls.Add(this.userControl_hand_MonthWidget);
-            this.tabPage_MonthWidget.Controls.Add(this.userControl_text_date_MonthWidget);
-            this.tabPage_MonthWidget.Controls.Add(this.userControl_pictures_MonthWidget);
-            this.tabPage_MonthWidget.Name = "tabPage_MonthWidget";
-            // 
-            // tabPage_YearWidget
-            // 
-            resources.ApplyResources(this.tabPage_YearWidget, "tabPage_YearWidget");
-            this.tabPage_YearWidget.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_YearWidget.Controls.Add(this.userControl_SystemFont_Group_YearWidget);
-            this.tabPage_YearWidget.Controls.Add(this.userControl_text_date_YearWidget);
-            this.tabPage_YearWidget.Name = "tabPage_YearWidget";
-            // 
-            // tabPage_DOWWidget
-            // 
-            resources.ApplyResources(this.tabPage_DOWWidget, "tabPage_DOWWidget");
-            this.tabPage_DOWWidget.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_DOWWidget.Controls.Add(this.userControl_hand_DOWWidget);
-            this.tabPage_DOWWidget.Controls.Add(this.userControl_pictures_DOWWidget);
-            this.tabPage_DOWWidget.Name = "tabPage_DOWWidget";
-            // 
-            // tabPage_DateLayerWidget
-            // 
-            this.tabPage_DateLayerWidget.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_DateLayerWidget.Controls.Add(this.label12);
-            this.tabPage_DateLayerWidget.Controls.Add(this.dataGridView_Widget_Date);
-            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_End);
-            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Start);
-            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Up);
-            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Down);
-            resources.ApplyResources(this.tabPage_DateLayerWidget, "tabPage_DateLayerWidget");
-            this.tabPage_DateLayerWidget.Name = "tabPage_DateLayerWidget";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // dataGridView_Widget_Date
-            // 
-            this.dataGridView_Widget_Date.AllowUserToAddRows = false;
-            this.dataGridView_Widget_Date.AllowUserToDeleteRows = false;
-            this.dataGridView_Widget_Date.AllowUserToResizeRows = false;
-            this.dataGridView_Widget_Date.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Widget_Date.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            resources.ApplyResources(this.dataGridView_Widget_Date, "dataGridView_Widget_Date");
-            this.dataGridView_Widget_Date.MultiSelect = false;
-            this.dataGridView_Widget_Date.Name = "dataGridView_Widget_Date";
-            this.dataGridView_Widget_Date.ReadOnly = true;
-            this.dataGridView_Widget_Date.RowHeadersVisible = false;
-            this.dataGridView_Widget_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Widget_Date.SelectionChanged += new System.EventHandler(this.dataGridView_Widget_Date_SelectionChanged);
-            this.dataGridView_Widget_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_Widget_Date_KeyDown);
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn7.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // button_Widget_Date_End
-            // 
-            resources.ApplyResources(this.button_Widget_Date_End, "button_Widget_Date_End");
-            this.button_Widget_Date_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
-            this.button_Widget_Date_End.Name = "button_Widget_Date_End";
-            this.button_Widget_Date_End.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_End.Click += new System.EventHandler(this.button_Widget_Date_End_Click);
-            // 
-            // button_Widget_Date_Start
-            // 
-            resources.ApplyResources(this.button_Widget_Date_Start, "button_Widget_Date_Start");
-            this.button_Widget_Date_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
-            this.button_Widget_Date_Start.Name = "button_Widget_Date_Start";
-            this.button_Widget_Date_Start.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_Start.Click += new System.EventHandler(this.button_Widget_Date_Start_Click);
-            // 
-            // button_Widget_Date_Up
-            // 
-            resources.ApplyResources(this.button_Widget_Date_Up, "button_Widget_Date_Up");
-            this.button_Widget_Date_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
-            this.button_Widget_Date_Up.Name = "button_Widget_Date_Up";
-            this.button_Widget_Date_Up.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_Up.Click += new System.EventHandler(this.button_Widget_Date_Up_Click);
-            // 
-            // button_Widget_Date_Down
-            // 
-            resources.ApplyResources(this.button_Widget_Date_Down, "button_Widget_Date_Down");
-            this.button_Widget_Date_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
-            this.button_Widget_Date_Down.Name = "button_Widget_Date_Down";
-            this.button_Widget_Date_Down.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_Down.Click += new System.EventHandler(this.button_Widget_Date_Down_Click);
-            // 
-            // comboBox_WidgetsTopMask
-            // 
-            this.comboBox_WidgetsTopMask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetsTopMask.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_WidgetsTopMask, "comboBox_WidgetsTopMask");
-            this.comboBox_WidgetsTopMask.FormattingEnabled = true;
-            this.comboBox_WidgetsTopMask.Name = "comboBox_WidgetsTopMask";
-            this.comboBox_WidgetsTopMask.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetsTopMask.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetsTopMask.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetsMask_SelectedIndexChanged);
-            this.comboBox_WidgetsTopMask.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetsTopMask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // comboBox_WidgetsUnderMask
-            // 
-            this.comboBox_WidgetsUnderMask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetsUnderMask.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_WidgetsUnderMask, "comboBox_WidgetsUnderMask");
-            this.comboBox_WidgetsUnderMask.FormattingEnabled = true;
-            this.comboBox_WidgetsUnderMask.Name = "comboBox_WidgetsUnderMask";
-            this.comboBox_WidgetsUnderMask.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetsUnderMask.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetsUnderMask.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetsMask_SelectedIndexChanged);
-            this.comboBox_WidgetsUnderMask.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetsUnderMask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label01
-            // 
-            resources.ApplyResources(this.label01, "label01");
-            this.label01.Name = "label01";
-            // 
-            // groupBox_WidgetNumber
-            // 
-            this.groupBox_WidgetNumber.Controls.Add(this.label11);
-            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionLenght);
-            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetBorderInactiv);
-            this.groupBox_WidgetNumber.Controls.Add(this.label10);
-            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetBorderActiv);
-            this.groupBox_WidgetNumber.Controls.Add(this.label9);
-            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetDescriptionBackground);
-            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundX);
-            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundY);
-            this.groupBox_WidgetNumber.Controls.Add(this.label02);
-            this.groupBox_WidgetNumber.Controls.Add(this.label8);
-            this.groupBox_WidgetNumber.Controls.Add(this.label1084);
-            this.groupBox_WidgetNumber.Controls.Add(this.label1085);
-            this.groupBox_WidgetNumber.Controls.Add(this.label6);
-            this.groupBox_WidgetNumber.Controls.Add(this.label2);
-            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetWidth);
-            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetHeight);
-            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetX);
-            this.groupBox_WidgetNumber.Controls.Add(this.button_WidgetDel);
-            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetY);
-            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetNumber);
-            this.groupBox_WidgetNumber.Controls.Add(this.label05);
-            this.groupBox_WidgetNumber.Controls.Add(this.label1083);
-            this.groupBox_WidgetNumber.Controls.Add(this.label1086);
-            resources.ApplyResources(this.groupBox_WidgetNumber, "groupBox_WidgetNumber");
-            this.groupBox_WidgetNumber.Name = "groupBox_WidgetNumber";
-            this.groupBox_WidgetNumber.TabStop = false;
-            this.groupBox_WidgetNumber.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // numericUpDown_WidgetDescriptionLenght
-            // 
-            this.numericUpDown_WidgetDescriptionLenght.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WidgetDescriptionLenght, "numericUpDown_WidgetDescriptionLenght");
-            this.numericUpDown_WidgetDescriptionLenght.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionLenght.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetDescriptionLenght.Name = "numericUpDown_WidgetDescriptionLenght";
-            this.numericUpDown_WidgetDescriptionLenght.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionLenght.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
-            // 
-            // comboBox_WidgetBorderInactiv
-            // 
-            this.comboBox_WidgetBorderInactiv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetBorderInactiv.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_WidgetBorderInactiv, "comboBox_WidgetBorderInactiv");
-            this.comboBox_WidgetBorderInactiv.FormattingEnabled = true;
-            this.comboBox_WidgetBorderInactiv.Name = "comboBox_WidgetBorderInactiv";
-            this.comboBox_WidgetBorderInactiv.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetBorderInactiv.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetBorderInactiv.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
-            this.comboBox_WidgetBorderInactiv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetBorderInactiv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // comboBox_WidgetBorderActiv
-            // 
-            this.comboBox_WidgetBorderActiv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetBorderActiv.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_WidgetBorderActiv, "comboBox_WidgetBorderActiv");
-            this.comboBox_WidgetBorderActiv.FormattingEnabled = true;
-            this.comboBox_WidgetBorderActiv.Name = "comboBox_WidgetBorderActiv";
-            this.comboBox_WidgetBorderActiv.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetBorderActiv.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetBorderActiv.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
-            this.comboBox_WidgetBorderActiv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetBorderActiv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // comboBox_WidgetDescriptionBackground
-            // 
-            this.comboBox_WidgetDescriptionBackground.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetDescriptionBackground.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_WidgetDescriptionBackground, "comboBox_WidgetDescriptionBackground");
-            this.comboBox_WidgetDescriptionBackground.FormattingEnabled = true;
-            this.comboBox_WidgetDescriptionBackground.Name = "comboBox_WidgetDescriptionBackground";
-            this.comboBox_WidgetDescriptionBackground.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetDescriptionBackground.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetDescriptionBackground.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
-            this.comboBox_WidgetDescriptionBackground.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetDescriptionBackground.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WidgetDescriptionBackgroundX
-            // 
-            this.numericUpDown_WidgetDescriptionBackgroundX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundX, "numericUpDown_WidgetDescriptionBackgroundX");
-            this.numericUpDown_WidgetDescriptionBackgroundX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionBackgroundX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetDescriptionBackgroundX.Name = "numericUpDown_WidgetDescriptionBackgroundX";
-            this.numericUpDown_WidgetDescriptionBackgroundX.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
-            this.numericUpDown_WidgetDescriptionBackgroundX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WidgetDescriptionBackgroundY
-            // 
-            this.numericUpDown_WidgetDescriptionBackgroundY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundY, "numericUpDown_WidgetDescriptionBackgroundY");
-            this.numericUpDown_WidgetDescriptionBackgroundY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionBackgroundY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetDescriptionBackgroundY.Name = "numericUpDown_WidgetDescriptionBackgroundY";
-            this.numericUpDown_WidgetDescriptionBackgroundY.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
-            this.numericUpDown_WidgetDescriptionBackgroundY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // label02
-            // 
-            resources.ApplyResources(this.label02, "label02");
-            this.label02.Name = "label02";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // label1084
-            // 
-            resources.ApplyResources(this.label1084, "label1084");
-            this.label1084.Name = "label1084";
-            // 
-            // label1085
-            // 
-            resources.ApplyResources(this.label1085, "label1085");
-            this.label1085.Name = "label1085";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // numericUpDown_WidgetWidth
-            // 
-            resources.ApplyResources(this.numericUpDown_WidgetWidth, "numericUpDown_WidgetWidth");
-            this.numericUpDown_WidgetWidth.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetWidth.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetWidth.Name = "numericUpDown_WidgetWidth";
-            this.numericUpDown_WidgetWidth.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
-            // 
-            // numericUpDown_WidgetHeight
-            // 
-            resources.ApplyResources(this.numericUpDown_WidgetHeight, "numericUpDown_WidgetHeight");
-            this.numericUpDown_WidgetHeight.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetHeight.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetHeight.Name = "numericUpDown_WidgetHeight";
-            this.numericUpDown_WidgetHeight.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
-            // 
-            // numericUpDown_WidgetX
-            // 
-            this.numericUpDown_WidgetX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WidgetX, "numericUpDown_WidgetX");
-            this.numericUpDown_WidgetX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetX.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetX.Name = "numericUpDown_WidgetX";
-            this.numericUpDown_WidgetX.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
-            this.numericUpDown_WidgetX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // button_WidgetDel
-            // 
-            resources.ApplyResources(this.button_WidgetDel, "button_WidgetDel");
-            this.button_WidgetDel.Name = "button_WidgetDel";
-            this.button_WidgetDel.UseVisualStyleBackColor = true;
-            this.button_WidgetDel.Click += new System.EventHandler(this.button_WidgetDel_Click);
-            // 
-            // numericUpDown_WidgetY
-            // 
-            this.numericUpDown_WidgetY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WidgetY, "numericUpDown_WidgetY");
-            this.numericUpDown_WidgetY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetY.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetY.Name = "numericUpDown_WidgetY";
-            this.numericUpDown_WidgetY.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
-            this.numericUpDown_WidgetY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_WidgetNumber
-            // 
-            this.comboBox_WidgetNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_WidgetNumber.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_WidgetNumber, "comboBox_WidgetNumber");
-            this.comboBox_WidgetNumber.Name = "comboBox_WidgetNumber";
-            this.comboBox_WidgetNumber.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetNumber_SelectedIndexChanged);
-            // 
-            // label05
-            // 
-            resources.ApplyResources(this.label05, "label05");
-            this.label05.Name = "label05";
-            // 
-            // label1083
-            // 
-            resources.ApplyResources(this.label1083, "label1083");
-            this.label1083.Name = "label1083";
-            // 
-            // label1086
-            // 
-            resources.ApplyResources(this.label1086, "label1086");
-            this.label1086.Name = "label1086";
-            // 
-            // groupBox_WidgetElement
-            // 
-            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElementDel);
-            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_End);
-            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Start);
-            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Up);
-            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Down);
-            this.groupBox_WidgetElement.Controls.Add(this.dataGridView_WidgetElement);
-            resources.ApplyResources(this.groupBox_WidgetElement, "groupBox_WidgetElement");
-            this.groupBox_WidgetElement.Name = "groupBox_WidgetElement";
-            this.groupBox_WidgetElement.TabStop = false;
-            this.groupBox_WidgetElement.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // button_WidgetElementDel
-            // 
-            resources.ApplyResources(this.button_WidgetElementDel, "button_WidgetElementDel");
-            this.button_WidgetElementDel.Name = "button_WidgetElementDel";
-            this.button_WidgetElementDel.UseVisualStyleBackColor = true;
-            this.button_WidgetElementDel.Click += new System.EventHandler(this.button_WidgetElementDel_Click);
-            // 
-            // button_WidgetElement_End
-            // 
-            resources.ApplyResources(this.button_WidgetElement_End, "button_WidgetElement_End");
-            this.button_WidgetElement_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
-            this.button_WidgetElement_End.Name = "button_WidgetElement_End";
-            this.button_WidgetElement_End.UseVisualStyleBackColor = true;
-            this.button_WidgetElement_End.Click += new System.EventHandler(this.button_WidgetElement_End_Click);
-            // 
-            // button_WidgetElement_Start
-            // 
-            resources.ApplyResources(this.button_WidgetElement_Start, "button_WidgetElement_Start");
-            this.button_WidgetElement_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
-            this.button_WidgetElement_Start.Name = "button_WidgetElement_Start";
-            this.button_WidgetElement_Start.UseVisualStyleBackColor = true;
-            this.button_WidgetElement_Start.Click += new System.EventHandler(this.button_WidgetElement_Start_Click);
-            // 
-            // button_WidgetElement_Up
-            // 
-            resources.ApplyResources(this.button_WidgetElement_Up, "button_WidgetElement_Up");
-            this.button_WidgetElement_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
-            this.button_WidgetElement_Up.Name = "button_WidgetElement_Up";
-            this.button_WidgetElement_Up.UseVisualStyleBackColor = true;
-            this.button_WidgetElement_Up.Click += new System.EventHandler(this.button_WidgetElement_Up_Click);
-            // 
-            // button_WidgetElement_Down
-            // 
-            resources.ApplyResources(this.button_WidgetElement_Down, "button_WidgetElement_Down");
-            this.button_WidgetElement_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
-            this.button_WidgetElement_Down.Name = "button_WidgetElement_Down";
-            this.button_WidgetElement_Down.UseVisualStyleBackColor = true;
-            this.button_WidgetElement_Down.Click += new System.EventHandler(this.button_WidgetElement_Down_Click);
-            // 
-            // dataGridView_WidgetElement
-            // 
-            this.dataGridView_WidgetElement.AllowUserToAddRows = false;
-            this.dataGridView_WidgetElement.AllowUserToDeleteRows = false;
-            this.dataGridView_WidgetElement.AllowUserToResizeRows = false;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_WidgetElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView_WidgetElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.WidgetsID,
-            this.WidgetElement,
-            this.WidgetElementName});
-            this.dataGridView_WidgetElement.EnableHeadersVisualStyles = false;
-            resources.ApplyResources(this.dataGridView_WidgetElement, "dataGridView_WidgetElement");
-            this.dataGridView_WidgetElement.MultiSelect = false;
-            this.dataGridView_WidgetElement.Name = "dataGridView_WidgetElement";
-            this.dataGridView_WidgetElement.ReadOnly = true;
-            this.dataGridView_WidgetElement.RowHeadersVisible = false;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.DarkGray;
-            this.dataGridView_WidgetElement.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView_WidgetElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_WidgetElement.SelectionChanged += new System.EventHandler(this.dataGridView_WidgetElement_SelectionChanged);
-            this.dataGridView_WidgetElement.EnabledChanged += new System.EventHandler(this.dataGridView_WidgetElement_EnabledChanged);
-            this.dataGridView_WidgetElement.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_WidgetElement_KeyDown);
-            // 
-            // WidgetsID
-            // 
-            this.WidgetsID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.WidgetsID.Frozen = true;
-            resources.ApplyResources(this.WidgetsID, "WidgetsID");
-            this.WidgetsID.Name = "WidgetsID";
-            this.WidgetsID.ReadOnly = true;
-            this.WidgetsID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.WidgetsID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // WidgetElement
-            // 
-            this.WidgetElement.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.WidgetElement, "WidgetElement");
-            this.WidgetElement.Name = "WidgetElement";
-            this.WidgetElement.ReadOnly = true;
-            this.WidgetElement.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.WidgetElement.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // WidgetElementName
-            // 
-            resources.ApplyResources(this.WidgetElementName, "WidgetElementName");
-            this.WidgetElementName.Name = "WidgetElementName";
-            this.WidgetElementName.ReadOnly = true;
-            // 
-            // tabPage_WidgetAdd
-            // 
-            this.tabPage_WidgetAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_WidgetAdd.Controls.Add(this.label31);
-            this.tabPage_WidgetAdd.Controls.Add(this.label30);
-            this.tabPage_WidgetAdd.Controls.Add(this.label29);
-            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetTypeAdd);
-            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WdgetAdd);
-            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetElementAdd);
-            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetNumberAdd);
-            resources.ApplyResources(this.tabPage_WidgetAdd, "tabPage_WidgetAdd");
-            this.tabPage_WidgetAdd.Name = "tabPage_WidgetAdd";
-            // 
-            // label31
-            // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.Name = "label31";
-            // 
-            // label30
-            // 
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.Name = "label30";
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
-            // 
-            // groupBox_WidgetTypeAdd
-            // 
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_BatteryWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.label28);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_AirPressureWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_WindForceWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_SunriseWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_HumidityWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_UVindexWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_WeatherWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.label27);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_FatBurningWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_ActivityGoalWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_StandUpWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_DistanceWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_PAIWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_HeartRateWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_CaloriesWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.label26);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_StepsWidgetAdd);
-            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_DateWidgetAdd);
-            resources.ApplyResources(this.groupBox_WidgetTypeAdd, "groupBox_WidgetTypeAdd");
-            this.groupBox_WidgetTypeAdd.Name = "groupBox_WidgetTypeAdd";
-            this.groupBox_WidgetTypeAdd.TabStop = false;
-            this.groupBox_WidgetTypeAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // radioButton_BatteryWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_BatteryWidgetAdd, "radioButton_BatteryWidgetAdd");
-            this.radioButton_BatteryWidgetAdd.Name = "radioButton_BatteryWidgetAdd";
-            this.radioButton_BatteryWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_BatteryWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // label28
-            // 
-            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.Name = "label28";
-            // 
-            // radioButton_AirPressureWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_AirPressureWidgetAdd, "radioButton_AirPressureWidgetAdd");
-            this.radioButton_AirPressureWidgetAdd.Name = "radioButton_AirPressureWidgetAdd";
-            this.radioButton_AirPressureWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_AirPressureWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_WindForceWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_WindForceWidgetAdd, "radioButton_WindForceWidgetAdd");
-            this.radioButton_WindForceWidgetAdd.Name = "radioButton_WindForceWidgetAdd";
-            this.radioButton_WindForceWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_WindForceWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_SunriseWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_SunriseWidgetAdd, "radioButton_SunriseWidgetAdd");
-            this.radioButton_SunriseWidgetAdd.Name = "radioButton_SunriseWidgetAdd";
-            this.radioButton_SunriseWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_SunriseWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_HumidityWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_HumidityWidgetAdd, "radioButton_HumidityWidgetAdd");
-            this.radioButton_HumidityWidgetAdd.Name = "radioButton_HumidityWidgetAdd";
-            this.radioButton_HumidityWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_HumidityWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_UVindexWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_UVindexWidgetAdd, "radioButton_UVindexWidgetAdd");
-            this.radioButton_UVindexWidgetAdd.Name = "radioButton_UVindexWidgetAdd";
-            this.radioButton_UVindexWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_UVindexWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_WeatherWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_WeatherWidgetAdd, "radioButton_WeatherWidgetAdd");
-            this.radioButton_WeatherWidgetAdd.Name = "radioButton_WeatherWidgetAdd";
-            this.radioButton_WeatherWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_WeatherWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // label27
-            // 
-            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.Name = "label27";
-            // 
-            // radioButton_FatBurningWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_FatBurningWidgetAdd, "radioButton_FatBurningWidgetAdd");
-            this.radioButton_FatBurningWidgetAdd.Name = "radioButton_FatBurningWidgetAdd";
-            this.radioButton_FatBurningWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_FatBurningWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_ActivityGoalWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_ActivityGoalWidgetAdd, "radioButton_ActivityGoalWidgetAdd");
-            this.radioButton_ActivityGoalWidgetAdd.Name = "radioButton_ActivityGoalWidgetAdd";
-            this.radioButton_ActivityGoalWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_ActivityGoalWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_StandUpWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_StandUpWidgetAdd, "radioButton_StandUpWidgetAdd");
-            this.radioButton_StandUpWidgetAdd.Name = "radioButton_StandUpWidgetAdd";
-            this.radioButton_StandUpWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_StandUpWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_DistanceWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_DistanceWidgetAdd, "radioButton_DistanceWidgetAdd");
-            this.radioButton_DistanceWidgetAdd.Name = "radioButton_DistanceWidgetAdd";
-            this.radioButton_DistanceWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_DistanceWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_PAIWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_PAIWidgetAdd, "radioButton_PAIWidgetAdd");
-            this.radioButton_PAIWidgetAdd.Name = "radioButton_PAIWidgetAdd";
-            this.radioButton_PAIWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_PAIWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_HeartRateWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_HeartRateWidgetAdd, "radioButton_HeartRateWidgetAdd");
-            this.radioButton_HeartRateWidgetAdd.Name = "radioButton_HeartRateWidgetAdd";
-            this.radioButton_HeartRateWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_HeartRateWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_CaloriesWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_CaloriesWidgetAdd, "radioButton_CaloriesWidgetAdd");
-            this.radioButton_CaloriesWidgetAdd.Name = "radioButton_CaloriesWidgetAdd";
-            this.radioButton_CaloriesWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_CaloriesWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // label26
-            // 
-            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
-            // 
-            // radioButton_StepsWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_StepsWidgetAdd, "radioButton_StepsWidgetAdd");
-            this.radioButton_StepsWidgetAdd.Checked = true;
-            this.radioButton_StepsWidgetAdd.Name = "radioButton_StepsWidgetAdd";
-            this.radioButton_StepsWidgetAdd.TabStop = true;
-            this.radioButton_StepsWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_StepsWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // radioButton_DateWidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_DateWidgetAdd, "radioButton_DateWidgetAdd");
-            this.radioButton_DateWidgetAdd.Name = "radioButton_DateWidgetAdd";
-            this.radioButton_DateWidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_DateWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
-            // 
-            // groupBox_WdgetAdd
-            // 
-            this.groupBox_WdgetAdd.Controls.Add(this.button_WidgetAdd);
-            this.groupBox_WdgetAdd.Controls.Add(this.radioButton_WidgetElementAdd);
-            this.groupBox_WdgetAdd.Controls.Add(this.radioButton_WidgetAdd);
-            resources.ApplyResources(this.groupBox_WdgetAdd, "groupBox_WdgetAdd");
-            this.groupBox_WdgetAdd.Name = "groupBox_WdgetAdd";
-            this.groupBox_WdgetAdd.TabStop = false;
-            this.groupBox_WdgetAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // button_WidgetAdd
-            // 
-            resources.ApplyResources(this.button_WidgetAdd, "button_WidgetAdd");
-            this.button_WidgetAdd.Name = "button_WidgetAdd";
-            this.button_WidgetAdd.UseVisualStyleBackColor = true;
-            this.button_WidgetAdd.Click += new System.EventHandler(this.button_WidgetAdd_Click);
-            // 
-            // radioButton_WidgetElementAdd
-            // 
-            this.radioButton_WidgetElementAdd.Checked = true;
-            resources.ApplyResources(this.radioButton_WidgetElementAdd, "radioButton_WidgetElementAdd");
-            this.radioButton_WidgetElementAdd.Name = "radioButton_WidgetElementAdd";
-            this.radioButton_WidgetElementAdd.TabStop = true;
-            this.radioButton_WidgetElementAdd.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_WidgetAdd
-            // 
-            resources.ApplyResources(this.radioButton_WidgetAdd, "radioButton_WidgetAdd");
-            this.radioButton_WidgetAdd.Name = "radioButton_WidgetAdd";
-            this.radioButton_WidgetAdd.UseVisualStyleBackColor = true;
-            this.radioButton_WidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAdd_CheckedChanged);
-            // 
-            // groupBox_WidgetElementAdd
-            // 
-            this.groupBox_WidgetElementAdd.Controls.Add(this.panel2);
-            resources.ApplyResources(this.groupBox_WidgetElementAdd, "groupBox_WidgetElementAdd");
-            this.groupBox_WidgetElementAdd.Name = "groupBox_WidgetElementAdd";
-            this.groupBox_WidgetElementAdd.TabStop = false;
-            this.groupBox_WidgetElementAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // panel2
-            // 
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Controls.Add(this.tabControl_DateWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_iconWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_SystemFont_GroupSunriseWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_SystemFont_GroupWeatherWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_SystemFont_GroupWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_scaleLinearWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_scaleCircleWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_handWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_text_goalWidgetSunsetAdd);
-            this.panel2.Controls.Add(this.userControl_text_goalWidgetSunriseAdd);
-            this.panel2.Controls.Add(this.userControl_text_weatherWidgetMaxAdd);
-            this.panel2.Controls.Add(this.userControl_text_weatherWidgetMinAdd);
-            this.panel2.Controls.Add(this.userControl_text_weatherWidgetCurAdd);
-            this.panel2.Controls.Add(this.userControl_text_goalWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_textWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_pictures_weatherWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_segmentsWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_picturesWidgetAdd);
-            this.panel2.Controls.Add(this.userControl_previewWidgetAdd);
-            this.panel2.Name = "panel2";
-            // 
-            // tabControl_DateWidgetAdd
-            // 
-            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage1);
-            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage2);
-            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage3);
-            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage4);
-            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage5);
-            resources.ApplyResources(this.tabControl_DateWidgetAdd, "tabControl_DateWidgetAdd");
-            this.tabControl_DateWidgetAdd.Name = "tabControl_DateWidgetAdd";
-            this.tabControl_DateWidgetAdd.SelectedIndex = 0;
-            // 
-            // tabPage1
-            // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.userControl_SystemFont_Group_DayWidgetAdd);
-            this.tabPage1.Controls.Add(this.userControl_hand_DayWidgetAdd);
-            this.tabPage1.Controls.Add(this.userControl_text_date_DayWidgetAdd);
-            this.tabPage1.Name = "tabPage1";
-            // 
-            // tabPage2
-            // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.userControl_SystemFont_Group_MonthWidgetAdd);
-            this.tabPage2.Controls.Add(this.userControl_hand_MonthWidgetAdd);
-            this.tabPage2.Controls.Add(this.userControl_text_date_MonthWidgetAdd);
-            this.tabPage2.Controls.Add(this.userControl_pictures_MonthWidgetAdd);
-            this.tabPage2.Name = "tabPage2";
-            // 
-            // tabPage3
-            // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.userControl_SystemFont_Group_YearWidgetAdd);
-            this.tabPage3.Controls.Add(this.userControl_text_date_YearWidgetAdd);
-            this.tabPage3.Name = "tabPage3";
-            // 
-            // tabPage4
-            // 
-            resources.ApplyResources(this.tabPage4, "tabPage4");
-            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage4.Controls.Add(this.userControl_hand_DOWWidgetAdd);
-            this.tabPage4.Controls.Add(this.userControl_pictures_DOWWidgetAdd);
-            this.tabPage4.Name = "tabPage4";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage5.Controls.Add(this.label13);
-            this.tabPage5.Controls.Add(this.dataGridView_Widget_DateAdd);
-            this.tabPage5.Controls.Add(this.button_Widget_Date_EndAdd);
-            this.tabPage5.Controls.Add(this.button_Widget_Date_StartAdd);
-            this.tabPage5.Controls.Add(this.button_Widget_Date_UpAdd);
-            this.tabPage5.Controls.Add(this.button_Widget_Date_DownAdd);
-            resources.ApplyResources(this.tabPage5, "tabPage5");
-            this.tabPage5.Name = "tabPage5";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
-            // 
-            // dataGridView_Widget_DateAdd
-            // 
-            this.dataGridView_Widget_DateAdd.AllowUserToAddRows = false;
-            this.dataGridView_Widget_DateAdd.AllowUserToDeleteRows = false;
-            this.dataGridView_Widget_DateAdd.AllowUserToResizeRows = false;
-            this.dataGridView_Widget_DateAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Widget_DateAdd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            resources.ApplyResources(this.dataGridView_Widget_DateAdd, "dataGridView_Widget_DateAdd");
-            this.dataGridView_Widget_DateAdd.MultiSelect = false;
-            this.dataGridView_Widget_DateAdd.Name = "dataGridView_Widget_DateAdd";
-            this.dataGridView_Widget_DateAdd.ReadOnly = true;
-            this.dataGridView_Widget_DateAdd.RowHeadersVisible = false;
-            this.dataGridView_Widget_DateAdd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Widget_DateAdd.SelectionChanged += new System.EventHandler(this.dataGridView_Widget_DateAdd_SelectionChanged);
-            this.dataGridView_Widget_DateAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_Widget_DateAdd_KeyDown);
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn9.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // button_Widget_Date_EndAdd
-            // 
-            resources.ApplyResources(this.button_Widget_Date_EndAdd, "button_Widget_Date_EndAdd");
-            this.button_Widget_Date_EndAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
-            this.button_Widget_Date_EndAdd.Name = "button_Widget_Date_EndAdd";
-            this.button_Widget_Date_EndAdd.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_EndAdd.Click += new System.EventHandler(this.button_Widget_Date_EndAdd_Click);
-            // 
-            // button_Widget_Date_StartAdd
-            // 
-            resources.ApplyResources(this.button_Widget_Date_StartAdd, "button_Widget_Date_StartAdd");
-            this.button_Widget_Date_StartAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
-            this.button_Widget_Date_StartAdd.Name = "button_Widget_Date_StartAdd";
-            this.button_Widget_Date_StartAdd.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_StartAdd.Click += new System.EventHandler(this.button_Widget_Date_StartAdd_Click);
-            // 
-            // button_Widget_Date_UpAdd
-            // 
-            resources.ApplyResources(this.button_Widget_Date_UpAdd, "button_Widget_Date_UpAdd");
-            this.button_Widget_Date_UpAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
-            this.button_Widget_Date_UpAdd.Name = "button_Widget_Date_UpAdd";
-            this.button_Widget_Date_UpAdd.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_UpAdd.Click += new System.EventHandler(this.button_Widget_Date_UpAdd_Click);
-            // 
-            // button_Widget_Date_DownAdd
-            // 
-            resources.ApplyResources(this.button_Widget_Date_DownAdd, "button_Widget_Date_DownAdd");
-            this.button_Widget_Date_DownAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
-            this.button_Widget_Date_DownAdd.Name = "button_Widget_Date_DownAdd";
-            this.button_Widget_Date_DownAdd.UseVisualStyleBackColor = true;
-            this.button_Widget_Date_DownAdd.Click += new System.EventHandler(this.button_Widget_Date_DownAdd_Click);
-            // 
-            // groupBox_WidgetNumberAdd
-            // 
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label14);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionLenghtAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetBorderInactivAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label15);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetBorderActivAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label16);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetDescriptionBackgroundAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundXAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundYAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label17);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label18);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label19);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label20);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label21);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label22);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetWidthAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetHeightAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetXAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetYAdd);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label23);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label24);
-            this.groupBox_WidgetNumberAdd.Controls.Add(this.label25);
-            resources.ApplyResources(this.groupBox_WidgetNumberAdd, "groupBox_WidgetNumberAdd");
-            this.groupBox_WidgetNumberAdd.Name = "groupBox_WidgetNumberAdd";
-            this.groupBox_WidgetNumberAdd.TabStop = false;
-            this.groupBox_WidgetNumberAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // numericUpDown_WidgetDescriptionLenghtAdd
-            // 
-            this.numericUpDown_WidgetDescriptionLenghtAdd.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WidgetDescriptionLenghtAdd, "numericUpDown_WidgetDescriptionLenghtAdd");
-            this.numericUpDown_WidgetDescriptionLenghtAdd.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionLenghtAdd.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetDescriptionLenghtAdd.Name = "numericUpDown_WidgetDescriptionLenghtAdd";
-            this.numericUpDown_WidgetDescriptionLenghtAdd.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionLenghtAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            // 
-            // comboBox_WidgetBorderInactivAdd
-            // 
-            this.comboBox_WidgetBorderInactivAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetBorderInactivAdd.DropDownWidth = 75;
-            this.comboBox_WidgetBorderInactivAdd.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_WidgetBorderInactivAdd, "comboBox_WidgetBorderInactivAdd");
-            this.comboBox_WidgetBorderInactivAdd.Name = "comboBox_WidgetBorderInactivAdd";
-            this.comboBox_WidgetBorderInactivAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetBorderInactivAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetBorderInactivAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            this.comboBox_WidgetBorderInactivAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetBorderInactivAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // comboBox_WidgetBorderActivAdd
-            // 
-            this.comboBox_WidgetBorderActivAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetBorderActivAdd.DropDownWidth = 75;
-            this.comboBox_WidgetBorderActivAdd.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_WidgetBorderActivAdd, "comboBox_WidgetBorderActivAdd");
-            this.comboBox_WidgetBorderActivAdd.Name = "comboBox_WidgetBorderActivAdd";
-            this.comboBox_WidgetBorderActivAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetBorderActivAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetBorderActivAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            this.comboBox_WidgetBorderActivAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetBorderActivAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
-            // 
-            // comboBox_WidgetDescriptionBackgroundAdd
-            // 
-            this.comboBox_WidgetDescriptionBackgroundAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WidgetDescriptionBackgroundAdd.DropDownWidth = 75;
-            this.comboBox_WidgetDescriptionBackgroundAdd.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_WidgetDescriptionBackgroundAdd, "comboBox_WidgetDescriptionBackgroundAdd");
-            this.comboBox_WidgetDescriptionBackgroundAdd.Name = "comboBox_WidgetDescriptionBackgroundAdd";
-            this.comboBox_WidgetDescriptionBackgroundAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WidgetDescriptionBackgroundAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WidgetDescriptionBackgroundAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            this.comboBox_WidgetDescriptionBackgroundAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WidgetDescriptionBackgroundAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // numericUpDown_WidgetDescriptionBackgroundXAdd
-            // 
-            this.numericUpDown_WidgetDescriptionBackgroundXAdd.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundXAdd, "numericUpDown_WidgetDescriptionBackgroundXAdd");
-            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Name = "numericUpDown_WidgetDescriptionBackgroundXAdd";
-            this.numericUpDown_WidgetDescriptionBackgroundXAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            this.numericUpDown_WidgetDescriptionBackgroundXAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WidgetDescriptionBackgroundYAdd
-            // 
-            this.numericUpDown_WidgetDescriptionBackgroundYAdd.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundYAdd, "numericUpDown_WidgetDescriptionBackgroundYAdd");
-            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Name = "numericUpDown_WidgetDescriptionBackgroundYAdd";
-            this.numericUpDown_WidgetDescriptionBackgroundYAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            this.numericUpDown_WidgetDescriptionBackgroundYAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
-            // 
-            // label18
-            // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
-            // 
-            // label21
-            // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
-            // 
-            // label22
-            // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
-            // 
-            // numericUpDown_WidgetWidthAdd
-            // 
-            resources.ApplyResources(this.numericUpDown_WidgetWidthAdd, "numericUpDown_WidgetWidthAdd");
-            this.numericUpDown_WidgetWidthAdd.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetWidthAdd.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetWidthAdd.Name = "numericUpDown_WidgetWidthAdd";
-            this.numericUpDown_WidgetWidthAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            // 
-            // numericUpDown_WidgetHeightAdd
-            // 
-            resources.ApplyResources(this.numericUpDown_WidgetHeightAdd, "numericUpDown_WidgetHeightAdd");
-            this.numericUpDown_WidgetHeightAdd.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetHeightAdd.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetHeightAdd.Name = "numericUpDown_WidgetHeightAdd";
-            this.numericUpDown_WidgetHeightAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            // 
-            // numericUpDown_WidgetXAdd
-            // 
-            this.numericUpDown_WidgetXAdd.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WidgetXAdd, "numericUpDown_WidgetXAdd");
-            this.numericUpDown_WidgetXAdd.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetXAdd.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetXAdd.Name = "numericUpDown_WidgetXAdd";
-            this.numericUpDown_WidgetXAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            this.numericUpDown_WidgetXAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_WidgetYAdd
-            // 
-            this.numericUpDown_WidgetYAdd.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WidgetYAdd, "numericUpDown_WidgetYAdd");
-            this.numericUpDown_WidgetYAdd.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WidgetYAdd.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WidgetYAdd.Name = "numericUpDown_WidgetYAdd";
-            this.numericUpDown_WidgetYAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
-            this.numericUpDown_WidgetYAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // label23
-            // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.Name = "label23";
-            // 
-            // label24
-            // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
-            // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
-            // imageList2
-            // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "Programming-Edit-Property-icon.png");
-            this.imageList2.Images.SetKeyName(1, "Data-Add-Column-icon.png");
-            this.imageList2.Images.SetKeyName(2, "Data-Add-Row-icon.png");
-            this.imageList2.Images.SetKeyName(3, "Files-Add-List-icon.png");
-            this.imageList2.Images.SetKeyName(4, "Add-icon.png");
-            // 
-            // tabPageConverting
-            // 
-            this.tabPageConverting.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPageConverting.Controls.Add(this.label489);
-            this.tabPageConverting.Controls.Add(this.label488);
-            this.tabPageConverting.Controls.Add(this.label487);
-            this.tabPageConverting.Controls.Add(this.label486);
-            this.tabPageConverting.Controls.Add(this.button_Converting);
-            this.tabPageConverting.Controls.Add(this.groupBox10);
-            this.tabPageConverting.Controls.Add(this.groupBox9);
-            resources.ApplyResources(this.tabPageConverting, "tabPageConverting");
-            this.tabPageConverting.Name = "tabPageConverting";
-            // 
-            // label489
-            // 
-            resources.ApplyResources(this.label489, "label489");
-            this.label489.Name = "label489";
-            // 
-            // label488
-            // 
-            resources.ApplyResources(this.label488, "label488");
-            this.label488.Name = "label488";
-            // 
-            // label487
-            // 
-            resources.ApplyResources(this.label487, "label487");
-            this.label487.Name = "label487";
-            // 
-            // label486
-            // 
-            resources.ApplyResources(this.label486, "label486");
-            this.label486.Name = "label486";
-            // 
-            // button_Converting
-            // 
-            resources.ApplyResources(this.button_Converting, "button_Converting");
-            this.button_Converting.Name = "button_Converting";
-            this.button_Converting.UseVisualStyleBackColor = true;
-            this.button_Converting.Click += new System.EventHandler(this.button_Converting_Click);
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.numericUpDown_ConvertingOutput_Custom);
-            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_Custom);
-            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_TRexPro);
-            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_ZeppE);
-            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_GTR2);
-            resources.ApplyResources(this.groupBox10, "groupBox10");
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // numericUpDown_ConvertingOutput_Custom
-            // 
-            resources.ApplyResources(this.numericUpDown_ConvertingOutput_Custom, "numericUpDown_ConvertingOutput_Custom");
-            this.numericUpDown_ConvertingOutput_Custom.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ConvertingOutput_Custom.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_ConvertingOutput_Custom.Name = "numericUpDown_ConvertingOutput_Custom";
-            this.numericUpDown_ConvertingOutput_Custom.Value = new decimal(new int[] {
-            416,
-            0,
-            0,
-            0});
-            // 
-            // radioButton_ConvertingOutput_Custom
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingOutput_Custom, "radioButton_ConvertingOutput_Custom");
-            this.radioButton_ConvertingOutput_Custom.Name = "radioButton_ConvertingOutput_Custom";
-            this.radioButton_ConvertingOutput_Custom.UseVisualStyleBackColor = true;
-            this.radioButton_ConvertingOutput_Custom.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingOutput_Custom_CheckedChanged);
-            // 
-            // radioButton_ConvertingOutput_TRexPro
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingOutput_TRexPro, "radioButton_ConvertingOutput_TRexPro");
-            this.radioButton_ConvertingOutput_TRexPro.Name = "radioButton_ConvertingOutput_TRexPro";
-            this.radioButton_ConvertingOutput_TRexPro.UseVisualStyleBackColor = true;
-            this.radioButton_ConvertingOutput_TRexPro.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingOutput_GTR2_CheckedChanged);
-            // 
-            // radioButton_ConvertingOutput_ZeppE
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingOutput_ZeppE, "radioButton_ConvertingOutput_ZeppE");
-            this.radioButton_ConvertingOutput_ZeppE.Checked = true;
-            this.radioButton_ConvertingOutput_ZeppE.Name = "radioButton_ConvertingOutput_ZeppE";
-            this.radioButton_ConvertingOutput_ZeppE.TabStop = true;
-            this.radioButton_ConvertingOutput_ZeppE.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_ConvertingOutput_GTR2
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingOutput_GTR2, "radioButton_ConvertingOutput_GTR2");
-            this.radioButton_ConvertingOutput_GTR2.Name = "radioButton_ConvertingOutput_GTR2";
-            this.radioButton_ConvertingOutput_GTR2.UseVisualStyleBackColor = true;
-            this.radioButton_ConvertingOutput_GTR2.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingOutput_GTR2_CheckedChanged);
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.numericUpDown_ConvertingInput_Custom);
-            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_Custom);
-            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_TRexPro);
-            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_ZeppE);
-            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_GTR2);
-            resources.ApplyResources(this.groupBox9, "groupBox9");
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // numericUpDown_ConvertingInput_Custom
-            // 
-            resources.ApplyResources(this.numericUpDown_ConvertingInput_Custom, "numericUpDown_ConvertingInput_Custom");
-            this.numericUpDown_ConvertingInput_Custom.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ConvertingInput_Custom.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown_ConvertingInput_Custom.Name = "numericUpDown_ConvertingInput_Custom";
-            this.numericUpDown_ConvertingInput_Custom.Value = new decimal(new int[] {
-            454,
-            0,
-            0,
-            0});
-            // 
-            // radioButton_ConvertingInput_Custom
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingInput_Custom, "radioButton_ConvertingInput_Custom");
-            this.radioButton_ConvertingInput_Custom.Name = "radioButton_ConvertingInput_Custom";
-            this.radioButton_ConvertingInput_Custom.UseVisualStyleBackColor = true;
-            this.radioButton_ConvertingInput_Custom.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_Custom_CheckedChanged);
-            // 
-            // radioButton_ConvertingInput_TRexPro
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingInput_TRexPro, "radioButton_ConvertingInput_TRexPro");
-            this.radioButton_ConvertingInput_TRexPro.Name = "radioButton_ConvertingInput_TRexPro";
-            this.radioButton_ConvertingInput_TRexPro.UseVisualStyleBackColor = true;
-            this.radioButton_ConvertingInput_TRexPro.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_GTR2_CheckedChanged);
-            // 
-            // radioButton_ConvertingInput_ZeppE
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingInput_ZeppE, "radioButton_ConvertingInput_ZeppE");
-            this.radioButton_ConvertingInput_ZeppE.Name = "radioButton_ConvertingInput_ZeppE";
-            this.radioButton_ConvertingInput_ZeppE.UseVisualStyleBackColor = true;
-            this.radioButton_ConvertingInput_ZeppE.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_GTR2_CheckedChanged);
-            // 
-            // radioButton_ConvertingInput_GTR2
-            // 
-            resources.ApplyResources(this.radioButton_ConvertingInput_GTR2, "radioButton_ConvertingInput_GTR2");
-            this.radioButton_ConvertingInput_GTR2.Checked = true;
-            this.radioButton_ConvertingInput_GTR2.Name = "radioButton_ConvertingInput_GTR2";
-            this.radioButton_ConvertingInput_GTR2.TabStop = true;
-            this.radioButton_ConvertingInput_GTR2.UseVisualStyleBackColor = true;
-            this.radioButton_ConvertingInput_GTR2.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_GTR2_CheckedChanged);
-            // 
-            // tabPage_Settings
-            // 
-            this.tabPage_Settings.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_Settings.Controls.Add(this.groupBox2);
-            this.tabPage_Settings.Controls.Add(this.numericUpDown_Gif_Speed);
-            this.tabPage_Settings.Controls.Add(this.label355);
-            this.tabPage_Settings.Controls.Add(this.checkBox_ShowIn12hourFormat);
-            this.tabPage_Settings.Controls.Add(this.checkBox_SaveID);
-            this.tabPage_Settings.Controls.Add(this.groupBox8);
-            this.tabPage_Settings.Controls.Add(this.button_Reset);
-            this.tabPage_Settings.Controls.Add(this.checkBox_JsonWarnings);
-            this.tabPage_Settings.Controls.Add(this.comboBox_Language);
-            this.tabPage_Settings.Controls.Add(this.label356);
-            this.tabPage_Settings.Controls.Add(this.groupBox7);
-            this.tabPage_Settings.Controls.Add(this.groupBox6);
-            this.tabPage_Settings.Controls.Add(this.groupBox5);
-            this.tabPage_Settings.Controls.Add(this.groupBox1);
-            resources.ApplyResources(this.tabPage_Settings, "tabPage_Settings");
-            this.tabPage_Settings.Name = "tabPage_Settings";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button_WatchSkin_PathGet);
-            this.groupBox2.Controls.Add(this.textBox_WatchSkin_Path);
-            this.groupBox2.Controls.Add(this.checkBox_WatchSkin_Use);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // button_WatchSkin_PathGet
-            // 
-            resources.ApplyResources(this.button_WatchSkin_PathGet, "button_WatchSkin_PathGet");
-            this.button_WatchSkin_PathGet.Name = "button_WatchSkin_PathGet";
-            this.button_WatchSkin_PathGet.UseVisualStyleBackColor = true;
-            this.button_WatchSkin_PathGet.Click += new System.EventHandler(this.button_WatchSkin_PathGet_Click);
-            // 
-            // textBox_WatchSkin_Path
-            // 
-            resources.ApplyResources(this.textBox_WatchSkin_Path, "textBox_WatchSkin_Path");
-            this.textBox_WatchSkin_Path.Name = "textBox_WatchSkin_Path";
-            this.textBox_WatchSkin_Path.Leave += new System.EventHandler(this.textBox_WatchSkin_Path_Leave);
-            // 
-            // checkBox_WatchSkin_Use
-            // 
-            resources.ApplyResources(this.checkBox_WatchSkin_Use, "checkBox_WatchSkin_Use");
-            this.checkBox_WatchSkin_Use.Checked = true;
-            this.checkBox_WatchSkin_Use.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_WatchSkin_Use.Name = "checkBox_WatchSkin_Use";
-            this.checkBox_WatchSkin_Use.UseVisualStyleBackColor = true;
-            this.checkBox_WatchSkin_Use.CheckedChanged += new System.EventHandler(this.checkBox_WatchSkin_Use_CheckedChanged);
-            // 
-            // numericUpDown_Gif_Speed
-            // 
-            this.numericUpDown_Gif_Speed.DecimalPlaces = 1;
-            this.numericUpDown_Gif_Speed.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            resources.ApplyResources(this.numericUpDown_Gif_Speed, "numericUpDown_Gif_Speed");
-            this.numericUpDown_Gif_Speed.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            65536});
-            this.numericUpDown_Gif_Speed.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown_Gif_Speed.Name = "numericUpDown_Gif_Speed";
-            this.numericUpDown_Gif_Speed.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_Gif_Speed.ValueChanged += new System.EventHandler(this.numericUpDown_Gif_Speed_ValueChanged_1);
-            // 
-            // label355
-            // 
-            resources.ApplyResources(this.label355, "label355");
-            this.label355.Name = "label355";
-            // 
-            // checkBox_ShowIn12hourFormat
-            // 
-            resources.ApplyResources(this.checkBox_ShowIn12hourFormat, "checkBox_ShowIn12hourFormat");
-            this.checkBox_ShowIn12hourFormat.Checked = true;
-            this.checkBox_ShowIn12hourFormat.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_ShowIn12hourFormat.Name = "checkBox_ShowIn12hourFormat";
-            this.checkBox_ShowIn12hourFormat.UseVisualStyleBackColor = true;
-            this.checkBox_ShowIn12hourFormat.CheckedChanged += new System.EventHandler(this.checkBox_ShowIn12hourFormat_CheckedChanged);
-            this.checkBox_ShowIn12hourFormat.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // checkBox_SaveID
-            // 
-            resources.ApplyResources(this.checkBox_SaveID, "checkBox_SaveID");
-            this.checkBox_SaveID.Checked = true;
-            this.checkBox_SaveID.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_SaveID.Name = "checkBox_SaveID";
-            this.checkBox_SaveID.UseVisualStyleBackColor = true;
-            this.checkBox_SaveID.CheckedChanged += new System.EventHandler(this.checkBox_SaveID_CheckedChanged);
-            this.checkBox_SaveID.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.checkBox_Shortcuts_Border);
-            this.groupBox8.Controls.Add(this.checkBox_Shortcuts_Area);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // checkBox_Shortcuts_Border
-            // 
-            resources.ApplyResources(this.checkBox_Shortcuts_Border, "checkBox_Shortcuts_Border");
-            this.checkBox_Shortcuts_Border.Checked = true;
-            this.checkBox_Shortcuts_Border.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Shortcuts_Border.Name = "checkBox_Shortcuts_Border";
-            this.checkBox_Shortcuts_Border.UseVisualStyleBackColor = true;
-            this.checkBox_Shortcuts_Border.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Area_CheckedChanged);
-            this.checkBox_Shortcuts_Border.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // checkBox_Shortcuts_Area
-            // 
-            resources.ApplyResources(this.checkBox_Shortcuts_Area, "checkBox_Shortcuts_Area");
-            this.checkBox_Shortcuts_Area.Checked = true;
-            this.checkBox_Shortcuts_Area.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_Shortcuts_Area.Name = "checkBox_Shortcuts_Area";
-            this.checkBox_Shortcuts_Area.UseVisualStyleBackColor = true;
-            this.checkBox_Shortcuts_Area.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Area_CheckedChanged);
-            this.checkBox_Shortcuts_Area.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // button_Reset
-            // 
-            resources.ApplyResources(this.button_Reset, "button_Reset");
-            this.button_Reset.Name = "button_Reset";
-            this.button_Reset.UseVisualStyleBackColor = true;
-            this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
-            // 
-            // checkBox_JsonWarnings
-            // 
-            resources.ApplyResources(this.checkBox_JsonWarnings, "checkBox_JsonWarnings");
-            this.checkBox_JsonWarnings.Checked = true;
-            this.checkBox_JsonWarnings.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_JsonWarnings.Name = "checkBox_JsonWarnings";
-            this.checkBox_JsonWarnings.UseVisualStyleBackColor = true;
-            this.checkBox_JsonWarnings.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // comboBox_Language
-            // 
-            this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Language.FormattingEnabled = true;
-            this.comboBox_Language.Items.AddRange(new object[] {
-            resources.GetString("comboBox_Language.Items"),
-            resources.GetString("comboBox_Language.Items1"),
-            resources.GetString("comboBox_Language.Items2"),
-            resources.GetString("comboBox_Language.Items3"),
-            resources.GetString("comboBox_Language.Items4"),
-            resources.GetString("comboBox_Language.Items5")});
-            resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
-            this.comboBox_Language.Name = "comboBox_Language";
-            this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
-            // 
-            // label356
-            // 
-            resources.ApplyResources(this.label356, "label356");
-            this.label356.Name = "label356";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_DoNotning);
-            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_GoToFile);
-            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_Dialog);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // radioButton_Settings_Pack_DoNotning
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Pack_DoNotning, "radioButton_Settings_Pack_DoNotning");
-            this.radioButton_Settings_Pack_DoNotning.Name = "radioButton_Settings_Pack_DoNotning";
-            this.radioButton_Settings_Pack_DoNotning.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Pack_DoNotning.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_Pack_GoToFile
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Pack_GoToFile, "radioButton_Settings_Pack_GoToFile");
-            this.radioButton_Settings_Pack_GoToFile.Checked = true;
-            this.radioButton_Settings_Pack_GoToFile.Name = "radioButton_Settings_Pack_GoToFile";
-            this.radioButton_Settings_Pack_GoToFile.TabStop = true;
-            this.radioButton_Settings_Pack_GoToFile.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Pack_GoToFile.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_Pack_Dialog
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Pack_Dialog, "radioButton_Settings_Pack_Dialog");
-            this.radioButton_Settings_Pack_Dialog.Name = "radioButton_Settings_Pack_Dialog";
-            this.radioButton_Settings_Pack_Dialog.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Pack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_DoNotning);
-            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Download);
-            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Dialog);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // radioButton_Settings_Open_DoNotning
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Open_DoNotning, "radioButton_Settings_Open_DoNotning");
-            this.radioButton_Settings_Open_DoNotning.Name = "radioButton_Settings_Open_DoNotning";
-            this.radioButton_Settings_Open_DoNotning.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Open_DoNotning.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_Open_Download
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Open_Download, "radioButton_Settings_Open_Download");
-            this.radioButton_Settings_Open_Download.Checked = true;
-            this.radioButton_Settings_Open_Download.Name = "radioButton_Settings_Open_Download";
-            this.radioButton_Settings_Open_Download.TabStop = true;
-            this.radioButton_Settings_Open_Download.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Open_Download.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_Open_Dialog
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Open_Dialog, "radioButton_Settings_Open_Dialog");
-            this.radioButton_Settings_Open_Dialog.Name = "radioButton_Settings_Open_Dialog";
-            this.radioButton_Settings_Open_Dialog.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Open_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_DoNothing);
-            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Download);
-            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Dialog);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // radioButton_Settings_AfterUnpack_DoNothing
-            // 
-            resources.ApplyResources(this.radioButton_Settings_AfterUnpack_DoNothing, "radioButton_Settings_AfterUnpack_DoNothing");
-            this.radioButton_Settings_AfterUnpack_DoNothing.Name = "radioButton_Settings_AfterUnpack_DoNothing";
-            this.radioButton_Settings_AfterUnpack_DoNothing.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_AfterUnpack_DoNothing.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_AfterUnpack_Download
-            // 
-            resources.ApplyResources(this.radioButton_Settings_AfterUnpack_Download, "radioButton_Settings_AfterUnpack_Download");
-            this.radioButton_Settings_AfterUnpack_Download.Checked = true;
-            this.radioButton_Settings_AfterUnpack_Download.Name = "radioButton_Settings_AfterUnpack_Download";
-            this.radioButton_Settings_AfterUnpack_Download.TabStop = true;
-            this.radioButton_Settings_AfterUnpack_Download.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_AfterUnpack_Download.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_AfterUnpack_Dialog
-            // 
-            resources.ApplyResources(this.radioButton_Settings_AfterUnpack_Dialog, "radioButton_Settings_AfterUnpack_Dialog");
-            this.radioButton_Settings_AfterUnpack_Dialog.Name = "radioButton_Settings_AfterUnpack_Dialog";
-            this.radioButton_Settings_AfterUnpack_Dialog.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_AfterUnpack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Replace);
-            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Save);
-            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Dialog);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
-            // 
-            // radioButton_Settings_Unpack_Replace
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Unpack_Replace, "radioButton_Settings_Unpack_Replace");
-            this.radioButton_Settings_Unpack_Replace.Name = "radioButton_Settings_Unpack_Replace";
-            this.radioButton_Settings_Unpack_Replace.TabStop = true;
-            this.radioButton_Settings_Unpack_Replace.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Unpack_Replace.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_Unpack_Save
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Unpack_Save, "radioButton_Settings_Unpack_Save");
-            this.radioButton_Settings_Unpack_Save.Name = "radioButton_Settings_Unpack_Save";
-            this.radioButton_Settings_Unpack_Save.TabStop = true;
-            this.radioButton_Settings_Unpack_Save.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Unpack_Save.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // radioButton_Settings_Unpack_Dialog
-            // 
-            resources.ApplyResources(this.radioButton_Settings_Unpack_Dialog, "radioButton_Settings_Unpack_Dialog");
-            this.radioButton_Settings_Unpack_Dialog.Checked = true;
-            this.radioButton_Settings_Unpack_Dialog.Name = "radioButton_Settings_Unpack_Dialog";
-            this.radioButton_Settings_Unpack_Dialog.TabStop = true;
-            this.radioButton_Settings_Unpack_Dialog.UseVisualStyleBackColor = true;
-            this.radioButton_Settings_Unpack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
-            // 
-            // tabPage_About
-            // 
-            this.tabPage_About.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage_About.Controls.Add(this.linkLabel_resunpacker_qzip);
-            this.tabPage_About.Controls.Add(this.label_TranslateHelp);
-            this.tabPage_About.Controls.Add(this.label415);
-            this.tabPage_About.Controls.Add(this.label414);
-            this.tabPage_About.Controls.Add(this.label412);
-            this.tabPage_About.Controls.Add(this.label413);
-            this.tabPage_About.Controls.Add(this.linkLabel_py_amazfit_tools);
-            this.tabPage_About.Controls.Add(this.label410);
-            this.tabPage_About.Controls.Add(this.label409);
-            this.tabPage_About.Controls.Add(this.label408);
-            this.tabPage_About.Controls.Add(this.label407);
-            this.tabPage_About.Controls.Add(this.label_version_help);
-            this.tabPage_About.Controls.Add(this.label406);
-            this.tabPage_About.Controls.Add(this.pictureBox2);
-            resources.ApplyResources(this.tabPage_About, "tabPage_About");
-            this.tabPage_About.Name = "tabPage_About";
-            // 
-            // linkLabel_resunpacker_qzip
-            // 
-            resources.ApplyResources(this.linkLabel_resunpacker_qzip, "linkLabel_resunpacker_qzip");
-            this.linkLabel_resunpacker_qzip.Name = "linkLabel_resunpacker_qzip";
-            this.linkLabel_resunpacker_qzip.TabStop = true;
-            this.linkLabel_resunpacker_qzip.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_resunpacker_qzip_LinkClicked);
-            // 
-            // label_TranslateHelp
-            // 
-            resources.ApplyResources(this.label_TranslateHelp, "label_TranslateHelp");
-            this.label_TranslateHelp.Name = "label_TranslateHelp";
-            // 
-            // label415
-            // 
-            resources.ApplyResources(this.label415, "label415");
-            this.label415.Name = "label415";
-            // 
-            // label414
-            // 
-            resources.ApplyResources(this.label414, "label414");
-            this.label414.Name = "label414";
-            // 
-            // label412
-            // 
-            resources.ApplyResources(this.label412, "label412");
-            this.label412.Name = "label412";
-            // 
-            // label413
-            // 
-            resources.ApplyResources(this.label413, "label413");
-            this.label413.Name = "label413";
-            // 
-            // linkLabel_py_amazfit_tools
-            // 
-            resources.ApplyResources(this.linkLabel_py_amazfit_tools, "linkLabel_py_amazfit_tools");
-            this.linkLabel_py_amazfit_tools.Name = "linkLabel_py_amazfit_tools";
-            this.linkLabel_py_amazfit_tools.TabStop = true;
-            this.linkLabel_py_amazfit_tools.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_py_amazfit_tools_LinkClicked);
-            // 
-            // label410
-            // 
-            resources.ApplyResources(this.label410, "label410");
-            this.label410.Name = "label410";
-            // 
-            // label409
-            // 
-            resources.ApplyResources(this.label409, "label409");
-            this.label409.Name = "label409";
-            // 
-            // label408
-            // 
-            resources.ApplyResources(this.label408, "label408");
-            this.label408.Name = "label408";
-            // 
-            // label407
-            // 
-            resources.ApplyResources(this.label407, "label407");
-            this.label407.Name = "label407";
-            // 
-            // label_version_help
-            // 
-            resources.ApplyResources(this.label_version_help, "label_version_help");
-            this.label_version_help.Name = "label_version_help";
-            // 
-            // label406
-            // 
-            resources.ApplyResources(this.label406, "label406");
-            this.label406.Name = "label406";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::AmazFit_Watchface_2.Properties.Resources.gtr_2_sport_obsidian_black;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // contextMenuStrip_XY_InAnimationTable
-            // 
-            this.contextMenuStrip_XY_InAnimationTable.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_XY_InAnimationTable.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вставитьНачальныеКоординатыToolStripMenuItem,
-            this.вставитьКонечныеКоординатыToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.копироватьToolStripMenuItem3,
-            this.вставитьToolStripMenuItem3,
-            this.удалитьСтрокуToolStripMenuItem1});
-            this.contextMenuStrip_XY_InAnimationTable.Name = "contextMenuStrip_XY_InAnimationTable";
-            resources.ApplyResources(this.contextMenuStrip_XY_InAnimationTable, "contextMenuStrip_XY_InAnimationTable");
-            this.contextMenuStrip_XY_InAnimationTable.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_XY_InAnimationTable_Opening);
-            // 
-            // вставитьНачальныеКоординатыToolStripMenuItem
-            // 
-            this.вставитьНачальныеКоординатыToolStripMenuItem.Name = "вставитьНачальныеКоординатыToolStripMenuItem";
-            resources.ApplyResources(this.вставитьНачальныеКоординатыToolStripMenuItem, "вставитьНачальныеКоординатыToolStripMenuItem");
-            this.вставитьНачальныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьНачальныеКоординатыToolStripMenuItem_Click);
-            // 
-            // вставитьКонечныеКоординатыToolStripMenuItem
-            // 
-            this.вставитьКонечныеКоординатыToolStripMenuItem.Name = "вставитьКонечныеКоординатыToolStripMenuItem";
-            resources.ApplyResources(this.вставитьКонечныеКоординатыToolStripMenuItem, "вставитьКонечныеКоординатыToolStripMenuItem");
-            this.вставитьКонечныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКонечныеКоординатыToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
-            // копироватьToolStripMenuItem3
-            // 
-            this.копироватьToolStripMenuItem3.Name = "копироватьToolStripMenuItem3";
-            resources.ApplyResources(this.копироватьToolStripMenuItem3, "копироватьToolStripMenuItem3");
-            this.копироватьToolStripMenuItem3.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
-            // 
-            // вставитьToolStripMenuItem3
-            // 
-            this.вставитьToolStripMenuItem3.Name = "вставитьToolStripMenuItem3";
-            resources.ApplyResources(this.вставитьToolStripMenuItem3, "вставитьToolStripMenuItem3");
-            this.вставитьToolStripMenuItem3.Click += new System.EventHandler(this.вставитьToolStripMenuItem3_Click);
-            // 
-            // удалитьСтрокуToolStripMenuItem1
-            // 
-            this.удалитьСтрокуToolStripMenuItem1.Name = "удалитьСтрокуToolStripMenuItem1";
-            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem1, "удалитьСтрокуToolStripMenuItem1");
-            this.удалитьСтрокуToolStripMenuItem1.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
-            // 
-            // contextMenuStrip_XY_InTable
-            // 
-            this.contextMenuStrip_XY_InTable.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_XY_InTable.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вставитьКоординатыToolStripMenuItem,
-            this.копироватьToolStripMenuItem2,
-            this.вставитьToolStripMenuItem2,
-            this.удалитьСтрокуToolStripMenuItem});
-            this.contextMenuStrip_XY_InTable.Name = "contextMenuStrip_XY_InTable";
-            resources.ApplyResources(this.contextMenuStrip_XY_InTable, "contextMenuStrip_XY_InTable");
-            this.contextMenuStrip_XY_InTable.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_XY_InTable_Opening);
-            // 
-            // вставитьКоординатыToolStripMenuItem
-            // 
-            this.вставитьКоординатыToolStripMenuItem.Name = "вставитьКоординатыToolStripMenuItem";
-            resources.ApplyResources(this.вставитьКоординатыToolStripMenuItem, "вставитьКоординатыToolStripMenuItem");
-            this.вставитьКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатыToolStripMenuItem_Click);
-            // 
-            // копироватьToolStripMenuItem2
-            // 
-            this.копироватьToolStripMenuItem2.Name = "копироватьToolStripMenuItem2";
-            resources.ApplyResources(this.копироватьToolStripMenuItem2, "копироватьToolStripMenuItem2");
-            this.копироватьToolStripMenuItem2.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
-            // 
-            // вставитьToolStripMenuItem2
-            // 
-            this.вставитьToolStripMenuItem2.Name = "вставитьToolStripMenuItem2";
-            resources.ApplyResources(this.вставитьToolStripMenuItem2, "вставитьToolStripMenuItem2");
-            this.вставитьToolStripMenuItem2.Click += new System.EventHandler(this.вставитьToolStripMenuItem2_Click);
-            // 
-            // удалитьСтрокуToolStripMenuItem
-            // 
-            this.удалитьСтрокуToolStripMenuItem.Name = "удалитьСтрокуToolStripMenuItem";
-            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem, "удалитьСтрокуToolStripMenuItem");
-            this.удалитьСтрокуToolStripMenuItem.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
-            // 
-            // button_zip_unpack
-            // 
-            resources.ApplyResources(this.button_zip_unpack, "button_zip_unpack");
-            this.button_zip_unpack.Name = "button_zip_unpack";
-            this.button_zip_unpack.UseVisualStyleBackColor = true;
-            this.button_zip_unpack.Click += new System.EventHandler(this.button_zip_unpack_Click);
-            // 
-            // button_pack_zip
-            // 
-            resources.ApplyResources(this.button_pack_zip, "button_pack_zip");
-            this.button_pack_zip.Name = "button_pack_zip";
-            this.button_pack_zip.UseVisualStyleBackColor = true;
-            this.button_pack_zip.Click += new System.EventHandler(this.button_pack_zip_Click);
-            // 
-            // label_version
-            // 
-            resources.ApplyResources(this.label_version, "label_version");
-            this.label_version.Name = "label_version";
-            // 
-            // colorDialog_StepsProgress
-            // 
-            this.colorDialog_StepsProgress.FullOpen = true;
-            // 
-            // colorDialog_Battery
-            // 
-            this.colorDialog_Battery.FullOpen = true;
-            // 
-            // button_PreviewBig
-            // 
-            resources.ApplyResources(this.button_PreviewBig, "button_PreviewBig");
-            this.button_PreviewBig.Name = "button_PreviewBig";
-            this.button_PreviewBig.UseVisualStyleBackColor = true;
-            this.button_PreviewBig.Click += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
-            // 
-            // checkBox_WebW
-            // 
-            resources.ApplyResources(this.checkBox_WebW, "checkBox_WebW");
-            this.checkBox_WebW.Name = "checkBox_WebW";
-            this.checkBox_WebW.UseVisualStyleBackColor = true;
-            this.checkBox_WebW.CheckedChanged += new System.EventHandler(this.checkBox_WebW_CheckedChanged);
-            // 
-            // checkBox_WebB
-            // 
-            resources.ApplyResources(this.checkBox_WebB, "checkBox_WebB");
-            this.checkBox_WebB.Name = "checkBox_WebB";
-            this.checkBox_WebB.UseVisualStyleBackColor = true;
-            this.checkBox_WebB.CheckedChanged += new System.EventHandler(this.checkBox_WebB_CheckedChanged);
-            // 
-            // button_SavePNG
-            // 
-            resources.ApplyResources(this.button_SavePNG, "button_SavePNG");
-            this.button_SavePNG.Name = "button_SavePNG";
-            this.button_SavePNG.UseVisualStyleBackColor = true;
-            this.button_SavePNG.Click += new System.EventHandler(this.button_SavePNG_Click);
-            // 
-            // button_SaveGIF
-            // 
-            resources.ApplyResources(this.button_SaveGIF, "button_SaveGIF");
-            this.button_SaveGIF.Name = "button_SaveGIF";
-            this.button_SaveGIF.UseVisualStyleBackColor = true;
-            this.button_SaveGIF.Click += new System.EventHandler(this.button_SaveGIF_Click);
-            // 
-            // radioButton_GTR2
-            // 
-            resources.ApplyResources(this.radioButton_GTR2, "radioButton_GTR2");
-            this.radioButton_GTR2.Checked = true;
-            this.radioButton_GTR2.Name = "radioButton_GTR2";
-            this.radioButton_GTR2.TabStop = true;
-            this.radioButton_GTR2.UseVisualStyleBackColor = true;
-            this.radioButton_GTR2.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
-            // 
-            // label_preview_X
-            // 
-            resources.ApplyResources(this.label_preview_X, "label_preview_X");
-            this.label_preview_X.Name = "label_preview_X";
-            // 
-            // label_preview_Y
-            // 
-            resources.ApplyResources(this.label_preview_Y, "label_preview_Y");
-            this.label_preview_Y.Name = "label_preview_Y";
-            // 
-            // checkBox_border
-            // 
-            resources.ApplyResources(this.checkBox_border, "checkBox_border");
-            this.checkBox_border.Name = "checkBox_border";
-            this.checkBox_border.UseVisualStyleBackColor = true;
-            this.checkBox_border.CheckedChanged += new System.EventHandler(this.checkBox_border_CheckedChanged);
-            this.checkBox_border.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // radioButton_GTS2
-            // 
-            resources.ApplyResources(this.radioButton_GTS2, "radioButton_GTS2");
-            this.radioButton_GTS2.Name = "radioButton_GTS2";
-            this.radioButton_GTS2.UseVisualStyleBackColor = true;
-            this.radioButton_GTS2.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
-            // 
-            // checkBox_crop
-            // 
-            this.checkBox_crop.Checked = true;
-            this.checkBox_crop.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_crop, "checkBox_crop");
-            this.checkBox_crop.Name = "checkBox_crop";
-            this.checkBox_crop.UseVisualStyleBackColor = true;
-            this.checkBox_crop.CheckedChanged += new System.EventHandler(this.checkBox_crop_CheckedChanged);
-            this.checkBox_crop.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // checkBox_Show_Shortcuts
-            // 
-            this.checkBox_Show_Shortcuts.Checked = true;
-            this.checkBox_Show_Shortcuts.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_Show_Shortcuts, "checkBox_Show_Shortcuts");
-            this.checkBox_Show_Shortcuts.Name = "checkBox_Show_Shortcuts";
-            this.checkBox_Show_Shortcuts.UseVisualStyleBackColor = true;
-            this.checkBox_Show_Shortcuts.CheckedChanged += new System.EventHandler(this.checkBox_Show_Shortcuts_CheckedChanged);
-            this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // checkBox_CircleScaleImage
-            // 
-            resources.ApplyResources(this.checkBox_CircleScaleImage, "checkBox_CircleScaleImage");
-            this.checkBox_CircleScaleImage.Name = "checkBox_CircleScaleImage";
-            this.checkBox_CircleScaleImage.UseVisualStyleBackColor = true;
-            this.checkBox_CircleScaleImage.CheckedChanged += new System.EventHandler(this.checkBox_CircleScaleImage_CheckedChanged);
-            this.checkBox_CircleScaleImage.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // button_RefreshPreview
-            // 
-            resources.ApplyResources(this.button_RefreshPreview, "button_RefreshPreview");
-            this.button_RefreshPreview.Name = "button_RefreshPreview";
-            this.button_RefreshPreview.UseVisualStyleBackColor = true;
-            this.button_RefreshPreview.Click += new System.EventHandler(this.button_RefreshPreview_Click);
-            // 
-            // button_CreatePreview
-            // 
-            resources.ApplyResources(this.button_CreatePreview, "button_CreatePreview");
-            this.button_CreatePreview.Name = "button_CreatePreview";
-            this.button_CreatePreview.UseVisualStyleBackColor = true;
-            this.button_CreatePreview.Click += new System.EventHandler(this.button_CreatePreview_Click);
-            // 
-            // checkBox_center_marker
-            // 
-            this.checkBox_center_marker.Checked = true;
-            this.checkBox_center_marker.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_center_marker, "checkBox_center_marker");
-            this.checkBox_center_marker.Name = "checkBox_center_marker";
-            this.checkBox_center_marker.UseVisualStyleBackColor = true;
-            this.checkBox_center_marker.CheckedChanged += new System.EventHandler(this.checkBox_center_marker_CheckedChanged);
-            this.checkBox_center_marker.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // colorDialog_Pulse
-            // 
-            this.colorDialog_Pulse.FullOpen = true;
-            // 
-            // colorDialog_Calories
-            // 
-            this.colorDialog_Calories.FullOpen = true;
-            // 
-            // toolTip_Weather
-            // 
-            this.toolTip_Weather.ToolTipTitle = "Weather icons";
-            // 
-            // radioButton_GTR2e
-            // 
-            resources.ApplyResources(this.radioButton_GTR2e, "radioButton_GTR2e");
-            this.radioButton_GTR2e.Name = "radioButton_GTR2e";
-            this.radioButton_GTR2e.UseVisualStyleBackColor = true;
-            this.radioButton_GTR2e.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
-            // 
-            // radioButton_TRex_pro
-            // 
-            resources.ApplyResources(this.radioButton_TRex_pro, "radioButton_TRex_pro");
-            this.radioButton_TRex_pro.Name = "radioButton_TRex_pro";
-            this.radioButton_TRex_pro.UseVisualStyleBackColor = true;
-            this.radioButton_TRex_pro.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
-            // 
-            // progressBar1
-            // 
-            resources.ApplyResources(this.progressBar1, "progressBar1");
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Step = 1;
-            // 
-            // pictureBox_Preview
-            // 
-            resources.ApplyResources(this.pictureBox_Preview, "pictureBox_Preview");
-            this.pictureBox_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox_Preview.Name = "pictureBox_Preview";
-            this.pictureBox_Preview.TabStop = false;
-            this.pictureBox_Preview.DoubleClick += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
-            this.pictureBox_Preview.MouseLeave += new System.EventHandler(this.pictureBox_Preview_MouseLeave);
-            this.pictureBox_Preview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_Preview_MouseMove);
-            // 
-            // checkBox_WidgetsArea
-            // 
-            this.checkBox_WidgetsArea.Checked = true;
-            this.checkBox_WidgetsArea.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_WidgetsArea, "checkBox_WidgetsArea");
-            this.checkBox_WidgetsArea.Name = "checkBox_WidgetsArea";
-            this.checkBox_WidgetsArea.UseVisualStyleBackColor = true;
-            this.checkBox_WidgetsArea.CheckedChanged += new System.EventHandler(this.checkBox_WidgetsArea_CheckedChanged);
-            this.checkBox_WidgetsArea.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
-            // 
-            // radioButton_ZeppE
-            // 
-            resources.ApplyResources(this.radioButton_ZeppE, "radioButton_ZeppE");
-            this.radioButton_ZeppE.Name = "radioButton_ZeppE";
-            this.radioButton_ZeppE.UseVisualStyleBackColor = true;
-            this.radioButton_ZeppE.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // userControl_Set12
-            // 
-            resources.ApplyResources(this.userControl_Set12, "userControl_Set12");
-            this.userControl_Set12.Collapsed = true;
-            this.userControl_Set12.Name = "userControl_Set12";
-            this.userControl_Set12.SetNumber = 12;
-            this.userControl_Set12.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set12_Collapse);
-            this.userControl_Set12.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set11
-            // 
-            resources.ApplyResources(this.userControl_Set11, "userControl_Set11");
-            this.userControl_Set11.Collapsed = true;
-            this.userControl_Set11.Name = "userControl_Set11";
-            this.userControl_Set11.SetNumber = 11;
-            this.userControl_Set11.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set11_Collapse);
-            this.userControl_Set11.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set10
-            // 
-            resources.ApplyResources(this.userControl_Set10, "userControl_Set10");
-            this.userControl_Set10.Collapsed = true;
-            this.userControl_Set10.Name = "userControl_Set10";
-            this.userControl_Set10.SetNumber = 10;
-            this.userControl_Set10.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set10_Collapse);
-            this.userControl_Set10.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set9
-            // 
-            resources.ApplyResources(this.userControl_Set9, "userControl_Set9");
-            this.userControl_Set9.Collapsed = true;
-            this.userControl_Set9.Name = "userControl_Set9";
-            this.userControl_Set9.SetNumber = 9;
-            this.userControl_Set9.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set9_Collapse);
-            this.userControl_Set9.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set8
-            // 
-            resources.ApplyResources(this.userControl_Set8, "userControl_Set8");
-            this.userControl_Set8.Collapsed = true;
-            this.userControl_Set8.Name = "userControl_Set8";
-            this.userControl_Set8.SetNumber = 8;
-            this.userControl_Set8.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set8_Collapse);
-            this.userControl_Set8.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set7
-            // 
-            resources.ApplyResources(this.userControl_Set7, "userControl_Set7");
-            this.userControl_Set7.Collapsed = true;
-            this.userControl_Set7.Name = "userControl_Set7";
-            this.userControl_Set7.SetNumber = 7;
-            this.userControl_Set7.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set7_Collapse);
-            this.userControl_Set7.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set6
-            // 
-            resources.ApplyResources(this.userControl_Set6, "userControl_Set6");
-            this.userControl_Set6.Collapsed = true;
-            this.userControl_Set6.Name = "userControl_Set6";
-            this.userControl_Set6.SetNumber = 6;
-            this.userControl_Set6.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set6_Collapse);
-            this.userControl_Set6.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set5
-            // 
-            resources.ApplyResources(this.userControl_Set5, "userControl_Set5");
-            this.userControl_Set5.Collapsed = true;
-            this.userControl_Set5.Name = "userControl_Set5";
-            this.userControl_Set5.SetNumber = 5;
-            this.userControl_Set5.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set5_Collapse);
-            this.userControl_Set5.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set4
-            // 
-            resources.ApplyResources(this.userControl_Set4, "userControl_Set4");
-            this.userControl_Set4.Collapsed = true;
-            this.userControl_Set4.Name = "userControl_Set4";
-            this.userControl_Set4.SetNumber = 4;
-            this.userControl_Set4.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set4_Collapse);
-            this.userControl_Set4.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set3
-            // 
-            resources.ApplyResources(this.userControl_Set3, "userControl_Set3");
-            this.userControl_Set3.Collapsed = true;
-            this.userControl_Set3.Name = "userControl_Set3";
-            this.userControl_Set3.SetNumber = 3;
-            this.userControl_Set3.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set3_Collapse);
-            this.userControl_Set3.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set2
-            // 
-            resources.ApplyResources(this.userControl_Set2, "userControl_Set2");
-            this.userControl_Set2.Collapsed = true;
-            this.userControl_Set2.Name = "userControl_Set2";
-            this.userControl_Set2.SetNumber = 2;
-            this.userControl_Set2.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set2_Collapse);
-            this.userControl_Set2.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
-            // 
-            // userControl_Set1
-            // 
-            resources.ApplyResources(this.userControl_Set1, "userControl_Set1");
-            this.userControl_Set1.Collapsed = true;
-            this.userControl_Set1.Name = "userControl_Set1";
-            this.userControl_Set1.SetNumber = 1;
-            this.userControl_Set1.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set1_Collapse);
-            this.userControl_Set1.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
             // 
             // splitContainer_EditParameters
             // 
@@ -5004,6 +2109,35 @@
             this.numericUpDown_AM_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_AM_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
+            // contextMenuStrip_Y
+            // 
+            this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.копироватьToolStripMenuItem1,
+            this.вставитьToolStripMenuItem1});
+            this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
+            this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
+            // 
+            // toolStripMenuItem1
+            // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
+            this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
+            this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
+            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
+            this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
+            // 
             // label573
             // 
             resources.ApplyResources(this.label573, "label573");
@@ -5031,6 +2165,35 @@
             this.numericUpDown_AM_X.Name = "numericUpDown_AM_X";
             this.numericUpDown_AM_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_AM_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // contextMenuStrip_X
+            // 
+            this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьКоординатуХToolStripMenuItem,
+            this.копироватьToolStripMenuItem,
+            this.вставитьToolStripMenuItem});
+            this.contextMenuStrip_X.Name = "contextMenuStrip_X";
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
+            this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
+            // 
+            // вставитьКоординатуХToolStripMenuItem
+            // 
+            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
+            this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
+            this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem
+            // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
+            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
+            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem
+            // 
+            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
+            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
+            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // label574
             // 
@@ -9166,7 +6329,7 @@
             // 
             this.userControl_text_Distance.AOD = false;
             resources.ApplyResources(this.userControl_text_Distance, "userControl_text_Distance");
-            this.userControl_text_Distance.Collapsed = false;
+            this.userControl_text_Distance.Collapsed = true;
             this.userControl_text_Distance.Distance = true;
             this.userControl_text_Distance.Follow = false;
             this.userControl_text_Distance.ImageError = true;
@@ -10927,6 +8090,17 @@
             this.userControl_pictures_Battery.ImagesCount = 10;
             this.userControl_pictures_Battery.Name = "userControl_pictures_Battery";
             this.userControl_pictures_Battery.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Background-Icon.png");
+            this.imageList1.Images.SetKeyName(1, "Sidebar-Search-Icon.png");
+            this.imageList1.Images.SetKeyName(2, "Calendar.ico");
+            this.imageList1.Images.SetKeyName(3, "Sports-Walking-Icon.png");
+            this.imageList1.Images.SetKeyName(4, "Weather-Partly-Cloudy-Rain-Icon.png");
+            this.imageList1.Images.SetKeyName(5, "Tools-Icon.png");
             // 
             // tabControl_EditParameters_AOD
             // 
@@ -14880,7 +12054,7 @@
             // 
             this.userControl_text_Distance_AOD.AOD = true;
             resources.ApplyResources(this.userControl_text_Distance_AOD, "userControl_text_Distance_AOD");
-            this.userControl_text_Distance_AOD.Collapsed = false;
+            this.userControl_text_Distance_AOD.Collapsed = true;
             this.userControl_text_Distance_AOD.Distance = true;
             this.userControl_text_Distance_AOD.Follow = false;
             this.userControl_text_Distance_AOD.ImageError = true;
@@ -16372,6 +13546,795 @@
             this.userControl_pictures_Battery_AOD.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_ValueChanged);
             this.userControl_pictures_Battery_AOD.AOD_Copy_pictures += new AmazFit_Watchface_2.UserControl_pictures.AOD_CopyHandler(this.userControl_pictures_Battery_AOD_Copy);
             // 
+            // dataGridView_SNL_Activity
+            // 
+            this.dataGridView_SNL_Activity.AllowUserToAddRows = false;
+            this.dataGridView_SNL_Activity.AllowUserToDeleteRows = false;
+            this.dataGridView_SNL_Activity.AllowUserToResizeRows = false;
+            this.dataGridView_SNL_Activity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_SNL_Activity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ActivityID,
+            this.ActivityName});
+            resources.ApplyResources(this.dataGridView_SNL_Activity, "dataGridView_SNL_Activity");
+            this.dataGridView_SNL_Activity.MultiSelect = false;
+            this.dataGridView_SNL_Activity.Name = "dataGridView_SNL_Activity";
+            this.dataGridView_SNL_Activity.ReadOnly = true;
+            this.dataGridView_SNL_Activity.RowHeadersVisible = false;
+            this.dataGridView_SNL_Activity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_SNL_Activity.SelectionChanged += new System.EventHandler(this.dataGridView_SNL_Activity_SelectionChanged);
+            this.dataGridView_SNL_Activity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_SNL_Activity_KeyDown);
+            // 
+            // ActivityID
+            // 
+            this.ActivityID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ActivityID.Frozen = true;
+            resources.ApplyResources(this.ActivityID, "ActivityID");
+            this.ActivityID.Name = "ActivityID";
+            this.ActivityID.ReadOnly = true;
+            this.ActivityID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ActivityID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ActivityName
+            // 
+            this.ActivityName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.ActivityName, "ActivityName");
+            this.ActivityName.Name = "ActivityName";
+            this.ActivityName.ReadOnly = true;
+            this.ActivityName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ActivityName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage_Show);
+            this.tabControl1.Controls.Add(this.tabPage_Edit);
+            this.tabControl1.Controls.Add(this.tabPage_LayerOrder);
+            this.tabControl1.Controls.Add(this.tabPage_Widgets);
+            this.tabControl1.Controls.Add(this.tabPageConverting);
+            this.tabControl1.Controls.Add(this.tabPage_Settings);
+            this.tabControl1.Controls.Add(this.tabPage_About);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
+            // 
+            // tabPage_Show
+            // 
+            this.tabPage_Show.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Show.Controls.Add(this.panel3);
+            this.tabPage_Show.Controls.Add(this.dataGridView_ImagesList);
+            this.tabPage_Show.Controls.Add(this.button_images);
+            this.tabPage_Show.Controls.Add(this.label5);
+            this.tabPage_Show.Controls.Add(this.button_JSON);
+            this.tabPage_Show.Controls.Add(this.label4);
+            resources.ApplyResources(this.tabPage_Show, "tabPage_Show");
+            this.tabPage_Show.Name = "tabPage_Show";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel_set);
+            this.panel3.Controls.Add(this.panel_PreviewStates);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // panel_set
+            // 
+            this.panel_set.Controls.Add(this.userControl_Set12);
+            this.panel_set.Controls.Add(this.userControl_Set11);
+            this.panel_set.Controls.Add(this.userControl_Set10);
+            this.panel_set.Controls.Add(this.userControl_Set9);
+            this.panel_set.Controls.Add(this.userControl_Set8);
+            this.panel_set.Controls.Add(this.userControl_Set7);
+            this.panel_set.Controls.Add(this.userControl_Set6);
+            this.panel_set.Controls.Add(this.userControl_Set5);
+            this.panel_set.Controls.Add(this.userControl_Set4);
+            this.panel_set.Controls.Add(this.userControl_Set3);
+            this.panel_set.Controls.Add(this.userControl_Set2);
+            this.panel_set.Controls.Add(this.userControl_Set1);
+            resources.ApplyResources(this.panel_set, "panel_set");
+            this.panel_set.Name = "panel_set";
+            // 
+            // userControl_Set12
+            // 
+            resources.ApplyResources(this.userControl_Set12, "userControl_Set12");
+            this.userControl_Set12.Collapsed = true;
+            this.userControl_Set12.Name = "userControl_Set12";
+            this.userControl_Set12.SetNumber = 12;
+            this.userControl_Set12.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set12_Collapse);
+            this.userControl_Set12.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set11
+            // 
+            resources.ApplyResources(this.userControl_Set11, "userControl_Set11");
+            this.userControl_Set11.Collapsed = true;
+            this.userControl_Set11.Name = "userControl_Set11";
+            this.userControl_Set11.SetNumber = 11;
+            this.userControl_Set11.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set11_Collapse);
+            this.userControl_Set11.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set10
+            // 
+            resources.ApplyResources(this.userControl_Set10, "userControl_Set10");
+            this.userControl_Set10.Collapsed = true;
+            this.userControl_Set10.Name = "userControl_Set10";
+            this.userControl_Set10.SetNumber = 10;
+            this.userControl_Set10.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set10_Collapse);
+            this.userControl_Set10.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set9
+            // 
+            resources.ApplyResources(this.userControl_Set9, "userControl_Set9");
+            this.userControl_Set9.Collapsed = true;
+            this.userControl_Set9.Name = "userControl_Set9";
+            this.userControl_Set9.SetNumber = 9;
+            this.userControl_Set9.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set9_Collapse);
+            this.userControl_Set9.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set8
+            // 
+            resources.ApplyResources(this.userControl_Set8, "userControl_Set8");
+            this.userControl_Set8.Collapsed = true;
+            this.userControl_Set8.Name = "userControl_Set8";
+            this.userControl_Set8.SetNumber = 8;
+            this.userControl_Set8.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set8_Collapse);
+            this.userControl_Set8.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set7
+            // 
+            resources.ApplyResources(this.userControl_Set7, "userControl_Set7");
+            this.userControl_Set7.Collapsed = true;
+            this.userControl_Set7.Name = "userControl_Set7";
+            this.userControl_Set7.SetNumber = 7;
+            this.userControl_Set7.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set7_Collapse);
+            this.userControl_Set7.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set6
+            // 
+            resources.ApplyResources(this.userControl_Set6, "userControl_Set6");
+            this.userControl_Set6.Collapsed = true;
+            this.userControl_Set6.Name = "userControl_Set6";
+            this.userControl_Set6.SetNumber = 6;
+            this.userControl_Set6.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set6_Collapse);
+            this.userControl_Set6.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set5
+            // 
+            resources.ApplyResources(this.userControl_Set5, "userControl_Set5");
+            this.userControl_Set5.Collapsed = true;
+            this.userControl_Set5.Name = "userControl_Set5";
+            this.userControl_Set5.SetNumber = 5;
+            this.userControl_Set5.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set5_Collapse);
+            this.userControl_Set5.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set4
+            // 
+            resources.ApplyResources(this.userControl_Set4, "userControl_Set4");
+            this.userControl_Set4.Collapsed = true;
+            this.userControl_Set4.Name = "userControl_Set4";
+            this.userControl_Set4.SetNumber = 4;
+            this.userControl_Set4.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set4_Collapse);
+            this.userControl_Set4.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set3
+            // 
+            resources.ApplyResources(this.userControl_Set3, "userControl_Set3");
+            this.userControl_Set3.Collapsed = true;
+            this.userControl_Set3.Name = "userControl_Set3";
+            this.userControl_Set3.SetNumber = 3;
+            this.userControl_Set3.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set3_Collapse);
+            this.userControl_Set3.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set2
+            // 
+            resources.ApplyResources(this.userControl_Set2, "userControl_Set2");
+            this.userControl_Set2.Collapsed = true;
+            this.userControl_Set2.Name = "userControl_Set2";
+            this.userControl_Set2.SetNumber = 2;
+            this.userControl_Set2.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set2_Collapse);
+            this.userControl_Set2.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // userControl_Set1
+            // 
+            resources.ApplyResources(this.userControl_Set1, "userControl_Set1");
+            this.userControl_Set1.Collapsed = true;
+            this.userControl_Set1.Name = "userControl_Set1";
+            this.userControl_Set1.SetNumber = 1;
+            this.userControl_Set1.Collapse += new AmazFit_Watchface_2.UserControl_Set.CollapseHandler(this.userControl_Set1_Collapse);
+            this.userControl_Set1.ValueChanged += new AmazFit_Watchface_2.UserControl_Set.ValueChangedHandler(this.userControl_Set_ValueChanged);
+            // 
+            // panel_PreviewStates
+            // 
+            this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Random);
+            this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Read);
+            this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Write);
+            resources.ApplyResources(this.panel_PreviewStates, "panel_PreviewStates");
+            this.panel_PreviewStates.Name = "panel_PreviewStates";
+            // 
+            // button_JsonPreview_Random
+            // 
+            resources.ApplyResources(this.button_JsonPreview_Random, "button_JsonPreview_Random");
+            this.button_JsonPreview_Random.Name = "button_JsonPreview_Random";
+            this.button_JsonPreview_Random.UseVisualStyleBackColor = true;
+            this.button_JsonPreview_Random.Click += new System.EventHandler(this.button_JsonPreview_Random_Click);
+            // 
+            // button_JsonPreview_Read
+            // 
+            resources.ApplyResources(this.button_JsonPreview_Read, "button_JsonPreview_Read");
+            this.button_JsonPreview_Read.Name = "button_JsonPreview_Read";
+            this.button_JsonPreview_Read.UseVisualStyleBackColor = true;
+            this.button_JsonPreview_Read.Click += new System.EventHandler(this.button_JsonPreview_Read_Click);
+            // 
+            // button_JsonPreview_Write
+            // 
+            resources.ApplyResources(this.button_JsonPreview_Write, "button_JsonPreview_Write");
+            this.button_JsonPreview_Write.Name = "button_JsonPreview_Write";
+            this.button_JsonPreview_Write.UseVisualStyleBackColor = true;
+            this.button_JsonPreview_Write.Click += new System.EventHandler(this.button_JsonPreview_Write_Click);
+            // 
+            // dataGridView_ImagesList
+            // 
+            this.dataGridView_ImagesList.AllowUserToAddRows = false;
+            this.dataGridView_ImagesList.AllowUserToDeleteRows = false;
+            this.dataGridView_ImagesList.AllowUserToResizeRows = false;
+            this.dataGridView_ImagesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ImagesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number,
+            this.NameFile,
+            this.ColumnImage,
+            this.Column1});
+            resources.ApplyResources(this.dataGridView_ImagesList, "dataGridView_ImagesList");
+            this.dataGridView_ImagesList.Name = "dataGridView_ImagesList";
+            this.dataGridView_ImagesList.RowHeadersVisible = false;
+            // 
+            // Number
+            // 
+            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.Number, "Number");
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            // 
+            // NameFile
+            // 
+            this.NameFile.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.NameFile, "NameFile");
+            this.NameFile.Name = "NameFile";
+            this.NameFile.ReadOnly = true;
+            // 
+            // ColumnImage
+            // 
+            this.ColumnImage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            resources.ApplyResources(this.ColumnImage, "ColumnImage");
+            this.ColumnImage.Name = "ColumnImage";
+            this.ColumnImage.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // button_images
+            // 
+            resources.ApplyResources(this.button_images, "button_images");
+            this.button_images.Name = "button_images";
+            this.button_images.UseVisualStyleBackColor = true;
+            this.button_images.Click += new System.EventHandler(this.button_images_Click);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // button_JSON
+            // 
+            resources.ApplyResources(this.button_JSON, "button_JSON");
+            this.button_JSON.Name = "button_JSON";
+            this.button_JSON.UseVisualStyleBackColor = true;
+            this.button_JSON.Click += new System.EventHandler(this.button_JSON_Click);
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // tabPage_Edit
+            // 
+            this.tabPage_Edit.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Edit.Controls.Add(this.splitContainer_EditParameters);
+            this.tabPage_Edit.Controls.Add(this.panel6);
+            this.tabPage_Edit.Controls.Add(this.panel5);
+            resources.ApplyResources(this.tabPage_Edit, "tabPage_Edit");
+            this.tabPage_Edit.Name = "tabPage_Edit";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.button_RandomPreview);
+            this.panel6.Controls.Add(this.radioButton_ScreenIdle);
+            this.panel6.Controls.Add(this.radioButton_ScreenNormal);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // button_RandomPreview
+            // 
+            resources.ApplyResources(this.button_RandomPreview, "button_RandomPreview");
+            this.button_RandomPreview.Name = "button_RandomPreview";
+            this.button_RandomPreview.UseVisualStyleBackColor = true;
+            this.button_RandomPreview.Click += new System.EventHandler(this.button_RandomPreview_Click);
+            // 
+            // radioButton_ScreenIdle
+            // 
+            resources.ApplyResources(this.radioButton_ScreenIdle, "radioButton_ScreenIdle");
+            this.radioButton_ScreenIdle.Name = "radioButton_ScreenIdle";
+            this.radioButton_ScreenIdle.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ScreenNormal
+            // 
+            resources.ApplyResources(this.radioButton_ScreenNormal, "radioButton_ScreenNormal");
+            this.radioButton_ScreenNormal.Checked = true;
+            this.radioButton_ScreenNormal.Name = "radioButton_ScreenNormal";
+            this.radioButton_ScreenNormal.TabStop = true;
+            this.radioButton_ScreenNormal.UseVisualStyleBackColor = true;
+            this.radioButton_ScreenNormal.CheckedChanged += new System.EventHandler(this.radioButton_ScreenNormal_CheckedChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.splitContainer1);
+            this.panel5.Controls.Add(this.button_SaveJson);
+            this.panel5.Controls.Add(this.button_OpenDir);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // button_SaveJson
+            // 
+            resources.ApplyResources(this.button_SaveJson, "button_SaveJson");
+            this.button_SaveJson.Name = "button_SaveJson";
+            this.button_SaveJson.UseVisualStyleBackColor = true;
+            this.button_SaveJson.Click += new System.EventHandler(this.button_SaveJson_Click);
+            // 
+            // button_OpenDir
+            // 
+            resources.ApplyResources(this.button_OpenDir, "button_OpenDir");
+            this.button_OpenDir.Name = "button_OpenDir";
+            this.button_OpenDir.UseVisualStyleBackColor = true;
+            this.button_OpenDir.Click += new System.EventHandler(this.button_OpenDir_Click);
+            // 
+            // tabPage_LayerOrder
+            // 
+            this.tabPage_LayerOrder.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_LayerOrder.Controls.Add(this.groupBox_AODL_Date);
+            this.tabPage_LayerOrder.Controls.Add(this.groupBox_AODL_Activity);
+            this.tabPage_LayerOrder.Controls.Add(this.groupBox_SNL_Date);
+            this.tabPage_LayerOrder.Controls.Add(this.groupBox_SNL_Activity);
+            resources.ApplyResources(this.tabPage_LayerOrder, "tabPage_LayerOrder");
+            this.tabPage_LayerOrder.Name = "tabPage_LayerOrder";
+            // 
+            // groupBox_AODL_Date
+            // 
+            this.groupBox_AODL_Date.Controls.Add(this.label1);
+            this.groupBox_AODL_Date.Controls.Add(this.dataGridView_AODL_Date);
+            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_End);
+            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_Start);
+            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_Up);
+            this.groupBox_AODL_Date.Controls.Add(this.button_AODL_Date_Down);
+            resources.ApplyResources(this.groupBox_AODL_Date, "groupBox_AODL_Date");
+            this.groupBox_AODL_Date.Name = "groupBox_AODL_Date";
+            this.groupBox_AODL_Date.TabStop = false;
+            this.groupBox_AODL_Date.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // dataGridView_AODL_Date
+            // 
+            this.dataGridView_AODL_Date.AllowUserToAddRows = false;
+            this.dataGridView_AODL_Date.AllowUserToDeleteRows = false;
+            this.dataGridView_AODL_Date.AllowUserToResizeRows = false;
+            this.dataGridView_AODL_Date.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AODL_Date.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            resources.ApplyResources(this.dataGridView_AODL_Date, "dataGridView_AODL_Date");
+            this.dataGridView_AODL_Date.MultiSelect = false;
+            this.dataGridView_AODL_Date.Name = "dataGridView_AODL_Date";
+            this.dataGridView_AODL_Date.ReadOnly = true;
+            this.dataGridView_AODL_Date.RowHeadersVisible = false;
+            this.dataGridView_AODL_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_AODL_Date.SelectionChanged += new System.EventHandler(this.dataGridView_AODL_Date_SelectionChanged);
+            this.dataGridView_AODL_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_AODL_Date_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn5.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // button_AODL_Date_End
+            // 
+            resources.ApplyResources(this.button_AODL_Date_End, "button_AODL_Date_End");
+            this.button_AODL_Date_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_AODL_Date_End.Name = "button_AODL_Date_End";
+            this.button_AODL_Date_End.UseVisualStyleBackColor = true;
+            this.button_AODL_Date_End.Click += new System.EventHandler(this.button_AODL_Date_End_Click);
+            // 
+            // button_AODL_Date_Start
+            // 
+            resources.ApplyResources(this.button_AODL_Date_Start, "button_AODL_Date_Start");
+            this.button_AODL_Date_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_AODL_Date_Start.Name = "button_AODL_Date_Start";
+            this.button_AODL_Date_Start.UseVisualStyleBackColor = true;
+            this.button_AODL_Date_Start.Click += new System.EventHandler(this.button_AODL_Date_Start_Click);
+            // 
+            // button_AODL_Date_Up
+            // 
+            resources.ApplyResources(this.button_AODL_Date_Up, "button_AODL_Date_Up");
+            this.button_AODL_Date_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_AODL_Date_Up.Name = "button_AODL_Date_Up";
+            this.button_AODL_Date_Up.UseVisualStyleBackColor = true;
+            this.button_AODL_Date_Up.Click += new System.EventHandler(this.button_AODL_Date_Up_Click);
+            // 
+            // button_AODL_Date_Down
+            // 
+            resources.ApplyResources(this.button_AODL_Date_Down, "button_AODL_Date_Down");
+            this.button_AODL_Date_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_AODL_Date_Down.Name = "button_AODL_Date_Down";
+            this.button_AODL_Date_Down.UseVisualStyleBackColor = true;
+            this.button_AODL_Date_Down.Click += new System.EventHandler(this.button_AODL_Date_Down_Click);
+            // 
+            // groupBox_AODL_Activity
+            // 
+            this.groupBox_AODL_Activity.Controls.Add(this.dataGridView_AODL_Activity);
+            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_End);
+            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_Start);
+            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_Up);
+            this.groupBox_AODL_Activity.Controls.Add(this.button_AODL_Activity_Down);
+            resources.ApplyResources(this.groupBox_AODL_Activity, "groupBox_AODL_Activity");
+            this.groupBox_AODL_Activity.Name = "groupBox_AODL_Activity";
+            this.groupBox_AODL_Activity.TabStop = false;
+            this.groupBox_AODL_Activity.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // dataGridView_AODL_Activity
+            // 
+            this.dataGridView_AODL_Activity.AllowUserToAddRows = false;
+            this.dataGridView_AODL_Activity.AllowUserToDeleteRows = false;
+            this.dataGridView_AODL_Activity.AllowUserToResizeRows = false;
+            this.dataGridView_AODL_Activity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AODL_Activity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            resources.ApplyResources(this.dataGridView_AODL_Activity, "dataGridView_AODL_Activity");
+            this.dataGridView_AODL_Activity.MultiSelect = false;
+            this.dataGridView_AODL_Activity.Name = "dataGridView_AODL_Activity";
+            this.dataGridView_AODL_Activity.ReadOnly = true;
+            this.dataGridView_AODL_Activity.RowHeadersVisible = false;
+            this.dataGridView_AODL_Activity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_AODL_Activity.SelectionChanged += new System.EventHandler(this.dataGridView_AODL_Activity_SelectionChanged);
+            this.dataGridView_AODL_Activity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_AODL_Activity_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn3.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // button_AODL_Activity_End
+            // 
+            resources.ApplyResources(this.button_AODL_Activity_End, "button_AODL_Activity_End");
+            this.button_AODL_Activity_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_AODL_Activity_End.Name = "button_AODL_Activity_End";
+            this.button_AODL_Activity_End.UseVisualStyleBackColor = true;
+            this.button_AODL_Activity_End.Click += new System.EventHandler(this.button_AODL_Activity_End_Click);
+            // 
+            // button_AODL_Activity_Start
+            // 
+            resources.ApplyResources(this.button_AODL_Activity_Start, "button_AODL_Activity_Start");
+            this.button_AODL_Activity_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_AODL_Activity_Start.Name = "button_AODL_Activity_Start";
+            this.button_AODL_Activity_Start.UseVisualStyleBackColor = true;
+            this.button_AODL_Activity_Start.Click += new System.EventHandler(this.button_AODL_Activity_Start_Click);
+            // 
+            // button_AODL_Activity_Up
+            // 
+            resources.ApplyResources(this.button_AODL_Activity_Up, "button_AODL_Activity_Up");
+            this.button_AODL_Activity_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_AODL_Activity_Up.Name = "button_AODL_Activity_Up";
+            this.button_AODL_Activity_Up.UseVisualStyleBackColor = true;
+            this.button_AODL_Activity_Up.Click += new System.EventHandler(this.button_AODL_Activity_Up_Click);
+            // 
+            // button_AODL_Activity_Down
+            // 
+            resources.ApplyResources(this.button_AODL_Activity_Down, "button_AODL_Activity_Down");
+            this.button_AODL_Activity_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_AODL_Activity_Down.Name = "button_AODL_Activity_Down";
+            this.button_AODL_Activity_Down.UseVisualStyleBackColor = true;
+            this.button_AODL_Activity_Down.Click += new System.EventHandler(this.button_AODL_Activity_Down_Click);
+            // 
+            // groupBox_SNL_Date
+            // 
+            this.groupBox_SNL_Date.Controls.Add(this.label_SNL_Date);
+            this.groupBox_SNL_Date.Controls.Add(this.dataGridView_SNL_Date);
+            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_End);
+            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_Start);
+            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_Up);
+            this.groupBox_SNL_Date.Controls.Add(this.button_SNL_Date_Down);
+            resources.ApplyResources(this.groupBox_SNL_Date, "groupBox_SNL_Date");
+            this.groupBox_SNL_Date.Name = "groupBox_SNL_Date";
+            this.groupBox_SNL_Date.TabStop = false;
+            this.groupBox_SNL_Date.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label_SNL_Date
+            // 
+            resources.ApplyResources(this.label_SNL_Date, "label_SNL_Date");
+            this.label_SNL_Date.Name = "label_SNL_Date";
+            // 
+            // dataGridView_SNL_Date
+            // 
+            this.dataGridView_SNL_Date.AllowUserToAddRows = false;
+            this.dataGridView_SNL_Date.AllowUserToDeleteRows = false;
+            this.dataGridView_SNL_Date.AllowUserToResizeRows = false;
+            this.dataGridView_SNL_Date.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_SNL_Date.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            resources.ApplyResources(this.dataGridView_SNL_Date, "dataGridView_SNL_Date");
+            this.dataGridView_SNL_Date.MultiSelect = false;
+            this.dataGridView_SNL_Date.Name = "dataGridView_SNL_Date";
+            this.dataGridView_SNL_Date.ReadOnly = true;
+            this.dataGridView_SNL_Date.RowHeadersVisible = false;
+            this.dataGridView_SNL_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_SNL_Date.SelectionChanged += new System.EventHandler(this.dataGridView_SNL_Date_SelectionChanged);
+            this.dataGridView_SNL_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_SNL_Date_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // button_SNL_Date_End
+            // 
+            resources.ApplyResources(this.button_SNL_Date_End, "button_SNL_Date_End");
+            this.button_SNL_Date_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_SNL_Date_End.Name = "button_SNL_Date_End";
+            this.button_SNL_Date_End.UseVisualStyleBackColor = true;
+            this.button_SNL_Date_End.Click += new System.EventHandler(this.button_SNL_Date_End_Click);
+            // 
+            // button_SNL_Date_Start
+            // 
+            resources.ApplyResources(this.button_SNL_Date_Start, "button_SNL_Date_Start");
+            this.button_SNL_Date_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_SNL_Date_Start.Name = "button_SNL_Date_Start";
+            this.button_SNL_Date_Start.UseVisualStyleBackColor = true;
+            this.button_SNL_Date_Start.Click += new System.EventHandler(this.button_SNL_Date_Start_Click);
+            // 
+            // button_SNL_Date_Up
+            // 
+            resources.ApplyResources(this.button_SNL_Date_Up, "button_SNL_Date_Up");
+            this.button_SNL_Date_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_SNL_Date_Up.Name = "button_SNL_Date_Up";
+            this.button_SNL_Date_Up.UseVisualStyleBackColor = true;
+            this.button_SNL_Date_Up.Click += new System.EventHandler(this.button_SNL_Date_Up_Click);
+            // 
+            // button_SNL_Date_Down
+            // 
+            resources.ApplyResources(this.button_SNL_Date_Down, "button_SNL_Date_Down");
+            this.button_SNL_Date_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_SNL_Date_Down.Name = "button_SNL_Date_Down";
+            this.button_SNL_Date_Down.UseVisualStyleBackColor = true;
+            this.button_SNL_Date_Down.Click += new System.EventHandler(this.button_SNL_Date_Down_Click);
+            // 
+            // groupBox_SNL_Activity
+            // 
+            this.groupBox_SNL_Activity.Controls.Add(this.dataGridView_SNL_Activity);
+            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_End);
+            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_Start);
+            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_Up);
+            this.groupBox_SNL_Activity.Controls.Add(this.button_SNL_Activity_Down);
+            resources.ApplyResources(this.groupBox_SNL_Activity, "groupBox_SNL_Activity");
+            this.groupBox_SNL_Activity.Name = "groupBox_SNL_Activity";
+            this.groupBox_SNL_Activity.TabStop = false;
+            this.groupBox_SNL_Activity.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // button_SNL_Activity_End
+            // 
+            resources.ApplyResources(this.button_SNL_Activity_End, "button_SNL_Activity_End");
+            this.button_SNL_Activity_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_SNL_Activity_End.Name = "button_SNL_Activity_End";
+            this.button_SNL_Activity_End.UseVisualStyleBackColor = true;
+            this.button_SNL_Activity_End.Click += new System.EventHandler(this.button_SNL_Activity_End_Click);
+            // 
+            // button_SNL_Activity_Start
+            // 
+            resources.ApplyResources(this.button_SNL_Activity_Start, "button_SNL_Activity_Start");
+            this.button_SNL_Activity_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_SNL_Activity_Start.Name = "button_SNL_Activity_Start";
+            this.button_SNL_Activity_Start.UseVisualStyleBackColor = true;
+            this.button_SNL_Activity_Start.Click += new System.EventHandler(this.button_SNL_Activity_Start_Click);
+            // 
+            // button_SNL_Activity_Up
+            // 
+            resources.ApplyResources(this.button_SNL_Activity_Up, "button_SNL_Activity_Up");
+            this.button_SNL_Activity_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_SNL_Activity_Up.Name = "button_SNL_Activity_Up";
+            this.button_SNL_Activity_Up.UseVisualStyleBackColor = true;
+            this.button_SNL_Activity_Up.Click += new System.EventHandler(this.button_SNL_Activity_Up_Click);
+            // 
+            // button_SNL_Activity_Down
+            // 
+            resources.ApplyResources(this.button_SNL_Activity_Down, "button_SNL_Activity_Down");
+            this.button_SNL_Activity_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_SNL_Activity_Down.Name = "button_SNL_Activity_Down";
+            this.button_SNL_Activity_Down.UseVisualStyleBackColor = true;
+            this.button_SNL_Activity_Down.Click += new System.EventHandler(this.button_SNL_Activity_Down_Click);
+            // 
+            // tabPage_Widgets
+            // 
+            this.tabPage_Widgets.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Widgets.Controls.Add(this.tabControl_Widget);
+            resources.ApplyResources(this.tabPage_Widgets, "tabPage_Widgets");
+            this.tabPage_Widgets.Name = "tabPage_Widgets";
+            // 
+            // tabControl_Widget
+            // 
+            resources.ApplyResources(this.tabControl_Widget, "tabControl_Widget");
+            this.tabControl_Widget.Controls.Add(this.tabPage_WidgetsEdit);
+            this.tabControl_Widget.Controls.Add(this.tabPage_WidgetAdd);
+            this.tabControl_Widget.HotTrack = true;
+            this.tabControl_Widget.ImageList = this.imageList2;
+            this.tabControl_Widget.Multiline = true;
+            this.tabControl_Widget.Name = "tabControl_Widget";
+            this.tabControl_Widget.SelectedIndex = 0;
+            this.tabControl_Widget.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl_Widget.TabStop = false;
+            this.tabControl_Widget.SelectedIndexChanged += new System.EventHandler(this.tabControl_Widget_SelectedIndexChanged);
+            this.tabControl_Widget.VisibleChanged += new System.EventHandler(this.tabControl_Widget_VisibleChanged);
+            // 
+            // tabPage_WidgetsEdit
+            // 
+            this.tabPage_WidgetsEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_WidgetsEdit.Controls.Add(this.checkBox_TimeOnWidgetEdit);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetPreview);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetElementSettings);
+            this.tabPage_WidgetsEdit.Controls.Add(this.comboBox_WidgetsTopMask);
+            this.tabPage_WidgetsEdit.Controls.Add(this.label7);
+            this.tabPage_WidgetsEdit.Controls.Add(this.comboBox_WidgetsUnderMask);
+            this.tabPage_WidgetsEdit.Controls.Add(this.label01);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetNumber);
+            this.tabPage_WidgetsEdit.Controls.Add(this.groupBox_WidgetElement);
+            resources.ApplyResources(this.tabPage_WidgetsEdit, "tabPage_WidgetsEdit");
+            this.tabPage_WidgetsEdit.Name = "tabPage_WidgetsEdit";
+            // 
+            // checkBox_TimeOnWidgetEdit
+            // 
+            resources.ApplyResources(this.checkBox_TimeOnWidgetEdit, "checkBox_TimeOnWidgetEdit");
+            this.checkBox_TimeOnWidgetEdit.Name = "checkBox_TimeOnWidgetEdit";
+            this.checkBox_TimeOnWidgetEdit.UseVisualStyleBackColor = true;
+            this.checkBox_TimeOnWidgetEdit.CheckedChanged += new System.EventHandler(this.checkBox_TimeOnWidgetEdit_CheckedChanged);
+            // 
+            // groupBox_WidgetPreview
+            // 
+            this.groupBox_WidgetPreview.Controls.Add(this.radioButton_WidgetPreviewEdit);
+            this.groupBox_WidgetPreview.Controls.Add(this.radioButton_WidgetPreviewNormal);
+            resources.ApplyResources(this.groupBox_WidgetPreview, "groupBox_WidgetPreview");
+            this.groupBox_WidgetPreview.Name = "groupBox_WidgetPreview";
+            this.groupBox_WidgetPreview.TabStop = false;
+            this.groupBox_WidgetPreview.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_WidgetPreviewEdit
+            // 
+            resources.ApplyResources(this.radioButton_WidgetPreviewEdit, "radioButton_WidgetPreviewEdit");
+            this.radioButton_WidgetPreviewEdit.Name = "radioButton_WidgetPreviewEdit";
+            this.radioButton_WidgetPreviewEdit.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_WidgetPreviewNormal
+            // 
+            this.radioButton_WidgetPreviewNormal.Checked = true;
+            resources.ApplyResources(this.radioButton_WidgetPreviewNormal, "radioButton_WidgetPreviewNormal");
+            this.radioButton_WidgetPreviewNormal.Name = "radioButton_WidgetPreviewNormal";
+            this.radioButton_WidgetPreviewNormal.TabStop = true;
+            this.radioButton_WidgetPreviewNormal.UseVisualStyleBackColor = true;
+            this.radioButton_WidgetPreviewNormal.CheckedChanged += new System.EventHandler(this.radioButton_WidgetPreviewNormal_CheckedChanged);
+            // 
+            // groupBox_WidgetElementSettings
+            // 
+            this.groupBox_WidgetElementSettings.Controls.Add(this.panel1);
+            resources.ApplyResources(this.groupBox_WidgetElementSettings, "groupBox_WidgetElementSettings");
+            this.groupBox_WidgetElementSettings.Name = "groupBox_WidgetElementSettings";
+            this.groupBox_WidgetElementSettings.TabStop = false;
+            this.groupBox_WidgetElementSettings.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.tabControl_DateWidget);
+            this.panel1.Controls.Add(this.userControl_iconWidget);
+            this.panel1.Controls.Add(this.userControl_SystemFont_GroupSunriseWidget);
+            this.panel1.Controls.Add(this.userControl_SystemFont_GroupWeatherWidget);
+            this.panel1.Controls.Add(this.userControl_SystemFont_GroupWidget);
+            this.panel1.Controls.Add(this.userControl_scaleLinearWidget);
+            this.panel1.Controls.Add(this.userControl_scaleCircleWidget);
+            this.panel1.Controls.Add(this.userControl_handWidget);
+            this.panel1.Controls.Add(this.userControl_text_goalWidgetSunset);
+            this.panel1.Controls.Add(this.userControl_text_goalWidgetSunrise);
+            this.panel1.Controls.Add(this.userControl_text_weatherWidgetMax);
+            this.panel1.Controls.Add(this.userControl_text_weatherWidgetMin);
+            this.panel1.Controls.Add(this.userControl_text_weatherWidgetCur);
+            this.panel1.Controls.Add(this.userControl_text_goalWidget);
+            this.panel1.Controls.Add(this.userControl_textWidget);
+            this.panel1.Controls.Add(this.userControl_pictures_weatherWidget);
+            this.panel1.Controls.Add(this.userControl_segmentsWidget);
+            this.panel1.Controls.Add(this.userControl_picturesWidget);
+            this.panel1.Controls.Add(this.userControl_previewWidget);
+            this.panel1.Name = "panel1";
+            // 
+            // tabControl_DateWidget
+            // 
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_DayWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_MonthWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_YearWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_DOWWidget);
+            this.tabControl_DateWidget.Controls.Add(this.tabPage_DateLayerWidget);
+            resources.ApplyResources(this.tabControl_DateWidget, "tabControl_DateWidget");
+            this.tabControl_DateWidget.Name = "tabControl_DateWidget";
+            this.tabControl_DateWidget.SelectedIndex = 0;
+            // 
+            // tabPage_DayWidget
+            // 
+            resources.ApplyResources(this.tabPage_DayWidget, "tabPage_DayWidget");
+            this.tabPage_DayWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_DayWidget.Controls.Add(this.userControl_SystemFont_Group_DayWidget);
+            this.tabPage_DayWidget.Controls.Add(this.userControl_hand_DayWidget);
+            this.tabPage_DayWidget.Controls.Add(this.userControl_text_date_DayWidget);
+            this.tabPage_DayWidget.Name = "tabPage_DayWidget";
+            // 
             // userControl_SystemFont_Group_DayWidget
             // 
             this.userControl_SystemFont_Group_DayWidget.AOD = false;
@@ -16406,6 +14369,16 @@
             this.userControl_text_date_DayWidget.OptionalSymbol = false;
             this.userControl_text_date_DayWidget.Padding_zero = true;
             this.userControl_text_date_DayWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // tabPage_MonthWidget
+            // 
+            resources.ApplyResources(this.tabPage_MonthWidget, "tabPage_MonthWidget");
+            this.tabPage_MonthWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_SystemFont_Group_MonthWidget);
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_hand_MonthWidget);
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_text_date_MonthWidget);
+            this.tabPage_MonthWidget.Controls.Add(this.userControl_pictures_MonthWidget);
+            this.tabPage_MonthWidget.Name = "tabPage_MonthWidget";
             // 
             // userControl_SystemFont_Group_MonthWidget
             // 
@@ -16451,6 +14424,14 @@
             this.userControl_pictures_MonthWidget.Name = "userControl_pictures_MonthWidget";
             this.userControl_pictures_MonthWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_Widget_ValueChanged);
             // 
+            // tabPage_YearWidget
+            // 
+            resources.ApplyResources(this.tabPage_YearWidget, "tabPage_YearWidget");
+            this.tabPage_YearWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_YearWidget.Controls.Add(this.userControl_SystemFont_Group_YearWidget);
+            this.tabPage_YearWidget.Controls.Add(this.userControl_text_date_YearWidget);
+            this.tabPage_YearWidget.Name = "tabPage_YearWidget";
+            // 
             // userControl_SystemFont_Group_YearWidget
             // 
             this.userControl_SystemFont_Group_YearWidget.AOD = false;
@@ -16478,6 +14459,14 @@
             this.userControl_text_date_YearWidget.Padding_zero = true;
             this.userControl_text_date_YearWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_Widget_ValueChanged);
             // 
+            // tabPage_DOWWidget
+            // 
+            resources.ApplyResources(this.tabPage_DOWWidget, "tabPage_DOWWidget");
+            this.tabPage_DOWWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_DOWWidget.Controls.Add(this.userControl_hand_DOWWidget);
+            this.tabPage_DOWWidget.Controls.Add(this.userControl_pictures_DOWWidget);
+            this.tabPage_DOWWidget.Name = "tabPage_DOWWidget";
+            // 
             // userControl_hand_DOWWidget
             // 
             this.userControl_hand_DOWWidget.AOD = false;
@@ -16494,6 +14483,92 @@
             this.userControl_pictures_DOWWidget.ImagesCount = 7;
             this.userControl_pictures_DOWWidget.Name = "userControl_pictures_DOWWidget";
             this.userControl_pictures_DOWWidget.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_Widget_ValueChanged);
+            // 
+            // tabPage_DateLayerWidget
+            // 
+            this.tabPage_DateLayerWidget.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_DateLayerWidget.Controls.Add(this.label12);
+            this.tabPage_DateLayerWidget.Controls.Add(this.dataGridView_Widget_Date);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_End);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Start);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Up);
+            this.tabPage_DateLayerWidget.Controls.Add(this.button_Widget_Date_Down);
+            resources.ApplyResources(this.tabPage_DateLayerWidget, "tabPage_DateLayerWidget");
+            this.tabPage_DateLayerWidget.Name = "tabPage_DateLayerWidget";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // dataGridView_Widget_Date
+            // 
+            this.dataGridView_Widget_Date.AllowUserToAddRows = false;
+            this.dataGridView_Widget_Date.AllowUserToDeleteRows = false;
+            this.dataGridView_Widget_Date.AllowUserToResizeRows = false;
+            this.dataGridView_Widget_Date.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Widget_Date.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            resources.ApplyResources(this.dataGridView_Widget_Date, "dataGridView_Widget_Date");
+            this.dataGridView_Widget_Date.MultiSelect = false;
+            this.dataGridView_Widget_Date.Name = "dataGridView_Widget_Date";
+            this.dataGridView_Widget_Date.ReadOnly = true;
+            this.dataGridView_Widget_Date.RowHeadersVisible = false;
+            this.dataGridView_Widget_Date.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_Widget_Date.SelectionChanged += new System.EventHandler(this.dataGridView_Widget_Date_SelectionChanged);
+            this.dataGridView_Widget_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_Widget_Date_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn7.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // button_Widget_Date_End
+            // 
+            resources.ApplyResources(this.button_Widget_Date_End, "button_Widget_Date_End");
+            this.button_Widget_Date_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_Widget_Date_End.Name = "button_Widget_Date_End";
+            this.button_Widget_Date_End.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_End.Click += new System.EventHandler(this.button_Widget_Date_End_Click);
+            // 
+            // button_Widget_Date_Start
+            // 
+            resources.ApplyResources(this.button_Widget_Date_Start, "button_Widget_Date_Start");
+            this.button_Widget_Date_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_Widget_Date_Start.Name = "button_Widget_Date_Start";
+            this.button_Widget_Date_Start.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_Start.Click += new System.EventHandler(this.button_Widget_Date_Start_Click);
+            // 
+            // button_Widget_Date_Up
+            // 
+            resources.ApplyResources(this.button_Widget_Date_Up, "button_Widget_Date_Up");
+            this.button_Widget_Date_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_Widget_Date_Up.Name = "button_Widget_Date_Up";
+            this.button_Widget_Date_Up.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_Up.Click += new System.EventHandler(this.button_Widget_Date_Up_Click);
+            // 
+            // button_Widget_Date_Down
+            // 
+            resources.ApplyResources(this.button_Widget_Date_Down, "button_Widget_Date_Down");
+            this.button_Widget_Date_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_Widget_Date_Down.Name = "button_Widget_Date_Down";
+            this.button_Widget_Date_Down.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_Down.Click += new System.EventHandler(this.button_Widget_Date_Down_Click);
             // 
             // userControl_iconWidget
             // 
@@ -16703,6 +14778,692 @@
             this.userControl_previewWidget.CreatePreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidget_CreatePreview);
             this.userControl_previewWidget.RefreshPreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidget_RefreshPreview);
             // 
+            // comboBox_WidgetsTopMask
+            // 
+            this.comboBox_WidgetsTopMask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetsTopMask.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_WidgetsTopMask, "comboBox_WidgetsTopMask");
+            this.comboBox_WidgetsTopMask.FormattingEnabled = true;
+            this.comboBox_WidgetsTopMask.Name = "comboBox_WidgetsTopMask";
+            this.comboBox_WidgetsTopMask.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetsTopMask.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetsTopMask.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetsMask_SelectedIndexChanged);
+            this.comboBox_WidgetsTopMask.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetsTopMask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // comboBox_WidgetsUnderMask
+            // 
+            this.comboBox_WidgetsUnderMask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetsUnderMask.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_WidgetsUnderMask, "comboBox_WidgetsUnderMask");
+            this.comboBox_WidgetsUnderMask.FormattingEnabled = true;
+            this.comboBox_WidgetsUnderMask.Name = "comboBox_WidgetsUnderMask";
+            this.comboBox_WidgetsUnderMask.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetsUnderMask.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetsUnderMask.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetsMask_SelectedIndexChanged);
+            this.comboBox_WidgetsUnderMask.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetsUnderMask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label01
+            // 
+            resources.ApplyResources(this.label01, "label01");
+            this.label01.Name = "label01";
+            // 
+            // groupBox_WidgetNumber
+            // 
+            this.groupBox_WidgetNumber.Controls.Add(this.label11);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionLenght);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetBorderInactiv);
+            this.groupBox_WidgetNumber.Controls.Add(this.label10);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetBorderActiv);
+            this.groupBox_WidgetNumber.Controls.Add(this.label9);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetDescriptionBackground);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundX);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundY);
+            this.groupBox_WidgetNumber.Controls.Add(this.label02);
+            this.groupBox_WidgetNumber.Controls.Add(this.label8);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1084);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1085);
+            this.groupBox_WidgetNumber.Controls.Add(this.label6);
+            this.groupBox_WidgetNumber.Controls.Add(this.label2);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetWidth);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetHeight);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetX);
+            this.groupBox_WidgetNumber.Controls.Add(this.button_WidgetDel);
+            this.groupBox_WidgetNumber.Controls.Add(this.numericUpDown_WidgetY);
+            this.groupBox_WidgetNumber.Controls.Add(this.comboBox_WidgetNumber);
+            this.groupBox_WidgetNumber.Controls.Add(this.label05);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1083);
+            this.groupBox_WidgetNumber.Controls.Add(this.label1086);
+            resources.ApplyResources(this.groupBox_WidgetNumber, "groupBox_WidgetNumber");
+            this.groupBox_WidgetNumber.Name = "groupBox_WidgetNumber";
+            this.groupBox_WidgetNumber.TabStop = false;
+            this.groupBox_WidgetNumber.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // numericUpDown_WidgetDescriptionLenght
+            // 
+            this.numericUpDown_WidgetDescriptionLenght.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionLenght, "numericUpDown_WidgetDescriptionLenght");
+            this.numericUpDown_WidgetDescriptionLenght.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenght.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionLenght.Name = "numericUpDown_WidgetDescriptionLenght";
+            this.numericUpDown_WidgetDescriptionLenght.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenght.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            // 
+            // comboBox_WidgetBorderInactiv
+            // 
+            this.comboBox_WidgetBorderInactiv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderInactiv.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_WidgetBorderInactiv, "comboBox_WidgetBorderInactiv");
+            this.comboBox_WidgetBorderInactiv.FormattingEnabled = true;
+            this.comboBox_WidgetBorderInactiv.Name = "comboBox_WidgetBorderInactiv";
+            this.comboBox_WidgetBorderInactiv.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderInactiv.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderInactiv.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
+            this.comboBox_WidgetBorderInactiv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderInactiv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // comboBox_WidgetBorderActiv
+            // 
+            this.comboBox_WidgetBorderActiv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderActiv.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_WidgetBorderActiv, "comboBox_WidgetBorderActiv");
+            this.comboBox_WidgetBorderActiv.FormattingEnabled = true;
+            this.comboBox_WidgetBorderActiv.Name = "comboBox_WidgetBorderActiv";
+            this.comboBox_WidgetBorderActiv.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderActiv.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderActiv.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
+            this.comboBox_WidgetBorderActiv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderActiv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // comboBox_WidgetDescriptionBackground
+            // 
+            this.comboBox_WidgetDescriptionBackground.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetDescriptionBackground.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_WidgetDescriptionBackground, "comboBox_WidgetDescriptionBackground");
+            this.comboBox_WidgetDescriptionBackground.FormattingEnabled = true;
+            this.comboBox_WidgetDescriptionBackground.Name = "comboBox_WidgetDescriptionBackground";
+            this.comboBox_WidgetDescriptionBackground.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetDescriptionBackground.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetDescriptionBackground.SelectedIndexChanged += new System.EventHandler(this.comboBox_Widget_SelectedIndexChanged);
+            this.comboBox_WidgetDescriptionBackground.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetDescriptionBackground.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundX
+            // 
+            this.numericUpDown_WidgetDescriptionBackgroundX.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundX, "numericUpDown_WidgetDescriptionBackgroundX");
+            this.numericUpDown_WidgetDescriptionBackgroundX.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundX.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundX.Name = "numericUpDown_WidgetDescriptionBackgroundX";
+            this.numericUpDown_WidgetDescriptionBackgroundX.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundY
+            // 
+            this.numericUpDown_WidgetDescriptionBackgroundY.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundY, "numericUpDown_WidgetDescriptionBackgroundY");
+            this.numericUpDown_WidgetDescriptionBackgroundY.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundY.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundY.Name = "numericUpDown_WidgetDescriptionBackgroundY";
+            this.numericUpDown_WidgetDescriptionBackgroundY.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // label02
+            // 
+            resources.ApplyResources(this.label02, "label02");
+            this.label02.Name = "label02";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label1084
+            // 
+            resources.ApplyResources(this.label1084, "label1084");
+            this.label1084.Name = "label1084";
+            // 
+            // label1085
+            // 
+            resources.ApplyResources(this.label1085, "label1085");
+            this.label1085.Name = "label1085";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // numericUpDown_WidgetWidth
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetWidth, "numericUpDown_WidgetWidth");
+            this.numericUpDown_WidgetWidth.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetWidth.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetWidth.Name = "numericUpDown_WidgetWidth";
+            this.numericUpDown_WidgetWidth.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            // 
+            // numericUpDown_WidgetHeight
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetHeight, "numericUpDown_WidgetHeight");
+            this.numericUpDown_WidgetHeight.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetHeight.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetHeight.Name = "numericUpDown_WidgetHeight";
+            this.numericUpDown_WidgetHeight.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            // 
+            // numericUpDown_WidgetX
+            // 
+            this.numericUpDown_WidgetX.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WidgetX, "numericUpDown_WidgetX");
+            this.numericUpDown_WidgetX.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetX.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetX.Name = "numericUpDown_WidgetX";
+            this.numericUpDown_WidgetX.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // button_WidgetDel
+            // 
+            resources.ApplyResources(this.button_WidgetDel, "button_WidgetDel");
+            this.button_WidgetDel.Name = "button_WidgetDel";
+            this.button_WidgetDel.UseVisualStyleBackColor = true;
+            this.button_WidgetDel.Click += new System.EventHandler(this.button_WidgetDel_Click);
+            // 
+            // numericUpDown_WidgetY
+            // 
+            this.numericUpDown_WidgetY.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WidgetY, "numericUpDown_WidgetY");
+            this.numericUpDown_WidgetY.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetY.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetY.Name = "numericUpDown_WidgetY";
+            this.numericUpDown_WidgetY.ValueChanged += new System.EventHandler(this.numericUpDown_Widget_ValueChanged);
+            this.numericUpDown_WidgetY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // comboBox_WidgetNumber
+            // 
+            this.comboBox_WidgetNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_WidgetNumber.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_WidgetNumber, "comboBox_WidgetNumber");
+            this.comboBox_WidgetNumber.Name = "comboBox_WidgetNumber";
+            this.comboBox_WidgetNumber.SelectedIndexChanged += new System.EventHandler(this.comboBox_WidgetNumber_SelectedIndexChanged);
+            // 
+            // label05
+            // 
+            resources.ApplyResources(this.label05, "label05");
+            this.label05.Name = "label05";
+            // 
+            // label1083
+            // 
+            resources.ApplyResources(this.label1083, "label1083");
+            this.label1083.Name = "label1083";
+            // 
+            // label1086
+            // 
+            resources.ApplyResources(this.label1086, "label1086");
+            this.label1086.Name = "label1086";
+            // 
+            // groupBox_WidgetElement
+            // 
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElementDel);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_End);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Start);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Up);
+            this.groupBox_WidgetElement.Controls.Add(this.button_WidgetElement_Down);
+            this.groupBox_WidgetElement.Controls.Add(this.dataGridView_WidgetElement);
+            resources.ApplyResources(this.groupBox_WidgetElement, "groupBox_WidgetElement");
+            this.groupBox_WidgetElement.Name = "groupBox_WidgetElement";
+            this.groupBox_WidgetElement.TabStop = false;
+            this.groupBox_WidgetElement.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // button_WidgetElementDel
+            // 
+            resources.ApplyResources(this.button_WidgetElementDel, "button_WidgetElementDel");
+            this.button_WidgetElementDel.Name = "button_WidgetElementDel";
+            this.button_WidgetElementDel.UseVisualStyleBackColor = true;
+            this.button_WidgetElementDel.Click += new System.EventHandler(this.button_WidgetElementDel_Click);
+            // 
+            // button_WidgetElement_End
+            // 
+            resources.ApplyResources(this.button_WidgetElement_End, "button_WidgetElement_End");
+            this.button_WidgetElement_End.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_WidgetElement_End.Name = "button_WidgetElement_End";
+            this.button_WidgetElement_End.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_End.Click += new System.EventHandler(this.button_WidgetElement_End_Click);
+            // 
+            // button_WidgetElement_Start
+            // 
+            resources.ApplyResources(this.button_WidgetElement_Start, "button_WidgetElement_Start");
+            this.button_WidgetElement_Start.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_WidgetElement_Start.Name = "button_WidgetElement_Start";
+            this.button_WidgetElement_Start.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_Start.Click += new System.EventHandler(this.button_WidgetElement_Start_Click);
+            // 
+            // button_WidgetElement_Up
+            // 
+            resources.ApplyResources(this.button_WidgetElement_Up, "button_WidgetElement_Up");
+            this.button_WidgetElement_Up.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_WidgetElement_Up.Name = "button_WidgetElement_Up";
+            this.button_WidgetElement_Up.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_Up.Click += new System.EventHandler(this.button_WidgetElement_Up_Click);
+            // 
+            // button_WidgetElement_Down
+            // 
+            resources.ApplyResources(this.button_WidgetElement_Down, "button_WidgetElement_Down");
+            this.button_WidgetElement_Down.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_WidgetElement_Down.Name = "button_WidgetElement_Down";
+            this.button_WidgetElement_Down.UseVisualStyleBackColor = true;
+            this.button_WidgetElement_Down.Click += new System.EventHandler(this.button_WidgetElement_Down_Click);
+            // 
+            // dataGridView_WidgetElement
+            // 
+            this.dataGridView_WidgetElement.AllowUserToAddRows = false;
+            this.dataGridView_WidgetElement.AllowUserToDeleteRows = false;
+            this.dataGridView_WidgetElement.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_WidgetElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_WidgetElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.WidgetsID,
+            this.WidgetElement,
+            this.WidgetElementName});
+            this.dataGridView_WidgetElement.EnableHeadersVisualStyles = false;
+            resources.ApplyResources(this.dataGridView_WidgetElement, "dataGridView_WidgetElement");
+            this.dataGridView_WidgetElement.MultiSelect = false;
+            this.dataGridView_WidgetElement.Name = "dataGridView_WidgetElement";
+            this.dataGridView_WidgetElement.ReadOnly = true;
+            this.dataGridView_WidgetElement.RowHeadersVisible = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DarkGray;
+            this.dataGridView_WidgetElement.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView_WidgetElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_WidgetElement.SelectionChanged += new System.EventHandler(this.dataGridView_WidgetElement_SelectionChanged);
+            this.dataGridView_WidgetElement.EnabledChanged += new System.EventHandler(this.dataGridView_WidgetElement_EnabledChanged);
+            this.dataGridView_WidgetElement.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_WidgetElement_KeyDown);
+            // 
+            // WidgetsID
+            // 
+            this.WidgetsID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.WidgetsID.Frozen = true;
+            resources.ApplyResources(this.WidgetsID, "WidgetsID");
+            this.WidgetsID.Name = "WidgetsID";
+            this.WidgetsID.ReadOnly = true;
+            this.WidgetsID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.WidgetsID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // WidgetElement
+            // 
+            this.WidgetElement.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.WidgetElement, "WidgetElement");
+            this.WidgetElement.Name = "WidgetElement";
+            this.WidgetElement.ReadOnly = true;
+            this.WidgetElement.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.WidgetElement.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // WidgetElementName
+            // 
+            resources.ApplyResources(this.WidgetElementName, "WidgetElementName");
+            this.WidgetElementName.Name = "WidgetElementName";
+            this.WidgetElementName.ReadOnly = true;
+            // 
+            // tabPage_WidgetAdd
+            // 
+            this.tabPage_WidgetAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_WidgetAdd.Controls.Add(this.label31);
+            this.tabPage_WidgetAdd.Controls.Add(this.label30);
+            this.tabPage_WidgetAdd.Controls.Add(this.label29);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetTypeAdd);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WdgetAdd);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetElementAdd);
+            this.tabPage_WidgetAdd.Controls.Add(this.groupBox_WidgetNumberAdd);
+            resources.ApplyResources(this.tabPage_WidgetAdd, "tabPage_WidgetAdd");
+            this.tabPage_WidgetAdd.Name = "tabPage_WidgetAdd";
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.Name = "label31";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            // 
+            // groupBox_WidgetTypeAdd
+            // 
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_BatteryWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.label28);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_AirPressureWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_WindForceWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_SunriseWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_HumidityWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_UVindexWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_WeatherWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.label27);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_FatBurningWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_ActivityGoalWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_StandUpWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_DistanceWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_PAIWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_HeartRateWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_CaloriesWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.label26);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_StepsWidgetAdd);
+            this.groupBox_WidgetTypeAdd.Controls.Add(this.radioButton_DateWidgetAdd);
+            resources.ApplyResources(this.groupBox_WidgetTypeAdd, "groupBox_WidgetTypeAdd");
+            this.groupBox_WidgetTypeAdd.Name = "groupBox_WidgetTypeAdd";
+            this.groupBox_WidgetTypeAdd.TabStop = false;
+            this.groupBox_WidgetTypeAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_BatteryWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_BatteryWidgetAdd, "radioButton_BatteryWidgetAdd");
+            this.radioButton_BatteryWidgetAdd.Name = "radioButton_BatteryWidgetAdd";
+            this.radioButton_BatteryWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_BatteryWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // label28
+            // 
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.Name = "label28";
+            // 
+            // radioButton_AirPressureWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_AirPressureWidgetAdd, "radioButton_AirPressureWidgetAdd");
+            this.radioButton_AirPressureWidgetAdd.Name = "radioButton_AirPressureWidgetAdd";
+            this.radioButton_AirPressureWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_AirPressureWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_WindForceWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_WindForceWidgetAdd, "radioButton_WindForceWidgetAdd");
+            this.radioButton_WindForceWidgetAdd.Name = "radioButton_WindForceWidgetAdd";
+            this.radioButton_WindForceWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_WindForceWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_SunriseWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_SunriseWidgetAdd, "radioButton_SunriseWidgetAdd");
+            this.radioButton_SunriseWidgetAdd.Name = "radioButton_SunriseWidgetAdd";
+            this.radioButton_SunriseWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_SunriseWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_HumidityWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_HumidityWidgetAdd, "radioButton_HumidityWidgetAdd");
+            this.radioButton_HumidityWidgetAdd.Name = "radioButton_HumidityWidgetAdd";
+            this.radioButton_HumidityWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_HumidityWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_UVindexWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_UVindexWidgetAdd, "radioButton_UVindexWidgetAdd");
+            this.radioButton_UVindexWidgetAdd.Name = "radioButton_UVindexWidgetAdd";
+            this.radioButton_UVindexWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_UVindexWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_WeatherWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_WeatherWidgetAdd, "radioButton_WeatherWidgetAdd");
+            this.radioButton_WeatherWidgetAdd.Name = "radioButton_WeatherWidgetAdd";
+            this.radioButton_WeatherWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_WeatherWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // label27
+            // 
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // radioButton_FatBurningWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_FatBurningWidgetAdd, "radioButton_FatBurningWidgetAdd");
+            this.radioButton_FatBurningWidgetAdd.Name = "radioButton_FatBurningWidgetAdd";
+            this.radioButton_FatBurningWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_FatBurningWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_ActivityGoalWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_ActivityGoalWidgetAdd, "radioButton_ActivityGoalWidgetAdd");
+            this.radioButton_ActivityGoalWidgetAdd.Name = "radioButton_ActivityGoalWidgetAdd";
+            this.radioButton_ActivityGoalWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_ActivityGoalWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_StandUpWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_StandUpWidgetAdd, "radioButton_StandUpWidgetAdd");
+            this.radioButton_StandUpWidgetAdd.Name = "radioButton_StandUpWidgetAdd";
+            this.radioButton_StandUpWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_StandUpWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_DistanceWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_DistanceWidgetAdd, "radioButton_DistanceWidgetAdd");
+            this.radioButton_DistanceWidgetAdd.Name = "radioButton_DistanceWidgetAdd";
+            this.radioButton_DistanceWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_DistanceWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_PAIWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_PAIWidgetAdd, "radioButton_PAIWidgetAdd");
+            this.radioButton_PAIWidgetAdd.Name = "radioButton_PAIWidgetAdd";
+            this.radioButton_PAIWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_PAIWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_HeartRateWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_HeartRateWidgetAdd, "radioButton_HeartRateWidgetAdd");
+            this.radioButton_HeartRateWidgetAdd.Name = "radioButton_HeartRateWidgetAdd";
+            this.radioButton_HeartRateWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_HeartRateWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_CaloriesWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_CaloriesWidgetAdd, "radioButton_CaloriesWidgetAdd");
+            this.radioButton_CaloriesWidgetAdd.Name = "radioButton_CaloriesWidgetAdd";
+            this.radioButton_CaloriesWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_CaloriesWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // label26
+            // 
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // radioButton_StepsWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_StepsWidgetAdd, "radioButton_StepsWidgetAdd");
+            this.radioButton_StepsWidgetAdd.Checked = true;
+            this.radioButton_StepsWidgetAdd.Name = "radioButton_StepsWidgetAdd";
+            this.radioButton_StepsWidgetAdd.TabStop = true;
+            this.radioButton_StepsWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_StepsWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // radioButton_DateWidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_DateWidgetAdd, "radioButton_DateWidgetAdd");
+            this.radioButton_DateWidgetAdd.Name = "radioButton_DateWidgetAdd";
+            this.radioButton_DateWidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_DateWidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAddType_CheckedChanged);
+            // 
+            // groupBox_WdgetAdd
+            // 
+            this.groupBox_WdgetAdd.Controls.Add(this.button_WidgetAdd);
+            this.groupBox_WdgetAdd.Controls.Add(this.radioButton_WidgetElementAdd);
+            this.groupBox_WdgetAdd.Controls.Add(this.radioButton_WidgetAdd);
+            resources.ApplyResources(this.groupBox_WdgetAdd, "groupBox_WdgetAdd");
+            this.groupBox_WdgetAdd.Name = "groupBox_WdgetAdd";
+            this.groupBox_WdgetAdd.TabStop = false;
+            this.groupBox_WdgetAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // button_WidgetAdd
+            // 
+            resources.ApplyResources(this.button_WidgetAdd, "button_WidgetAdd");
+            this.button_WidgetAdd.Name = "button_WidgetAdd";
+            this.button_WidgetAdd.UseVisualStyleBackColor = true;
+            this.button_WidgetAdd.Click += new System.EventHandler(this.button_WidgetAdd_Click);
+            // 
+            // radioButton_WidgetElementAdd
+            // 
+            this.radioButton_WidgetElementAdd.Checked = true;
+            resources.ApplyResources(this.radioButton_WidgetElementAdd, "radioButton_WidgetElementAdd");
+            this.radioButton_WidgetElementAdd.Name = "radioButton_WidgetElementAdd";
+            this.radioButton_WidgetElementAdd.TabStop = true;
+            this.radioButton_WidgetElementAdd.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_WidgetAdd
+            // 
+            resources.ApplyResources(this.radioButton_WidgetAdd, "radioButton_WidgetAdd");
+            this.radioButton_WidgetAdd.Name = "radioButton_WidgetAdd";
+            this.radioButton_WidgetAdd.UseVisualStyleBackColor = true;
+            this.radioButton_WidgetAdd.CheckedChanged += new System.EventHandler(this.radioButton_WidgetAdd_CheckedChanged);
+            // 
+            // groupBox_WidgetElementAdd
+            // 
+            this.groupBox_WidgetElementAdd.Controls.Add(this.panel2);
+            resources.ApplyResources(this.groupBox_WidgetElementAdd, "groupBox_WidgetElementAdd");
+            this.groupBox_WidgetElementAdd.Name = "groupBox_WidgetElementAdd";
+            this.groupBox_WidgetElementAdd.TabStop = false;
+            this.groupBox_WidgetElementAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.tabControl_DateWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_iconWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_SystemFont_GroupSunriseWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_SystemFont_GroupWeatherWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_SystemFont_GroupWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_scaleLinearWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_scaleCircleWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_handWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_text_goalWidgetSunsetAdd);
+            this.panel2.Controls.Add(this.userControl_text_goalWidgetSunriseAdd);
+            this.panel2.Controls.Add(this.userControl_text_weatherWidgetMaxAdd);
+            this.panel2.Controls.Add(this.userControl_text_weatherWidgetMinAdd);
+            this.panel2.Controls.Add(this.userControl_text_weatherWidgetCurAdd);
+            this.panel2.Controls.Add(this.userControl_text_goalWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_textWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_pictures_weatherWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_segmentsWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_picturesWidgetAdd);
+            this.panel2.Controls.Add(this.userControl_previewWidgetAdd);
+            this.panel2.Name = "panel2";
+            // 
+            // tabControl_DateWidgetAdd
+            // 
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage1);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage2);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage3);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage4);
+            this.tabControl_DateWidgetAdd.Controls.Add(this.tabPage5);
+            resources.ApplyResources(this.tabControl_DateWidgetAdd, "tabControl_DateWidgetAdd");
+            this.tabControl_DateWidgetAdd.Name = "tabControl_DateWidgetAdd";
+            this.tabControl_DateWidgetAdd.SelectedIndex = 0;
+            // 
+            // tabPage1
+            // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.userControl_SystemFont_Group_DayWidgetAdd);
+            this.tabPage1.Controls.Add(this.userControl_hand_DayWidgetAdd);
+            this.tabPage1.Controls.Add(this.userControl_text_date_DayWidgetAdd);
+            this.tabPage1.Name = "tabPage1";
+            // 
             // userControl_SystemFont_Group_DayWidgetAdd
             // 
             this.userControl_SystemFont_Group_DayWidgetAdd.AOD = false;
@@ -16737,6 +15498,16 @@
             this.userControl_text_date_DayWidgetAdd.OptionalSymbol = false;
             this.userControl_text_date_DayWidgetAdd.Padding_zero = true;
             this.userControl_text_date_DayWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.userControl_SystemFont_Group_MonthWidgetAdd);
+            this.tabPage2.Controls.Add(this.userControl_hand_MonthWidgetAdd);
+            this.tabPage2.Controls.Add(this.userControl_text_date_MonthWidgetAdd);
+            this.tabPage2.Controls.Add(this.userControl_pictures_MonthWidgetAdd);
+            this.tabPage2.Name = "tabPage2";
             // 
             // userControl_SystemFont_Group_MonthWidgetAdd
             // 
@@ -16782,6 +15553,14 @@
             this.userControl_pictures_MonthWidgetAdd.Name = "userControl_pictures_MonthWidgetAdd";
             this.userControl_pictures_MonthWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
             // 
+            // tabPage3
+            // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.userControl_SystemFont_Group_YearWidgetAdd);
+            this.tabPage3.Controls.Add(this.userControl_text_date_YearWidgetAdd);
+            this.tabPage3.Name = "tabPage3";
+            // 
             // userControl_SystemFont_Group_YearWidgetAdd
             // 
             this.userControl_SystemFont_Group_YearWidgetAdd.AOD = false;
@@ -16809,6 +15588,14 @@
             this.userControl_text_date_YearWidgetAdd.Padding_zero = true;
             this.userControl_text_date_YearWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_text.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
             // 
+            // tabPage4
+            // 
+            resources.ApplyResources(this.tabPage4, "tabPage4");
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.userControl_hand_DOWWidgetAdd);
+            this.tabPage4.Controls.Add(this.userControl_pictures_DOWWidgetAdd);
+            this.tabPage4.Name = "tabPage4";
+            // 
             // userControl_hand_DOWWidgetAdd
             // 
             this.userControl_hand_DOWWidgetAdd.AOD = false;
@@ -16825,6 +15612,92 @@
             this.userControl_pictures_DOWWidgetAdd.ImagesCount = 7;
             this.userControl_pictures_DOWWidgetAdd.Name = "userControl_pictures_DOWWidgetAdd";
             this.userControl_pictures_DOWWidgetAdd.ValueChanged += new AmazFit_Watchface_2.UserControl_pictures.ValueChangedHandler(this.userControl_WidgetAdd_ValueChanged);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.dataGridView_Widget_DateAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_EndAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_StartAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_UpAdd);
+            this.tabPage5.Controls.Add(this.button_Widget_Date_DownAdd);
+            resources.ApplyResources(this.tabPage5, "tabPage5");
+            this.tabPage5.Name = "tabPage5";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // dataGridView_Widget_DateAdd
+            // 
+            this.dataGridView_Widget_DateAdd.AllowUserToAddRows = false;
+            this.dataGridView_Widget_DateAdd.AllowUserToDeleteRows = false;
+            this.dataGridView_Widget_DateAdd.AllowUserToResizeRows = false;
+            this.dataGridView_Widget_DateAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Widget_DateAdd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            resources.ApplyResources(this.dataGridView_Widget_DateAdd, "dataGridView_Widget_DateAdd");
+            this.dataGridView_Widget_DateAdd.MultiSelect = false;
+            this.dataGridView_Widget_DateAdd.Name = "dataGridView_Widget_DateAdd";
+            this.dataGridView_Widget_DateAdd.ReadOnly = true;
+            this.dataGridView_Widget_DateAdd.RowHeadersVisible = false;
+            this.dataGridView_Widget_DateAdd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_Widget_DateAdd.SelectionChanged += new System.EventHandler(this.dataGridView_Widget_DateAdd_SelectionChanged);
+            this.dataGridView_Widget_DateAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView_Widget_DateAdd_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn9.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn9, "dataGridViewTextBoxColumn9");
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn10, "dataGridViewTextBoxColumn10");
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // button_Widget_Date_EndAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_EndAdd, "button_Widget_Date_EndAdd");
+            this.button_Widget_Date_EndAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_down_icon;
+            this.button_Widget_Date_EndAdd.Name = "button_Widget_Date_EndAdd";
+            this.button_Widget_Date_EndAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_EndAdd.Click += new System.EventHandler(this.button_Widget_Date_EndAdd_Click);
+            // 
+            // button_Widget_Date_StartAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_StartAdd, "button_Widget_Date_StartAdd");
+            this.button_Widget_Date_StartAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_full_up_icon;
+            this.button_Widget_Date_StartAdd.Name = "button_Widget_Date_StartAdd";
+            this.button_Widget_Date_StartAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_StartAdd.Click += new System.EventHandler(this.button_Widget_Date_StartAdd_Click);
+            // 
+            // button_Widget_Date_UpAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_UpAdd, "button_Widget_Date_UpAdd");
+            this.button_Widget_Date_UpAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_up_icon;
+            this.button_Widget_Date_UpAdd.Name = "button_Widget_Date_UpAdd";
+            this.button_Widget_Date_UpAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_UpAdd.Click += new System.EventHandler(this.button_Widget_Date_UpAdd_Click);
+            // 
+            // button_Widget_Date_DownAdd
+            // 
+            resources.ApplyResources(this.button_Widget_Date_DownAdd, "button_Widget_Date_DownAdd");
+            this.button_Widget_Date_DownAdd.Image = global::AmazFit_Watchface_2.Properties.Resources.Navigate_down_icon;
+            this.button_Widget_Date_DownAdd.Name = "button_Widget_Date_DownAdd";
+            this.button_Widget_Date_DownAdd.UseVisualStyleBackColor = true;
+            this.button_Widget_Date_DownAdd.Click += new System.EventHandler(this.button_Widget_Date_DownAdd_Click);
             // 
             // userControl_iconWidgetAdd
             // 
@@ -17034,6 +15907,1134 @@
             this.userControl_previewWidgetAdd.CreatePreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidgetAdd_CreatePreview);
             this.userControl_previewWidgetAdd.RefreshPreview += new AmazFit_Watchface_2.UserControl_preview.ButtonClickHandler(this.userControl_previewWidgetAdd_RefreshPreview);
             // 
+            // groupBox_WidgetNumberAdd
+            // 
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label14);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionLenghtAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetBorderInactivAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label15);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetBorderActivAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label16);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.comboBox_WidgetDescriptionBackgroundAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundXAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetDescriptionBackgroundYAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label17);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label18);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label19);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label20);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label21);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label22);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetWidthAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetHeightAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetXAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.numericUpDown_WidgetYAdd);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label23);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label24);
+            this.groupBox_WidgetNumberAdd.Controls.Add(this.label25);
+            resources.ApplyResources(this.groupBox_WidgetNumberAdd, "groupBox_WidgetNumberAdd");
+            this.groupBox_WidgetNumberAdd.Name = "groupBox_WidgetNumberAdd";
+            this.groupBox_WidgetNumberAdd.TabStop = false;
+            this.groupBox_WidgetNumberAdd.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // numericUpDown_WidgetDescriptionLenghtAdd
+            // 
+            this.numericUpDown_WidgetDescriptionLenghtAdd.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionLenghtAdd, "numericUpDown_WidgetDescriptionLenghtAdd");
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Name = "numericUpDown_WidgetDescriptionLenghtAdd";
+            this.numericUpDown_WidgetDescriptionLenghtAdd.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionLenghtAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            // 
+            // comboBox_WidgetBorderInactivAdd
+            // 
+            this.comboBox_WidgetBorderInactivAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderInactivAdd.DropDownWidth = 75;
+            this.comboBox_WidgetBorderInactivAdd.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_WidgetBorderInactivAdd, "comboBox_WidgetBorderInactivAdd");
+            this.comboBox_WidgetBorderInactivAdd.Name = "comboBox_WidgetBorderInactivAdd";
+            this.comboBox_WidgetBorderInactivAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderInactivAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderInactivAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.comboBox_WidgetBorderInactivAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderInactivAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // comboBox_WidgetBorderActivAdd
+            // 
+            this.comboBox_WidgetBorderActivAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetBorderActivAdd.DropDownWidth = 75;
+            this.comboBox_WidgetBorderActivAdd.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_WidgetBorderActivAdd, "comboBox_WidgetBorderActivAdd");
+            this.comboBox_WidgetBorderActivAdd.Name = "comboBox_WidgetBorderActivAdd";
+            this.comboBox_WidgetBorderActivAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetBorderActivAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetBorderActivAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.comboBox_WidgetBorderActivAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetBorderActivAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
+            // comboBox_WidgetDescriptionBackgroundAdd
+            // 
+            this.comboBox_WidgetDescriptionBackgroundAdd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WidgetDescriptionBackgroundAdd.DropDownWidth = 75;
+            this.comboBox_WidgetDescriptionBackgroundAdd.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_WidgetDescriptionBackgroundAdd, "comboBox_WidgetDescriptionBackgroundAdd");
+            this.comboBox_WidgetDescriptionBackgroundAdd.Name = "comboBox_WidgetDescriptionBackgroundAdd";
+            this.comboBox_WidgetDescriptionBackgroundAdd.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WidgetDescriptionBackgroundAdd.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WidgetDescriptionBackgroundAdd.SelectedIndexChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.comboBox_WidgetDescriptionBackgroundAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WidgetDescriptionBackgroundAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundXAdd
+            // 
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundXAdd, "numericUpDown_WidgetDescriptionBackgroundXAdd");
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.Name = "numericUpDown_WidgetDescriptionBackgroundXAdd";
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundXAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_WidgetDescriptionBackgroundYAdd
+            // 
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WidgetDescriptionBackgroundYAdd, "numericUpDown_WidgetDescriptionBackgroundYAdd");
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.Name = "numericUpDown_WidgetDescriptionBackgroundYAdd";
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetDescriptionBackgroundYAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // numericUpDown_WidgetWidthAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetWidthAdd, "numericUpDown_WidgetWidthAdd");
+            this.numericUpDown_WidgetWidthAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetWidthAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetWidthAdd.Name = "numericUpDown_WidgetWidthAdd";
+            this.numericUpDown_WidgetWidthAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            // 
+            // numericUpDown_WidgetHeightAdd
+            // 
+            resources.ApplyResources(this.numericUpDown_WidgetHeightAdd, "numericUpDown_WidgetHeightAdd");
+            this.numericUpDown_WidgetHeightAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetHeightAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetHeightAdd.Name = "numericUpDown_WidgetHeightAdd";
+            this.numericUpDown_WidgetHeightAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            // 
+            // numericUpDown_WidgetXAdd
+            // 
+            this.numericUpDown_WidgetXAdd.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WidgetXAdd, "numericUpDown_WidgetXAdd");
+            this.numericUpDown_WidgetXAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetXAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetXAdd.Name = "numericUpDown_WidgetXAdd";
+            this.numericUpDown_WidgetXAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetXAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_WidgetYAdd
+            // 
+            this.numericUpDown_WidgetYAdd.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WidgetYAdd, "numericUpDown_WidgetYAdd");
+            this.numericUpDown_WidgetYAdd.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WidgetYAdd.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WidgetYAdd.Name = "numericUpDown_WidgetYAdd";
+            this.numericUpDown_WidgetYAdd.ValueChanged += new System.EventHandler(this.WidgetAdd_ValueChanged);
+            this.numericUpDown_WidgetYAdd.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "Programming-Edit-Property-icon.png");
+            this.imageList2.Images.SetKeyName(1, "Data-Add-Column-icon.png");
+            this.imageList2.Images.SetKeyName(2, "Data-Add-Row-icon.png");
+            this.imageList2.Images.SetKeyName(3, "Files-Add-List-icon.png");
+            this.imageList2.Images.SetKeyName(4, "Add-icon.png");
+            // 
+            // tabPageConverting
+            // 
+            this.tabPageConverting.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageConverting.Controls.Add(this.label489);
+            this.tabPageConverting.Controls.Add(this.label488);
+            this.tabPageConverting.Controls.Add(this.label487);
+            this.tabPageConverting.Controls.Add(this.label486);
+            this.tabPageConverting.Controls.Add(this.button_Converting);
+            this.tabPageConverting.Controls.Add(this.groupBox10);
+            this.tabPageConverting.Controls.Add(this.groupBox9);
+            resources.ApplyResources(this.tabPageConverting, "tabPageConverting");
+            this.tabPageConverting.Name = "tabPageConverting";
+            // 
+            // label489
+            // 
+            resources.ApplyResources(this.label489, "label489");
+            this.label489.Name = "label489";
+            // 
+            // label488
+            // 
+            resources.ApplyResources(this.label488, "label488");
+            this.label488.Name = "label488";
+            // 
+            // label487
+            // 
+            resources.ApplyResources(this.label487, "label487");
+            this.label487.Name = "label487";
+            // 
+            // label486
+            // 
+            resources.ApplyResources(this.label486, "label486");
+            this.label486.Name = "label486";
+            // 
+            // button_Converting
+            // 
+            resources.ApplyResources(this.button_Converting, "button_Converting");
+            this.button_Converting.Name = "button_Converting";
+            this.button_Converting.UseVisualStyleBackColor = true;
+            this.button_Converting.Click += new System.EventHandler(this.button_Converting_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.numericUpDown_ConvertingOutput_Custom);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_Custom);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_TRexPro);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_ZeppE);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_GTR2);
+            resources.ApplyResources(this.groupBox10, "groupBox10");
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // numericUpDown_ConvertingOutput_Custom
+            // 
+            resources.ApplyResources(this.numericUpDown_ConvertingOutput_Custom, "numericUpDown_ConvertingOutput_Custom");
+            this.numericUpDown_ConvertingOutput_Custom.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingOutput_Custom.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingOutput_Custom.Name = "numericUpDown_ConvertingOutput_Custom";
+            this.numericUpDown_ConvertingOutput_Custom.Value = new decimal(new int[] {
+            416,
+            0,
+            0,
+            0});
+            // 
+            // radioButton_ConvertingOutput_Custom
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_Custom, "radioButton_ConvertingOutput_Custom");
+            this.radioButton_ConvertingOutput_Custom.Name = "radioButton_ConvertingOutput_Custom";
+            this.radioButton_ConvertingOutput_Custom.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingOutput_Custom.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingOutput_Custom_CheckedChanged);
+            // 
+            // radioButton_ConvertingOutput_TRexPro
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_TRexPro, "radioButton_ConvertingOutput_TRexPro");
+            this.radioButton_ConvertingOutput_TRexPro.Name = "radioButton_ConvertingOutput_TRexPro";
+            this.radioButton_ConvertingOutput_TRexPro.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingOutput_TRexPro.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingOutput_GTR2_CheckedChanged);
+            // 
+            // radioButton_ConvertingOutput_ZeppE
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_ZeppE, "radioButton_ConvertingOutput_ZeppE");
+            this.radioButton_ConvertingOutput_ZeppE.Checked = true;
+            this.radioButton_ConvertingOutput_ZeppE.Name = "radioButton_ConvertingOutput_ZeppE";
+            this.radioButton_ConvertingOutput_ZeppE.TabStop = true;
+            this.radioButton_ConvertingOutput_ZeppE.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ConvertingOutput_GTR2
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_GTR2, "radioButton_ConvertingOutput_GTR2");
+            this.radioButton_ConvertingOutput_GTR2.Name = "radioButton_ConvertingOutput_GTR2";
+            this.radioButton_ConvertingOutput_GTR2.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingOutput_GTR2.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingOutput_GTR2_CheckedChanged);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.numericUpDown_ConvertingInput_Custom);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_Custom);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_TRexPro);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_ZeppE);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_GTR2);
+            resources.ApplyResources(this.groupBox9, "groupBox9");
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // numericUpDown_ConvertingInput_Custom
+            // 
+            resources.ApplyResources(this.numericUpDown_ConvertingInput_Custom, "numericUpDown_ConvertingInput_Custom");
+            this.numericUpDown_ConvertingInput_Custom.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingInput_Custom.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingInput_Custom.Name = "numericUpDown_ConvertingInput_Custom";
+            this.numericUpDown_ConvertingInput_Custom.Value = new decimal(new int[] {
+            454,
+            0,
+            0,
+            0});
+            // 
+            // radioButton_ConvertingInput_Custom
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_Custom, "radioButton_ConvertingInput_Custom");
+            this.radioButton_ConvertingInput_Custom.Name = "radioButton_ConvertingInput_Custom";
+            this.radioButton_ConvertingInput_Custom.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingInput_Custom.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_Custom_CheckedChanged);
+            // 
+            // radioButton_ConvertingInput_TRexPro
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_TRexPro, "radioButton_ConvertingInput_TRexPro");
+            this.radioButton_ConvertingInput_TRexPro.Name = "radioButton_ConvertingInput_TRexPro";
+            this.radioButton_ConvertingInput_TRexPro.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingInput_TRexPro.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_GTR2_CheckedChanged);
+            // 
+            // radioButton_ConvertingInput_ZeppE
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_ZeppE, "radioButton_ConvertingInput_ZeppE");
+            this.radioButton_ConvertingInput_ZeppE.Name = "radioButton_ConvertingInput_ZeppE";
+            this.radioButton_ConvertingInput_ZeppE.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingInput_ZeppE.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_GTR2_CheckedChanged);
+            // 
+            // radioButton_ConvertingInput_GTR2
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_GTR2, "radioButton_ConvertingInput_GTR2");
+            this.radioButton_ConvertingInput_GTR2.Checked = true;
+            this.radioButton_ConvertingInput_GTR2.Name = "radioButton_ConvertingInput_GTR2";
+            this.radioButton_ConvertingInput_GTR2.TabStop = true;
+            this.radioButton_ConvertingInput_GTR2.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingInput_GTR2.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_GTR2_CheckedChanged);
+            // 
+            // tabPage_Settings
+            // 
+            this.tabPage_Settings.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Settings.Controls.Add(this.groupBox2);
+            this.tabPage_Settings.Controls.Add(this.numericUpDown_Gif_Speed);
+            this.tabPage_Settings.Controls.Add(this.label355);
+            this.tabPage_Settings.Controls.Add(this.checkBox_ShowIn12hourFormat);
+            this.tabPage_Settings.Controls.Add(this.checkBox_SaveID);
+            this.tabPage_Settings.Controls.Add(this.groupBox8);
+            this.tabPage_Settings.Controls.Add(this.button_Reset);
+            this.tabPage_Settings.Controls.Add(this.checkBox_JsonWarnings);
+            this.tabPage_Settings.Controls.Add(this.comboBox_Language);
+            this.tabPage_Settings.Controls.Add(this.label356);
+            this.tabPage_Settings.Controls.Add(this.groupBox7);
+            this.tabPage_Settings.Controls.Add(this.groupBox6);
+            this.tabPage_Settings.Controls.Add(this.groupBox5);
+            this.tabPage_Settings.Controls.Add(this.groupBox1);
+            resources.ApplyResources(this.tabPage_Settings, "tabPage_Settings");
+            this.tabPage_Settings.Name = "tabPage_Settings";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button_WatchSkin_PathGet);
+            this.groupBox2.Controls.Add(this.textBox_WatchSkin_Path);
+            this.groupBox2.Controls.Add(this.checkBox_WatchSkin_Use);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // button_WatchSkin_PathGet
+            // 
+            resources.ApplyResources(this.button_WatchSkin_PathGet, "button_WatchSkin_PathGet");
+            this.button_WatchSkin_PathGet.Name = "button_WatchSkin_PathGet";
+            this.button_WatchSkin_PathGet.UseVisualStyleBackColor = true;
+            this.button_WatchSkin_PathGet.Click += new System.EventHandler(this.button_WatchSkin_PathGet_Click);
+            // 
+            // textBox_WatchSkin_Path
+            // 
+            resources.ApplyResources(this.textBox_WatchSkin_Path, "textBox_WatchSkin_Path");
+            this.textBox_WatchSkin_Path.Name = "textBox_WatchSkin_Path";
+            this.textBox_WatchSkin_Path.Leave += new System.EventHandler(this.textBox_WatchSkin_Path_Leave);
+            // 
+            // checkBox_WatchSkin_Use
+            // 
+            resources.ApplyResources(this.checkBox_WatchSkin_Use, "checkBox_WatchSkin_Use");
+            this.checkBox_WatchSkin_Use.Checked = true;
+            this.checkBox_WatchSkin_Use.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_WatchSkin_Use.Name = "checkBox_WatchSkin_Use";
+            this.checkBox_WatchSkin_Use.UseVisualStyleBackColor = true;
+            this.checkBox_WatchSkin_Use.CheckedChanged += new System.EventHandler(this.checkBox_WatchSkin_Use_CheckedChanged);
+            // 
+            // numericUpDown_Gif_Speed
+            // 
+            this.numericUpDown_Gif_Speed.DecimalPlaces = 1;
+            this.numericUpDown_Gif_Speed.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            resources.ApplyResources(this.numericUpDown_Gif_Speed, "numericUpDown_Gif_Speed");
+            this.numericUpDown_Gif_Speed.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            65536});
+            this.numericUpDown_Gif_Speed.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown_Gif_Speed.Name = "numericUpDown_Gif_Speed";
+            this.numericUpDown_Gif_Speed.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_Gif_Speed.ValueChanged += new System.EventHandler(this.numericUpDown_Gif_Speed_ValueChanged_1);
+            // 
+            // label355
+            // 
+            resources.ApplyResources(this.label355, "label355");
+            this.label355.Name = "label355";
+            // 
+            // checkBox_ShowIn12hourFormat
+            // 
+            resources.ApplyResources(this.checkBox_ShowIn12hourFormat, "checkBox_ShowIn12hourFormat");
+            this.checkBox_ShowIn12hourFormat.Checked = true;
+            this.checkBox_ShowIn12hourFormat.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_ShowIn12hourFormat.Name = "checkBox_ShowIn12hourFormat";
+            this.checkBox_ShowIn12hourFormat.UseVisualStyleBackColor = true;
+            this.checkBox_ShowIn12hourFormat.CheckedChanged += new System.EventHandler(this.checkBox_ShowIn12hourFormat_CheckedChanged);
+            this.checkBox_ShowIn12hourFormat.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // checkBox_SaveID
+            // 
+            resources.ApplyResources(this.checkBox_SaveID, "checkBox_SaveID");
+            this.checkBox_SaveID.Checked = true;
+            this.checkBox_SaveID.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_SaveID.Name = "checkBox_SaveID";
+            this.checkBox_SaveID.UseVisualStyleBackColor = true;
+            this.checkBox_SaveID.CheckedChanged += new System.EventHandler(this.checkBox_SaveID_CheckedChanged);
+            this.checkBox_SaveID.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.checkBox_Shortcuts_Border);
+            this.groupBox8.Controls.Add(this.checkBox_Shortcuts_Area);
+            resources.ApplyResources(this.groupBox8, "groupBox8");
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // checkBox_Shortcuts_Border
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Border, "checkBox_Shortcuts_Border");
+            this.checkBox_Shortcuts_Border.Checked = true;
+            this.checkBox_Shortcuts_Border.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Shortcuts_Border.Name = "checkBox_Shortcuts_Border";
+            this.checkBox_Shortcuts_Border.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Border.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Area_CheckedChanged);
+            this.checkBox_Shortcuts_Border.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // checkBox_Shortcuts_Area
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Area, "checkBox_Shortcuts_Area");
+            this.checkBox_Shortcuts_Area.Checked = true;
+            this.checkBox_Shortcuts_Area.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Shortcuts_Area.Name = "checkBox_Shortcuts_Area";
+            this.checkBox_Shortcuts_Area.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Area.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Area_CheckedChanged);
+            this.checkBox_Shortcuts_Area.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // button_Reset
+            // 
+            resources.ApplyResources(this.button_Reset, "button_Reset");
+            this.button_Reset.Name = "button_Reset";
+            this.button_Reset.UseVisualStyleBackColor = true;
+            this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
+            // 
+            // checkBox_JsonWarnings
+            // 
+            resources.ApplyResources(this.checkBox_JsonWarnings, "checkBox_JsonWarnings");
+            this.checkBox_JsonWarnings.Checked = true;
+            this.checkBox_JsonWarnings.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_JsonWarnings.Name = "checkBox_JsonWarnings";
+            this.checkBox_JsonWarnings.UseVisualStyleBackColor = true;
+            this.checkBox_JsonWarnings.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // comboBox_Language
+            // 
+            this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Language.FormattingEnabled = true;
+            this.comboBox_Language.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Language.Items"),
+            resources.GetString("comboBox_Language.Items1"),
+            resources.GetString("comboBox_Language.Items2"),
+            resources.GetString("comboBox_Language.Items3"),
+            resources.GetString("comboBox_Language.Items4"),
+            resources.GetString("comboBox_Language.Items5"),
+            resources.GetString("comboBox_Language.Items6")});
+            resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
+            this.comboBox_Language.Name = "comboBox_Language";
+            this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
+            // 
+            // label356
+            // 
+            resources.ApplyResources(this.label356, "label356");
+            this.label356.Name = "label356";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_DoNotning);
+            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_GoToFile);
+            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_Dialog);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_Settings_Pack_DoNotning
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Pack_DoNotning, "radioButton_Settings_Pack_DoNotning");
+            this.radioButton_Settings_Pack_DoNotning.Name = "radioButton_Settings_Pack_DoNotning";
+            this.radioButton_Settings_Pack_DoNotning.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_DoNotning.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Pack_GoToFile
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Pack_GoToFile, "radioButton_Settings_Pack_GoToFile");
+            this.radioButton_Settings_Pack_GoToFile.Checked = true;
+            this.radioButton_Settings_Pack_GoToFile.Name = "radioButton_Settings_Pack_GoToFile";
+            this.radioButton_Settings_Pack_GoToFile.TabStop = true;
+            this.radioButton_Settings_Pack_GoToFile.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_GoToFile.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Pack_Dialog
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Pack_Dialog, "radioButton_Settings_Pack_Dialog");
+            this.radioButton_Settings_Pack_Dialog.Name = "radioButton_Settings_Pack_Dialog";
+            this.radioButton_Settings_Pack_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_DoNotning);
+            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Download);
+            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Dialog);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_Settings_Open_DoNotning
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Open_DoNotning, "radioButton_Settings_Open_DoNotning");
+            this.radioButton_Settings_Open_DoNotning.Name = "radioButton_Settings_Open_DoNotning";
+            this.radioButton_Settings_Open_DoNotning.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Open_DoNotning.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Open_Download
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Open_Download, "radioButton_Settings_Open_Download");
+            this.radioButton_Settings_Open_Download.Checked = true;
+            this.radioButton_Settings_Open_Download.Name = "radioButton_Settings_Open_Download";
+            this.radioButton_Settings_Open_Download.TabStop = true;
+            this.radioButton_Settings_Open_Download.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Open_Download.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Open_Dialog
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Open_Dialog, "radioButton_Settings_Open_Dialog");
+            this.radioButton_Settings_Open_Dialog.Name = "radioButton_Settings_Open_Dialog";
+            this.radioButton_Settings_Open_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Open_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_DoNothing);
+            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Download);
+            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Dialog);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_Settings_AfterUnpack_DoNothing
+            // 
+            resources.ApplyResources(this.radioButton_Settings_AfterUnpack_DoNothing, "radioButton_Settings_AfterUnpack_DoNothing");
+            this.radioButton_Settings_AfterUnpack_DoNothing.Name = "radioButton_Settings_AfterUnpack_DoNothing";
+            this.radioButton_Settings_AfterUnpack_DoNothing.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_AfterUnpack_DoNothing.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_AfterUnpack_Download
+            // 
+            resources.ApplyResources(this.radioButton_Settings_AfterUnpack_Download, "radioButton_Settings_AfterUnpack_Download");
+            this.radioButton_Settings_AfterUnpack_Download.Checked = true;
+            this.radioButton_Settings_AfterUnpack_Download.Name = "radioButton_Settings_AfterUnpack_Download";
+            this.radioButton_Settings_AfterUnpack_Download.TabStop = true;
+            this.radioButton_Settings_AfterUnpack_Download.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_AfterUnpack_Download.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_AfterUnpack_Dialog
+            // 
+            resources.ApplyResources(this.radioButton_Settings_AfterUnpack_Dialog, "radioButton_Settings_AfterUnpack_Dialog");
+            this.radioButton_Settings_AfterUnpack_Dialog.Name = "radioButton_Settings_AfterUnpack_Dialog";
+            this.radioButton_Settings_AfterUnpack_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_AfterUnpack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Replace);
+            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Save);
+            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Dialog);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox_Paint);
+            // 
+            // radioButton_Settings_Unpack_Replace
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Unpack_Replace, "radioButton_Settings_Unpack_Replace");
+            this.radioButton_Settings_Unpack_Replace.Name = "radioButton_Settings_Unpack_Replace";
+            this.radioButton_Settings_Unpack_Replace.TabStop = true;
+            this.radioButton_Settings_Unpack_Replace.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Unpack_Replace.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Unpack_Save
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Unpack_Save, "radioButton_Settings_Unpack_Save");
+            this.radioButton_Settings_Unpack_Save.Name = "radioButton_Settings_Unpack_Save";
+            this.radioButton_Settings_Unpack_Save.TabStop = true;
+            this.radioButton_Settings_Unpack_Save.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Unpack_Save.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Unpack_Dialog
+            // 
+            resources.ApplyResources(this.radioButton_Settings_Unpack_Dialog, "radioButton_Settings_Unpack_Dialog");
+            this.radioButton_Settings_Unpack_Dialog.Checked = true;
+            this.radioButton_Settings_Unpack_Dialog.Name = "radioButton_Settings_Unpack_Dialog";
+            this.radioButton_Settings_Unpack_Dialog.TabStop = true;
+            this.radioButton_Settings_Unpack_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Unpack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // tabPage_About
+            // 
+            this.tabPage_About.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_About.Controls.Add(this.linkLabel_resunpacker_qzip);
+            this.tabPage_About.Controls.Add(this.label_TranslateHelp);
+            this.tabPage_About.Controls.Add(this.label415);
+            this.tabPage_About.Controls.Add(this.label414);
+            this.tabPage_About.Controls.Add(this.label412);
+            this.tabPage_About.Controls.Add(this.label413);
+            this.tabPage_About.Controls.Add(this.linkLabel_py_amazfit_tools);
+            this.tabPage_About.Controls.Add(this.label410);
+            this.tabPage_About.Controls.Add(this.label409);
+            this.tabPage_About.Controls.Add(this.label408);
+            this.tabPage_About.Controls.Add(this.label407);
+            this.tabPage_About.Controls.Add(this.label_version_help);
+            this.tabPage_About.Controls.Add(this.label406);
+            this.tabPage_About.Controls.Add(this.pictureBox2);
+            resources.ApplyResources(this.tabPage_About, "tabPage_About");
+            this.tabPage_About.Name = "tabPage_About";
+            // 
+            // linkLabel_resunpacker_qzip
+            // 
+            resources.ApplyResources(this.linkLabel_resunpacker_qzip, "linkLabel_resunpacker_qzip");
+            this.linkLabel_resunpacker_qzip.Name = "linkLabel_resunpacker_qzip";
+            this.linkLabel_resunpacker_qzip.TabStop = true;
+            this.linkLabel_resunpacker_qzip.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_resunpacker_qzip_LinkClicked);
+            // 
+            // label_TranslateHelp
+            // 
+            resources.ApplyResources(this.label_TranslateHelp, "label_TranslateHelp");
+            this.label_TranslateHelp.Name = "label_TranslateHelp";
+            // 
+            // label415
+            // 
+            resources.ApplyResources(this.label415, "label415");
+            this.label415.Name = "label415";
+            // 
+            // label414
+            // 
+            resources.ApplyResources(this.label414, "label414");
+            this.label414.Name = "label414";
+            // 
+            // label412
+            // 
+            resources.ApplyResources(this.label412, "label412");
+            this.label412.Name = "label412";
+            // 
+            // label413
+            // 
+            resources.ApplyResources(this.label413, "label413");
+            this.label413.Name = "label413";
+            // 
+            // linkLabel_py_amazfit_tools
+            // 
+            resources.ApplyResources(this.linkLabel_py_amazfit_tools, "linkLabel_py_amazfit_tools");
+            this.linkLabel_py_amazfit_tools.Name = "linkLabel_py_amazfit_tools";
+            this.linkLabel_py_amazfit_tools.TabStop = true;
+            this.linkLabel_py_amazfit_tools.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_py_amazfit_tools_LinkClicked);
+            // 
+            // label410
+            // 
+            resources.ApplyResources(this.label410, "label410");
+            this.label410.Name = "label410";
+            // 
+            // label409
+            // 
+            resources.ApplyResources(this.label409, "label409");
+            this.label409.Name = "label409";
+            // 
+            // label408
+            // 
+            resources.ApplyResources(this.label408, "label408");
+            this.label408.Name = "label408";
+            // 
+            // label407
+            // 
+            resources.ApplyResources(this.label407, "label407");
+            this.label407.Name = "label407";
+            // 
+            // label_version_help
+            // 
+            resources.ApplyResources(this.label_version_help, "label_version_help");
+            this.label_version_help.Name = "label_version_help";
+            // 
+            // label406
+            // 
+            resources.ApplyResources(this.label406, "label406");
+            this.label406.Name = "label406";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::AmazFit_Watchface_2.Properties.Resources.gtr_2_sport_obsidian_black;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // contextMenuStrip_XY_InAnimationTable
+            // 
+            this.contextMenuStrip_XY_InAnimationTable.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_XY_InAnimationTable.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьНачальныеКоординатыToolStripMenuItem,
+            this.вставитьКонечныеКоординатыToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.копироватьToolStripMenuItem3,
+            this.вставитьToolStripMenuItem3,
+            this.удалитьСтрокуToolStripMenuItem1});
+            this.contextMenuStrip_XY_InAnimationTable.Name = "contextMenuStrip_XY_InAnimationTable";
+            resources.ApplyResources(this.contextMenuStrip_XY_InAnimationTable, "contextMenuStrip_XY_InAnimationTable");
+            this.contextMenuStrip_XY_InAnimationTable.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_XY_InAnimationTable_Opening);
+            // 
+            // вставитьНачальныеКоординатыToolStripMenuItem
+            // 
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Name = "вставитьНачальныеКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьНачальныеКоординатыToolStripMenuItem, "вставитьНачальныеКоординатыToolStripMenuItem");
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьНачальныеКоординатыToolStripMenuItem_Click);
+            // 
+            // вставитьКонечныеКоординатыToolStripMenuItem
+            // 
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Name = "вставитьКонечныеКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьКонечныеКоординатыToolStripMenuItem, "вставитьКонечныеКоординатыToolStripMenuItem");
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКонечныеКоординатыToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // копироватьToolStripMenuItem3
+            // 
+            this.копироватьToolStripMenuItem3.Name = "копироватьToolStripMenuItem3";
+            resources.ApplyResources(this.копироватьToolStripMenuItem3, "копироватьToolStripMenuItem3");
+            this.копироватьToolStripMenuItem3.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
+            // 
+            // вставитьToolStripMenuItem3
+            // 
+            this.вставитьToolStripMenuItem3.Name = "вставитьToolStripMenuItem3";
+            resources.ApplyResources(this.вставитьToolStripMenuItem3, "вставитьToolStripMenuItem3");
+            this.вставитьToolStripMenuItem3.Click += new System.EventHandler(this.вставитьToolStripMenuItem3_Click);
+            // 
+            // удалитьСтрокуToolStripMenuItem1
+            // 
+            this.удалитьСтрокуToolStripMenuItem1.Name = "удалитьСтрокуToolStripMenuItem1";
+            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem1, "удалитьСтрокуToolStripMenuItem1");
+            this.удалитьСтрокуToolStripMenuItem1.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip_XY_InTable
+            // 
+            this.contextMenuStrip_XY_InTable.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_XY_InTable.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьКоординатыToolStripMenuItem,
+            this.копироватьToolStripMenuItem2,
+            this.вставитьToolStripMenuItem2,
+            this.удалитьСтрокуToolStripMenuItem});
+            this.contextMenuStrip_XY_InTable.Name = "contextMenuStrip_XY_InTable";
+            resources.ApplyResources(this.contextMenuStrip_XY_InTable, "contextMenuStrip_XY_InTable");
+            this.contextMenuStrip_XY_InTable.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_XY_InTable_Opening);
+            // 
+            // вставитьКоординатыToolStripMenuItem
+            // 
+            this.вставитьКоординатыToolStripMenuItem.Name = "вставитьКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьКоординатыToolStripMenuItem, "вставитьКоординатыToolStripMenuItem");
+            this.вставитьКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатыToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem2
+            // 
+            this.копироватьToolStripMenuItem2.Name = "копироватьToolStripMenuItem2";
+            resources.ApplyResources(this.копироватьToolStripMenuItem2, "копироватьToolStripMenuItem2");
+            this.копироватьToolStripMenuItem2.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
+            // 
+            // вставитьToolStripMenuItem2
+            // 
+            this.вставитьToolStripMenuItem2.Name = "вставитьToolStripMenuItem2";
+            resources.ApplyResources(this.вставитьToolStripMenuItem2, "вставитьToolStripMenuItem2");
+            this.вставитьToolStripMenuItem2.Click += new System.EventHandler(this.вставитьToolStripMenuItem2_Click);
+            // 
+            // удалитьСтрокуToolStripMenuItem
+            // 
+            this.удалитьСтрокуToolStripMenuItem.Name = "удалитьСтрокуToolStripMenuItem";
+            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem, "удалитьСтрокуToolStripMenuItem");
+            this.удалитьСтрокуToolStripMenuItem.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
+            // 
+            // button_zip_unpack
+            // 
+            resources.ApplyResources(this.button_zip_unpack, "button_zip_unpack");
+            this.button_zip_unpack.Name = "button_zip_unpack";
+            this.button_zip_unpack.UseVisualStyleBackColor = true;
+            this.button_zip_unpack.Click += new System.EventHandler(this.button_zip_unpack_Click);
+            // 
+            // button_pack_zip
+            // 
+            resources.ApplyResources(this.button_pack_zip, "button_pack_zip");
+            this.button_pack_zip.Name = "button_pack_zip";
+            this.button_pack_zip.UseVisualStyleBackColor = true;
+            this.button_pack_zip.Click += new System.EventHandler(this.button_pack_zip_Click);
+            // 
+            // label_version
+            // 
+            resources.ApplyResources(this.label_version, "label_version");
+            this.label_version.Name = "label_version";
+            // 
+            // colorDialog_StepsProgress
+            // 
+            this.colorDialog_StepsProgress.FullOpen = true;
+            // 
+            // colorDialog_Battery
+            // 
+            this.colorDialog_Battery.FullOpen = true;
+            // 
+            // button_PreviewBig
+            // 
+            resources.ApplyResources(this.button_PreviewBig, "button_PreviewBig");
+            this.button_PreviewBig.Name = "button_PreviewBig";
+            this.button_PreviewBig.UseVisualStyleBackColor = true;
+            this.button_PreviewBig.Click += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
+            // 
+            // checkBox_WebW
+            // 
+            resources.ApplyResources(this.checkBox_WebW, "checkBox_WebW");
+            this.checkBox_WebW.Name = "checkBox_WebW";
+            this.checkBox_WebW.UseVisualStyleBackColor = true;
+            this.checkBox_WebW.CheckedChanged += new System.EventHandler(this.checkBox_WebW_CheckedChanged);
+            // 
+            // checkBox_WebB
+            // 
+            resources.ApplyResources(this.checkBox_WebB, "checkBox_WebB");
+            this.checkBox_WebB.Name = "checkBox_WebB";
+            this.checkBox_WebB.UseVisualStyleBackColor = true;
+            this.checkBox_WebB.CheckedChanged += new System.EventHandler(this.checkBox_WebB_CheckedChanged);
+            // 
+            // button_SavePNG
+            // 
+            resources.ApplyResources(this.button_SavePNG, "button_SavePNG");
+            this.button_SavePNG.Name = "button_SavePNG";
+            this.button_SavePNG.UseVisualStyleBackColor = true;
+            this.button_SavePNG.Click += new System.EventHandler(this.button_SavePNG_Click);
+            // 
+            // button_SaveGIF
+            // 
+            resources.ApplyResources(this.button_SaveGIF, "button_SaveGIF");
+            this.button_SaveGIF.Name = "button_SaveGIF";
+            this.button_SaveGIF.UseVisualStyleBackColor = true;
+            this.button_SaveGIF.Click += new System.EventHandler(this.button_SaveGIF_Click);
+            // 
+            // radioButton_GTR2
+            // 
+            resources.ApplyResources(this.radioButton_GTR2, "radioButton_GTR2");
+            this.radioButton_GTR2.Checked = true;
+            this.radioButton_GTR2.Name = "radioButton_GTR2";
+            this.radioButton_GTR2.TabStop = true;
+            this.radioButton_GTR2.UseVisualStyleBackColor = true;
+            this.radioButton_GTR2.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
+            // label_preview_X
+            // 
+            resources.ApplyResources(this.label_preview_X, "label_preview_X");
+            this.label_preview_X.Name = "label_preview_X";
+            // 
+            // label_preview_Y
+            // 
+            resources.ApplyResources(this.label_preview_Y, "label_preview_Y");
+            this.label_preview_Y.Name = "label_preview_Y";
+            // 
+            // checkBox_border
+            // 
+            resources.ApplyResources(this.checkBox_border, "checkBox_border");
+            this.checkBox_border.Name = "checkBox_border";
+            this.checkBox_border.UseVisualStyleBackColor = true;
+            this.checkBox_border.CheckedChanged += new System.EventHandler(this.checkBox_border_CheckedChanged);
+            this.checkBox_border.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // radioButton_GTS2
+            // 
+            resources.ApplyResources(this.radioButton_GTS2, "radioButton_GTS2");
+            this.radioButton_GTS2.Name = "radioButton_GTS2";
+            this.radioButton_GTS2.UseVisualStyleBackColor = true;
+            this.radioButton_GTS2.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
+            // checkBox_crop
+            // 
+            this.checkBox_crop.Checked = true;
+            this.checkBox_crop.CheckState = System.Windows.Forms.CheckState.Checked;
+            resources.ApplyResources(this.checkBox_crop, "checkBox_crop");
+            this.checkBox_crop.Name = "checkBox_crop";
+            this.checkBox_crop.UseVisualStyleBackColor = true;
+            this.checkBox_crop.CheckedChanged += new System.EventHandler(this.checkBox_crop_CheckedChanged);
+            this.checkBox_crop.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // checkBox_Show_Shortcuts
+            // 
+            this.checkBox_Show_Shortcuts.Checked = true;
+            this.checkBox_Show_Shortcuts.CheckState = System.Windows.Forms.CheckState.Checked;
+            resources.ApplyResources(this.checkBox_Show_Shortcuts, "checkBox_Show_Shortcuts");
+            this.checkBox_Show_Shortcuts.Name = "checkBox_Show_Shortcuts";
+            this.checkBox_Show_Shortcuts.UseVisualStyleBackColor = true;
+            this.checkBox_Show_Shortcuts.CheckedChanged += new System.EventHandler(this.checkBox_Show_Shortcuts_CheckedChanged);
+            this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // checkBox_CircleScaleImage
+            // 
+            resources.ApplyResources(this.checkBox_CircleScaleImage, "checkBox_CircleScaleImage");
+            this.checkBox_CircleScaleImage.Name = "checkBox_CircleScaleImage";
+            this.checkBox_CircleScaleImage.UseVisualStyleBackColor = true;
+            this.checkBox_CircleScaleImage.CheckedChanged += new System.EventHandler(this.checkBox_CircleScaleImage_CheckedChanged);
+            this.checkBox_CircleScaleImage.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // button_RefreshPreview
+            // 
+            resources.ApplyResources(this.button_RefreshPreview, "button_RefreshPreview");
+            this.button_RefreshPreview.Name = "button_RefreshPreview";
+            this.button_RefreshPreview.UseVisualStyleBackColor = true;
+            this.button_RefreshPreview.Click += new System.EventHandler(this.button_RefreshPreview_Click);
+            // 
+            // button_CreatePreview
+            // 
+            resources.ApplyResources(this.button_CreatePreview, "button_CreatePreview");
+            this.button_CreatePreview.Name = "button_CreatePreview";
+            this.button_CreatePreview.UseVisualStyleBackColor = true;
+            this.button_CreatePreview.Click += new System.EventHandler(this.button_CreatePreview_Click);
+            // 
+            // checkBox_center_marker
+            // 
+            this.checkBox_center_marker.Checked = true;
+            this.checkBox_center_marker.CheckState = System.Windows.Forms.CheckState.Checked;
+            resources.ApplyResources(this.checkBox_center_marker, "checkBox_center_marker");
+            this.checkBox_center_marker.Name = "checkBox_center_marker";
+            this.checkBox_center_marker.UseVisualStyleBackColor = true;
+            this.checkBox_center_marker.CheckedChanged += new System.EventHandler(this.checkBox_center_marker_CheckedChanged);
+            this.checkBox_center_marker.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // colorDialog_Pulse
+            // 
+            this.colorDialog_Pulse.FullOpen = true;
+            // 
+            // colorDialog_Calories
+            // 
+            this.colorDialog_Calories.FullOpen = true;
+            // 
+            // toolTip_Weather
+            // 
+            this.toolTip_Weather.ToolTipTitle = "Weather icons";
+            // 
+            // radioButton_GTR2e
+            // 
+            resources.ApplyResources(this.radioButton_GTR2e, "radioButton_GTR2e");
+            this.radioButton_GTR2e.Name = "radioButton_GTR2e";
+            this.radioButton_GTR2e.UseVisualStyleBackColor = true;
+            this.radioButton_GTR2e.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
+            // radioButton_TRex_pro
+            // 
+            resources.ApplyResources(this.radioButton_TRex_pro, "radioButton_TRex_pro");
+            this.radioButton_TRex_pro.Name = "radioButton_TRex_pro";
+            this.radioButton_TRex_pro.UseVisualStyleBackColor = true;
+            this.radioButton_TRex_pro.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
+            // progressBar1
+            // 
+            resources.ApplyResources(this.progressBar1, "progressBar1");
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Step = 1;
+            // 
+            // pictureBox_Preview
+            // 
+            resources.ApplyResources(this.pictureBox_Preview, "pictureBox_Preview");
+            this.pictureBox_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox_Preview.Name = "pictureBox_Preview";
+            this.pictureBox_Preview.TabStop = false;
+            this.pictureBox_Preview.DoubleClick += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
+            this.pictureBox_Preview.MouseLeave += new System.EventHandler(this.pictureBox_Preview_MouseLeave);
+            this.pictureBox_Preview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_Preview_MouseMove);
+            // 
+            // checkBox_WidgetsArea
+            // 
+            this.checkBox_WidgetsArea.Checked = true;
+            this.checkBox_WidgetsArea.CheckState = System.Windows.Forms.CheckState.Checked;
+            resources.ApplyResources(this.checkBox_WidgetsArea, "checkBox_WidgetsArea");
+            this.checkBox_WidgetsArea.Name = "checkBox_WidgetsArea";
+            this.checkBox_WidgetsArea.UseVisualStyleBackColor = true;
+            this.checkBox_WidgetsArea.CheckedChanged += new System.EventHandler(this.checkBox_WidgetsArea_CheckedChanged);
+            this.checkBox_WidgetsArea.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // radioButton_ZeppE
+            // 
+            resources.ApplyResources(this.radioButton_ZeppE, "radioButton_ZeppE");
+            this.radioButton_ZeppE.Name = "radioButton_ZeppE";
+            this.radioButton_ZeppE.UseVisualStyleBackColor = true;
+            this.radioButton_ZeppE.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -17077,115 +17078,6 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.contextMenuStrip_Y.ResumeLayout(false);
-            this.contextMenuStrip_X.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Activity)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage_Show.ResumeLayout(false);
-            this.tabPage_Show.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel_set.ResumeLayout(false);
-            this.panel_set.PerformLayout();
-            this.panel_PreviewStates.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).EndInit();
-            this.tabPage_Edit.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.tabPage_LayerOrder.ResumeLayout(false);
-            this.groupBox_AODL_Date.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Date)).EndInit();
-            this.groupBox_AODL_Activity.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Activity)).EndInit();
-            this.groupBox_SNL_Date.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Date)).EndInit();
-            this.groupBox_SNL_Activity.ResumeLayout(false);
-            this.tabPage_Widgets.ResumeLayout(false);
-            this.tabControl_Widget.ResumeLayout(false);
-            this.tabPage_WidgetsEdit.ResumeLayout(false);
-            this.groupBox_WidgetPreview.ResumeLayout(false);
-            this.groupBox_WidgetElementSettings.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.tabControl_DateWidget.ResumeLayout(false);
-            this.tabPage_DayWidget.ResumeLayout(false);
-            this.tabPage_DayWidget.PerformLayout();
-            this.tabPage_MonthWidget.ResumeLayout(false);
-            this.tabPage_MonthWidget.PerformLayout();
-            this.tabPage_YearWidget.ResumeLayout(false);
-            this.tabPage_YearWidget.PerformLayout();
-            this.tabPage_DOWWidget.ResumeLayout(false);
-            this.tabPage_DOWWidget.PerformLayout();
-            this.tabPage_DateLayerWidget.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_Date)).EndInit();
-            this.groupBox_WidgetNumber.ResumeLayout(false);
-            this.groupBox_WidgetNumber.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenght)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetY)).EndInit();
-            this.groupBox_WidgetElement.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_WidgetElement)).EndInit();
-            this.tabPage_WidgetAdd.ResumeLayout(false);
-            this.groupBox_WidgetTypeAdd.ResumeLayout(false);
-            this.groupBox_WidgetTypeAdd.PerformLayout();
-            this.groupBox_WdgetAdd.ResumeLayout(false);
-            this.groupBox_WidgetElementAdd.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tabControl_DateWidgetAdd.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_DateAdd)).EndInit();
-            this.groupBox_WidgetNumberAdd.ResumeLayout(false);
-            this.groupBox_WidgetNumberAdd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenghtAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundXAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundYAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidthAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeightAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetXAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetYAdd)).EndInit();
-            this.tabPageConverting.ResumeLayout(false);
-            this.tabPageConverting.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingOutput_Custom)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).EndInit();
-            this.tabPage_Settings.ResumeLayout(false);
-            this.tabPage_Settings.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tabPage_About.ResumeLayout(false);
-            this.tabPage_About.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.contextMenuStrip_XY_InAnimationTable.ResumeLayout(false);
-            this.contextMenuStrip_XY_InTable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.splitContainer_EditParameters.Panel1.ResumeLayout(false);
             this.splitContainer_EditParameters.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_EditParameters)).EndInit();
@@ -17200,7 +17092,9 @@
             this.panel_AM_PM.ResumeLayout(false);
             this.panel_AM_PM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AM_Y)).EndInit();
+            this.contextMenuStrip_Y.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AM_X)).EndInit();
+            this.contextMenuStrip_X.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PM_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PM_Y)).EndInit();
             this.panel_Second.ResumeLayout(false);
@@ -17546,6 +17440,113 @@
             this.tabControl_System_AOD.ResumeLayout(false);
             this.tabPage_Battery_AOD.ResumeLayout(false);
             this.tabPage_Battery_AOD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Activity)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage_Show.ResumeLayout(false);
+            this.tabPage_Show.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel_set.ResumeLayout(false);
+            this.panel_set.PerformLayout();
+            this.panel_PreviewStates.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).EndInit();
+            this.tabPage_Edit.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.tabPage_LayerOrder.ResumeLayout(false);
+            this.groupBox_AODL_Date.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Date)).EndInit();
+            this.groupBox_AODL_Activity.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AODL_Activity)).EndInit();
+            this.groupBox_SNL_Date.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNL_Date)).EndInit();
+            this.groupBox_SNL_Activity.ResumeLayout(false);
+            this.tabPage_Widgets.ResumeLayout(false);
+            this.tabControl_Widget.ResumeLayout(false);
+            this.tabPage_WidgetsEdit.ResumeLayout(false);
+            this.groupBox_WidgetPreview.ResumeLayout(false);
+            this.groupBox_WidgetElementSettings.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tabControl_DateWidget.ResumeLayout(false);
+            this.tabPage_DayWidget.ResumeLayout(false);
+            this.tabPage_DayWidget.PerformLayout();
+            this.tabPage_MonthWidget.ResumeLayout(false);
+            this.tabPage_MonthWidget.PerformLayout();
+            this.tabPage_YearWidget.ResumeLayout(false);
+            this.tabPage_YearWidget.PerformLayout();
+            this.tabPage_DOWWidget.ResumeLayout(false);
+            this.tabPage_DOWWidget.PerformLayout();
+            this.tabPage_DateLayerWidget.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_Date)).EndInit();
+            this.groupBox_WidgetNumber.ResumeLayout(false);
+            this.groupBox_WidgetNumber.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenght)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetY)).EndInit();
+            this.groupBox_WidgetElement.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_WidgetElement)).EndInit();
+            this.tabPage_WidgetAdd.ResumeLayout(false);
+            this.groupBox_WidgetTypeAdd.ResumeLayout(false);
+            this.groupBox_WidgetTypeAdd.PerformLayout();
+            this.groupBox_WdgetAdd.ResumeLayout(false);
+            this.groupBox_WidgetElementAdd.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.tabControl_DateWidgetAdd.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Widget_DateAdd)).EndInit();
+            this.groupBox_WidgetNumberAdd.ResumeLayout(false);
+            this.groupBox_WidgetNumberAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionLenghtAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundXAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetDescriptionBackgroundYAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetWidthAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetHeightAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetXAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WidgetYAdd)).EndInit();
+            this.tabPageConverting.ResumeLayout(false);
+            this.tabPageConverting.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingOutput_Custom)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).EndInit();
+            this.tabPage_Settings.ResumeLayout(false);
+            this.tabPage_Settings.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPage_About.ResumeLayout(false);
+            this.tabPage_About.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.contextMenuStrip_XY_InAnimationTable.ResumeLayout(false);
+            this.contextMenuStrip_XY_InTable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

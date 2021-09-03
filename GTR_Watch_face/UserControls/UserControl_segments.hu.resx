@@ -117,25 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>Font sistema</value>
+  <data name="button_Copy_pictures.Text" xml:space="preserve">
+    <value>Másolás a főképernyőről</value>
   </data>
-  <data name="userControl_FontRotate_goal.ButtonText" xml:space="preserve">
-    <value>Font sistema cerchio (destinazione)</value>
+  <data name="button_pictures.Text" xml:space="preserve">
+    <value>Képkészlet (független koordináták)</value>
   </data>
-  <data name="userControl_FontRotate_goal.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBox_pictures_Use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 17</value>
   </data>
-  <data name="userControl_FontRotate.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
+  <data name="checkBox_pictures_Use.Text" xml:space="preserve">
+    <value>Használ</value>
   </data>
-  <data name="userControl_SystemFont_goal.ButtonText" xml:space="preserve">
-    <value>Font sistema ruotata (destinazione)</value>
+  <data name="groupBox_DisplayType.Text" xml:space="preserve">
+    <value>Képernyőmód</value>
   </data>
-  <data name="userControl_SystemFont_goal.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Első kép</value>
   </data>
-  <data name="userControl_SystemFont.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
+  <data name="label02.Text" xml:space="preserve">
+    <value>Koordináták beállítása</value>
+  </data>
+  <data name="radioButton_Continuous.Text" xml:space="preserve">
+    <value>Folyamatos</value>
+  </data>
+  <data name="radioButton_Single.Text" xml:space="preserve">
+    <value>Egyetlen</value>
+  </data>
+  <data name="вставитьToolStripMenuItem.Text" xml:space="preserve">
+    <value>Beillesztés</value>
+  </data>
+  <data name="вставитьКоординатыToolStripMenuItem.Text" xml:space="preserve">
+    <value>Koordináták beillesztése</value>
+  </data>
+  <data name="копироватьToolStripMenuItem.Text" xml:space="preserve">
+    <value>Másolás</value>
+  </data>
+  <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sor törlése</value>
   </data>
 </root>

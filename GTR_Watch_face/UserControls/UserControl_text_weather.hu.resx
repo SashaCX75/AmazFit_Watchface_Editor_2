@@ -117,25 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>Font sistema</value>
+  <data name="label07.Text" xml:space="preserve">
+    <value>Szimbólum " - "</value>
   </data>
-  <data name="userControl_FontRotate_goal.ButtonText" xml:space="preserve">
-    <value>Font sistema cerchio (destinazione)</value>
-  </data>
-  <data name="userControl_FontRotate_goal.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
-  </data>
-  <data name="userControl_FontRotate.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
-  </data>
-  <data name="userControl_SystemFont_goal.ButtonText" xml:space="preserve">
-    <value>Font sistema ruotata (destinazione)</value>
-  </data>
-  <data name="userControl_SystemFont_goal.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
-  </data>
-  <data name="userControl_SystemFont.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
+  <data name="label08.Text" xml:space="preserve">
+    <value>Szimbólum " ° "</value>
   </data>
 </root>

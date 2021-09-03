@@ -35,17 +35,20 @@ namespace AmazFit_Watchface_2
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_pictures_count)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox_pictures_image
-            // 
-            this.toolTip_Weather.SetToolTip(this.comboBox_pictures_image, resources.GetString("comboBox_pictures_image.ToolTip"));
-            // 
             // label03
             // 
             resources.ApplyResources(this.label03, "label03");
+            this.toolTip_Weather.SetToolTip(this.label03, resources.GetString("label03.ToolTip"));
+            // 
+            // comboBox_pictures_image
+            // 
+            resources.ApplyResources(this.comboBox_pictures_image, "comboBox_pictures_image");
+            this.toolTip_Weather.SetToolTip(this.comboBox_pictures_image, resources.GetString("comboBox_pictures_image.ToolTip"));
             // 
             // numericUpDown_pictures_count
             // 
             resources.ApplyResources(this.numericUpDown_pictures_count, "numericUpDown_pictures_count");
+            this.toolTip_Weather.SetToolTip(this.numericUpDown_pictures_count, resources.GetString("numericUpDown_pictures_count.ToolTip"));
             // 
             // toolTip_Weather
             // 
@@ -55,6 +58,7 @@ namespace AmazFit_Watchface_2
             // 
             resources.ApplyResources(this, "$this");
             this.Name = "UserControl_pictures_weather";
+            this.toolTip_Weather.SetToolTip(this, resources.GetString("$this.ToolTip"));
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_pictures_count)).EndInit();
             this.ResumeLayout(false);
 

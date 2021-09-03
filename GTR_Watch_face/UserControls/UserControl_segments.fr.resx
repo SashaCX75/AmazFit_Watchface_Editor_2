@@ -128,7 +128,7 @@
     <value>198, 26</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Text" xml:space="preserve">
-    <value>Coller les coordonnées</value>
+    <value>Coller coordonnées</value>
   </data>
   <data name="копироватьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 26</value>
@@ -163,9 +163,6 @@
   <data name="groupBox_DisplayType.Text" xml:space="preserve">
     <value>Type d'affichage</value>
   </data>
-  <data name="label01.Text1" xml:space="preserve">
-    <value>Première image</value>
-  </data>
   <data name="label02.Text" xml:space="preserve">
     <value>Coordonnées</value>
   </data>
@@ -174,8 +171,5 @@
   </data>
   <data name="radioButton_Single.Text" xml:space="preserve">
     <value>Unique</value>
-  </data>
-  <data name="вставитьКоординатыToolStripMenuItem.Text1" xml:space="preserve">
-    <value>Coller coordonnées</value>
   </data>
 </root>

@@ -117,25 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>Font sistema</value>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Előnézet létrehozása</value>
   </data>
-  <data name="userControl_FontRotate_goal.ButtonText" xml:space="preserve">
-    <value>Font sistema cerchio (destinazione)</value>
+  <data name="button_preview.Text" xml:space="preserve">
+    <value>Előnézet</value>
   </data>
-  <data name="userControl_FontRotate_goal.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Előnézet frissítése</value>
   </data>
-  <data name="userControl_FontRotate.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
-  </data>
-  <data name="userControl_SystemFont_goal.ButtonText" xml:space="preserve">
-    <value>Font sistema ruotata (destinazione)</value>
-  </data>
-  <data name="userControl_SystemFont_goal.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
-  </data>
-  <data name="userControl_SystemFont.FollowText" xml:space="preserve">
-    <value>Azione aggiuntiva</value>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Kép</value>
   </data>
 </root>

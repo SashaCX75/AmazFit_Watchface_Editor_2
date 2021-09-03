@@ -108,6 +108,10 @@ namespace AmazFit_Watchface_2
                     {
                         Program_Settings.language = "Chinese/简体中文";
                     }
+                    if (language == "hu")
+                    {
+                        Program_Settings.language = "Magyar";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();

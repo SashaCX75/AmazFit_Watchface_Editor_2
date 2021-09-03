@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActivityName_ActivityGoal" xml:space="preserve">
+    <value>Tevékenységi cél</value>
+  </data>
+  <data name="ActivityName_AirPressure" xml:space="preserve">
+    <value>Légnyomás</value>
+  </data>
+  <data name="ActivityName_AirQuality" xml:space="preserve">
+    <value>Légminőség</value>
+  </data>
+  <data name="ActivityName_Altitude" xml:space="preserve">
+    <value>Magasság</value>
+  </data>
+  <data name="ActivityName_Battery" xml:space="preserve">
+    <value>Akkumulátor</value>
+  </data>
+  <data name="ActivityName_Calories" xml:space="preserve">
+    <value>Kalória</value>
+  </data>
+  <data name="ActivityName_Distance" xml:space="preserve">
+    <value>Távolság</value>
+  </data>
+  <data name="ActivityName_FatBurning" xml:space="preserve">
+    <value>Zsírégetés</value>
+  </data>
+  <data name="ActivityName_HeartRate" xml:space="preserve">
+    <value>Pulzusszám</value>
+  </data>
+  <data name="ActivityName_Humidity" xml:space="preserve">
+    <value>Páratartalom</value>
+  </data>
+  <data name="ActivityName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="ActivityName_StandUp" xml:space="preserve">
+    <value>Edzés</value>
+  </data>
+  <data name="ActivityName_Steps" xml:space="preserve">
+    <value>Lépés</value>
+  </data>
+  <data name="ActivityName_Stress" xml:space="preserve">
+    <value>Stressz</value>
+  </data>
+  <data name="ActivityName_Sunrise" xml:space="preserve">
+    <value>Napkelte</value>
+  </data>
+  <data name="ActivityName_UVindex" xml:space="preserve">
+    <value>UV Index</value>
+  </data>
+  <data name="ActivityName_Weather" xml:space="preserve">
+    <value>Időjárás</value>
+  </data>
+  <data name="ActivityName_WindForce" xml:space="preserve">
+    <value>Szélerősség</value>
+  </data>
+  <data name="DateName_Day" xml:space="preserve">
+    <value>Nap</value>
+  </data>
+  <data name="DateName_Month" xml:space="preserve">
+    <value>Hónap</value>
+  </data>
+  <data name="DateName_Year" xml:space="preserve">
+    <value>Év</value>
+  </data>
+  <data name="Dialog_Title_Image" xml:space="preserve">
+    <value>Képfájl kiválasztása</value>
+  </data>
+  <data name="Dialog_Title_Pack" xml:space="preserve">
+    <value>Óralap beállítási fájl kiválasztása</value>
+  </data>
+  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
+    <value>Csomagoló fájl elérési útja</value>
+  </data>
+  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
+    <value>Előnézeti beállítási fájl kiválasztása</value>
+  </data>
+  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
+    <value>Animált előnézet mentése</value>
+  </data>
+  <data name="Dialog_Title_SavePNG" xml:space="preserve">
+    <value>Előnézet mentése</value>
+  </data>
+  <data name="Dialog_Title_Unpack" xml:space="preserve">
+    <value>Órafájl kiválasztása</value>
+  </data>
+  <data name="Dialog_Title_WatchSkin" xml:space="preserve">
+    <value>Óra img-fájl kiválasztása</value>
+  </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value />
+  </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>quick_guide.htm</value>
+  </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Bináris fájl (*.bin)|*.bin</value>
+  </data>
+  <data name="FilterGif" xml:space="preserve">
+    <value>GIF fájlok (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Json fájlok (*.json) | *.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>PNG fájlok (*.png)|*.png</value>
+  </data>
+  <data name="Form_Preview" xml:space="preserve">
+    <value>Előnézet</value>
+  </data>
+  <data name="Form_PreviewX" xml:space="preserve">
+    <value>Előnézet [X =</value>
+  </data>
+  <data name="Message_bigFile_Caption" xml:space="preserve">
+    <value>Nagy fájlméret</value>
+  </data>
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
+    <value>A tömörítetlen fájl mérete meghaladja az 1,95 MB -ot.</value>
+  </data>
+  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+    <value>A tömörítetlen fájl mérete meghaladja az 1,5 MB -ot.</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>A tömörítetlen fájl mérete meghaladja az 5,5 MB -ot.</value>
+  </data>
+  <data name="Message_bigFile_Text2" xml:space="preserve">
+    <value>Lehet, hogy a tárcsa nem fog működni</value>
+  </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Új óralap létrehozva</value>
+  </data>
+  <data name="Message_CopyCoord" xml:space="preserve">
+    <value>Koordináták másolva</value>
+  </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Egyes képek hibákat okozhatnak (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Próbálja javítani?</value>
+  </data>
+  <data name="Message_Error_Caption" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="Message_error_Image_Text1" xml:space="preserve">
+    <value>Nem lehet megnyitni a képet:</value>
+  </data>
+  <data name="Message_error_Image_Text2" xml:space="preserve">
+    <value>Nincs joga olvasni a fájlt.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
+    <value>Fájl nem található</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
+    <value>Útvonal [</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
+    <value>] a kicsomagoló / csomagoló segédprogramhoz helytelenül van feltüntetve.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
+    <value>Adja meg a csomagoló segédprogram helyes elérési útját.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text1" xml:space="preserve">
+    <value>Szükséges programösszetevők hiányoznak.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text2" xml:space="preserve">
+    <value>Nem található bin fájltömörítő segédprogram az elérési úton [</value>
+  </data>
+  <data name="Message_error_respackerPath_Text3" xml:space="preserve">
+    <value>Ellenőrizze a bin fájltömörítő segédprogramot.</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>A program elérési útja nem tartalmazhat szóközt. Ajánlott a programot a lemez gyökérkönyvtárába helyezni.</value>
+  </data>
+  <data name="Message_GoToFile_Caption" xml:space="preserve">
+    <value>Ugrás a fájlhoz</value>
+  </data>
+  <data name="Message_GoToFile_Text" xml:space="preserve">
+    <value>Ugrás a fájlhoz?</value>
+  </data>
+  <data name="Message_Information_Caption" xml:space="preserve">
+    <value>Információ</value>
+  </data>
+  <data name="Message_JsonError_Text" xml:space="preserve">
+    <value>Érvénytelen JSON fájl.</value>
+  </data>
+  <data name="Message_JsonReadError_Text" xml:space="preserve">
+    <value>Hiba a JSON fájl olvasásakor.</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
+    <value>Töltse le az előnézeti beállításokat</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
+    <value>Betölt egy meglévő fájlt egy előnézeti beállításkészlettel "PreviewStates.json"?</value>
+  </data>
+  <data name="Message_openProject_Caption" xml:space="preserve">
+    <value>Projekt megnyitása</value>
+  </data>
+  <data name="Message_openProject_Text" xml:space="preserve">
+    <value>Kicsomagolt projekt megnyitása?</value>
+  </data>
+  <data name="Message_PNGFromOne_Text" xml:space="preserve">
+    <value>A PNG -fájlok számozását 1 -től kell kezdeni.</value>
+  </data>
+  <data name="Message_PNGmissing_Text1" xml:space="preserve">
+    <value>A PNG fájlok nem működnek, vagy néhány fájl hiányzik.</value>
+  </data>
+  <data name="Message_PNGmissing_Text2" xml:space="preserve">
+    <value>Nevezze a PNG fájlokat növekvő sorrendben.</value>
+  </data>
+  <data name="Message_Restart_Caption" xml:space="preserve">
+    <value>Újraindítás</value>
+  </data>
+  <data name="Message_Restart_Text1" xml:space="preserve">
+    <value>A beállítások alkalmazásához újra kell indítani a programot.</value>
+  </data>
+  <data name="Message_Restart_Text2" xml:space="preserve">
+    <value>Indítsa újra a programot?</value>
+  </data>
+  <data name="Message_SaveOnly1234_Text" xml:space="preserve">
+    <value>Az előre beállított paraméterek mentéséhez állítson be legalább egy "Kalória" mezőt "1234" -től eltérő értékre</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>Projekt mentése</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>Szeretné menteni a projekt változásait</value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>A jelenlegi projekt még nincs mentve. Szeretné menteni?</value>
+  </data>
+  <data name="Message_Warning3clockHand_Text" xml:space="preserve">
+    <value>Ha nem használja mindhárom mutatót az analóg órában, problémák lehetnek.</value>
+  </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>Ajánlatos képet adni a hibajelhez, ha az információ nem áll rendelkezésre.</value>
+  </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>Az animációhoz szükséges elemek száma nem lehet több 4 -nél.</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>Az animációs kép nem lehet az utolsó a képek listájában.</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>Nem ajánlott  10 képnél többet használni az akkumulátor megjelenítéséhez.</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>Nem ajánlott szegmensek és mutató egyidejű használata azonos típusú értékekhez. Ez hibákat okozhat!</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Mappa</value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value>Már foglalt. Cseréli?</value>
+  </data>
+  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
+    <value>Nem ajánlott utótag nélküli távolságkijelzőt használni.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>A hónapszámkijelzés nem működik együtt a hónap nevének kijelzésével.</value>
+  </data>
+  <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
+    <value>Nem ajánlott perceket használni órák használata nélkül az idő számszerű megjelenítésére.</value>
+  </data>
+  <data name="Message_WarningOnlySec_Text" xml:space="preserve">
+    <value>Nem ajánlott másodperceket használni óra és perc használata nélkül az idő számszerű megjelenítésére.</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>Az előnézeti képméret eltér a szabályostól.</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>Használja a meglévő méreteket?</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>A pulzusszámok megjelenítésére 6 szegmens használata javasolt.</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>A fájl neve és elérési útja nem tartalmazhat szóközt!</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>Előfordulhat, hogy az aktuális hőmérséklet kijelző nem működik a nappali és éjszakai hőmérséklet megjelenítése nélkül.</value>
+  </data>
+  <data name="Message_WarningTensOnes_Text" xml:space="preserve">
+    <value>A tízesek és egyesek különböző képindexei nem támogatottak.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>A hiba szimbólum képét helytelenül lehet, ha nincs aktuális hőmérsékleti adat.</value>
+  </data>
+  <data name="Message_Warning_AddData_WidgetElement" xml:space="preserve">
+    <value>Adjon hozzá adatokat a szerkeszthető zónában való megjelenítéshez.</value>
+  </data>
+  <data name="Message_Warning_AddPreview_WidgetElement" xml:space="preserve">
+    <value>Adjon hozzá előnézeti képet a kiválasztott elemhez.</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget1" xml:space="preserve">
+    <value>Hozzáadva az első szerkeszthető zóna.</value>
+  </data>
+  <data name="Message_Warning_Add_FirstWidget2" xml:space="preserve">
+    <value>Ne felejtse el beállítani a felső és alsó maszkokat a szerkesztési képernyőn.</value>
+  </data>
+  <data name="Message_Warning_Add_Widget" xml:space="preserve">
+    <value>Testreszabhatja a szerkeszthető zónához szükséges összes képet.</value>
+  </data>
+  <data name="Message_Warning_Caption" xml:space="preserve">
+    <value>Figyelem</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Információ</value>
+  </data>
+  <data name="Message_Warning_No_Widget" xml:space="preserve">
+    <value>Legalább egy szerkeszthető zónát adjon hozzá.</value>
+  </data>
+  <data name="WidgetDescription_Date" xml:space="preserve">
+    <value>Dátum</value>
+  </data>
+  <data name="WidgetName_ActivityGoal" xml:space="preserve">
+    <value>Hegymászás</value>
+  </data>
+  <data name="WidgetName_AirPressure" xml:space="preserve">
+    <value>Légnyomás</value>
+  </data>
+  <data name="WidgetName_AirQuality" xml:space="preserve">
+    <value>Légminőség</value>
+  </data>
+  <data name="WidgetName_Altitude" xml:space="preserve">
+    <value>Magasság</value>
+  </data>
+  <data name="WidgetName_Battery" xml:space="preserve">
+    <value>Akkumulátor</value>
+  </data>
+  <data name="WidgetName_Calories" xml:space="preserve">
+    <value>Kalória</value>
+  </data>
+  <data name="WidgetName_Date" xml:space="preserve">
+    <value>Dátum</value>
+  </data>
+  <data name="WidgetName_Distance" xml:space="preserve">
+    <value>Távolság</value>
+  </data>
+  <data name="WidgetName_FatBurning" xml:space="preserve">
+    <value>Zsírégetés</value>
+  </data>
+  <data name="WidgetName_HeartRate" xml:space="preserve">
+    <value>Pulzusszám</value>
+  </data>
+  <data name="WidgetName_Humidity" xml:space="preserve">
+    <value>Páratartalom</value>
+  </data>
+  <data name="WidgetName_PAI" xml:space="preserve">
+    <value>PAI</value>
+  </data>
+  <data name="WidgetName_StandUp" xml:space="preserve">
+    <value>Álló helyzet</value>
+  </data>
+  <data name="WidgetName_Steps" xml:space="preserve">
+    <value>Lépés</value>
+  </data>
+  <data name="WidgetName_Stress" xml:space="preserve">
+    <value>Stressz</value>
+  </data>
+  <data name="WidgetName_Sunrise" xml:space="preserve">
+    <value>Napkelte és napnyugta</value>
+  </data>
+  <data name="WidgetName_UVindex" xml:space="preserve">
+    <value>UV index</value>
+  </data>
+  <data name="WidgetName_Weather" xml:space="preserve">
+    <value>Időjárás</value>
+  </data>
+  <data name="WidgetName_WindForce" xml:space="preserve">
+    <value>Szélsebesség és irány</value>
+  </data>
+</root>
