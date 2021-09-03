@@ -157,4 +157,19 @@
   <data name="button_Copy_pictures.Text" xml:space="preserve">
     <value>从主屏幕复制</value>
   </data>
+  <data name="button_pictures.Text" xml:space="preserve">
+    <value>图像进度（独立坐标）</value>
+  </data>
+  <data name="groupBox_DisplayType.Text" xml:space="preserve">
+    <value>显示模式</value>
+  </data>
+  <data name="label02.Text" xml:space="preserve">
+    <value>坐标系</value>
+  </data>
+  <data name="radioButton_Continuous.Text" xml:space="preserve">
+    <value>连续的</value>
+  </data>
+  <data name="radioButton_Single.Text" xml:space="preserve">
+    <value>单一的</value>
+  </data>
 </root>
