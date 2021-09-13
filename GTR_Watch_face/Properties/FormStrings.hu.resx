@@ -367,7 +367,7 @@
     <value>Mappa</value>
   </data>
   <data name="Message_WarningConverting_Text2" xml:space="preserve">
-    <value>Már foglalt. Cseréli?</value>
+    <value>már foglalt. Cseréli?</value>
   </data>
   <data name="Message_WarningDistanceSuffix" xml:space="preserve">
     <value>Nem ajánlott utótag nélküli távolságkijelzőt használni.</value>

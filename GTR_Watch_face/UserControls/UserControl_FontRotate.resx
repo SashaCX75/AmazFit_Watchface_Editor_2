@@ -117,21 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;label08.Name" xml:space="preserve">
-    <value>label08</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="копироватьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
   </data>
-  <data name="&gt;&gt;копироватьToolStripMenuItemX.Type" xml:space="preserve">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label03.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label02.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 41</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItemY.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 82</value>
-  </data>
-  <data name="&gt;&gt;checkBox_addZero.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotate_radius.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -150,19 +151,26 @@
         uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
 </value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="&gt;&gt;panel_FontRotate.Name" xml:space="preserve">
+    <value>panel_FontRotate</value>
+  </data>
   <data name="numericUpDown_FontRotate_radius.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;button_Copy_FontRotate.Name" xml:space="preserve">
+    <value>button_Copy_FontRotate</value>
   </data>
   <data name="checkBox_Use.TabIndex" type="System.Int32, mscorlib">
     <value>142</value>
   </data>
+  <data name="&gt;&gt;label03.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 26</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="radioButton_CtrlClockwise.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;checkBox_FontRotate_unit.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
   </data>
   <data name="groupBox_FontRotate_RotateDirection.TabIndex" type="System.Int32, mscorlib">
     <value>161</value>
@@ -170,32 +178,36 @@
   <data name="&gt;&gt;numericUpDown_FontRotate_angle.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
-    <value>20</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label08.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label02.TabIndex" type="System.Int32, mscorlib">
     <value>153</value>
   </data>
-  <data name="checkBox_follow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 142</value>
+  <data name="checkBox_follow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 30</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserControl_FontRotate</value>
   </data>
   <data name="&gt;&gt;checkBox_Use.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBox_Use.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label07.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="label05.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label03.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="comboBox_FontRotate_color.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 21</value>
   </data>
-  <data name="&gt;&gt;button_FontRotate.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="numericUpDown_FontRotate_size.TabIndex" type="System.Int32, mscorlib">
+    <value>154</value>
   </data>
-  <data name="label07.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 88</value>
+  <data name="&gt;&gt;checkBox_Use.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
   </data>
   <data name="&gt;&gt;button_Copy_FontRotate.ZOrder" xml:space="preserve">
     <value>21</value>
@@ -203,20 +215,14 @@
   <data name="checkBox_Use.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;panel_FontRotate.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="numericUpDown_FontRotate_spacing.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_FontRotateY.Name" xml:space="preserve">
-    <value>numericUpDown_FontRotateY</value>
-  </data>
-  <data name="label07.TabIndex" type="System.Int32, mscorlib">
-    <value>146</value>
+  <data name="radioButton_CtrlClockwise.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="numericUpDown_FontRotate_spacing.Location" type="System.Drawing.Point, System.Drawing">
     <value>347, 58</value>
@@ -224,14 +230,11 @@
   <data name="&gt;&gt;numericUpDown_FontRotate_size.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;checkBox_addZero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label07.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
   </data>
   <data name="checkBox_FontRotate_unit.Text" xml:space="preserve">
     <value>Единицы измерения</value>
-  </data>
-  <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
   </data>
   <data name="panel_FontRotate.TabIndex" type="System.Int32, mscorlib">
     <value>203</value>
@@ -239,8 +242,8 @@
   <data name="&gt;&gt;comboBox_FontRotate_color.Parent" xml:space="preserve">
     <value>panel_FontRotate</value>
   </data>
-  <data name="&gt;&gt;button_FontRotate.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;label08.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
   <data name="label03.Location" type="System.Drawing.Point, System.Drawing">
     <value>258, 41</value>
@@ -257,20 +260,29 @@
   <data name="&gt;&gt;numericUpDown_FontRotate_radius.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
+  <data name="&gt;&gt;вставитьToolStripMenuItemY.Name" xml:space="preserve">
+    <value>вставитьToolStripMenuItemY</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Clockwise.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label05.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox_Use.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
+  <data name="label03.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label07.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
   </data>
   <data name="&gt;&gt;вставитьToolStripMenuItemX.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Name" xml:space="preserve">
-    <value>вставитьКоординатуХToolStripMenuItem</value>
+  <data name="label04.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;button_FontRotate.Name" xml:space="preserve">
+    <value>button_FontRotate</value>
   </data>
   <data name="&gt;&gt;comboBox_FontRotate_color.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -286,6 +298,9 @@
   </data>
   <data name="radioButton_CtrlClockwise.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 17</value>
+  </data>
+  <data name="&gt;&gt;button_FontRotate.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;копироватьToolStripMenuItemY.Name" xml:space="preserve">
     <value>копироватьToolStripMenuItemY</value>
@@ -304,8 +319,8 @@
         uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="копироватьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+  <data name="checkBox_separator.Text" xml:space="preserve">
+    <value>Разделитель</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotate_size.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -322,8 +337,8 @@
   <data name="numericUpDown_FontRotate_spacing.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
-  <data name="checkBox_separator.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;label02.Name" xml:space="preserve">
+    <value>label02</value>
   </data>
   <data name="numericUpDown_FontRotateX.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
@@ -334,14 +349,11 @@
   <data name="button_FontRotate.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 23</value>
   </data>
-  <data name="label02.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 41</value>
-  </data>
   <data name="checkBox_separator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label04.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;contextMenuStrip_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label01.TabIndex" type="System.Int32, mscorlib">
     <value>144</value>
@@ -349,20 +361,14 @@
   <data name="&gt;&gt;numericUpDown_FontRotate_spacing.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_FontRotate.Name" xml:space="preserve">
-    <value>button_FontRotate</value>
+  <data name="checkBox_addZero.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
   </data>
-  <data name="&gt;&gt;button_Copy_FontRotate.Name" xml:space="preserve">
-    <value>button_Copy_FontRotate</value>
+  <data name="&gt;&gt;groupBox_FontRotate_RotateDirection.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotate_angle.Parent" xml:space="preserve">
     <value>panel_FontRotate</value>
-  </data>
-  <data name="numericUpDown_FontRotate_size.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="checkBox_addZero.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotate_spacing.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -376,17 +382,14 @@
   <data name="button_Copy_FontRotate.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
   </data>
-  <data name="label05.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;label02.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
   </data>
   <data name="checkBox_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 17</value>
   </data>
-  <data name="&gt;&gt;label08.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkBox_separator.Text" xml:space="preserve">
-    <value>Разделитель</value>
+  <data name="&gt;&gt;checkBox_addZero.Name" xml:space="preserve">
+    <value>checkBox_addZero</value>
   </data>
   <data name="&gt;&gt;label05.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -397,11 +400,8 @@
   <data name="label08.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;groupBox_FontRotate_RotateDirection.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="numericUpDown_FontRotateX.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
+    <value>Копировать</value>
   </data>
   <data name="checkBox_FontRotate_unit.TabIndex" type="System.Int32, mscorlib">
     <value>151</value>
@@ -412,26 +412,32 @@
   <data name="label01.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 41</value>
   </data>
-  <data name="&gt;&gt;checkBox_FontRotate_unit.Parent" xml:space="preserve">
+  <data name="&gt;&gt;contextMenuStrip_X.Name" xml:space="preserve">
+    <value>contextMenuStrip_X</value>
+  </data>
+  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
     <value>panel_FontRotate</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotate_angle.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioButton_CtrlClockwise.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button_Copy_FontRotate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 23</value>
   </data>
   <data name="numericUpDown_FontRotateX.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 58</value>
   </data>
-  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
+  <data name="&gt;&gt;копироватьToolStripMenuItemX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label05.Text" xml:space="preserve">
+    <value>X:</value>
   </data>
   <data name="comboBox_FontRotate_color.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="label07.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
+    <value>Копировать</value>
   </data>
   <data name="checkBox_FontRotate_unit.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -439,14 +445,8 @@
   <data name="&gt;&gt;numericUpDown_FontRotateX.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;checkBox_FontRotate_unit.Name" xml:space="preserve">
-    <value>checkBox_FontRotate_unit</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="panel_FontRotate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 23</value>
+  <data name="label07.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 88</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotateY.Parent" xml:space="preserve">
     <value>panel_FontRotate</value>
@@ -454,11 +454,8 @@
   <data name="label02.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;checkBox_addZero.Name" xml:space="preserve">
-    <value>checkBox_addZero</value>
-  </data>
-  <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 169</value>
+  <data name="&gt;&gt;button_FontRotate.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;checkBox_follow.Name" xml:space="preserve">
     <value>checkBox_follow</value>
@@ -472,11 +469,11 @@
   <data name="numericUpDown_FontRotate_radius.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
-  <data name="label07.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="numericUpDown_FontRotate_size.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;button_FontRotate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="копироватьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -494,8 +491,8 @@
         vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItemY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="radioButton_Clockwise.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label07.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -535,17 +532,26 @@
         5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button_Copy_FontRotate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 23</value>
+  <data name="&gt;&gt;checkBox_addZero.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
+  </data>
+  <data name="&gt;&gt;label08.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="checkBox_follow.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="копироватьToolStripMenuItemY.Text" xml:space="preserve">
-    <value>Копировать</value>
+  <data name="&gt;&gt;label08.Name" xml:space="preserve">
+    <value>label08</value>
   </data>
-  <data name="radioButton_CtrlClockwise.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="label07.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="label03.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
   </data>
   <data name="checkBox_separator.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 30</value>
@@ -568,9 +574,6 @@
   <data name="&gt;&gt;radioButton_Clockwise.Parent" xml:space="preserve">
     <value>groupBox_FontRotate_RotateDirection</value>
   </data>
-  <data name="&gt;&gt;radioButton_CtrlClockwise.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="checkBox_follow.Text" xml:space="preserve">
     <value>Следовать за</value>
   </data>
@@ -586,9 +589,6 @@
   <data name="groupBox_FontRotate_RotateDirection.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 54</value>
   </data>
-  <data name="groupBox_FontRotate_RotateDirection.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="checkBox_Use.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 6</value>
   </data>
@@ -598,11 +598,14 @@
   <data name="checkBox_addZero.Text" xml:space="preserve">
     <value>Добавлять нули в начале</value>
   </data>
-  <data name="label06.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="label05.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;checkBox_FontRotate_unit.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="checkBox_follow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 142</value>
   </data>
   <data name="&gt;&gt;radioButton_CtrlClockwise.Parent" xml:space="preserve">
     <value>groupBox_FontRotate_RotateDirection</value>
@@ -613,8 +616,8 @@
   <data name="label04.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip_X.Name" xml:space="preserve">
-    <value>contextMenuStrip_X</value>
+  <data name="label06.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label01.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -622,20 +625,14 @@
   <data name="button_FontRotate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="label08.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label01.Text" xml:space="preserve">
+    <value>Координаты</value>
   </data>
   <data name="label02.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="&gt;&gt;label06.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label04.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="checkBox_addZero.TabIndex" type="System.Int32, mscorlib">
-    <value>143</value>
   </data>
   <data name="label08.Text" xml:space="preserve">
     <value>Радиус</value>
@@ -646,8 +643,8 @@
   <data name="numericUpDown_FontRotateY.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 58</value>
   </data>
-  <data name="&gt;&gt;label02.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
+  <data name="radioButton_Clockwise.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 31</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip_Y.Name" xml:space="preserve">
     <value>contextMenuStrip_Y</value>
@@ -667,8 +664,11 @@
   <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 30</value>
+  <data name="&gt;&gt;numericUpDown_FontRotateX.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
+  </data>
+  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
   </data>
   <data name="numericUpDown_FontRotate_angle.Location" type="System.Drawing.Point, System.Drawing">
     <value>261, 58</value>
@@ -681,12 +681,6 @@
   </data>
   <data name="&gt;&gt;копироватьToolStripMenuItemX.Name" xml:space="preserve">
     <value>копироватьToolStripMenuItemX</value>
-  </data>
-  <data name="numericUpDown_FontRotate_angle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="&gt;&gt;comboBox_FontRotate_color.ZOrder" xml:space="preserve">
-    <value>9</value>
   </data>
   <data name="вставитьToolStripMenuItemX.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -705,8 +699,8 @@
         5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="label04.Text" xml:space="preserve">
-    <value>Отступы</value>
+  <data name="radioButton_Clockwise.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="comboBox_FontRotate_color.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 121</value>
@@ -723,14 +717,11 @@
   <data name="вставитьToolStripMenuItemX.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 26</value>
   </data>
-  <data name="radioButton_CtrlClockwise.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label04.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 41</value>
   </data>
-  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
-  </data>
-  <data name="копироватьToolStripMenuItemX.Text" xml:space="preserve">
-    <value>Копировать</value>
+  <data name="вставитьToolStripMenuItemY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
   </data>
   <data name="&gt;&gt;label04.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -741,6 +732,12 @@
   <data name="checkBox_addZero.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;label04.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
+  </data>
+  <data name="&gt;&gt;вставитьКоординатуYToolStripMenuItem.Name" xml:space="preserve">
+    <value>вставитьКоординатуYToolStripMenuItem</value>
+  </data>
   <data name="button_FontRotate.Text" xml:space="preserve">
     <value>Системный шрифт по окружности</value>
   </data>
@@ -750,20 +747,20 @@
   <data name="label06.TabIndex" type="System.Int32, mscorlib">
     <value>127</value>
   </data>
-  <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+  <data name="&gt;&gt;button_Copy_FontRotate.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
   </data>
   <data name="&gt;&gt;label07.Name" xml:space="preserve">
     <value>label07</value>
   </data>
-  <data name="radioButton_Clockwise.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;checkBox_addZero.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="numericUpDown_FontRotateY.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
   </data>
-  <data name="label03.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;numericUpDown_FontRotateY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBox_Use.Name" xml:space="preserve">
     <value>checkBox_Use</value>
@@ -774,17 +771,23 @@
   <data name="groupBox_FontRotate_RotateDirection.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 88</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>UserControl_FontRotate</value>
+  <data name="panel_FontRotate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="button_FontRotate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;radioButton_CtrlClockwise.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label08.TabIndex" type="System.Int32, mscorlib">
+    <value>162</value>
   </data>
   <data name="label04.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label03.Text" xml:space="preserve">
     <value>Угол</value>
+  </data>
+  <data name="button_FontRotate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="checkBox_FontRotate_unit.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 142</value>
@@ -795,14 +798,20 @@
   <data name="numericUpDown_FontRotateY.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
-  <data name="&gt;&gt;label08.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_FontRotate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;comboBox_FontRotate_color.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="groupBox_FontRotate_RotateDirection.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label05.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
   </data>
   <data name="panel_FontRotate.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 200</value>
@@ -810,14 +819,14 @@
   <data name="&gt;&gt;button_Copy_FontRotate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставить координату Х</value>
   </data>
   <data name="label01.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
   </data>
-  <data name="label04.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 41</value>
+  <data name="&gt;&gt;checkBox_FontRotate_unit.Name" xml:space="preserve">
+    <value>checkBox_FontRotate_unit</value>
   </data>
   <data name="&gt;&gt;label01.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -825,8 +834,11 @@
   <data name="&gt;&gt;numericUpDown_FontRotate_size.Parent" xml:space="preserve">
     <value>panel_FontRotate</value>
   </data>
-  <data name="&gt;&gt;вставитьКоординатуYToolStripMenuItem.Name" xml:space="preserve">
-    <value>вставитьКоординатуYToolStripMenuItem</value>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 82</value>
+  </data>
+  <data name="label07.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotate_radius.Name" xml:space="preserve">
     <value>numericUpDown_FontRotate_radius</value>
@@ -837,125 +849,11 @@
   <data name="label02.Text" xml:space="preserve">
     <value>Размер</value>
   </data>
-  <data name="label04.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="&gt;&gt;panel_FontRotate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label07.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label08.TabIndex" type="System.Int32, mscorlib">
-    <value>162</value>
-  </data>
-  <data name="&gt;&gt;panel_FontRotate.Name" xml:space="preserve">
-    <value>panel_FontRotate</value>
-  </data>
-  <data name="&gt;&gt;checkBox_separator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="numericUpDown_FontRotate_radius.TabIndex" type="System.Int32, mscorlib">
     <value>163</value>
   </data>
-  <data name="numericUpDown_FontRotate_size.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 58</value>
-  </data>
-  <data name="numericUpDown_FontRotateX.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_FontRotateX.Name" xml:space="preserve">
-    <value>numericUpDown_FontRotateX</value>
-  </data>
-  <data name="&gt;&gt;label04.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
-  </data>
-  <data name="label03.TabIndex" type="System.Int32, mscorlib">
-    <value>136</value>
-  </data>
-  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_FontRotateY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label03.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="groupBox_FontRotate_RotateDirection.Text" xml:space="preserve">
-    <value>Направление текста</value>
-  </data>
-  <data name="&gt;&gt;label06.Name" xml:space="preserve">
-    <value>label06</value>
-  </data>
-  <data name="checkBox_follow.TabIndex" type="System.Int32, mscorlib">
-    <value>164</value>
-  </data>
-  <data name="checkBox_follow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 30</value>
-  </data>
-  <data name="button_FontRotate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label05.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_FontRotate_radius.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
-  </data>
-  <data name="numericUpDown_FontRotate_spacing.TabIndex" type="System.Int32, mscorlib">
-    <value>157</value>
-  </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItemX.Name" xml:space="preserve">
-    <value>вставитьToolStripMenuItemX</value>
-  </data>
-  <data name="numericUpDown_FontRotate_angle.TabIndex" type="System.Int32, mscorlib">
-    <value>145</value>
-  </data>
-  <data name="label03.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 13</value>
-  </data>
-  <data name="&gt;&gt;label02.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_FontRotateY.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="radioButton_CtrlClockwise.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 31</value>
-  </data>
-  <data name="label01.Text" xml:space="preserve">
-    <value>Координаты</value>
-  </data>
-  <data name="checkBox_separator.TabIndex" type="System.Int32, mscorlib">
-    <value>165</value>
-  </data>
-  <data name="&gt;&gt;checkBox_separator.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label02.Name" xml:space="preserve">
-    <value>label02</value>
-  </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItemY.Name" xml:space="preserve">
-    <value>вставитьToolStripMenuItemY</value>
-  </data>
-  <data name="&gt;&gt;radioButton_Clockwise.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label05.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
-  </data>
-  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вставить координату Х</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_FontRotateX.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
-  </data>
-  <data name="label03.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="checkBox_follow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;panel_FontRotate.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="копироватьToolStripMenuItemY.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -973,11 +871,119 @@
         vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="&gt;&gt;checkBox_follow.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
+  </data>
+  <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Name" xml:space="preserve">
+    <value>вставитьКоординатуХToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;checkBox_addZero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_separator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="вставитьКоординатуYToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="numericUpDown_FontRotate_size.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 58</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_FontRotateX.Name" xml:space="preserve">
+    <value>numericUpDown_FontRotateX</value>
+  </data>
+  <data name="radioButton_CtrlClockwise.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Use.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label05.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_FontRotateY.Name" xml:space="preserve">
+    <value>numericUpDown_FontRotateY</value>
+  </data>
+  <data name="checkBox_Use.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label06.Name" xml:space="preserve">
+    <value>label06</value>
+  </data>
+  <data name="checkBox_follow.TabIndex" type="System.Int32, mscorlib">
+    <value>164</value>
+  </data>
+  <data name="checkBox_separator.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_FontRotate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="label05.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 60</value>
+  </data>
+  <data name="numericUpDown_FontRotate_spacing.TabIndex" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItemX.Name" xml:space="preserve">
+    <value>вставитьToolStripMenuItemX</value>
+  </data>
+  <data name="label06.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radioButton_CtrlClockwise.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label02.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_FontRotateY.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButton_CtrlClockwise.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 31</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Clockwise.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;checkBox_separator.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="groupBox_FontRotate_RotateDirection.Text" xml:space="preserve">
+    <value>Направление текста</value>
+  </data>
+  <data name="label06.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label05.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
+  </data>
+  <data name="numericUpDown_FontRotate_angle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="&gt;&gt;radioButton_CtrlClockwise.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBox_follow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="numericUpDown_FontRotateX.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
   <data name="label03.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="label08.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label05.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label08.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;radioButton_Clockwise.Name" xml:space="preserve">
     <value>radioButton_Clockwise</value>
@@ -985,14 +991,8 @@
   <data name="label06.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label02.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;panel_FontRotate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton_Clockwise.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="label01.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1000,41 +1000,47 @@
   <data name="label06.Text" xml:space="preserve">
     <value>Y:</value>
   </data>
-  <data name="&gt;&gt;label03.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label02.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;checkBox_follow.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label02.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+  <data name="checkBox_addZero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 30</value>
   </data>
-  <data name="label05.Text" xml:space="preserve">
-    <value>X:</value>
+  <data name="label04.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;numericUpDown_FontRotate_spacing.Name" xml:space="preserve">
     <value>numericUpDown_FontRotate_spacing</value>
   </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 82</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
-  <data name="label06.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="checkBox_addZero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 169</value>
+  </data>
+  <data name="label04.Text" xml:space="preserve">
+    <value>Отступы</value>
+  </data>
+  <data name="radioButton_Clockwise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
   </data>
   <data name="button_Copy_FontRotate.Text" xml:space="preserve">
     <value>Скопировать с основного экрана</value>
   </data>
-  <data name="label06.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
+  <data name="checkBox_addZero.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;вставитьКоординатуYToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_Copy_FontRotate.Parent" xml:space="preserve">
-    <value>panel_FontRotate</value>
+  <data name="numericUpDown_FontRotateX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="numericUpDown_FontRotate_size.TabIndex" type="System.Int32, mscorlib">
-    <value>154</value>
+  <data name="&gt;&gt;numericUpDown_FontRotate_radius.Parent" xml:space="preserve">
+    <value>panel_FontRotate</value>
   </data>
   <data name="&gt;&gt;checkBox_separator.Parent" xml:space="preserve">
     <value>panel_FontRotate</value>
@@ -1042,17 +1048,14 @@
   <data name="&gt;&gt;radioButton_CtrlClockwise.Name" xml:space="preserve">
     <value>radioButton_CtrlClockwise</value>
   </data>
-  <data name="radioButton_Clockwise.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;checkBox_Use.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="numericUpDown_FontRotate_angle.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
   </data>
   <data name="label08.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="panel_FontRotate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="checkBox_separator.TabIndex" type="System.Int32, mscorlib">
+    <value>165</value>
   </data>
   <data name="&gt;&gt;копироватьToolStripMenuItemY.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1063,9 +1066,6 @@
   <data name="&gt;&gt;label02.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="radioButton_Clockwise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 17</value>
-  </data>
   <data name="numericUpDown_FontRotate_size.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1075,8 +1075,8 @@
   <data name="вставитьКоординатуYToolStripMenuItem.Text" xml:space="preserve">
     <value>Вставить координату Y</value>
   </data>
-  <data name="radioButton_Clockwise.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 31</value>
+  <data name="panel_FontRotate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
   </data>
   <data name="&gt;&gt;label03.Name" xml:space="preserve">
     <value>label03</value>

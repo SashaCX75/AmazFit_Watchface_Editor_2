@@ -124,10 +124,10 @@
     <value>A mutatók forgásközéppontjának kijelölése</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>Mértékegység koordinátái</value>
+    <value>"bin" fájl kicsomagolása</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
-    <value>Tömörített .bin becsomagolása</value>
+    <value>"bin" fájl létrehozása</value>
   </data>
   <data name="button_CreatePreview.Text" xml:space="preserve">
     <value>Előnézet létrehozása</value>
@@ -206,7 +206,7 @@
     <value>Érték 1</value>
   </data>
   <data name="button_JsonPreview_Random.Text" xml:space="preserve">
-    <value>Véletlen érték</value>
+    <value>Véletlenszerű érték</value>
   </data>
   <data name="button_JsonPreview_Read.Text" xml:space="preserve">
     <value>Érték betöltése</value>
@@ -239,10 +239,10 @@
     <value>Választ</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 13</value>
+    <value>54, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>JSON képpel:</value>
+    <value>JSON fájl:</value>
   </data>
   <data name="tabPage_Show.Text" xml:space="preserve">
     <value>Böngészés</value>
@@ -267,6 +267,12 @@
   </data>
   <data name="radioButton_Background_image.Text" xml:space="preserve">
     <value>Kép</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Előnézet:</value>
   </data>
   <data name="tabPage_Background.Text" xml:space="preserve">
     <value>Háttér</value>
@@ -449,8 +455,27 @@
   <data name="checkBox_Second_Use.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label522.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label522.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 10</value>
+  </data>
+  <data name="label522.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label522.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label523.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label523.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label523.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label523.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -482,6 +507,15 @@
   <data name="comboBox_Second_alignment.Items2" xml:space="preserve">
     <value>Középre</value>
   </data>
+  <data name="label530.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label530.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label530.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label530.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
@@ -509,8 +543,26 @@
   <data name="checkBox_Minute_Use.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label512.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label512.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label512.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label512.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label513.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label513.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label513.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label513.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -542,6 +594,15 @@
   <data name="comboBox_Minute_alignment.Items2" xml:space="preserve">
     <value>Középre</value>
   </data>
+  <data name="label520.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label520.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label520.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label520.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
@@ -569,8 +630,26 @@
   <data name="checkBox_Hour_Use.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label502.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label502.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label502.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label502.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label511.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label511.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label511.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label511.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -596,6 +675,15 @@
   <data name="comboBox_Hour_alignment.Items2" xml:space="preserve">
     <value>Középre</value>
   </data>
+  <data name="label507.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label507.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label507.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label507.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
@@ -611,14 +699,53 @@
   <data name="tabPage_Digital_time.Text" xml:space="preserve">
     <value>Digitális óra</value>
   </data>
+  <data name="label557.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label557.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label557.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label557.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label560.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label560.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label560.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label560.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
   </data>
   <data name="label561.Text" xml:space="preserve">
     <value>Másodperc mutató</value>
   </data>
+  <data name="label562.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label562.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label562.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label562.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label567.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label567.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label567.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label567.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -632,14 +759,62 @@
   <data name="button_Second_hand.Text" xml:space="preserve">
     <value>Másodperc</value>
   </data>
+  <data name="label546.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label546.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label546.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label546.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label549.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label549.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label549.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label549.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label550.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label550.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label550.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="label550.Text" xml:space="preserve">
     <value>Percmutató</value>
   </data>
+  <data name="label551.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label551.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label551.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label551.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label556.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label556.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label556.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label556.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -653,14 +828,62 @@
   <data name="button_Minute_hand.Text" xml:space="preserve">
     <value>Perc</value>
   </data>
+  <data name="label543.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label543.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label543.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label543.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label535.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label535.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label535.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label535.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label536.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label536.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label536.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
   </data>
   <data name="label536.Text" xml:space="preserve">
     <value>Óramutató</value>
   </data>
+  <data name="label537.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label537.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label537.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label537.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label542.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label542.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label542.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label542.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -681,10 +904,10 @@
     <value>Idő</value>
   </data>
   <data name="userControl_SystemFont_Group_Day.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_Day.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="checkBox_Day_hand_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -692,26 +915,98 @@
   <data name="checkBox_Day_hand_Use.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label609.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label609.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label609.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label609.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label612.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label612.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label612.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label612.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label617.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label617.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label617.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
   </data>
   <data name="label617.Text" xml:space="preserve">
     <value>Mutató</value>
   </data>
+  <data name="label618.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label618.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label618.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label618.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label623.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label623.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label623.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label623.Text" xml:space="preserve">
     <value>Központi kép</value>
   </data>
+  <data name="label624.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 109</value>
+  </data>
   <data name="label624.Text" xml:space="preserve">
     <value>Kezdési szög</value>
   </data>
+  <data name="label625.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 109</value>
+  </data>
   <data name="label625.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
+  </data>
+  <data name="label714.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label714.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 177</value>
+  </data>
+  <data name="label714.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
   </data>
   <data name="label714.Text" xml:space="preserve">
     <value>Háttér koordináták</value>
+  </data>
+  <data name="label717.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label717.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="label717.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
   </data>
   <data name="label717.Text" xml:space="preserve">
     <value>Háttérkép</value>
@@ -740,6 +1035,15 @@
   <data name="checkBox_Day_add_zero.Text" xml:space="preserve">
     <value>Kezdő "0" hozzáadása</value>
   </data>
+  <data name="label585.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label585.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label585.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label585.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
@@ -752,8 +1056,26 @@
   <data name="comboBox_Day_alignment.Items2" xml:space="preserve">
     <value>Középre</value>
   </data>
+  <data name="label577.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label577.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label577.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label577.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label578.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label578.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label578.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label578.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -771,7 +1093,7 @@
     <value>Távolság</value>
   </data>
   <data name="checkBox_Day_follow.Text" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="button_Day_text.Text" xml:space="preserve">
     <value>Numerikus érték</value>
@@ -780,13 +1102,31 @@
     <value>Nap</value>
   </data>
   <data name="userControl_SystemFont_Group_Month.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_Month.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
+  </data>
+  <data name="label706.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label706.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 177</value>
+  </data>
+  <data name="label706.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
   </data>
   <data name="label706.Text" xml:space="preserve">
     <value>Háttér koordináták</value>
+  </data>
+  <data name="label709.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label709.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="label709.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
   </data>
   <data name="label709.Text" xml:space="preserve">
     <value>Háttérkép</value>
@@ -797,20 +1137,74 @@
   <data name="checkBox_Month_hand_Use.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label626.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 109</value>
+  </data>
   <data name="label626.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
+  </data>
+  <data name="label627.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 109</value>
   </data>
   <data name="label627.Text" xml:space="preserve">
     <value>Kezdési szög</value>
   </data>
+  <data name="label628.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label628.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label628.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label628.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label631.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label631.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label631.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label631.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label632.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label632.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label632.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="label632.Text" xml:space="preserve">
     <value>Mutató kép</value>
   </data>
+  <data name="label633.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label633.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label633.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label633.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label638.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label638.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label638.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label638.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -839,6 +1233,15 @@
   <data name="checkBox_Month_add_zero.Text" xml:space="preserve">
     <value>Kezdő "0" hozzáadása</value>
   </data>
+  <data name="label596.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label596.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label596.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label596.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
@@ -851,8 +1254,26 @@
   <data name="comboBox_Month_alignment.Items2" xml:space="preserve">
     <value>Középre</value>
   </data>
+  <data name="label588.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label588.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label588.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label588.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label589.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label589.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label589.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label589.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -870,7 +1291,7 @@
     <value>Távolság</value>
   </data>
   <data name="checkBox_Month_follow.Text" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="button_Month_text.Text" xml:space="preserve">
     <value>Numerikus érték</value>
@@ -887,6 +1308,15 @@
   <data name="checkBox_Month_pictures_Use.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label614.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label614.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label614.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label614.Text" xml:space="preserve">
     <value>Első kép</value>
   </data>
@@ -897,16 +1327,16 @@
     <value>Hónap</value>
   </data>
   <data name="userControl_SystemFont_Group_Year.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_Year.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="button_Year_hand.Text" xml:space="preserve">
     <value>Mutató</value>
   </data>
   <data name="checkBox_Year_follow.Text" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="checkBox_Year_text_Use.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -929,6 +1359,15 @@
   <data name="checkBox_Year_add_zero.Text" xml:space="preserve">
     <value>Két számjegyű év</value>
   </data>
+  <data name="label607.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label607.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label607.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label607.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
@@ -941,8 +1380,26 @@
   <data name="comboBox_Year_alignment.Items2" xml:space="preserve">
     <value>Középre</value>
   </data>
+  <data name="label599.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label599.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label599.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label599.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label600.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label600.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label600.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label600.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -965,8 +1422,26 @@
   <data name="tabPage_Year.Text" xml:space="preserve">
     <value>Év</value>
   </data>
+  <data name="label710.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label710.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 177</value>
+  </data>
+  <data name="label710.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
   <data name="label710.Text" xml:space="preserve">
     <value>Háttér koordináták</value>
+  </data>
+  <data name="label713.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label713.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="label713.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
   </data>
   <data name="label713.Text" xml:space="preserve">
     <value>Háttérkép</value>
@@ -977,20 +1452,74 @@
   <data name="checkBox_DOW_hand_Use.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label643.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 109</value>
+  </data>
   <data name="label643.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
+  </data>
+  <data name="label644.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 109</value>
   </data>
   <data name="label644.Text" xml:space="preserve">
     <value>Kezdési szög</value>
   </data>
+  <data name="label645.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label645.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label645.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label645.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label648.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label648.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label648.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label648.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label649.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label649.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label649.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="label649.Text" xml:space="preserve">
     <value>Mutató kép</value>
   </data>
+  <data name="label650.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label650.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label650.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label650.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label655.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label655.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label655.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label655.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -1009,6 +1538,15 @@
   </data>
   <data name="label639.Text" xml:space="preserve">
     <value>Koordináták</value>
+  </data>
+  <data name="label640.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label640.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label640.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
   </data>
   <data name="label640.Text" xml:space="preserve">
     <value>Első kép</value>
@@ -1066,21 +1604,6 @@
   </data>
   <data name="tabPage_HeartRate.Text" xml:space="preserve">
     <value>Pulzusszám</value>
-  </data>
-  <data name="userControl_icon_Distance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 49</value>
-  </data>
-  <data name="userControl_icon_Distance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Distance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 26</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Distance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
-  <data name="userControl_text_Distance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="tabPage_Distance.Text" xml:space="preserve">
     <value>Távolság</value>
@@ -1192,7 +1715,7 @@
     <value>Minimum hőmérséklet követése</value>
   </data>
   <data name="userControl_text_weather_Min.ButtonText" xml:space="preserve">
-    <value>Maximum hőmérséklet</value>
+    <value>Minimum hőmérséklet</value>
   </data>
   <data name="userControl_text_weather_Current.ButtonText" xml:space="preserve">
     <value>Aktuális hőmérséklet</value>
@@ -1253,7 +1776,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Napkelte</value>
   </data>
   <data name="tabPage_WindForce.Text" xml:space="preserve">
-    <value>Szélerő</value>
+    <value>Szélerősség</value>
   </data>
   <data name="tabPage_Altitude.Text" xml:space="preserve">
     <value>Igazítás</value>
@@ -1356,7 +1879,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAATABIQEwASEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAWABIQFgASEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1492,8 +2015,26 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="label306.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
+  <data name="label307.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label307.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label307.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label307.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label308.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label308.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label308.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label308.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -1509,6 +2050,15 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   </data>
   <data name="label314.Text" xml:space="preserve">
     <value>Igazítás</value>
+  </data>
+  <data name="label315.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label315.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label315.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
   </data>
   <data name="label315.Text" xml:space="preserve">
     <value>Mértékegység</value>
@@ -1549,8 +2099,26 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="label317.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
+  <data name="label318.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label318.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label318.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label318.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label319.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label319.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label319.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label319.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -1566,6 +2134,15 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   </data>
   <data name="label325.Text" xml:space="preserve">
     <value>Igazítás</value>
+  </data>
+  <data name="label326.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label326.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label326.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
   </data>
   <data name="label326.Text" xml:space="preserve">
     <value>Mértékegység</value>
@@ -1591,14 +2168,62 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="checkBox_Minute_hand_Use_AOD.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label339.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label339.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label339.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label339.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label342.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label342.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label342.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label342.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label343.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label343.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label343.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="label343.Text" xml:space="preserve">
     <value>Percmutató</value>
   </data>
+  <data name="label344.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label344.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label344.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label344.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label349.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label349.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label349.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label349.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -1615,14 +2240,62 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="checkBox_Hour_hand_Use_AOD.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label350.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label350.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label350.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label350.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label353.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label353.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label353.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label353.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label354.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label354.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label354.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
   </data>
   <data name="label354.Text" xml:space="preserve">
     <value>Óramutató</value>
   </data>
+  <data name="label357.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label357.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label357.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label357.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label362.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label362.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label362.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label362.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -1637,10 +2310,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Idő</value>
   </data>
   <data name="userControl_SystemFont_Group_Day_AOD.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_Day_AOD.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="button_Copy_Day_hand_AOD.Text" xml:space="preserve">
     <value>Másolás a főképernyőről</value>
@@ -1651,29 +2324,101 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="checkBox_Day_hand_Use_AOD.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label363.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label363.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 177</value>
+  </data>
+  <data name="label363.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
   <data name="label363.Text" xml:space="preserve">
     <value>Háttér koordináták</value>
+  </data>
+  <data name="label366.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="label366.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
   </data>
   <data name="label366.Text" xml:space="preserve">
     <value>Háttérkép</value>
   </data>
+  <data name="label367.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label367.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label367.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label367.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label370.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label370.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label370.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label370.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label371.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label371.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label371.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="label371.Text" xml:space="preserve">
     <value>Mutató kép</value>
   </data>
+  <data name="label372.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label372.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label372.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label372.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label377.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label377.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label377.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label377.Text" xml:space="preserve">
     <value>Központi kép</value>
   </data>
+  <data name="label378.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 109</value>
+  </data>
   <data name="label378.Text" xml:space="preserve">
     <value>Kezdési szög</value>
   </data>
+  <data name="label379.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 109</value>
+  </data>
   <data name="label379.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
   </data>
   <data name="button_Day_hand_AOD.Text" xml:space="preserve">
     <value>Mutató</value>
@@ -1697,10 +2442,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Középre</value>
   </data>
   <data name="checkBox_Day_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
+    <value>99, 17</value>
   </data>
   <data name="checkBox_Day_follow_AOD.Text" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="checkBox_Day_add_zero_AOD.Text" xml:space="preserve">
     <value>Kezdő "0" hozzáadása</value>
@@ -1717,11 +2462,32 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="label381.Text" xml:space="preserve">
     <value>Elválasztó</value>
   </data>
+  <data name="label382.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
   <data name="label382.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
+  <data name="label383.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label383.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label383.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label383.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label384.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label384.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label384.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label384.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -1745,10 +2511,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Nap</value>
   </data>
   <data name="userControl_SystemFont_Group_Month_AOD.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_Month_AOD.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="button_Copy_Month_hand_AOD.Text" xml:space="preserve">
     <value>Másolás a főképernyőről</value>
@@ -1759,26 +2525,98 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="checkBox_Month_hand_Use_AOD.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label391.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label391.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 177</value>
+  </data>
+  <data name="label391.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
   <data name="label391.Text" xml:space="preserve">
     <value>Háttér koordináták</value>
+  </data>
+  <data name="label394.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label394.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="label394.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
   </data>
   <data name="label394.Text" xml:space="preserve">
     <value>Háttérkép</value>
   </data>
+  <data name="label395.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 109</value>
+  </data>
   <data name="label395.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
+  </data>
+  <data name="label396.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 109</value>
   </data>
   <data name="label396.Text" xml:space="preserve">
     <value>Kezdési szög</value>
   </data>
+  <data name="label397.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label397.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label397.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label397.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label400.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label400.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label400.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label400.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label401.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label401.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label401.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="label401.Text" xml:space="preserve">
     <value>Mutató kép</value>
   </data>
+  <data name="label402.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label402.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label402.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label402.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label416.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label416.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label416.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label416.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -1796,10 +2634,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Használ</value>
   </data>
   <data name="checkBox_Month_follow_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
+    <value>99, 17</value>
   </data>
   <data name="checkBox_Month_follow_AOD.Text" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="checkBox_Month_add_zero_AOD.Text" xml:space="preserve">
     <value>Kezdő "0" hozzáadása</value>
@@ -1825,11 +2663,38 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="label418.Text" xml:space="preserve">
     <value>Elválasztó</value>
   </data>
+  <data name="label419.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label419.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label419.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label419.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
+  <data name="label420.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label420.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label420.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label420.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label421.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label421.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label421.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label421.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -1864,6 +2729,15 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="label428.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
+  <data name="label429.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label429.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label429.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label429.Text" xml:space="preserve">
     <value>Első kép</value>
   </data>
@@ -1874,16 +2748,16 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Hónap</value>
   </data>
   <data name="userControl_SystemFont_Group_Year_AOD.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_Year_AOD.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="button13.Text" xml:space="preserve">
     <value>Mutató</value>
   </data>
   <data name="checkBox_Year_follow_AOD.Text" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="button_Copy_Year_text_AOD.Text" xml:space="preserve">
     <value>Másolás a főképernyőről</value>
@@ -1918,11 +2792,38 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="label433.Text" xml:space="preserve">
     <value>Elválasztó</value>
   </data>
+  <data name="label434.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label434.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label434.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
   <data name="label434.Text" xml:space="preserve">
     <value>Mértékegység</value>
   </data>
+  <data name="label435.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label435.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label435.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
   <data name="label435.Text" xml:space="preserve">
     <value>Első kép</value>
+  </data>
+  <data name="label436.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label436.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label436.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
   </data>
   <data name="label436.Text" xml:space="preserve">
     <value>Mértékegység koordinátái</value>
@@ -1954,26 +2855,98 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   <data name="checkBox_DOW_hand_Use_AOD.Text" xml:space="preserve">
     <value>Használ</value>
   </data>
+  <data name="label443.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label443.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 177</value>
+  </data>
+  <data name="label443.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
   <data name="label443.Text" xml:space="preserve">
     <value>Háttér koordináták</value>
+  </data>
+  <data name="label446.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label446.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="label446.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
   </data>
   <data name="label446.Text" xml:space="preserve">
     <value>Háttérkép</value>
   </data>
+  <data name="label447.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 109</value>
+  </data>
   <data name="label447.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
+  </data>
+  <data name="label448.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 109</value>
   </data>
   <data name="label448.Text" xml:space="preserve">
     <value>Kezdési szög</value>
   </data>
+  <data name="label449.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label449.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 41</value>
+  </data>
+  <data name="label449.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
   <data name="label449.Text" xml:space="preserve">
     <value>Forgatási pont eltolás</value>
+  </data>
+  <data name="label452.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label452.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 41</value>
+  </data>
+  <data name="label452.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="label452.Text" xml:space="preserve">
+    <value>Forgásközéppont koordinátái</value>
+  </data>
+  <data name="label453.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label453.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label453.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
   <data name="label453.Text" xml:space="preserve">
     <value>Mutató kép</value>
   </data>
+  <data name="label454.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label454.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 109</value>
+  </data>
+  <data name="label454.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 13</value>
+  </data>
   <data name="label454.Text" xml:space="preserve">
     <value>Központi kép koordináták</value>
+  </data>
+  <data name="label459.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label459.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 109</value>
+  </data>
+  <data name="label459.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
   </data>
   <data name="label459.Text" xml:space="preserve">
     <value>Központi kép</value>
@@ -1995,6 +2968,15 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   </data>
   <data name="label460.Text" xml:space="preserve">
     <value>Koordináták</value>
+  </data>
+  <data name="label461.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label461.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="label461.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
   </data>
   <data name="label461.Text" xml:space="preserve">
     <value>Első kép</value>
@@ -2052,21 +3034,6 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
   </data>
   <data name="tabPage_HeartRate_AOD.Text" xml:space="preserve">
     <value>Pulzusszám</value>
-  </data>
-  <data name="userControl_icon_Distance_AOD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 49</value>
-  </data>
-  <data name="userControl_icon_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Distance_AOD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 26</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
-  <data name="userControl_text_Distance_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="tabPage_Distance_AOD.Text" xml:space="preserve">
     <value>Távolság</value>
@@ -2166,7 +3133,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Minimum hőmérséklet követése</value>
   </data>
   <data name="userControl_text_weather_Min_AOD.ButtonText" xml:space="preserve">
-    <value>Maximum hőmérséklet</value>
+    <value>Minimum hőmérséklet</value>
   </data>
   <data name="userControl_text_weather_Current_AOD.ButtonText" xml:space="preserve">
     <value>Aktuális hőmérséklet</value>
@@ -2227,7 +3194,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Napkelte</value>
   </data>
   <data name="tabPage_WindForce_AOD.Text" xml:space="preserve">
-    <value>Szélerő</value>
+    <value>Szélerősség</value>
   </data>
   <data name="tabPage_Altitude_AOD.Text" xml:space="preserve">
     <value>Igazítás</value>
@@ -2245,7 +3212,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Rendszer</value>
   </data>
   <data name="button_RandomPreview.Text" xml:space="preserve">
-    <value>Véletlen előnézet</value>
+    <value>Véletlenszerű előnézet</value>
   </data>
   <data name="radioButton_ScreenNormal.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 17</value>
@@ -2308,37 +3275,37 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Előnézeti mód kiválasztása</value>
   </data>
   <data name="userControl_SystemFont_Group_DayWidget.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_DayWidget.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_text_date_DayWidget.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="tabPage_DayWidget.Text" xml:space="preserve">
     <value>Nap</value>
   </data>
   <data name="userControl_SystemFont_Group_MonthWidget.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_MonthWidget.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_text_date_MonthWidget.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="tabPage_MonthWidget.Text" xml:space="preserve">
     <value>Hónap</value>
   </data>
   <data name="userControl_SystemFont_Group_YearWidget.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_YearWidget.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_text_date_YearWidget.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="tabPage_YearWidget.Text" xml:space="preserve">
     <value>Év</value>
@@ -2371,7 +3338,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Minimum hőmérséklet követése</value>
   </data>
   <data name="userControl_text_weatherWidgetMin.ButtonText" xml:space="preserve">
-    <value>Maximum hőmérséklet</value>
+    <value>Minimum hőmérséklet</value>
   </data>
   <data name="userControl_text_weatherWidgetCur.ButtonText" xml:space="preserve">
     <value>Aktuális hőmérséklet</value>
@@ -2389,7 +3356,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Leírás hossza</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Mértékegység koordinátái</value>
+    <value>Jelöletlen terület kerete</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Kiemelt zónakeret</value>
@@ -2458,10 +3425,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Légnyomás</value>
   </data>
   <data name="radioButton_WindForceWidgetAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
+    <value>82, 17</value>
   </data>
   <data name="radioButton_WindForceWidgetAdd.Text" xml:space="preserve">
-    <value>Szélerő</value>
+    <value>Szélerősség</value>
   </data>
   <data name="radioButton_SunriseWidgetAdd.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
@@ -2548,37 +3515,37 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Hozzáadott elem</value>
   </data>
   <data name="userControl_SystemFont_Group_DayWidgetAdd.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_DayWidgetAdd.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_text_date_DayWidgetAdd.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Nap</value>
   </data>
   <data name="userControl_SystemFont_Group_MonthWidgetAdd.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_MonthWidgetAdd.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_text_date_MonthWidgetAdd.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Hónap</value>
   </data>
   <data name="userControl_SystemFont_Group_YearWidgetAdd.FollowRotateText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_SystemFont_Group_YearWidgetAdd.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="userControl_text_date_YearWidgetAdd.FollowText" xml:space="preserve">
-    <value>Ellőző követése</value>
+    <value>Előző követése</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Év</value>
@@ -2611,7 +3578,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Minimum hőmérséklet követése</value>
   </data>
   <data name="userControl_text_weatherWidgetMinAdd.ButtonText" xml:space="preserve">
-    <value>Maximum hőmérséklet</value>
+    <value>Minimum hőmérséklet</value>
   </data>
   <data name="userControl_text_weatherWidgetCurAdd.ButtonText" xml:space="preserve">
     <value>Aktuális hőmérséklet</value>
@@ -2623,7 +3590,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Leírás hossza</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
-    <value>Mértékegység koordinátái</value>
+    <value>Jelöletlen terület kerete</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Kiemelt zónakeret</value>
@@ -2660,7 +3627,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAU
-        DQAAAk1TRnQBSQFMAgEBBQEAAfwBBwH8AQcBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBQEAASwBCAEsAQgBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -2746,7 +3713,7 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Nyissa meg a kívánt óralapot, vagy mentse az aktuálisat.</value>
   </data>
   <data name="button_Converting.Text" xml:space="preserve">
-    <value>Alakítani</value>
+    <value>Átalakit</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -2842,10 +3809,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Létrehozott  .bin megnyitása</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
+    <value>100, 17</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
-    <value>Hadd válasszak</value>
+    <value>Mindig rákérdez</value>
   </data>
   <data name="groupBox7.Text" xml:space="preserve">
     <value>A projekt becsomagolása után</value>
@@ -2863,10 +3830,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Előnézet betöltése. Állapotok (ha létezik)</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
+    <value>100, 17</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
-    <value>Hadd válasszak</value>
+    <value>Mindig rákérdez</value>
   </data>
   <data name="groupBox6.Text" xml:space="preserve">
     <value>A projekt megnyitása után</value>
@@ -2884,19 +3851,19 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Kicsomagolt projekt betöltése</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
+    <value>100, 17</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
-    <value>Hadd válasszak</value>
+    <value>Mindig rákérdez</value>
   </data>
   <data name="groupBox5.Text" xml:space="preserve">
     <value>A .bin kinyitása után</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 17</value>
+    <value>67, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Text" xml:space="preserve">
-    <value>Cserélni</value>
+    <value>Lecseréli</value>
   </data>
   <data name="radioButton_Settings_Unpack_Save.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 17</value>
@@ -2905,10 +3872,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Mindkettő mentése</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
+    <value>100, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
-    <value>Hadd válasszak</value>
+    <value>Mindig rákérdez</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Ha a kibontott fájlok neve megegyezik</value>
@@ -2923,10 +3890,10 @@ Az adatok nem minden városra vonatkoznak megfelelően. </value>
     <value>Res_PackerUnpacker (Szerző :bigdigital)</value>
   </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 13</value>
+    <value>162, 13</value>
   </data>
   <data name="label415.Text" xml:space="preserve">
-    <value>Segítettek a fordításban:</value>
+    <value>Közreműködtek a fordításokban:</value>
   </data>
   <data name="label412.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 13</value>

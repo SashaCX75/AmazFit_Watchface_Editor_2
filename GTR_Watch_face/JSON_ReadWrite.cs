@@ -7483,6 +7483,8 @@ namespace AmazFit_Watchface_2
             userControl_text_date_YearWidgetAdd.SettingsClear();
             userControl_pictures_DOWWidgetAdd.SettingsClear();
             userControl_hand_DOWWidgetAdd.SettingsClear();
+
+            radioButton_StepsWidgetAdd.Checked = true;
         }
 
         // устанавливаем тип циферблата исходя из DeviceId

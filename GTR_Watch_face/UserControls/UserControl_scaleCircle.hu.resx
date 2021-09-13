@@ -246,7 +246,7 @@
     <value>Kezdési szög</value>
   </data>
   <data name="label08.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
   </data>
   <data name="label09.Text" xml:space="preserve">
     <value>Háttérkép</value>

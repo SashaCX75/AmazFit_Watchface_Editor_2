@@ -1184,7 +1184,7 @@ namespace AmazFit_Watchface_2
                                 _addZero = digitalDateDigit.Digit.PaddingZero;
                                 if (digitalDateDigit.Separator != null)
                                 {
-                                    _iconIndex = (int)digitalDateDigit.Separator.ImageIndex;
+                                    _iconIndex = (int)digitalDateDigit.Separator.ImageIndex - 1;
                                     _iconX = (int)digitalDateDigit.Separator.Coordinates.X;
                                     _iconY = (int)digitalDateDigit.Separator.Coordinates.Y;
                                 }

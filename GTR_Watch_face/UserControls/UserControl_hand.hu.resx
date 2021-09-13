@@ -240,10 +240,10 @@
     <value>Központi kép koordinátái</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Kezdőszög</value>
+    <value>Kezdési szög</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>Végszög</value>
+    <value>Zárási szög</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Háttérkép</value>

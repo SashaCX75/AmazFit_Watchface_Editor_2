@@ -219,7 +219,7 @@
     <value>Másolás a főképernyőről</value>
   </data>
   <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>Szövegforgatás</value>
+    <value>A rendszer betűtípusa el van forgatva</value>
   </data>
   <data name="checkBox_addZero.Text" xml:space="preserve">
     <value>Kezdő "0" hozzáadása</value>
@@ -231,7 +231,7 @@
     <value>Szeparátor</value>
   </data>
   <data name="checkBox_SystemFont_unit.Text" xml:space="preserve">
-    <value>Egység</value>
+    <value>Egységek</value>
   </data>
   <data name="checkBox_Use.Text" xml:space="preserve">
     <value>Használ</value>
