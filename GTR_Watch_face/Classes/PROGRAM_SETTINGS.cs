@@ -35,6 +35,7 @@
         public bool Show_Widgets_Area = true;
         public float Scale = 1f;
         public float Gif_Speed = 1f;
+        public bool DrawAllWidgets = false;
         public int Animation_Preview_Speed = 4;
 
         public bool ShowIn12hourFormat = true;

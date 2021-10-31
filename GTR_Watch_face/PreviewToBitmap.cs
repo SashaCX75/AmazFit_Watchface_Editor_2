@@ -46,6 +46,7 @@ namespace AmazFit_Watchface_2
                     int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
                     DrawWidgetEditScreen(gPanel, crop, showWidgetsArea, widgetIndex);
                     FormText();
+                    goto TimeEnd;
                     return;
                 }
                 if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" && radioButton_WidgetAdd.Checked)
@@ -53,6 +54,7 @@ namespace AmazFit_Watchface_2
                     int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
                     DrawWidgetEditScreen(gPanel, crop, showWidgetsArea, widgetIndex);
                     FormText();
+                    goto TimeEnd;
                     return;
                 }
             }
@@ -1715,6 +1717,11 @@ namespace AmazFit_Watchface_2
                             //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
                             int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
                             //offSet--;
+                            offSet = 0;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
                             if (offSet < 0) offSet = 0;
                             if (offSet >= count) offSet = (int)(count - 1);
                             int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
@@ -1736,6 +1743,11 @@ namespace AmazFit_Watchface_2
                             int count = coordinates.Count;
                             int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
                             //offSet--;
+                            offSet = 0;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
                             if (offSet < 0) offSet = 0;
                             if (offSet >= count) offSet = (int)(count - 1);
                             for (i = 0; i < count; i++)
@@ -2670,15 +2682,28 @@ namespace AmazFit_Watchface_2
                         if (value == 0) value = 12;
                     }
                 }
-                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
-                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                if (!MS_24h)
+                {
+                    time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                                    spasing, alignment, value, addZero, 2, separator_index, BBorder); 
+                }
+                else
+                {
+                    imageIndex = imageIndex + Watch_Face_Preview_Set.Time.Hours - 1;
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
 
                 if (comboBox_Hour_unit.SelectedIndex >= 0)
                 {
                     src = OpenFileStream(ListImagesFullName[comboBox_Hour_unit.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hour_unitX.Value,
                         (int)numericUpDown_Hour_unitY.Value, src.Width, src.Height));
-                }
+                } 
             }
 
             // минуты
@@ -2909,7 +2934,9 @@ namespace AmazFit_Watchface_2
                     }
                 } 
             }
-        #endregion
+            #endregion
+
+            src.Dispose();
             TimeEnd:
 
             #region Mesh
@@ -2957,7 +2984,6 @@ namespace AmazFit_Watchface_2
                 }
             }
             #endregion
-            src.Dispose();
 
             if (crop)
             {

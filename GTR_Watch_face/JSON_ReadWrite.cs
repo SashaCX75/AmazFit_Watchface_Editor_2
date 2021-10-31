@@ -323,6 +323,7 @@ namespace AmazFit_Watchface_2
                                     if (digitalTimeDigit.Digit.Image != null)
                                     {
                                         checkBox_Hour_Use.Checked = true;
+                                        MS_24h = digitalTimeDigit.Digit.DisplayFormAnalog;
 
                                         numericUpDown_HourX.Value = digitalTimeDigit.Digit.Image.X;
                                         numericUpDown_HourY.Value = digitalTimeDigit.Digit.Image.Y;
@@ -2474,6 +2475,7 @@ namespace AmazFit_Watchface_2
                     multilangImage.ImageSet = new ImageSetGTR2();
                     multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_Hour_image.Text);
                     multilangImage.ImageSet.ImagesCount = 10;
+                    if (MS_24h) multilangImage.ImageSet.ImagesCount = 24;
                 digitalTimeDigit.Digit.Image.MultilangImage.Add(multilangImage);
                 if (comboBox_Hour_separator.SelectedIndex >= 0)
                 {
@@ -2491,6 +2493,7 @@ namespace AmazFit_Watchface_2
                 //if (checkBox_Hour_add_zero.Checked) digitalTimeDigit.Digit.PaddingZero = 0;
                 //digitalTimeDigit.Digit.PaddingZero = checkBox_Hour_add_zero.Checked? 1 : 0;
                 digitalTimeDigit.Digit.PaddingZero = checkBox_Hour_add_zero.Checked;
+                if (MS_24h) digitalTimeDigit.Digit.DisplayFormAnalog = true;
 
 
                 if (comboBox_Hour_unit.SelectedIndex >= 0)
@@ -6068,6 +6071,7 @@ namespace AmazFit_Watchface_2
                     activity.ImageProgress.Coordinates = new List<Coordinates>();
                     activity.ImageProgress.ImageSet.ImageIndex = image;
                     activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    //activity.ImageProgress.DisplayType = "Single";
                     Coordinates coordinates = new Coordinates();
                     coordinates.X = (long)numericUpDownX.Value;
                     coordinates.Y = (long)numericUpDownY.Value;

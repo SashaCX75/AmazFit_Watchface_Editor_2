@@ -159,6 +159,7 @@ namespace AmazFit_Watchface_2
                                     if (digitalTimeDigit.Digit.Image != null)
                                     {
                                         checkBox_Hour_Use_AOD.Checked = true;
+                                        AOD_24h = digitalTimeDigit.Digit.DisplayFormAnalog;
 
                                         numericUpDown_HourX_AOD.Value = digitalTimeDigit.Digit.Image.X;
                                         numericUpDown_HourY_AOD.Value = digitalTimeDigit.Digit.Image.Y;
@@ -2110,10 +2111,11 @@ namespace AmazFit_Watchface_2
                 digitalTimeDigit.Digit.Image.Y = (long)numericUpDown_HourY_AOD.Value;
                 digitalTimeDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
                 MultilangImage multilangImage = new MultilangImage();
-                multilangImage.LangCode = "All";
-                multilangImage.ImageSet = new ImageSetGTR2();
-                multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_Hour_image_AOD.Text);
-                multilangImage.ImageSet.ImagesCount = 10;
+                    multilangImage.LangCode = "All";
+                    multilangImage.ImageSet = new ImageSetGTR2();
+                    multilangImage.ImageSet.ImageIndex = Int32.Parse(comboBox_Hour_image_AOD.Text);
+                    multilangImage.ImageSet.ImagesCount = 10;
+                    if (AOD_24h) multilangImage.ImageSet.ImagesCount = 24;
                 digitalTimeDigit.Digit.Image.MultilangImage.Add(multilangImage);
                 if (comboBox_Hour_separator_AOD.SelectedIndex >= 0)
                 {
@@ -2129,6 +2131,7 @@ namespace AmazFit_Watchface_2
                 digitalTimeDigit.Digit.Alignment = Alignment;
                 digitalTimeDigit.Digit.Spacing = (long)numericUpDown_Hour_spacing_AOD.Value;
                 digitalTimeDigit.Digit.PaddingZero = checkBox_Hour_add_zero_AOD.Checked;
+                if (AOD_24h) digitalTimeDigit.Digit.DisplayFormAnalog = true;
 
 
                 if (comboBox_Hour_unit_AOD.SelectedIndex >= 0)
@@ -3576,6 +3579,7 @@ namespace AmazFit_Watchface_2
                     activity.ImageProgress.Coordinates = new List<Coordinates>();
                     activity.ImageProgress.ImageSet.ImageIndex = image;
                     activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    //activity.ImageProgress.DisplayType = "Single";
                     Coordinates coordinates = new Coordinates();
                     coordinates.X = (long)numericUpDownX.Value;
                     coordinates.Y = (long)numericUpDownY.Value;

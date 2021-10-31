@@ -36,6 +36,9 @@ namespace AmazFit_Watchface_2
         string StartFileNameJson; // имя файла из параметров запуска
         string StartFileNameBin; // имя файла из параметров запуска
         float currentDPI; // масштаб экрана
+        bool MS_24h = false; // время на основном экране в 24 часовом формате
+        int WidgetDrawIndex = -1;
+        bool AOD_24h = false; // время на AOD в 24 часовом формате
         Form_Preview formPreview;
         public static PROGRAM_SETTINGS Program_Settings;
 
@@ -182,7 +185,8 @@ namespace AmazFit_Watchface_2
             //tabControl_SystemWeather.TabPages[4].Parent = null;
             tabControl_SystemActivity.TabPages["tabPage_Stress"].Parent = null;
             //tabControl_SystemActivity.TabPages["tabPage_ActivityGoal"].Parent = null;
-            tabControl_SystemWeather.TabPages["tabPage_AirQuality"].Parent = null;
+            if (Program_Settings.language != "Chinese/简体中文") 
+                tabControl_SystemWeather.TabPages["tabPage_AirQuality"].Parent = null;
             //tabControl_SystemWeather.TabPages["tabPage_Sunrise"].Parent = null;
             tabControl_SystemWeather.TabPages["tabPage_Altitude"].Parent = null;
 
@@ -190,7 +194,8 @@ namespace AmazFit_Watchface_2
             //tabControl_SystemWeather_AOD.TabPages[4].Parent = null;
             tabControl_SystemActivity_AOD.TabPages["tabPage_Stress_AOD"].Parent = null;
             //tabControl_SystemActivity_AOD.TabPages["tabPage_ActivityGoal_AOD"].Parent = null;
-            tabControl_SystemWeather_AOD.TabPages["tabPage_AirQuality_AOD"].Parent = null;
+            if(Program_Settings.language != "Chinese/简体中文") 
+                tabControl_SystemWeather_AOD.TabPages["tabPage_AirQuality_AOD"].Parent = null;
             //tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_Altitude_AOD"].Parent = null;
 
@@ -660,6 +665,7 @@ namespace AmazFit_Watchface_2
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
 
             checkBox_ShowIn12hourFormat.Checked = Program_Settings.ShowIn12hourFormat;
+            checkBox_AllWidgetsInGif.Checked = Program_Settings.DrawAllWidgets;
             checkBox_SaveID.Checked = Program_Settings.SaveID;
 
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
@@ -1739,6 +1745,8 @@ namespace AmazFit_Watchface_2
                 dataGridView_ImagesList.Rows.Clear();
                 ListImages.Clear();
                 ListImagesFullName.Clear();
+                MS_24h = false;
+                AOD_24h = false;
                 int i;
                 int count = 0;
                 int AllFileSize = 0;
@@ -1946,6 +1954,8 @@ namespace AmazFit_Watchface_2
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView_ImagesList.Rows.Clear();
+            MS_24h = false;
+            AOD_24h = false;
             Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
@@ -3544,6 +3554,7 @@ namespace AmazFit_Watchface_2
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
                     // основной экран
+                    WidgetDrawIndex = 0;
                     for (int i = 0; i < 13; i++)
                     {
                         save = false;
@@ -3655,10 +3666,11 @@ namespace AmazFit_Watchface_2
                             collection.Add(item);
                             //collection[collection.Count - 1].AnimationDelay = 100;
                             collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
-
+                            WidgetDrawIndex++;
                         }
                     }
 
+                    WidgetDrawIndex = -1;
                     Logger.WriteLine("SaveGIF_AOD");
                     // AOD
                     if (Watch_Face.ScreenIdle != null)
@@ -4351,7 +4363,7 @@ namespace AmazFit_Watchface_2
         private void comboBox_Image_DrawItem(object sender, DrawItemEventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
-            //if (comboBox.Items.Count < 10) comboBox.DropDownHeight = comboBox.Items.Count * 35;
+            //if (comboBox.Items.Count < 5) comboBox.DropDownHeight = comboBox.Items.Count * 35;
             //else comboBox.DropDownHeight = 106;
             float size = comboBox.Font.Size;
             Font myFont;
@@ -12255,6 +12267,19 @@ namespace AmazFit_Watchface_2
             PreviewView = true;
             JSON_write();
             PreviewImage();
+        }
+
+        private void checkBox_AllWidgetsInGif_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Settings_Load) return;
+            Program_Settings.DrawAllWidgets = checkBox_AllWidgetsInGif.Checked;
+
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
 
 
