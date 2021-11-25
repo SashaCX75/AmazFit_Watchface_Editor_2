@@ -332,21 +332,22 @@ namespace AmazFit_Watchface_2
                         int offSet = (int)((_imagesCount + 1) * progress);
                         if (activity.Type == "Weather") offSet = Watch_Face_Preview_Set.Weather.Icon;
 
+                        if (offSet < 0) offSet = 0;
                         if (activity.Type == "UVindex")
                         {
-                            offSet = 0;
+                            offSet = -1;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 0) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
                         }
-                        if (offSet < 0) offSet = 0;
                         if (offSet >= _imagesCount) offSet = (int)(_imagesCount - 1);
                         int imageIndex = _imageIndex + offSet;
 
                         //if (activity.Type == "Weather") imageIndex--;
 
-                        if (imageIndex >=0 && imageIndex < ListImagesFullName.Count)
+                        if (offSet >= 0 && imageIndex >= 0 && imageIndex < ListImagesFullName.Count)
                         {
                             src = OpenFileStream(ListImagesFullName[imageIndex]);
                             gPanel.DrawImage(src, new Rectangle(_x, _y, src.Width, src.Height));

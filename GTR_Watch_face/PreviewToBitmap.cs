@@ -1717,16 +1717,17 @@ namespace AmazFit_Watchface_2
                             //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
                             int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
                             //offSet--;
-                            offSet = 0;
+                            offSet = -1;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 0) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
-                            if (offSet < 0) offSet = 0;
+                            //if (offSet < 0) offSet = 0;
                             if (offSet >= count) offSet = (int)(count - 1);
                             int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
-                            if (imageIndex < ListImagesFullName.Count)
+                            if (offSet >= 0 && imageIndex < ListImagesFullName.Count)
                             {
                                 src = OpenFileStream(ListImagesFullName[imageIndex]);
                                 gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1748,41 +1749,44 @@ namespace AmazFit_Watchface_2
                             if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
-                            if (offSet < 0) offSet = 0;
+                            //if (offSet < 0) offSet = 0;
                             if (offSet >= count) offSet = (int)(count - 1);
-                            for (i = 0; i < count; i++)
+                            if (offSet >= 0)
                             {
-                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                for (i = 0; i < count; i++)
                                 {
-                                    if (i <= offSet)
+                                    if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
                                     {
-                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
-                                        if (imageIndex < ListImagesFullName.Count)
+                                        if (i <= offSet)
                                         {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
 
-                                            int x = (int)coordinates[i].X;
-                                            int y = (int)coordinates[i].Y;
-                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
-                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
                                         }
                                     }
-                                }
-                                else
-                                {
-                                    if (i == offSet)
+                                    else
                                     {
-                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
-                                        if (imageIndex < ListImagesFullName.Count)
+                                        if (i == offSet)
                                         {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
 
-                                            int x = (int)coordinates[i].X;
-                                            int y = (int)coordinates[i].Y;
-                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
-                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
+                                            break;
                                         }
-                                        break;
                                     }
-                                }
+                                } 
                             }
 
                         }
@@ -3094,6 +3098,7 @@ namespace AmazFit_Watchface_2
 
             // надпись
             int ActivityType = 0;
+            if (activity == "FatBurning") ActivityType = 18;
             if (activity == "ActivityGoal") ActivityType = 17;
             if (activity == "Humidity") ActivityType = 11;
             int goal_offsetX = -1;
@@ -4624,7 +4629,7 @@ namespace AmazFit_Watchface_2
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
                     float angle = startAngle + progress * (endAngle - startAngle);
-                    if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                    if (angle > endAngle) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (imageCentr >= 0)
@@ -5815,6 +5820,7 @@ namespace AmazFit_Watchface_2
             //int DateLenght = width * value_lenght + spacing * (value_lenght - 1);
             if (ActivityType == 17) value_lenght = 5;
             if (ActivityType == 11) value_lenght = 3;
+            if (ActivityType == 18) value_lenght = 3;
             int DateLenght = width * value_lenght + 1;
             if (spacing > 0) DateLenght = DateLenght + spacing * (value_lenght - 1);
             //else DateLenght = DateLenght - spacing;
@@ -6157,7 +6163,7 @@ namespace AmazFit_Watchface_2
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int DateLenght = 4 * width ;
+            int DateLenght = 4 * width + 1;
             if (spacing > 0) DateLenght = DateLenght + 3 * spacing;
             if (decimalPoint_index >= 0 && decimalPoint_index < ListImagesFullName.Count)
             {

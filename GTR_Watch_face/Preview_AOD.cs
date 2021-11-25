@@ -1680,7 +1680,8 @@ namespace AmazFit_Watchface_2
                             //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
                             int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
                             //offSet--;
-                            offSet = 0;
+                            offSet = -1;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 0) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
@@ -1689,7 +1690,7 @@ namespace AmazFit_Watchface_2
                             if (offSet >= count) offSet = (int)(count - 1);
                             int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
-                            if (imageIndex < ListImagesFullName.Count)
+                            if (offSet >= 0 && imageIndex < ListImagesFullName.Count)
                             {
                                 src = OpenFileStream(ListImagesFullName[imageIndex]);
                                 gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
@@ -1706,46 +1707,50 @@ namespace AmazFit_Watchface_2
                             int count = coordinates.Count;
                             int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
                             //offSet--;
-                            offSet = 0;
+                            offSet = -1;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 0) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
                             if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
-                            if (offSet < 0) offSet = 0;
+                            //if (offSet < 0) offSet = 0;
                             if (offSet >= count) offSet = (int)(count - 1);
-                            for (i = 0; i < count; i++)
+                            if (offSet >= 0)
                             {
-                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                for (i = 0; i < count; i++)
                                 {
-                                    if (i <= offSet)
+                                    if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
                                     {
-                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
-                                        if (imageIndex < ListImagesFullName.Count)
+                                        if (i <= offSet)
                                         {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
 
-                                            int x = (int)coordinates[i].X;
-                                            int y = (int)coordinates[i].Y;
-                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
-                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
                                         }
                                     }
-                                }
-                                else
-                                {
-                                    if (i == offSet)
+                                    else
                                     {
-                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
-                                        if (imageIndex < ListImagesFullName.Count)
+                                        if (i == offSet)
                                         {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
 
-                                            int x = (int)coordinates[i].X;
-                                            int y = (int)coordinates[i].Y;
-                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
-                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
+                                            break;
                                         }
-                                        break;
                                     }
-                                }
+                                } 
                             }
 
                         }

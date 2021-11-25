@@ -199,6 +199,45 @@ namespace AmazFit_Watchface_2
             //tabControl_SystemWeather_AOD.TabPages["tabPage_Sunrise_AOD"].Parent = null;
             tabControl_SystemWeather_AOD.TabPages["tabPage_Altitude_AOD"].Parent = null;
 
+            if (Program_Settings.language == "Chinese/简体中文")
+            {
+                userControl_Set1.label16.Enabled = true;
+                userControl_Set1.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set2.label16.Enabled = true;
+                userControl_Set2.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set3.label16.Enabled = true;
+                userControl_Set3.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set4.label16.Enabled = true;
+                userControl_Set4.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set5.label16.Enabled = true;
+                userControl_Set5.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set6.label16.Enabled = true;
+                userControl_Set6.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set7.label16.Enabled = true;
+                userControl_Set7.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set8.label16.Enabled = true;
+                userControl_Set8.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set9.label16.Enabled = true;
+                userControl_Set9.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set10.label16.Enabled = true;
+                userControl_Set10.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set11.label16.Enabled = true;
+                userControl_Set11.numericUpDown_AirQuality_Set.Enabled = true;
+
+                userControl_Set12.label16.Enabled = true;
+                userControl_Set12.numericUpDown_AirQuality_Set.Enabled = true;
+            }
+
 #endif
 
             splitContainer_EditParameters.Panel1Collapsed = false;
@@ -2122,7 +2161,7 @@ namespace AmazFit_Watchface_2
                 else if (Program_Settings.Settings_Open_Dialog)
                 {
                     if (MessageBox.Show(Properties.FormStrings.Message_LoadPreviewStates_Text,
-                        Properties.FormStrings.Message_openProject_Caption,
+                        Properties.FormStrings.Message_LoadPreviewStates_Caption,
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         JsonPreview_Read(newFullName);
