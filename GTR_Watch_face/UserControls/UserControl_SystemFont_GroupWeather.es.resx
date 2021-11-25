@@ -117,25 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_SystemFont.Text" xml:space="preserve">
-    <value>Fuente del sistema   </value>
-  </data>
-  <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema del círculo (actual)</value>
-  </data>
   <data name="userControl_FontRotate_weather_Max.ButtonText" xml:space="preserve">
     <value>Fuente del sistema del círculo (maxima)</value>
   </data>
   <data name="userControl_FontRotate_weather_Min.ButtonText" xml:space="preserve">
     <value>Fuente del sistema del círculo (minima)</value>
   </data>
-  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
-    <value>Fuente del sistema de rotacion (actual)</value>
+  <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
+    <value>Fuente del sistema del círculo (actual)</value>
   </data>
   <data name="userControl_SystemFont_weather_Max.ButtonText" xml:space="preserve">
     <value>Fuente del sistema de rotacion (maxima)</value>
   </data>
   <data name="userControl_SystemFont_weather_Min.ButtonText" xml:space="preserve">
     <value>Fuente del sistema de rotacion (minima)</value>
+  </data>
+  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
+    <value>Fuente del sistema de rotacion (actual)</value>
+  </data>
+  <data name="button_SystemFont.Text" xml:space="preserve">
+    <value>Fuente del sistema   </value>
   </data>
 </root>

@@ -710,14 +710,12 @@ namespace AmazFit_Watchface_2
         private System.Windows.Forms.NumericUpDown numericUpDown_Altitude_Set;
         private System.Windows.Forms.NumericUpDown numericUpDown_WindForce;
         private System.Windows.Forms.NumericUpDown numericUpDown_Humidity_Set;
-        private System.Windows.Forms.NumericUpDown numericUpDown_AirQuality_Set;
         private System.Windows.Forms.NumericUpDown numericUp_UVindex_Set;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox_Activity;
@@ -756,5 +754,7 @@ namespace AmazFit_Watchface_2
         public System.Windows.Forms.DateTimePicker dateTimePicker_Date_Set;
         private System.Windows.Forms.CheckBox checkBox_WeatherSet_Temp;
         private System.Windows.Forms.Label label22;
+        internal System.Windows.Forms.NumericUpDown numericUpDown_AirQuality_Set;
+        internal System.Windows.Forms.Label label16;
     }
 }

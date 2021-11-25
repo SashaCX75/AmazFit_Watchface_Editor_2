@@ -72,13 +72,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_Y
             // 
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуYToolStripMenuItem,
             this.копироватьToolStripMenuItemY,
             this.вставитьToolStripMenuItemY});
             this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
             // 
             // вставитьКоординатуYToolStripMenuItem
@@ -101,13 +101,13 @@ namespace AmazFit_Watchface_2
             // 
             // contextMenuStrip_X
             // 
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуХToolStripMenuItem,
             this.копироватьToolStripMenuItemX,
             this.вставитьToolStripMenuItemX});
             this.contextMenuStrip_X.Name = "contextMenuStrip_X";
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // вставитьКоординатуХToolStripMenuItem
@@ -130,6 +130,7 @@ namespace AmazFit_Watchface_2
             // 
             // panel_SystemFont
             // 
+            resources.ApplyResources(this.panel_SystemFont, "panel_SystemFont");
             this.panel_SystemFont.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel_SystemFont.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_SystemFont.Controls.Add(this.checkBox_Use);
@@ -151,7 +152,6 @@ namespace AmazFit_Watchface_2
             this.panel_SystemFont.Controls.Add(this.label06);
             this.panel_SystemFont.Controls.Add(this.label07);
             this.panel_SystemFont.Controls.Add(this.button_Copy_SystemFont);
-            resources.ApplyResources(this.panel_SystemFont, "panel_SystemFont");
             this.panel_SystemFont.Name = "panel_SystemFont";
             // 
             // checkBox_Use
@@ -164,8 +164,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_SystemFontX
             // 
-            this.numericUpDown_SystemFontX.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_SystemFontX, "numericUpDown_SystemFontX");
+            this.numericUpDown_SystemFontX.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_SystemFontX.Maximum = new decimal(new int[] {
             999,
             0,
@@ -182,8 +182,8 @@ namespace AmazFit_Watchface_2
             // 
             // numericUpDown_SystemFontY
             // 
-            this.numericUpDown_SystemFontY.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_SystemFontY, "numericUpDown_SystemFontY");
+            this.numericUpDown_SystemFontY.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_SystemFontY.Maximum = new decimal(new int[] {
             999,
             0,
@@ -253,9 +253,9 @@ namespace AmazFit_Watchface_2
             // 
             // comboBox_SystemFont_color
             // 
+            resources.ApplyResources(this.comboBox_SystemFont_color, "comboBox_SystemFont_color");
             this.comboBox_SystemFont_color.BackColor = System.Drawing.Color.DarkOrange;
             this.comboBox_SystemFont_color.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_SystemFont_color, "comboBox_SystemFont_color");
             this.comboBox_SystemFont_color.FormattingEnabled = true;
             this.comboBox_SystemFont_color.Name = "comboBox_SystemFont_color";
             this.comboBox_SystemFont_color.Click += new System.EventHandler(this.comboBox_color_Click);

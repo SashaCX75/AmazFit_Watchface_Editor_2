@@ -117,14 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBox_WidgetsArea.Error" xml:space="preserve">
+  <data name="radioButton_ZeppE.Error" xml:space="preserve">
     <value />
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="checkBox_WidgetsArea.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ZeppE.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radioButton_ZeppE.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton_ZeppE.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox_WidgetsArea.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox_WidgetsArea.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
   <data name="checkBox_WidgetsArea.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -6763,9 +6775,6 @@
   <data name="userControl_icon_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Steps.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -6787,9 +6796,6 @@
   <data name="userControl_SystemFont_Group_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_Group_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_Group_Steps.SystemFontText" xml:space="preserve">
     <value>System font rotated (goal of steps)</value>
   </data>
@@ -6805,9 +6811,6 @@
   <data name="userControl_scaleLinear_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Steps.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -6820,9 +6823,6 @@
   <data name="userControl_scaleCircle_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleCircle_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleCircle_Steps.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -6834,9 +6834,6 @@
   </data>
   <data name="userControl_hand_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_hand_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_hand_Steps.ToolTip" xml:space="preserve">
     <value />
@@ -6856,9 +6853,6 @@
   <data name="userControl_text_goal_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_goal_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_goal_Steps.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -6871,10 +6865,19 @@
   <data name="userControl_text_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_Steps.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Steps.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Steps.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Steps.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Steps.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Steps.Error" xml:space="preserve">
@@ -6885,9 +6888,6 @@
   </data>
   <data name="userControl_pictures_Steps.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Steps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_Steps.ToolTip" xml:space="preserve">
     <value />
@@ -6919,9 +6919,6 @@
   <data name="userControl_icon_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Calories.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -6943,9 +6940,6 @@
   <data name="userControl_SystemFont_Group_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_Group_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_Group_Calories.SystemFontText" xml:space="preserve">
     <value>System font rotated (calorie goal)</value>
   </data>
@@ -6961,9 +6955,6 @@
   <data name="userControl_scaleLinear_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Calories.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -6976,9 +6967,6 @@
   <data name="userControl_scaleCircle_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleCircle_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleCircle_Calories.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -6990,9 +6978,6 @@
   </data>
   <data name="userControl_hand_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_hand_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_hand_Calories.ToolTip" xml:space="preserve">
     <value />
@@ -7012,9 +6997,6 @@
   <data name="userControl_text_goal_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_goal_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_goal_Calories.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7027,10 +7009,19 @@
   <data name="userControl_text_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_Calories.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Calories.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Calories.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Calories.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Calories.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Calories.Error" xml:space="preserve">
@@ -7041,9 +7032,6 @@
   </data>
   <data name="userControl_pictures_Calories.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Calories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_Calories.ToolTip" xml:space="preserve">
     <value />
@@ -7075,9 +7063,6 @@
   <data name="userControl_icon_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_HeartRate.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7089,9 +7074,6 @@
   </data>
   <data name="userControl_SystemFont_Group_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_HeartRate.ToolTip" xml:space="preserve">
     <value />
@@ -7105,9 +7087,6 @@
   <data name="userControl_scaleLinear_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_HeartRate.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7119,9 +7098,6 @@
   </data>
   <data name="userControl_scaleCircle_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_HeartRate.ToolTip" xml:space="preserve">
     <value />
@@ -7135,9 +7111,6 @@
   <data name="userControl_hand_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_HeartRate.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7150,10 +7123,19 @@
   <data name="userControl_text_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_HeartRate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_HeartRate.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_HeartRate.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_HeartRate.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_HeartRate.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_HeartRate.Error" xml:space="preserve">
@@ -7164,9 +7146,6 @@
   </data>
   <data name="userControl_pictures_HeartRate.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_HeartRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_HeartRate.ToolTip" xml:space="preserve">
     <value />
@@ -7198,9 +7177,6 @@
   <data name="userControl_icon_PAI.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_PAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_PAI.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7212,9 +7188,6 @@
   </data>
   <data name="userControl_SystemFont_Group_PAI.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_PAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_PAI.ToolTip" xml:space="preserve">
     <value />
@@ -7228,9 +7201,6 @@
   <data name="userControl_scaleLinear_PAI.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_PAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_PAI.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7242,9 +7212,6 @@
   </data>
   <data name="userControl_scaleCircle_PAI.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_PAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_PAI.ToolTip" xml:space="preserve">
     <value />
@@ -7258,9 +7225,6 @@
   <data name="userControl_hand_PAI.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_PAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_PAI.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7273,10 +7237,19 @@
   <data name="userControl_text_PAI.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_PAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_PAI.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_PAI.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_PAI.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_PAI.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_PAI.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_PAI.Error" xml:space="preserve">
@@ -7287,9 +7260,6 @@
   </data>
   <data name="userControl_pictures_PAI.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_PAI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_PAI.ToolTip" xml:space="preserve">
     <value />
@@ -7318,9 +7288,6 @@
   <data name="userControl_icon_Distance.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Distance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Distance.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7333,9 +7300,6 @@
   <data name="userControl_SystemFont_Group_Distance.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_Group_Distance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_Group_Distance.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7347,9 +7311,6 @@
   </data>
   <data name="userControl_text_Distance.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_text_Distance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_text_Distance.ToolTip" xml:space="preserve">
     <value />
@@ -7381,9 +7342,6 @@
   <data name="userControl_icon_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_StandUp.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7405,9 +7363,6 @@
   <data name="userControl_SystemFont_Group_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_Group_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_Group_StandUp.SystemFontText" xml:space="preserve">
     <value>System font rotated (number of StandUp)</value>
   </data>
@@ -7423,9 +7378,6 @@
   <data name="userControl_scaleLinear_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_StandUp.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7438,9 +7390,6 @@
   <data name="userControl_scaleCircle_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleCircle_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleCircle_StandUp.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7452,9 +7401,6 @@
   </data>
   <data name="userControl_hand_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_hand_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_hand_StandUp.ToolTip" xml:space="preserve">
     <value />
@@ -7474,9 +7420,6 @@
   <data name="userControl_text_goal_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_goal_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_goal_StandUp.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7489,10 +7432,19 @@
   <data name="userControl_text_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_StandUp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_StandUp.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_StandUp.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_StandUp.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_StandUp.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_StandUp.Error" xml:space="preserve">
@@ -7503,9 +7455,6 @@
   </data>
   <data name="userControl_pictures_StandUp.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_StandUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_StandUp.ToolTip" xml:space="preserve">
     <value />
@@ -7537,9 +7486,6 @@
   <data name="userControl_icon_Stress.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Stress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Stress.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7551,9 +7497,6 @@
   </data>
   <data name="userControl_SystemFont_Group_Stress.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Stress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Stress.ToolTip" xml:space="preserve">
     <value />
@@ -7567,9 +7510,6 @@
   <data name="userControl_scaleLinear_Stress.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Stress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Stress.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7581,9 +7521,6 @@
   </data>
   <data name="userControl_scaleCircle_Stress.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_Stress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_Stress.ToolTip" xml:space="preserve">
     <value />
@@ -7597,9 +7534,6 @@
   <data name="userControl_hand_Stress.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_Stress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_Stress.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7612,10 +7546,19 @@
   <data name="userControl_text_Stress.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Stress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_Stress.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Stress.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Stress.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Stress.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Stress.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Stress.Error" xml:space="preserve">
@@ -7626,9 +7569,6 @@
   </data>
   <data name="userControl_pictures_Stress.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Stress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_Stress.ToolTip" xml:space="preserve">
     <value />
@@ -7696,9 +7636,6 @@
   <data name="groupBox_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="groupBox_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 45</value>
-  </data>
   <data name="groupBox_ActivityGoal.Text" xml:space="preserve">
     <value>* Displays the steps or calories depending on the watch setting.</value>
   </data>
@@ -7713,9 +7650,6 @@
   </data>
   <data name="userControl_icon_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_icon_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_icon_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
@@ -7738,9 +7672,6 @@
   <data name="userControl_SystemFont_Group_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_Group_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_Group_ActivityGoal.SystemFontText" xml:space="preserve">
     <value>System font rotated (activity goal)</value>
   </data>
@@ -7756,9 +7687,6 @@
   <data name="userControl_scaleLinear_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7771,9 +7699,6 @@
   <data name="userControl_scaleCircle_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleCircle_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleCircle_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7785,9 +7710,6 @@
   </data>
   <data name="userControl_hand_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_hand_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_hand_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
@@ -7807,9 +7729,6 @@
   <data name="userControl_text_goal_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_goal_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_goal_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7822,10 +7741,19 @@
   <data name="userControl_text_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_ActivityGoal.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_ActivityGoal.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_ActivityGoal.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_ActivityGoal.Error" xml:space="preserve">
@@ -7836,9 +7764,6 @@
   </data>
   <data name="userControl_pictures_ActivityGoal.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_ActivityGoal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_ActivityGoal.ToolTip" xml:space="preserve">
     <value />
@@ -7870,9 +7795,6 @@
   <data name="userControl_icon_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_FatBurning.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7894,9 +7816,6 @@
   <data name="userControl_SystemFont_Group_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_Group_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_Group_FatBurning.SystemFontText" xml:space="preserve">
     <value>System font rotated (goal of fat burning)</value>
   </data>
@@ -7912,9 +7831,6 @@
   <data name="userControl_scaleLinear_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_FatBurning.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7927,9 +7843,6 @@
   <data name="userControl_scaleCircle_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleCircle_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleCircle_FatBurning.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7941,9 +7854,6 @@
   </data>
   <data name="userControl_hand_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_hand_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_hand_FatBurning.ToolTip" xml:space="preserve">
     <value />
@@ -7963,9 +7873,6 @@
   <data name="userControl_text_goal_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_goal_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_goal_FatBurning.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -7978,10 +7885,19 @@
   <data name="userControl_text_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_FatBurning.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_FatBurning.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_FatBurning.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_FatBurning.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_FatBurning.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_FatBurning.Error" xml:space="preserve">
@@ -7992,9 +7908,6 @@
   </data>
   <data name="userControl_pictures_FatBurning.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_FatBurning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_FatBurning.ToolTip" xml:space="preserve">
     <value />
@@ -8050,6 +7963,22 @@
   <data name="tabPage_Activity.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="checkBox_weatherAlignmentFix.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox_weatherAlignmentFix.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix.Text" xml:space="preserve">
+    <value>Correct temperature position when using center alignment 
+(temperature will be displayed under the weather icon)</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_icon_Weather.Error" xml:space="preserve">
     <value />
   </data>
@@ -8058,9 +7987,6 @@
   </data>
   <data name="userControl_icon_Weather.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_icon_Weather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_icon_Weather.ToolTip" xml:space="preserve">
     <value />
@@ -8086,9 +8012,6 @@
   <data name="userControl_SystemFont_GroupWeather.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_GroupWeather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_GroupWeather.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8100,9 +8023,6 @@
   </data>
   <data name="userControl_scaleLinear_Weather.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleLinear_Weather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleLinear_Weather.ToolTip" xml:space="preserve">
     <value />
@@ -8116,9 +8036,6 @@
   <data name="userControl_scaleCircle_Weather.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleCircle_Weather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleCircle_Weather.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8130,9 +8047,6 @@
   </data>
   <data name="userControl_hand_Weather.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_hand_Weather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_hand_Weather.ToolTip" xml:space="preserve">
     <value />
@@ -8152,9 +8066,6 @@
   <data name="userControl_text_weather_Max.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_weather_Max.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_weather_Max.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8169,9 +8080,6 @@
   </data>
   <data name="userControl_text_weather_Min.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_text_weather_Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_text_weather_Min.ToolTip" xml:space="preserve">
     <value />
@@ -8188,9 +8096,6 @@
   <data name="userControl_text_weather_Current.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_weather_Current.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_weather_Current.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8202,9 +8107,6 @@
   </data>
   <data name="userControl_pictures_weather.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_weather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_weather.ToolTip" xml:space="preserve">
     <value />
@@ -8236,9 +8138,6 @@
   <data name="userControl_icon_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_UVindex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_UVindex.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8250,9 +8149,6 @@
   </data>
   <data name="userControl_SystemFont_Group_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_UVindex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_UVindex.ToolTip" xml:space="preserve">
     <value />
@@ -8266,9 +8162,6 @@
   <data name="userControl_scaleLinear_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_UVindex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_UVindex.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8280,9 +8173,6 @@
   </data>
   <data name="userControl_scaleCircle_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_UVindex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_UVindex.ToolTip" xml:space="preserve">
     <value />
@@ -8296,9 +8186,6 @@
   <data name="userControl_hand_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_UVindex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_UVindex.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8311,10 +8198,19 @@
   <data name="userControl_text_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_UVindex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_UVindex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_UVindex.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_UVindex.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_UVindex.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_UVindex.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_UVindex.Error" xml:space="preserve">
@@ -8325,9 +8221,6 @@
   </data>
   <data name="userControl_pictures_UVindex.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_UVindex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_UVindex.ToolTip" xml:space="preserve">
     <value />
@@ -8359,9 +8252,6 @@
   <data name="userControl_icon_AirQuality.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_AirQuality.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8373,9 +8263,6 @@
   </data>
   <data name="userControl_SystemFont_Group_AirQuality.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_AirQuality.ToolTip" xml:space="preserve">
     <value />
@@ -8389,9 +8276,6 @@
   <data name="userControl_scaleLinear_AirQuality.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_AirQuality.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8403,9 +8287,6 @@
   </data>
   <data name="userControl_scaleCircle_AirQuality.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_AirQuality.ToolTip" xml:space="preserve">
     <value />
@@ -8419,9 +8300,6 @@
   <data name="userControl_hand_AirQuality.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_AirQuality.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8434,10 +8312,19 @@
   <data name="userControl_text_AirQuality.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_AirQuality.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirQuality.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirQuality.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_AirQuality.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_AirQuality.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_AirQuality.Error" xml:space="preserve">
@@ -8448,9 +8335,6 @@
   </data>
   <data name="userControl_pictures_AirQuality.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_AirQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_AirQuality.ToolTip" xml:space="preserve">
     <value />
@@ -8482,9 +8366,6 @@
   <data name="userControl_icon_Humidity.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Humidity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Humidity.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8496,9 +8377,6 @@
   </data>
   <data name="userControl_SystemFont_Group_Humidity.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Humidity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Humidity.ToolTip" xml:space="preserve">
     <value />
@@ -8512,9 +8390,6 @@
   <data name="userControl_scaleLinear_Humidity.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Humidity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Humidity.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8526,9 +8401,6 @@
   </data>
   <data name="userControl_scaleCircle_Humidity.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_Humidity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_Humidity.ToolTip" xml:space="preserve">
     <value />
@@ -8542,9 +8414,6 @@
   <data name="userControl_hand_Humidity.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_Humidity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_Humidity.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8557,10 +8426,19 @@
   <data name="userControl_text_Humidity.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Humidity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_Humidity.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Humidity.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Humidity.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Humidity.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Humidity.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Humidity.Error" xml:space="preserve">
@@ -8571,9 +8449,6 @@
   </data>
   <data name="userControl_pictures_Humidity.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Humidity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_Humidity.ToolTip" xml:space="preserve">
     <value />
@@ -8624,9 +8499,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_Sunrise.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Sunrise.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8651,9 +8523,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_SystemFont_GroupSunrise.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_SystemFont_GroupSunrise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_SystemFont_GroupSunrise.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8665,9 +8534,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleLinear_Sunrise.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleLinear_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleLinear_Sunrise.ToolTip" xml:space="preserve">
     <value />
@@ -8681,9 +8547,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleCircle_Sunrise.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleCircle_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleCircle_Sunrise.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8695,9 +8558,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_hand_Sunrise.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_hand_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_hand_Sunrise.ToolTip" xml:space="preserve">
     <value />
@@ -8720,9 +8580,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Sunset.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Sunset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_Sunset.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8740,9 +8597,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_text_Sunrise.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_text_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_text_Sunrise.ToolTip" xml:space="preserve">
     <value />
@@ -8762,10 +8616,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_SunriseSunset.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_SunriseSunset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_SunriseSunset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Sunrise.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Sunrise.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Sunrise.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Sunrise.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Sunrise.Error" xml:space="preserve">
@@ -8776,9 +8639,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_Sunrise.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Sunrise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_Sunrise.ToolTip" xml:space="preserve">
     <value />
@@ -8810,9 +8670,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_WindForce.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_WindForce.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_WindForce.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8824,9 +8681,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_WindForce.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_WindForce.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_WindForce.ToolTip" xml:space="preserve">
     <value />
@@ -8840,9 +8694,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_WindForce.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_WindForce.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_WindForce.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8854,9 +8705,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_WindForce.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_WindForce.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_WindForce.ToolTip" xml:space="preserve">
     <value />
@@ -8870,9 +8718,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_WindForce.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_WindForce.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_WindForce.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8885,10 +8730,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_WindForce.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_WindForce.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_WindForce.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_WindForce.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_WindForce.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_WindForce.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_WindForce.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_WindForce.Error" xml:space="preserve">
@@ -8899,9 +8753,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_WindForce.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_WindForce.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_WindForce.ToolTip" xml:space="preserve">
     <value />
@@ -8933,9 +8784,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_Altitude.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Altitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Altitude.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8947,9 +8795,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_Altitude.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Altitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Altitude.ToolTip" xml:space="preserve">
     <value />
@@ -8963,9 +8808,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_Altitude.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Altitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Altitude.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -8977,9 +8819,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_Altitude.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_Altitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_Altitude.ToolTip" xml:space="preserve">
     <value />
@@ -8993,9 +8832,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_Altitude.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_Altitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_Altitude.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9008,10 +8844,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Altitude.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Altitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_Altitude.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Altitude.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Altitude.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Altitude.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Altitude.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Altitude.Error" xml:space="preserve">
@@ -9022,9 +8867,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_Altitude.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Altitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_Altitude.ToolTip" xml:space="preserve">
     <value />
@@ -9056,9 +8898,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_AirPressure.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_AirPressure.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9070,9 +8909,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_AirPressure.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_AirPressure.ToolTip" xml:space="preserve">
     <value />
@@ -9086,9 +8922,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_AirPressure.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_AirPressure.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9100,9 +8933,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_AirPressure.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_AirPressure.ToolTip" xml:space="preserve">
     <value />
@@ -9116,9 +8946,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_AirPressure.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_AirPressure.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9131,10 +8958,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_AirPressure.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_AirPressure.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirPressure.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirPressure.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_AirPressure.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_AirPressure.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_AirPressure.Error" xml:space="preserve">
@@ -9145,9 +8981,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_AirPressure.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_AirPressure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_AirPressure.ToolTip" xml:space="preserve">
     <value />
@@ -9326,9 +9159,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="groupBox_Lock.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="groupBox_Lock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 65</value>
-  </data>
   <data name="groupBox_Lock.Text" xml:space="preserve">
     <value>Lock</value>
   </data>
@@ -9458,9 +9288,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="groupBox_DND.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="groupBox_DND.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 65</value>
-  </data>
   <data name="groupBox_DND.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9586,9 +9413,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="groupBox_Alarm.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="groupBox_Alarm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 65</value>
   </data>
   <data name="groupBox_Alarm.Text" xml:space="preserve">
     <value>Alarm</value>
@@ -9719,9 +9543,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="groupBox_Bluetooth.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="groupBox_Bluetooth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 65</value>
-  </data>
   <data name="groupBox_Bluetooth.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9752,9 +9573,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_Battery.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Battery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_icon_Battery.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9766,9 +9584,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_Battery.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Battery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Battery.ToolTip" xml:space="preserve">
     <value />
@@ -9782,9 +9597,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_Battery.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Battery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Battery.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9796,9 +9608,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_Battery.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_Battery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_scaleCircle_Battery.ToolTip" xml:space="preserve">
     <value />
@@ -9812,9 +9621,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_Battery.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_Battery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_hand_Battery.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -9827,10 +9633,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Battery.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Battery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
-  </data>
   <data name="userControl_text_Battery.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Battery.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Battery.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Battery.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Battery.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Battery.Error" xml:space="preserve">
@@ -9841,9 +9656,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_Battery.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Battery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>432, 23</value>
   </data>
   <data name="userControl_pictures_Battery.ToolTip" xml:space="preserve">
     <value />
@@ -9913,7 +9725,7 @@ The data is not displayed correctly for all cities.</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACk
-        DQAAAk1TRnQBSQFMAgEBBgEAAdABBQHQAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBgEAAegBBQHoAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -10021,9 +9833,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="button_Capy_ScreenNormal.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 241</value>
-  </data>
-  <data name="button_Capy_ScreenNormal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 23</value>
   </data>
   <data name="button_Capy_ScreenNormal.Text" xml:space="preserve">
     <value>Copy all elements from the main screen</value>
@@ -15281,6 +15090,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Steps_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_Steps_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Steps_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Steps_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Steps_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_Steps_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_pictures_Steps_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -15437,6 +15261,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Calories_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_Calories_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Calories_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Calories_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Calories_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_Calories_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_pictures_Calories_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -15560,6 +15399,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_HeartRate_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_HeartRate_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_HeartRate_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_HeartRate_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_HeartRate_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_HeartRate_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_pictures_HeartRate_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -15591,6 +15445,21 @@ The data is not displayed correctly for all cities.</value>
     <value>Heart rate</value>
   </data>
   <data name="tabPage_HeartRate_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_pictures_PAI_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_pictures_PAI_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_pictures_PAI_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_pictures_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_pictures_PAI_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_icon_PAI_AOD.Error" xml:space="preserve">
@@ -15668,6 +15537,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_PAI_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_PAI_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_PAI_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_PAI_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_PAI_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_text_PAI_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -15681,21 +15565,6 @@ The data is not displayed correctly for all cities.</value>
     <value>413, 23</value>
   </data>
   <data name="userControl_text_PAI_AOD.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="userControl_pictures_PAI_AOD.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="userControl_pictures_PAI_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="userControl_pictures_PAI_AOD.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="userControl_pictures_PAI_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
-  <data name="userControl_pictures_PAI_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="tabPage_PAI_AOD.Error" xml:space="preserve">
@@ -15899,6 +15768,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_StandUp_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_StandUp_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_StandUp_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_StandUp_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_StandUp_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_StandUp_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_pictures_StandUp_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -16022,6 +15906,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Stress_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_Stress_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Stress_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Stress_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Stress_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_Stress_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_pictures_Stress_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -16101,7 +16000,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="groupBox_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 45</value>
+    <value>396, 45</value>
   </data>
   <data name="groupBox_ActivityGoal_AOD.Text" xml:space="preserve">
     <value>* Displays the steps or calories depending on the watch setting.</value>
@@ -16119,7 +16018,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_icon_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_icon_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16143,7 +16042,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_ActivityGoal_AOD.SystemFontText" xml:space="preserve">
     <value>System font rotated (activity goal)</value>
@@ -16161,7 +16060,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_scaleLinear_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_scaleLinear_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16176,7 +16075,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_scaleCircle_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_scaleCircle_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16191,7 +16090,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_hand_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_hand_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16212,7 +16111,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_text_goal_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_text_goal_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16227,9 +16126,24 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_text_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_text_ActivityGoal_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_ActivityGoal_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_ActivityGoal_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_ActivityGoal_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_segments_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_ActivityGoal_AOD.Error" xml:space="preserve">
@@ -16242,7 +16156,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_pictures_ActivityGoal_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_pictures_ActivityGoal_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16388,6 +16302,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_FatBurning_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_FatBurning_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_FatBurning_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_FatBurning_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_FatBurning_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 23</value>
+  </data>
+  <data name="userControl_segments_FatBurning_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_pictures_FatBurning_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -16454,6 +16383,25 @@ The data is not displayed correctly for all cities.</value>
   <data name="tabPage_Activity_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="checkBox_weatherAlignmentFix_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="checkBox_weatherAlignmentFix_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 38</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix_AOD.Text" xml:space="preserve">
+    <value>Correct temperature position when using center alignment 
+(temperature will be displayed under the weather icon)</value>
+  </data>
+  <data name="checkBox_weatherAlignmentFix_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_icon_Weather_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -16464,7 +16412,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_icon_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_icon_Weather_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16479,7 +16427,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_SystemFont_GroupWeather_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_SystemFont_GroupWeather_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16494,7 +16442,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_scaleLinear_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_scaleLinear_Weather_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16509,7 +16457,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_scaleCircle_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_scaleCircle_Weather_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16524,7 +16472,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_hand_Weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_hand_Weather_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16545,7 +16493,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_text_weather_Max_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_text_weather_Max_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16563,7 +16511,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_text_weather_Min_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_text_weather_Min_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16581,7 +16529,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_text_weather_Current_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_text_weather_Current_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16596,7 +16544,7 @@ The data is not displayed correctly for all cities.</value>
     <value>0</value>
   </data>
   <data name="userControl_pictures_weather_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
+    <value>396, 23</value>
   </data>
   <data name="userControl_pictures_weather_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16628,9 +16576,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_icon_UVindex_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16642,9 +16587,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_UVindex_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16658,9 +16600,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_scaleLinear_UVindex_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16672,9 +16611,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_UVindex_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16688,9 +16624,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_hand_UVindex_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16703,10 +16636,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_text_UVindex_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_UVindex_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_UVindex_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_UVindex_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_UVindex_AOD.Error" xml:space="preserve">
@@ -16717,9 +16659,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_UVindex_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_UVindex_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_UVindex_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16751,9 +16690,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_icon_AirQuality_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16765,9 +16701,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_AirQuality_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16781,9 +16714,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_scaleLinear_AirQuality_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16795,9 +16725,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_AirQuality_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16811,9 +16738,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_hand_AirQuality_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16826,10 +16750,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_text_AirQuality_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirQuality_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirQuality_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_AirQuality_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_AirQuality_AOD.Error" xml:space="preserve">
@@ -16840,9 +16773,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_AirQuality_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_AirQuality_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_AirQuality_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16874,9 +16804,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_icon_Humidity_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16888,9 +16815,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Humidity_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16904,9 +16828,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Humidity_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16918,9 +16839,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_Humidity_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -16934,9 +16852,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_hand_Humidity_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -16949,10 +16864,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_text_Humidity_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Humidity_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Humidity_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Humidity_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Humidity_AOD.Error" xml:space="preserve">
@@ -16963,9 +16887,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_Humidity_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Humidity_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_Humidity_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17163,6 +17084,21 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_SunriseSunset_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segments_Sunrise_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Sunrise_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Sunrise_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Sunrise_AOD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 23</value>
+  </data>
+  <data name="userControl_segments_Sunrise_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_pictures_Sunrise_AOD.Error" xml:space="preserve">
     <value />
   </data>
@@ -17205,9 +17141,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_icon_WindForce_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17219,9 +17152,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_WindForce_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17235,9 +17165,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_scaleLinear_WindForce_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17249,9 +17176,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_WindForce_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17265,9 +17189,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_hand_WindForce_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17280,10 +17201,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_text_WindForce_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_WindForce_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_WindForce_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_WindForce_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_WindForce_AOD.Error" xml:space="preserve">
@@ -17294,9 +17224,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_WindForce_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_WindForce_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_WindForce_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17328,9 +17255,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_icon_Altitude_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17342,9 +17266,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Altitude_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17358,9 +17279,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Altitude_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17372,9 +17290,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_Altitude_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17388,9 +17303,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_hand_Altitude_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17403,10 +17315,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_text_Altitude_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Altitude_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Altitude_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Altitude_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Altitude_AOD.Error" xml:space="preserve">
@@ -17417,9 +17338,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_Altitude_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Altitude_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_Altitude_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17451,9 +17369,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_icon_AirPressure_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17465,9 +17380,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_AirPressure_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17481,9 +17393,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_scaleLinear_AirPressure_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17495,9 +17404,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_AirPressure_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17511,9 +17417,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_hand_AirPressure_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17526,10 +17429,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_text_AirPressure_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirPressure_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_AirPressure_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_AirPressure_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_AirPressure_AOD.Error" xml:space="preserve">
@@ -17540,9 +17452,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_AirPressure_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_AirPressure_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_AirPressure_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17607,9 +17516,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_icon_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_icon_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_icon_Battery_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17621,9 +17527,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_SystemFont_Group_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_SystemFont_Group_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_SystemFont_Group_Battery_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17637,9 +17540,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_scaleLinear_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_scaleLinear_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_scaleLinear_Battery_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17651,9 +17551,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_scaleCircle_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_scaleCircle_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_scaleCircle_Battery_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -17667,9 +17564,6 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_hand_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_hand_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_hand_Battery_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -17682,10 +17576,19 @@ The data is not displayed correctly for all cities.</value>
   <data name="userControl_text_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="userControl_text_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
-  </data>
   <data name="userControl_text_Battery_AOD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Battery_AOD.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segments_Battery_AOD.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segments_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segments_Battery_AOD.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_pictures_Battery_AOD.Error" xml:space="preserve">
@@ -17696,9 +17599,6 @@ The data is not displayed correctly for all cities.</value>
   </data>
   <data name="userControl_pictures_Battery_AOD.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="userControl_pictures_Battery_AOD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 23</value>
   </data>
   <data name="userControl_pictures_Battery_AOD.ToolTip" xml:space="preserve">
     <value />
@@ -18842,6 +18742,18 @@ editing screen</value>
     <value>0</value>
   </data>
   <data name="userControl_pictures_weatherWidget.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segmentsWidget.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segmentsWidget.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segmentsWidget.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segmentsWidget.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="userControl_picturesWidget.Error" xml:space="preserve">
@@ -20362,6 +20274,18 @@ to the zone</value>
   <data name="userControl_pictures_weatherWidgetAdd.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="userControl_segmentsWidgetAdd.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="userControl_segmentsWidgetAdd.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="userControl_segmentsWidgetAdd.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="userControl_segmentsWidgetAdd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="userControl_picturesWidgetAdd.Error" xml:space="preserve">
     <value />
   </data>
@@ -20753,7 +20677,7 @@ zone frame</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAU
-        DQAAAk1TRnQBSQFMAgEBBQEAATwBBAE8AQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBQEAAVQBBAFUAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -20949,52 +20873,40 @@ zone frame</value>
   <data name="radioButton_ConvertingOutput_Custom.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_TRexPro.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingOutput_TRexPro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingOutput_TRexPro.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingOutput_Verge.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_TRexPro.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_ZeppE.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingOutput_ZeppE.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingOutput_ZeppE.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingOutput_TRex.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_ZeppE.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_GTR2.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingOutput_GTR2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingOutput_GTR2.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingOutput_GTR42.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_GTR47.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingOutput_GTR2.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="groupBox10.Error" xml:space="preserve">
@@ -21045,52 +20957,40 @@ zone frame</value>
   <data name="radioButton_ConvertingInput_Custom.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_Verge.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_TRexPro.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_Verge.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingInput_TRexPro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingInput_Verge.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingInput_TRexPro.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingInput_Verge.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_TRexPro.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_TRex.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_ZeppE.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_TRex.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingInput_ZeppE.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingInput_TRex.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingInput_ZeppE.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingInput_TRex.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_ZeppE.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.Error" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_GTR2.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="radioButton_ConvertingInput_GTR2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.IconPadding" type="System.Int32, mscorlib">
+  <data name="radioButton_ConvertingInput_GTR2.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="radioButton_ConvertingInput_GTR42.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radioButton_ConvertingInput_GTR47.ToolTip" xml:space="preserve">
+  <data name="radioButton_ConvertingInput_GTR2.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="groupBox9.Error" xml:space="preserve">
@@ -21346,7 +21246,7 @@ zone frame</value>
     <value>0</value>
   </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 289</value>
+    <value>68, 269</value>
   </data>
   <data name="comboBox_Language.ToolTip" xml:space="preserve">
     <value />

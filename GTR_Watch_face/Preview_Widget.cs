@@ -56,6 +56,18 @@ namespace AmazFit_Watchface_2
                             tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" &&
                             radioButton_WidgetElementAdd.Checked) widgetElementIndex = -1;
                     }
+                    if (checkBox_AllWidgetsInGif.Checked && WidgetDrawIndex >= 0)
+                    {
+                        if (Watch_Face.Widgets.Widget[i].WidgetElement != null &&
+                        Watch_Face.Widgets.Widget[i].WidgetElement.Count > 0)
+                        {
+                            widgetElementIndex = WidgetDrawIndex;
+                            while (widgetElementIndex >= Watch_Face.Widgets.Widget[i].WidgetElement.Count)
+                            {
+                                widgetElementIndex = widgetElementIndex - Watch_Face.Widgets.Widget[i].WidgetElement.Count;
+                            } 
+                        }
+                    }
                     if (Watch_Face.Widgets.Widget[i].WidgetElement != null &&
                         Watch_Face.Widgets.Widget[i].WidgetElement.Count > 0 && widgetElementIndex >= 0)
                     {
@@ -308,7 +320,8 @@ namespace AmazFit_Watchface_2
 
                     // набор картинок
                     if (activity.ImageProgress != null && activity.ImageProgress.ImageSet != null &&
-                            activity.ImageProgress.Coordinates != null && OneCoordinates(activity.ImageProgress.Coordinates))
+                            activity.ImageProgress.Coordinates != null && activity.ImageProgress.Coordinates.Count > 0 && 
+                            OneCoordinates(activity.ImageProgress.Coordinates))
 
                     {
                         int _imageIndex = (int)activity.ImageProgress.ImageSet.ImageIndex - 1;
@@ -318,16 +331,76 @@ namespace AmazFit_Watchface_2
 
                         int offSet = (int)((_imagesCount + 1) * progress);
                         if (activity.Type == "Weather") offSet = Watch_Face_Preview_Set.Weather.Icon;
+
                         if (offSet < 0) offSet = 0;
+                        if (activity.Type == "UVindex")
+                        {
+                            offSet = -1;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 0) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
+                        }
                         if (offSet >= _imagesCount) offSet = (int)(_imagesCount - 1);
                         int imageIndex = _imageIndex + offSet;
 
-                        if (activity.Type == "Weather") imageIndex--;
+                        //if (activity.Type == "Weather") imageIndex--;
 
-                        if (imageIndex >=0 && imageIndex < ListImagesFullName.Count)
+                        if (offSet >= 0 && imageIndex >= 0 && imageIndex < ListImagesFullName.Count)
                         {
                             src = OpenFileStream(ListImagesFullName[imageIndex]);
                             gPanel.DrawImage(src, new Rectangle(_x, _y, src.Width, src.Height));
+                        }
+
+                    }
+
+                    // сегменты
+                    if (activity.ImageProgress != null && activity.ImageProgress.ImageSet != null &&
+                            activity.ImageProgress.Coordinates != null && activity.ImageProgress.Coordinates.Count > 0 &&
+                            !OneCoordinates(activity.ImageProgress.Coordinates))
+
+                    {
+                        int _imageIndex = (int)activity.ImageProgress.ImageSet.ImageIndex - 1;
+                        int _imagesCount = activity.ImageProgress.Coordinates.Count;
+                        List<Coordinates> coordinates = activity.ImageProgress.Coordinates;
+
+                        int offSet = (int)((_imagesCount + 1) * progress);
+                        if (offSet < 0) offSet = 0;
+                        if (offSet >= _imagesCount) offSet = (int)(_imagesCount - 1);
+                        for (int j = 0; j < _imagesCount; j++)
+                        {
+                            if (activity.ImageProgress.DisplayType != null && activity.ImageProgress.DisplayType == "Continuous")
+                            {
+                                if (j <= offSet)
+                                {
+                                    int imageIndex = _imageIndex + j;
+                                    if (imageIndex < ListImagesFullName.Count)
+                                    {
+
+                                        int x = (int)coordinates[j].X;
+                                        int y = (int)coordinates[j].Y;
+                                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (j == offSet)
+                                {
+                                    int imageIndex = _imageIndex + j;
+                                    if (imageIndex < ListImagesFullName.Count)
+                                    {
+
+                                        int x = (int)coordinates[j].X;
+                                        int y = (int)coordinates[j].Y;
+                                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                    }
+                                    break;
+                                }
+                            }
                         }
 
                     }
@@ -631,7 +704,7 @@ namespace AmazFit_Watchface_2
 
                                             _offsetX = Draw_weather_text(gPanel, _imageIndex, _x, _y,
                                                             _spacing, _alignment, (int)value, _addZero, _imageDecimalIndex, _imageUnitIndex,
-                                                            BBorder, imageError_index, !showTemperature);
+                                                            BBorder, _imageNoDataIndex, !showTemperature);
                                         }
                                     }
                                     else if (activity.Type == "Sunrise")
@@ -998,7 +1071,10 @@ namespace AmazFit_Watchface_2
                             foreach (MultilangImage multilangImage in widgetElement.Date.WeeksDigits.Digit.Image.MultilangImage)
                             {
                                 if (multilangImage.LangCode == "All")
+                                { 
                                     _imageIndex = (int)(multilangImage.ImageSet.ImageIndex - 1);
+                                    _imageIndex = _imageIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
+                                }
                             }
                             if (_imageIndex >= 0 && _imageIndex < ListImagesFullName.Count)
                             {
@@ -1133,7 +1209,7 @@ namespace AmazFit_Watchface_2
                                 _addZero = digitalDateDigit.Digit.PaddingZero;
                                 if (digitalDateDigit.Separator != null)
                                 {
-                                    _iconIndex = (int)digitalDateDigit.Separator.ImageIndex;
+                                    _iconIndex = (int)digitalDateDigit.Separator.ImageIndex - 1;
                                     _iconX = (int)digitalDateDigit.Separator.Coordinates.X;
                                     _iconY = (int)digitalDateDigit.Separator.Coordinates.Y;
                                 }
@@ -1751,6 +1827,7 @@ namespace AmazFit_Watchface_2
             PreviewView = false;
             UserControl_preview userControl_preview = userControl_previewWidget;
             UserControl_pictures userPanel_pictures = null;
+            UserControl_segments userControl_segments = null;
             UserControl_text userPanel_text = null;
             UserControl_text userPanel_textGoal = null;
             UserControl_hand userPanel_hand = null;
@@ -1770,6 +1847,7 @@ namespace AmazFit_Watchface_2
 
             userControl_previewWidget.Visible = false;
             userControl_picturesWidget.Visible = false;
+            userControl_segmentsWidget.Visible = false;
             userControl_pictures_weatherWidget.Visible = false;
             userControl_textWidget.Visible = false;
             userControl_text_goalWidget.Visible = false;
@@ -1788,8 +1866,13 @@ namespace AmazFit_Watchface_2
             tabControl_DateWidget.Visible = false;
             if (widgetElement == null) return;
 
+            userControl_picturesWidget.ImagesCount = 10;
+            userControl_segmentsWidget.FixedRowsCount = false;
+            userControl_segmentsWidget.ImagesCount = -1;
+
             userControl_previewWidget.SettingsClear(false);
             userControl_picturesWidget.SettingsClear(false);
+            userControl_segmentsWidget.SettingsClear(false);
             userControl_pictures_weatherWidget.SettingsClear(false);
             userControl_textWidget.SettingsClear(false);
             userControl_text_goalWidget.SettingsClear(false);
@@ -1822,16 +1905,19 @@ namespace AmazFit_Watchface_2
             userControl_hand_DOWWidget.SettingsClear(false);
 
             userControl_textWidget.OptionalSymbol = false;
+            userControl_textWidget.Distance = false;
             userControl_text_goalWidget.Follow = true;
             userControl_text_goalWidget.OptionalSymbol = false;
             userControl_text_goalWidget.Padding_zero = false;
             userControl_iconWidget.Image2 = false;
-            
+
+
             switch (name)
             {
                 case "Battery":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -1842,6 +1928,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -1853,6 +1940,7 @@ namespace AmazFit_Watchface_2
                 case "Steps":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_text_goalWidget.Visible = true;
                     userControl_handWidget.Visible = true;
@@ -1872,6 +1960,7 @@ namespace AmazFit_Watchface_2
                     userControl_text_goalWidget.FollowText = userControl_text_goal_Steps.FollowText;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_textGoal = userControl_text_goalWidget;
                     userPanel_hand = userControl_handWidget;
@@ -1884,6 +1973,7 @@ namespace AmazFit_Watchface_2
                 case "Calories":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_text_goalWidget.Visible = true;
                     userControl_handWidget.Visible = true;
@@ -1903,6 +1993,7 @@ namespace AmazFit_Watchface_2
                     userControl_text_goalWidget.FollowText = userControl_text_goal_Calories.FollowText;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_textGoal = userControl_text_goalWidget;
                     userPanel_hand = userControl_handWidget;
@@ -1915,6 +2006,7 @@ namespace AmazFit_Watchface_2
                 case "HeartRate":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -1924,7 +2016,13 @@ namespace AmazFit_Watchface_2
 
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
+                    userControl_picturesWidget.ImagesCount = 6;
+                    userControl_segmentsWidget.ImagesCount = 6;
+                    userControl_segmentsWidget.FixedRowsCount = true;
+                    userControl_segmentsWidget.SettingsClear(false);
+
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     //userPanel_textGoal = userControl_text_goalWidget;
                     userPanel_hand = userControl_handWidget;
@@ -1937,6 +2035,7 @@ namespace AmazFit_Watchface_2
                 case "PAI":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -1947,6 +2046,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -1963,8 +2063,9 @@ namespace AmazFit_Watchface_2
 
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
                     userControl_textWidget.OptionalSymbol = true;
+                    userControl_textWidget.Distance = true;
 
-                    userPanel_pictures = userControl_picturesWidget;
+                    //userPanel_pictures = userControl_picturesWidget;
                     userPanel_text = userControl_textWidget;
                     userControl_SystemFont_Group = userControl_SystemFont_GroupWidget;
                     userControl_icon = userControl_iconWidget;
@@ -1973,6 +2074,7 @@ namespace AmazFit_Watchface_2
                 case "StandUp":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_text_goalWidget.Visible = true;
                     userControl_handWidget.Visible = true;
@@ -1992,6 +2094,7 @@ namespace AmazFit_Watchface_2
                     userControl_text_goalWidget.FollowText = userControl_text_goal_StandUp.FollowText;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_textGoal = userControl_text_goalWidget;
                     userPanel_hand = userControl_handWidget;
@@ -2014,9 +2117,11 @@ namespace AmazFit_Watchface_2
                     userPanel_text_weather_sunrise = userControl_text_weatherWidgetCur;
                     userControl_icon = userControl_iconWidget;
                     break;
+
                 case "UVindex":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -2026,7 +2131,13 @@ namespace AmazFit_Watchface_2
 
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
+                    userControl_picturesWidget.ImagesCount = 5;
+                    userControl_segmentsWidget.ImagesCount = 5;
+                    userControl_segmentsWidget.FixedRowsCount = true;
+                    userControl_segmentsWidget.SettingsClear(false);
+
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2038,6 +2149,7 @@ namespace AmazFit_Watchface_2
                 case "AirQuality":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -2047,7 +2159,13 @@ namespace AmazFit_Watchface_2
 
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
+                    userControl_picturesWidget.ImagesCount = 6;
+                    userControl_segmentsWidget.ImagesCount = 6;
+                    userControl_segmentsWidget.FixedRowsCount = true;
+                    userControl_segmentsWidget.SettingsClear(false);
+
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2059,6 +2177,7 @@ namespace AmazFit_Watchface_2
                 case "Humidity":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -2069,6 +2188,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2080,6 +2200,7 @@ namespace AmazFit_Watchface_2
                 case "Sunrise":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_text_goalWidget.Visible = true;
                     userControl_text_goalWidgetSunrise.Visible = true;
                     userControl_text_goalWidgetSunset.Visible = true;
@@ -2095,7 +2216,12 @@ namespace AmazFit_Watchface_2
                     userControl_text_goalWidget.OptionalSymbol = true;
                     userControl_text_goalWidget.Padding_zero = true;
 
+                    userControl_segmentsWidget.ImagesCount = 2;
+                    userControl_segmentsWidget.FixedRowsCount = true;
+                    userControl_segmentsWidget.SettingsClear(false);
+
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_text_goalWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2106,6 +2232,7 @@ namespace AmazFit_Watchface_2
                 case "WindForce":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -2116,6 +2243,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2126,21 +2254,14 @@ namespace AmazFit_Watchface_2
 
                 case "Altitude":
                     userControl_previewWidget.Visible = true;
-                    userControl_picturesWidget.Visible = true;
                     userControl_textWidget.Visible = true;
-                    userControl_handWidget.Visible = true;
-                    userControl_scaleCircleWidget.Visible = true;
-                    userControl_scaleLinearWidget.Visible = true;
                     userControl_SystemFont_GroupWidget.Visible = true;
                     userControl_iconWidget.Visible = true;
 
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
-                    userPanel_pictures = userControl_picturesWidget;
+                    //userPanel_pictures = userControl_picturesWidget;
                     userPanel_text = userControl_textWidget;
-                    userPanel_hand = userControl_handWidget;
-                    userPanel_scaleCircle = userControl_scaleCircleWidget;
-                    userPanel_scaleLinear = userControl_scaleLinearWidget;
                     userControl_SystemFont_Group = userControl_SystemFont_GroupWidget;
                     userControl_icon = userControl_iconWidget;
                     break;
@@ -2148,6 +2269,7 @@ namespace AmazFit_Watchface_2
                 case "AirPressure":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -2158,6 +2280,7 @@ namespace AmazFit_Watchface_2
                     userControl_SystemFont_GroupWidget.ShowGoal = false;
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2169,6 +2292,7 @@ namespace AmazFit_Watchface_2
                 case "Stress":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -2180,6 +2304,7 @@ namespace AmazFit_Watchface_2
 
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2191,6 +2316,7 @@ namespace AmazFit_Watchface_2
                 case "ActivityGoal":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_text_goalWidget.Visible = true;
                     userControl_handWidget.Visible = true;
@@ -2212,6 +2338,7 @@ namespace AmazFit_Watchface_2
 
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_textGoal = userControl_text_goalWidget;
                     userPanel_hand = userControl_handWidget;
@@ -2224,6 +2351,7 @@ namespace AmazFit_Watchface_2
                 case "FatBurning":
                     userControl_previewWidget.Visible = true;
                     userControl_picturesWidget.Visible = true;
+                    userControl_segmentsWidget.Visible = true;
                     userControl_textWidget.Visible = true;
                     userControl_handWidget.Visible = true;
                     userControl_scaleCircleWidget.Visible = true;
@@ -2243,6 +2371,7 @@ namespace AmazFit_Watchface_2
 
 
                     userPanel_pictures = userControl_picturesWidget;
+                    userControl_segments = userControl_segmentsWidget;
                     userPanel_text = userControl_textWidget;
                     userPanel_hand = userControl_handWidget;
                     userPanel_scaleCircle = userControl_scaleCircleWidget;
@@ -2299,6 +2428,21 @@ namespace AmazFit_Watchface_2
                     }
                 }
 
+                // сегменты
+                if (userControl_segments != null)
+                {
+                    if (activity.ImageProgress != null && activity.ImageProgress.ImageSet != null &&
+                        activity.ImageProgress.Coordinates != null && !OneCoordinates(activity.ImageProgress.Coordinates))
+
+                    //activity.ImageProgress.Coordinates != null && activity.ImageProgress.Coordinates.Count == 1)
+                    {
+                        userControl_segments.checkBox_pictures_Use.Checked = true;
+                        userControl_segments.comboBoxSetImage(activity.ImageProgress.ImageSet.ImageIndex);
+                        userControl_segments.SetCoordinates(activity.ImageProgress.Coordinates);
+                        userControl_segments.radioButtonSetDisplayType(activity.ImageProgress.DisplayType);
+                    }
+                }
+
                 // надпиь и системный шрифт
                 if (activity.Type != "Weather" && activity.Type != "Sunrise")
                 {
@@ -2346,6 +2490,7 @@ namespace AmazFit_Watchface_2
                                     //ComboBox comboBox_DecimalPoint = (ComboBox)panel_text.Controls[12];
                                     if (digitalCommonDigit.Digit.Image.DecimalPointImageIndex != null)
                                         userPanel_text_Activity.comboBoxSetImageDecimalPointOrMinus((int)digitalCommonDigit.Digit.Image.DecimalPointImageIndex);
+                                
                                 }
 
                                 if (digitalCommonDigit.Digit.Image.NoDataImageIndex != null)
@@ -2363,6 +2508,18 @@ namespace AmazFit_Watchface_2
                                             userPanel_text_Activity.comboBoxSetUnit((int)multilangImage.ImageSet.ImageIndex);
                                     }
                                 }
+                                if (activity.Type == "Distance")
+                                {
+                                    if (digitalCommonDigit.Digit.Image.MultilangImageUnitMile != null)
+                                    {
+                                        foreach (MultilangImage multilangImage in digitalCommonDigit.Digit.Image.MultilangImageUnitMile)
+                                        {
+                                            if (multilangImage.LangCode == "All")
+                                                userPanel_text_Activity.comboBoxSetUnitMile((int)multilangImage.ImageSet.ImageIndex);
+                                        }
+                                    }
+                                }
+
                                 userPanel_text_Activity.comboBoxSetAlignment(digitalCommonDigit.Digit.Alignment);
                                 if (digitalCommonDigit.Digit.Spacing != null)
                                     numericUpDown_spacing.Value = (decimal)digitalCommonDigit.Digit.Spacing;
@@ -3585,6 +3742,7 @@ namespace AmazFit_Watchface_2
 
             userControl_previewWidgetAdd.Visible = false;
             userControl_picturesWidgetAdd.Visible = false;
+            userControl_segmentsWidgetAdd.Visible = false;
             userControl_pictures_weatherWidgetAdd.Visible = false;
             userControl_textWidgetAdd.Visible = false;
             userControl_text_goalWidgetAdd.Visible = false;
@@ -3604,6 +3762,7 @@ namespace AmazFit_Watchface_2
 
             userControl_previewWidgetAdd.SettingsClear(false);
             userControl_picturesWidgetAdd.checkBox_pictures_Use.Checked = false;
+            userControl_segmentsWidgetAdd.checkBox_pictures_Use.Checked = false;
             userControl_pictures_weatherWidgetAdd.checkBox_pictures_Use.Checked = false;
             userControl_textWidgetAdd.checkBox_Use.Checked = false;
             userControl_text_goalWidgetAdd.checkBox_Use.Checked = false;
@@ -3662,16 +3821,22 @@ namespace AmazFit_Watchface_2
             userControl_hand_DOWWidgetAdd.checkBox_hand_Use.Checked = false;
 
             userControl_textWidgetAdd.OptionalSymbol = false;
+            userControl_textWidgetAdd.Distance = false;
             userControl_text_goalWidgetAdd.Follow = true;
             userControl_text_goalWidgetAdd.OptionalSymbol = false;
             userControl_text_goalWidgetAdd.Padding_zero = false;
             userControl_iconWidgetAdd.Image2 = false;
+
+            userControl_picturesWidgetAdd.ImagesCount = 10;
+            userControl_segmentsWidgetAdd.ImagesCount = -1;
+            userControl_segmentsWidgetAdd.FixedRowsCount = false;
 
             switch (name)
             {
                 case "Battery":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3685,6 +3850,7 @@ namespace AmazFit_Watchface_2
                 case "Steps":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_text_goalWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
@@ -3707,6 +3873,7 @@ namespace AmazFit_Watchface_2
                 case "Calories":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_text_goalWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
@@ -3729,6 +3896,7 @@ namespace AmazFit_Watchface_2
                 case "HeartRate":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3737,11 +3905,17 @@ namespace AmazFit_Watchface_2
                     userControl_iconWidgetAdd.Visible = true;
 
                     userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+
+                    userControl_picturesWidgetAdd.ImagesCount = 6;
+                    userControl_segmentsWidgetAdd.ImagesCount = 6;
+                    userControl_segmentsWidgetAdd.FixedRowsCount = true;
+                    userControl_segmentsWidgetAdd.SettingsClear(false);
                     break;
 
                 case "PAI":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3760,11 +3934,13 @@ namespace AmazFit_Watchface_2
 
                     userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
                     userControl_textWidgetAdd.OptionalSymbol = true;
+                    userControl_textWidgetAdd.Distance = true;
                     break;
 
                 case "StandUp":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_text_goalWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
@@ -3797,6 +3973,7 @@ namespace AmazFit_Watchface_2
                 case "UVindex":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3805,11 +3982,17 @@ namespace AmazFit_Watchface_2
                     userControl_iconWidgetAdd.Visible = true;
 
                     userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+
+                    userControl_picturesWidgetAdd.ImagesCount = 5;
+                    userControl_segmentsWidgetAdd.ImagesCount = 5;
+                    userControl_segmentsWidgetAdd.FixedRowsCount = true;
+                    userControl_segmentsWidgetAdd.SettingsClear(false);
                     break;
 
                 case "AirQuality":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3818,11 +4001,17 @@ namespace AmazFit_Watchface_2
                     userControl_iconWidgetAdd.Visible = true;
 
                     userControl_SystemFont_GroupWidgetAdd.ShowGoal = false;
+
+                    userControl_picturesWidgetAdd.ImagesCount = 6;
+                    userControl_segmentsWidgetAdd.ImagesCount = 6;
+                    userControl_segmentsWidgetAdd.FixedRowsCount = true;
+                    userControl_segmentsWidgetAdd.SettingsClear(false);
                     break;
 
                 case "Humidity":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3836,6 +4025,7 @@ namespace AmazFit_Watchface_2
                 case "Sunrise":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_text_goalWidgetAdd.Visible = true;
                     userControl_text_goalWidgetSunriseAdd.Visible = true;
                     userControl_text_goalWidgetSunsetAdd.Visible = true;
@@ -3851,11 +4041,16 @@ namespace AmazFit_Watchface_2
                     userControl_text_goalWidgetAdd.Follow = false;
                     userControl_text_goalWidgetAdd.OptionalSymbol = true;
                     userControl_text_goalWidgetAdd.Padding_zero = true;
+
+                    userControl_segmentsWidgetAdd.ImagesCount = 2;
+                    userControl_segmentsWidgetAdd.FixedRowsCount = true;
+                    userControl_segmentsWidgetAdd.SettingsClear(false);
                     break;
 
                 case "WindForce":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3868,11 +4063,12 @@ namespace AmazFit_Watchface_2
 
                 case "Altitude":
                     userControl_previewWidgetAdd.Visible = true;
-                    userControl_picturesWidgetAdd.Visible = true;
+                    //userControl_picturesWidgetAdd.Visible = true;
+                    //userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
-                    userControl_handWidgetAdd.Visible = true;
-                    userControl_scaleCircleWidgetAdd.Visible = true;
-                    userControl_scaleLinearWidgetAdd.Visible = true;
+                    //userControl_handWidgetAdd.Visible = true;
+                    //userControl_scaleCircleWidgetAdd.Visible = true;
+                    //userControl_scaleLinearWidgetAdd.Visible = true;
                     userControl_SystemFont_GroupWidgetAdd.Visible = true;
                     userControl_iconWidgetAdd.Visible = true;
 
@@ -3882,6 +4078,7 @@ namespace AmazFit_Watchface_2
                 case "AirPressure":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3895,6 +4092,7 @@ namespace AmazFit_Watchface_2
                 case "Stress":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -3908,6 +4106,7 @@ namespace AmazFit_Watchface_2
                 case "ActivityGoal":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_text_goalWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
@@ -3931,6 +4130,7 @@ namespace AmazFit_Watchface_2
                 case "FatBurning":
                     userControl_previewWidgetAdd.Visible = true;
                     userControl_picturesWidgetAdd.Visible = true;
+                    userControl_segmentsWidgetAdd.Visible = true;
                     userControl_textWidgetAdd.Visible = true;
                     userControl_handWidgetAdd.Visible = true;
                     userControl_scaleCircleWidgetAdd.Visible = true;
@@ -4206,7 +4406,8 @@ namespace AmazFit_Watchface_2
 
             if (type != "Weather" && type != "Sunrise" && type != "Date")
             {
-                activity = AddActivityWidget(userControl_picturesWidgetAdd, userControl_textWidgetAdd, userControl_text_goalWidgetAdd,
+                activity = AddActivityWidget(userControl_picturesWidgetAdd, userControl_segmentsWidgetAdd, 
+                    userControl_textWidgetAdd, userControl_text_goalWidgetAdd,
                     userControl_handWidgetAdd, userControl_scaleCircleWidgetAdd, userControl_scaleLinearWidgetAdd,
                     userControl_SystemFont_GroupWidgetAdd, userControl_iconWidgetAdd, type);
             }
@@ -4257,7 +4458,8 @@ namespace AmazFit_Watchface_2
 
             if (type != "Weather" && type != "Sunrise" && type != "Date")
             {
-                activity = AddActivityWidget(userControl_picturesWidget, userControl_textWidget, userControl_text_goalWidget,
+                activity = AddActivityWidget(userControl_picturesWidget, userControl_segmentsWidget,
+                    userControl_textWidget, userControl_text_goalWidget,
                     userControl_handWidget, userControl_scaleCircleWidget, userControl_scaleLinearWidget,
                     userControl_SystemFont_GroupWidget, userControl_iconWidget, type);
             }
@@ -4279,8 +4481,8 @@ namespace AmazFit_Watchface_2
         }
 
         /// <summary>получаем раздел Activity(Activity) для WidgetElement при его редактировании</summary>
-        private Activity AddActivityWidget(UserControl_pictures userPanel_pictures, UserControl_text userPanel_text,
-            UserControl_text userPanel_textGoal, UserControl_hand userPanel_hand,
+        private Activity AddActivityWidget(UserControl_pictures userPanel_pictures, UserControl_segments userControl_segments,
+            UserControl_text userPanel_text, UserControl_text userPanel_textGoal, UserControl_hand userPanel_hand,
             UserControl_scaleCircle userPanel_scaleCircle, UserControl_scaleLinear userPanel_scaleLinear,
             UserControl_SystemFont_Group userControl_SystemFont_Group,
             UserControl_icon userControl_icon, string type)
@@ -4311,10 +4513,32 @@ namespace AmazFit_Watchface_2
                     activity.ImageProgress.Coordinates = new List<Coordinates>();
                     activity.ImageProgress.ImageSet.ImageIndex = image;
                     activity.ImageProgress.ImageSet.ImagesCount = (long)numericUpDown_count.Value;
+                    //activity.ImageProgress.DisplayType = "Single";
                     Coordinates coordinates = new Coordinates();
                     coordinates.X = (long)numericUpDownX.Value;
                     coordinates.Y = (long)numericUpDownY.Value;
                     activity.ImageProgress.Coordinates.Add(coordinates);
+                }
+            }
+
+            // данные сегментами
+            if (userControl_segments != null && userControl_segments.checkBox_pictures_Use.Checked)
+            {
+                int image = userControl_segments.comboBoxGetImage();
+                if (image >= 0)
+                {
+                    List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                    if (coordinates != null)
+                    {
+                        if (activity == null) activity = new Activity();
+                        activity.ImageProgress = new ImageProgress();
+                        //activityMin.ImageProgress.DisplayType = "Single"; //"Single" = 0, "Continuous" = 1
+                        activity.ImageProgress.DisplayType = userControl_segments.radioButtonGetDisplayType();
+                        activity.ImageProgress.ImageSet = new ImageSetGTR2();
+                        activity.ImageProgress.Coordinates = coordinates;
+                        activity.ImageProgress.ImageSet.ImageIndex = image;
+                        activity.ImageProgress.ImageSet.ImagesCount = coordinates.Count;
+                    }
                 }
             }
 
@@ -4330,6 +4554,7 @@ namespace AmazFit_Watchface_2
                     //ComboBox comboBox_separator = (ComboBox)panel_text.Controls[3];
                     int unit = userPanel_text.comboBoxGetIcon();
                     int separator = userPanel_text.comboBoxGetUnit();
+                    int separatorMile = userPanel_text.comboBoxGetUnitMile();
                     NumericUpDown numericUpDownX = userPanel_text.numericUpDown_imageX;
                     NumericUpDown numericUpDownY = userPanel_text.numericUpDown_imageY;
                     NumericUpDown numericUpDown_unitX = userPanel_text.numericUpDown_iconX;
@@ -4361,6 +4586,16 @@ namespace AmazFit_Watchface_2
                         if (DecimalPoint >= 0)
                         {
                             digitalCommonDigit.Digit.Image.DecimalPointImageIndex = DecimalPoint;
+                        }
+                        if (separatorMile >= 0)
+                        {
+                            digitalCommonDigit.Digit.Image.MultilangImageUnitMile = new List<MultilangImage>();
+                            MultilangImage multilangImageMile = new MultilangImage();
+                            multilangImageMile.LangCode = "All";
+                            multilangImageMile.ImageSet = new ImageSetGTR2();
+                            multilangImageMile.ImageSet.ImagesCount = 1;
+                            multilangImageMile.ImageSet.ImageIndex = separatorMile;
+                            digitalCommonDigit.Digit.Image.MultilangImageUnitMile.Add(multilangImageMile);
                         }
                     }
                     digitalCommonDigit.Digit.Image.MultilangImage = new List<MultilangImage>();
@@ -6930,6 +7165,7 @@ namespace AmazFit_Watchface_2
         {
             userControl_previewWidget.Visible = false;
             userControl_picturesWidget.Visible = false;
+            userControl_segmentsWidget.Visible = false;
             userControl_pictures_weatherWidget.Visible = false;
             userControl_textWidget.Visible = false;
             userControl_text_goalWidget.Visible = false;
@@ -7707,26 +7943,26 @@ namespace AmazFit_Watchface_2
 
             src.Dispose();
 
-            if (crop)
-            {
-                Logger.WriteLine("PreviewToBitmap (crop)");
-                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
-                if (radioButton_GTS2.Checked)
-                {
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
-                }
-                if (radioButton_TRex_pro.Checked)
-                {
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
-                }
-                if (radioButton_ZeppE.Checked)
-                {
-                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
-                }
-                mask = FormColor(mask);
-                gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
-                mask.Dispose();
-            }
+            //if (crop)
+            //{
+            //    Logger.WriteLine("PreviewToBitmap (crop)");
+            //    Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr_2.png");
+            //    if (radioButton_GTS2.Checked)
+            //    {
+            //        mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts_2.png");
+            //    }
+            //    if (radioButton_TRex_pro.Checked)
+            //    {
+            //        mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex_pro.png");
+            //    }
+            //    if (radioButton_ZeppE.Checked)
+            //    {
+            //        mask = new Bitmap(Application.StartupPath + @"\Mask\mask_zepp_e.png");
+            //    }
+            //    mask = FormColor(mask);
+            //    gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
+            //    mask.Dispose();
+            //}
         }
 
         private string ShortName(Graphics graphics, string name, int lenght, int size)
@@ -7754,28 +7990,29 @@ namespace AmazFit_Watchface_2
 
         private Bitmap DrawWidgetTime()
         {
-            Bitmap src = new Bitmap(454, 454);
+            Bitmap src_return = new Bitmap(454, 454);
+            Bitmap src_temp = new Bitmap(1, 1);
             Color colorMask = Color.FromArgb(100, Color.Black);
             ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(colorMask, 454, 454);
             if (radioButton_GTS2.Checked)
             {
-                src = new Bitmap(348, 442);
+                src_return = new Bitmap(348, 442);
                 combineMask = new ImageMagick.MagickImage(colorMask, 348, 442);
             }
             if (radioButton_TRex_pro.Checked)
             {
-                src = new Bitmap(360, 360);
+                src_return = new Bitmap(360, 360);
                 combineMask = new ImageMagick.MagickImage(colorMask, 360, 360);
             }
             if (radioButton_ZeppE.Checked)
             {
-                src = new Bitmap(416, 416);
+                src_return = new Bitmap(416, 416);
                 combineMask = new ImageMagick.MagickImage(colorMask, 416, 416);
             }
-            offSet_X = src.Width / 2;
-            offSet_Y = src.Height / 2;
-            Graphics gPanel = Graphics.FromImage(src);
-            gPanel.DrawLine(new Pen(Color.Red, 1), 0, 0, 1, 1);
+            offSet_X = src_return.Width / 2;
+            offSet_Y = src_return.Height / 2;
+            Graphics gPanel = Graphics.FromImage(src_return);
+            gPanel.DrawLine(new Pen(Color.Red, 1), 0, 0, 1, 1); 
 
             #region цифровое время
             int time_offsetX = -1;
@@ -7817,9 +8054,9 @@ namespace AmazFit_Watchface_2
 
                 if (comboBox_Hour_unit.SelectedIndex >= 0)
                 {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Hour_unit.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hour_unitX.Value,
-                        (int)numericUpDown_Hour_unitY.Value, src.Width, src.Height));
+                    src_temp = OpenFileStream(ListImagesFullName[comboBox_Hour_unit.SelectedIndex]);
+                    gPanel.DrawImage(src_temp, new Rectangle((int)numericUpDown_Hour_unitX.Value,
+                        (int)numericUpDown_Hour_unitY.Value, src_temp.Width, src_temp.Height));
                 }
             }
 
@@ -7851,9 +8088,9 @@ namespace AmazFit_Watchface_2
 
                 if (comboBox_Minute_unit.SelectedIndex >= 0)
                 {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Minute_unit.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Minute_unitX.Value,
-                        (int)numericUpDown_Minute_unitY.Value, src.Width, src.Height));
+                    src_temp = OpenFileStream(ListImagesFullName[comboBox_Minute_unit.SelectedIndex]);
+                    gPanel.DrawImage(src_temp, new Rectangle((int)numericUpDown_Minute_unitX.Value,
+                        (int)numericUpDown_Minute_unitY.Value, src_temp.Width, src_temp.Height));
                 }
             }
             else time_offsetX = -1;
@@ -7884,9 +8121,9 @@ namespace AmazFit_Watchface_2
 
                 if (comboBox_Second_unit.SelectedIndex >= 0)
                 {
-                    src = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Second_unitX.Value,
-                        (int)numericUpDown_Second_unitY.Value, src.Width, src.Height));
+                    src_temp = OpenFileStream(ListImagesFullName[comboBox_Second_unit.SelectedIndex]);
+                    gPanel.DrawImage(src_temp, new Rectangle((int)numericUpDown_Second_unitX.Value,
+                        (int)numericUpDown_Second_unitY.Value, src_temp.Width, src_temp.Height));
                 }
             }
 
@@ -8074,7 +8311,7 @@ namespace AmazFit_Watchface_2
             }
             #endregion
 
-            ImageMagick.MagickImage image = new ImageMagick.MagickImage(src);
+            ImageMagick.MagickImage image = new ImageMagick.MagickImage(src_return);
             image.Composite(combineMask, ImageMagick.CompositeOperator.In, ImageMagick.Channels.Alpha);
 
             return image.ToBitmap();

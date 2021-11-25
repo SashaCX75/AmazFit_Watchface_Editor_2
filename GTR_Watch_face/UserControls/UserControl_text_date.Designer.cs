@@ -30,11 +30,8 @@ namespace AmazFit_Watchface_2
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_text_date));
+            this.panel_text.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label08
-            // 
-            resources.ApplyResources(this.label08, "label08");
             // 
             // label06
             // 
@@ -76,10 +73,36 @@ namespace AmazFit_Watchface_2
             // 
             resources.ApplyResources(this.comboBox_imageError, "comboBox_imageError");
             // 
+            // comboBox_imageDecimalPoint
+            // 
+            resources.ApplyResources(this.comboBox_imageDecimalPoint, "comboBox_imageDecimalPoint");
+            // 
+            // panel_text
+            // 
+            resources.ApplyResources(this.panel_text, "panel_text");
+            // 
+            // comboBox_unit_miles
+            // 
+            resources.ApplyResources(this.comboBox_unit_miles, "comboBox_unit_miles");
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            // 
+            // label08
+            // 
+            resources.ApplyResources(this.label08, "label08");
+            // 
+            // comboBox_unit
+            // 
+            resources.ApplyResources(this.comboBox_unit, "comboBox_unit");
+            // 
             // UserControl_text_date
             // 
             resources.ApplyResources(this, "$this");
             this.Name = "UserControl_text_date";
+            this.panel_text.ResumeLayout(false);
+            this.panel_text.PerformLayout();
             this.ResumeLayout(false);
 
         }

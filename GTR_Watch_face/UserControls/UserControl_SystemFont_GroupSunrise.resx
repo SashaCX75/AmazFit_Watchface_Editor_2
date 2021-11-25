@@ -136,20 +136,23 @@
   <data name="&gt;&gt;button_SystemFont.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;userControl_FontRotate_weather_Max.Parent" xml:space="preserve">
-    <value>panel_SystemFont</value>
+  <data name="userControl_SystemFont_weather_Current.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 23</value>
   </data>
   <data name="&gt;&gt;button_SystemFont.Name" xml:space="preserve">
     <value>button_SystemFont</value>
   </data>
   <data name="&gt;&gt;userControl_SystemFont_weather_Max.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_SystemFont_weather_Max.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="&gt;&gt;userControl_SystemFont_weather_Current.Name" xml:space="preserve">
     <value>userControl_SystemFont_weather_Current</value>
+  </data>
+  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
+    <value>Системный шрифт повернутый (рассвет/закат)</value>
   </data>
   <data name="userControl_FontRotate_weather_Min.ButtonText" xml:space="preserve">
     <value>Системный шрифт по окружности (рассвет)</value>
@@ -160,20 +163,14 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl_SystemFont_GroupSunrise</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather, AmazFit_Watchface_Editor_2, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;userControl_FontRotate_weather_Min.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;userControl_FontRotate_weather_Current.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel_SystemFont.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panel_SystemFont.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_SystemFont.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="userControl_SystemFont_weather_Min.Size" type="System.Drawing.Size, System.Drawing">
     <value>427, 23</value>
@@ -184,32 +181,32 @@
   <data name="&gt;&gt;userControl_SystemFont_weather_Max.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="&gt;&gt;userControl_SystemFont_weather_Min.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="panel_SystemFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 146</value>
   </data>
   <data name="&gt;&gt;userControl_FontRotate_weather_Min.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="userControl_SystemFont_weather_Current.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 23</value>
-  </data>
-  <data name="panel_SystemFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 146</value>
-  </data>
   <data name="userControl_FontRotate_weather_Current.ButtonText" xml:space="preserve">
     <value>Системный шрифт по окружности (рассвет/закат)</value>
   </data>
-  <data name="userControl_SystemFont_weather_Current.ButtonText" xml:space="preserve">
-    <value>Системный шрифт повернутый (рассвет/закат)</value>
+  <data name="&gt;&gt;userControl_FontRotate_weather_Max.Type" xml:space="preserve">
+    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;userControl_SystemFont_weather_Current.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>AmazFit_Watchface_2.UserControl_SystemFont_GroupWeather, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="userControl_SystemFont_weather_Min.ButtonText" xml:space="preserve">
     <value>Системный шрифт повернутый (рассвет)</value>
   </data>
+  <data name="&gt;&gt;userControl_FontRotate_weather_Current.Parent" xml:space="preserve">
+    <value>panel_SystemFont</value>
+  </data>
   <data name="&gt;&gt;userControl_FontRotate_weather_Min.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;userControl_FontRotate_weather_Current.Type" xml:space="preserve">
+    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panel_SystemFont.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -221,13 +218,16 @@
     <value>userControl_FontRotate_weather_Max</value>
   </data>
   <data name="&gt;&gt;userControl_SystemFont_weather_Min.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;userControl_FontRotate_weather_Current.Parent" xml:space="preserve">
+  <data name="&gt;&gt;userControl_SystemFont_weather_Min.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;userControl_FontRotate_weather_Max.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>
   </data>
-  <data name="&gt;&gt;userControl_FontRotate_weather_Max.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;userControl_FontRotate_weather_Current.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;button_SystemFont.Parent" xml:space="preserve">
     <value>$this</value>
@@ -250,8 +250,8 @@
   <data name="&gt;&gt;userControl_SystemFont_weather_Min.Name" xml:space="preserve">
     <value>userControl_SystemFont_weather_Min</value>
   </data>
-  <data name="&gt;&gt;userControl_FontRotate_weather_Current.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_FontRotate_weather, AmazFit_Watchface_Editor_2, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;userControl_SystemFont_weather_Current.Type" xml:space="preserve">
+    <value>AmazFit_Watchface_2.UserControl_SystemFont_weather, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;userControl_SystemFont_weather_Current.Parent" xml:space="preserve">
     <value>panel_SystemFont</value>

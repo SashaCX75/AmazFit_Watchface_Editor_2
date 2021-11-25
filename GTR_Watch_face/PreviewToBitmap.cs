@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -44,12 +45,16 @@ namespace AmazFit_Watchface_2
                 {
                     int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
                     DrawWidgetEditScreen(gPanel, crop, showWidgetsArea, widgetIndex);
+                    FormText();
+                    goto TimeEnd;
                     return;
                 }
                 if (tabControl_Widget.SelectedTab.Name == "tabPage_WidgetAdd" && radioButton_WidgetAdd.Checked)
                 {
                     int widgetIndex = comboBox_WidgetNumber.SelectedIndex;
                     DrawWidgetEditScreen(gPanel, crop, showWidgetsArea, widgetIndex);
+                    FormText();
+                    goto TimeEnd;
                     return;
                 }
             }
@@ -962,6 +967,7 @@ namespace AmazFit_Watchface_2
             #region активности
 
             UserControl_pictures userPanel_pictures;
+            UserControl_segments userControl_segments;
             UserControl_text userPanel_text;
             UserControl_text userPanel_textGoal = null;
             UserControl_hand userPanel_hand;
@@ -983,6 +989,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Battery")
                 {
                     userPanel_pictures = userControl_pictures_Battery;
+                    userControl_segments = userControl_segments_Battery;
                     userPanel_text = userControl_text_Battery;
                     userPanel_hand = userControl_hand_Battery;
                     userPanel_scaleCircle = userControl_scaleCircle_Battery;
@@ -1018,6 +1025,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // зараяд сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)(count * Watch_Face_Preview_Set.Battery / 100f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType()== "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    } 
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Battery;
                     activityGoal = 100;
                     progress = Watch_Face_Preview_Set.Battery / 100f;
@@ -1032,6 +1088,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Steps")
                 {
                     userPanel_pictures = userControl_pictures_Steps;
+                    userControl_segments = userControl_segments_Steps;
                     userPanel_text = userControl_text_Steps;
                     userPanel_textGoal = userControl_text_goal_Steps;
                     userPanel_hand = userControl_hand_Steps;
@@ -1041,7 +1098,6 @@ namespace AmazFit_Watchface_2
                     userControl_icon = userControl_icon_Steps;
 
                     // шаги картинками
-                    //checkBox_Use = (CheckBox)panel_pictures.Controls[0];
                     if (userPanel_pictures.checkBox_pictures_Use.Checked)
                     {
                         //ComboBox comboBox_image = (ComboBox)panel_pictures.Controls[1];
@@ -1072,6 +1128,60 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // шаги сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count - 1) * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1); 
+                            if (Watch_Face_Preview_Set.Activity.Steps < Watch_Face_Preview_Set.Activity.StepsGoal / 100f)
+                                offSet = -1;
+                            if (offSet >= 0)
+                            {
+                                for (i = 0; i < count; i++)
+                                {
+                                    if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                    {
+                                        if (i <= offSet)
+                                        {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
+
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (i == offSet)
+                                        {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
+
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
+                                            break;
+                                        }
+                                    }
+                                } 
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Activity.Steps;
                     activityGoal = Watch_Face_Preview_Set.Activity.StepsGoal;
                     progress = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
@@ -1087,6 +1197,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Calories")
                 {
                     userPanel_pictures = userControl_pictures_Calories;
+                    userControl_segments = userControl_segments_Calories;
                     userPanel_text = userControl_text_Calories;
                     userPanel_textGoal = userControl_text_goal_Calories;
                     userPanel_hand = userControl_hand_Calories;
@@ -1123,6 +1234,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // калории сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.Calories / 300f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Activity.Calories;
                     activityGoal = 300;
                     progress = Watch_Face_Preview_Set.Activity.Calories / 300f;
@@ -1138,6 +1298,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "HeartRate")
                 {
                     userPanel_pictures = userControl_pictures_HeartRate;
+                    userControl_segments = userControl_segments_HeartRate;
                     userPanel_text = userControl_text_HeartRate;
                     userPanel_hand = userControl_hand_HeartRate;
                     userPanel_scaleCircle = userControl_scaleCircle_HeartRate;
@@ -1174,6 +1335,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // пульс сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)(count * (Watch_Face_Preview_Set.Activity.HeartRate - 70) / 100f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Activity.HeartRate;
                     activityGoal = 180;
                     progress = Watch_Face_Preview_Set.Activity.HeartRate / 181f;
@@ -1187,6 +1397,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "PAI")
                 {
                     userPanel_pictures = userControl_pictures_PAI;
+                    userControl_segments = userControl_segments_PAI;
                     userPanel_text = userControl_text_PAI;
                     userPanel_hand = userControl_hand_PAI;
                     userPanel_scaleCircle = userControl_scaleCircle_PAI;
@@ -1219,6 +1430,55 @@ namespace AmazFit_Watchface_2
                                 src = OpenFileStream(ListImagesFullName[imageIndex]);
                                 gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                             }
+                        }
+                    }
+
+                    // PAI сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.PAI / 100f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
                         }
                     }
 
@@ -1305,6 +1565,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "StandUp")
                 {
                     userPanel_pictures = userControl_pictures_StandUp;
+                    userControl_segments = userControl_segments_StandUp;
                     userPanel_text = userControl_text_StandUp;
                     userPanel_textGoal = userControl_text_goal_StandUp;
                     userPanel_hand = userControl_hand_StandUp;
@@ -1341,6 +1602,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // StandUp сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.StandUp / 12f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Activity.StandUp;
                     activityGoal = 12;
                     progress = Watch_Face_Preview_Set.Activity.StandUp / 12f;
@@ -1370,10 +1680,11 @@ namespace AmazFit_Watchface_2
                     int value_max = Watch_Face_Preview_Set.Weather.TemperatureMax;
                     int icon_index = Watch_Face_Preview_Set.Weather.Icon;
                     bool showTemperature = Watch_Face_Preview_Set.Weather.showTemperature;
+                    bool weatherAlignmentFix = checkBox_weatherAlignmentFix.Checked;
 
                     DrawWeather(gPanel, userPanel_pictures_weather, userPanel_text_weather_Current, userPanel_text_weather_Min,
                         userPanel_text_weather_Max, userControl_SystemFont_Group_Weather, userControl_icon, value_current,
-                        value_min, value_max, icon_index, BBorder, showTemperature); 
+                        value_min, value_max, icon_index, BBorder, showTemperature, weatherAlignmentFix); 
                 }
 
                 #endregion
@@ -1382,6 +1693,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "UVindex")
                 {
                     userPanel_pictures = userControl_pictures_UVindex;
+                    userControl_segments = userControl_segments_UVindex;
                     userPanel_text = userControl_text_UVindex;
                     userPanel_hand = userControl_hand_UVindex;
                     userPanel_scaleCircle = userControl_scaleCircle_UVindex;
@@ -1405,15 +1717,78 @@ namespace AmazFit_Watchface_2
                             //int offSet = (int)Math.Ceiling((float)count * Watch_Face_Preview_Set.Activity.PAI / 100f);
                             int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
                             //offSet--;
-                            if (offSet < 0) offSet = 0;
+                            offSet = -1;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 0) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
+                            //if (offSet < 0) offSet = 0;
                             if (offSet >= count) offSet = (int)(count - 1);
                             int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
 
-                            if (imageIndex < ListImagesFullName.Count)
+                            if (offSet >= 0 && imageIndex < ListImagesFullName.Count)
                             {
                                 src = OpenFileStream(ListImagesFullName[imageIndex]);
                                 gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                             }
+                        }
+                    }
+
+                    // UVindex сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.UVindex / 10f);
+                            //offSet--;
+                            offSet = 0;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 3) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 5) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 7) offSet++;
+                            if (Watch_Face_Preview_Set.Weather.UVindex > 9) offSet++;
+                            //if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            if (offSet >= 0)
+                            {
+                                for (i = 0; i < count; i++)
+                                {
+                                    if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                    {
+                                        if (i <= offSet)
+                                        {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
+
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (i == offSet)
+                                        {
+                                            int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                            if (imageIndex < ListImagesFullName.Count)
+                                            {
+
+                                                int x = (int)coordinates[i].X;
+                                                int y = (int)coordinates[i].Y;
+                                                src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            }
+                                            break;
+                                        }
+                                    }
+                                } 
+                            }
+
                         }
                     }
 
@@ -1431,6 +1806,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "AirQuality")
                 {
                     userPanel_pictures = userControl_pictures_AirQuality;
+                    userControl_segments = userControl_segments_AirQuality;
                     userPanel_text = userControl_text_AirQuality;
                     userPanel_hand = userControl_hand_AirQuality;
                     userPanel_scaleCircle = userControl_scaleCircle_AirQuality;
@@ -1466,6 +1842,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // AirQuality сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.AirQuality / 502f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Weather.AirQuality;
                     activityGoal = 500;
                     progress = Watch_Face_Preview_Set.Weather.AirQuality / 503f;
@@ -1480,6 +1905,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Humidity")
                 {
                     userPanel_pictures = userControl_pictures_Humidity;
+                    userControl_segments = userControl_segments_Humidity;
                     userPanel_text = userControl_text_Humidity;
                     userPanel_hand = userControl_hand_Humidity;
                     userPanel_scaleCircle = userControl_scaleCircle_Humidity;
@@ -1512,6 +1938,55 @@ namespace AmazFit_Watchface_2
                                 src = OpenFileStream(ListImagesFullName[imageIndex]);
                                 gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                             }
+                        }
+                    }
+
+                    // Humidity сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.Humidity / 100f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
                         }
                     }
 
@@ -1554,6 +2029,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "WindForce")
                 {
                     userPanel_pictures = userControl_pictures_WindForce;
+                    userControl_segments = userControl_segments_WindForce;
                     userPanel_text = userControl_text_WindForce;
                     userPanel_hand = userControl_hand_WindForce;
                     userPanel_scaleCircle = userControl_scaleCircle_WindForce;
@@ -1589,6 +2065,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // WindForce сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Weather.WindForce / 12f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Weather.WindForce;
                     activityGoal = 12;
                     progress = Watch_Face_Preview_Set.Weather.WindForce / 12f;
@@ -1603,6 +2128,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Altitude")
                 {
                     userPanel_pictures = userControl_pictures_Altitude;
+                    userControl_segments = userControl_segments_Altitude;
                     userPanel_text = userControl_text_Altitude;
                     userPanel_hand = userControl_hand_Altitude;
                     userPanel_scaleCircle = userControl_scaleCircle_Altitude;
@@ -1638,6 +2164,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // Altitude сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * (Watch_Face_Preview_Set.Weather.Altitude + 1000) / 10000f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Weather.Altitude;
                     activityGoal = 9000;
                     progress = (Watch_Face_Preview_Set.Weather.Altitude + 1000) / 10000f;
@@ -1652,6 +2227,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "AirPressure")
                 {
                     userPanel_pictures = userControl_pictures_AirPressure;
+                    userControl_segments = userControl_segments_AirPressure;
                     userPanel_text = userControl_text_AirPressure;
                     userPanel_hand = userControl_hand_AirPressure;
                     userPanel_scaleCircle = userControl_scaleCircle_AirPressure;
@@ -1687,6 +2263,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // AirPressure сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * (Watch_Face_Preview_Set.Weather.AirPressure - 200) / 1000f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Weather.AirPressure;
                     activityGoal = 1200;
                     progress = (Watch_Face_Preview_Set.Weather.AirPressure - 170) / 1000f;
@@ -1701,6 +2326,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "Stress")
                 {
                     userPanel_pictures = userControl_pictures_Stress;
+                    userControl_segments = userControl_segments_Stress;
                     userPanel_text = userControl_text_Stress;
                     userPanel_hand = userControl_hand_Stress;
                     userPanel_scaleCircle = userControl_scaleCircle_Stress;
@@ -1736,6 +2362,55 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // Stress сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.Stress / 12f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Activity.Stress;
                     activityGoal = 12;
                     progress = Watch_Face_Preview_Set.Activity.Stress / 12f;
@@ -1750,6 +2425,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "ActivityGoal")
                 {
                     userPanel_pictures = userControl_pictures_ActivityGoal;
+                    userControl_segments = userControl_segments_ActivityGoal;
                     userPanel_text = userControl_text_ActivityGoal;
                     userPanel_textGoal = userControl_text_goal_ActivityGoal;
                     userPanel_hand = userControl_hand_ActivityGoal;
@@ -1760,6 +2436,7 @@ namespace AmazFit_Watchface_2
 
                     bool ActivityGoal_Calories = false;
                     if (radioButton_ScreenNormal.Checked && radioButton_ActivityGoal_Calories.Checked) ActivityGoal_Calories = true;
+                   
                     // ActivityGoal картинками
                     if (userPanel_pictures.checkBox_pictures_Use.Checked)
                     {
@@ -1796,6 +2473,62 @@ namespace AmazFit_Watchface_2
                         }
                     }
 
+                    // ActivityGoal сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count; int offSet = (int)((count - 1) * Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal);
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            if (Watch_Face_Preview_Set.Activity.Steps < Watch_Face_Preview_Set.Activity.StepsGoal / 100f)
+                                offSet = -1;
+                            if (ActivityGoal_Calories)
+                            {
+                                offSet = (int)((count - 1f) * Watch_Face_Preview_Set.Activity.Calories / 300f);
+                                if (offSet < 0) offSet = 0;
+                                if (offSet >= count) offSet = (int)(count - 1);
+                            }
+
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (offSet >= 0 && imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (offSet >= 0 && i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
                     activityValue = Watch_Face_Preview_Set.Activity.Steps;
                     activityGoal = Watch_Face_Preview_Set.Activity.StepsGoal;
                     progress = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
@@ -1817,6 +2550,7 @@ namespace AmazFit_Watchface_2
                 if (activityName == "FatBurning")
                 {
                     userPanel_pictures = userControl_pictures_FatBurning;
+                    userControl_segments = userControl_segments_FatBurning;
                     userPanel_text = userControl_text_FatBurning;
                     userPanel_textGoal = userControl_text_goal_FatBurning;
                     userPanel_hand = userControl_hand_FatBurning;
@@ -1850,6 +2584,55 @@ namespace AmazFit_Watchface_2
                                 src = OpenFileStream(ListImagesFullName[imageIndex]);
                                 gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                             }
+                        }
+                    }
+
+                    // FatBurning сегментами
+                    if (userControl_segments.checkBox_pictures_Use.Checked)
+                    {
+                        List<Coordinates> coordinates = userControl_segments.GetCoordinates();
+                        if (userControl_segments.comboBoxGetImage() >= 0 && coordinates != null)
+                        {
+                            int count = coordinates.Count;
+                            int offSet = (int)((count + 1f) * Watch_Face_Preview_Set.Activity.FatBurning / 30f);
+                            //offSet--;
+                            if (offSet < 0) offSet = 0;
+                            if (offSet >= count) offSet = (int)(count - 1);
+                            for (i = 0; i < count; i++)
+                            {
+                                if (userControl_segments.radioButtonGetDisplayType() == "Continuous")
+                                {
+                                    if (i <= offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (i == offSet)
+                                    {
+                                        int imageIndex = userControl_segments.comboBoxGetSelectedIndexImage() + i;
+                                        if (imageIndex < ListImagesFullName.Count)
+                                        {
+
+                                            int x = (int)coordinates[i].X;
+                                            int y = (int)coordinates[i].Y;
+                                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+
                         }
                     }
 
@@ -1903,15 +2686,28 @@ namespace AmazFit_Watchface_2
                         if (value == 0) value = 12;
                     }
                 }
-                time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
-                    spasing, alignment, value, addZero, 2, separator_index, BBorder);
+
+                if (!MS_24h)
+                {
+                    time_offsetX = Draw_dagital_text(gPanel, imageIndex, x, y,
+                                    spasing, alignment, value, addZero, 2, separator_index, BBorder); 
+                }
+                else
+                {
+                    imageIndex = imageIndex + Watch_Face_Preview_Set.Time.Hours - 1;
+                    if (imageIndex < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[imageIndex]);
+                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                    }
+                }
 
                 if (comboBox_Hour_unit.SelectedIndex >= 0)
                 {
                     src = OpenFileStream(ListImagesFullName[comboBox_Hour_unit.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hour_unitX.Value,
                         (int)numericUpDown_Hour_unitY.Value, src.Width, src.Height));
-                }
+                } 
             }
 
             // минуты
@@ -2142,7 +2938,9 @@ namespace AmazFit_Watchface_2
                     }
                 } 
             }
-        #endregion
+            #endregion
+
+            src.Dispose();
             TimeEnd:
 
             #region Mesh
@@ -2190,7 +2988,6 @@ namespace AmazFit_Watchface_2
                 }
             }
             #endregion
-            src.Dispose();
 
             if (crop)
             {
@@ -2301,6 +3098,7 @@ namespace AmazFit_Watchface_2
 
             // надпись
             int ActivityType = 0;
+            if (activity == "FatBurning") ActivityType = 18;
             if (activity == "ActivityGoal") ActivityType = 17;
             if (activity == "Humidity") ActivityType = 11;
             int goal_offsetX = -1;
@@ -2672,7 +3470,7 @@ namespace AmazFit_Watchface_2
             UserControl_text_weather userPanel_text, UserControl_text_weather userPanel_textMin, 
             UserControl_text_weather userPanel_textMax, UserControl_SystemFont_GroupWeather userControl_SystemFont_Group,
             UserControl_icon userControl_icon, int value, int value_min, int value_max, int icon_index, 
-            bool BBorder, bool showTemperature)
+            bool BBorder, bool showTemperature, bool weatherAlignmentFix)
         {
             Bitmap src = new Bitmap(1, 1);
 
@@ -2683,29 +3481,35 @@ namespace AmazFit_Watchface_2
             UserControl_FontRotate userControl_FontRotate_Current = userControl_SystemFont_Group.userControl_FontRotate_weather_Current;
             UserControl_FontRotate userControl_FontRotate_Min = userControl_SystemFont_Group.userControl_FontRotate_weather_Min;
             UserControl_FontRotate userControl_FontRotate_Max = userControl_SystemFont_Group.userControl_FontRotate_weather_Max;
+
+            // если имеется иконка
+            int centr_alignment = -1;
             
-
             // погода картинками
-            if (userPanel_pictures.checkBox_pictures_Use.Checked)
+            if (weatherAlignmentFix)
             {
-                if (userPanel_pictures.comboBoxGetSelectedIndexImage() >= 0)
+                if (userPanel_pictures.checkBox_pictures_Use.Checked)
                 {
-                    NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
-                    NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
-
-                    int x = (int)numericUpDownX.Value;
-                    int y = (int)numericUpDownY.Value;
-                    int offSet = icon_index;
-                    //int offSet = Watch_Face_Preview_Set.Weather.Icon;
-                    if (offSet < 0) offSet = 25;
-                    int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
-
-                    if (imageIndex < ListImagesFullName.Count)
+                    if (userPanel_pictures.comboBoxGetSelectedIndexImage() >= 0)
                     {
-                        src = OpenFileStream(ListImagesFullName[imageIndex]);
-                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                        NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                        NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+
+                        int x = (int)numericUpDownX.Value;
+                        int y = (int)numericUpDownY.Value;
+                        int offSet = icon_index;
+                        //int offSet = Watch_Face_Preview_Set.Weather.Icon;
+                        if (offSet < 0) offSet = 25;
+                        int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                        if (imageIndex < ListImagesFullName.Count)
+                        {
+                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                            centr_alignment = x + src.Width / 2;
+                        }
                     }
-                }
+                } 
             }
 
 
@@ -2732,35 +3536,11 @@ namespace AmazFit_Watchface_2
                     int imageError_index = userPanel_text.comboBoxGetSelectedIndexImageError();
                     int imageMinus_index = userPanel_text.comboBoxGetSelectedIndexImageDecimalPointOrMinus();
 
-                    // если имеется иконка
-                    int centr_alignment = -1;
-
-                    // если имеется иконка на основном экране
-                    if (Watch_Face != null && Watch_Face.System != null && Watch_Face.System.Activity != null)
-                    {
-                        foreach (Activity activity_main in Watch_Face.System.Activity)
-                        {
-                            if (activity_main.Type == "Weather" && activity_main.ImageProgress != null && activity_main.ImageProgress.ImageSet != null &&
-                            activity_main.ImageProgress.Coordinates != null && OneCoordinates(activity_main.ImageProgress.Coordinates))
-
-                            {
-                                int imageIndexWeather = (int)activity_main.ImageProgress.ImageSet.ImageIndex - 1;
-                                int _image_x = (int)activity_main.ImageProgress.Coordinates[0].X;
-
-                                if (imageIndexWeather < ListImagesFullName.Count)
-                                {
-                                    src = OpenFileStream(ListImagesFullName[imageIndexWeather]);
-                                    centr_alignment = _image_x + src.Width / 2;
-                                }
-
-                            }
-                        }
-                    }
-
                     if (showTemperature)
                     {
                         Draw_weather_text(gPanel, imageIndex, x, y,
-                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder, -1, false, centr_alignment);
+                                        spasing, alignment, value, addZero, imageMinus_index, separator_index, BBorder,
+                                        -1, false, centr_alignment);
                     }
                     else if (imageError_index >= 0)
                     {
@@ -3224,6 +4004,32 @@ namespace AmazFit_Watchface_2
 
                     src = OpenFileStream(ListImagesFullName[imageIndex]);
                     gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                }
+            }
+
+            // погода картинками
+            if (!weatherAlignmentFix)
+            {
+                if (userPanel_pictures.checkBox_pictures_Use.Checked)
+                {
+                    if (userPanel_pictures.comboBoxGetSelectedIndexImage() >= 0)
+                    {
+                        NumericUpDown numericUpDownX = userPanel_pictures.numericUpDown_picturesX;
+                        NumericUpDown numericUpDownY = userPanel_pictures.numericUpDown_picturesY;
+
+                        int x = (int)numericUpDownX.Value;
+                        int y = (int)numericUpDownY.Value;
+                        int offSet = icon_index;
+                        //int offSet = Watch_Face_Preview_Set.Weather.Icon;
+                        if (offSet < 0) offSet = 25;
+                        int imageIndex = userPanel_pictures.comboBoxGetSelectedIndexImage() + offSet;
+
+                        if (imageIndex < ListImagesFullName.Count)
+                        {
+                            src = OpenFileStream(ListImagesFullName[imageIndex]);
+                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                        }
+                    }
                 }
             }
 
@@ -3823,7 +4629,7 @@ namespace AmazFit_Watchface_2
                     float endAngle = (float)(numericUpDown_endAngle.Value);
 
                     float angle = startAngle + progress * (endAngle - startAngle);
-                    if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                    if (angle > endAngle) angle = endAngle;
                     DrawAnalogClock(gPanel, x, y, offsetX, offsetY, image_index, angle, showCentrHend);
 
                     if (imageCentr >= 0)
@@ -5014,6 +5820,7 @@ namespace AmazFit_Watchface_2
             //int DateLenght = width * value_lenght + spacing * (value_lenght - 1);
             if (ActivityType == 17) value_lenght = 5;
             if (ActivityType == 11) value_lenght = 3;
+            if (ActivityType == 18) value_lenght = 3;
             int DateLenght = width * value_lenght + 1;
             if (spacing > 0) DateLenght = DateLenght + spacing * (value_lenght - 1);
             //else DateLenght = DateLenght - spacing;
@@ -5356,7 +6163,7 @@ namespace AmazFit_Watchface_2
             src = OpenFileStream(ListImagesFullName[image_index]);
             int width = src.Width;
             int height = src.Height;
-            int DateLenght = 4 * width ;
+            int DateLenght = 4 * width + 1;
             if (spacing > 0) DateLenght = DateLenght + 3 * spacing;
             if (decimalPoint_index >= 0 && decimalPoint_index < ListImagesFullName.Count)
             {

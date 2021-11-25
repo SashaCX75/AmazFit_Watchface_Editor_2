@@ -117,9 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip_Weather.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="&gt;&gt;numericUpDown_pictures_count.Name" xml:space="preserve">
+    <value>numericUpDown_pictures_count</value>
+  </data>
+  <data name="&gt;&gt;toolTip_Weather.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=7.2.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="numericUpDown_pictures_count.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label03.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label03.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;comboBox_pictures_image.Name" xml:space="preserve">
+    <value>comboBox_pictures_image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_pictures_image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip_Weather.Name" xml:space="preserve">
+    <value>toolTip_Weather</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="numericUpDown_pictures_count.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label03.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_pictures_count.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label03.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label03.Name" xml:space="preserve">
+    <value>label03</value>
+  </data>
   <data name="comboBox_pictures_image.ToolTip" xml:space="preserve">
     <value>1. Облачно
 2. Временами дождь
@@ -151,66 +195,31 @@
 28. Дождливо ночью
 29. Ясно ночью</value>
   </data>
-  <data name="&gt;&gt;comboBox_pictures_image.Name" xml:space="preserve">
-    <value>comboBox_pictures_image</value>
-  </data>
-  <data name="&gt;&gt;comboBox_pictures_image.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox_pictures_image.Parent" xml:space="preserve">
-    <value>panel_pictures</value>
-  </data>
-  <data name="&gt;&gt;comboBox_pictures_image.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label03.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label03.Name" xml:space="preserve">
-    <value>label03</value>
-  </data>
-  <data name="&gt;&gt;label03.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
-    <value>panel_pictures</value>
-  </data>
-  <data name="&gt;&gt;label03.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="numericUpDown_pictures_count.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_pictures_count.Name" xml:space="preserve">
-    <value>numericUpDown_pictures_count</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserControl_pictures_weather</value>
   </data>
   <data name="&gt;&gt;numericUpDown_pictures_count.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;comboBox_pictures_image.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label03.Parent" xml:space="preserve">
+    <value>panel_pictures</value>
+  </data>
+  <data name="&gt;&gt;comboBox_pictures_image.Parent" xml:space="preserve">
+    <value>panel_pictures</value>
+  </data>
   <data name="&gt;&gt;numericUpDown_pictures_count.Parent" xml:space="preserve">
     <value>panel_pictures</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_pictures_count.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
+  <metadata name="toolTip_Weather.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;toolTip_Weather.Name" xml:space="preserve">
-    <value>toolTip_Weather</value>
-  </data>
-  <data name="&gt;&gt;toolTip_Weather.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>UserControl_pictures_weather</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>AmazFit_Watchface_2.UserControl_pictures, AmazFit_Watchface_Editor_2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
 </root>
